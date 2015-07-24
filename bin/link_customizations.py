@@ -25,6 +25,23 @@ def linkLanguageFiles( extension ) :
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
 
+def linkLibrariesVendorDirs( extension ) :
+	print( 'Linking libraries/vendor directories for extension ' + extension + '...' )
+	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/libraries/vendor'
+	destinationDir = htdocsDir + '/' + cmsDuJour + '/libraries/vendor'
+	librariesVendors = listdir( rootedSourceDir )
+	print( 'linkLibrariesVendorDirs test: rootedSourceDir = ' + rootedSourceDir )
+	print( 'linkLibrariesVendorDirs test: destinationDir = ' + destinationDir )
+	print( 'librariesVendors:' )
+	print( librariesVendors )
+	for librariesVendorDir in librariesVendors:
+		rootedLibrariesVendorDir = rootedSourceDir + '/' + librariesVendorDir
+		if( isdir(rootedLibrariesVendorDir) ) :
+			print( '  linking "' + rootedLibrariesVendorDir + "\" to\n\t\"" + destinationDir + '"' )
+			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLibrariesVendorDir + ' .; cd ' + htdocsDir 
+			print( 'lnCommand: ' + lnCommand )
+			call( lnCommand, shell=True )
+
 def linkModuleDirs( extension ) :
 	print( 'Linking modules directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/modules'
@@ -35,10 +52,10 @@ def linkModuleDirs( extension ) :
 	### print( 'moduleDirs:' )
 	### print( moduleDirs )
 	for modDir in moduleDirs:
-		rootedTemplateDir = rootedSourceDir + '/' + modDir
-		if( isdir(rootedTemplateDir) ) :
-			print( '  linking "' + rootedTemplateDir + "\" to\n\t\"" + destinationDir + '"' )
-			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedTemplateDir + ' .; cd ' + htdocsDir 
+		rootedModuleDir = rootedSourceDir + '/' + modDir
+		if( isdir(rootedModuleDir) ) :
+			print( '  linking "' + rootedModuleDir + "\" to\n\t\"" + destinationDir + '"' )
+			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedModuleDir + ' .; cd ' + htdocsDir 
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
 
@@ -67,6 +84,8 @@ def linkExtension( extension ) :
 	for subdirectory in extensionSubdirs:
 		if ( subdirectory == 'language' ) :
 			linkLanguageFiles( extension )
+		elif ( subdirectory == 'libraries' ) :
+			linkLibrariesVendorDirs( extension )
 		elif ( subdirectory == 'modules' ) :
 			linkModuleDirs( extension )
 		elif ( subdirectory == 'templates' ) :

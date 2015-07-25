@@ -30,16 +30,16 @@ def linkLibrariesVendorDirs( extension ) :
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/libraries/vendor'
 	destinationDir = htdocsDir + '/' + cmsDuJour + '/libraries/vendor'
 	librariesVendors = listdir( rootedSourceDir )
-	print( 'linkLibrariesVendorDirs test: rootedSourceDir = ' + rootedSourceDir )
-	print( 'linkLibrariesVendorDirs test: destinationDir = ' + destinationDir )
-	print( 'librariesVendors:' )
-	print( librariesVendors )
+	### print( 'linkLibrariesVendorDirs test: rootedSourceDir = ' + rootedSourceDir )
+	### print( 'linkLibrariesVendorDirs test: destinationDir = ' + destinationDir )
+	### print( 'librariesVendors:' )
+	### print( librariesVendors )
 	for librariesVendorDir in librariesVendors:
 		rootedLibrariesVendorDir = rootedSourceDir + '/' + librariesVendorDir
 		if( isdir(rootedLibrariesVendorDir) ) :
 			print( '  linking "' + rootedLibrariesVendorDir + "\" to\n\t\"" + destinationDir + '"' )
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLibrariesVendorDir + ' .; cd ' + htdocsDir 
-			print( 'lnCommand: ' + lnCommand )
+		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
 
 def linkModuleDirs( extension ) :

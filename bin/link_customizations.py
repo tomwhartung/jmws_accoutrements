@@ -20,7 +20,7 @@ def linkLanguageFiles( extension ) :
 	for langFile in languageFiles:
 		rootedLanguageFile = rootedSourceDir + '/' + langFile
 		if( isfile(rootedLanguageFile) ) :
-			print( '  linking "' + rootedLanguageFile + "\" to\n\t\"" + destinationDir + '"' )
+			print( '\tlinking "' + rootedLanguageFile + "\" to\n\t\t\"" + destinationDir + '"' )
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLanguageFile + ' .; cd ' + htdocsDir 
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
@@ -37,7 +37,7 @@ def linkLibrariesVendorDirs( extension ) :
 	for librariesVendorDir in librariesVendors:
 		rootedLibrariesVendorDir = rootedSourceDir + '/' + librariesVendorDir
 		if( isdir(rootedLibrariesVendorDir) ) :
-			print( '  linking "' + rootedLibrariesVendorDir + "\" to\n\t\"" + destinationDir + '"' )
+			print( '\tlinking "' + rootedLibrariesVendorDir + "\" to\n\t\t\"" + destinationDir + '"' )
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLibrariesVendorDir + ' .; cd ' + htdocsDir 
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
@@ -54,7 +54,7 @@ def linkModuleDirs( extension ) :
 	for modDir in moduleDirs:
 		rootedModuleDir = rootedSourceDir + '/' + modDir
 		if( isdir(rootedModuleDir) ) :
-			print( '  linking "' + rootedModuleDir + "\" to\n\t\"" + destinationDir + '"' )
+			print( '\tlinking "' + rootedModuleDir + "\" to\n\t\t\"" + destinationDir + '"' )
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedModuleDir + ' .; cd ' + htdocsDir 
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
@@ -71,7 +71,7 @@ def linkTemplateDirs( extension ) :
 	for tmplDir in templateDirs:
 		rootedTemplateDir = rootedSourceDir + '/' + tmplDir
 		if( isdir(rootedTemplateDir) ) :
-			print( '  linking "' + rootedTemplateDir + "\" to\n\t\"" + destinationDir + '"' )
+			print( '\tlinking "' + rootedTemplateDir + "\" to\n\t\t\"" + destinationDir + '"' )
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedTemplateDir + ' .; cd ' + htdocsDir 
 			### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )

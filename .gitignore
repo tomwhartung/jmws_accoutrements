@@ -1,0 +1,10 @@
+#
+# Documentation is here: http://git-scm.com/docs/gitignore
+#
+/nbproject/
+
+*.swp
+.~lock.*
+
+tmp/
+

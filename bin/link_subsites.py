@@ -29,9 +29,8 @@ mainSiteDir = 'joomoowebsites.com'
 htdocsDir = getcwd()
 exitVal = 0
 
-checkForDirectory( subsitesDir )
-checkForDirectory( mainSiteDir )
-
+checkForDirectory( subsitesDir )   # exits if directory not present
+checkForDirectory( mainSiteDir )   # exits if directory not present
 
 subsites = listdir( subsitesDir )
 subsites.sort()

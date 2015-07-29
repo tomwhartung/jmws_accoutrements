@@ -27,20 +27,12 @@ def linkModuleDirs( extension ) :
 			call( lnCommand, shell=True )
 
 
-def linkSubsite( extension ) :
-	print( 'Linking files in the ' + extension + ' extension...' )
-	githubRepoDir = subsitesDir + '/'  + extension
-	extensionSubdirs = listdir( githubRepoDir )
-	extensionSubdirs.sort()
-	for subdirectory in extensionSubdirs:
-		if ( subdirectory == 'language' ) :
-			linkLanguageFiles( extension )
-		elif ( subdirectory == 'libraries' ) :
-			linkLibrariesVendorDirs( extension )
-		elif ( subdirectory == 'modules' ) :
-			linkModuleDirs( extension )
-		elif ( subdirectory == 'templates' ) :
-			linkTemplateDirs( extension )
+def linkSubsite( subsite ) :
+	print( 'Linking the ' + subsite + ' subsite to ' + mainSiteDir + '...' )
+	rootedSubsiteDir = htdocsDir + '/subsites/' + subsite
+	lnCommand = 'cd ' + mainSiteDir + '; ln -fs ' + rootedSubsiteDir + ' .; cd ' + htdocsDir 
+	print( "lnCommand:\n\t" + lnCommand )
+	call( lnCommand, shell=True )
 
 subsitesDir = 'subsites'
 mainSiteDir = 'joomoowebsites.com'
@@ -68,13 +60,7 @@ subsites.sort()
 print( 'Linking the following subsites to ' + mainSiteDir + ':' )
 print( subsites )
 
-### for extension in subsites:
-	### linkSubsite( extension )
-
-## onlyfiles = [ f for f in listdir(currentDir) if isfile(join(currentDir,f)) ]
-## print( onlyfiles )
-
-s1 = 'Goodbye world'
-print(s1)
+for subsite in subsites:
+	linkSubsite( subsite )
 
 exit( exitVal )

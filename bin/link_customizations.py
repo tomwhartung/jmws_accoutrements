@@ -8,10 +8,19 @@ from os import chdir, getcwd, listdir
 from os.path import isfile, isdir, islink
 from subprocess import call
 
+def checkForDirectory( dirToCheck ) :
+	if isdir( dirToCheck ) :
+		print( 'Found a ' + dirToCheck + ' directory, cool.' )
+	else:
+		print( 'Expecting a "' + dirToCheck + '" directory, but it is not here.' )
+		print( 'The current directory is: "' + htdocsDir + '"' )
+		print( 'Change to a different directory, preferably one named "htdocs," and try again.' )
+		exit( 1 )
+
 def linkLanguageFiles( extension ) :
 	print( 'Linking language files for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/language/en-GB'
-	destinationDir = htdocsDir + '/' + cmsDuJour + '/language/en-GB'
+	destinationDir = htdocsDir + '/' + mainSiteDir + '/language/en-GB'
 	languageFiles = listdir( rootedSourceDir )
 	### print( 'linkLanguageFiles: rootedSourceDir = ' + rootedSourceDir )
 	### print( 'linkLanguageFiles: destinationDir = ' + destinationDir )
@@ -28,7 +37,7 @@ def linkLanguageFiles( extension ) :
 def linkLibrariesVendorDirs( extension ) :
 	print( 'Linking libraries/vendor directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/libraries/vendor'
-	destinationDir = htdocsDir + '/' + cmsDuJour + '/libraries/vendor'
+	destinationDir = htdocsDir + '/' + mainSiteDir + '/libraries/vendor'
 	librariesVendors = listdir( rootedSourceDir )
 	### print( 'linkLibrariesVendorDirs test: rootedSourceDir = ' + rootedSourceDir )
 	### print( 'linkLibrariesVendorDirs test: destinationDir = ' + destinationDir )
@@ -45,7 +54,7 @@ def linkLibrariesVendorDirs( extension ) :
 def linkModuleDirs( extension ) :
 	print( 'Linking modules directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/modules'
-	destinationDir = htdocsDir + '/' + cmsDuJour + '/modules'
+	destinationDir = htdocsDir + '/' + mainSiteDir + '/modules'
 	moduleDirs = listdir( rootedSourceDir )
 	### print( 'linkModuleDirs test: rootedSourceDir = ' + rootedSourceDir )
 	### print( 'linkModuleDirs test: destinationDir = ' + destinationDir )
@@ -62,7 +71,7 @@ def linkModuleDirs( extension ) :
 def linkTemplateDirs( extension ) :
 	print( 'Linking templates directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/templates'
-	destinationDir = htdocsDir + '/' + cmsDuJour + '/templates'
+	destinationDir = htdocsDir + '/' + mainSiteDir + '/templates'
 	templateDirs = listdir( rootedSourceDir )
 	### print( 'linkTemplateDirs test: rootedSourceDir = ' + rootedSourceDir )
 	### print( 'linkTemplateDirs test: destinationDir = ' + destinationDir )
@@ -92,31 +101,19 @@ def linkExtension( extension ) :
 			linkTemplateDirs( extension )
 
 customizationsDir = 'customizations'
-cmsDuJour = 'joomla'
+mainSiteDir = 'joomoowebsites.com'
 htdocsDir = getcwd()
-### print( 'linkTemplateDirs test: htdocsDir = ' + htdocsDir )
 exitVal = 0
 
-if isdir( customizationsDir ) and islink( cmsDuJour ) :
-	print( 'Found a ' + customizationsDir + ' dir and a ' + cmsDuJour + ' link, cool.' )
-else:
-	print( 'Expecting a "' + customizationsDir + '" directory and a "' + cmsDuJour + '" link, but they are not here.' )
-	print( 'The current directory is: "' + htdocsDir + '"' )
-	print( 'Change to a different directory, preferably one named "htdocs," and try again.' )
-	exit( 1 )
+checkForDirectory( customizationsDir )   # exits if directory not present
+checkForDirectory( mainSiteDir )         # exits if directory not present
 
 customizations = listdir( customizationsDir )
 customizations.sort()
-print( 'Linking the following customizations to the appropriate directories in ' + cmsDuJour + ':' )
+print( 'Linking the following customizations to the appropriate directories in ' + mainSiteDir + ':' )
 print( customizations )
 
 for extension in customizations:
 	linkExtension( extension )
-
-## onlyfiles = [ f for f in listdir(currentDir) if isfile(join(currentDir,f)) ]
-## print( onlyfiles )
-
-## s1 = 'Goodbye world'
-## print(s1)
 
 exit( exitVal )

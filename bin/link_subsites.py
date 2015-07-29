@@ -8,6 +8,9 @@ from os import chdir, getcwd, listdir
 from os.path import isfile, isdir, islink
 from subprocess import call
 
+##
+#  Checks that the specified directory exists, exiting with an error message if it doesn't
+#
 def checkForDirectory( dirToCheck ) :
 	if isdir( dirToCheck ) :
 		print( 'Found a ' + dirToCheck + ' directory, cool.' )
@@ -16,7 +19,9 @@ def checkForDirectory( dirToCheck ) :
 		print( 'The current directory is: "' + htdocsDir + '"' )
 		print( 'Change to a different directory, preferably one named "htdocs," and try again.' )
 		exit( 1 )
-
+##
+#  Links the specified subsite directory into the main site directory
+#
 def linkSubsite( subsite ) :
 	print( 'Linking the ' + subsite + ' subsite to ' + mainSiteDir + '...' )
 	rootedSubsiteDir = htdocsDir + '/subsites/' + subsite

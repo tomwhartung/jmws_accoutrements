@@ -8,6 +8,9 @@ from os import chdir, getcwd, listdir
 from os.path import isfile, isdir, islink
 from subprocess import call
 
+##
+#  Checks that the specified directory exists, exiting with an error message if it doesn't
+#
 def checkForDirectory( dirToCheck ) :
 	if isdir( dirToCheck ) :
 		print( 'Found a ' + dirToCheck + ' directory, cool.' )
@@ -16,7 +19,9 @@ def checkForDirectory( dirToCheck ) :
 		print( 'The current directory is: "' + htdocsDir + '"' )
 		print( 'Change to a different directory, preferably one named "htdocs," and try again.' )
 		exit( 1 )
-
+##
+#  Links the language files used for localization
+#
 def linkLanguageFiles( extension ) :
 	print( 'Linking language files for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/language/en-GB'
@@ -33,7 +38,9 @@ def linkLanguageFiles( extension ) :
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLanguageFile + ' .; cd ' + htdocsDir 
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
-
+##
+#  Links directories containing libraries (vendor code)
+#
 def linkLibrariesVendorDirs( extension ) :
 	print( 'Linking libraries/vendor directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/libraries/vendor'
@@ -50,7 +57,9 @@ def linkLibrariesVendorDirs( extension ) :
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLibrariesVendorDir + ' .; cd ' + htdocsDir 
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
-
+##
+#  Links directories used by modules
+#
 def linkModuleDirs( extension ) :
 	print( 'Linking modules directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/modules'
@@ -67,7 +76,9 @@ def linkModuleDirs( extension ) :
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedModuleDir + ' .; cd ' + htdocsDir 
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
-
+##
+#  Links directories used by templates
+#
 def linkTemplateDirs( extension ) :
 	print( 'Linking templates directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/templates'
@@ -84,7 +95,9 @@ def linkTemplateDirs( extension ) :
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedTemplateDir + ' .; cd ' + htdocsDir 
 			### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
-
+##
+#  Driver function to call other functions to link specific types of extensions
+#
 def linkExtension( extension ) :
 	print( 'Linking files in the ' + extension + ' extension...' )
 	githubRepoDir = customizationsDir + '/'  + extension

@@ -44,5 +44,14 @@ print( subsites )
 
 for subsite in subsites:
 	linkSubsite( subsite )
+#
+# The resume depends on idMyGadget, so if both are in the list
+#  create a link to idMyGadget in the resume's parent directory.
+#
+if ( 'idMyGadget' in subsites and 'resume' in subsites ) :
+	print 'linking idMyGadget into parent directory of resume ...';
+	lnCommand = 'cd subsites/resume; ln -s ../idMyGadget . ; cd -'
+	print "lnCommand:\n\t" + lnCommand
+	call( lnCommand, shell=True )
 
 exit( exitVal )

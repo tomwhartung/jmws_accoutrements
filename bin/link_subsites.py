@@ -50,7 +50,7 @@ for subsite in subsites:
 #
 if ( 'idMyGadget' in subsites and 'resume' in subsites ) :
 	print 'linking idMyGadget into parent directory of resume ...';
-	lnCommand = 'cd subsites/resume; ln -s ../idMyGadget . ; cd -'
+	lnCommand = 'cd subsites/resume; ln -fs ../idMyGadget . ; cd -'
 	print "lnCommand:\n\t" + lnCommand
 	call( lnCommand, shell=True )
 

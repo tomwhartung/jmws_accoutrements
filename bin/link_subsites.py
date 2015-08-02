@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #
-# link_subsites.py: link subsites, like resume and idMyGadget, into top level dir of this site
-# --------------------------------------------------------------------------------------------
+# link_subsites.py: link subsites, e.g. resume and idMyGadget, into top level dir of each "main" site
+# ---------------------------------------------------------------------------------------------------
 #
 import os
 from os import chdir, getcwd, listdir
@@ -22,23 +22,18 @@ def checkForDirectory( dirToCheck ) :
 ##
 #  Links the specified subsite directory into the main site directory
 #
-def linkSubsite( subsite ) :
+def linkSubsite( subsite, htdocsDir ) :
 	print( 'Linking the ' + subsite + ' subsite to ' + mainSiteDir + '...' )
 	rootedSubsiteDir = htdocsDir + '/subsites/' + subsite
 	lnCommand = 'cd ' + mainSiteDir + '; ln -fs ' + rootedSubsiteDir + ' .; cd ' + htdocsDir 
 	print( "lnCommand:\n\t" + lnCommand )
 	call( lnCommand, shell=True )
-
-rootDir = '/var/www'
-mainSites = ['joomoowebsites.com', 'tomhartung.com', 'tomwhartung.com' ]
-subsitesDir = 'subsites'
-exitVal = 0
-
-for mainSiteDir in mainSites :
+##
+#
+#
+def linkMainSiteDir( mainSiteDir ) :
 	htdocsDir = rootDir + '/' + mainSiteDir + '/htdocs'
 	chdir( htdocsDir )
-	printDir = getcwd()
-	print( 'printDir: ' + printDir )
 	checkForDirectory( subsitesDir )   # exits if directory not present
 	checkForDirectory( mainSiteDir )   # exits if directory not present
 	subsites = listdir( subsitesDir )
@@ -46,11 +41,23 @@ for mainSiteDir in mainSites :
 	print( 'Linking the following subsites to ' + mainSiteDir + ':' )
 	print( subsites )
 	for subsite in subsites :
-		linkSubsite( subsite )
+		linkSubsite( subsite, htdocsDir )
 	if ( 'idMyGadget' in subsites and 'resume' in subsites ) :   # The resume depends on idMyGadget, so if both are in the list
 		print 'linking idMyGadget into parent directory of resume ...';
 		lnCommand = 'cd subsites/resume; ln -fs ../idMyGadget . ; cd -'
 		print "lnCommand:\n\t" + lnCommand
 		call( lnCommand, shell=True )
+
+###################
+#
+#  Set globals and call functions to do the work
+#
+rootDir = '/var/www'
+mainSites = ['joomoowebsites.com', 'tomhartung.com', 'tomwhartung.com' ]
+subsitesDir = 'subsites'
+exitVal = 0
+
+for mainSiteDir in mainSites :
+	linkMainSiteDir( mainSiteDir )
 
 exit( exitVal )

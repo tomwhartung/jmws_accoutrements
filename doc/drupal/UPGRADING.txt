@@ -1,0 +1,100 @@
+
+Upgrading a minor version!
+
+Details: https://www.drupal.org/node/1223018
+
+Updated 8/1/2015 - code is now in git!!
+
+Hosts:
+[ ] bette - do all this on bette first
+
+0. Back up db.
+
+1. Visit site and download
+
+2. Copy to /var/www/tomhartung.com/unpack and unpack
+
+3. Move unpacked directory to /var/www/tomhartung.com-new
+
+4. Follow instructions at above URL to copy customizations into the new release area
+   Copy recursively the .git directory into the new release
+   NOTE: the links in sites/default !
+
+5. Upgrade db as necessary: tomhartung.com/update.php
+
+6. Test
+
+7. If OK:
+7.1. commit and push code and
+7.2. backup DB (optionally renaming the last backup to reflect the old version number)
+
+Hosts:
+[ ] lauren - this is a new process, make sure it works!
+[ ] jane - only when the others are done and all bugs are worked out
+
+1. pull code
+
+2. restore new version of db to this host
+
+3. test
+
+----------------------------------------
+
+3. cp -R /var/www/tomhartung.com/unpack/drupal-7.X.Y /var/www/tomhartung.com/
+###cp    /var/www/tomhartung.com/unpack/drupal-7.X.Y/.htaccess /var/www/tomhartung.com/
+   diff  /var/www/tomhartung.com/unpack/drupal-7.X.Y/.htaccess /var/www/tomhartung.com/drupal-7.X.Y/.htaccess
+
+4. Backup DB and files:
+   but
+   tarHome
+   tarSites
+
+***********************************************************************
+********* Unsure about the precise ordering of these steps ************
+*** There appear to be no database updates to run for this release  ***
+*** For more information, refer to the link at the top of this page ***
+***********************************************************************
+
+5. Paranoia will destroya - but if they change one of these files, it would be good to know
+   cd /var/www/tomhartung.com
+   diffDrupal 7.33 7.34
+
+6. Copy our customizations over from the current version into the new version:
+   cd /var/www/tomhartung.com
+   l drupal/sites/ drupal-7.34/sites
+   cd  drupal/sites/ ; lf; cf ; echo ; cd ../../drupal-7.34/sites; lf; cf ; cd ../..
+** cp -R drupal/sites/default/* drupal-7.34/sites/default/
+OR cp -R drupal/sites/* drupal-7.34/sites/
+   cd  drupal/sites/ ; lf; cf ; echo ; cd ../../drupal-7.34/sites; lf; cf ; cd ../..
+
+7. Fix permissions:
+   cd drupal-7.34/sites/
+   sudo chown -R www-data:www-data default/files/
+   ls -al default/files/
+   cd -
+
+8. Put site in maintenance mode
+   Admin -> Configuration -> (Development) Maintenance Mode
+   https://www.ostraining.com/blog/drupal/how-to-put-drupal-7-in-maintenance-mode/
+
+9. Switch the link
+   cd /var/www/tomhartung.com
+   l; rm drupal; ln -s drupal-7.34 drupal; l
+   cd drupal
+   ln -s /var/www/resume .
+   l ; cd .. ; echo ; l 
+
+9. Visit http://bette.tomhartung.com/update.php?op=info
+         http://lauren.tomhartung.com/update.php?op=info
+         http://tomhartung.com/update.php?op=info
+** Ensure there are no pending database updates
+OR ... ... ....
+
+10. Visit Administration -> Reports -> Status
+
+11. Take site out of Maintenance Mode.
+
+12. Back up DB:
+    but
+    tarHome
+

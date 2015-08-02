@@ -20,12 +20,14 @@ Hosts:
    Copy recursively the .git directory into the new release
    NOTE: the links in sites/default !
 
-5. Upgrade db as necessary: tomhartung.com/update.php
+5. Move the old directory to tomhartung.com-7.xx
+   link_subsites.py
 
-6. Test
+6. Visit site to upgrade db as necessary: tomhartung.com/update.php
+  -> Test!!
 
 7. If OK:
-7.1. commit and push code and
+7.1. commit and push code
 7.2. backup DB (optionally renaming the last backup to reflect the old version number)
 
 Hosts:

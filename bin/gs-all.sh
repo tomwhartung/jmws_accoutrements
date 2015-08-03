@@ -6,7 +6,7 @@ cd /var/www/joomoowebsites.com/htdocs/subsites/idMyGadget; printf "\n========\n$
 cd /var/www/joomoowebsites.com/htdocs/subsites/resume; printf "\n========\n$(pwd):\n"; git status 
 
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_beez3_idMyGadget/ ; printf "\n========\n$(pwd):\n"; git status 
-cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_idMyGadget_for_joomla/ ; printf "\n========\n$(pwd):\n"; git status 
+cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_idMyGadget_for_cmses/ ; printf "\n========\n$(pwd):\n"; git status 
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_accoutrements/ ; printf "\n========\n$(pwd):\n"; git status 
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_mod_menu_idMyGadget/ ; printf "\n========\n$(pwd):\n"; git status 
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_idMyGadget/ ; printf "\n========\n$(pwd):\n"; git status 

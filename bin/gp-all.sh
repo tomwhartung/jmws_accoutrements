@@ -9,6 +9,6 @@ cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_beez3_idMyGadget	; git
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_mod_menu_idMyGadget	; git pull 
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_idMyGadget	; git pull 
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_tomh_idMyGadget	; git pull 
-cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_idMyGadget_for_joomla	; git pull 
+cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_idMyGadget_for_cmses	; git pull 
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_accoutrements	; git pull 
 

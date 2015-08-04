@@ -1,7 +1,8 @@
 #!/usr/bin/python
 #
-# link_customizations.py: hey why not do a version of this in python?
-# ---------------------------------------------------------------------
+# link_joomla_customizations.py: links our customizations, so we can keep them separate from the main joomla code
+# ---------------------------------------------------------------------------------------------------------------
+# This makes it easier to upgrade to new versions of joomla, and use selected extensions on multiple sites
 #
 import os
 from os import chdir, getcwd, listdir
@@ -27,10 +28,6 @@ def linkLanguageFiles( extension ) :
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/language/en-GB'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/language/en-GB'
 	languageFiles = listdir( rootedSourceDir )
-	### print( 'linkLanguageFiles: rootedSourceDir = ' + rootedSourceDir )
-	### print( 'linkLanguageFiles: destinationDir = ' + destinationDir )
-	### print( 'languageFiles:' )
-	### print( languageFiles )
 	for langFile in languageFiles:
 		rootedLanguageFile = rootedSourceDir + '/' + langFile
 		if( isfile(rootedLanguageFile) ) :
@@ -39,17 +36,13 @@ def linkLanguageFiles( extension ) :
 		### print( 'lnCommand: ' + lnCommand )
 			call( lnCommand, shell=True )
 ##
-#  Links directories containing libraries (vendor code)
+#  Links directories containing libraries ("vendor" code)
 #
 def linkLibrariesVendorDirs( extension ) :
 	print( 'Linking libraries/vendor directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/libraries/vendor'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/libraries/vendor'
 	librariesVendors = listdir( rootedSourceDir )
-	### print( 'linkLibrariesVendorDirs test: rootedSourceDir = ' + rootedSourceDir )
-	### print( 'linkLibrariesVendorDirs test: destinationDir = ' + destinationDir )
-	### print( 'librariesVendors:' )
-	### print( librariesVendors )
 	for librariesVendorDir in librariesVendors:
 		rootedLibrariesVendorDir = rootedSourceDir + '/' + librariesVendorDir
 		if( isdir(rootedLibrariesVendorDir) ) :
@@ -84,10 +77,6 @@ def linkTemplateDirs( extension ) :
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/templates'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/templates'
 	templateDirs = listdir( rootedSourceDir )
-	### print( 'linkTemplateDirs test: rootedSourceDir = ' + rootedSourceDir )
-	### print( 'linkTemplateDirs test: destinationDir = ' + destinationDir )
-	### print( 'templateDirs:' )
-	### print( templateDirs )
 	for tmplDir in templateDirs:
 		rootedTemplateDir = rootedSourceDir + '/' + tmplDir
 		if( isdir(rootedTemplateDir) ) :

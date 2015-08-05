@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # link_wordpress_customizations.py: links our customizations, so we can keep them separate from the wordpress code
 # ----------------------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ def linkGitignoredFiles( customization ) :
 #  Links directories containing plugins
 #
 def linkPluginsDirs( customization ) :
-	print 'linkPluginsDirs: TBD!'
+	print( 'linkPluginsDirs: TBD' )
 
 ##
 #  Links directories containing themes
@@ -53,17 +53,17 @@ def linkThemesDirs( customization ) :
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/wp-content/themes'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/wp-content/themes'
 	wpContentThemes = listdir( rootedSourceDir )
-	print( 'linkThemesDirs test: rootedSourceDir = ' + rootedSourceDir )
-	print( 'linkThemesDirs test: destinationDir = ' + destinationDir )
-	print( 'wpContentThemes:' )
+	print( 'linkThemesDirs: rootedSourceDir = ' + rootedSourceDir )
+	print( 'linkThemesDirs: destinationDir = ' + destinationDir )
+	print( 'linkThemesDirs: wpContentThemes = ', end="", flush="true" )
 	print( wpContentThemes )
-	for librariesVendorDir in wpContentThemes:
-		rootedLibrariesVendorDir = rootedSourceDir + '/' + librariesVendorDir
-		if( isdir(rootedLibrariesVendorDir) ) :
-			print( '\tlinking "' + rootedLibrariesVendorDir + "\" to\n\t\t\"" + destinationDir + '"' )
-			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLibrariesVendorDir + ' .; cd ' + htdocsDir 
-			print( 'lnCommand: ' + lnCommand )
-		### 	call( lnCommand, shell=True )
+	for themeDir in wpContentThemes :
+		rootedThemeDir = rootedSourceDir + '/' + themeDir
+		if( isdir(rootedThemeDir) ) :
+			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + destinationDir + '"' )
+			lnCommand = "    cd " + destinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
+			print( "lnCommand:\n" + lnCommand )
+			call( lnCommand, shell=True )
 
 ##
 #  Driver function to call other functions to link specific types of customizations

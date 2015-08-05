@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #
-# link_wordpress_customizations.py: links our customizations, so we can keep them separate from the wordpress code
+# ln_wordpress_customizations.py: links our customizations, so we can keep them separate from the wordpress code
 # ----------------------------------------------------------------------------------------------------------------
 #
 import os
@@ -19,38 +19,19 @@ def checkForDirectory( dirToCheck ) :
 		print( 'The current directory is: "' + htdocsDir + '"' )
 		print( 'Change to a different directory, preferably one named "htdocs," and try again.' )
 		exit( 1 )
-##
-#  Links the gitignored files (e.g., wp-config.php)
-#
-def linkGitignoredFiles( customization ) :
-	print( 'Linking gitignored files ...' )
-	rootedSourceDir = htdocsDir + '/gitignored/'
-	destinationDir = htdocsDir + '/' + mainSiteDir
-	gitignoredFiles = listdir( rootedSourceDir )
-	### print( 'linkLanguageFiles: rootedSourceDir = ' + rootedSourceDir )
-	### print( 'linkLanguageFiles: destinationDir = ' + destinationDir )
-	### print( 'languageFiles:' )
-	### print( languageFiles )
-	for ignoredFile in gitignoredFiles :
-		rootedLanguageFile = rootedSourceDir + '/' + langFile
-		if( isfile(rootedLanguageFile) ) :
-			print( '\tlinking "' + rootedLanguageFile + "\" to\n\t\t\"" + destinationDir + '"' )
-		###	lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLanguageFile + ' .; cd ' + htdocsDir 
-		###	print( 'lnCommand: ' + lnCommand )
-		###	call( lnCommand, shell=True )
 
 ##
 #  Links directories containing plugins
 #
-def linkPluginsDirs( customization ) :
+def lnPluginsDirs( customization ) :
 	print( 'Linking wp-content/plugins directories for customization ' + customization + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/wp-content/plugins'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/wp-content/plugins'
 	wpContentPlugins = listdir( rootedSourceDir )
-	print( 'linkPluginsDirs: rootedSourceDir = ' + rootedSourceDir )
-	print( 'linkPluginsDirs: destinationDir = ' + destinationDir )
-	print( 'linkPluginsDirs: wpContentPlugins = ', end="" )
-	print( wpContentPlugins )
+##	print( 'lnPluginsDirs: rootedSourceDir = ' + rootedSourceDir )
+##	print( 'lnPluginsDirs: destinationDir = ' + destinationDir )
+##	print( 'lnPluginsDirs: wpContentPlugins = ', end="" )
+##	print( wpContentPlugins )
 	for themeDir in wpContentPlugins :
 		rootedThemeDir = rootedSourceDir + '/' + themeDir
 		if( isdir(rootedThemeDir) ) :
@@ -62,14 +43,14 @@ def linkPluginsDirs( customization ) :
 ##
 #  Links directories containing themes
 #
-def linkThemesDirs( customization ) :
+def lnThemesDirs( customization ) :
 	print( 'Linking wp-content/themes directories for customization ' + customization + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/wp-content/themes'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/wp-content/themes'
 	wpContentThemes = listdir( rootedSourceDir )
-##	print( 'linkThemesDirs: rootedSourceDir = ' + rootedSourceDir )
-##	print( 'linkThemesDirs: destinationDir = ' + destinationDir )
-##	print( 'linkThemesDirs: wpContentThemes = ', end="" )
+##	print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
+##	print( 'lnThemesDirs: destinationDir = ' + destinationDir )
+##	print( 'lnThemesDirs: wpContentThemes = ', end="" )
 ##	print( wpContentThemes )
 	for themeDir in wpContentThemes :
 		rootedThemeDir = rootedSourceDir + '/' + themeDir
@@ -82,16 +63,16 @@ def linkThemesDirs( customization ) :
 ##
 #  Driver function to call other functions to link specific types of customizations
 #
-def linkCustomization( customization ) :
+def lnCustomization( customization ) :
 	print( 'Linking files in the ' + customization + ' customization...' )
 	wpContentDir = customizationsDir + '/'  + customization + '/' + 'wp-content'
 	wpContentSubdirs = listdir( wpContentDir )
 	wpContentSubdirs.sort()
 	for subdirectory in wpContentSubdirs:
 		if ( subdirectory == 'plugins' ) :
-			linkPluginsDirs( customization )
+			lnPluginsDirs( customization )
 		elif ( subdirectory == 'themes' ) :
-			linkThemesDirs( customization )
+			lnThemesDirs( customization )
 
 customizationsDir = 'customizations'
 mainSiteDir = 'tomwhartung.com'
@@ -106,12 +87,7 @@ customizations.sort()
 print( 'Linking the following customizations to the appropriate directories in ' + mainSiteDir + ':' )
 print( customizations )
 
-###
-### TODO:
-###
-### linkGitignoredFiles( customization ) :
-
 for customization in customizations:
-	linkCustomization( customization )
+	lnCustomization( customization )
 
 exit( exitVal )

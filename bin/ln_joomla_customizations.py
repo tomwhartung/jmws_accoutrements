@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # link_joomla_customizations.py: links our customizations, so we can keep them separate from the main joomla code
 # ---------------------------------------------------------------------------------------------------------------

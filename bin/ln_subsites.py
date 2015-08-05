@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # link_subsites.py: link subsites, e.g. resume and idMyGadget, into top level dir of each "main" site
 # ---------------------------------------------------------------------------------------------------
@@ -43,9 +43,9 @@ def linkMainSiteDir( mainSiteDir ) :
 	for subsite in subsites :
 		linkSubsite( subsite, htdocsDir )
 	if ( 'idMyGadget' in subsites and 'resume' in subsites ) :   # The resume depends on idMyGadget, so if both are in the list
-		print 'linking idMyGadget into parent directory of resume ...';
+		print( 'linking idMyGadget into parent directory of resume ...' )
 		lnCommand = 'cd subsites/resume; ln -fs ../idMyGadget . ; cd -'
-		print "lnCommand:\n\t" + lnCommand
+		print( "lnCommand:\n\t" + lnCommand )
 		call( lnCommand, shell=True )
 
 ###################

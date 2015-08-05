@@ -43,7 +43,21 @@ def linkGitignoredFiles( customization ) :
 #  Links directories containing plugins
 #
 def linkPluginsDirs( customization ) :
-	print( 'linkPluginsDirs: TBD' )
+	print( 'Linking wp-content/plugins directories for customization ' + customization + '...' )
+	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/wp-content/plugins'
+	destinationDir = htdocsDir + '/' + mainSiteDir + '/wp-content/plugins'
+	wpContentPlugins = listdir( rootedSourceDir )
+	print( 'linkPluginsDirs: rootedSourceDir = ' + rootedSourceDir )
+	print( 'linkPluginsDirs: destinationDir = ' + destinationDir )
+	print( 'linkPluginsDirs: wpContentPlugins = ', end="" )
+	print( wpContentPlugins )
+	for themeDir in wpContentPlugins :
+		rootedThemeDir = rootedSourceDir + '/' + themeDir
+		if( isdir(rootedThemeDir) ) :
+			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + destinationDir + '"' )
+			lnCommand = "    cd " + destinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
+			print( "lnCommand:\n" + lnCommand )
+			call( lnCommand, shell=True )
 
 ##
 #  Links directories containing themes
@@ -53,10 +67,10 @@ def linkThemesDirs( customization ) :
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/wp-content/themes'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/wp-content/themes'
 	wpContentThemes = listdir( rootedSourceDir )
-	print( 'linkThemesDirs: rootedSourceDir = ' + rootedSourceDir )
-	print( 'linkThemesDirs: destinationDir = ' + destinationDir )
-	print( 'linkThemesDirs: wpContentThemes = ', end="", flush="true" )
-	print( wpContentThemes )
+##	print( 'linkThemesDirs: rootedSourceDir = ' + rootedSourceDir )
+##	print( 'linkThemesDirs: destinationDir = ' + destinationDir )
+##	print( 'linkThemesDirs: wpContentThemes = ', end="" )
+##	print( wpContentThemes )
 	for themeDir in wpContentThemes :
 		rootedThemeDir = rootedSourceDir + '/' + themeDir
 		if( isdir(rootedThemeDir) ) :

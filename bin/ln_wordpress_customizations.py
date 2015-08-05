@@ -22,7 +22,7 @@ def checkForDirectory( dirToCheck ) :
 ##
 #  Links the gitignored files (e.g., wp-config.php)
 #
-def linkGitignoredFiles( extension ) :
+def linkGitignoredFiles( customization ) :
 	print( 'Linking gitignored files ...' )
 	rootedSourceDir = htdocsDir + '/gitignored/'
 	destinationDir = htdocsDir + '/' + mainSiteDir
@@ -38,43 +38,46 @@ def linkGitignoredFiles( extension ) :
 		###	lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLanguageFile + ' .; cd ' + htdocsDir 
 		###	print( 'lnCommand: ' + lnCommand )
 		###	call( lnCommand, shell=True )
+
 ##
-#  Links directories containing libraries (vendor code)
+#  Links directories containing plugins
 #
-def linkLibrariesVendorDirs( extension ) :
-	print( 'Linking libraries/vendor directories for extension ' + extension + '...' )
-	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/libraries/vendor'
-	destinationDir = htdocsDir + '/' + mainSiteDir + '/libraries/vendor'
-	librariesVendors = listdir( rootedSourceDir )
-	### print( 'linkLibrariesVendorDirs test: rootedSourceDir = ' + rootedSourceDir )
-	### print( 'linkLibrariesVendorDirs test: destinationDir = ' + destinationDir )
-	### print( 'librariesVendors:' )
-	### print( librariesVendors )
-	for librariesVendorDir in librariesVendors:
+def linkPluginsDirs( customization ) :
+	print 'linkPluginsDirs: TBD!'
+
+##
+#  Links directories containing themes
+#
+def linkThemesDirs( customization ) :
+	print( 'Linking wp-content/themes directories for customization ' + customization + '...' )
+	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/wp-content/themes'
+	destinationDir = htdocsDir + '/' + mainSiteDir + '/wp-content/themes'
+	wpContentThemes = listdir( rootedSourceDir )
+	print( 'linkThemesDirs test: rootedSourceDir = ' + rootedSourceDir )
+	print( 'linkThemesDirs test: destinationDir = ' + destinationDir )
+	print( 'wpContentThemes:' )
+	print( wpContentThemes )
+	for librariesVendorDir in wpContentThemes:
 		rootedLibrariesVendorDir = rootedSourceDir + '/' + librariesVendorDir
 		if( isdir(rootedLibrariesVendorDir) ) :
 			print( '\tlinking "' + rootedLibrariesVendorDir + "\" to\n\t\t\"" + destinationDir + '"' )
 			lnCommand = 'cd ' + destinationDir + '; ln -fs ' + rootedLibrariesVendorDir + ' .; cd ' + htdocsDir 
-		### print( 'lnCommand: ' + lnCommand )
-			call( lnCommand, shell=True )
+			print( 'lnCommand: ' + lnCommand )
+		### 	call( lnCommand, shell=True )
 
 ##
 #  Driver function to call other functions to link specific types of customizations
 #
 def linkCustomization( customization ) :
-	print( 'Linking files in the ' + extension + ' extension...' )
-	githubRepoDir = customizationsDir + '/'  + extension
-	extensionSubdirs = listdir( githubRepoDir )
-	extensionSubdirs.sort()
-	for subdirectory in extensionSubdirs:
-		if ( subdirectory == 'language' ) :
-			linkLanguageFiles( extension )
-		elif ( subdirectory == 'libraries' ) :
-			linkLibrariesVendorDirs( extension )
-		elif ( subdirectory == 'modules' ) :
-			linkModuleDirs( extension )
-		elif ( subdirectory == 'templates' ) :
-			linkTemplateDirs( extension )
+	print( 'Linking files in the ' + customization + ' customization...' )
+	wpContentDir = customizationsDir + '/'  + customization + '/' + 'wp-content'
+	wpContentSubdirs = listdir( wpContentDir )
+	wpContentSubdirs.sort()
+	for subdirectory in wpContentSubdirs:
+		if ( subdirectory == 'plugins' ) :
+			linkPluginsDirs( customization )
+		elif ( subdirectory == 'themes' ) :
+			linkThemesDirs( customization )
 
 customizationsDir = 'customizations'
 mainSiteDir = 'tomwhartung.com'
@@ -89,7 +92,12 @@ customizations.sort()
 print( 'Linking the following customizations to the appropriate directories in ' + mainSiteDir + ':' )
 print( customizations )
 
-## for extension in customizations:
-	## linkExtension( extension )
+###
+### TODO:
+###
+### linkGitignoredFiles( customization ) :
+
+for customization in customizations:
+	linkCustomization( customization )
 
 exit( exitVal )

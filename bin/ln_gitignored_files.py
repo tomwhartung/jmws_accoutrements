@@ -2,6 +2,9 @@
 #
 # ln_gitignored_files.py: links the sensitive and private files we are not checking into git
 # ------------------------------------------------------------------------------------------
+# #####################
+# ######## TBD ########
+# #####################
 #
 import os
 from os import chdir, getcwd, listdir
@@ -21,6 +24,10 @@ def checkForDirectory( dirToCheck ) :
 		exit( 1 )
 ##
 #  Links the gitignored files (e.g., wp-config.php)
+#
+# #####################
+# ######## TBD ########
+# #####################
 #
 def linkGitignoredFiles( customization ) :
 	print( 'Linking gitignored files ...' )
@@ -42,7 +49,11 @@ def linkGitignoredFiles( customization ) :
 ##
 #  Driver function to call other functions to link specific types of customizations
 #
-def linkCustomization( customization ) :
+# #####################
+# ######## TBD ########
+# #####################
+#
+def linkGitignoredFiles( customization ) :
 	print( 'Linking files in the ' + customization + ' customization...' )
 	wpContentDir = customizationsDir + '/'  + customization + '/' + 'wp-content'
 	wpContentSubdirs = listdir( wpContentDir )
@@ -53,6 +64,11 @@ def linkCustomization( customization ) :
 		elif ( subdirectory == 'themes' ) :
 			linkThemesDirs( customization )
 
+#
+# #####################
+# ######## TBD ########
+# #####################
+#
 customizationsDir = 'customizations'
 mainSiteDir = 'tomwhartung.com'
 htdocsDir = getcwd()
@@ -63,11 +79,15 @@ checkForDirectory( mainSiteDir )         # exits if directory not present
 
 customizations = listdir( customizationsDir )
 customizations.sort()
-print( 'Linking the following customizations to the appropriate directories in ' + mainSiteDir + ':' )
-print( customizations )
+print( 'NOT Linking the following gitignored files to the appropriate directories in ' + mainSiteDir + ':' )
+print( '**************' )
+print( '*** FIX ME ***' )
+print( '**************' )
 
 ###
-### TODO:
+### #############
+### ### TODO: ###
+### #############
 ###
 ### linkGitignoredFiles( customization ) :
 

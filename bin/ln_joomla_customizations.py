@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #
-# link_joomla_customizations.py: links our customizations, so we can keep them separate from the main joomla code
-# ---------------------------------------------------------------------------------------------------------------
+# ln_joomla_customizations.py: links our customizations, so we can keep them separate from the main joomla code
+# -------------------------------------------------------------------------------------------------------------
 # This makes it easier to upgrade to new versions of joomla, and use selected extensions on multiple sites
 #
 import os
@@ -23,7 +23,7 @@ def checkForDirectory( dirToCheck ) :
 ##
 #  Links the language files used for localization
 #
-def linkLanguageFiles( extension ) :
+def lnLanguageFiles( extension ) :
 	print( 'Linking language files for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/language/en-GB'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/language/en-GB'
@@ -38,7 +38,7 @@ def linkLanguageFiles( extension ) :
 ##
 #  Links directories containing libraries ("vendor" code)
 #
-def linkLibrariesVendorDirs( extension ) :
+def lnLibrariesVendorDirs( extension ) :
 	print( 'Linking libraries/vendor directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/libraries/vendor'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/libraries/vendor'
@@ -53,13 +53,13 @@ def linkLibrariesVendorDirs( extension ) :
 ##
 #  Links directories used by modules
 #
-def linkModuleDirs( extension ) :
+def lnModuleDirs( extension ) :
 	print( 'Linking modules directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/modules'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/modules'
 	moduleDirs = listdir( rootedSourceDir )
-	### print( 'linkModuleDirs test: rootedSourceDir = ' + rootedSourceDir )
-	### print( 'linkModuleDirs test: destinationDir = ' + destinationDir )
+	### print( 'lnModuleDirs test: rootedSourceDir = ' + rootedSourceDir )
+	### print( 'lnModuleDirs test: destinationDir = ' + destinationDir )
 	### print( 'moduleDirs:' )
 	### print( moduleDirs )
 	for modDir in moduleDirs:
@@ -72,7 +72,7 @@ def linkModuleDirs( extension ) :
 ##
 #  Links directories used by templates
 #
-def linkTemplateDirs( extension ) :
+def lnTemplateDirs( extension ) :
 	print( 'Linking templates directories for extension ' + extension + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + extension + '/templates'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/templates'
@@ -87,20 +87,20 @@ def linkTemplateDirs( extension ) :
 ##
 #  Driver function to call other functions to link specific types of extensions
 #
-def linkExtension( extension ) :
+def lnExtension( extension ) :
 	print( 'Linking files in the ' + extension + ' extension...' )
 	githubRepoDir = customizationsDir + '/'  + extension
 	extensionSubdirs = listdir( githubRepoDir )
 	extensionSubdirs.sort()
 	for subdirectory in extensionSubdirs:
 		if ( subdirectory == 'language' ) :
-			linkLanguageFiles( extension )
+			lnLanguageFiles( extension )
 		elif ( subdirectory == 'libraries' ) :
-			linkLibrariesVendorDirs( extension )
+			lnLibrariesVendorDirs( extension )
 		elif ( subdirectory == 'modules' ) :
-			linkModuleDirs( extension )
+			lnModuleDirs( extension )
 		elif ( subdirectory == 'templates' ) :
-			linkTemplateDirs( extension )
+			lnTemplateDirs( extension )
 
 customizationsDir = 'customizations'
 mainSiteDir = 'joomoowebsites.com'
@@ -116,6 +116,6 @@ print( 'Linking the following customizations to the appropriate directories in '
 print( customizations )
 
 for extension in customizations:
-	linkExtension( extension )
+	lnExtension( extension )
 
 exit( exitVal )

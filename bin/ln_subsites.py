@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #
-# link_subsites.py: link subsites, e.g. resume and idMyGadget, into top level dir of each "main" site
-# ---------------------------------------------------------------------------------------------------
+# ln_subsites.py: link subsites, e.g. resume and idMyGadget, into top level dir of each "main" site
+# -------------------------------------------------------------------------------------------------
 #
 import os
 from os import chdir, getcwd, listdir
@@ -22,7 +22,7 @@ def checkForDirectory( dirToCheck ) :
 ##
 #  Links the specified subsite directory into the main site directory
 #
-def linkSubsite( subsite, htdocsDir ) :
+def lnSubsite( subsite, htdocsDir ) :
 	print( 'Linking the ' + subsite + ' subsite to ' + mainSiteDir + '...' )
 	rootedSubsiteDir = htdocsDir + '/subsites/' + subsite
 	lnCommand = 'cd ' + mainSiteDir + '; ln -fs ' + rootedSubsiteDir + ' .; cd ' + htdocsDir 
@@ -31,7 +31,7 @@ def linkSubsite( subsite, htdocsDir ) :
 ##
 #
 #
-def linkMainSiteDir( mainSiteDir ) :
+def lnMainSiteDir( mainSiteDir ) :
 	htdocsDir = rootDir + '/' + mainSiteDir + '/htdocs'
 	chdir( htdocsDir )
 	checkForDirectory( subsitesDir )   # exits if directory not present
@@ -41,7 +41,7 @@ def linkMainSiteDir( mainSiteDir ) :
 	print( 'Linking the following subsites to ' + mainSiteDir + ':' )
 	print( subsites )
 	for subsite in subsites :
-		linkSubsite( subsite, htdocsDir )
+		lnSubsite( subsite, htdocsDir )
 	if ( 'idMyGadget' in subsites and 'resume' in subsites ) :   # The resume depends on idMyGadget, so if both are in the list
 		print( 'linking idMyGadget into parent directory of resume ...' )
 		lnCommand = 'cd subsites/resume; ln -fs ../idMyGadget . ; cd -'
@@ -58,6 +58,6 @@ subsitesDir = 'subsites'
 exitVal = 0
 
 for mainSiteDir in mainSites :
-	linkMainSiteDir( mainSiteDir )
+	lnMainSiteDir( mainSiteDir )
 
 exit( exitVal )

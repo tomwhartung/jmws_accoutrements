@@ -16,5 +16,5 @@ cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_tomh_idMyGadget/ ;	pri
 
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_idMyGadget_for_wordpress ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_twentyfifteen_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
-cd /var/www/tomwhartung.com/htdocs/customizations/jmws_wp_vqsg_fs_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
+cd /var/www/tomwhartung.com/htdocs/customizations/jmws_wp_vqsg_ot_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 

@@ -12,7 +12,7 @@ cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_beez3_idMyGadget/ ;	pr
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_idMyGadget_for_joomla/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_mod_menu_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
-cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_tomh_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
+cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_tomh_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_idMyGadget_for_wordpress ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_twentyfifteen_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status

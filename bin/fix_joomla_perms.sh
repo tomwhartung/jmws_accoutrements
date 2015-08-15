@@ -17,6 +17,7 @@ sudo find * -type d -exec chmod 755  {} \;
 # This list of directories is from the System -> System Information -> Directory Permissions page/tab.
 # Unfortunately (for our automation efforts) the list of all directories is much longer.
 #
+sudo chmod 664 configuration.php
 sudo chmod 775 administrator/components
 sudo chmod 775 administrator/language
 sudo chmod 775 administrator/language/en-GB

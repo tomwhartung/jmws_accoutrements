@@ -24,7 +24,7 @@ def checkForDirectory( dirToCheck ) :
 #
 def lnSubsite( subsite, htdocsDir ) :
 	print( 'Linking the ' + subsite + ' subsite to ' + mainSiteDir + '...' )
-	rootedSubsiteDir = htdocsDir + '/subsites/' + subsite
+	rootedSubsiteDir = rootDir + '/subsites/' + subsite
 	lnCommand = 'cd ' + mainSiteDir + '; ln -fs ' + rootedSubsiteDir + ' .; cd ' + htdocsDir 
 	print( "lnCommand:\n\t" + lnCommand )
 	call( lnCommand, shell=True )

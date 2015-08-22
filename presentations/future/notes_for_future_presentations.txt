@@ -1,0 +1,51 @@
+
+Why use Device Detection?
+	Maintainability:
+		Css is by its nature spaghetti
+		Which is fine if you are using it just to style
+		Maybe not so much when you are positioning and moving things around
+
+Beez3
+ $ wc -l *
+   472 general.css
+    40 ie7only.css
+   191 ieonly.css
+  1049 layout.css
+   468 nature.css
+    11 nature_rtl.css
+   460 personal.css
+     4 personal_rtl.css
+   495 position.css
+   464 print.css
+   384 red.css
+    31 template.css
+   535 template_rtl.css
+   402 turq.css
+   427 turq.less
+  5433 total
+
+Protostar
+ $ wc -l *
+7479 template.css
+
+WP - twentyfifteen
+ $ wc -l *.css
+   840 rtl.css
+  5994 style.css
+  6834 total
+tomh@bette: /var/www/tomwhartung.com/htdocs/tomwhartung.com/wp-content/themes/twentyfifteen
+
+WP - twentyfourteen
+ $ cd ../twentyfourteen/
+ $ wc -l *.css
+  853 rtl.css
+ 4321 style.css
+ 5174 total
+
+WP - twentythirteen
+ $ cd ../twentythirteen/
+ $ wc -l *.css
+  765 rtl.css
+ 3227 style.css
+ 3992 total
+

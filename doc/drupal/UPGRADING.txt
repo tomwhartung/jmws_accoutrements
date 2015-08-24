@@ -8,37 +8,100 @@ Updated 8/1/2015 - code is now in git!!
 Hosts:
 [ ] bette - do all this on bette first
 
-0. Back up db.
+0. Back up db and rename the file, adding the old version number.
+   buth
+   gobu
+   ## mv tomhartung.com-2015_08_24-bette.sql.gz tomhartung.com-2015_08_24-bette-7.XX.sql.gz
+   mv tomhartung.com-2015_08_24-bette.sql.gz tomhartung.com-2015_08_24-bette-7.38.sql.gz
+   toLauren tomhartung.com-2015_08_24-bette-7.38.sql.gz
 
-1. Visit site and download
+1. Visit site and download tar file
+   Copy to /var/www/tomhartung.com/unpack and unpack
+   Move unpacked directory to /var/www/tomhartung.com/htdocs/tomhartung.com-new
 
-2. Copy to /var/www/tomhartung.com/unpack and unpack
+2. Put into maintenance mode
+   Log in as admin -> Configuration -> Maintenance Mode
 
-3. Move unpacked directory to /var/www/tomhartung.com-new
+3. Copy customizations into the new release area
+   gothh              # cd /var/www/tomhartung.com/htdocs
+   l customizations   # at this time we have nothing here
+   l gitignored       # these need to be linked into the new release area
 
-4. Follow instructions at above URL to copy customizations into the new release area
-   Copy recursively the .git directory into the new release
-   NOTE: the links in sites/default !
+   l gitignored/sites/default      # at this time these are the files we need to link
+   cd tomhartung.com/sites/sites/default
+   l ../../../gitignored/sites/default
+   ln -s ../../../gitignored/sites/default/files .
+   ln -s ../../../gitignored/sites/default/settings.php  .
 
-5. Move the old directory to tomhartung.com-7.xx
+   Complete instructions are here:
+      http://cgit.drupalcode.org/drupal/log/?h=7.x
+   But that should be all we need to worry about right now.
+
+4. Copy recursively the .git directory into the new release and see what has changed
+   gothh
+   cp -rp tomhartung.com/.git tomhartung.com-new
+   cd tomhartung.com-new
+   git status
+
+5. Check for new settings
+   gothh
+5.1. Using git - the new way
+   cd tomhartung.com-new
+   gd .gitignored          # should see only "Ignore subsites" added, else will have to merge
+   gd sites/default/default.settings.php   # should see no changes, else will have to merge
+5.2. Use the manual/old way to double-check
+   diff tomhartung.com/.gitignore tomhartung.com-new/.gitignore
+   diff tomhartung.com/sites/default/default.settings.php tomhartung.com-new/sites/default/default.settings.php
+5.3. Copy or merge as appropriate
+   gothh
+   cp tomhartung.com/.gitignore tomhartung.com-new/.gitignore
+5.4. Doublecheck links:
+   gothh
+   l tomhartung.com-new/sites/default
+   l tomhartung.com-new/sites/default/files/
+   more tomhartung.com-new/sites/default/settings.php
+
+6. Move the old directory to tomhartung.com-7.xx and new to tomhartung.com
+   gothh
+   ## mv tomhartung.com tomhartung.com-7.xx
+   mv tomhartung.com tomhartung.com-7.38
+   mv tomhartung.com-new to tomhartung.com
+   l
+
+7. Run link_subsites.py
+   gothh
    link_subsites.py
+   l tomhartung.com
 
-6. Visit site to upgrade db as necessary: tomhartung.com/update.php
+8. Visit site to upgrade db as necessary:
+   http://bette.tomhartung.com/update.php
   -> Test!!
 
-7. If OK:
-7.1. commit and push code
-7.2. backup DB (optionally renaming the last backup to reflect the old version number)
+9. If the site looks OK, commit code and backup db:
+9.1. Commit and push code:
+   gothd
+   git status
+   git add
+   git commit -m 'Upgraded drupal core to version 7.39.'
+   git push origin master
+9.2. Remove from maintenance mode and backup DB:
+   As admin -> Configuration -> "Go online."
+   buth
+   tarHome
 
 Hosts:
 [ ] lauren - this is a new process, make sure it works!
 [ ] jane - only when the others are done and all bugs are worked out
 
-1. pull code
+1. Pull latest version of code from github
+   gothd
+   git pull
 
-2. restore new version of db to this host
+2. Restore new version of db to this host
+   rsth -h bette
 
-3. test
+3. Test: verify version in admin console:
+   Admin -> Reports -> Available updates
 
 ----------------------------------------
 

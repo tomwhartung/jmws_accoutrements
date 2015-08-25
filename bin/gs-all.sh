@@ -11,6 +11,7 @@ cd /var/www/subsites/resume ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/joomoowebsites.com ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_beez3_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_idMyGadget_for_joomla/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
+cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_mod_demo_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_mod_menu_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_tomh_idMyGadget/ ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status

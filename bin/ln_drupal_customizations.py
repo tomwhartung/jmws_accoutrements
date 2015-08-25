@@ -45,21 +45,20 @@ def lnModulesDirs( customization ) :
 #
 def lnThemesDirs( customization ) :
 	print( 'Linking sites/all/themes/jmws directories for customization ' + customization + '...' )
-	print( 'mainSitesAllThemesJmwsDir = ' + mainSitesAllThemesJmwsDir )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/sites/all/themes/jmws'
 	rootedDestinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/themes/jmws'
 	drupalJmwsThemes = listdir( rootedSourceDir )
-	print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
-	print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
-	print( 'lnThemesDirs: drupalJmwsThemes = ', end="" )
-	print( drupalJmwsThemes )
+	## print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
+	## print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
+	## print( 'lnThemesDirs: drupalJmwsThemes = ', end="" )
+	## print( drupalJmwsThemes )
 	for themeDir in drupalJmwsThemes :
 		rootedThemeDir = rootedSourceDir + '/' + themeDir
 		if( isdir(rootedThemeDir) ) :
 			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
 			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
-			print( "lnCommand:\n" + lnCommand )
-			## call( lnCommand, shell=True )
+			## print( "lnCommand:\n" + lnCommand )
+			call( lnCommand, shell=True )
 
 ##
 #  Driver function to call other functions to link specific types of customizations
@@ -73,8 +72,7 @@ def lnCustomization( customization ) :
 		if ( subdirectory == 'modules' ) :
 			lnModulesDirs( customization )
 		elif ( subdirectory == 'themes' ) :
-			print( '   Want to link a themes directory for customization ' + customization )
-			##	lnThemesDirs( customization )
+			lnThemesDirs( customization )
 
 customizationsDir = 'customizations'
 mainSiteDir = 'tomhartung.com'

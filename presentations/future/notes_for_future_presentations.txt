@@ -2,11 +2,14 @@
 Why use Device Detection?
 	Maintainability:
 		Css is by its nature spaghetti
+			Programming has a long history of increasingly powerful tools and techniques that can be used for organizing code and assisting in making it more maintainable
 		Which is fine if you are using it just to style
 		Maybe not so much when you are positioning and moving things around
 
-Beez3
- $ wc -l *
+ CSS File Line Counts
+======================
+Joomla - Beez3
+--------------
    472 general.css
     40 ie7only.css
    191 ieonly.css
@@ -24,28 +27,65 @@ Beez3
    427 turq.less
   5433 total
 
-Protostar
- $ wc -l *
+Joomla - Protostar
+------------------
 7479 template.css
 
 WP - twentyfifteen
- $ wc -l *.css
+------------------
    840 rtl.css
   5994 style.css
   6834 total
-tomh@bette: /var/www/tomwhartung.com/htdocs/tomwhartung.com/wp-content/themes/twentyfifteen
 
 WP - twentyfourteen
- $ cd ../twentyfourteen/
- $ wc -l *.css
+-------------------
   853 rtl.css
  4321 style.css
  5174 total
 
 WP - twentythirteen
- $ cd ../twentythirteen/
- $ wc -l *.css
+-------------------
   765 rtl.css
  3227 style.css
  3992 total
+
+Drupal - bartik
+---------------
+   58 colors.css
+   18 ie6.css
+   63 ie.css
+   48 ie-rtl.css
+  100 layout.css
+   22 layout-rtl.css
+   67 maintenance-page.css
+   46 print.css
+ 1641 style.css
+  276 style-rtl.css
+ 2339 total
+
+Drupal - garland
+----------------
+   65 fix-ie.css
+   61 fix-ie-rtl.css
+   61 print.css
+ 1255 style.css
+  344 style-rtl.css
+ 1786 total
+
+Drupal - seven
+--------------
+   17 ie6.css
+   23 ie7.css
+   18 ie.css
+  436 jquery.ui.theme.css
+  216 reset.css
+  990 style.css
+  241 style-rtl.css
+   96 vertical-tabs.css
+   21 vertical-tabs-rtl.css
+ 2058 total
+
+Drupal - stark
+--------------
+57 layout.css
 

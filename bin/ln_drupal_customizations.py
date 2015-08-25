@@ -25,20 +25,19 @@ def checkForDirectory( dirToCheck ) :
 #
 def lnModulesDirs( customization ) :
 	print( 'Linking sites/all/modules/jmws directories for customization ' + customization + '...' )
-	print( 'mainSitesAllModulesJmwsDir = ' + mainSitesAllModulesJmwsDir )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/sites/all/modules/jmws'
-	destinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/modules/jmws'
+	rootedDestinationDir = htdocsDir + '/' + mainSitesAllModulesJmwsDir
 	drupalJmwsModules = listdir( rootedSourceDir )
-	print( 'lnModulesDirs: rootedSourceDir = ' + rootedSourceDir )
-	print( 'lnModulesDirs: destinationDir = ' + destinationDir )
-	print( 'lnModulesDirs: drupalJmwsModules = ', end="" )
-	print( drupalJmwsModules )
+	## print( 'lnModulesDirs: rootedSourceDir = ' + rootedSourceDir )
+	## print( 'lnModulesDirs: rootedDestinationDir = ' + rootedDestinationDir )
+	## print( 'lnModulesDirs: drupalJmwsModules = ', end="" )
+	## print( drupalJmwsModules )
 	for moduleDir in drupalJmwsModules :
 		rootedModuleDir = rootedSourceDir + '/' + moduleDir
 		if( isdir(rootedModuleDir) ) :
-			print( '\tlinking "' + rootedModuleDir + "\" to\n\t\t\"" + destinationDir + '"' )
-			lnCommand = "    cd " + destinationDir + ";\n    ln -fs " + rootedModuleDir + " .;\n    cd " + htdocsDir 
-			print( "lnCommand:\n" + lnCommand )
+			print( '\tlinking "' + rootedModuleDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
+			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedModuleDir + " .;\n    cd " + htdocsDir 
+			## print( "lnCommand:\n" + lnCommand )
 			call( lnCommand, shell=True )
 
 ##
@@ -48,19 +47,19 @@ def lnThemesDirs( customization ) :
 	print( 'Linking sites/all/themes/jmws directories for customization ' + customization + '...' )
 	print( 'mainSitesAllThemesJmwsDir = ' + mainSitesAllThemesJmwsDir )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/sites/all/themes/jmws'
-	destinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/themes/jmws'
-	wpContentThemes = listdir( rootedSourceDir )
+	rootedDestinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/themes/jmws'
+	drupalJmwsThemes = listdir( rootedSourceDir )
 	print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
-	print( 'lnThemesDirs: destinationDir = ' + destinationDir )
-	print( 'lnThemesDirs: wpContentThemes = ', end="" )
-	print( wpContentThemes )
-	for themeDir in wpContentThemes :
+	print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
+	print( 'lnThemesDirs: drupalJmwsThemes = ', end="" )
+	print( drupalJmwsThemes )
+	for themeDir in drupalJmwsThemes :
 		rootedThemeDir = rootedSourceDir + '/' + themeDir
 		if( isdir(rootedThemeDir) ) :
-			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + destinationDir + '"' )
-			lnCommand = "    cd " + destinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
+			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
+			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
 			print( "lnCommand:\n" + lnCommand )
-			call( lnCommand, shell=True )
+			## call( lnCommand, shell=True )
 
 ##
 #  Driver function to call other functions to link specific types of customizations
@@ -72,8 +71,7 @@ def lnCustomization( customization ) :
 	customizationSitesAllSubdirs.sort()
 	for subdirectory in customizationSitesAllSubdirs:
 		if ( subdirectory == 'modules' ) :
-			print( '   Want to link a modules directory for customization ' + customization )
-			##	lnModulesDirs( customization )
+			lnModulesDirs( customization )
 		elif ( subdirectory == 'themes' ) :
 			print( '   Want to link a themes directory for customization ' + customization )
 			##	lnThemesDirs( customization )
@@ -120,6 +118,7 @@ else :
 customizations = listdir( customizationsDir )
 customizations.sort()
 print( 'Linking the following customizations to the appropriate directories in ' + mainSiteDir + ':' )
+print( '   ', end=""  )
 print( customizations )
 
 for customization in customizations:

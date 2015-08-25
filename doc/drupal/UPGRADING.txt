@@ -22,16 +22,21 @@ Hosts:
 2. Put into maintenance mode
    Log in as admin -> Configuration -> Maintenance Mode
 
-3. Copy customizations into the new release area
+3. Link customizations into the new release area
+3.1. Manually link gitignored files
    gothh              # cd /var/www/tomhartung.com/htdocs
-   l customizations   # at this time we have nothing here
    l gitignored       # these need to be linked into the new release area
-
    l gitignored/sites/default      # at this time these are the files we need to link
    cd tomhartung.com/sites/sites/default
    l ../../../gitignored/sites/default
    ln -s ../../../gitignored/sites/default/files .
    ln -s ../../../gitignored/sites/default/settings.php  .
+3.2. Manually link gitignored files
+   gothh              # cd /var/www/tomhartung.com/htdocs
+   l customizations
+   l tomhartung.com/sites/all/*/jmws
+   ln_drupal_customizations.py        # WARNING!  NEW SCRIPT!!
+   l tomhartung.com/sites/all/*/jmws
 
    Complete instructions are here:
       http://cgit.drupalcode.org/drupal/log/?h=7.x

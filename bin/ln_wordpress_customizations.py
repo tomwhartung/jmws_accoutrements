@@ -32,8 +32,8 @@ def lnPluginsDirs( customization ) :
 ##	print( 'lnPluginsDirs: destinationDir = ' + destinationDir )
 ##	print( 'lnPluginsDirs: wpContentPlugins = ', end="" )
 ##	print( wpContentPlugins )
-	for themeDir in wpContentPlugins :
-		rootedThemeDir = rootedSourceDir + '/' + themeDir
+	for pluginDir in wpContentPlugins :
+		rootedThemeDir = rootedSourceDir + '/' + pluginDir
 		if( isdir(rootedThemeDir) ) :
 			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + destinationDir + '"' )
 			lnCommand = "    cd " + destinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 

@@ -25,6 +25,7 @@ def checkForDirectory( dirToCheck ) :
 #
 def lnModulesDirs( customization ) :
 	print( 'Linking sites/all/modules/jmws directories for customization ' + customization + '...' )
+	print( 'mainSitesAllModulesJmwsDir = ' + mainSitesAllModulesJmwsDir )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/sites/all/modules/jmws'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/modules/jmws'
 	drupalJmwsModules = listdir( rootedSourceDir )
@@ -45,6 +46,7 @@ def lnModulesDirs( customization ) :
 #
 def lnThemesDirs( customization ) :
 	print( 'Linking sites/all/themes/jmws directories for customization ' + customization + '...' )
+	print( 'mainSitesAllThemesJmwsDir = ' + mainSitesAllThemesJmwsDir )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/sites/all/themes/jmws'
 	destinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/themes/jmws'
 	wpContentThemes = listdir( rootedSourceDir )
@@ -66,13 +68,15 @@ def lnThemesDirs( customization ) :
 def lnCustomization( customization ) :
 	print( 'Linking directories in the ' + customization + ' customization...' )
 	customizationSitesAllDir = customizationsDir + '/'  + customization + '/sites/all'
-	sitesAllModulesJmwsSubdirs = listdir( customizationSitesAllDir )
-	sitesAllModulesJmwsSubdirs.sort()
-	for subdirectory in sitesAllModulesJmwsSubdirs:
+	customizationSitesAllSubdirs = listdir( customizationSitesAllDir )
+	customizationSitesAllSubdirs.sort()
+	for subdirectory in customizationSitesAllSubdirs:
 		if ( subdirectory == 'modules' ) :
-			lnModulesDirs( customization )
+			print( '   Want to link a modules directory for customization ' + customization )
+			##	lnModulesDirs( customization )
 		elif ( subdirectory == 'themes' ) :
-			lnThemesDirs( customization )
+			print( '   Want to link a themes directory for customization ' + customization )
+			##	lnThemesDirs( customization )
 
 customizationsDir = 'customizations'
 mainSiteDir = 'tomhartung.com'
@@ -86,12 +90,23 @@ mainSitesAllDir = mainSiteDir + '/sites/all'
 mainSitesAllModulesJmwsDir = mainSitesAllDir + '/modules/jmws'
 mainSitesAllThemesJmwsDir = mainSitesAllDir + '/themes/jmws'
 
+#
+#  If the sanity check for sites/all is successful
+#     Check for modules/jmws and themes/jmws, creating them if necessary
+#  else
+#     display an "Are you insane?" message
+#
 if isdir( mainSitesAllDir ) :
 	if isdir( mainSitesAllModulesJmwsDir ) :
 		print( 'Found a ' + mainSitesAllModulesJmwsDir + ' directory, cool!' )
 	else :
 		print( 'Warning: making the ' + mainSitesAllModulesJmwsDir + ' directory, because it was not found.' )
 		os.makedirs( mainSitesAllModulesJmwsDir )
+	if isdir( mainSitesAllThemesJmwsDir ) :
+		print( 'Found a ' + mainSitesAllThemesJmwsDir + ' directory, cool!' )
+	else :
+		print( 'Warning: making the ' + mainSitesAllThemesJmwsDir + ' directory, because it was not found.' )
+		os.makedirs( mainSitesAllThemesJmwsDir )
 else :
 	print( 'Error!' )
 	print( 'Not seeing a ' + mainSitesAllDir + ' directory!' )
@@ -99,15 +114,13 @@ else :
 	print( 'Exiting!' )
 	exit( 1 )
 
+#
+#  List the customizations dirs and link each of them as appropriate
+#
 customizations = listdir( customizationsDir )
 customizations.sort()
 print( 'Linking the following customizations to the appropriate directories in ' + mainSiteDir + ':' )
 print( customizations )
-
-print( 'So far so good!' )
-
-exit( exitVal )
-
 
 for customization in customizations:
 	lnCustomization( customization )

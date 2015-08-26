@@ -16,6 +16,6 @@ cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_idMyGadget ;
 cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_tomh_idMyGadget ;	git pull
 
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_idMyGadget_for_wordpress ;	git pull
-cd /var/www/tomwhartung.com/htdocs/customizations/jmws_twentyfifteen_idMyGadget ;	git pull
+cd /var/www/tomwhartung.com/htdocs/customizations/jmws_wp_twentyfifteen_idMyGadget ;	git pull
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_wp_vqsg_ot_idMyGadget ;	git pull
 

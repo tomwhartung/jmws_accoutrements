@@ -3,6 +3,7 @@
 # Run git status in all currently active git repos
 #
 dash_equals='-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
+
 cd /var/www/jmws_accoutrements ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 
 cd /var/www/subsites/idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
@@ -19,4 +20,8 @@ cd /var/www/joomoowebsites.com/htdocs/customizations/jmws_protostar_tomh_idMyGad
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_idMyGadget_for_wordpress ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_wp_twentyfifteen_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 cd /var/www/tomwhartung.com/htdocs/customizations/jmws_wp_vqsg_ot_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
+
+cd /var/www/tomhartung.com/htdocs/customizations/jmws_idMyGadget_for_drupal ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
+cd /var/www/tomhartung.com/htdocs/customizations/jmws_drupal_bartik_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
+cd /var/www/tomhartung.com/htdocs/customizations/jmws_drupal_stark_idMyGadget ;	printf "\n$dash_equals\n$(pwd):\n" ;	git status
 

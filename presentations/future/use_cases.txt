@@ -1,0 +1,10 @@
+
+ Use Cases
+-----------
+
+1. New site from scratch, want to use minimal CSS/Media Queries
+
+2. Existing responsive site, want to put some specific finishing touches on it
+
+3. 
+

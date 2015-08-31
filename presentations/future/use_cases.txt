@@ -6,5 +6,6 @@
 
 2. Existing responsive site, want to put some specific finishing touches on it
 
-3. 
+3. I just like the idea of being able to keep most of the site the same, while tweaking bits and pieces of it for specific devices.
+
 

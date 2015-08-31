@@ -6,6 +6,9 @@
 
 2. Existing responsive site, want to put some specific finishing touches on it
 
-3. I just like the idea of being able to keep most of the site the same, while tweaking bits and pieces of it for specific devices.
+3. If you are designing a new site or template, and find yourself with a lot of media queries and more than 1,000-2,000 lines of CSS, maybe it is time to consider ...
+
+
+I just like the idea of being able to keep most of the site the same, while tweaking bits and pieces of it for specific devices.
 
 

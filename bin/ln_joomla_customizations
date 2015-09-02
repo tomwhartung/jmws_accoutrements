@@ -8,6 +8,16 @@ import os
 from os import chdir, getcwd, listdir
 from os.path import isfile, isdir, islink
 from subprocess import call
+import sys
+
+##
+#  prints a syntax statement if we get an unexpected number of arguments
+#
+def syntax( errorMessage ) :
+	print( 'Syntax:' )
+	print( '  ln_joomla_customizations [mainSiteDir]' )
+	print( '    mainSiteDir must contain a version of the joomla core code' )
+	print( '      mainSiteDir defaults to ' + defaultMainSiteDir  )
 
 ##
 #  Checks that the specified directory exists, exiting with an error message if it doesn't
@@ -103,9 +113,18 @@ def lnExtension( extension ) :
 			lnTemplateDirs( extension )
 
 customizationsDir = 'customizations'
-mainSiteDir = 'joomoowebsites.com'
+defaultMainSiteDir = 'joomoowebsites.com'
 htdocsDir = getcwd()
 exitVal = 0
+
+if ( len(sys.argv) > 1 ) :
+	mainSiteDir = sys.argv[1]
+else :
+	mainSiteDir = defaultMainSiteDir  
+
+## print( 'Number of arguments:', len(sys.argv), 'arguments.' )
+## print( 'Argument List:', str(sys.argv) )
+## print( 'mainSiteDir = ' + mainSiteDir )
 
 checkForDirectory( customizationsDir )   # exits if directory not present
 checkForDirectory( mainSiteDir )         # exits if directory not present

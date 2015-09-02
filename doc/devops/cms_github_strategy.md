@@ -20,7 +20,7 @@ The goals of this strategy are:
 ### Purpose
 The purpose of this strategy is to use github to:
 * Keep versions of all files (except the database and web server) needed to get a site going
-* Allowing the web master to back out of changes that have unforeseen negative side effects
+* Allow the web master to back out of changes that have unforeseen negative side effects
 * Support rapid deployment to multiple host instances (development, test, production, etc.)
 
 ### Requirements
@@ -33,16 +33,59 @@ The parent directory for all site code is htdocs, e.g., /var/www/joomoowebsites.
 
 Two required directories exist under htdocs:
 * customizations - the source for all CMS extensions
-* [site-name] - the core CMS source, along with any site-specific media (e.g., 
+* [site-name] - the core CMS source, along with any site-specific media (e.g., joomoowebsites.com)
 
+#### Joomla example:
+/var/www/joomoowebsites.com/htdocs/
+  |
+  + customizations/
+  | + jmws_idMyGadget_for_joomla/
+  | + jmws_mod_demo_idMyGadget/
+  | + jmws_mod_menu_idMyGadget/
+  | + jmws_protostar_tomh_idMyGadget/
+    + . . .
+  |
+  + joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+    + modules/
+    + templates/
+    + . . .
 
+#### WordPress example:
+/var/www/tomwhartung.com/htdocs/
+  |
+  + customizations/
+  | + jmws_idMyGadget_for_wordpress/
+  | + jmws_wp_twentyfifteen_idMyGadget/
+    + . . .
+  |
+  + tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+    + wp-content/plugins
+    + wp-content/themes/
+    + . . .
+
+### Downloading
+Use `git clone` to download the source, getting the URI for the code from the repo's main page.
+``` 
 git clone github@...
+``` 
 
-Important:
-	They will need to move the code or link it.
+### Setup
+Run the appropriate ln_*_customizations.py script in the htdocs directory to link the customizations into the site code.
 
-Recommended:
-	Include instructions on how to link it.
-	Update ln_joomla script to work in a more general case.
+For example, to link the joomla customizations in the `customizations` directory to the site code in the `joomla-example.com` directory:
+``` 
+cd /var/www/joomla-example.com/htdocs/
+ln_joomla_customizations joomla-example.com
+ls -al joomla-example.com/modules     ## should see links to any customizations that contain a module
+ls -al joomla-example.com/templates   ## should see links to any customizations that contain a template
+``` 
+You should be able to use file name completion on the joomla-example.com directory, easy peasy.
 
+If something is wrong, the script should display an intelligible error messages, if it doesn't let me know!
+
+### Deployment: Keeping Up-to-Date
+Use `git pull` to update the source: getting the URI for the code from the repo's main page.
+``` 
+git pull
+``` 
 

@@ -22,7 +22,7 @@ def syntax() :
 ##
 #  Checks that the specified directory exists, exiting with an error message if it doesn't
 #
-def checkForDirectory( dirToCheck ) :
+def verifyDirectory( dirToCheck ) :
 	if isdir( dirToCheck ) :
 		print( 'Found a ' + dirToCheck + ' directory, cool.' )
 	else:
@@ -34,8 +34,8 @@ def checkForDirectory( dirToCheck ) :
 ##
 #  Checks that the specified directory contains something resembling a joomla install
 #
-def checkForJoomlaInstall( mainSiteDir ) :
-	checkForDirectory( mainSiteDir )         # if directory present, prints "cool" message, else exits
+def verifyJoomlaInstall( mainSiteDir ) :
+	verifyDirectory( mainSiteDir )         # if directory present, prints "cool" message, else exits
 	modulesDir = mainSiteDir + '/modules'
 	templatesDir = mainSiteDir + '/templates'
 	if isdir( modulesDir ) :
@@ -157,8 +157,8 @@ else :
 	print( 'Exiting.' )
 	exit( 1 )
 
-checkForDirectory( customizationsDir )   # if directory present, prints "cool" message, else exits
-checkForJoomlaInstall( mainSiteDir )     # if it's a joomla install, prints multiple "cool" messages, else exits
+verifyDirectory( customizationsDir )   # if directory present, prints "cool" message, else exits
+verifyJoomlaInstall( mainSiteDir )     # if it's a joomla install, prints multiple "cool" messages, else exits
 
 customizations = listdir( customizationsDir )
 customizations.sort()

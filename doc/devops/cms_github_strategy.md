@@ -39,19 +39,32 @@ Two required directories exist under htdocs:
 * [site-name] - the core CMS source, along with any site-specific media (e.g., joomoowebsites.com)
 
 #### Joomla example:
-> /var/www/joomoowebsites.com/htdocs/
->   |
->   + customizations/
->   | + jmws_idMyGadget_for_joomla/
->   | + jmws_mod_demo_idMyGadget/
->   | + jmws_mod_menu_idMyGadget/
->   | + jmws_protostar_tomh_idMyGadget/
->     + . . .
->   |
->   + joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
->     + modules/
->     + templates/
->     + . . .
+/var/www/joomoowebsites.com/htdocs/
+
+  |
+
+  + customizations/
+
+  | + jmws_idMyGadget_for_joomla/
+
+  | + jmws_mod_demo_idMyGadget/
+
+  | + jmws_mod_menu_idMyGadget/
+
+  | + jmws_protostar_tomh_idMyGadget/
+
+    + . . .
+
+  |
+
+  + joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+
+    + modules/
+
+    + templates/
+
+    + . . .
+
 
 #### WordPress example:
 /var/www/tomwhartung.com/htdocs/

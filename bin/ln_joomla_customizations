@@ -8,7 +8,7 @@ import os
 from os import chdir, getcwd, listdir
 from os.path import isfile, isdir, islink
 from subprocess import call
-import sys
+import sys   # for accessing command line arguments
 
 ##
 #  Prints a syntax statement if we get an unexpected number of arguments
@@ -16,7 +16,7 @@ import sys
 def syntax() :
 	print( 'Syntax:' )
 	print( '  ln_joomla_customizations [mainSiteDir]' )
-	print( '    mainSiteDir must contain a version of the joomla core code' )
+	print( '    mainSiteDir must contain a version of the Joomla! core code' )
 	print( '      mainSiteDir defaults to ' + defaultMainSiteDir  )
 
 ##
@@ -42,17 +42,17 @@ def verifyJoomlaInstall( mainSiteDir ) :
 		print( 'Found a ' + modulesDir + ' directory, cool.' )
 	else:
 		print( 'Expecting a "' + modulesDir + '" directory, but it is not here.' )
-		print( 'Expecting the', mainSiteDir, 'directory to contain a joomla install, with a modules subdirectory.' )
+		print( 'Expecting the', mainSiteDir, 'directory to contain a Joomla! install, with a modules subdirectory.' )
 		print( 'The current directory is: "' + htdocsDir + '"' )
-		print( 'Change to a directory that has a subdirectory containing a joomla install, and try again.' )
+		print( 'Change to a directory that has a subdirectory containing a Joomla! install, and try again.' )
 		exit( 13 )
 	if isdir( templatesDir ) :
 		print( 'Found a ' + templatesDir + ' directory, cool.' )
 	else:
 		print( 'Expecting a "' + templatesDir + '" directory, but it is not here.' )
-		print( 'Expecting the', mainSiteDir, 'directory to contain a joomla install, with a templates subdirectory.' )
+		print( 'Expecting the', mainSiteDir, 'directory to contain a Joomla! install, with a templates subdirectory.' )
 		print( 'The current directory is: "' + htdocsDir + '"' )
-		print( 'Change to a directory that has a subdirectory containing a joomla install, and try again.' )
+		print( 'Change to a directory that has a subdirectory containing a Joomla! install, and try again.' )
 		exit( 13 )
 
 ##
@@ -137,6 +137,10 @@ def lnExtension( extension ) :
 		elif ( subdirectory == 'templates' ) :
 			lnTemplateDirs( extension )
 
+####################################################################################
+#
+#  Main program driver code starts here
+#
 customizationsDir = 'customizations'
 defaultMainSiteDir = 'joomoowebsites.com'
 htdocsDir = getcwd()

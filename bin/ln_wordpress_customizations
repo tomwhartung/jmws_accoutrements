@@ -7,11 +7,12 @@ import os
 from os import chdir, getcwd, listdir
 from os.path import isfile, isdir, islink
 from subprocess import call
+import sys   # for accessing command line arguments
 
 ##
 #  Prints a syntax statement if we get an unexpected number of arguments
 #
-def syntax( errorMessage ) :
+def syntax() :
 	print( 'Syntax:' )
 	print( '  ln_wordpress_customizations [mainSiteDir]' )
 	print( '    mainSiteDir must contain a version of the wordpress core code' )
@@ -107,10 +108,25 @@ def lnCustomization( customization ) :
 		elif ( subdirectory == 'themes' ) :
 			lnThemesDirs( customization )
 
+####################################################################################
+#
+#  Main program driver code starts here
+#
 customizationsDir = 'customizations'
-mainSiteDir = 'tomwhartung.com'
+defaultMainSiteDir = 'tomwhartung.com'
 htdocsDir = getcwd()
 exitVal = 0
+
+if ( len(sys.argv) == 1 ) :
+	mainSiteDir = defaultMainSiteDir
+elif ( len(sys.argv) == 2 ) :
+	mainSiteDir = sys.argv[1]
+else :
+	syntax()
+	print( 'Error:' )
+	print( '   Unexpected number of arguments.' )
+	print( 'Exiting.' )
+	exit( 1 )
 
 verifyDirectory( customizationsDir )   # if directory is present, prints "cool" message, else exits
 verifyWordPressInstall( mainSiteDir )  # if it's a WordPress install, prints multiple "cool" messages, else exits

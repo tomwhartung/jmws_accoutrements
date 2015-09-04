@@ -31,6 +31,36 @@ def verifyDirectory( dirToCheck ) :
 		exit( 1 )
 
 ##
+#  Checks that the specified directory contains something resembling a Drupal install, making subdirs if necessary
+#     If the sanity check for sites/all is successful
+#        Check for modules/jmws and themes/jmws, creating them if necessary
+#     else
+#        display an "Are you insane?" message
+#
+def verifyDrupalInstall( mainSiteDir ) :
+	verifyDirectory( mainSiteDir )         # if directory present, prints "cool" message, else exits
+	mainSitesAllDir = mainSiteDir + '/sites/all'
+	mainSitesAllModulesJmwsDir = mainSitesAllDir + '/modules/jmws'
+	mainSitesAllThemesJmwsDir = mainSitesAllDir + '/themes/jmws'
+	if isdir( mainSitesAllDir ) :
+		if isdir( mainSitesAllModulesJmwsDir ) :
+			print( 'Found a ' + mainSitesAllModulesJmwsDir + ' directory, cool!' )
+		else :
+			print( 'Warning: making the ' + mainSitesAllModulesJmwsDir + ' directory, because it was not found.' )
+			os.makedirs( mainSitesAllModulesJmwsDir )
+		if isdir( mainSitesAllThemesJmwsDir ) :
+			print( 'Found a ' + mainSitesAllThemesJmwsDir + ' directory, cool!' )
+		else :
+			print( 'Warning: making the ' + mainSitesAllThemesJmwsDir + ' directory, because it was not found.' )
+			os.makedirs( mainSitesAllThemesJmwsDir )
+	else :
+		print( 'Expecting a "' + mainSitesAllDir + '" directory, but it is not here.' )
+		print( 'Expecting the', mainSiteDir, 'directory to contain a Drupal install, with a sites/all subdirectory.' )
+		print( 'The current directory is: "' + htdocsDir + '"' )
+		print( 'Change to a directory that has a subdirectory containing a Drupal install, and try again.' )
+		exit( 13 )
+
+##
 #  Links directories containing jmws modules
 #
 def lnModulesDirs( customization ) :
@@ -108,38 +138,10 @@ else :
 	print( 'Exiting.' )
 	exit( 1 )
 
+verifyDirectory( customizationsDir )   # if directory is present, prints "cool" message, else exits
+verifyDrupalInstall( mainSiteDir )     # if it's a Drupal install, prints multiple "cool" messages, else exits
+
 exit(0)
-
-verifyDirectory( customizationsDir )   # exits if directory not present
-verifyDirectory( mainSiteDir )         # exits if directory not present
-
-mainSitesAllDir = mainSiteDir + '/sites/all'
-mainSitesAllModulesJmwsDir = mainSitesAllDir + '/modules/jmws'
-mainSitesAllThemesJmwsDir = mainSitesAllDir + '/themes/jmws'
-
-#
-#  If the sanity check for sites/all is successful
-#     Check for modules/jmws and themes/jmws, creating them if necessary
-#  else
-#     display an "Are you insane?" message
-#
-if isdir( mainSitesAllDir ) :
-	if isdir( mainSitesAllModulesJmwsDir ) :
-		print( 'Found a ' + mainSitesAllModulesJmwsDir + ' directory, cool!' )
-	else :
-		print( 'Warning: making the ' + mainSitesAllModulesJmwsDir + ' directory, because it was not found.' )
-		os.makedirs( mainSitesAllModulesJmwsDir )
-	if isdir( mainSitesAllThemesJmwsDir ) :
-		print( 'Found a ' + mainSitesAllThemesJmwsDir + ' directory, cool!' )
-	else :
-		print( 'Warning: making the ' + mainSitesAllThemesJmwsDir + ' directory, because it was not found.' )
-		os.makedirs( mainSitesAllThemesJmwsDir )
-else :
-	print( 'Error!' )
-	print( 'Not seeing a ' + mainSitesAllDir + ' directory!' )
-	print( 'This does not look like drupal code!' )
-	print( 'Exiting!' )
-	exit( 1 )
 
 #
 #  List the customizations dirs and link each of them as appropriate

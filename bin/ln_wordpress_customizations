@@ -9,9 +9,18 @@ from os.path import isfile, isdir, islink
 from subprocess import call
 
 ##
+#  Prints a syntax statement if we get an unexpected number of arguments
+#
+def syntax( errorMessage ) :
+	print( 'Syntax:' )
+	print( '  ln_wordpress_customizations [mainSiteDir]' )
+	print( '    mainSiteDir must contain a version of the wordpress core code' )
+	print( '      mainSiteDir defaults to ' + defaultMainSiteDir  )
+
+##
 #  Checks that the specified directory exists, exiting with an error message if it doesn't
 #
-def checkForDirectory( dirToCheck ) :
+def verifyDirectory( dirToCheck ) :
 	if isdir( dirToCheck ) :
 		print( 'Found a ' + dirToCheck + ' directory, cool.' )
 	else:
@@ -19,6 +28,30 @@ def checkForDirectory( dirToCheck ) :
 		print( 'The current directory is: "' + htdocsDir + '"' )
 		print( 'Change to a different directory, preferably one named "htdocs," and try again.' )
 		exit( 1 )
+
+##
+#  Checks that the specified directory contains something resembling a wordpress install
+#
+def verifyWordPressInstall( mainSiteDir ) :
+	verifyDirectory( mainSiteDir )         # if directory present, prints "cool" message, else exits
+	pluginsDir = mainSiteDir + '/wp-content/plugins'
+	themesDir = mainSiteDir + '/wp-content/themes'
+	if isdir( pluginsDir ) :
+		print( 'Found a ' + pluginsDir + ' directory, cool.' )
+	else:
+		print( 'Expecting a "' + pluginsDir + '" directory, but it is not here.' )
+		print( 'Expecting the', mainSiteDir, 'directory to contain a WordPress install, with a wp-content/plugins subdirectory.' )
+		print( 'The current directory is: "' + htdocsDir + '"' )
+		print( 'Change to a directory that has a subdirectory containing a WordPress install, and try again.' )
+		exit( 13 )
+	if isdir( themesDir ) :
+		print( 'Found a ' + themesDir + ' directory, cool.' )
+	else:
+		print( 'Expecting a "' + themesDir + '" directory, but it is not here.' )
+		print( 'Expecting the', mainSiteDir, 'directory to contain a WordPress install, with a wp-content/themes subdirectory.' )
+		print( 'The current directory is: "' + htdocsDir + '"' )
+		print( 'Change to a directory that has a subdirectory containing a WordPress install, and try again.' )
+		exit( 13 )
 
 ##
 #  Links directories containing plugins
@@ -79,8 +112,8 @@ mainSiteDir = 'tomwhartung.com'
 htdocsDir = getcwd()
 exitVal = 0
 
-checkForDirectory( customizationsDir )   # exits if directory not present
-checkForDirectory( mainSiteDir )         # exits if directory not present
+verifyDirectory( customizationsDir )   # if directory is present, prints "cool" message, else exits
+verifyWordPressInstall( mainSiteDir )  # if it's a WordPress install, prints multiple "cool" messages, else exits
 
 customizations = listdir( customizationsDir )
 customizations.sort()

@@ -12,7 +12,8 @@ Installing Jmws code from github can be greatly simplified by following this, or
 It's not complicated, and I have provided tools to help manage it, so if you are interested in using one of our extensions, consider taking a few minutes to grok it.
 
 ### Terminology
-*CMS Extensions* refers to all packages that one can install in to a Content Management System (CMS).  Extensions include Joomla templates, modules, components, and plugins, and all WordPress themes and plugins.
+*CMS Core Code* refers to the open source code that comprises a Content Management System, such as Joomla, WordPress, or Drupal.
+*CMS Extensions* refers to all packages that one can install in to a Content Management System (CMS).  Extensions include Joomla templates, modules, components, and plugins, and all WordPress themes and plugins, and all Drupal modules and themes.
 
 ### Goals
 The goals of this strategy are:
@@ -38,19 +39,19 @@ Two required directories exist under htdocs:
 * [site-name] - the core CMS source, along with any site-specific media (e.g., joomoowebsites.com)
 
 #### Joomla example:
-/var/www/joomoowebsites.com/htdocs/
-  |
-  + customizations/
-  | + jmws_idMyGadget_for_joomla/
-  | + jmws_mod_demo_idMyGadget/
-  | + jmws_mod_menu_idMyGadget/
-  | + jmws_protostar_tomh_idMyGadget/
-    + . . .
-  |
-  + joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
-    + modules/
-    + templates/
-    + . . .
+> /var/www/joomoowebsites.com/htdocs/
+>   |
+>   + customizations/
+>   | + jmws_idMyGadget_for_joomla/
+>   | + jmws_mod_demo_idMyGadget/
+>   | + jmws_mod_menu_idMyGadget/
+>   | + jmws_protostar_tomh_idMyGadget/
+>     + . . .
+>   |
+>   + joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+>     + modules/
+>     + templates/
+>     + . . .
 
 #### WordPress example:
 /var/www/tomwhartung.com/htdocs/

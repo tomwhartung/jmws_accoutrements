@@ -1,6 +1,8 @@
 
-## Jmws Content Management Github Repo Strategy
+# Jmws Github Repo Strategy
+How to keep Jmws extensions and CMS core code in separate github repos and different directory trees.
 
+Includes instructions on how to use the Jmws `ln_*_customizations` scripts to link the extensions into the core code.
 
 ## Overview
 This describes the source code development, maintenance, and deployment strategy used by JooMoo WebSites LLC.
@@ -70,8 +72,11 @@ git clone github@...
 ``` 
 
 ### Setup
-Run the appropriate ln_*_customizations.py script in the htdocs directory to link the customizations into the site code.
+Change directories into the htdocs directory and run the appropriate ln_*_customizations script to link the customizations into the site code.
 
+If something is wrong, the script should display an intelligible error messages, if it doesn't let me know!
+
+#### Joomla Example
 For example, to link the joomla customizations in the `customizations` directory to the site code in the `joomla-example.com` directory:
 ``` 
 cd /var/www/joomla-example.com/htdocs/
@@ -79,9 +84,23 @@ ln_joomla_customizations joomla-example.com
 ls -al joomla-example.com/modules     ## should see links to any customizations that contain a module
 ls -al joomla-example.com/templates   ## should see links to any customizations that contain a template
 ``` 
-You should be able to use file name completion on the joomla-example.com directory, easy peasy.
 
-If something is wrong, the script should display an intelligible error messages, if it doesn't let me know!
+Lazy typists should be able to use file name completion on the joomla-example.com directory, making this very easy.
+
+#### WordPress Example
+For example, to link the joomla customizations in the `customizations` directory to the site code in the `joomla-example.com` directory:
+``` 
+cd /var/www/joomla-example.com/htdocs/
+ln_joomla_customizations joomla-example.com
+ls -al joomla-example.com/modules     ## should see links to any customizations that contain a module
+ls -al joomla-example.com/templates   ## should see links to any customizations that contain a template
+``` 
+
+Lazy typists should be able to use file name completion on the joomla-example.com directory, making this very easy.
+
+#### Drupal Example
+Coming soon!
+
 
 ### Deployment: Keeping Up-to-Date
 Use `git pull` to update the source: getting the URI for the code from the repo's main page.

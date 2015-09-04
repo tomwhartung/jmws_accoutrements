@@ -88,19 +88,26 @@ ls -al joomla-example.com/templates   ## should see links to any customizations 
 Lazy typists should be able to use file name completion on the joomla-example.com directory, making this very easy.
 
 #### WordPress Example
-For example, to link the joomla customizations in the `customizations` directory to the site code in the `joomla-example.com` directory:
+For example, to link the wordpress customizations in the `customizations` directory to the site code in the `wordpress-example.com` directory:
 ``` 
-cd /var/www/joomla-example.com/htdocs/
-ln_joomla_customizations joomla-example.com
-ls -al joomla-example.com/modules     ## should see links to any customizations that contain a module
-ls -al joomla-example.com/templates   ## should see links to any customizations that contain a template
+cd /var/www/wordpress-example.com/htdocs/
+ln_wordpress_customizations wordpress-example.com
+ls -al wordpress-example.com/wp-content/plugins    ## should see links to any customizations that contain a plugin
+ls -al wordpress-example.com/wp-content/themes     ## should see links to any customizations that contain a theme
 ``` 
 
-Lazy typists should be able to use file name completion on the joomla-example.com directory, making this very easy.
+Lazy typists should be able to use file name completion on the wordpress-example.com directory, making this very easy.
 
 #### Drupal Example
-Coming soon!
+For example, to link the drupal customizations in the `customizations` directory to the site code in the `drupal-example.com` directory:
+```
+cd /var/www/drupal-example.com/htdocs/
+ln_drupal_customizations drupal-example.com
+ls -al drupal-example.com/wp-content/plugins    ## should see links to any customizations that contain a plugin
+ls -al drupal-example.com/wp-content/themes     ## should see links to any customizations that contain a theme
+```
 
+Lazy typists should be able to use file name completion on the drupal-example.com directory, making this very easy.
 
 ### Deployment: Keeping Up-to-Date
 Use `git pull` to update the source: getting the URI for the code from the repo's main page.

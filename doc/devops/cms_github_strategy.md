@@ -41,46 +41,46 @@ Two required directories exist under htdocs:
 #### Joomla example:
 On my server, the `/var/www/joomoowebsites.com/htdocs/` directory has two subdirectories, customizations and joomoowebsites.com .  These in turn contain subdirectories as follows
 
-  | customizations/
+| customizations/
 
-  | + jmws_idMyGadget_for_joomla/
+| |-- jmws_idMyGadget_for_joomla/
 
-  | + jmws_mod_demo_idMyGadget/
+| |-- jmws_mod_demo_idMyGadget/
 
-  | + jmws_mod_menu_idMyGadget/
+| |-- jmws_mod_menu_idMyGadget/
 
-  | + jmws_protostar_tomh_idMyGadget/
+| |-- jmws_protostar_tomh_idMyGadget/
 
-  | + . . .
+| |-- . . .
 
-  | joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+| joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
 
-  | + modules/
+| |-- modules/
 
-  | + templates/
+| |-- templates/
 
-  | + . . .
+| |-- . . .
 
 I use the ln_joomla_customizations to link the customizations into the correct directories in the core code.
 
 #### WordPress example:
 On my server, the `/var/www/tomwhartung.com/htdocs/` directory has two subdirectories, customizations and tomwhartung.com .  These in turn contain subdirectories as follows:
 
-| customizations/
+|-- customizations/
 
-  | jmws_idMyGadget_for_wordpress/
+|--|-- jmws_idMyGadget_for_wordpress/
 
-  | jmws_wp_twentyfifteen_idMyGadget/
+|--|-- jmws_wp_twentyfifteen_idMyGadget/
 
-    . . .
+|--|-- . . .
 
-| tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+|-- tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
 
-  | wp-content/plugins
+|--|-- wp-content/plugins
 
-  | wp-content/themes/
+|--|-- wp-content/themes/
 
-  | . . .
+|--|-- . . .
 
 I use the ln_wordpress_customizations to link the customizations into the correct directories in the core code.
 
@@ -89,19 +89,19 @@ On my server, the `/var/www/tomhartung.com/htdocs/` directory has two subdirecto
 
 |--customizations/
 
-  |--jmws_idMyGadget_for_drupal/
+| |-- jmws_idMyGadget_for_drupal/
 
-  |--jmws_drupal_stark_idMyGadget/
+| |-- jmws_drupal_stark_idMyGadget/
 
-    . . .
+| |-- . . .
 
 |--tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
 
-  |--sites/all/modules
+| |-- sites/all/modules
 
-  |--sites/all/themes/
+| |-- sites/all/themes/
 
-  |--. . .
+| |-- . . .
 
 I use the ln_drupal_customizations to link the customizations into the correct directories in the core code.
 

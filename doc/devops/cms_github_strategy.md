@@ -68,19 +68,19 @@ On my server, the `/var/www/tomwhartung.com/htdocs/` directory has two subdirect
 
 |-- customizations/
 
-|--|-- jmws_idMyGadget_for_wordpress/
+|-- |-- jmws_idMyGadget_for_wordpress/
 
-|--|-- jmws_wp_twentyfifteen_idMyGadget/
+|-- |-- jmws_wp_twentyfifteen_idMyGadget/
 
-|--|-- . . .
+|-- |-- . . .
 
 |-- tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
 
-|--|-- wp-content/plugins
+|-- |-- wp-content/plugins
 
-|--|-- wp-content/themes/
+|-- |-- wp-content/themes/
 
-|--|-- . . .
+|-- |-- . . .
 
 I use the ln_wordpress_customizations to link the customizations into the correct directories in the core code.
 
@@ -107,9 +107,14 @@ I use the ln_drupal_customizations to link the customizations into the correct d
 
 ### Downloading
 Use `git clone` to download the source, getting the URI for the code from the repo's main page.
+
 ``` 
 git clone github@...
 ``` 
+
+You can download the zip file, but using git clone makes it easy to keep the code up to date.
+
+If you are unfamiliar with git, there is plenty of documentation on the net about it.
 
 ### Setup
 Change directories into the htdocs directory and run the appropriate ln_*_customizations script to link the customizations into the site code.
@@ -118,6 +123,7 @@ If something is wrong, the script should display an intelligible error messages,
 
 #### Joomla Example
 For example, to link the joomla customizations in the `customizations` directory to the site code in the `joomla-example.com` directory:
+
 ``` 
 cd /var/www/joomla-example.com/htdocs/
 ln_joomla_customizations joomla-example.com
@@ -129,6 +135,7 @@ Lazy typists should be able to use file name completion on the joomla-example.co
 
 #### WordPress Example
 For example, to link the wordpress customizations in the `customizations` directory to the site code in the `wordpress-example.com` directory:
+
 ``` 
 cd /var/www/wordpress-example.com/htdocs/
 ln_wordpress_customizations wordpress-example.com
@@ -140,18 +147,28 @@ Lazy typists should be able to use file name completion on the wordpress-example
 
 #### Drupal Example
 For example, to link the drupal customizations in the `customizations` directory to the site code in the `drupal-example.com` directory:
+
 ```
 cd /var/www/drupal-example.com/htdocs/
 ln_drupal_customizations drupal-example.com
 ls -al drupal-example.com/wp-content/plugins    ## should see links to any customizations that contain a plugin
 ls -al drupal-example.com/wp-content/themes     ## should see links to any customizations that contain a theme
+
 ```
 
 Lazy typists should be able to use file name completion on the drupal-example.com directory, making this very easy.
 
 ### Deployment: Keeping Up-to-Date
 Use `git pull` to update the source: getting the URI for the code from the repo's main page.
+
 ``` 
 git pull
 ``` 
+
+### Checking CMS Core Code Into Git
+Upgrading your site to a new version of the CMS Core code is easier when you check the code into github.
+
+The specifics of this technique vary for the different CMSes, and you may have your own ideas as to what the best way to do it is, so I will not go into details here.
+
+This does however make it easier to deploy updates made to a local site, once the local site is working ok.  It also helps when adding images and other media.
 

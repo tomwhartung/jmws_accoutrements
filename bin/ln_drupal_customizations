@@ -7,11 +7,21 @@ import os
 from os import chdir, getcwd, listdir, makedirs
 from os.path import isfile, isdir, islink
 from subprocess import call
+import sys   # for accessing command line arguments
+
+##
+#  Prints a syntax statement
+#
+def syntax() :
+	print( 'Syntax:' )
+	print( '  ln_drupal_customizations [mainSiteDir]' )
+	print( '    mainSiteDir must contain a version of the Drupal core code' )
+	print( '      mainSiteDir defaults to ' + defaultMainSiteDir  )
 
 ##
 #  Checks that the specified directory exists, exiting with an error message if it doesn't
 #
-def checkForDirectory( dirToCheck ) :
+def verifyDirectory( dirToCheck ) :
 	if isdir( dirToCheck ) :
 		print( 'Found a ' + dirToCheck + ' directory, cool.' )
 	else:
@@ -74,13 +84,34 @@ def lnCustomization( customization ) :
 		elif ( subdirectory == 'themes' ) :
 			lnThemesDirs( customization )
 
+####################################################################################
+#
+#  Main program driver code starts here
+#
 customizationsDir = 'customizations'
-mainSiteDir = 'tomhartung.com'
+defaultMainSiteDir = 'tomhartung.com'
 htdocsDir = getcwd()
 exitVal = 0
 
-checkForDirectory( customizationsDir )   # exits if directory not present
-checkForDirectory( mainSiteDir )         # exits if directory not present
+if ( len(sys.argv) == 1 ) :
+	mainSiteDir = defaultMainSiteDir
+elif ( len(sys.argv) == 2 ) :
+	if ( sys.argv[1] == '-h' ) :
+		syntax()
+		exit( 0 )
+	else :
+		mainSiteDir = sys.argv[1]
+else :
+	syntax()
+	print( 'Error:' )
+	print( '   Unexpected number of arguments.' )
+	print( 'Exiting.' )
+	exit( 1 )
+
+exit(0)
+
+verifyDirectory( customizationsDir )   # exits if directory not present
+verifyDirectory( mainSiteDir )         # exits if directory not present
 
 mainSitesAllDir = mainSiteDir + '/sites/all'
 mainSitesAllModulesJmwsDir = mainSitesAllDir + '/modules/jmws'

@@ -29,7 +29,32 @@ def checkForDirectory( dirToCheck ) :
 		print( 'Expecting a "' + dirToCheck + '" directory, but it is not here.' )
 		print( 'The current directory is: "' + htdocsDir + '"' )
 		print( 'Change to a different directory, preferably one named "htdocs," and try again.' )
-		exit( 1 )
+		exit( 11 )
+
+##
+#  Checks that the specified directory contains something resembling a joomla install
+#
+def checkForJoomlaInstall( mainSiteDir ) :
+	checkForDirectory( mainSiteDir )         # if directory present, prints "cool" message, else exits
+	modulesDir = mainSiteDir + '/modules'
+	templatesDir = mainSiteDir + '/templates'
+	if isdir( modulesDir ) :
+		print( 'Found a ' + modulesDir + ' directory, cool.' )
+	else:
+		print( 'Expecting a "' + modulesDir + '" directory, but it is not here.' )
+		print( 'Expecting the', mainSiteDir, 'directory to contain a joomla install, with a modules subdirectory.' )
+		print( 'The current directory is: "' + htdocsDir + '"' )
+		print( 'Change to a directory that has a subdirectory containing a joomla install, and try again.' )
+		exit( 13 )
+	if isdir( templatesDir ) :
+		print( 'Found a ' + templatesDir + ' directory, cool.' )
+	else:
+		print( 'Expecting a "' + templatesDir + '" directory, but it is not here.' )
+		print( 'Expecting the', mainSiteDir, 'directory to contain a joomla install, with a templates subdirectory.' )
+		print( 'The current directory is: "' + htdocsDir + '"' )
+		print( 'Change to a directory that has a subdirectory containing a joomla install, and try again.' )
+		exit( 13 )
+
 ##
 #  Links the language files used for localization
 #
@@ -132,8 +157,8 @@ else :
 	print( 'Exiting.' )
 	exit( 1 )
 
-checkForDirectory( customizationsDir )   # exits if directory not present
-checkForDirectory( mainSiteDir )         # exits if directory not present
+checkForDirectory( customizationsDir )   # if directory present, prints "cool" message, else exits
+checkForJoomlaInstall( mainSiteDir )     # if it's a joomla install, prints multiple "cool" messages, else exits
 
 customizations = listdir( customizationsDir )
 customizations.sort()

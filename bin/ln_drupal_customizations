@@ -39,9 +39,6 @@ def verifyDirectory( dirToCheck ) :
 #
 def verifyDrupalInstall( mainSiteDir ) :
 	verifyDirectory( mainSiteDir )         # if directory present, prints "cool" message, else exits
-	mainSitesAllDir = mainSiteDir + '/sites/all'
-	mainSitesAllModulesJmwsDir = mainSitesAllDir + '/modules/jmws'
-	mainSitesAllThemesJmwsDir = mainSitesAllDir + '/themes/jmws'
 	if isdir( mainSitesAllDir ) :
 		if isdir( mainSitesAllModulesJmwsDir ) :
 			print( 'Found a ' + mainSitesAllModulesJmwsDir + ' directory, cool!' )
@@ -138,10 +135,12 @@ else :
 	print( 'Exiting.' )
 	exit( 1 )
 
+mainSitesAllDir = mainSiteDir + '/sites/all'
+mainSitesAllModulesJmwsDir = mainSitesAllDir + '/modules/jmws'
+mainSitesAllThemesJmwsDir = mainSitesAllDir + '/themes/jmws'
+
 verifyDirectory( customizationsDir )   # if directory is present, prints "cool" message, else exits
 verifyDrupalInstall( mainSiteDir )     # if it's a Drupal install, prints multiple "cool" messages, else exits
-
-exit(0)
 
 #
 #  List the customizations dirs and link each of them as appropriate

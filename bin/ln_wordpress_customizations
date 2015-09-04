@@ -10,7 +10,7 @@ from subprocess import call
 import sys   # for accessing command line arguments
 
 ##
-#  Prints a syntax statement if we get an unexpected number of arguments
+#  Prints a syntax statement
 #
 def syntax() :
 	print( 'Syntax:' )
@@ -120,7 +120,11 @@ exitVal = 0
 if ( len(sys.argv) == 1 ) :
 	mainSiteDir = defaultMainSiteDir
 elif ( len(sys.argv) == 2 ) :
-	mainSiteDir = sys.argv[1]
+	if ( sys.argv[1] == '-h' ) :
+		syntax()
+		exit( 0 )
+	else :
+		mainSiteDir = sys.argv[1]
 else :
 	syntax()
 	print( 'Error:' )

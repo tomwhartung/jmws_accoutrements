@@ -2,12 +2,12 @@
 ## Installing Jmws Joomla Extensions
 Installing one of the Jmws extensions requires the following steps:
 
-# Downloading the extension code
-# Integrating the code into your site's Joomla! code
-# Installing the extension in Joomla's back end
+1. Downloading the extension code
+1. Integrating the code into your site's Joomla! code
+1. Installing the extension in Joomla's back end
 
 ### How We Do It
-The following document outlines our github strategy:
+The following document (in this repo) outlines our github strategy:
 
 * [devops/cms_github_strategy.md](https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/cms_github_strategy.md)
 
@@ -26,32 +26,36 @@ cd customizations
 git clone github@...
 ```
 
-This puts the code in its own separate directory tree, with all the customizations being on the same directory level as the site code.
+This puts the code in its own separate directory tree, with a single directory containing all the customizations on the same directory level as the site code.
 
 ### Integrating the Extension Code Into the CMS Core Code
 We recommend keeping the extension code and the CMS core code in separate directory trees and using soft links to integrate them, for reasons cited in the document listed above.
 
-In fact, I like this idea so much, I do not even want to think about other techniques, but feel free to do what feels right and works for you.
+In fact, I like this idea so much, I have invested a considerable amount of time automating and documenting it and so do not even want to think about other techniques.
+
+But feel free to do what feels right and works for you.
 
 ### Installing into the Joomla! back end
 It is easiest to use Joomla's Discover method to install Jmws extensions.
 
 This is the procedure we used to install a new module recently (on Aug. 28, 2015).
 
-# Log in to your site's Joomla! back end (administration page)
+1. Log in to your site's Joomla! back end (administration page)
 
-# In the Top Menu click on Extensions -> Extension Manager
+1. In the Top Menu click on Extensions -> Extension Manager
 
-# In the Side Menu click on Discover
+1. In the Side Menu click on Discover
 
-# Optional: select the following filters from their dropdowns:
-	** Site
-	** Module
+1. Optional: select the following filters from their dropdowns:
+	* Site
+	* Module
 
-# Near top of page click on the Discover button
+1. Near top of page click on the Discover button
 
-# Find the new template or module in the list, otherwise you are doing something wrong or they changed this or something
+1. Find the new template or module in the list, otherwise you are doing something wrong or they changed this or something
 
-# Select the new template or module to install
+1. Select the new template or module to install
 
-# Near top of page click on the Install butto
+1. Near top of page click on the Install butto
+
+

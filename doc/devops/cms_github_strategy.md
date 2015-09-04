@@ -39,11 +39,9 @@ Two required directories exist under htdocs:
 * [site-name] - the core CMS source, along with any site-specific media (e.g., joomoowebsites.com)
 
 #### Joomla example:
-/var/www/joomoowebsites.com/htdocs/
+On my server, the `/var/www/joomoowebsites.com/htdocs/` directory has two subdirectories, customizations and joomoowebsites.com .  These in turn contain subdirectories as follows
 
-  |
-
-  + customizations/
+  | customizations/
 
   | + jmws_idMyGadget_for_joomla/
 
@@ -53,31 +51,59 @@ Two required directories exist under htdocs:
 
   | + jmws_protostar_tomh_idMyGadget/
 
-    + . . .
+  | + . . .
 
-  |
+  | joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
 
-  + joomoowebsites.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+  | + modules/
 
-    + modules/
+  | + templates/
 
-    + templates/
+  | + . . .
 
-    + . . .
-
+I use the ln_joomla_customizations to link the customizations into the correct directories in the core code.
 
 #### WordPress example:
-/var/www/tomwhartung.com/htdocs/
-  |
-  + customizations/
-  | + jmws_idMyGadget_for_wordpress/
-  | + jmws_wp_twentyfifteen_idMyGadget/
-    + . . .
-  |
-  + tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
-    + wp-content/plugins
-    + wp-content/themes/
-    + . . .
+On my server, the `/var/www/tomwhartung.com/htdocs/` directory has two subdirectories, customizations and tomwhartung.com .  These in turn contain subdirectories as follows:
+
+| customizations/
+
+  | jmws_idMyGadget_for_wordpress/
+
+  | jmws_wp_twentyfifteen_idMyGadget/
+
+    . . .
+
+| tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+
+  | wp-content/plugins
+
+  | wp-content/themes/
+
+  | . . .
+
+I use the ln_wordpress_customizations to link the customizations into the correct directories in the core code.
+
+#### Drupal example:
+On my server, the `/var/www/tomhartung.com/htdocs/` directory has two subdirectories, customizations and tomhartung.com .  These in turn contain subdirectories as follows:
+
+|--customizations/
+
+  |--jmws_idMyGadget_for_drupal/
+
+  |--jmws_drupal_stark_idMyGadget/
+
+    . . .
+
+|--tomwhartung.com/   ## This contains the CMS core source and is the Server's DocumentRoot
+
+  |--sites/all/modules
+
+  |--sites/all/themes/
+
+  |--. . .
+
+I use the ln_drupal_customizations to link the customizations into the correct directories in the core code.
 
 ### Downloading
 Use `git clone` to download the source, getting the URI for the code from the repo's main page.

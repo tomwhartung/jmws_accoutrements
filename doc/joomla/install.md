@@ -29,9 +29,9 @@ git clone github@...
 This puts the code in its own separate directory tree, with a single directory containing all the customizations on the same directory level as the site code.
 
 ### Integrating the Extension Code Into the CMS Core Code
-We recommend keeping the extension code and the CMS core code in separate directory trees and using soft links to integrate them, for reasons cited in the document listed above.
+We recommend keeping the extension code and the CMS core code in separate directory trees and using soft links to integrate them, for reasons cited in the [github strategy](https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/cms_github_strategy.md) document.
 
-In fact, I like this idea so much, I have invested a considerable amount of time automating and documenting it and so do not even want to think about other techniques.
+In fact, I like this idea so much, I have invested a considerable amount of time automating and documenting it, and so do not even want to think about other techniques.
 
 But feel free to do what feels right and works for you.
 
@@ -56,6 +56,6 @@ This is the procedure we used to install a new module recently (on Aug. 28, 2015
 
 1. Select the new template or module to install
 
-1. Near top of page click on the Install butto
+1. Near top of page click on the Install button
 
 

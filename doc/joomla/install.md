@@ -1,5 +1,5 @@
 
-## Installing Jmws Joomla Extensions
+# Installing Jmws Joomla Extensions
 Installing one of the Jmws extensions requires the following steps:
 
 1. Downloading the extension code
@@ -29,7 +29,7 @@ git clone github@...
 This puts the code in its own separate directory tree, with a single directory containing all the customizations on the same directory level as the site code.
 
 ### Integrating the Extension Code Into the CMS Core Code
-We recommend keeping the extension code and the CMS core code in separate directory trees and using soft links to integrate them, for reasons cited in the [github strategy](https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/cms_github_strategy.md) document.
+We recommend keeping the extension code and the CMS core code in separate directory trees and using soft links to integrate them, for reasons cited in the [github strategy](https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/cms_github_strategy.md) document mentioned previously.
 
 In fact, I like this idea so much, I have invested a considerable amount of time automating and documenting it, and so do not even want to think about other techniques.
 

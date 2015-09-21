@@ -1,0 +1,15 @@
+
+Process Used to Integrate IdMyGadget With WordPress and Drupal
+--------------------------------------------------------------
+Using the completed work with Joomla as an example.
+
+1. Create github repositories
+
+2. Populate repos with existing code base
+   o Keeping jmws_idMyGadget_for_joomla separate from jmws_idMyGadget_for_wordpress
+     and jmws_idMyGadget_for_drupal for now -- to be safe.
+   o Continuing to maintain entirely separate copies of themes we are updating
+     (rather than use child theme feature of underlying CMS) because I am unsure
+     exactly what I will need to change -- again, to be safe.
+
+3. 

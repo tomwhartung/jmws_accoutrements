@@ -2,6 +2,8 @@
 Process Used to Integrate IdMyGadget With WordPress and Drupal
 --------------------------------------------------------------
 Using the completed work with Joomla as an example.
+Where possible and plausible, want to supply options as similar as possible
+to those offered by the jmws_protostar_tomh_idMyGadget template.
 
 1. Create github repositories
 
@@ -12,4 +14,45 @@ Using the completed work with Joomla as an example.
      (rather than use child theme feature of underlying CMS) because I am unsure
      exactly what I will need to change -- again, to be safe.
 
-3. 
+3. Include files: figure out how and where to include the device detector core code.
+   (Yeah fyi this is much more difficult than it looks.)
+
+4. Instantiate JmwsIdMyGadget object.
+
+5. Implement error checking:
+   o Wp: plugin not installed
+   o Wp: plugin not activated
+   o Wp: selected 3rd party device detector not installed
+   o Drupal: module not installed
+   o Drupal: module not activated
+   o Drupal: selected 3rd party device detector not installed
+
+6. Allow device-specific settings of:
+   o Site Name (check these details for plausibility and refine if necessary!)
+     - There is only one Site Name per site, set in the General Options
+     - The device-specific setting is whether to show this.
+   o Site Title
+     - Device-specific values (unlike Site Name)
+     - Used in lieu of Site Name if desired
+     - Ignore if blank
+   o Logo (image, aka banner?)
+     - Device-specific values
+     - Ignore if blank (no image)
+   o Site Description (aka. Tag Line)
+     - Device-specific values
+     - Ignore if blank
+   o Supply html element drop-downs for each?
+     - I would rather like to do this, as it makes things very flexible, specifically:
+     - Doing this makes it easy to fit varying lengths of text into the
+       spaces provided on each device type, without having to change the code
+
+7. jQuery Mobile Phone Nav
+   o Allow for each device type
+   o Yes it does not look good on non-mobile devices but we have to admit that
+     we do not know what all future people may actually want
+
+8. Hamburger Nav
+   o Allow on none, one, or both sides for each device type
+   o Follow pattern used on joomla implementation (e.g.m overriding drawn icon
+     with image file(s)) as much as possible
+

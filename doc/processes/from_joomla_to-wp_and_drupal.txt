@@ -1,10 +1,29 @@
 
-Process Used to Integrate IdMyGadget With WordPress and Drupal
---------------------------------------------------------------
+ Process Used to Integrate IdMyGadget With WordPress and Drupal
+================================================================
+Try to keep on track here!
+
+ Goals
+-------
 Using the completed work with Joomla as an example.
+
 Where possible and plausible, want to supply options as similar as possible
 to those offered by the jmws_protostar_tomh_idMyGadget template.
 
+ Repos
+-------
+WordPress repos:
+[ ] jmws_idMyGadget_for_wordpress
+[ ] jmws_wp_twentyfifteen_idMyGadget
+[ ] jmws_wp_vqsg_ot_idMyGadget
+
+Drupal repos:
+[ ] jmws_drupal_bartik_idMyGadget
+[ ] jmws_drupal_stark_idMyGadget
+[ ] jmws_idMyGadget_for_drupal
+
+ Process
+---------
 1. Create github repositories
 
 2. Populate repos with existing code base
@@ -45,6 +64,8 @@ to those offered by the jmws_protostar_tomh_idMyGadget template.
      - I would rather like to do this, as it makes things very flexible, specifically:
      - Doing this makes it easy to fit varying lengths of text into the
        spaces provided on each device type, without having to change the code
+
+*** Deploy at this point! ***
 
 7. jQuery Mobile Phone Nav
    o Allow for each device type

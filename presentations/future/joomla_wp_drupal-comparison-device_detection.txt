@@ -1,0 +1,20 @@
+
+ Adding Device Detection to Joomla, WordPress, and Drupal: Compare and Contrast
+================================================================================
+
+Adding options:
+all are different, joomla (xml-based) more so than the others (array based)
+
+Finding markup:
+again, joomla is different, having a "mainline" in index.php
+wp and drupal use templates, which is a little confusing at first, but easy enough once you get going
+Drupal Reference: https://www.drupal.org/node/190815
+
+Managing js and css:
+Much more difficult than it should be!
+It should be OK to just include a link tag.
+But instead, each has its vastly different "super clever" way of doing things.  Uhg what a pain.
+
+Summary/Conclusions:
+
+

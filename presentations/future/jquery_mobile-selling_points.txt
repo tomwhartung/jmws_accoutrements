@@ -1,0 +1,28 @@
+
+jQuery Mobile is huge and offers a lot of functionality, including:
+
+Content-related features:
+
+o  Various transitions between pages
+
+o  Dialog boxes
+
+o  Expandable/Collapsible content (accordion, etc.)
+
+Integrating with phone
+
+o  Ability to make a call using POAT <a href="tel:+18005555555">Call Us Now!</a>
+   (POAT = Plain Old Anchor Tags)
+
+o  Ability to use facetime on iPhone and iPod to create a video call link
+
+o  Ability to react to the mailto: protocol
+
+o  Ability to invoke SMS from a link with sms:// and smsto://
+
+
+Toolbars: not just for navigation
+
+I am using the toolbars for menus, but with jQuery Mobile you can use icons with them and do all sorts of things
+
+

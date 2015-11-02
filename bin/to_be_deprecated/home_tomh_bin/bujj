@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# bujj: backup db used by jenniferj.info
+# --------------------------------------
+#
+dbBackup jj $1

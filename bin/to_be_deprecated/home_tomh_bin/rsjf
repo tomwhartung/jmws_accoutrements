@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# rsjf: restore joomla db used by joomla_fresh
+# --------------------------------------------
+#
+function syntax()
+{
+   echo "Syntax:"
+   echo "  rss [joomla_fresh-YYYY_MM_DD.sql.gz]"
+   echo "    If specified, input file [joomla_fresh-YYYY_MM_DD.sql.gz] must be in ~tomh/backup/db"
+}
+
+if [ -z "$1" ]; then
+   date=$(date +'%Y_%m_%d')
+   file_name=~tomh/backup/db/joomla_fresh-${date}.sql.gz
+else
+  file_name=~tomh/backup/db/$1
+fi
+
+## echo "pwd: $(pwd)
+## echo "file_name: $file_name"
+## exit
+
+db_name=joomla_fresh 
+
+if [ -f $file_name ]; then
+   echo "Restoring $db_name DB from $file_name ..."
+else
+   syntax
+   echo
+   echo "Error: input file \"$file_name\" does not exist"
+   exit 1
+fi
+
+gunzip < $file_name | mysql -u root -p $db_name
+echo "... done."

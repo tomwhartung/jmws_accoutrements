@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# bujm: backup db used by joomoowebsites.com
+# ------------------------------------------
+#
+dbBackup jm $1

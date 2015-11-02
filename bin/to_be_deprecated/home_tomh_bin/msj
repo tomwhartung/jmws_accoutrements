@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# msj: run mysql and access db used by joomla.fresh
+# -------------------------------------------------
+#
+db_user=joomla
+db_name=joomla_fresh
+
+if [ "$1" == '' ]; then
+   password_arg="-p"
+else
+   password_arg="--password=$1"
+fi
+
+mysql -u $db_user $password_arg $db_name

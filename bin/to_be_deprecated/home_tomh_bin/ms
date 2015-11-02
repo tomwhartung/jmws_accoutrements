@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# ms: runs mysql for lazy typists
+# -------------------------------
+#
+if [ "$1" == '' ]; then
+   password_arg="-p"
+else
+   password_arg="--password=$1"
+fi
+
+mysql -u root $password_arg

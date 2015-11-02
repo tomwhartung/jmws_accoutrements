@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# but: backup db used by tomhartung.com
+# -------------------------------------
+#
+dbBackup t $1

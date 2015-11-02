@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# but: backup db used by tomwhartung.com
+# --------------------------------------
+#
+dbBackup tw $1

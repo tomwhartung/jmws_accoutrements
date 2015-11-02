@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# bujw: backup db used by joomla_work
+# ------------------------------------
+#
+umask 077
+date=$(date +'%Y_%m_%d')
+
+### sql_file_name="clkdev201004b.sql"
+### backup_file_name="joomla_work-${date}.sql.zip"
+
+hostname=$(hostname)
+backup_dir=/usr/local/work/clkclk/db-snapshots
+backup_file_name="joomla_work-${date}-${hostname}.sql.gz"
+
+db_name=joomla_work
+
+cd $backup_dir
+echo "Backing up joomla_work site DB to ${backup_dir}/${backup_file_name} ..."
+
+### mysqldump --quick --opt -u root -p $db_name > $sql_file_name
+mysqldump --quick --opt -u root -p $db_name | gzip > $backup_file_name
+### zip $backup_file_name $sql_file_name
+echo "... done."
+echo
+echo "backup file: ${backup_dir}/${backup_file_name}"
+echo
+
+## toRita $backup_file_name

@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+# rsdbs: restore currently relevant joomla dbs
+# --------------------------------------------
+# Requires that today's versions from ida or lauren be in the current directory
+#    if on lizabeth, uses the copy from lauren
+#    else uses copy from ida
+# To restore a different version you must run these individually
+#
+date=$(date +'%Y_%m_%d')
+hostname=$(hostname)
+
+if [ $hostname == 'lizabeth' ]; then
+   source_host='lauren'
+else
+   source_host='ida'
+fi
+
+jm_filename=joomoowebsites.com-${date}-${source_host}.sql.gz
+s_filename=seeourminds.com-${date}-${source_host}.sql.gz
+t_filename=tomhartung.com-${date}-${source_host}.sql.gz
+
+echo "jm_filename = $jm_filename"
+echo "s_filename = $s_filename"
+echo "t_filename = $t_filename"
+
+rsjm $jm_filename
+rss $s_filename
+rst $t_filename
+

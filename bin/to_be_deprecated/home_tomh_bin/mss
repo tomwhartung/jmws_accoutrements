@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# mss: run mysql and access db used by seeourminds.com
+# ----------------------------------------------------
+#
+db_user=joomla
+db_name=jumlah_seeourminds
+
+if [ "$1" == '' ]; then
+   password_arg="-p"
+else
+   password_arg="--password=$1"
+fi
+
+mysql -u $db_user $password_arg $db_name

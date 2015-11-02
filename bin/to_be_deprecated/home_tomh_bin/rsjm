@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# rsjm: restore joomla db used by joomoowebsites
+# ----------------------------------------------
+#
+function badSyntax()
+{
+   echo 'Syntax: rsjm [ -h hostname ] [ -d date ] [ password ]'
+   echo '  hostnmame defaults to name of current host'
+   echo "  date defaults to today's date and must be in the format YYYY_MM_DD"
+}
+
+hostname_arg=''
+date_arg=''
+
+#
+#  Look for optional hostname and date in the args
+#
+while [ $# -gt 1 ]
+do
+   case $1 in
+      -d)
+         date_arg="-d $2"
+         shift 2
+         ;;
+      -h)
+         hostname_arg="-h $2"
+         shift 2
+         ;;
+   esac
+done
+
+dbRestore jm $hostname_arg $date_arg $1
+ret_val=$?
+
+if [ $ret_val -gt 10 ]; then
+   echo 'File not found error!'
+   echo
+   badSyntax
+   echo
+   echo 'Use the arguments to identify an existing backup file'
+   exit $ret_val
+fi
+
+exit 0

@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# bujf: backup db used by joomla_fresh
+# ------------------------------------
+#
+umask 077
+date=$(date +'%Y_%m_%d')
+hostname=$(hostname)
+backup_dir=~tomh/backup/db
+backup_file_name="joomla_fresh-${date}-${hostname}.sql.gz"
+
+db_name=joomla_fresh
+
+cd $backup_dir
+echo "Backing up joomla_fresh site DB to ${backup_dir}/${backup_file_name} ..."
+mysqldump --quick --opt -u root -p $db_name | gzip > $backup_file_name
+echo "... done."
+echo
+echo "backup file: ${backup_dir}/${backup_file_name}"
+echo
+
+cd $backup_dir
+toGloria $backup_file_name
+toRita $backup_file_name

@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# dbRestoreOne: restore specified db on localhost
+# -----------------------------------------------
+#
+function badSyntax
+{
+   echo 'Syntax: dbRestoreOne sitename date hostname dbname [ password ]'
+   echo "  restores the specified site's db from a file in ~tomh/backup/db"
+   echo 'For more flexibile syntax use dbRestore'
+}
+
+if [ $# -lt 4 ]; then
+   badSyntax
+   exit 1
+fi
+
+sitename=$1
+date=$2
+hostname=$3
+dbname=$4
+password=$5
+filename=~tomh/backup/db/${sitename}-${date}-${hostname}.sql.gz
+local_hostname=$(hostname)
+
+if [ "$password" == "" ]; then
+   password_arg="-p"
+else
+   password_arg="--password=${password}"
+fi
+
+echo "sitename = \"$sitename\""
+echo "date = \"$date\""
+echo "hostname = \"$hostname\""
+echo "dbname = \"$dbname\""
+## echo "password = \"$password\""
+## echo "password_arg = \"$password_arg\""
+echo "-----------------------------------"
+echo "filename = \"$filename\""
+echo "-----------------------------------"
+
+if [ -f "$filename" ]; then
+   echo "Restoring ${sitename} site DB on ${local_hostname} to ${filename} ..."
+   gunzip < $filename | mysql -u root ${password_arg} $dbname
+   ret_val=$?
+   if [ $ret_val -eq 0 ]; then
+      echo "... database for ${sitename} on ${local_hostname} restored successfully."
+   else
+      echo
+      echo '... OOPS!  Some sort of error occurred, please try again!'
+      echo
+   fi
+else
+   echo
+   echo "$0 ERROR:"
+   echo "   filename \"${filename}\" does not exist on this host!"
+   echo
+   exit 12
+fi
+
+exit 0

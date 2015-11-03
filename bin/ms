@@ -7,11 +7,11 @@
 #     run it to get the site-specific credential tidbit stored in it
 # List of confidential, top secret super simple scripts that,
 #   when given a site name or abbreviation, can print a relevant credential tidbit to save us typing
-#    getDbName
-#    getDbPwd
-#    getDbUser
-# If used, these should be in your PATH but NOT checked in to a public repo
-# (If not used, this little interface doesn't help much)
+#     getDbName
+#     getDbPwd
+#     getDbUser
+# If those scripts are used, these should be in your PATH but NOT checked in to a public repo!!
+# (If those scripts are not used, this little interface doesn't help much!!)
 #
 db_name=''
 db_user=''
@@ -51,10 +51,10 @@ if [ "$db_user" == '' ]; then
    db_user="root"
 fi
 
-echo 'name: ' $db_name
-echo 'user: ' $db_user
-echo 'pass: ' $db_pass
-echo 'pass_arg: ' $pass_arg
-set -x
+### echo 'name: ' $db_name
+### echo 'user: ' $db_user
+### echo 'pass: ' $db_pass
+### echo 'pass_arg: ' $pass_arg
+### set -x
 
 mysql -u $db_user $pass_arg $db_name

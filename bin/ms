@@ -17,6 +17,10 @@ db_name=''
 db_user=''
 db_pass=''
 
+#
+# The command "command" checks whether the specified command is in the current user's PATH
+# Reference: http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
+#
 if [ "$1" != '' ]; then
 	site=$1
 	command -v getDbName > /dev/null 2>&1
@@ -32,13 +36,17 @@ if [ "$1" != '' ]; then
 		db_pass=$(getDbPass $site)
 	fi
 fi
-
+#
+# If we don't have a password, the -p arg to mysql causes it to prompt them for it
+#
 if [ "$db_pass" == '' ]; then
    pass_arg="-p"
 else
-   pass_arg="--password=$1"
+   pass_arg="--password=$db_pass"
 fi
-
+#
+# If we don't have a specific user, we know that the root user will always be there
+#
 if [ "$db_user" == '' ]; then
    db_user="root"
 fi
@@ -46,5 +54,7 @@ fi
 echo 'name: ' $db_name
 echo 'user: ' $db_user
 echo 'pass: ' $db_pass
+echo 'pass_arg: ' $pass_arg
+set -x
 
-## mysql -u $db_user $pass_arg $db_name
+mysql -u $db_user $pass_arg $db_name

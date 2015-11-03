@@ -6,9 +6,9 @@
 def syntax() :
 	print( 'Syntax: TBD TBD TBD' )
 
-import time     # for the date string in our backup file name
 import socket   # for getting the hostName
 import sys      # for accessing command line arguments
+import time     # for the date string in our backup file name
 from subprocess import call
 
 hostName = socket.gethostname()
@@ -60,19 +60,22 @@ dateString = time.strftime( '-%Y_%m_%d-' )
 backupFileName = backupDir + '/' + siteName + dateString + hostName + '.sql.tgz'
 
 backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + passwordArg + ' ' + dbName + ' | gzip > ' + backupFileName
+chmodCommand = 'chmod 600 ' + backupFileName
 
-print( 'siteArg = ', siteArg )
-print( 'siteName = ', siteName )
-print( 'dbName = ', dbName )
-print( 'dbUser = ', dbUser )
-print( 'dbPass = ', dbPass )
-print( 'passwordArg = ', passwordArg )
-print( 'hostName = ', hostName )
-print( 'dateString = ', dateString )
-print( 'backupFileName = ', backupFileName )
-print( 'backupCommand = ', backupCommand )
+### print( 'siteArg = ', siteArg )
+### print( 'siteName = ', siteName )
+### print( 'dbName = ', dbName )
+### print( 'dbUser = ', dbUser )
+### print( 'dbPass = ', dbPass )
+### print( 'passwordArg = ', passwordArg )
+### print( 'hostName = ', hostName )
+### print( 'dateString = ', dateString )
+### print( 'backupFileName = ', backupFileName )
+### print( 'backupCommand = ', backupCommand )
+### print( 'chmodCommand = ', chmodCommand )
 
 print( 'Backing up DB for site', siteName, 'to', backupFileName, '...' )
 
 call( backupCommand, shell=True )
+call( chmodCommand, shell=True )
 

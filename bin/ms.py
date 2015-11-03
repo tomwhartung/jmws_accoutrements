@@ -30,12 +30,23 @@ elif ( len(sys.argv) == 2 ) :
 	siteArg = sys.argv[1]
 	site = siteArg
 
+removeQuotesPattern = re.compile( "b*'" )
+
+def getDbCredential( getCommand, site ) :
+	rawOutput = check_output( [getCommand, site] )
+	strOutput = str( rawOutput )
+	dbCredential = removeQuotesPattern.sub( '', strOutput )
+	print( 'getDbCredential - getCommand = ', getCommand )
+	print( 'getDbCredential - site = ', site )
+	print( 'getDbCredential - rawOutput = ', rawOutput )
+	print( 'getDbCredential - strOutput = ', strOutput )
+	print( 'getDbCredential - dbCredential = ', dbCredential, "\n" )
+	return dbCredential
 #
 # Run the command and process its output
 # Reference: https://docs.python.org/dev/library/shutil.html#shutil.which
 #
 if ( site != '' ) :
-	removeQuotesPattern = re.compile( "[b]'" )
 	getNameCommand = 'getDbName'
 	rawOutput = check_output( [getNameCommand, site] )
 	strOutput = str( rawOutput )
@@ -45,11 +56,13 @@ if ( site != '' ) :
 	print( 'rawOutput = ', rawOutput )
 	print( 'strOutput = ', strOutput )
 	print( 'dbName = ', dbName, "\n" )
-	getUserCommand = 'getDbUser'
-	rawOutput = check_output( [getUserCommand, site] )
-	print( 'getUserCommand = ', getUserCommand )
-	print( 'site = ', site )
-	print( 'rawOutput = ', rawOutput, "\n" )
+	## getUserCommand = 'getDbUser'
+	## rawOutput = check_output( [getUserCommand, site] )
+	## print( 'getUserCommand = ', getUserCommand )
+	## print( 'site = ', site )
+	## print( 'rawOutput = ', rawOutput, "\n" )
+	dbUser = getDbCredential( 'getDbUser', site )
+	print( '*** dbUser = ', dbUser )
 	getPassCommand = 'getDbPass'
 	rawOutput = check_output( [getPassCommand, site] )
 	print( 'getPassCommand = ', getPassCommand )

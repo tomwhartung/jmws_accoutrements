@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python3
 #
 # ms: runs mysql for lazy typists
 # -------------------------------
@@ -13,48 +13,66 @@
 # If those scripts are used, these should be in your PATH but NOT checked in to a public repo!!
 # (If those scripts are not used, this little interface doesn't help much!!)
 #
-dbName=''
-dbUser=''
-dbPass=''
+import re           # regex utils for cleaning up raw command output
+import shutil       # for determining whether a command is in user's path
+import sys          # for accessing command line arguments
 
+from subprocess import call, check_output  # for running commands
+
+dbName = ''
+dbUser = ''
+dbPass = ''
+siteArg = ''
+
+if ( len(sys.argv) == 1 ) :
+	siteArg = ''
+elif ( len(sys.argv) == 2 ) :
+	siteArg = sys.argv[1]
+
+removeQuotesPattern = re.compile( "b*'" )
+## debugGetDbCredential = True
+debugGetDbCredential = False
+
+def getDbCredential( getCommand, site ) :
+	rawOutput = check_output( [getCommand, site] )
+	strOutput = str( rawOutput )
+	dbCredential = removeQuotesPattern.sub( '', strOutput )
+	if ( debugGetDbCredential ) :
+		print( 'getDbCredential - getCommand = ', getCommand )
+		print( 'getDbCredential - site = ', site )
+		print( 'getDbCredential - rawOutput = ', rawOutput )
+		print( 'getDbCredential - strOutput = ', strOutput )
+		print( 'getDbCredential - dbCredential = ', dbCredential, "\n" )
+	return dbCredential
 #
-# The command "command" checks whether the specified command is in the current user's PATH
-# Reference: http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
+# Run the command and process its output
+# Reference: https://docs.python.org/dev/library/shutil.html#shutil.which
 #
-if [ "$1" != '' ]; then
-	site=$1
-	command -v getDbName > /dev/null 2>&1
-	if [ $? == 0 ]; then
-		dbName=$(getDbName $site)
-	fi
-	command -v getDbUser > /dev/null 2>&1
-	if [ $? == 0 ]; then
-		dbUser=$(getDbUser $site)
-	fi
-	command -v getDbPass > /dev/null 2>&1
-	if [ $? == 0 ]; then
-		dbPass=$(getDbPass $site)
-	fi
-fi
+if ( siteArg != '' ) :
+	dbName = getDbCredential( 'getDbName', siteArg )
+	dbUser = getDbCredential( 'getDbUser', siteArg )
+	dbPass = getDbCredential( 'getDbPass', siteArg )
+
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
 #
-if [ "$dbPass" == '' ]; then
-   passwordArg="-p"
-else
-   passwordArg="--password=$dbPass"
-fi
+if ( dbPass == '' ) :
+   passwordArg = '-p'
+else :
+   passwordArg = '--password=' + dbPass
+
 #
 # If we don't have a specific user, we know that the root user will always be there
 #
-if [ "$dbUser" == '' ]; then
-   dbUser="root"
-fi
+if ( dbUser == '' ) :
+   dbUser = "root"
 
-### echo 'name: ' $dbName
-### echo 'user: ' $dbUser
-### echo 'pass: ' $dbPass
-### echo 'passwordArg: ' $passwordArg
-### set -x
+### print( 'dbName = ', dbName )
+### print( 'dbUser = ', dbUser )
+### print( 'dbPass = ', dbPass )
+### print( 'passwordArg: ', passwordArg )
 
-mysql -u $dbUser $passwordArg $dbName
+mysqlCommand = 'mysql -u ' + dbUser + ' ' + passwordArg + ' ' + dbName
+
+print( 'calling mysqlCommand = "', mysqlCommand, '"' )
+call( mysqlCommand, shell=True )

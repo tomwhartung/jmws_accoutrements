@@ -13,7 +13,8 @@
 # If those scripts are used, these should be in your PATH but NOT checked in to a public repo!!
 # (If those scripts are not used, this little interface doesn't help much!!)
 #
-import subprocess   # for running commands
+from subprocess import call, check_output  # for running commands
+
 import shutil       # for determining whether a command is in user's path
 import sys          # for accessing command line arguments
 
@@ -29,24 +30,25 @@ elif ( len(sys.argv) == 2 ) :
 	site = siteArg
 
 #
-# The command "command" checks whether the specified command is in the current user's PATH
+# Run the command and process its output
 # Reference: https://docs.python.org/dev/library/shutil.html#shutil.which
 #
 if ( site != '' ) :
-	command = 'getDbName'
-	arguments = site
-	output = subprocess.check_output( [command, arguments] )
-	print( 'command = ', command )
-	print( 'arguments = ', arguments )
-	print( 'output = ', output )
-##	if ( ... ) :
-##		dbName=$(getDbName $site)
-	command = 'getDbUser ' + site
-##	if ( ... ) :
-##		dbUser=$(getDbUser $site)
-	command = 'getDbPass ' + site
-##	if ( ... ) :
-##		dbPass=$(getDbPass $site)
+	getNameCommand = 'getDbName'
+	output = check_output( [getNameCommand, site] )
+	print( 'getNameCommand = ', getNameCommand )
+	print( 'site = ', site )
+	print( 'output = ', output, "\n" )
+	getUserCommand = 'getDbUser'
+	output = check_output( [getUserCommand, site] )
+	print( 'getUserCommand = ', getUserCommand )
+	print( 'site = ', site )
+	print( 'output = ', output, "\n" )
+	getPassCommand = 'getDbPass'
+	output = check_output( [getPassCommand, site] )
+	print( 'getPassCommand = ', getPassCommand )
+	print( 'site = ', site )
+	print( 'output = ', output, "\n" )
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
@@ -67,8 +69,6 @@ print( 'user: ' + dbUser )
 print( 'pass: ' + dbPass )
 print( 'passwordArg: ' + passwordArg )
 
-#
-# wtf this works?!?  Or not...
-# mysql
-# mysql -u $dbUser $passwordArg $dbName
+mysqlCommand = 'mysql -u ' + dbUser + ' ' + passwordArg + ' ' + dbName
 
+call( 'mysql' )

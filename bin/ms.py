@@ -30,8 +30,8 @@ elif ( len(sys.argv) == 2 ) :
 	siteArg = sys.argv[1]
 
 removeQuotesPattern = re.compile( "b*'" )
-debugGetDbCredential = True
-## debugGetDbCredential = False
+## debugGetDbCredential = True
+debugGetDbCredential = False
 
 def getDbCredential( getCommand, site ) :
 	rawOutput = check_output( [getCommand, site] )
@@ -67,12 +67,12 @@ else :
 if ( dbUser == '' ) :
    dbUser = "root"
 
-print( 'dbName = ', dbName )
-print( 'dbUser = ', dbUser )
-print( 'dbPass = ', dbPass )
-print( 'passwordArg: ', passwordArg )
+### print( 'dbName = ', dbName )
+### print( 'dbUser = ', dbUser )
+### print( 'dbPass = ', dbPass )
+### print( 'passwordArg: ', passwordArg )
 
 mysqlCommand = 'mysql -u ' + dbUser + ' ' + passwordArg + ' ' + dbName
 
-print( 'mysqlCommand = ', mysqlCommand )
-## call( mysqlCommand )
+print( 'calling mysqlCommand = "', mysqlCommand, '"' )
+call( mysqlCommand, shell=True )

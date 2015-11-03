@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# ms: runs mysql for lazy typists
+# -------------------------------
+# If a site name or abbreviation is specified and
+#   one or more of the following getDb* scripts is in the current PATH,
+#     run it to get the site-specific credential tidbit stored in it
+# List of confidential, top secret super simple scripts that,
+#   when given a site name or abbreviation, may or may not print a relevant credential
+#    getDbName
+#    getDbPwd
+#    getDbUser
+# If used, these should be in your PATH but NOT checked in to a public repo
+#
+db_name=''
+db_user=''
+db_pass=''
+
+if [ "$1" != '' ]; then
+	site=$1
+	command -v getDbName > /dev/null 2>&1
+	if [ $? == 0 ]; then
+		db_name=$(getDbName $site)
+	fi
+	command -v getDbUser > /dev/null 2>&1
+	if [ $? == 0 ]; then
+		db_user=$(getDbUser $site)
+	fi
+	command -v getDbPass > /dev/null 2>&1
+	if [ $? == 0 ]; then
+		db_pass=$(getDbPass $site)
+	fi
+fi
+
+if [ "$db_pass" == '' ]; then
+   pass_arg="-p"
+else
+   pass_arg="--password=$1"
+fi
+
+if [ "$db_user" == '' ]; then
+   db_user="root"
+fi
+
+echo 'name: ' $db_name
+echo 'user: ' $db_user
+echo 'pass: ' $db_pass
+
+## mysql -u $db_user $pass_arg $db_name

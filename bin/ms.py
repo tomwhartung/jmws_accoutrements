@@ -13,10 +13,11 @@
 # If those scripts are used, these should be in your PATH but NOT checked in to a public repo!!
 # (If those scripts are not used, this little interface doesn't help much!!)
 #
-from subprocess import call, check_output  # for running commands
-
+import re           # regex utils for cleaning up raw command output
 import shutil       # for determining whether a command is in user's path
 import sys          # for accessing command line arguments
+
+from subprocess import call, check_output  # for running commands
 
 dbName = ''
 dbUser = ''
@@ -34,26 +35,31 @@ elif ( len(sys.argv) == 2 ) :
 # Reference: https://docs.python.org/dev/library/shutil.html#shutil.which
 #
 if ( site != '' ) :
+	removeQuotesPattern = re.compile( "[b]'" )
 	getNameCommand = 'getDbName'
-	output = check_output( [getNameCommand, site] )
+	rawOutput = check_output( [getNameCommand, site] )
+	strOutput = str( rawOutput )
+	dbName = removeQuotesPattern.sub( '', strOutput )
 	print( 'getNameCommand = ', getNameCommand )
 	print( 'site = ', site )
-	print( 'output = ', output, "\n" )
+	print( 'rawOutput = ', rawOutput )
+	print( 'strOutput = ', strOutput )
+	print( 'dbName = ', dbName, "\n" )
 	getUserCommand = 'getDbUser'
-	output = check_output( [getUserCommand, site] )
+	rawOutput = check_output( [getUserCommand, site] )
 	print( 'getUserCommand = ', getUserCommand )
 	print( 'site = ', site )
-	print( 'output = ', output, "\n" )
+	print( 'rawOutput = ', rawOutput, "\n" )
 	getPassCommand = 'getDbPass'
-	output = check_output( [getPassCommand, site] )
+	rawOutput = check_output( [getPassCommand, site] )
 	print( 'getPassCommand = ', getPassCommand )
 	print( 'site = ', site )
-	print( 'output = ', output, "\n" )
+	print( 'rawOutput = ', rawOutput, "\n" )
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
 #
-if ( "$dbPass" == '' ) :
+if ( dbPass == '' ) :
    passwordArg = '-p'
 else :
    passwordArg = '--password=' + dbPass
@@ -64,11 +70,12 @@ else :
 if ( dbUser == '' ) :
    dbUser = "root"
 
-print( 'name: ' + dbName )
-print( 'user: ' + dbUser )
-print( 'pass: ' + dbPass )
-print( 'passwordArg: ' + passwordArg )
+print( 'dbName = ', dbName )
+print( 'dbUser = ', dbUser )
+print( 'dbPass = ', dbPass )
+print( 'passwordArg: ', passwordArg )
 
 mysqlCommand = 'mysql -u ' + dbUser + ' ' + passwordArg + ' ' + dbName
 
-call( 'mysql' )
+print( 'mysqlCommand = ', mysqlCommand )
+## call( mysqlCommand )

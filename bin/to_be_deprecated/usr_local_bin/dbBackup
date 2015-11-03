@@ -1,0 +1,48 @@
+#!/bin/bash
+#
+# dbBackup: backup specified db on localhost
+# ------------------------------------------
+#
+function badSyntax
+{
+   echo 'Syntax: dbBackup all | a | j | jm | s | t [ password ]'
+   echo '  Saves a copy of all or specified db in ~tomh/backup/db'
+   echo '  j = joomoowebsites.com'
+   echo '  s = seeourminds.com'
+   echo '  t = tomhartung.com'
+   echo '  tw = tomwhartung.com'
+   echo '  jm = joomoowebsites.com'
+   echo '  jj = jenniferj.info'
+}
+
+if [ $# -lt 1 ]; then
+   badSyntax
+   exit 1
+fi
+
+site=$1
+password=$2
+
+if [ "$site" == 'all' -o "$site" == 'a' -o "$site" == 'j' -o "$site" == 'jm' ]; then
+   dbBackupOne joomoowebsites.com jumlah3_joomoowebsites $password
+fi
+
+if [ "$site" == 'all' -o "$site" == 'a' -o "$site" == 's' ]; then
+   dbBackupOne seeourminds.com jumlah_seeourminds $password
+fi
+
+if [ "$site" == 'all' -o "$site" == 'a' -o "$site" == 'tw' ]; then
+   dbBackupOne tomwhartung.com wpress_tomwhartung $password
+fi
+
+### if [ "$site" == 'all' -o "$site" == 'a' -o "$site" == 't' ]; then
+###    dbBackupOne tomhartung.com jumlah_blog $password
+### fi
+if [ "$site" == 'all' -o "$site" == 'a' -o "$site" == 't' ]; then
+   dbBackupOne tomhartung.com drpal_tomhartung $password
+fi
+
+if [ "$site" == 'all' -o "$site" == 'a' -o "$site" == 'jj' ]; then
+   dbBackupOne jenniferj.info wpress_jenniferj $password
+fi
+

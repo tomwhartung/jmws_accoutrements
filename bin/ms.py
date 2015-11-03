@@ -22,52 +22,36 @@ from subprocess import call, check_output  # for running commands
 dbName = ''
 dbUser = ''
 dbPass = ''
-site = ''
+siteArg = ''
 
 if ( len(sys.argv) == 1 ) :
-	site = ''
+	siteArg = ''
 elif ( len(sys.argv) == 2 ) :
 	siteArg = sys.argv[1]
-	site = siteArg
 
 removeQuotesPattern = re.compile( "b*'" )
+debugGetDbCredential = True
+## debugGetDbCredential = False
 
 def getDbCredential( getCommand, site ) :
 	rawOutput = check_output( [getCommand, site] )
 	strOutput = str( rawOutput )
 	dbCredential = removeQuotesPattern.sub( '', strOutput )
-	print( 'getDbCredential - getCommand = ', getCommand )
-	print( 'getDbCredential - site = ', site )
-	print( 'getDbCredential - rawOutput = ', rawOutput )
-	print( 'getDbCredential - strOutput = ', strOutput )
-	print( 'getDbCredential - dbCredential = ', dbCredential, "\n" )
+	if ( debugGetDbCredential ) :
+		print( 'getDbCredential - getCommand = ', getCommand )
+		print( 'getDbCredential - site = ', site )
+		print( 'getDbCredential - rawOutput = ', rawOutput )
+		print( 'getDbCredential - strOutput = ', strOutput )
+		print( 'getDbCredential - dbCredential = ', dbCredential, "\n" )
 	return dbCredential
 #
 # Run the command and process its output
 # Reference: https://docs.python.org/dev/library/shutil.html#shutil.which
 #
-if ( site != '' ) :
-	getNameCommand = 'getDbName'
-	rawOutput = check_output( [getNameCommand, site] )
-	strOutput = str( rawOutput )
-	dbName = removeQuotesPattern.sub( '', strOutput )
-	print( 'getNameCommand = ', getNameCommand )
-	print( 'site = ', site )
-	print( 'rawOutput = ', rawOutput )
-	print( 'strOutput = ', strOutput )
-	print( 'dbName = ', dbName, "\n" )
-	## getUserCommand = 'getDbUser'
-	## rawOutput = check_output( [getUserCommand, site] )
-	## print( 'getUserCommand = ', getUserCommand )
-	## print( 'site = ', site )
-	## print( 'rawOutput = ', rawOutput, "\n" )
-	dbUser = getDbCredential( 'getDbUser', site )
-	print( '*** dbUser = ', dbUser )
-	getPassCommand = 'getDbPass'
-	rawOutput = check_output( [getPassCommand, site] )
-	print( 'getPassCommand = ', getPassCommand )
-	print( 'site = ', site )
-	print( 'rawOutput = ', rawOutput, "\n" )
+if ( siteArg != '' ) :
+	dbName = getDbCredential( 'getDbName', siteArg )
+	dbUser = getDbCredential( 'getDbUser', siteArg )
+	dbPass = getDbCredential( 'getDbPass', siteArg )
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it

@@ -3,11 +3,33 @@
 # bu: backs up a mysql database
 # -----------------------------
 #
-import time
+def syntax() :
+	print( 'Syntax: TBD TBD TBD' )
+
+import time     # for the date string in our backup file name
+import socket   # for getting the hostname
+import sys      # for accessing command line arguments
+
+
+if ( len(sys.argv) == 1 ) :
+	site = 'all'
+elif ( len(sys.argv) == 2 ) :
+	siteArg = sys.argv[1]
+	site = siteArg
+else :
+	syntax()
+	print( 'Wrong number of args.' )
+	exit( 1 )
+
+
+dbDataFile = '/home/tomh/bin/dbData.py'
+exec( compile(open(dbDataFile,"rb").read(), dbDataFile, 'exec'), globals(), locals() )
+
 
 dbName=''
 dbUser=''
 dbPass=''
+hostname = socket.gethostname()
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
@@ -24,12 +46,14 @@ if ( dbUser == '' ) :
    dbUser = 'root'
 
 backupDir = '~/backup/db/'
-dateString = time.strftime('%Y-%m-%d')
+dateString = time.strftime('%Y_%m_%d')
 
+print( 'site: ' + site )
 print( 'name: ' + dbName )
 print( 'user: ' + dbUser )
 print( 'pass: ' + dbPass )
 print( 'passwordArg: ' + passwordArg )
+print( 'hostname: ' + hostname )
 print( 'dateString: ' + dateString )
 
 ## mysql -u $dbUser $passwordArg $dbName

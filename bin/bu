@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+#
+# bu: backs up a mysql database
+# -----------------------------
+#
+import time
+
+dbName=''
+dbUser=''
+dbPass=''
+
+#
+# If we don't have a password, the -p arg to mysql causes it to prompt them for it
+#
+if ( dbPass == '' ) :
+	passwordArg = '-p'
+else :
+	passwordArg = '--password=' + dbPass
+
+#
+# If we don't have a specific user, we know that the root user will always be there
+#
+if ( dbUser == '' ) :
+   dbUser = 'root'
+
+backupDir = '~/backup/db/'
+dateString = time.strftime('%Y-%m-%d')
+
+print( 'name: ' + dbName )
+print( 'user: ' + dbUser )
+print( 'pass: ' + dbPass )
+print( 'passwordArg: ' + passwordArg )
+print( 'dateString: ' + dateString )
+
+## mysql -u $dbUser $passwordArg $dbName
+
+## print( 'Backing up $sitename site DB to ' + backup_dir + '/' + backup_file_name + '...' )
+
+## mysqldump --quick --opt -u root -p${password} $dbname | gzip > backup_file_name
+

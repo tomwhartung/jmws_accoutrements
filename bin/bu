@@ -7,7 +7,7 @@ def syntax() :
 	print( 'Syntax: TBD TBD TBD' )
 
 import time     # for the date string in our backup file name
-import socket   # for getting the hostname
+import socket   # for getting the hostName
 import sys      # for accessing command line arguments
 
 
@@ -29,7 +29,8 @@ exec( compile(open(dbDataFile,"rb").read(), dbDataFile, 'exec'), globals(), loca
 dbName=''
 dbUser=''
 dbPass=''
-hostname = socket.gethostname()
+hostName = socket.gethostname()
+siteName = site
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
@@ -46,19 +47,20 @@ if ( dbUser == '' ) :
    dbUser = 'root'
 
 backupDir = '~/backup/db/'
-dateString = time.strftime('%Y_%m_%d')
+dateString = time.strftime( '-%Y_%m_%d' )
+backupFileName = backupDir + '/' + site + '-' + hostName + dateString + '.tgz'
 
-print( 'site: ' + site )
-print( 'name: ' + dbName )
-print( 'user: ' + dbUser )
-print( 'pass: ' + dbPass )
-print( 'passwordArg: ' + passwordArg )
-print( 'hostname: ' + hostname )
-print( 'dateString: ' + dateString )
+print( 'site = ', site )
+print( 'siteName = ', siteName )
+print( 'dbName = ', dbName )
+print( 'dbUser = ', dbUser )
+print( 'dbPass = ', dbPass )
+print( 'passwordArg = ', passwordArg )
+print( 'hostName = ', hostName )
+print( 'dateString = ', dateString )
+print( 'backupFileName = ', backupFileName )
 
-## mysql -u $dbUser $passwordArg $dbName
+print( 'Backing up ', siteName, ' site DB to ', backupFileName, '...' )
 
-## print( 'Backing up $sitename site DB to ' + backup_dir + '/' + backup_file_name + '...' )
-
-## mysqldump --quick --opt -u root -p${password} $dbname | gzip > backup_file_name
+## mysqldump --quick --opt -u root -p${password} $dbname | gzip > backupFileName
 

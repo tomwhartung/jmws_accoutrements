@@ -6,11 +6,12 @@
 #   one or more of the following getDb* scripts is in the current PATH,
 #     run it to get the site-specific credential tidbit stored in it
 # List of confidential, top secret super simple scripts that,
-#   when given a site name or abbreviation, may or may not print a relevant credential
+#   when given a site name or abbreviation, can print a relevant credential tidbit to save us typing
 #    getDbName
 #    getDbPwd
 #    getDbUser
 # If used, these should be in your PATH but NOT checked in to a public repo
+# (If not used, this little interface doesn't help much)
 #
 db_name=''
 db_user=''

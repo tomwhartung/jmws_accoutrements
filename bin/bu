@@ -11,6 +11,7 @@ def syntax() :
 	print( 'Saves a copy of database in a file named as follows:' )
 	print( '  ~/backup/db/site.com-YYYY_MM_DD-hostname[-suffix].sql.gz' )
 
+import os       # for getting values for environment vars
 import socket   # for getting the hostName
 import sys      # for accessing command line arguments
 import time     # for the date string in our backup file name
@@ -62,16 +63,25 @@ else :
 if ( dbUser == '' ) :
    dbUser = 'root'
 
-backupDir = '~/backup/db/'
+backupDirectory = '~/backup/db'
+
+#
+# If we have a suffix, prefix it with a dash, to separate it from the hostname
+#
+suffixString = ''
+if( suffixArg != '' ) :
+	suffixString = '-' + suffixArg
+
 dateString = time.strftime( '-%Y_%m_%d-' )
-backupFileName = backupDir + '/' + siteName + dateString + hostName + '.sql.tgz'
+backupFileName = backupDirectory + '/' + siteName + dateString + hostName + suffixString + '.sql.tgz'
 
 backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + passwordArg + ' ' + dbName + ' | gzip > ' + backupFileName
 chmodCommand = 'chmod 600 ' + backupFileName
 
 ### print( 'siteArg = ', siteArg )
 ### print( 'siteName = ', siteName )
-print( 'suffixArg = ', suffixArg )
+### print( 'suffixArg = ', suffixArg )
+### print( 'suffixString = ', suffixString )
 ### print( 'dbName = ', dbName )
 ### print( 'dbUser = ', dbUser )
 ### print( 'dbPass = ', dbPass )

@@ -4,7 +4,12 @@
 # -----------------------------
 #
 def syntax() :
-	print( 'Syntax: TBD TBD TBD' )
+	print( 'Syntax:' )
+	print( '  dbBackup site [suffix]' )
+	print( '    site: site name or recognized abbreviation' )
+	print( '    suffix: optional string appended to standard backup file name' )
+	print( 'Saves a copy of database in a file named as follows:' )
+	print( '  ~/backup/db/site.com-YYYY_MM_DD-hostname[-suffix].sql.gz' )
 
 import socket   # for getting the hostName
 import sys      # for accessing command line arguments
@@ -12,11 +17,14 @@ import time     # for the date string in our backup file name
 from subprocess import call
 
 hostName = socket.gethostname()
+siteArg = ''
+suffixArg = ''
 
-if ( len(sys.argv) == 1 ) :
-	siteArg = 'all'
-elif ( len(sys.argv) == 2 ) :
+if ( len(sys.argv) == 2 ) :
 	siteArg = sys.argv[1]
+elif ( len(sys.argv) == 3 ) :
+	siteArg = sys.argv[1]
+	suffixArg = sys.argv[2]
 else :
 	syntax()
 	print( 'Wrong number of args.' )
@@ -39,7 +47,6 @@ siteName = siteArg
 #
 topSecretDbFile = '/home/tomh/bin/dbData.py'
 exec( compile(open(topSecretDbFile,"rb").read(), topSecretDbFile, 'exec'), globals(), locals() )
-
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
@@ -64,6 +71,7 @@ chmodCommand = 'chmod 600 ' + backupFileName
 
 ### print( 'siteArg = ', siteArg )
 ### print( 'siteName = ', siteName )
+print( 'suffixArg = ', suffixArg )
 ### print( 'dbName = ', dbName )
 ### print( 'dbUser = ', dbUser )
 ### print( 'dbPass = ', dbPass )

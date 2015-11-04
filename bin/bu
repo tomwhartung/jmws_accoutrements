@@ -41,13 +41,26 @@ dbPass = ''
 siteName = siteArg
 
 #
-#  Run the Top Secret Db File that contains all the credentials and sets the credential-containing globals.
-#  For best results, this file should be in your home directory and have its permissions set to 700
+#  Run the Top Secret Db Credentials File that sets the credential-containing globals (dbName, dbUser, dbPass).
+#  For best results, this file should be "locked down," e.g., in your home directory with its permissions set to 700
 #  Never ever ever check this top secret file in to a public repository,
 #     else people will be able to hack your DB!!!!
+#  For more information, see the comments in dbCredentialsFileExample.py
 #
-topSecretDbFile = '/home/tomh/bin/dbData.py'
-exec( compile(open(topSecretDbFile,"rb").read(), topSecretDbFile, 'exec'), globals(), locals() )
+dbCredentialsFileDefault = 'dbCredentialsFileExample.py'
+dbCredentialsFileEnviron = ''
+
+try :
+	dbCredentialsFileEnviron = os.environ['DB_CREDENTIALS_FILE']
+except :
+	pass
+
+if( dbCredentialsFileEnviron == '' ) :
+	dbCredentialsFile = dbCredentialsFileDefault
+else :
+	dbCredentialsFile = dbCredentialsFileEnviron
+
+exec( compile(open(dbCredentialsFile,"rb").read(), dbCredentialsFile, 'exec'), globals(), locals() )
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
@@ -69,15 +82,16 @@ if ( dbUser == '' ) :
 #
 dbBackupDirectoryDefault = '.'
 dbBackupDirectoryEnviron = ''
+
 try :
 	dbBackupDirectoryEnviron = os.environ['DB_BACKUP_DIRECTORY']
 except :
 	pass
 
 if( dbBackupDirectoryEnviron == '' ) :
-	backupDirectory = dbBackupDirectoryDefault
+	dbBackupDirectory = dbBackupDirectoryDefault
 else :
-	backupDirectory = dbBackupDirectoryEnviron
+	dbBackupDirectory = dbBackupDirectoryEnviron
 
 #
 # If we have a suffix, prefix it with a dash, to separate it from the hostname
@@ -87,7 +101,7 @@ if( suffixArg != '' ) :
 	suffixString = '-' + suffixArg
 
 dateString = time.strftime( '-%Y_%m_%d-' )
-backupFileName = backupDirectory + '/' + siteName + dateString + hostName + suffixString + '.sql.tgz'
+backupFileName = dbBackupDirectory + '/' + siteName + dateString + hostName + suffixString + '.sql.tgz'
 
 backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + passwordArg + ' ' + dbName + ' | gzip > ' + backupFileName
 chmodCommand = 'chmod 600 ' + backupFileName
@@ -102,9 +116,9 @@ chmodCommand = 'chmod 600 ' + backupFileName
 ### print( 'passwordArg = ', passwordArg )
 ### print( 'hostName = ', hostName )
 ### print( 'dateString = ', dateString )
-print( 'dbBackupDirectoryEnviron = ', dbBackupDirectoryEnviron )
+### print( 'dbBackupDirectoryEnviron = ', dbBackupDirectoryEnviron )
 ### print( 'backupFileName = ', backupFileName )
-### print( 'backupCommand = ', backupCommand )
+print( 'backupCommand = ', backupCommand )
 ### print( 'chmodCommand = ', chmodCommand )
 
 print( 'Backing up DB for site', siteName, 'to', backupFileName, '...' )

@@ -63,7 +63,21 @@ else :
 if ( dbUser == '' ) :
    dbUser = 'root'
 
-backupDirectory = '~/backup/db'
+#
+# Check the environment for a setting for the backup directory
+# If it is not set, use the default
+#
+dbBackupDirectoryDefault = '.'
+dbBackupDirectoryEnviron = ''
+try :
+	dbBackupDirectoryEnviron = os.environ['DB_BACKUP_DIRECTORY']
+except :
+	pass
+
+if( dbBackupDirectoryEnviron == '' ) :
+	backupDirectory = dbBackupDirectoryDefault
+else :
+	backupDirectory = dbBackupDirectoryEnviron
 
 #
 # If we have a suffix, prefix it with a dash, to separate it from the hostname
@@ -88,6 +102,7 @@ chmodCommand = 'chmod 600 ' + backupFileName
 ### print( 'passwordArg = ', passwordArg )
 ### print( 'hostName = ', hostName )
 ### print( 'dateString = ', dateString )
+print( 'dbBackupDirectoryEnviron = ', dbBackupDirectoryEnviron )
 ### print( 'backupFileName = ', backupFileName )
 ### print( 'backupCommand = ', backupCommand )
 ### print( 'chmodCommand = ', chmodCommand )

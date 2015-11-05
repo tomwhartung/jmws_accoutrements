@@ -8,7 +8,7 @@ import sys      # for accessing command line arguments
 from subprocess import call
 
 #
-# Import the functions that we share with the dbMySqlRestore
+# Import the functions that we share with dbMySqlRestore
 # Process the command line arguments
 #
 import dbFunctions
@@ -16,6 +16,7 @@ arguments = dbFunctions.processArguments( 'backup' )
 siteArg = arguments[0]
 suffixArg = arguments[1]
 
+##############################################################
 #
 #  Set these credential-containing globals to default values
 #  The Top Secret Db File sets these to the correct secret values for our Dbs
@@ -25,7 +26,6 @@ dbUser = ''
 dbPass = ''
 siteName = siteArg
 
-##############################################################
 #
 #  Run the Top Secret Db Credentials File that sets the credential-containing globals (dbName, dbUser, dbPass).
 #  For best results, this file should be "locked down," e.g., in your home directory with its permissions set to 700
@@ -33,20 +33,9 @@ siteName = siteArg
 #     else people will be able to hack your DB!!!!
 #  For more information, see the comments in dbCredentialsFileExample.py
 #
-dbCredentialsFileDefault = 'dbCredentialsFileExample.py'
-dbCredentialsFileEnviron = ''
-
-try :
-	dbCredentialsFileEnviron = os.environ['DB_CREDENTIALS_FILE']
-except :
-	pass
-
-if( dbCredentialsFileEnviron == '' ) :
-	dbCredentialsFile = dbCredentialsFileDefault
-else :
-	dbCredentialsFile = dbCredentialsFileEnviron
-
+dbCredentialsFile = dbFunctions.getDbCredentialsFile()
 exec( compile(open(dbCredentialsFile,"rb").read(), dbCredentialsFile, 'exec'), globals(), locals() )
+
 ##############################################################
 
 #
@@ -65,7 +54,6 @@ if ( dbUser == '' ) :
 
 dbBackupDirectory = dbFunctions.getDbBackupDirectory()
 dbBackupFileBaseName = dbFunctions.getDbBackupFileBaseName( siteName, suffixArg )
-
 dbBackupFileFullName = dbBackupDirectory + '/' + dbBackupFileBaseName
 
 backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + passwordArg + ' ' + dbName + ' | gzip > ' + dbBackupFileFullName

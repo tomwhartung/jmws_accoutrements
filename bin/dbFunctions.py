@@ -2,7 +2,7 @@
 #
 # dbFunctions.py: define syntax, get args, db credentials, etc.
 # -------------------------------------------------------------
-# Any code that both dbMySqlBackup and dbMySqlRestore can use belongs in a function in this file
+# Any code that both dbMySqlBackup and dbMySqlRestore can use should be in a function in this file
 #
 import os       # for getting values for environment vars
 import socket   # for getting the hostName
@@ -85,4 +85,25 @@ def getDbCredentialsFile() :
 	else :
 		dbCredentialsFile = dbCredentialsFileEnviron
 	return dbCredentialsFile
+
+#
+# If we don't have a password, the -p arg to mysql causes it to prompt them for it
+#
+def getdbPasswordArg( dbPassword ) :
+	if ( dbPassword == '' ) :
+		dbPasswordArg = '-p'
+	else :
+		dbPasswordArg = '--password=' + dbPassword
+	return dbPasswordArg
+
+#
+# If we don't have a specific user, we know that the root user will always be there
+#
+def getdbUserArg( dbUser ) :
+	dbUserArg = '-u '
+	if ( dbUser == '' ) :
+		dbUserArg += 'root'
+	else :
+		dbUserArg += dbUser
+		return dbUserArg
 

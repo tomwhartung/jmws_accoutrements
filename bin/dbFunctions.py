@@ -34,3 +34,20 @@ def syntax( backupOrRestore ) :
 		print( 'Restores a copy of database from a file named as follows:' )
 	print( '  site.com-YYYY_MM_DD-hostname[-suffix].sql.gz' )
 
+#
+# Check the environment for a setting for the backup directory
+# If it is not set, use the default
+#
+def getDbBackupDirectory() :
+	dbBackupDirectoryDefault = '.'
+	dbBackupDirectoryEnviron = ''
+	try :
+		dbBackupDirectoryEnviron = os.environ['DB_BACKUP_DIRECTORY']
+	except :
+		pass
+	if( dbBackupDirectoryEnviron == '' ) :
+		dbBackupDirectory = dbBackupDirectoryDefault
+	else :
+		dbBackupDirectory = dbBackupDirectoryEnviron
+	return dbBackupDirectory
+	

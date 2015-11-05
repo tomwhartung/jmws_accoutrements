@@ -68,3 +68,21 @@ def getDbBackupFileBaseName( siteName, suffixArg ) :
 	dbBackupFileName = siteName + dateString + hostName + suffixString + '.sql.tgz'
 	return dbBackupFileName
 
+#
+#  Returns the name of the Top Secret DB Credentials file,
+#  Hopefully the path is set in the environment, but if not,
+#  "point" to the example file which contains information about all this
+#
+def getDbCredentialsFile() :
+	dbCredentialsFileDefault = 'dbCredentialsFileExample.py'
+	dbCredentialsFileEnviron = ''
+	try :
+		dbCredentialsFileEnviron = os.environ['DB_CREDENTIALS_FILE']
+	except :
+		pass
+	if( dbCredentialsFileEnviron == '' ) :
+		dbCredentialsFile = dbCredentialsFileDefault
+	else :
+		dbCredentialsFile = dbCredentialsFileEnviron
+	return dbCredentialsFile
+

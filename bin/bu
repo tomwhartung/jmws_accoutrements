@@ -27,6 +27,7 @@ dbUser = ''
 dbPass = ''
 siteName = siteArg
 
+##############################################################
 #
 #  Run the Top Secret Db Credentials File that sets the credential-containing globals (dbName, dbUser, dbPass).
 #  For best results, this file should be "locked down," e.g., in your home directory with its permissions set to 700
@@ -48,6 +49,7 @@ else :
 	dbCredentialsFile = dbCredentialsFileEnviron
 
 exec( compile(open(dbCredentialsFile,"rb").read(), dbCredentialsFile, 'exec'), globals(), locals() )
+##############################################################
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
@@ -63,22 +65,7 @@ else :
 if ( dbUser == '' ) :
    dbUser = 'root'
 
-#
-# Check the environment for a setting for the backup directory
-# If it is not set, use the default
-#
-dbBackupDirectoryDefault = '.'
-dbBackupDirectoryEnviron = ''
-
-try :
-	dbBackupDirectoryEnviron = os.environ['DB_BACKUP_DIRECTORY']
-except :
-	pass
-
-if( dbBackupDirectoryEnviron == '' ) :
-	dbBackupDirectory = dbBackupDirectoryDefault
-else :
-	dbBackupDirectory = dbBackupDirectoryEnviron
+dbBackupDirectory = dbFunctions.getDbBackupDirectory()
 
 #
 # If we have a suffix, prefix it with a dash, to separate it from the hostname
@@ -96,15 +83,15 @@ chmodCommand = 'chmod 600 ' + backupFileName
 
 print( 'siteArg = ', siteArg )
 print( 'siteName = ', siteName )
-print( 'suffixArg = ', suffixArg )
-print( 'suffixString = ', suffixString )
-### print( 'dbName = ', dbName )
-### print( 'dbUser = ', dbUser )
-### print( 'dbPass = ', dbPass )
-### print( 'passwordArg = ', passwordArg )
+### print( 'suffixArg = ', suffixArg )
+### print( 'suffixString = ', suffixString )
+print( 'dbName = ', dbName )
+print( 'dbUser = ', dbUser )
+print( 'dbPass = ', dbPass )
+print( 'passwordArg = ', passwordArg )
 ### print( 'hostName = ', hostName )
 ### print( 'dateString = ', dateString )
-### print( 'dbBackupDirectoryEnviron = ', dbBackupDirectoryEnviron )
+print( 'dbBackupDirectory = ', dbBackupDirectory )
 ### print( 'backupFileName = ', backupFileName )
 print( 'backupCommand = ', backupCommand )
 ### print( 'chmodCommand = ', chmodCommand )

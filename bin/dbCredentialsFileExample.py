@@ -28,7 +28,6 @@ examplethreeAliases = ['examplethree.org', 'e3', 'ex3']
 #
 # Database Names
 #
-dbNames = {}
 dbNames['exampleone.com']   = 'joomla_exampleone'
 dbNames['exampletwo.com']   = 'wordpress_exampletwo'
 dbNames['examplethree.org'] = 'drupal_examplethree'
@@ -37,7 +36,6 @@ dbNames['examplethree.org'] = 'drupal_examplethree'
 # Database Users
 #   If you did not create a user specifically for your db, use 'root'
 #
-dbUsers = {}
 dbUsers['exampleone.com']   = 'joomla'
 dbUsers['exampletwo.com']   = 'wordpress'
 dbUsers['examplethree.org'] = 'drupal'
@@ -46,10 +44,9 @@ dbUsers['examplethree.org'] = 'drupal'
 # Database Passwords
 # Please by all means use much stronger passwords!
 #
-dbPasswords = {}
 dbPasswords['exampleone.com']   = '123abc'
-dbPasswords['exampletwo.com']   = '123abc'
-dbPasswords['examplethree.org'] = '123abc'
+dbPasswords['exampletwo.com']   = 'password1'
+dbPasswords['examplethree.org'] = 'asdfg'
 
 #
 # Find the site specified by siteArg (in dbMySqlBackup or dbMySqlRestore)
@@ -57,28 +54,15 @@ dbPasswords['examplethree.org'] = '123abc'
 #
 if( siteArg in exampleoneAliases ) :
 	siteName = 'exampleone.com'
-	dbName = dbNames['exampleone.com']
-	dbUser = dbUsers['exampleone.com']
-	dbPass = dbPasswords['exampleone.com']
 elif( siteArg in exampletwoAliases ) :
 	siteName = 'exampletwo.com'
-	dbName = dbNames['exampletwo.com']
-	dbUser = dbUsers['exampletwo.com']
-	dbPass = dbPasswords['exampletwo.com']
 elif( siteArg in examplethreeAliases ) :
 	siteName = 'examplethree.org'
-	dbName = dbNames['examplethree.org']
-	dbUser = dbUsers['examplethree.org']
-	dbPass = dbPasswords['examplethree.org']
 
 #
 # If things are not working as hoped,
 #   uncomment one or more of these lines to see what's going on
 #
-### print( 'dbData.py: topSecretDbFile = ', topSecretDbFile )
 ### print( 'dbData.py: siteArg = ', siteArg )
 ### print( 'dbData.py: siteName = ', siteName )
-### print( 'dbData.py: dbName = ', dbName )
-### print( 'dbData.py: dbUser = ', dbUser )
-### print( 'dbData.py: dbPass = ', dbPass )
 

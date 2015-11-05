@@ -33,25 +33,14 @@ dbName = dbNames[siteName]
 dbUser = dbUsers[siteName]
 dbPassword = dbPasswords[siteName]
 
-#
-# If we don't have a password, the -p arg to mysql causes it to prompt them for it
-#
-if ( dbPassword == '' ) :
-	dbPasswordArg = '-p'
-else :
-	dbPasswordArg = '--password=' + dbPassword
-
-#
-# If we don't have a specific user, we know that the root user will always be there
-#
-if ( dbUser == '' ) :
-   dbUser = 'root'
+dbPasswordArg = dbFunctions.getdbPasswordArg( dbPassword )
+dbUserArg = dbFunctions.getdbUserArg( dbUser )
 
 dbBackupDirectory = dbFunctions.getDbBackupDirectory()
 dbBackupFileBaseName = dbFunctions.getDbBackupFileBaseName( siteName, suffixArg )
 dbBackupFileFullName = dbBackupDirectory + '/' + dbBackupFileBaseName
 
-backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + dbPasswordArg + ' ' + dbName + ' | gzip > ' + dbBackupFileFullName
+backupCommand = 'mysqldump --quick --opt ' + dbUserArg + ' ' + dbPasswordArg + ' ' + dbName + ' | gzip > ' + dbBackupFileFullName
 chmodCommand = 'chmod 600 ' + dbBackupFileFullName
 
 print( 'siteArg = ', siteArg )
@@ -62,6 +51,7 @@ print( 'dbName = ', dbName )
 print( 'dbUser = ', dbUser )
 print( 'dbPassword = ', dbPassword )
 print( 'dbPasswordArg = ', dbPasswordArg )
+print( 'dbUserArg = ', dbUserArg )
 ### print( 'hostName = ', hostName )
 ### print( 'dateString = ', dateString )
 print( 'dbBackupDirectory = ', dbBackupDirectory )

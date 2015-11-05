@@ -4,9 +4,7 @@
 # -----------------------------
 #
 import os       # for getting values for environment vars
-import socket   # for getting the hostName
 import sys      # for accessing command line arguments
-import time     # for the date string in our backup file name
 from subprocess import call
 
 #
@@ -66,20 +64,12 @@ if ( dbUser == '' ) :
    dbUser = 'root'
 
 dbBackupDirectory = dbFunctions.getDbBackupDirectory()
+dbBackupFileBaseName = dbFunctions.getDbBackupFileBaseName( siteName, suffixArg )
 
-#
-# If we have a suffix, prefix it with a dash, to separate it from the hostname
-#
-suffixString = ''
-if( suffixArg != '' ) :
-	suffixString = '-' + suffixArg
+dbBackupFileFullName = dbBackupDirectory + '/' + dbBackupFileBaseName
 
-dateString = time.strftime( '-%Y_%m_%d-' )
-hostName = socket.gethostname()
-backupFileName = dbBackupDirectory + '/' + siteName + dateString + hostName + suffixString + '.sql.tgz'
-
-backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + passwordArg + ' ' + dbName + ' | gzip > ' + backupFileName
-chmodCommand = 'chmod 600 ' + backupFileName
+backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + passwordArg + ' ' + dbName + ' | gzip > ' + dbBackupFileFullName
+chmodCommand = 'chmod 600 ' + dbBackupFileFullName
 
 print( 'siteArg = ', siteArg )
 print( 'siteName = ', siteName )
@@ -92,11 +82,11 @@ print( 'passwordArg = ', passwordArg )
 ### print( 'hostName = ', hostName )
 ### print( 'dateString = ', dateString )
 print( 'dbBackupDirectory = ', dbBackupDirectory )
-### print( 'backupFileName = ', backupFileName )
+print( 'dbBackupFileFullName = ', dbBackupFileFullName )
 print( 'backupCommand = ', backupCommand )
 ### print( 'chmodCommand = ', chmodCommand )
 
-print( 'Backing up DB for site', siteName, 'to', backupFileName, '...' )
+print( 'Backing up DB for site', siteName, 'to', dbBackupFileFullName, '...' )
 
 ## call( backupCommand, shell=True )
 ## call( chmodCommand, shell=True )

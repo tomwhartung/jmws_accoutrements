@@ -1,6 +1,0 @@
-#!/bin/bash
-#
-# bus: backup db used by seeourminds.com
-# --------------------------------------
-#
-dbBackup s $1

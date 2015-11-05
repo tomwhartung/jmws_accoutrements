@@ -1,7 +1,0 @@
-#!/bin/bash
-#
-# budbs: backup all relevant cms dbs
-# ----------------------------------
-#
-dbBackup all $1
-

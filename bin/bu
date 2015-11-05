@@ -18,23 +18,26 @@ suffixArg = arguments[1]
 
 ##############################################################
 #
-#  Set these credential-containing globals to default values
-#  The Top Secret Db File sets these to the correct secret values for our Dbs
-#
-dbName = ''
-dbUser = ''
-dbPass = ''
-siteName = siteArg
-
-#
-#  Run the Top Secret Db Credentials File that sets the credential-containing globals (dbName, dbUser, dbPass).
-#  For best results, this file should be "locked down," e.g., in your home directory with its permissions set to 700
+#  Run the Top Secret Db Credentials File to set the credential-containing globals dbNames, dbUsers, dbPasswords.
+#  For best results, this file should be "locked down"
+#  1. Define the DB_CREDENTIALS_FILE environment variable in your .bash_profile
+#  2. Have it reference a file similar to dbCredentialsFileExample.py in your home directory
+#  3. Set this file's permissions to 700
 #  Never ever ever check this top secret file in to a public repository,
 #     else people will be able to hack your DB!!!!
 #  For more information, see the comments in dbCredentialsFileExample.py
 #
+dbNames = {}
+dbUsers = {}
+dbPasswords = {}
+siteName = siteArg
+
 dbCredentialsFile = dbFunctions.getDbCredentialsFile()
 exec( compile(open(dbCredentialsFile,"rb").read(), dbCredentialsFile, 'exec'), globals(), locals() )
+
+dbName = dbNames[siteName]
+dbUser = dbUsers[siteName]
+dbPass = dbPasswords[siteName]
 
 ##############################################################
 

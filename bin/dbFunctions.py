@@ -89,7 +89,7 @@ def getDbCredentialsFile() :
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
 #
-def getdbPasswordArg( dbPassword ) :
+def getDbPasswordArg( dbPassword ) :
 	if ( dbPassword == '' ) :
 		dbPasswordArg = '-p'
 	else :
@@ -99,7 +99,7 @@ def getdbPasswordArg( dbPassword ) :
 #
 # If we don't have a specific user, we know that the root user will always be there
 #
-def getdbUserArg( dbUser ) :
+def getDbUserArg( dbUser ) :
 	dbUserArg = '-u '
 	if ( dbUser == '' ) :
 		dbUserArg += 'root'

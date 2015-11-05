@@ -16,15 +16,9 @@ arguments = dbFunctions.processArguments( 'backup' )
 siteArg = arguments[0]
 suffixArg = arguments[1]
 
-##############################################################
 #
-#  Run the Top Secret Db Credentials File to set the credential-containing globals dbNames, dbUsers, dbPasswords.
-#  For best results, this file should be "locked down"
-#  1. Define the DB_CREDENTIALS_FILE environment variable in your .bash_profile
-#  2. Have it reference a file similar to dbCredentialsFileExample.py in your home directory
-#  3. Set this file's permissions to 700
-#  Never ever ever check this top secret file in to a public repository,
-#     else people will be able to hack your DB!!!!
+#  Run the Top Secret Db Credentials File to get the values we need to
+#    set the credential-containing globals dbNames, dbUsers, dbPasswords.
 #  For more information, see the comments in dbCredentialsFileExample.py
 #
 dbNames = {}
@@ -37,17 +31,15 @@ exec( compile(open(dbCredentialsFile,"rb").read(), dbCredentialsFile, 'exec'), g
 
 dbName = dbNames[siteName]
 dbUser = dbUsers[siteName]
-dbPass = dbPasswords[siteName]
-
-##############################################################
+dbPassword = dbPasswords[siteName]
 
 #
 # If we don't have a password, the -p arg to mysql causes it to prompt them for it
 #
-if ( dbPass == '' ) :
-	passwordArg = '-p'
+if ( dbPassword == '' ) :
+	dbPasswordArg = '-p'
 else :
-	passwordArg = '--password=' + dbPass
+	dbPasswordArg = '--password=' + dbPassword
 
 #
 # If we don't have a specific user, we know that the root user will always be there
@@ -59,7 +51,7 @@ dbBackupDirectory = dbFunctions.getDbBackupDirectory()
 dbBackupFileBaseName = dbFunctions.getDbBackupFileBaseName( siteName, suffixArg )
 dbBackupFileFullName = dbBackupDirectory + '/' + dbBackupFileBaseName
 
-backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + passwordArg + ' ' + dbName + ' | gzip > ' + dbBackupFileFullName
+backupCommand = 'mysqldump --quick --opt -u ' + dbUser + ' ' + dbPasswordArg + ' ' + dbName + ' | gzip > ' + dbBackupFileFullName
 chmodCommand = 'chmod 600 ' + dbBackupFileFullName
 
 print( 'siteArg = ', siteArg )
@@ -68,8 +60,8 @@ print( 'siteName = ', siteName )
 ### print( 'suffixString = ', suffixString )
 print( 'dbName = ', dbName )
 print( 'dbUser = ', dbUser )
-print( 'dbPass = ', dbPass )
-print( 'passwordArg = ', passwordArg )
+print( 'dbPassword = ', dbPassword )
+print( 'dbPasswordArg = ', dbPasswordArg )
 ### print( 'hostName = ', hostName )
 ### print( 'dateString = ', dateString )
 print( 'dbBackupDirectory = ', dbBackupDirectory )
@@ -79,6 +71,6 @@ print( 'backupCommand = ', backupCommand )
 
 print( 'Backing up DB for site', siteName, 'to', dbBackupFileFullName, '...' )
 
-## call( backupCommand, shell=True )
-## call( chmodCommand, shell=True )
+call( backupCommand, shell=True )
+call( chmodCommand, shell=True )
 

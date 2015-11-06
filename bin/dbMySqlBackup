@@ -67,8 +67,9 @@ print( 'dbBackupFileFullName = ', dbBackupFileFullName )
 print( 'backupCommand = ', backupCommand )
 ### print( 'chmodCommand = ', chmodCommand )
 
-print( 'Backing up DB for site', siteName, 'to', dbBackupFileFullName, '...' )
+print( 'Backing up DB for site', siteName, 'to', dbBackupFileFullName, '...', end='' )
 
 call( backupCommand, shell=True )
 call( chmodCommand, shell=True )
 
+print( ' done' )

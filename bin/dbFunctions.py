@@ -52,6 +52,8 @@ def processArguments( backupOrRestore ) :
 	elif ( len(sys.argv) == 3 ) :
 		siteArg = sys.argv[1]
 		suffixArg = sys.argv[2]
+	elif ( backupOrRestore == 'command' ) :   # Really a trivial case (no file name involved)
+		siteArg = 'all'                        # TODO: implement in a future iteration
 	else :
 		syntax( backupOrRestore )
 		print( 'Wrong number of args.' )

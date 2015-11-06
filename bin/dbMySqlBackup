@@ -7,7 +7,7 @@
 #
 import os       # for getting values for environment vars
 import sys      # for accessing command line arguments
-from subprocess import call
+from subprocess import call  # for running commands
 
 #
 #  Import the functions that we share with dbMySqlRestore

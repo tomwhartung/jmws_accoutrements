@@ -7,7 +7,7 @@
 #
 import os       # for getting values for environment vars
 import sys      # for accessing command line arguments
-from subprocess import call
+from subprocess import call  # for running commands
 
 #
 #  Import the functions that we share with dbMySqlBackup
@@ -17,8 +17,8 @@ import dbFunctions
 fileNameOverrides = dbFunctions.processRestoreOverrides( )
 dateOverride = fileNameOverrides[0]
 hostNameOverride = fileNameOverrides[1]
-print( 'dbMySqlRestore - dateOverride =', dateOverride )
-print( 'dbMySqlRestore - hostNameOverride =', hostNameOverride )
+### print( 'dbMySqlRestore - dateOverride =', dateOverride )
+### print( 'dbMySqlRestore - hostNameOverride =', hostNameOverride )
 
 arguments = dbFunctions.processArguments( 'restore' )
 siteArg = arguments[0]
@@ -71,7 +71,6 @@ print( 'dbUserArg = ', dbUserArg )
 print( 'dbBackupFileFullName = ', dbBackupFileFullName )
 print( 'restoreCommand = ', restoreCommand )
 
-print( 'Restoring DB for site', siteName, 'from file', dbBackupFileFullName, '...' )
-
+print( 'Restoring DB for site', siteName, 'from file', dbBackupFileFullName, '...', end='' )
 call( restoreCommand, shell=True )
-
+print( ' done' )

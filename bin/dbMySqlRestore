@@ -48,10 +48,7 @@ dbBackupFileFullName = dbBackupDirectory + '/' + dbBackupFileBaseName
 #
 #  Construct the backup and chmod commands
 #
-###    gunzip < $filename | mysql -u root ${password_arg} $dbname
-#
 restoreCommand = 'gunzip < ' + dbBackupFileFullName + ' | ' + 'mysql ' + dbUserArg + ' ' + dbPasswordArg + ' ' + dbName
-### chmodCommand = 'chmod 600 ' + dbBackupFileFullName
 
 print( 'siteArg = ', siteArg )
 print( 'siteName = ', siteName )
@@ -62,15 +59,13 @@ print( 'dbUser = ', dbUser )
 print( 'dbPassword = ', dbPassword )
 print( 'dbPasswordArg = ', dbPasswordArg )
 print( 'dbUserArg = ', dbUserArg )
-### print( 'hostName = ', hostName )
-### print( 'dateString = ', dateString )
-print( 'dbBackupDirectory = ', dbBackupDirectory )
+print( 'hostName = ', hostName )
+print( 'dateString = ', dateString )
+### print( 'dbBackupDirectory = ', dbBackupDirectory )
 print( 'dbBackupFileFullName = ', dbBackupFileFullName )
 print( 'restoreCommand = ', restoreCommand )
-### print( 'chmodCommand = ', chmodCommand )
 
 print( 'Restoring DB for site', siteName, 'from file', dbBackupFileFullName, '...' )
 
 call( restoreCommand, shell=True )
-### call( chmodCommand, shell=True )
 

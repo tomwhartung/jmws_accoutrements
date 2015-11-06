@@ -14,6 +14,12 @@ from subprocess import call
 #  Process the command line arguments
 #
 import dbFunctions
+fileNameOverrides = dbFunctions.processRestoreOverrides()
+dateOverride = fileNameOverrides[0]
+hostNameOverride = fileNameOverrides[1]
+print( 'dbMySqlRestore - dateOverride =', dateOverride )
+print( 'dbMySqlRestore - hostNameOverride =', hostNameOverride )
+
 arguments = dbFunctions.processArguments( 'restore' )
 siteArg = arguments[0]
 suffixArg = arguments[1]

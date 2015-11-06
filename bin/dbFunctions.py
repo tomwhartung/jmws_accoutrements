@@ -14,7 +14,7 @@ import getopt   # for processing restore-specific overrides (command line option
 #  Process the overrides allowed when we are restoring
 #  Note that when restoring we have a few additional options (overrides: e.g., -d and -h)
 #
-def processRestoreOverrides( backupOrRestore ) :
+def processRestoreOverrides( ) :
 	dateOverride = ''
 	hostNameOverride = ''
 	try :

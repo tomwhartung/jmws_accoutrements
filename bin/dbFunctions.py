@@ -9,6 +9,10 @@ import socket   # for getting the hostName
 import sys      # for accessing command line arguments
 import time     # for the date string in our backup file name
 
+#
+#  Process the command line arguments.
+#  Note that the restore option has a few additional options (e.g., -d and -h)
+#
 def processArguments( backupOrRestore ) :
 	siteArg = ''
 	suffixArg = ''
@@ -24,6 +28,9 @@ def processArguments( backupOrRestore ) :
 	arguments = [siteArg, suffixArg]
 	return arguments
 
+#
+#  Display a brief syntax statement, describing the options and purpose of the script
+#
 def syntax( backupOrRestore ) :
 	basename = os.path.basename( sys.argv[0] )
 	print( 'Syntax:' )

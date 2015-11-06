@@ -9,7 +9,6 @@ import socket   # for getting the hostName
 import sys      # for accessing command line arguments
 import time     # for the date string in our backup file name
 
-
 #
 #  Process the command line arguments.
 #
@@ -35,9 +34,15 @@ def processArguments( backupOrRestore ) :
 #  Display a brief syntax statement, describing the options and purpose of the script
 #
 def syntax( backupOrRestore ) :
+	restoreOptions = ''
+	if( backupOrRestore == 'restore' ) :
+		restoreOptions = ' [-d YYYY_MM_DD] [-h hostName]'
 	basename = os.path.basename( sys.argv[0] )
 	print( 'Syntax:' )
-	print( '  ' + basename + ' site [suffix]' )
+	print( '  ' + basename + restoreOptions + ' site [suffix]' )
+	if( backupOrRestore == 'restore' ) :
+		print( '    -d: optionally override today\'s date in fileName (YYYY_MM_DD)' )
+		print( '    -h: optionally override current hostName in fileName' )
 	print( '    site: site name or recognized abbreviation' )
 	print( '    suffix: optional string appended to standard backup file name' )
 	if( backupOrRestore == 'backup' ) :

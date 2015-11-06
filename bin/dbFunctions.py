@@ -9,14 +9,17 @@ import socket   # for getting the hostName
 import sys      # for accessing command line arguments
 import time     # for the date string in our backup file name
 
+
 #
 #  Process the command line arguments.
-#  Note that the restore option has a few additional options (e.g., -d and -h)
 #
 def processArguments( backupOrRestore ) :
 	siteArg = ''
 	suffixArg = ''
 	if ( len(sys.argv) == 2 ) :
+		if ( sys.argv[1] == '-h' or sys.argv[1] == '-help' or sys.argv[1] == '--help' ) :
+			syntax( backupOrRestore )
+			exit( 0 )
 		siteArg = sys.argv[1]
 	elif ( len(sys.argv) == 3 ) :
 		siteArg = sys.argv[1]
@@ -41,7 +44,7 @@ def syntax( backupOrRestore ) :
 		print( 'Saves a copy of database in a file named as follows:' )
 	else :
 		print( 'Restores a copy of database from a file named as follows:' )
-	print( '  site.com-YYYY_MM_DD-hostname[-suffix].sql.gz' )
+	print( '  siteName-YYYY_MM_DD-hostname[-suffix].sql.gz' )
 
 #
 #  Check the environment for a setting for the backup directory

@@ -103,9 +103,15 @@ def getDbBackupDirectory() :
 #
 #  Assemble the basename of the backup file, using a variety of identifying components
 #
-def getDbBackupFileBaseName( siteName, suffixArg ) :
-	dateString = time.strftime( '-%Y_%m_%d-' )
-	hostName = socket.gethostname()
+def getDbBackupFileBaseName( siteName, suffixArg, dateOverride='', hostNameOverride='' ) :
+	if( dateOverride == '' ) :
+		dateString = time.strftime( '-%Y_%m_%d-' )
+	else :
+		dateString = '-' + dateOverride + '-'
+	if( hostNameOverride == '' ) :
+		hostName = socket.gethostname()
+	else :
+		hostName = hostNameOverride
 	suffixString = ''
 	#
 	# If we have a suffix, prefix it with a dash, to separate it from the hostname

@@ -14,7 +14,7 @@ from subprocess import call
 #  Process the command line arguments
 #
 import dbFunctions
-fileNameOverrides = dbFunctions.processRestoreOverrides()
+fileNameOverrides = dbFunctions.processRestoreOverrides( 'restore' )
 dateOverride = fileNameOverrides[0]
 hostNameOverride = fileNameOverrides[1]
 print( 'dbMySqlRestore - dateOverride =', dateOverride )
@@ -48,7 +48,7 @@ dbPasswordArg = dbFunctions.getDbPasswordArg( dbPassword )
 dbUserArg = dbFunctions.getDbUserArg( dbUser )
 
 dbBackupDirectory = dbFunctions.getDbBackupDirectory()
-dbBackupFileBaseName = dbFunctions.getDbBackupFileBaseName( siteName, suffixArg )
+dbBackupFileBaseName = dbFunctions.getDbBackupFileBaseName( siteName, suffixArg, dateOverride, hostNameOverride )
 dbBackupFileFullName = dbBackupDirectory + '/' + dbBackupFileBaseName
 
 #

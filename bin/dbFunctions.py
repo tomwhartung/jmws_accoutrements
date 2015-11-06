@@ -14,25 +14,27 @@ import getopt   # for processing restore-specific overrides (command line option
 #  Process the overrides allowed when we are restoring
 #  Note that when restoring we have a few additional options (overrides: e.g., -d and -h)
 #
-def processRestoreOverrides() :
+def processRestoreOverrides( backupOrRestore ) :
 	dateOverride = ''
 	hostNameOverride = ''
 	try :
 		argv = sys.argv[1:]
 		opts, args = getopt.getopt( argv, "d:h:", ["date=","hostName="] )
 	except getopt.GetoptError :
+		fileNameOverrides = [dateOverride, hostNameOverride]
+		return fileNameOverrides
+	try :
+		for opt, arg in opts :
+			if( opt in ("-d", "--date") ) :
+				dateOverride = arg
+				sys.argv.pop(1)   # remove "-d" from arg list
+				sys.argv.pop(1)   # remove "YYYY_MM_DD" from arg list
+			elif( opt in ("-h", "--hostName") ) :
+				hostNameOverride = arg
+				sys.argv.pop(1)   # remove "-h" from arg list
+				sys.argv.pop(1)   # remove "<hostName>" from arg list
+	except :
 		pass
-	for opt, arg in opts :
-		if( opt in ("-d", "--date") ) :
-			dateOverride = arg
-			sys.argv.pop(1)   # remove "-d" from arg list
-			sys.argv.pop(1)   # remove "YYYY_MM_DD" from arg list
-		elif( opt in ("-h", "--hostName") ) :
-			hostNameOverride = arg
-			sys.argv.pop(1)   # remove "-h" from arg list
-			sys.argv.pop(1)   # remove "<hostName>" from arg list
-	print( 'dbFunctions.py - processRestoreOverrides - dateOverride:', dateOverride )
-	print( 'dbFunctions.py - processRestoreOverrides - hostNameOverride:', hostNameOverride )
 	fileNameOverrides = [dateOverride, hostNameOverride]
 	return fileNameOverrides
 
@@ -43,7 +45,7 @@ def processArguments( backupOrRestore ) :
 	siteArg = ''
 	suffixArg = ''
 	if ( len(sys.argv) == 2 ) :
-		if ( sys.argv[1] == '-help' or sys.argv[1] == '--help' ) :
+		if ( sys.argv[1] == '--help' ) :
 			syntax( backupOrRestore )
 			exit( 0 )
 		siteArg = sys.argv[1]
@@ -68,11 +70,11 @@ def syntax( backupOrRestore ) :
 		restoreOptions = '[-d YYYY_MM_DD] [-h hostName]'
 	basename = os.path.basename( sys.argv[0] )
 	print( 'Syntax:' )
-	print( '  ' + basename + ' [-help|--help] ' + restoreOptions + ' site [suffix]' )
+	print( '  ' + basename + ' [--help] ' + restoreOptions + ' site [suffix]' )
 	if( backupOrRestore == 'restore' ) :
 		print( '    -d: optionally override today\'s date in fileName (YYYY_MM_DD)' )
 		print( '    -h: optionally override current hostName in fileName' )
-	print( '    -help or --help: display syntax statement then exit' )
+	print( '    --help: display syntax statement then exit' )
 	print( '    site: site name or recognized abbreviation' )
 	print( '    suffix: optional string appended to standard backup file name' )
 	if( backupOrRestore == 'backup' ) :

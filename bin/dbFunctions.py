@@ -11,6 +11,32 @@ import time     # for the date string in our backup file name
 import getopt   # for processing restore-specific overrides (command line options)
 
 #
+#  Process the overrides allowed when we are restoring
+#  Note that when restoring we have a few additional options (overrides: e.g., -d and -h)
+#
+def processRestoreOverrides() :
+	dateOverride = ''
+	hostNameOverride = ''
+	try :
+		argv = sys.argv[1:]
+		opts, args = getopt.getopt( argv, "d:h:", ["date=","hostName="] )
+	except getopt.GetoptError :
+		pass
+	for opt, arg in opts :
+		if( opt in ("-d", "--date") ) :
+			dateOverride = arg
+			sys.argv.pop(1)   # remove "-d" from arg list
+			sys.argv.pop(1)   # remove "YYYY_MM_DD" from arg list
+		elif( opt in ("-h", "--hostName") ) :
+			hostNameOverride = arg
+			sys.argv.pop(1)   # remove "-h" from arg list
+			sys.argv.pop(1)   # remove "<hostName>" from arg list
+	print( 'dbFunctions.py - processRestoreOverrides - dateOverride:', dateOverride )
+	print( 'dbFunctions.py - processRestoreOverrides - hostNameOverride:', hostNameOverride )
+	fileNameOverrides = [dateOverride, hostNameOverride]
+	return fileNameOverrides
+
+#
 #  Process the command line arguments.
 #
 def processArguments( backupOrRestore ) :
@@ -27,6 +53,8 @@ def processArguments( backupOrRestore ) :
 	else :
 		syntax( backupOrRestore )
 		print( 'Wrong number of args.' )
+		print( 'len(sys.argv) =', len(sys.argv) )
+		print( 'str(sys.argv) =', str(sys.argv) )
 		exit( 1 )
 	arguments = [siteArg, suffixArg]
 	return arguments
@@ -40,7 +68,7 @@ def syntax( backupOrRestore ) :
 		restoreOptions = '[-d YYYY_MM_DD] [-h hostName]'
 	basename = os.path.basename( sys.argv[0] )
 	print( 'Syntax:' )
-	print( '  ' + basename + '[-help|--help] ' + restoreOptions + ' site [suffix]' )
+	print( '  ' + basename + ' [-help|--help] ' + restoreOptions + ' site [suffix]' )
 	if( backupOrRestore == 'restore' ) :
 		print( '    -d: optionally override today\'s date in fileName (YYYY_MM_DD)' )
 		print( '    -h: optionally override current hostName in fileName' )

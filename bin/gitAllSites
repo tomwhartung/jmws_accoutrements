@@ -1,0 +1,48 @@
+#!/usr/bin/python3
+#
+# gitAllSites: runs a git command for all sites with code in github
+# -----------------------------------------------------------------
+#
+import os       # for getting values for environment vars
+import sys      # for accessing command line arguments
+from subprocess import call  # for running commands
+
+#
+#  Returns the name of the file containing a list of sites
+#  If the path is NOT set in the environment,
+#     use the default example file
+#
+def getGitSitesListFile() :
+	gitSitesListFileDefault = 'gitSitesListExample.py'
+	gitSitesListFileEnviron = ''
+	try :
+		gitSitesListFileEnviron = os.environ['GIT_SITES_LIST_FILE']
+	except :
+		pass
+	if( gitSitesListFileEnviron == '' ) :
+		gitSitesListFile = gitSitesListFileDefault
+	else :
+		gitSitesListFile = gitSitesListFileEnviron
+	return gitSitesListFile
+
+gitSiteNames = {}
+gitSitesListFile = getGitSitesListFile()
+exec( compile(open(gitSitesListFile,"rb").read(), gitSitesListFile, 'exec'), globals(), locals() )
+
+rootDir = '/var/www/'
+htdocsDir = '/htdocs/'
+customizationsDir = 'customizations'
+
+print( 'gitSitesListFile = ', gitSitesListFile )
+
+for siteName in gitSiteNames :
+	print( 'siteName = ', siteName )
+	siteHtdocsDir = rootDir + siteName + htdocsDir
+	siteCoreDir = rootDir + siteName + htdocsDir + '/' + siteName
+	siteCustomizationsDir = rootDir + siteName + htdocsDir + customizationsDir
+	print( 'siteHtdocsDir = ', siteHtdocsDir )
+	print( 'siteCoreDir = ', siteCoreDir )
+	print( 'siteCustomizationsDir = ', siteCustomizationsDir )
+##	gitCommand = 'git ' + siteName
+##	print( 'calling gitCommand = "', gitCommand, '"' )
+##	call( gitCommand, shell=True )

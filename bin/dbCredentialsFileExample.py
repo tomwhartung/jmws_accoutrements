@@ -19,8 +19,6 @@
 #       dbMySqlBackup ex2  # finds 'ex2' in exampletwoAliases and backs up exampletwo.com db
 #       dbMySqlBackup e3   # finds 'e3' in examplethreeAliases and backs up examplethree.org db
 #
-dbSites = [ 'exampleone.com', 'exampletwo.com', 'examplethree.org']
-
 exampleoneAliases   = ['exampleone.com', 'e', 'ex', 'e1', 'ex1']
 exampletwoAliases   = ['exampletwo.com', 'e2', 'ex2']
 examplethreeAliases = ['examplethree.org', 'e3', 'ex3']
@@ -49,9 +47,20 @@ dbPasswords['exampletwo.com']   = 'password1'
 dbPasswords['examplethree.org'] = 'asdfg'
 
 #
+# 'all' is a special case, currently implemented for the command script only
+# These statements allow running the mysql command as root without specifying a db
+# TODO: implement the 'all' option for the backup and restore scripts
+#
+dbSites = [ 'exampleone.com', 'exampletwo.com', 'examplethree.org']
+dbPasswords['all'] = 'r00t'
+dbNames['all'] = ''
+dbUsers['all'] = 'root'
+
+#
 # Find the site specified by siteArg (in dbMySqlBackup or dbMySqlRestore)
 #   and use its name to set the global db credential values
 #
+siteName = siteArg
 if( siteArg in exampleoneAliases ) :
 	siteName = 'exampleone.com'
 elif( siteArg in exampletwoAliases ) :

@@ -6,8 +6,9 @@
 import os       # for getting values for environment vars
 import sys      # for accessing command line arguments
 from subprocess import call  # for running commands
+from os.path import isfile, isdir, islink
 
-#
+##
 #  Returns the name of the file containing a list of sites
 #  If the path is NOT set in the environment,
 #     use the default example file
@@ -25,24 +26,55 @@ def getGitSitesListFile() :
 		gitSitesListFile = gitSitesListFileEnviron
 	return gitSitesListFile
 
+##
+#  Checks that the specified directory exists, exiting with an error message if it doesn't
+#
+def verifyDirectory( dirToCheck ) :
+	if isdir( dirToCheck ) :
+		print( 'Found a ' + dirToCheck + ' directory, cool.' )
+	else:
+		print( 'Expecting a "' + dirToCheck + '" directory, but it is not here.' )
+		exit( 1 )
+
+##
+# Main Routine Starts Here
+# ------------------------
+# Process command line arg
+#
+command = ''
+if ( len(sys.argv) == 1 ) :
+	print( 'No command specified, running "git status"' )
+	command = 'status'
+elif ( len(sys.argv) == 2 ) :
+	command = sys.argv[1]
+else :
+	print( 'Too many arguments, try again.' )
+	exit( 1 )
+
+#
+# Get the list of site names
+#
 gitSiteNames = {}
 gitSitesListFile = getGitSitesListFile()
 exec( compile(open(gitSitesListFile,"rb").read(), gitSitesListFile, 'exec'), globals(), locals() )
+print( 'Found', len(gitSiteNames), 'in gitSitesListFile', gitSitesListFile )
+print( '=================================================================' )
 
 rootDir = '/var/www/'
 htdocsDir = '/htdocs/'
 customizationsDir = 'customizations'
 
-print( 'gitSitesListFile = ', gitSitesListFile )
 
 for siteName in gitSiteNames :
-	print( 'siteName = ', siteName )
+	print( 'Processing siteName =', siteName, '...', end="" )
 	siteHtdocsDir = rootDir + siteName + htdocsDir
 	siteCoreDir = rootDir + siteName + htdocsDir + '/' + siteName
 	siteCustomizationsDir = rootDir + siteName + htdocsDir + customizationsDir
-	print( 'siteHtdocsDir = ', siteHtdocsDir )
-	print( 'siteCoreDir = ', siteCoreDir )
-	print( 'siteCustomizationsDir = ', siteCustomizationsDir )
-##	gitCommand = 'git ' + siteName
+##	print( 'siteHtdocsDir = ', siteHtdocsDir )
+##	print( 'siteCoreDir = ', siteCoreDir )
+##	print( 'siteCustomizationsDir = ', siteCustomizationsDir )
+	gitCommand = 'git ' + command
 ##	print( 'calling gitCommand = "', gitCommand, '"' )
-##	call( gitCommand, shell=True )
+	fullCommand = 'cd ' + siteCoreDir + '; ' + gitCommand
+	print( 'calling fullCommand = "', fullCommand, '"' )
+	call( fullCommand, shell=True )

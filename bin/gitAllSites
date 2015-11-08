@@ -28,40 +28,12 @@ def getGitSitesListFile() :
 	return gitSitesListFile
 
 ##
-#  Checks that the specified directory exists, exiting with an error message if it doesn't
-#
-def verifyDirectory( dirToCheck ) :
-	if isdir( dirToCheck ) :
-		print( 'Found a ' + dirToCheck + ' directory, cool.' )
-	else:
-		print( 'Expecting a "' + dirToCheck + '" directory, but it is not here.' )
-		exit( 1 )
-
-##
 # Main Routine Starts Here
 # ------------------------
 # Process command line arg
 #
-command = ''
-if ( len(sys.argv) == 1 ) :
-	print( 'No command specified, running "git status"' )
-	command = 'status'
-elif ( len(sys.argv) == 2 ) :
-	command = sys.argv[1]
-else :
-	print( 'Too many arguments, try again.' )
-	exit( 1 )
-
-#
-# Translate single-letter abbreviations for common commands (no one likes to type extra letters)
-#
-if ( len(command) == 1 ) :
-	if ( command == 'd' ) :
-		command = 'diff'
-	elif ( command == 'p' ) :
-		command = 'pull'
-	elif ( command == 's' ) :
-		command = 'status'
+import gitFunctions
+gitCommand = gitFunctions.processArguments()
 
 #
 # Get the list of site names
@@ -85,21 +57,20 @@ customizationsDir = 'customizations'
 for siteName in gitSiteNames :
 	siteCoreDir = rootDir + siteName + htdocsDir + '/' + siteName
 	customizationsParentDir = rootDir + siteName + htdocsDir + customizationsDir
-	gitCommand = 'git ' + command
 ##	print( 'siteCoreDir = ', siteCoreDir )
 ##	print( 'customizationsParentDir = ', customizationsParentDir )
 ##	print( 'calling gitCommand = "', gitCommand, '"' )
 	fullCommand = 'cd ' + siteCoreDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + siteName + ': &"'
 	print( '=================================================================' )
-##	print( siteName, '-', command, '(', fullCommand, ')' )
-	print( siteName, '-', command )
+##	print( siteName, '-', gitCommand, '(', fullCommand, ')' )
+	print( siteName, '-', gitCommand )
 	call( fullCommand, shell=True )
 	if isdir( customizationsParentDir ) :
 		customizations = listdir( customizationsParentDir )
 		customizations.sort()
 		for gitRepo in customizations:
 			print( '-----------------------------------------------------------------' )
-			print( gitRepo, '-', command )
+			print( gitRepo, '-', gitCommand )
 			gitRepoDir = customizationsParentDir + '/' + gitRepo
 			fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
 			call( fullCommand, shell=True )

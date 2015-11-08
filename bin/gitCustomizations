@@ -1,0 +1,46 @@
+#!/usr/bin/python3
+#
+# gitCustomizations: runs a git command for all customizations subdirs of current dir
+# -----------------------------------------------------------------------------------
+#
+import os.path
+from subprocess import call      # for running commands
+from os import getcwd, listdir
+## from os.path import basename
+
+##
+# Verify that we are in a customizations dir
+#
+def checkCurrentDirectory() :
+	currentDirectory = getcwd()
+	basename = os.path.basename( currentDirectory )
+	if( basename != 'customizations' ) :
+		print( 'Error: expecting the basename of this dir to be "customizations"' )
+		print( 'Current directory is', currentDirectory )
+		print( 'Run this in a "customizations" dir.' )
+		exit( 1 )
+
+##
+# Main Routine Starts Here
+# ------------------------
+#
+checkCurrentDirectory()   # we need to be in a "customizations" directory
+import gitFunctions
+gitCommand = gitFunctions.processArguments()
+
+#
+#  Get list of customizations (git repos)
+#  Loop through git repos running command in each one's directory
+#
+customizationsParentDir = getcwd()
+customizations = listdir( customizationsParentDir )
+customizations.sort()
+
+for gitRepo in customizations:
+	print( '-----------------------------------------------------------------' )
+	print( gitRepo, '-', gitCommand )
+	gitRepoDir = customizationsParentDir + '/' + gitRepo
+	fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
+	call( fullCommand, shell=True )
+
+exit( 0 )

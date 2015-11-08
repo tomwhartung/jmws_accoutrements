@@ -7,6 +7,7 @@ import os       # for getting values for environment vars
 import sys      # for accessing command line arguments
 from subprocess import call  # for running commands
 from os.path import isfile, isdir, islink
+from os import chdir, listdir
 
 ##
 #  Returns the name of the file containing a list of sites
@@ -57,6 +58,7 @@ else :
 gitSiteNames = {}
 gitSitesListFile = getGitSitesListFile()
 exec( compile(open(gitSitesListFile,"rb").read(), gitSitesListFile, 'exec'), globals(), locals() )
+print( '=================================================================' )
 print( 'Found', len(gitSiteNames), 'sites in gitSitesListFile', gitSitesListFile )
 
 rootDir = '/var/www/'
@@ -67,14 +69,23 @@ customizationsDir = 'customizations'
 for siteName in gitSiteNames :
 	siteHtdocsDir = rootDir + siteName + htdocsDir
 	siteCoreDir = rootDir + siteName + htdocsDir + '/' + siteName
-	siteCustomizationsDir = rootDir + siteName + htdocsDir + customizationsDir
+	customizationsParentDir = rootDir + siteName + htdocsDir + customizationsDir
 	gitCommand = 'git ' + command
-	print( '=================================================================' )
-	print( siteName, '-', command, end=" " )
 ##	print( 'siteHtdocsDir = ', siteHtdocsDir )
 ##	print( 'siteCoreDir = ', siteCoreDir )
-##	print( 'siteCustomizationsDir = ', siteCustomizationsDir )
+##	print( 'customizationsParentDir = ', customizationsParentDir )
 ##	print( 'calling gitCommand = "', gitCommand, '"' )
 	fullCommand = 'cd ' + siteCoreDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + siteName + ': &"'
-	print( '(', fullCommand, ')' )
+	print( '=================================================================' )
+##	print( siteName, '-', command, '(', fullCommand, ')' )
+	print( siteName, '-', command )
 	call( fullCommand, shell=True )
+	customizations = listdir( customizationsParentDir )
+	customizations.sort()
+	for gitRepo in customizations:
+		print( '-----------------------------------------------------------------' )
+		print( gitRepo, '-', command )
+		gitRepoDir = customizationsParentDir + '/' + gitRepo
+		fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
+		call( fullCommand, shell=True )
+

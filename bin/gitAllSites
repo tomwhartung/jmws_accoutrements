@@ -57,8 +57,7 @@ else :
 gitSiteNames = {}
 gitSitesListFile = getGitSitesListFile()
 exec( compile(open(gitSitesListFile,"rb").read(), gitSitesListFile, 'exec'), globals(), locals() )
-print( 'Found', len(gitSiteNames), 'in gitSitesListFile', gitSitesListFile )
-print( '=================================================================' )
+print( 'Found', len(gitSiteNames), 'sites in gitSitesListFile', gitSitesListFile )
 
 rootDir = '/var/www/'
 htdocsDir = '/htdocs/'
@@ -66,15 +65,16 @@ customizationsDir = 'customizations'
 
 
 for siteName in gitSiteNames :
-	print( 'Processing siteName =', siteName, '...', end="" )
 	siteHtdocsDir = rootDir + siteName + htdocsDir
 	siteCoreDir = rootDir + siteName + htdocsDir + '/' + siteName
 	siteCustomizationsDir = rootDir + siteName + htdocsDir + customizationsDir
+	gitCommand = 'git ' + command
+	print( '=================================================================' )
+	print( siteName, '-', command, end=" " )
 ##	print( 'siteHtdocsDir = ', siteHtdocsDir )
 ##	print( 'siteCoreDir = ', siteCoreDir )
 ##	print( 'siteCustomizationsDir = ', siteCustomizationsDir )
-	gitCommand = 'git ' + command
 ##	print( 'calling gitCommand = "', gitCommand, '"' )
-	fullCommand = 'cd ' + siteCoreDir + '; ' + gitCommand
-	print( 'calling fullCommand = "', fullCommand, '"' )
+	fullCommand = 'cd ' + siteCoreDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + siteName + ': &"'
+	print( '(', fullCommand, ')' )
 	call( fullCommand, shell=True )

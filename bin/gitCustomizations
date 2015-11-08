@@ -3,62 +3,42 @@
 # gitCustomizations: runs a git command for all customizations subdirs of current dir
 # -----------------------------------------------------------------------------------
 #
-import sys      # for accessing command line arguments
-from subprocess import call  # for running commands
+import os.path
+from subprocess import call      # for running commands
 from os import getcwd, listdir
-from os.path import basename
+## from os.path import basename
 
-customizationsParentDir = getcwd()
-basename = basename( customizationsParentDir )
-
-if( basename != 'customizations' ) :
-	print( 'Error: expecting the basename of this dir to be "customizations"' )
-	print( 'Current directory is', customizationsParentDir )
-	print( 'Run this in a "customizations" dir.' )
-	exit( 1 )
+##
+# Verify that we are in a customizations dir
+#
+def checkCurrentDirectory() :
+	currentDirectory = getcwd()
+	basename = os.path.basename( currentDirectory )
+	if( basename != 'customizations' ) :
+		print( 'Error: expecting the basename of this dir to be "customizations"' )
+		print( 'Current directory is', currentDirectory )
+		print( 'Run this in a "customizations" dir.' )
+		exit( 1 )
 
 ##
 # Main Routine Starts Here
 # ------------------------
-# Process command line arg
 #
-gitCommand = ''
-################################
-command = ''
-if ( len(sys.argv) == 1 ) :
-	print( 'No command specified, running "git status"' )
-	command = 'status'
-elif ( len(sys.argv) == 2 ) :
-	command = sys.argv[1]
-else :
-	print( 'Too many arguments, try again.' )
-	exit( 1 )
-
-#
-# Translate single-letter abbreviations for common commands (no one likes to type extra letters)
-#
-if ( len(command) == 1 ) :
-	if ( command == 'd' ) :
-		command = 'diff'
-	elif ( command == 'p' ) :
-		command = 'pull'
-	elif ( command == 's' ) :
-		command = 'status'
-
-gitCommand = 'git ' + command
-################################
-
+checkCurrentDirectory()   # we need to be in a "customizations" directory
+import gitFunctions
+gitCommand = gitFunctions.processArguments()
 
 #
 #  Get list of customizations (git repos)
 #  Loop through git repos running command in each one's directory
 #
+customizationsParentDir = getcwd()
 customizations = listdir( customizationsParentDir )
 customizations.sort()
 
 for gitRepo in customizations:
 	print( '-----------------------------------------------------------------' )
-	print( gitRepo, '-', command )
+	print( gitRepo, '-', gitCommand )
 	gitRepoDir = customizationsParentDir + '/' + gitRepo
 	fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
 	call( fullCommand, shell=True )

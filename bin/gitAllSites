@@ -28,16 +28,6 @@ def getGitSitesListFile() :
 	return gitSitesListFile
 
 ##
-#  Checks that the specified directory exists, exiting with an error message if it doesn't
-#
-def verifyDirectory( dirToCheck ) :
-	if isdir( dirToCheck ) :
-		print( 'Found a ' + dirToCheck + ' directory, cool.' )
-	else:
-		print( 'Expecting a "' + dirToCheck + '" directory, but it is not here.' )
-		exit( 1 )
-
-##
 # Main Routine Starts Here
 # ------------------------
 # Process command line arg

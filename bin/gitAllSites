@@ -53,6 +53,17 @@ else :
 	exit( 1 )
 
 #
+# Translate single-letter abbreviations for common commands (no one likes to type extra letters)
+#
+if ( len(command) == 1 ) :
+	if ( command == 'd' ) :
+		command = 'diff'
+	elif ( command == 'p' ) :
+		command = 'pull'
+	elif ( command == 's' ) :
+		command = 'status'
+
+#
 # Get the list of site names
 #
 gitSiteNames = {}
@@ -65,13 +76,16 @@ rootDir = '/var/www/'
 htdocsDir = '/htdocs/'
 customizationsDir = 'customizations'
 
-
+#
+#  Loop through the site names
+#  Run command in site's core directory
+#  Get list of customizations (git repos)
+#  Loop through git repos running command in each one's directory
+#
 for siteName in gitSiteNames :
-	siteHtdocsDir = rootDir + siteName + htdocsDir
 	siteCoreDir = rootDir + siteName + htdocsDir + '/' + siteName
 	customizationsParentDir = rootDir + siteName + htdocsDir + customizationsDir
 	gitCommand = 'git ' + command
-##	print( 'siteHtdocsDir = ', siteHtdocsDir )
 ##	print( 'siteCoreDir = ', siteCoreDir )
 ##	print( 'customizationsParentDir = ', customizationsParentDir )
 ##	print( 'calling gitCommand = "', gitCommand, '"' )
@@ -89,3 +103,4 @@ for siteName in gitSiteNames :
 		fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
 		call( fullCommand, shell=True )
 
+exit( 0 )

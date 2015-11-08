@@ -94,13 +94,14 @@ for siteName in gitSiteNames :
 ##	print( siteName, '-', command, '(', fullCommand, ')' )
 	print( siteName, '-', command )
 	call( fullCommand, shell=True )
-	customizations = listdir( customizationsParentDir )
-	customizations.sort()
-	for gitRepo in customizations:
-		print( '-----------------------------------------------------------------' )
-		print( gitRepo, '-', command )
-		gitRepoDir = customizationsParentDir + '/' + gitRepo
-		fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
-		call( fullCommand, shell=True )
+	if isdir( customizationsParentDir ) :
+		customizations = listdir( customizationsParentDir )
+		customizations.sort()
+		for gitRepo in customizations:
+			print( '-----------------------------------------------------------------' )
+			print( gitRepo, '-', command )
+			gitRepoDir = customizationsParentDir + '/' + gitRepo
+			fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
+			call( fullCommand, shell=True )
 
 exit( 0 )

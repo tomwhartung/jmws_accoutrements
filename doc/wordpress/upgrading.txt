@@ -18,7 +18,9 @@ Getting core update to work from back end on lauren (4.2.3 to 4.3.1):
 o  Changed ownership of all files to www-data
 o  Created directory wp-content/upgrade
 o  Changed perms of wp-content to 775
+   -> Changed back to 755 (see Updating Plugins below)
 o  Changed perms of all subdirectories of wp-content to 775
+   -> Changed back to 755 (see Updating Plugins below)
 2. What finally worked (apparently)
 o  Added the following line to wp-config.php :
    define('FS_METHOD','direct');
@@ -46,4 +48,12 @@ Updating wp core on development and backup hosts
 4. Backup new copy of db on all
    bu tw 02-after_upgrade_to_4.3.1
 
-
+Updating plugins
+----------------
+Learned that to enable updates via the admin panel (at least for plugins) we just need to:
+1. Add the following line to wp-config.php :
+   define('FS_METHOD','direct');
+2. Run following commands:
+   cd /var/www/tomwhartung.com/htdocs/tomwhartung.com
+   chown -R www-data *
+However, to get git to work again, we need to chown the files back to tomh.

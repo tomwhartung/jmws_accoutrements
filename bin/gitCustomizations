@@ -4,7 +4,6 @@
 # -----------------------------------------------------------------------------------
 #
 import os.path
-from subprocess import call      # for running commands
 from os import getcwd, listdir
 ## from os.path import basename
 
@@ -37,10 +36,6 @@ customizations = listdir( customizationsParentDir )
 customizations.sort()
 
 for gitRepo in customizations:
-	print( '-----------------------------------------------------------------' )
-	print( gitRepo, '-', gitCommand )
-	gitRepoDir = customizationsParentDir + '/' + gitRepo
-	fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
-	call( fullCommand, shell=True )
+	gitFunctions.runGitCommand( customizationsParentDir, gitRepo, gitCommand )
 
 exit( 0 )

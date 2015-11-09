@@ -1,0 +1,49 @@
+
+Introduction
+------------
+The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
+Plus we don't run it often enough to be really confident about it or good at it etc.
+
+TomWHartung.com - WP Upgrading Notes for 2015
+---------------------------------------------
+Trying to update using the back end administrator's panel...
+bette - FTP settings (undoubtedly firewall issues - I don't see how it could work with my setup)
+lauren - took a few tries, finally got it to work!  (I hope!)
+
+Getting core update to work from back end on lauren (4.2.3 to 4.3.1):
+---------------------------------------------------------------------
+0. Backup db on all hosts:
+   bu tw 01-before_upgrade_4.2.3_to_4.3.1
+1. Changed the following:
+o  Changed ownership of all files to www-data
+o  Created directory wp-content/upgrade
+o  Changed perms of wp-content to 775
+o  Changed perms of all subdirectories of wp-content to 775
+2. What finally worked (apparently)
+o  Added the following line to wp-config.php :
+   define('FS_METHOD','direct');
+o  References:
+   https://wordpress.org/support/topic/core-or-plugin-update-could-not-create-directory-httpdocs?replies=27
+   http://wordpress.stackexchange.com/questions/141063/when-fs-method-direct-is-chosen
+o  Based on the second reference it appears the chmoding and chowning were necessary so leaving all that as-is
+3. Quick check in browser: Looks OK
+
+Updating wp core on development and backup hosts
+------------------------------------------------
+1. Checkin to git on lauren and push:
+   gotwt
+   gs
+   ga --all .
+   gc 'Updating to 4.3.1' ; gpom
+2. Extract (git pull) on dev and bu hosts
+   gotwt
+   gp
+3. Test in browser
+   Load admin panel: "Database update required."
+   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+   Click "Continue" button: looks like we are good to go!
+   Noting that permission changes made above are not reflected on dev and bu hosts
+4. Backup new copy of db on all
+   bu tw 02-after_upgrade_to_4.3.1
+
+

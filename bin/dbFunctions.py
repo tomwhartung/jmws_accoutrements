@@ -120,7 +120,7 @@ def getDbBackupFileBaseName( siteName, suffixArg, dateOverride='', hostNameOverr
 	#
 	if( suffixArg != '' ) :
 		suffixString = '-' + suffixArg
-	dbBackupFileName = siteName + dateString + hostName + suffixString + '.sql.tgz'
+	dbBackupFileName = siteName + dateString + hostName + suffixString + '.sql.gz'
 	return dbBackupFileName
 
 #

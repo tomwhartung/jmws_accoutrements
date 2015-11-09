@@ -57,3 +57,33 @@ Learned that to enable updates via the admin panel (at least for plugins) we jus
    cd /var/www/tomwhartung.com/htdocs/tomwhartung.com
    chown -R www-data *
 However, to get git to work again, we need to chown the files back to tomh.
+
+Updating themes
+---------------
+Need to update three themes.
+Let's see if I can get this process down "to a science," based on what we learned above.
+
+Upgrade template on bette:
+   bu tw 04-before_upgrade_twentyfifteen
+   chown -R www-data
+   upgrade in admin panel
+   chown -R tomh
+   test
+   git commit and push
+   bu tw 05-after_upgrade_twentyfifteen
+   copy db to jane
+Upgrade code and db on jane using results from upgrade on bette
+   bu tw 04-before_upgrade_twentyfifteen
+   git pull
+   rs -h bette tw 05-after_upgrade_twentyfifteen
+   test
+   bu tw 05-after_upgrade_twentyfifteen
+Repeat processes for bette and jane for:
+   twentyfourteen
+   twentythirteen
+Upgrade code and db on lauren using final results from upgrade on bette
+   bu tw 04-before_upgrade_twentyfifteen
+   git pull
+   rs -h bette tw 05-after_upgrade_twentyfifteen
+   test
+   bu tw 05-after_upgrade_twentyfifteen

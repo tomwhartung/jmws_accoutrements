@@ -4,9 +4,10 @@
 # --------------------------------------------------------------------------------------
 #
 import sys      # for accessing command line arguments
+from subprocess import call      # for running commands
 
-#
-# Use command line argument (or lack thereof) to derive the git command we want to run
+##
+# Use the command line argument (or lack thereof) to derive the git command we want to run
 #
 def processArguments() :
 	command = ''
@@ -30,4 +31,14 @@ def processArguments() :
 			command = 'status'
 	gitCommand = 'git ' + command
 	return gitCommand
+
+##
+#  Change directories into the given directory and run the given command, running output through egrep and sed
+#
+def runGitCommand( customizationsParentDir, gitRepo, gitCommand ) :
+			print( '-----------------------------------------------------------------' )
+			print( gitRepo, '-', gitCommand )
+			gitRepoDir = customizationsParentDir + '/' + gitRepo
+			fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
+			call( fullCommand, shell=True )
 

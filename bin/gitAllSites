@@ -69,10 +69,6 @@ for siteName in gitSiteNames :
 		customizations = listdir( customizationsParentDir )
 		customizations.sort()
 		for gitRepo in customizations:
-			print( '-----------------------------------------------------------------' )
-			print( gitRepo, '-', gitCommand )
-			gitRepoDir = customizationsParentDir + '/' + gitRepo
-			fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
-			call( fullCommand, shell=True )
+			gitFunctions.runGitCommand( customizationsParentDir, gitRepo, gitCommand )
 
 exit( 0 )

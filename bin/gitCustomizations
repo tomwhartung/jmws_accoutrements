@@ -5,7 +5,6 @@
 #
 import os.path
 from os import getcwd, listdir
-## from os.path import basename
 
 ##
 # Verify that we are in a customizations dir

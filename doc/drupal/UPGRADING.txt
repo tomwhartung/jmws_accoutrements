@@ -3,27 +3,38 @@ Upgrading a minor version!
 
 Details: https://www.drupal.org/node/1223018
 
-Updated 8/1/2015 - code is now in git!!
+Updated 8/1/2015 - code is now in git
+Updated 11/13/2015 - new backup and restore scripts
 
 Hosts:
 [ ] bette - do all this on bette first
 
-0. Back up db and rename the file, adding the old version number.
-   buth
-   gobu
-   ## mv tomhartung.com-2015_08_24-bette.sql.gz tomhartung.com-2015_08_24-bette-7.XX.sql.gz
-   mv tomhartung.com-2015_08_24-bette.sql.gz tomhartung.com-2015_08_24-bette-7.38.sql.gz
-   toLauren tomhartung.com-2015_08_24-bette-7.38.sql.gz
+0. Back up db, adding the old version number to the file name and saving a copy on the backup host.
+   bu th 01-before_upgrading-7.xx_to_7.yy
+   toJane tomhartung.com-2015_08_24-bette-01-before_upgrading-7.xx_to_7.yy.sql.gz
 
 1. Visit site and download tar file
-   Copy to /var/www/tomhartung.com/unpack and unpack
-   Move unpacked directory to /var/www/tomhartung.com/htdocs/tomhartung.com-new
+   Copy to /var/www/tomhartung.com/htdocs/unpack and unpack
+   Move unpacked directory to /var/www/tomhartung.com/htdocs/tomhartung.com-7.yy
 
 2. Put into maintenance mode
    Log in as admin -> Configuration -> Maintenance Mode
 
-3. Link customizations into the new release area
-3.1. Manually link gitignored files
+3. Copy recursively the .git directory into the new release and see what has changed
+   gothh
+   cp -rp tomhartung.com/.git tomhartung.com-new     # laugh at this: bwahahahah!
+   cd tomhartung.com-new
+   git status
+
+4. Remove the link to the old version's directory and link tomhartung.com to the new version
+   gothh
+   rm tomhartung.com
+   ln -s tomhartung.com-new tomhartung.com
+   l
+
+5. Link gitignored files and customizations into the new release area
+5.1. Manually link gitignored files
+   NOTE: There is a new script in progress for doing this, consider finishing it up and using it.
    gothh              # cd /var/www/tomhartung.com/htdocs
    l gitignored       # these need to be linked into the new release area
    l gitignored/sites/default      # at this time these are the files we need to link
@@ -31,47 +42,34 @@ Hosts:
    l ../../../gitignored/sites/default
    ln -s ../../../gitignored/sites/default/files .
    ln -s ../../../gitignored/sites/default/settings.php  .
-3.2. Manually link gitignored files
+5.2. Run script to link customizations
    gothh              # cd /var/www/tomhartung.com/htdocs
    l customizations
+   l tomhartung.com/sites/all/*/jmws  # Ok if nothing there because if not ...
+   ln_drupal_customizations           # ... this script will create the necessary dirs.
    l tomhartung.com/sites/all/*/jmws
-   ln_drupal_customizations.py        # WARNING!  NEW SCRIPT!!
-   l tomhartung.com/sites/all/*/jmws
-
-   Complete instructions are here:
+5.3. Did any other customizations or enhancements creep into a new place?
+   Complete migration instructions are here:
       http://cgit.drupalcode.org/drupal/log/?h=7.x
    But that should be all we need to worry about right now.
 
-4. Copy recursively the .git directory into the new release and see what has changed
+6. Check for new settings
    gothh
-   cp -rp tomhartung.com/.git tomhartung.com-new
-   cd tomhartung.com-new
-   git status
-
-5. Check for new settings
-   gothh
-5.1. Using git - the new way
-   cd tomhartung.com-new
-   gd .gitignored          # should see only "Ignore subsites" added, else will have to merge
+6.1. Using git - the new way
+   cd tomhartung.com
+   gd .gitignore           # should see only sections labeled "Ignore ..." added, else will have to merge
    gd sites/default/default.settings.php   # should see no changes, else will have to merge
-5.2. Use the manual/old way to double-check
+6.2. Use the manual/old way to double-check
    diff tomhartung.com/.gitignore tomhartung.com-new/.gitignore
    diff tomhartung.com/sites/default/default.settings.php tomhartung.com-new/sites/default/default.settings.php
-5.3. Copy or merge as appropriate
+6.3. Copy or merge as appropriate
    gothh
-   cp tomhartung.com/.gitignore tomhartung.com-new/.gitignore
-5.4. Doublecheck links:
+   cp tomhartung.com-old/.gitignore tomhartung.com/.gitignore
+6.4. Doublecheck links:
    gothh
    l tomhartung.com-new/sites/default
    l tomhartung.com-new/sites/default/files/
    more tomhartung.com-new/sites/default/settings.php
-
-6. Move the old directory to tomhartung.com-7.xx and new to tomhartung.com
-   gothh
-   ## mv tomhartung.com tomhartung.com-7.xx
-   mv tomhartung.com tomhartung.com-7.38
-   mv tomhartung.com-new to tomhartung.com
-   l
 
 7. Run link_subsites.py
    gothh

@@ -55,16 +55,30 @@ Hosts:
 
 6. Check for new settings
    gothh
-6.1. Using git - the new way
+6.1. Update .gitignore as necessary (to reflect changes in new release)
    cd tomhartung.com
    gd .gitignore           # should see only sections labeled "Ignore ..." added, else will have to merge
-   gd sites/default/default.settings.php   # should see no changes, else will have to merge
-6.2. Use the manual/old way to double-check
-   diff tomhartung.com/.gitignore tomhartung.com-new/.gitignore
+   diff gitignored/.gitignore tomhartung.com/.gitignore  # double-check
+   ## Copy or merge as appropriate
+   ## Migrate changes made to tomhartung.com/.gitignore back to gitignored/.gitignore
+   ## To Copy: (no changes made in release)
+   cd ..
+   cp gitignored/.gitignore tomhartung.com/.gitignore
+   ## To Merge: (.gitignore updated in this release)
+   (tbd)
+6.2. Update settings.php as necessary (to reflect changes in new release)
+   gothd
+   gd sites/default/default.settings.php   # should see no changes, else will have to migrate the changes
+   cd ..
    diff tomhartung.com/sites/default/default.settings.php tomhartung.com-new/sites/default/default.settings.php
-6.3. Copy or merge as appropriate
+   ## If necessary, merge changes made in release to my settings.php
    gothh
-   cp tomhartung.com-old/.gitignore tomhartung.com/.gitignore
+   ## To (determine whether we need to) Merge:
+   ## See what changes have been made (that I need to migrate):
+   diff gitignored/sites/default/settings.php tomhartung.com-7.39/sites/default/default.settings.php
+   ## See what changes have been made (that I need to migrate) along with my secret db info and other customizations:
+   diff gitignored/sites/default/settings.php tomhartung.com/sites/default/default.settings.php
+   ## Migrate changes made to tomhartung.com/sites/default/default.settings.php back to gitignored/sites/default/settings.php
 6.4. Doublecheck links:
    gothh
    l tomhartung.com-new/sites/default

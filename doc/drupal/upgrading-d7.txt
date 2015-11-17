@@ -85,9 +85,9 @@ Hosts:
    l tomhartung.com-new/sites/default/files/
    more tomhartung.com-new/sites/default/settings.php
 
-7. Run link_subsites.py
+7. Run ln_subsites.py
    gothh
-   link_subsites.py
+   ln_subsites.py
    l tomhartung.com
 
 8. Visit site to upgrade db as necessary:
@@ -99,16 +99,16 @@ Hosts:
    gothd
    git status
    git add
-   git commit -m 'Upgraded drupal core to version 7.39.'
+   git commit -m 'Upgraded drupal core to version 7.41.'
    git push origin master
 9.2. Remove from maintenance mode and backup DB:
    As admin -> Configuration -> "Go online."
-   buth
+   bu th 02-upgraded_to_7.41
    tarHome
 
 Hosts:
-[ ] lauren - this is a new process, make sure it works!
-[ ] jane - only when the others are done and all bugs are worked out
+[ ] jane - this is a new process, make sure it works!
+[ ] lauren - only when the others are done and all bugs are worked out
 
 1. Pull latest version of code from github
    gothd

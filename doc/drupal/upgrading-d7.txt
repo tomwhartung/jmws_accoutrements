@@ -1,12 +1,13 @@
 
-Upgrading a minor version!
-
-Details: https://www.drupal.org/node/1223018
+ Upgrading a 7.xx Minor Version!
+=================================
+Reference: https://www.drupal.org/node/1223018
 
 Updated 8/1/2015 - code is now in git
 Updated 11/13/2015 - new backup and restore scripts
 
-Hosts:
+Development Host:
+-----------------
 [ ] bette - do all this on bette first
 
 0. Back up db, adding the old version number to the file name and saving a copy on the backup host.
@@ -106,19 +107,59 @@ Hosts:
    bu th 02-upgraded_to_7.41
    tarHome
 
-Hosts:
+Backup and Production Hosts:
+----------------------------
 [ ] jane - this is a new process, make sure it works!
 [ ] lauren - only when the others are done and all bugs are worked out
 
-1. Pull latest version of code from github
+Overview of Process on backup and production hosts:
+o  Pull the new code into the directory that is already being served
+   (so we do not have to run any of the ln* scripts)
+o  Restore already-updated db from bette to this host
+
+0. Save a copy of the db (just in case - it is not used unless we have issues)
+   bu th 01-before_upgrading-7.xx_to_7.yy
+
+1. Put site in maintenance mode
+   Log in as admin -> Configuration -> Maintenance Mode
+
+2. Pull latest version of code from github
+   gothc
+   gac p
    gothd
    git pull
 
-2. Restore new version of db to this host
-   rsth -h bette
+3. If settings or images or any other files have changed,
+   (on bette:)
+   gothh
+   cd gitignored/sites/default
+   diffJane settings.php
+   toJane settings.php
+   ## push image or other files as appropriate
+   (on bette:)
+   gothh
+   cd gitignored/sites/default
+   diffLauren settings.php
+   toLauren settings.php
+   ## push image or other files as appropriate
 
-3. Test: verify version in admin console:
+4. Grab fresh backup on bette and copy to jane and lauren
+   (on bette:)
+   bu th
+   gobu
+   toLauren tomhartung.com-2015_11_17-bette.sql.gz
+   toJane tomhartung.com-2015_11_17-bette.sql.gz
+
+5. Restore new version of db from bette to this host
+   (on jane or lauren:)
+   rs th -h bette
+
+6. Test: verify version in admin console:
    Admin -> Reports -> Available updates
+   ## Verify site looks OK in browser
+
+7. If everything looks ok, save off a copy of the production db.
+   bu th 02-after_upgrading_to_7.41
 
 ----------------------------------------
 

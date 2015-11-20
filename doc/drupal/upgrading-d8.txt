@@ -1,0 +1,41 @@
+
+ Upgrading Drupal 8.0.0!
+=========================
+Old Reference: https://www.drupal.org/node/1223018
+New Reference: ????
+
+Development Host:
+-----------------
+Ran these commands to upgrade from 8.0.0-rc04 to 8.0.0:
+	# Unpacked tar file for 8.0.0 into drupal-8.0.0-04-try_adding_dot_git_dir/
+	gothh
+	git clone git@github.com:tomwhartung/tomhartung.com-d8.git
+	l
+	cd drupal-8.0.0-04-try_adding_dot_git_dir/
+	ls -al
+	cp -rp ../tomhartung.com-d8/.git .   # cloned just like a second ago
+	ls -al
+	gs
+	cp -rp ../tomhartung.com-d8/.gitignore  .
+	cp -rp ../tomhartung.com-d8/README.md   .
+	gs | grep deleted
+	ga --all
+	gc 'Upgraded to the new official release, 8.0.0.' ; gpom
+	gs
+
+This seems to have worked!  Knock on wood!
+Beware the gitignored/sites/default/files dir!
+*** And note we would lose the .gitignore (which would be very very bad) and
+*** README.md files if we did not copy them before committing!
+
+Backup and Production Hosts:
+----------------------------
+[ ] jane - this is a new process, make sure it works!
+[ ] lauren - only when the others are done and all bugs are worked out
+
+(Old d7) Overview of Process on backup and production hosts:
+o  Pull the new code into the directory that is already being served
+   (so we do not have to run any of the ln* scripts)
+o  Restore already-updated db from bette to this host
+
+New d8: TBD

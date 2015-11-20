@@ -2,7 +2,7 @@
  Upgrading Drupal 8.0.0!
 =========================
 Old Reference: https://www.drupal.org/node/1223018
-New Reference: ????
+New Reference: https://www.drupal.org/node/1494290 (found at end of installation procedure)
 
 Development Host:
 -----------------

@@ -90,16 +90,16 @@ def lnModulesDirs( customization ) :
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/modules/jmws'
 	rootedDestinationDir = htdocsDir + '/' + mainSiteModulesJmwsDir
 	drupalJmwsModules = listdir( rootedSourceDir )
-	print( 'lnModulesDirs: rootedSourceDir = ' + rootedSourceDir )
-	print( 'lnModulesDirs: rootedDestinationDir = ' + rootedDestinationDir )
-	print( 'lnModulesDirs: drupalJmwsModules = ', end="" )
-	print( drupalJmwsModules )
+	## print( 'lnModulesDirs: rootedSourceDir = ' + rootedSourceDir )
+	## print( 'lnModulesDirs: rootedDestinationDir = ' + rootedDestinationDir )
+	## print( 'lnModulesDirs: drupalJmwsModules = ', end="" )
+	## print( drupalJmwsModules )
 	for moduleDir in drupalJmwsModules :
 		rootedModuleDir = rootedSourceDir + '/' + moduleDir
 		if( isdir(rootedModuleDir) ) :
 			print( '\tlinking "' + rootedModuleDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
 			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedModuleDir + " .;\n    cd " + htdocsDir 
-			print( "lnCommand:\n" + lnCommand )
+			## print( "lnCommand:\n" + lnCommand )
 			call( lnCommand, shell=True )
 
 ##
@@ -110,29 +110,29 @@ def lnThemesDirs( customization ) :
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/themes/jmws'
 	rootedDestinationDir = htdocsDir + '/' + mainSiteThemesJmwsDir
 	drupalJmwsThemes = listdir( rootedSourceDir )
-	print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
-	print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
-	print( 'lnThemesDirs: drupalJmwsThemes = ', end="" )
-	print( drupalJmwsThemes )
+	## print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
+	## print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
+	## print( 'lnThemesDirs: drupalJmwsThemes = ', end="" )
+	## print( drupalJmwsThemes )
 	for themeDir in drupalJmwsThemes :
 		rootedThemeDir = rootedSourceDir + '/' + themeDir
 		if( isdir(rootedThemeDir) ) :
 			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
 			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
-			print( "lnCommand:\n" + lnCommand )
+			## print( "lnCommand:\n" + lnCommand )
 			call( lnCommand, shell=True )
 
 ##
 #  Driver function to call other functions to link specific types of customizations
 #
 def lnCustomization( customization ) :
-	print( 'Linking directories in the ' + customization + ' customization...' )
+	## print( 'Linking directories in the ' + customization + ' customization...' )
 	thisCustomizationDir = customizationsDir + '/'  + customization
 	thisCustomizationContents = listdir( thisCustomizationDir )
 	thisCustomizationContents.sort()
 	for entity in thisCustomizationContents :
 		pathToEntity = thisCustomizationDir + '/' + entity
-		print( 'lnCustomization: pathToEntity = ' + pathToEntity )
+		## print( 'lnCustomization: pathToEntity = ' + pathToEntity )
 		if ( entity == 'modules' and isdir(pathToEntity) ) :
 			lnModulesDirs( customization )
 		elif ( entity == 'themes' and isdir(pathToEntity) ) :

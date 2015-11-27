@@ -100,7 +100,7 @@ def lnModulesDirs( customization ) :
 			print( '\tlinking "' + rootedModuleDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
 			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedModuleDir + " .;\n    cd " + htdocsDir 
 			print( "lnCommand:\n" + lnCommand )
-			## call( lnCommand, shell=True )
+			call( lnCommand, shell=True )
 
 ##
 #  Links directories containing jmws themes
@@ -108,7 +108,7 @@ def lnModulesDirs( customization ) :
 def lnThemesDirs( customization ) :
 	print( 'Linking themes/jmws directories for customization ' + customization + '...' )
 	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/themes/jmws'
-	rootedDestinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/themes/jmws'
+	rootedDestinationDir = htdocsDir + '/' + mainSiteThemesJmwsDir
 	drupalJmwsThemes = listdir( rootedSourceDir )
 	print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
 	print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
@@ -120,7 +120,7 @@ def lnThemesDirs( customization ) :
 			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
 			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
 			print( "lnCommand:\n" + lnCommand )
-			## call( lnCommand, shell=True )
+			call( lnCommand, shell=True )
 
 ##
 #  Driver function to call other functions to link specific types of customizations
@@ -130,10 +130,12 @@ def lnCustomization( customization ) :
 	thisCustomizationDir = customizationsDir + '/'  + customization
 	thisCustomizationContents = listdir( thisCustomizationDir )
 	thisCustomizationContents.sort()
-	for entity in thisCustomizationContents:
-		if ( isdir(entity) and entity == 'modules' ) :
+	for entity in thisCustomizationContents :
+		pathToEntity = thisCustomizationDir + '/' + entity
+		print( 'lnCustomization: pathToEntity = ' + pathToEntity )
+		if ( entity == 'modules' and isdir(pathToEntity) ) :
 			lnModulesDirs( customization )
-		elif ( isdir(entity) and entity == 'themes' ) :
+		elif ( entity == 'themes' and isdir(pathToEntity) ) :
 			lnThemesDirs( customization )
 
 ####################################################################################

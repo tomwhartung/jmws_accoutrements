@@ -15,7 +15,7 @@ import sys   # for accessing command line arguments
 def syntax() :
 	basename = os.path.basename( sys.argv[0] )
 	print( 'Syntax:' )
-	print( '  basename [mainSiteDir]' )
+	print( '  ' + basename + ' [mainSiteDir]' )
 	print( '    mainSiteDir must contain a version of the Drupal core code' )
 	print( '      mainSiteDir defaults to ' + defaultMainSiteDir  )
 
@@ -33,83 +33,107 @@ def verifyDirectory( dirToCheck ) :
 
 ##
 #  Checks that the specified directory contains something resembling a Drupal install, making subdirs if necessary
-#     If the sanity check for sites/all is successful
-#        Check for modules/jmws and themes/jmws, creating them if necessary
+#     If the check for a modules subdirectory is successful
+#        display a "Found ... cool" message
 #     else
-#        display an "Are you insane?" message
+#        display an error message and exit
+#     If the check for themes subdirectory is successful
+#        display a "Found ... cool" message
+#     else
+#        display an error message and exit
 #
 def verifyDrupalInstall( mainSiteDir ) :
-	verifyDirectory( mainSiteDir )         # if directory present, prints "cool" message, else exits
-	if isdir( mainSitesAllDir ) :
-		if isdir( mainSitesAllModulesJmwsDir ) :
-			print( 'Found a ' + mainSitesAllModulesJmwsDir + ' directory, cool!' )
+	if isdir( mainSiteDir ) :
+		if isdir( mainSiteModulesDir ) :
+			print( 'Found a ' + mainSiteModulesDir + ' directory, cool!' )
 		else :
-			print( 'Warning: making the ' + mainSitesAllModulesJmwsDir + ' directory, because it was not found.' )
-			os.makedirs( mainSitesAllModulesJmwsDir )
-		if isdir( mainSitesAllThemesJmwsDir ) :
-			print( 'Found a ' + mainSitesAllThemesJmwsDir + ' directory, cool!' )
+			print( 'Error: there is no modules directory!' )
+			print( 'Expecting a "' + mainSiteModulesDir + '" directory, but it is not here.' )
+			print( 'The current directory is: "' + htdocsDir + '"' )
+			print( 'Change to a directory that has a subdirectory containing a Drupal 8 install, and try again.' )
+			exit( 11 )
+		if isdir( mainSiteThemesDir ) :
+			print( 'Found a ' + mainSiteThemesDir + ' directory, cool!' )
 		else :
-			print( 'Warning: making the ' + mainSitesAllThemesJmwsDir + ' directory, because it was not found.' )
-			os.makedirs( mainSitesAllThemesJmwsDir )
+			print( 'Error: there is no themes directory!' )
+			print( 'Expecting a "' + mainSiteThemesDir + '" directory, but it is not here.' )
+			print( 'The current directory is: "' + htdocsDir + '"' )
+			print( 'Change to a directory that has a subdirectory containing a Drupal 8 install, and try again.' )
+			exit( 13 )
 	else :
-		print( 'Expecting a "' + mainSitesAllDir + '" directory, but it is not here.' )
-		print( 'Expecting the', mainSiteDir, 'directory to contain a Drupal install, with a sites/all subdirectory.' )
+		print( 'Error: there is no main site directory!' )
+		print( 'Expecting a "' + mainSiteDir + '" directory, but it is not here.' )
 		print( 'The current directory is: "' + htdocsDir + '"' )
-		print( 'Change to a directory that has a subdirectory containing a Drupal install, and try again.' )
-		exit( 13 )
+		print( 'Change to a directory that has a subdirectory containing a Drupal 8 install, and try again.' )
+		exit( 15 )
+
+##
+#  Checks for modules/jmws and themes/jmws directories, making them if necessary
+#
+def checkForJmwsDirs( mainSiteDir ) :
+	if isdir( mainSiteModulesJmwsDir ) :
+		print( 'Found a ' + mainSiteModulesJmwsDir + ' directory, cool!' )
+	else :
+		print( 'Warning: making the ' + mainSiteModulesJmwsDir + ' directory, because it was not found.' )
+		os.makedirs( mainSiteModulesJmwsDir )
+	if isdir( mainSiteThemesJmwsDir ) :
+		print( 'Found a ' + mainSiteThemesJmwsDir + ' directory, cool!' )
+	else :
+		print( 'Warning: making the ' + mainSiteThemesJmwsDir + ' directory, because it was not found.' )
+		os.makedirs( mainSiteThemesJmwsDir )
 
 ##
 #  Links directories containing jmws modules
 #
 def lnModulesDirs( customization ) :
-	print( 'Linking sites/all/modules/jmws directories for customization ' + customization + '...' )
-	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/sites/all/modules/jmws'
-	rootedDestinationDir = htdocsDir + '/' + mainSitesAllModulesJmwsDir
+	print( 'Linking modules/jmws directories for customization ' + customization + '...' )
+	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/modules/jmws'
+	rootedDestinationDir = htdocsDir + '/' + mainSiteModulesJmwsDir
 	drupalJmwsModules = listdir( rootedSourceDir )
-	## print( 'lnModulesDirs: rootedSourceDir = ' + rootedSourceDir )
-	## print( 'lnModulesDirs: rootedDestinationDir = ' + rootedDestinationDir )
-	## print( 'lnModulesDirs: drupalJmwsModules = ', end="" )
-	## print( drupalJmwsModules )
+	print( 'lnModulesDirs: rootedSourceDir = ' + rootedSourceDir )
+	print( 'lnModulesDirs: rootedDestinationDir = ' + rootedDestinationDir )
+	print( 'lnModulesDirs: drupalJmwsModules = ', end="" )
+	print( drupalJmwsModules )
 	for moduleDir in drupalJmwsModules :
 		rootedModuleDir = rootedSourceDir + '/' + moduleDir
 		if( isdir(rootedModuleDir) ) :
 			print( '\tlinking "' + rootedModuleDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
 			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedModuleDir + " .;\n    cd " + htdocsDir 
-			## print( "lnCommand:\n" + lnCommand )
-			call( lnCommand, shell=True )
+			print( "lnCommand:\n" + lnCommand )
+			## call( lnCommand, shell=True )
 
 ##
 #  Links directories containing jmws themes
 #
 def lnThemesDirs( customization ) :
-	print( 'Linking sites/all/themes/jmws directories for customization ' + customization + '...' )
-	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/sites/all/themes/jmws'
+	print( 'Linking themes/jmws directories for customization ' + customization + '...' )
+	rootedSourceDir = htdocsDir + '/' + customizationsDir + '/' + customization + '/themes/jmws'
 	rootedDestinationDir = htdocsDir + '/' + mainSiteDir + '/sites/all/themes/jmws'
 	drupalJmwsThemes = listdir( rootedSourceDir )
-	## print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
-	## print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
-	## print( 'lnThemesDirs: drupalJmwsThemes = ', end="" )
-	## print( drupalJmwsThemes )
+	print( 'lnThemesDirs: rootedSourceDir = ' + rootedSourceDir )
+	print( 'lnThemesDirs: rootedDestinationDir = ' + rootedDestinationDir )
+	print( 'lnThemesDirs: drupalJmwsThemes = ', end="" )
+	print( drupalJmwsThemes )
 	for themeDir in drupalJmwsThemes :
 		rootedThemeDir = rootedSourceDir + '/' + themeDir
 		if( isdir(rootedThemeDir) ) :
 			print( '\tlinking "' + rootedThemeDir + "\" to\n\t\t\"" + rootedDestinationDir + '"' )
 			lnCommand = "    cd " + rootedDestinationDir + ";\n    ln -fs " + rootedThemeDir + " .;\n    cd " + htdocsDir 
-			## print( "lnCommand:\n" + lnCommand )
-			call( lnCommand, shell=True )
+			print( "lnCommand:\n" + lnCommand )
+			## call( lnCommand, shell=True )
 
 ##
 #  Driver function to call other functions to link specific types of customizations
 #
 def lnCustomization( customization ) :
 	print( 'Linking directories in the ' + customization + ' customization...' )
-	customizationSitesAllDir = customizationsDir + '/'  + customization + '/sites/all'
-	customizationSitesAllSubdirs = listdir( customizationSitesAllDir )
-	customizationSitesAllSubdirs.sort()
-	for subdirectory in customizationSitesAllSubdirs:
-		if ( subdirectory == 'modules' ) :
+	thisCustomizationDir = customizationsDir + '/'  + customization
+	thisCustomizationContents = listdir( thisCustomizationDir )
+	thisCustomizationContents.sort()
+	for entity in thisCustomizationContents:
+		if ( isdir(entity) and entity == 'modules' ) :
 			lnModulesDirs( customization )
-		elif ( subdirectory == 'themes' ) :
+		elif ( isdir(entity) and entity == 'themes' ) :
 			lnThemesDirs( customization )
 
 ####################################################################################
@@ -136,12 +160,14 @@ else :
 	print( 'Exiting.' )
 	exit( 1 )
 
-mainSitesAllDir = mainSiteDir + '/sites/all'
-mainSitesAllModulesJmwsDir = mainSitesAllDir + '/modules/jmws'
-mainSitesAllThemesJmwsDir = mainSitesAllDir + '/themes/jmws'
+mainSiteModulesDir = mainSiteDir + '/modules'
+mainSiteThemesDir = mainSiteDir + '/themes'
+mainSiteModulesJmwsDir = mainSiteModulesDir + '/jmws'
+mainSiteThemesJmwsDir = mainSiteThemesDir + '/jmws'
 
 verifyDirectory( customizationsDir )   # if directory is present, prints "cool" message, else exits
 verifyDrupalInstall( mainSiteDir )     # if it's a Drupal install, prints multiple "cool" messages, else exits
+checkForJmwsDirs( mainSiteDir )        # check for modules/jmws and themes/jmws dirs, making them if necessary
 
 #
 #  List the customizations dirs and link each of them as appropriate

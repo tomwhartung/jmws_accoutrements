@@ -6,6 +6,43 @@ New Reference: https://www.drupal.org/node/1494290 (found at end of installation
 
 Development Host:
 -----------------
+Upgrading 8.0.0 to 8.0.1 on 2015_12_08:
+1. Download the tgz file and unpack it.
+   Download tgz file from:
+      https://www.drupal.org/project/drupal
+   Unpack into:
+      /var/www/tomhartung.com/htdocs/drupal-8.0.1
+2. Ensure current site code matches github repo
+   gotht
+   git pull
+   git status
+   # Ensure the code currently being used matches what's in the repo
+   ga; gc 'Latest updates yadda yadda yadda.'; gpom   # as necessary
+3. Clear cache and backup DB
+   gotht
+   drush cr
+   bu d8 01-before_upgrade_to-8.0.1
+4. Update new release tree with the .git dir and my customizations
+   gothh
+   mv drupal-8.0.1 tomhartung.com-8.0.1
+   cd tomhartung.com-8.0.1
+	cp -rp ../tomhartung.com-8.0.0/.git .
+	cp -rp ../tomhartung.com-8.0.0/.gitignore  .
+   # Currently we have some third party modules (for migration) plus my jmws one
+   cd modules
+	cp -rp ../../tomhartung.com-8.0.0/modules/*   .
+   # Currently we do not have any third party themes so just copy over the links to my jmws ones
+   cd ../themes
+	cp -rp ../../tomhartung.com-8.0.0/themes/jmws   .
+	gs | grep deleted
+   # make sure we didn't add something then forget about it, etc.
+	ga --all
+	gc 'Upgraded to the new release, 8.0.1 .' ; gpom
+	gs
+
+
+Notes from last time:
+---------------------
 Ran these commands to upgrade from 8.0.0-rc04 to 8.0.0:
 	# Unpacked tar file for 8.0.0 into drupal-8.0.0-04-try_adding_dot_git_dir/
 	gothh

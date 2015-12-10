@@ -3,6 +3,7 @@
 =========================
 Old Reference: https://www.drupal.org/node/1223018
 New Reference: https://www.drupal.org/node/1494290 (found at end of installation procedure)
+Untried Reference: https://www.drupal.org/node/570162 (found while looking for info on using drush)
 
 Development Host:
 -----------------
@@ -18,28 +19,78 @@ Upgrading 8.0.0 to 8.0.1 on 2015_12_08:
    git status
    # Ensure the code currently being used matches what's in the repo
    ga; gc 'Latest updates yadda yadda yadda.'; gpom   # as necessary
-3. Clear cache and backup DB
+3. Put site into maintenance mode, clear the cache, and backup DB
+   Admin -> Configuration -> Development -> Maintenance Mode
    gotht
    drush cr
-   bu d8 01-before_upgrade_to-8.0.1
+   ### bu d8 01-before_upgrade_to-8.0.X
+   bu d8 01-before_upgrade_to-8.0.1-no_custom_extensions
 4. Update new release tree with the .git dir and my customizations
    gothh
-   mv drupal-8.0.1 tomhartung.com-8.0.1
-   cd tomhartung.com-8.0.1
-	cp -rp ../tomhartung.com-8.0.0/.git .
-	cp -rp ../tomhartung.com-8.0.0/.gitignore  .
+   mv drupal-8.0.1 tomhartung.com-d8.0.1
+   cd tomhartung.com-d8.0.1
+	cp -rp ../tomhartung.com-d8.0.0/.git .
+	cp -rp ../tomhartung.com-d8.0.0/.gitignore  .
    # Currently we have some third party modules (for migration) plus my jmws one
    cd modules
-	cp -rp ../../tomhartung.com-8.0.0/modules/*   .
+	cp -rp ../../tomhartung.com-d8.0.0/modules/*   .
    # Currently we do not have any third party themes so just copy over the links to my jmws ones
    cd ../themes
-	cp -rp ../../tomhartung.com-8.0.0/themes/jmws   .
+	cp -rp ../../tomhartung.com-d8.0.0/themes/jmws   .
 	gs | grep deleted
    # make sure we didn't add something then forget about it, etc.
-	ga --all
+5. Check for changes to default.services.yml and default.settings.php
+   gothh
+   diff tomhartung.com-d8.0.0/sites/default/default.services.yml tomhartung.com-d8.0.1/sites/default/default.services.yml
+   diff tomhartung.com-d8.0.0/sites/default/default.settings.php  tomhartung.com-d8.0.1/sites/default/default.settings.php
+   ### See what changes have been made (that I need to migrate) along with my secret db info and other customizations:
+   ### Migrate these changes into the copies of these files that we are using as necessary
+   ### Note that the copies of these files that we are using are under htdocs/gitignored/sites/default
+6. Update new release tree with links to my gitignored files
+   gothh
+   cd tomhartung.com-d8.0.1
+   cd sites/default
+   # Optionally double-check for changes if you like!
+   diff ../../../gitignored/sites/default/default.services.yml default.services.yml
+   diff ../../../gitignored/sites/default/default.settings.php default.settings.php
+   # End optional commands
+   rm default.se*
+   ln -s ../../../gitignored/sites/default/* .
+7. Switch the link and run ln_subsites.py
+   gothh
+   rm tomhartung.com ; ln -s tomhartung.com-d8.0.1 tomhartung.com
+   l   # check link
+   ln_subsites.py
+   l tomhartung.com   # check links
+8. Visit site to upgrade db as necessary:
+   http://bette.tomhartung.com/update.php
+   http://jane.tomhartung.com/update.php
+  -> Test!!
+9. If the site looks OK, commit code and backup db:
+9.1. Commit and push code:
+   gothd
+   git status
+   ga --all
 	gc 'Upgraded to the new release, 8.0.1 .' ; gpom
 	gs
+9.2. Remove from maintenance mode and backup DB:
+   As admin -> Configuration -> "Go online."
+   bu th 02-upgraded_to_8.0.1
+   tarHome
 
+Backup and Production Hosts:
+----------------------------
+[ ] jane - this is a new process, make sure it works!
+[ ] lauren - only when the others are done and all bugs are worked out
+
+(Old d7) Overview of Process on backup and production hosts:
+o  Pull the new code into the directory that is already being served
+   (so we do not have to run any of the ln* scripts)
+o  Restore already-updated db from bette to this host
+
+New d8: TBD
+
+########################################
 
 Notes from last time:
 ---------------------
@@ -64,15 +115,3 @@ This seems to have worked!  Knock on wood!
 Beware the gitignored/sites/default/files dir!
 *** And note we would lose the .gitignore (which would be very very bad) and
 *** README.md files if we did not copy them before committing!
-
-Backup and Production Hosts:
-----------------------------
-[ ] jane - this is a new process, make sure it works!
-[ ] lauren - only when the others are done and all bugs are worked out
-
-(Old d7) Overview of Process on backup and production hosts:
-o  Pull the new code into the directory that is already being served
-   (so we do not have to run any of the ln* scripts)
-o  Restore already-updated db from bette to this host
-
-New d8: TBD

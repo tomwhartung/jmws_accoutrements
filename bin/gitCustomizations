@@ -12,7 +12,7 @@ from os import getcwd, listdir
 def checkCurrentDirectory() :
 	currentDirectory = getcwd()
 	basename = os.path.basename( currentDirectory )
-	if( basename != 'customizations' ) :
+	if( basename != 'customizations' and basename != 'customizations-d7' ) :
 		print( 'Error: expecting the basename of this dir to be "customizations"' )
 		print( 'Current directory is', currentDirectory )
 		print( 'Run this in a "customizations" dir.' )

@@ -8,8 +8,9 @@
 #   https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels
 #   http://elementaryos.stackexchange.com/questions/95/how-to-remove-old-kernel-versions
 #
-import sys      # for accessing command line arguments
-from subprocess import call      # for running commands
+import sys                    # for accessing command line arguments
+import subprocess             # for running a command and processing its output
+from subprocess import call   # for running shell commands
 
 ##
 # syntax: print this script's syntax statement
@@ -44,8 +45,24 @@ def getKernelVersion () :
 ##
 # Verify user is not trying to delete the kernel currently being used
 #
+def checkKernelVersion( kernelVersion ) :
+	getUnameProcess = subprocess.Popen( ['uname', '-r'], stdout=subprocess.PIPE )
+	unameBytes = getUnameProcess.stdout.read()
+	unameOutput = unameBytes.decode('utf-8')
+	foundKernelVersion = unameOutput.find( kernelVersion )
+	## print( 'unameOutput: ' + unameOutput )
+	## print( 'str(foundKernelVersion): ' + str(foundKernelVersion) )
+	if( foundKernelVersion > -1 ) :
+		print( '*** ERROR!  You cannot delete the current kernel!' )
+		print( '*** Dude, get your shit together and try again!' )
+		exit( 9 )
 
+##
+#  Main program starts here
+#  ------------------------
+#
 kernelVersion = getKernelVersion()
+checkKernelVersion( kernelVersion )
 
 print( 'Deleting kernel version ' + kernelVersion )
 

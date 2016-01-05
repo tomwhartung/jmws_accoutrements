@@ -16,42 +16,67 @@ from subprocess import call   # for running shell commands
 # syntax: print this script's syntax statement
 #
 def syntax() :
-	print( 'purgeOldKernels.py kernelVersion' )
+	print( 'purgeOldKernels.py [-h|-help|--help] kernelVersionToDelete' )
+	print( '  E.g.: "purgeOldKernels.py 3.13.0-71"' )
 	print( '  Purges the specified version of the kernel.' )
+
+##
+#  Print a helpful help message
+#
+def printHelpMessage() :
+	kernelVersionCurrent = getKernelVersionCurrent()
+	helpMessage  = '   Run "dpkg -l | grep linux-image" and supply the numeric part (e.g., 3.13.0-55).\n'
+	helpMessage += '   Do NOT try to delete the current kernel (' + kernelVersionCurrent + ')!!!'
+	print( helpMessage )
 
 ##
 # Get the kernel version, which must be supplied via a command line argument
 #
-def getKernelVersion () :
-	kernelVersion = ''
-	helpMessage = 'Run "dpkg -l | grep linux-image" and supply the numeric part (e.g., 3.13.0-55).'
+def getKernelVersionToDelete () :
+	kernelVersionToDelete = ''
 	if ( len(sys.argv) == 1 ) :
 		syntax()
 		print( 'No kernel version specified!' )
-		print( helpMessage )
+		printHelpMessage()
 		print( 'Exiting.' )
 		exit( 1 )
 	elif ( len(sys.argv) == 2 ) :
 		if ( sys.argv[1] == '-h' or sys.argv[1] == '-help' or sys.argv[1] == '--help' ) :
 			syntax()
-			print( helpMessage )
+			printHelpMessage()
 			exit( 0 )
-		kernelVersion = sys.argv[1]
+		kernelVersionToDelete = sys.argv[1]
 	else :
 		print( 'Too many arguments, try again.' )
 		exit( 1 )
-	return kernelVersion
+	return kernelVersionToDelete
+
+##
+# Returns a printable version of the output of the uname -r command
+#
+def getUnameDashROutput() :
+	getUnameProcess = subprocess.Popen( ['uname', '-r'], stdout=subprocess.PIPE )
+	unameBytes = getUnameProcess.stdout.read()
+	unameOutput = unameBytes.decode('utf-8')
+	return unameOutput
+
+##
+# Returns a printable version of the output of the uname -r command
+#
+def getKernelVersionCurrent() :
+	unameDashROutput = getUnameDashROutput()
+	kernelVersionCurrent = unameDashROutput[0:9]     # TODO: use a regex here!
+	return kernelVersionCurrent
 
 ##
 # Verify user is not trying to delete the kernel currently being used
 #
-def checkKernelVersion( kernelVersion ) :
-	getUnameProcess = subprocess.Popen( ['uname', '-r'], stdout=subprocess.PIPE )
-	unameBytes = getUnameProcess.stdout.read()
-	unameOutput = unameBytes.decode('utf-8')
-	foundKernelVersion = unameOutput.find( kernelVersion )
-	## print( 'unameOutput: ' + unameOutput )
-	## print( 'str(foundKernelVersion): ' + str(foundKernelVersion) )
+def checkKernelVersion( kernelVersionToDelete ) :
+	kernelVersionCurrent = getKernelVersionCurrent()
+	foundKernelVersion = kernelVersionCurrent.find( kernelVersionToDelete )
+	print( 'kernelVersionCurrent: ' + kernelVersionCurrent )
+	print( 'kernelVersionToDelete: ' + kernelVersionToDelete )
+	print( 'str(foundKernelVersion): ' + str(foundKernelVersion) )
 	if( foundKernelVersion > -1 ) :
 		print( '*** ERROR!  You cannot delete the current kernel!' )
 		print( '*** Dude, get your shit together and try again!' )
@@ -61,16 +86,18 @@ def checkKernelVersion( kernelVersion ) :
 #  Main program starts here
 #  ------------------------
 #
-kernelVersion = getKernelVersion()
-checkKernelVersion( kernelVersion )
+kernelVersionToDelete = getKernelVersionToDelete()
+checkKernelVersion( kernelVersionToDelete )
 
-print( 'Deleting kernel version ' + kernelVersion )
+print( 'Deleting kernel version ' + kernelVersionToDelete )
 
 aptGetCommand  = 'apt-get purge '
-aptGetCommand += 'linux-headers-' + kernelVersion + ' '
-aptGetCommand += 'linux-headers-' + kernelVersion + '-generic '
-aptGetCommand += 'linux-image-' + kernelVersion + '-generic '
-aptGetCommand += 'linux-image-extra-' + kernelVersion + '-generic'
+aptGetCommand += 'linux-headers-' + kernelVersionToDelete + ' '
+aptGetCommand += 'linux-headers-' + kernelVersionToDelete + '-generic '
+aptGetCommand += 'linux-image-' + kernelVersionToDelete + '-generic '
+aptGetCommand += 'linux-image-extra-' + kernelVersionToDelete + '-generic'
 
 print( 'aptGetCommand:\n\t' + aptGetCommand )
-call( aptGetCommand, shell=True )
+### call( aptGetCommand, shell=True )
+
+exit( 0 )

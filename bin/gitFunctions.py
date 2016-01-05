@@ -36,9 +36,9 @@ def processArguments() :
 #  Change directories into the given directory and run the given command, running output through egrep and sed
 #
 def runGitCommand( customizationsParentDir, gitRepo, gitCommand ) :
-			print( '-----------------------------------------------------------------' )
-			print( gitRepo, '-', gitCommand )
-			gitRepoDir = customizationsParentDir + '/' + gitRepo
-			fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
-			call( fullCommand, shell=True )
+	print( '-----------------------------------------------------------------' )
+	print( gitRepo, '-', gitCommand )
+	gitRepoDir = customizationsParentDir + '/' + gitRepo
+	fullCommand = 'cd ' + gitRepoDir + '; ' + gitCommand + ' | egrep -v "^\b*$" | sed "s&^&' + gitRepo + ': &"'
+	call( fullCommand, shell=True )
 

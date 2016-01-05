@@ -38,6 +38,13 @@ def getKernelVersion () :
 
 
 kernelVersion = getKernelVersion()
-
 print( 'Deleting kernel version ' + kernelVersion )
 
+aptGetCommand  = 'apt-get purge '
+aptGetCommand += 'linux-headers-' + kernelVersion + ' '
+aptGetCommand += 'linux-headers-' + kernelVersion + '-generic '
+aptGetCommand += 'linux-image-' + kernelVersion + '-generic '
+aptGetCommand += 'linux-image-extra-' + kernelVersion + '-generic'
+
+print( 'aptGetCommand:\n\t' + aptGetCommand )
+call( aptGetCommand, shell=True )

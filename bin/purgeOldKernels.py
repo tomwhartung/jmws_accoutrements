@@ -91,13 +91,13 @@ checkKernelVersion( kernelVersionToDelete )
 
 print( 'Deleting kernel version ' + kernelVersionToDelete )
 
-aptGetCommand  = 'apt-get purge '
-aptGetCommand += 'linux-headers-' + kernelVersionToDelete + ' '
-aptGetCommand += 'linux-headers-' + kernelVersionToDelete + '-generic '
-aptGetCommand += 'linux-image-' + kernelVersionToDelete + '-generic '
-aptGetCommand += 'linux-image-extra-' + kernelVersionToDelete + '-generic'
+aptGetPurgeCommand  = 'apt-get purge '
+aptGetPurgeCommand += 'linux-headers-' + kernelVersionToDelete + ' '
+aptGetPurgeCommand += 'linux-headers-' + kernelVersionToDelete + '-generic '
+aptGetPurgeCommand += 'linux-image-' + kernelVersionToDelete + '-generic '
+aptGetPurgeCommand += 'linux-image-extra-' + kernelVersionToDelete + '-generic'
 
-print( 'aptGetCommand:\n\t' + aptGetCommand )
-### call( aptGetCommand, shell=True )
+print( 'aptGetPurgeCommand:\n\t' + aptGetPurgeCommand )
+call( aptGetPurgeCommand, shell=True )
 
 exit( 0 )

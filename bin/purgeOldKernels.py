@@ -17,15 +17,16 @@ from subprocess import call   # for running shell commands
 #
 def syntax() :
 	print( 'purgeOldKernels.py [-h|-help|--help] kernelVersionToDelete' )
-	print( '  E.g.: "purgeOldKernels.py 3.13.0-71"' )
-	print( '  Purges the specified version of the kernel.' )
+	print( '   E.g.: "purgeOldKernels.py 3.13.0-71"' )
+	print( '   Purges the specified version of the kernel.' )
 
 ##
 #  Print a helpful help message
 #
 def printHelpMessage() :
 	kernelVersionCurrent = getKernelVersionCurrent()
-	helpMessage  = '   Run "dpkg -l | grep linux-image" and supply the numeric part (e.g., 3.13.0-55).\n'
+	helpMessage  = 'Hints:\n'
+	helpMessage += '   Run "dpkg -l | grep linux-image" and supply the numeric part (e.g., 3.13.0-55).\n'
 	helpMessage += '   Do NOT try to delete the current kernel (' + kernelVersionCurrent + ')!!!'
 	print( helpMessage )
 

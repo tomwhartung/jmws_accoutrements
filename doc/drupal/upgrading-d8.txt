@@ -5,8 +5,8 @@ Old Reference: https://www.drupal.org/node/1223018
 New Reference: https://www.drupal.org/node/1494290 (found at end of installation procedure)
 Untried Reference: https://www.drupal.org/node/570162 (found while looking for info on using drush)
 
-Development Host:
------------------
+Development Host (currently jane):
+----------------------------------
 Upgrading 8.0.1 to 8.0.2 on 2016_01_09:
 1. Download the tgz file and unpack it.
    Download tgz file from:
@@ -65,7 +65,8 @@ Upgrading 8.0.1 to 8.0.2 on 2016_01_09:
    diff ../../../gitignored/sites/default/default.settings.php default.settings.php
    # *** End optional commands ***
    rm default.se*
-   ln -s ../../../gitignored/sites/default/* .
+   ln -s ../../../gitignored/sites/default/*.* .
+   ln -s ../../../gitignored/sites/default/files .
 7. Switch the link and run ln_subsites.py
    gothh
    rm tomhartung.com ; ln -s tomhartung.com-d8.0.2 tomhartung.com
@@ -88,9 +89,56 @@ Upgrading 8.0.1 to 8.0.2 on 2016_01_09:
    bu th 02-upgraded_to_8.0.2
    tarHome
 
-Backup and Production Hosts:
-----------------------------
-[ ] jane - this is a new process, make sure it works!
+Backup Host:
+------------
+[ ] bette
+
+Currently these are the goals and concerns:
+o  Use already-upgraded copy of db from jane (no extensions installed)
+o  Use already-upgraded copy of code from jane (github)
+o  Enable idmygadget_stark-d8-exp on jane and idmygadget_stark-d8 on bette
+o  Test with idmygadget_bartik
+o  Test disabling cache
+
+Process:
+1. Grab updated code base (leaving old base for backup)
+2. Clear cache (drush and admin)
+3. Restore DB used on jane (no custom extensions installed)
+4. Link customizations to new code
+5. Link gitignored and subsites to new code
+
+Commands:
+1. Grab new code base
+   gothh
+   mkdir fresh_clone.tmp
+   cd fresh_clone.tmp
+   git clone git@github.com:tomwhartung/tomhartung.com-d8.git
+   mv tomhartung.com-d8 tomhartung.com-d8.0.2
+   cd ..
+   mv fresh_clone.tmp/tomhartung.com-d8.0.2 .
+2. Clear cache
+   gotht
+   drush cr   # also do Admin -> Configuration -> Performance -> Clear all caches
+3. Restore DB
+   rs -d 2016_01_09 -h jane d8 04-no_custom_extensions-after_upgrading_to_8.0.2
+   rm tomhartung.com; ln -s tomhartung.com-d8.0.2 tomhartung.com ; l
+4. Link customizations
+   gotht
+   # Currently we have some third party modules (for migration) plus my jmws one
+   cd modules
+   cp -rp ../../tomhartung.com-d8.0.1/modules/*   .
+   # Currently we do not have any third party themes so just copy over the links to my jmws ones
+   cd ../themes
+   cp -rp ../../tomhartung.com-d8.0.1/themes/jmws   .
+5. Link gitignored files and subsites
+   cd ../sites/default
+   ln -s ../../../gitignored/sites/default/*.* .
+   ln -s ../../../gitignored/sites/default/files .
+   ln_subsites.py
+6. Test!
+
+Production Host:
+----------------
 [ ] lauren - only when the others are done and all bugs are worked out
 
 (Old d7) Overview of Process on backup and production hosts:

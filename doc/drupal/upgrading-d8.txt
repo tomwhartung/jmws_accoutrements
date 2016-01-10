@@ -20,8 +20,17 @@ Upgrading 8.0.1 to 8.0.2 on 2016_01_09:
    # Ensure the code currently being used matches what's in the repo
    ga; gc 'Latest updates yadda yadda yadda.'; gpom   # as necessary
 3. Clear the cache, backup the DB, and put the site into maintenance mode
+3a NOTE: if actively developing new extensions, first restore DB to latest
+   version that has no installed extensions,
+   gobu
+   ls -altr
+   ## rs -d YYY_MM_DD d8 0X-no_custom_extensions
+   rs -d 2016_01_04 d8 02-no_custom_extensions
+   ## Verify no custom themes installed: Admin -> Appearance
+   ## Verify no custom modules installed: Admin -> Extend
+3b Clear cache, etc.
    gotht
-   drush cr
+   drush cr   # Also (if paranoid) Admin -> Configuration -> Performance -> Clear All Caches ("why not?")
    bu d8 01-before_upgrade_to-8.0.2
    Admin -> Configuration -> Development -> Maintenance Mode
 4. Update new release tree with the .git dir and my customizations

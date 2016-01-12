@@ -146,12 +146,43 @@ Production Host:
 ----------------
 [ ] lauren - only when the others are done and all bugs are worked out
 
+Notes:
+o  Cache needs to be disabled for device detection to work
+o  Last time we had issues with the cache, unable to clear it in back end
+   due to whitescreens when trying to access Admin -> Configuration -> Performance
+*** Possible solution: clear cache using drush
+o  Was able to deply from jane to bette with cache enabled 
+o  8.0.1 DB should be compatible with 8.0.2 code but we need to have a process
+   that allows for updating the DB on one host with an updated copy from another.
+
+Standard Plan Prologue (can not have too many copies of the db!):
+0. Clear cache on all three sites
+   (Both drush and in admin because, paranoia and safety first)
+1. Enable caching on all three sites (hosts)
+   gothh
+   cd gitignored/sites/default
+   cp settings.local.php-caching_enabled settings.local.php
+2. Clear cache on all three sites
+   (Both drush and in admin because, paranoia and safety first)
+3. Backup DB on all three sites
+4. Take site offline
+
+Plan A (safest and probably best for now):
+5. Pull code, core and customizations
+6. Run update.php:
+   http://tomhartung.com/update.php
+7. Test
+8. Put online
+
+Plan B (maybe faster and we will want to do something like this when we are adding content):
+5. Ensure we have the right versions of the extensions we want running on bette
+6. Restore db running on bette on lauren.
+7. Test
+
 (Old d7) Overview of Process on backup and production hosts:
 o  Pull the new code into the directory that is already being served
    (so we do not have to run any of the ln* scripts)
 o  Restore already-updated db from bette to this host
-
-New d8: TBD
 
 ################################################################################
 

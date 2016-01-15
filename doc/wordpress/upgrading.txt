@@ -191,18 +191,20 @@ Need to update three themes.
    test
    git push origin master
    bu tw 07-after_upgrade_all_themes
-[ ] Upgrade code on jane using results from upgrade on bette
-   bu tw 04-before_upgrade_themes
+
+Checking the diffs after installing these on bette, I can see there
+are no database changes.  So we just pull the code.  Note however that
+you can never have too many backups of the DB!
+[ ] Upgrade code on jane using code from upgrade on bette (checked in to git)
    gotwt
    git pull
    test
-   bu tw 05-after_upgrade_themes
-[ ] Upgrade code on lauren using final results from upgrade on bette
-   bu tw 05-before_upgrade_themes
+   bu tw 06-after_upgrade_themes
+[ ] Upgrade code on lauren using code from upgrade on bette (checked in to git)
    gotwt
    git pull
    test
-   bu tw 05-after_upgrade_themes
+   bu tw 06-after_upgrade_themes
 
 ================================================================================
 Old notes (from before moving server to lauren) for possible future reference

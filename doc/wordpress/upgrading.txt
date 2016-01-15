@@ -165,32 +165,44 @@ As long as jane works, follow same processs to update lauren.
 Updating themes
 ---------------
 Need to update three themes.
-Let's see if I can get this process down "to a science," based on what we learned above.
 
-Upgrade template on bette:
+[ ] Upgrade all themes on bette:
    bu tw 04-before_upgrade_twentyfifteen
-   chown -R www-data
-   upgrade in admin panel
-   chown -R tomh
+   gotwt
+   sudo chown -R www-data *
+   ## upgrade twentyfifteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentyfifteen to version 1.4 .'
+   bu tw 05-before_upgrade_twentyfourteen
+   ## upgrade twentyfourteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentyfourteen to version 1.7 .'
+   bu tw 06-before_upgrade_twentythirteen
+   ## upgrade twentythirteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentythirteen to version 1.7 .'
+   sudo chown -R tomh *
    test
-   git commit and push
-   bu tw 05-after_upgrade_twentyfifteen
-   copy db to jane
-Upgrade code and db on jane using results from upgrade on bette
-   bu tw 04-before_upgrade_twentyfifteen
+   git push origin master
+   bu tw 07-after_upgrade_all_themes
+[ ] Upgrade code on jane using results from upgrade on bette
+   bu tw 04-before_upgrade_themes
+   gotwt
    git pull
-   rs -h bette tw 05-after_upgrade_twentyfifteen
    test
-   bu tw 05-after_upgrade_twentyfifteen
-Repeat processes for bette and jane for:
-   twentyfourteen
-   twentythirteen
-Upgrade code and db on lauren using final results from upgrade on bette
-   bu tw 04-before_upgrade_twentyfifteen
+   bu tw 05-after_upgrade_themes
+[ ] Upgrade code on lauren using final results from upgrade on bette
+   bu tw 05-before_upgrade_themes
+   gotwt
    git pull
-   rs -h bette tw 05-after_upgrade_twentyfifteen
    test
-   bu tw 05-after_upgrade_twentyfifteen
+   bu tw 05-after_upgrade_themes
 
 ================================================================================
 Old notes (from before moving server to lauren) for possible future reference

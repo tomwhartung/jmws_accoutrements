@@ -12,6 +12,8 @@ The Latest References (from upgrade to 4.3.1):
 
 Getting core update to work from back end on bette (4.3.1 to 4.4.1):
 ---------------------------------------------------------------------
+The process of using the back end to update the code rather than downloading it 
+has been evolving.  For details, see later in this document.
 1. Backup db on all hosts:
    bu tw 01-before_upgrade_4.3.1_to_4.4.1
 2. Ensure the following line has been added to wp-config.php :
@@ -42,21 +44,26 @@ Updating wp core on bette and jane
    gs
    ga --all .
    gc 'Updated wp core code to 4.4.1' ; gpom
-4. Extract (git pull or git clone) on jane
+4. Update core code on jane - in one of two ways
+4.1 ** EITHER **
+   Extract (git pull or git clone) on jane
    gotwt
    gp
-   ** OR **
+4.2 ** OR **
+   Keep copy of old code, clone fresh version of site, and create links to customizations etc.
    gotwh
    git clone git@github.com:tomwhartung/tomwhartung.com.git
    mv tomwhartung.com tomwhartung.com-4.4.1 ; ln -s tomwhartung.com-4.4.1 tomwhartung.com
+   gotwt
+   ln -s ../gitignored/wp-config.php .
    ln_wordpress_customizations
+   ln_subsites.py
 5. Test in browser
    Load admin panel: "Database update required."
    Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
    Click "Continue" button: looks like we are good to go!
-   Noting that permission changes made above are not reflected on dev and bu hosts
 6. Backup new copy of db
-   bu tw 02-after_upgrade_to_4.4.1
+   bu tw 02-after_upgrade_4.3.1_to_4.4.1
 
 Updating plugins
 ----------------

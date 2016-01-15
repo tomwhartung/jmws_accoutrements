@@ -4,6 +4,104 @@ Introduction
 The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
 Plus we don't run it often enough to be really confident about it or good at it etc.
 
+TomWHartung.com - WP Upgrading Notes for 2016
+---------------------------------------------
+The Latest References (from upgrade to 4.3.1):
+   https://wordpress.org/support/topic/core-or-plugin-update-could-not-create-directory-httpdocs?replies=27
+   http://wordpress.stackexchange.com/questions/141063/when-fs-method-direct-is-chosen
+
+Getting core update to work from back end on bette (4.3.1 to 4.4.1):
+---------------------------------------------------------------------
+1. Backup db on all hosts:
+   bu tw 01-before_upgrade_4.3.1_to_4.4.1
+2. Ensure the following line has been added to wp-config.php :
+   define('FS_METHOD','direct');     # This is one key
+3. Make the following changes:
+   Change ownership of all files to www-data, create directory wp-content/upgrade
+   gotwt
+   sudo chown -R www-data *          # This is another key
+   mkdir wp-content/upgrade
+   Change perms of wp-content and all subdirectories of wp-content to 775
+?? sudo chmod 775 wp-content wp-content/*  # Unsure whether this step is necessary
+   ls -al wp-content/
+4. Quick check in browser: Looks OK
+
+Updating wp core on bette and jane
+----------------------------------
+1. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
+   gotwt
+   sudo chown -R tomh *
+   sudo chmod 775 wp-content wp-content/*
+   ls -al wp-content/
+2. Test (in browser) and, if it looks ok, backup DB and link in the subsites
+   bu tw 02-after_upgrade_4.3.1_to_4.4.1
+   gothh
+   ln_subsites.py
+3. Checkin to git on bette and push:
+   gotwt
+   gs
+   ga --all .
+   gc 'Updated wp core code to 4.4.1' ; gpom
+4. Extract (git pull or git clone) on jane
+   gotwt
+   gp
+   ** OR **
+   gotwh
+   git clone git@github.com:tomwhartung/tomwhartung.com.git
+   mv tomwhartung.com tomwhartung.com-4.4.1 ; ln -s tomwhartung.com-4.4.1 tomwhartung.com
+   ln_wordpress_customizations
+5. Test in browser
+   Load admin panel: "Database update required."
+   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+   Click "Continue" button: looks like we are good to go!
+   Noting that permission changes made above are not reflected on dev and bu hosts
+6. Backup new copy of db
+   bu tw 02-after_upgrade_to_4.4.1
+
+Updating plugins
+----------------
+Learned that to enable updates via the admin panel (at least for plugins) we just need to:
+1. Add the following line to wp-config.php :
+   define('FS_METHOD','direct');
+2. Run following commands:
+   cd /var/www/tomwhartung.com/htdocs/tomwhartung.com
+   chown -R www-data *
+However, to get git to work again, we need to chown the files back to tomh.
+
+Updating themes
+---------------
+Need to update three themes.
+Let's see if I can get this process down "to a science," based on what we learned above.
+
+Upgrade template on bette:
+   bu tw 04-before_upgrade_twentyfifteen
+   chown -R www-data
+   upgrade in admin panel
+   chown -R tomh
+   test
+   git commit and push
+   bu tw 05-after_upgrade_twentyfifteen
+   copy db to jane
+Upgrade code and db on jane using results from upgrade on bette
+   bu tw 04-before_upgrade_twentyfifteen
+   git pull
+   rs -h bette tw 05-after_upgrade_twentyfifteen
+   test
+   bu tw 05-after_upgrade_twentyfifteen
+Repeat processes for bette and jane for:
+   twentyfourteen
+   twentythirteen
+Upgrade code and db on lauren using final results from upgrade on bette
+   bu tw 04-before_upgrade_twentyfifteen
+   git pull
+   rs -h bette tw 05-after_upgrade_twentyfifteen
+   test
+   bu tw 05-after_upgrade_twentyfifteen
+
+================================================================================
+Old notes (from before moving server to lauren) for possible future reference
+================================================================================
+
 TomWHartung.com - WP Upgrading Notes for 2015
 ---------------------------------------------
 Trying to update using the back end administrator's panel...
@@ -87,3 +185,4 @@ Upgrade code and db on lauren using final results from upgrade on bette
    rs -h bette tw 05-after_upgrade_twentyfifteen
    test
    bu tw 05-after_upgrade_twentyfifteen
+

@@ -28,8 +28,8 @@ has been evolving.  For details, see later in this document.
    ls -al wp-content/
 4. Quick check in browser: Looks OK
 
-Updating wp core on bette and jane
-----------------------------------
+Updating wp core on bette:
+--------------------------
 1. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
    gotwt
    sudo chown -R tomh *
@@ -44,12 +44,15 @@ Updating wp core on bette and jane
    gs
    ga --all .
    gc 'Updated wp core code to 4.4.1' ; gpom
-4. Update core code on jane - in one of two ways
-4.1 ** EITHER **
-   Extract (git pull or git clone) on jane
+
+Updating wp core on jane
+------------------------
+1. Update core code on jane - in one of two ways
+1.1 ** EITHER **
+   Extract (git pull or git clone) on jane (lauren)
    gotwt
    gp
-4.2 ** OR **
+1.2 ** OR **
    Keep copy of old code, clone fresh version of site, and create links to customizations etc.
    gotwh
    git clone git@github.com:tomwhartung/tomwhartung.com.git
@@ -58,11 +61,54 @@ Updating wp core on bette and jane
    ln -s ../gitignored/wp-config.php .
    ln_wordpress_customizations
    ln_subsites.py
-5. Test in browser
+2. Test in browser
    Load admin panel: "Database update required."
    Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
    Click "Continue" button: looks like we are good to go!
-6. Backup new copy of db
+3. Backup new copy of db
+   bu tw 02-after_upgrade_4.3.1_to_4.4.1
+
+Updating wp core on lauren (production!)
+----------------------------------------
+1. Disable site
+   cd /etc/apache2/sites-enabled/
+   ls -al
+   sudo rm 080-tomwhartung.com.conf 
+   ls -al
+   sudo service apache2  restart
+   ## Load in browser (verify it is down)
+2. Update core code on lauren - in one of two ways
+2.1 ** EITHER **
+   Extract (git pull or git clone) on jane (lauren)
+   gotwt
+   gp
+2.2 ** OR **
+   Keep copy of old code, clone fresh version of site, and create links to customizations etc.
+   gotwh
+   mkdir tmp
+   cd tmp
+   git clone git@github.com:tomwhartung/tomwhartung.com.git
+   l
+   mv tomwhartung.com tomwhartung.com-4.4.1
+   mv tomwhartung.com-4.4.1 ..
+   cd ..
+   mv tomwhartung.com tomwhartung.com-4.3.1 ; ln -s tomwhartung.com-4.4.1 tomwhartung.com
+   gotwt
+   ln -s ../gitignored/wp-config.php .
+   ln_wordpress_customizations
+   gotwh
+   ln_subsites.py
+3. Re-enable site (have admin window ready to go)
+   cd /etc/apache2/sites-enabled/
+   ls -al
+   sudo ln -s ../sites-available/080-tomwhartung.com.conf .
+   ls -al
+   sudo service apache2  restart
+4. Test in browser
+   Load admin panel: "Database update required."
+   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+   Click "Continue" button: looks like we are good to go!
+5. Backup new copy of db
    bu tw 02-after_upgrade_4.3.1_to_4.4.1
 
 Updating plugins

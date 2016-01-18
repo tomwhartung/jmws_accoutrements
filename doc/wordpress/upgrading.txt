@@ -4,6 +4,212 @@ Introduction
 The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
 Plus we don't run it often enough to be really confident about it or good at it etc.
 
+TomWHartung.com - WP Upgrading Notes for 2016
+---------------------------------------------
+The Latest References (from upgrade to 4.3.1):
+   https://wordpress.org/support/topic/core-or-plugin-update-could-not-create-directory-httpdocs?replies=27
+   http://wordpress.stackexchange.com/questions/141063/when-fs-method-direct-is-chosen
+
+Getting core update to work from back end on bette (4.3.1 to 4.4.1):
+---------------------------------------------------------------------
+The process of using the back end to update the code rather than downloading it 
+has been evolving.  For details, see later in this document.
+1. Backup db on all hosts:
+   bu tw 01-before_upgrade_4.3.1_to_4.4.1
+2. Ensure the following line has been added to wp-config.php :
+   define('FS_METHOD','direct');     # This is one key
+3. Make the following changes:
+   Change ownership of all files to www-data, create directory wp-content/upgrade
+   gotwt
+   sudo chown -R www-data *          # This is another key
+   mkdir wp-content/upgrade
+   Change perms of wp-content and all subdirectories of wp-content to 775
+?? sudo chmod 775 wp-content wp-content/*  # Unsure whether this step is necessary
+   ls -al wp-content/
+4. Quick check in browser: Looks OK
+
+Updating wp core on bette:
+--------------------------
+1. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
+   gotwt
+   sudo chown -R tomh *
+   sudo chmod 775 wp-content wp-content/*
+   ls -al wp-content/
+2. Test (in browser) and, if it looks ok, backup DB and link in the subsites
+   bu tw 02-after_upgrade_4.3.1_to_4.4.1
+   gothh
+   ln_subsites.py
+3. Checkin to git on bette and push:
+   gotwt
+   gs
+   ga --all .
+   gc 'Updated wp core code to 4.4.1' ; gpom
+
+Updating wp core on jane
+------------------------
+1. Update core code on jane - in one of two ways
+1.1 ** EITHER **
+   Extract (git pull or git clone) on jane (lauren)
+   gotwt
+   gp
+1.2 ** OR **
+   Keep copy of old code, clone fresh version of site, and create links to customizations etc.
+   gotwh
+   git clone git@github.com:tomwhartung/tomwhartung.com.git
+   mv tomwhartung.com tomwhartung.com-4.4.1 ; ln -s tomwhartung.com-4.4.1 tomwhartung.com
+   gotwt
+   ln -s ../gitignored/wp-config.php .
+   ln_wordpress_customizations
+   ln_subsites.py
+2. Test in browser
+   Load admin panel: "Database update required."
+   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+   Click "Continue" button: looks like we are good to go!
+3. Backup new copy of db
+   bu tw 02-after_upgrade_4.3.1_to_4.4.1
+
+Updating wp core on lauren (production!)
+----------------------------------------
+1. Disable site
+   cd /etc/apache2/sites-enabled/
+   ls -al
+   sudo rm 080-tomwhartung.com.conf 
+   ls -al
+   sudo service apache2  restart
+   ## Load in browser (verify it is down)
+2. Update core code on lauren - in one of two ways
+2.1 ** EITHER **
+   Extract (git pull or git clone) on jane (lauren)
+   gotwt
+   gp
+2.2 ** OR **
+   Keep copy of old code, clone fresh version of site, and create links to customizations etc.
+   gotwh
+   mkdir tmp
+   cd tmp
+   git clone git@github.com:tomwhartung/tomwhartung.com.git
+   l
+   mv tomwhartung.com tomwhartung.com-4.4.1
+   mv tomwhartung.com-4.4.1 ..
+   cd ..
+   mv tomwhartung.com tomwhartung.com-4.3.1 ; ln -s tomwhartung.com-4.4.1 tomwhartung.com
+   gotwt
+   ln -s ../gitignored/wp-config.php .
+   ln_wordpress_customizations
+   gotwh
+   ln_subsites.py
+3. Re-enable site (have admin window ready to go)
+   cd /etc/apache2/sites-enabled/
+   ls -al
+   sudo ln -s ../sites-available/080-tomwhartung.com.conf .
+   ls -al
+   sudo service apache2  restart
+4. Test in browser
+   Load admin panel: "Database update required."
+   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+   Click "Continue" button: looks like we are good to go!
+5. Backup new copy of db
+   bu tw 02-after_upgrade_4.3.1_to_4.4.1
+
+Updating plugins
+----------------
+[ ] bette: 
+We are able to update plugins using the admin back end, as long as we ...
+1. Ensure the following line is in wp-config.php :
+   define('FS_METHOD','direct');
+2. Change the owner of all files to www-data:
+   gotwt
+   sudo chown -R www-data *
+3. Update in admin back end
+   Admin -> Plugins -> "update now" link for the plugin
+4. Change the owner of all files back to tomh:
+   gotwt
+   sudo chown -R tomh *
+5. Commit changes and push
+   gotwt
+   git add --all
+   git commit -m 'Upgrade akismet to 3.1.5' ; gpom
+6. Never hurts to backup the db!
+   bu tw 03-after_upgrade_akismet_to_3.1.5
+
+[ ] jane: 
+Right now we are just updating akismet, which we are not using, but we
+do want to clear the update flag.  The question is, does updating the
+plugin affect the database?  To be on the safe side, we must assume it does.
+So we will update it in the back end - to make any DB changes needed in the
+local DB, then remove those files and pull code to make git happy.
+1. Ensure the following line is in wp-config.php :
+   define('FS_METHOD','direct');
+2. Change the owner of all files to www-data:
+   gotwt
+   sudo chown -R www-data *
+3. Update in admin back end (to get any changes needed to local DB)
+   Admin -> Plugins -> "update now" link for the plugin
+4. Change the owner of all files back to tomh:
+   gotwt
+   sudo chown -R tomh *
+5. Remove changes, checkout current version, and pull code
+   gotwt
+   gs
+   cd wp-content/plugins/
+   l akismet/
+   rm -fr akismet/ ; git checkout akismet/ ; gp
+   sum akismet/*   # optionally/for best results compare to version on bette...
+   gotwt
+6. Never hurts to backup the db!
+   bu tw 03-after_upgrade_akismet_to_3.1.5
+
+[ ] lauren: 
+As long as jane works, follow same processs to update lauren.
+
+Updating themes
+---------------
+Need to update three themes.
+
+[ ] Upgrade all themes on bette:
+   bu tw 04-before_upgrade_twentyfifteen
+   gotwt
+   sudo chown -R www-data *
+   ## upgrade twentyfifteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentyfifteen to version 1.4 .'
+   bu tw 05-before_upgrade_twentyfourteen
+   ## upgrade twentyfourteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentyfourteen to version 1.7 .'
+   bu tw 06-before_upgrade_twentythirteen
+   ## upgrade twentythirteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentythirteen to version 1.7 .'
+   sudo chown -R tomh *
+   test
+   git push origin master
+   bu tw 07-after_upgrade_all_themes
+
+Checking the diffs after installing these on bette, I can see there
+are no database changes.  So we just pull the code.  Note however that
+you can never have too many backups of the DB!
+[ ] Upgrade code on jane using code from upgrade on bette (checked in to git)
+   gotwt
+   git pull
+   test
+   bu tw 06-after_upgrade_themes
+[ ] Upgrade code on lauren using code from upgrade on bette (checked in to git)
+   gotwt
+   git pull
+   test
+   bu tw 06-after_upgrade_themes
+
+================================================================================
+Old notes (from before moving server to lauren) for possible future reference
+================================================================================
+
 TomWHartung.com - WP Upgrading Notes for 2015
 ---------------------------------------------
 Trying to update using the back end administrator's panel...
@@ -87,3 +293,4 @@ Upgrade code and db on lauren using final results from upgrade on bette
    rs -h bette tw 05-after_upgrade_twentyfifteen
    test
    bu tw 05-after_upgrade_twentyfifteen
+

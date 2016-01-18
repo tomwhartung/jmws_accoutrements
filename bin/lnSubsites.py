@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #
-# ln_subsites.py: link subsites, e.g. resume and idMyGadget, into top level dir of each "main" site
+# lnSubsites.py: link subsites, e.g. resume and idMyGadget, into top level dir of each "main" site
 # -------------------------------------------------------------------------------------------------
 #
 import os
@@ -29,7 +29,7 @@ def lnSubsite( subsite, htdocsDir ) :
 	print( "lnCommand:\n\t" + lnCommand )
 	call( lnCommand, shell=True )
 ##
-#
+# Links the subsites into the specified main site
 #
 def lnMainSiteDir( mainSiteDir ) :
 	htdocsDir = rootDir + '/' + mainSiteDir + '/htdocs'
@@ -56,7 +56,9 @@ rootDir = '/var/www'
 mainSites = ['joomoowebsites.com', 'tomhartung.com', 'tomwhartung.com' ]
 subsitesDir = 'subsites'
 exitVal = 0
-
+#
+# Loop through the main sites calling a method to link the subsites to each of them
+#
 for mainSiteDir in mainSites :
 	lnMainSiteDir( mainSiteDir )
 

@@ -1,0 +1,41 @@
+
+ WordPress Deployment Notes:
+=============================
+When deploying, I am a big fan of copying the db on my development or test host to production.
+
+This can cause issues, and specifically ...
+
+Here is an important note that it took many hours to figure out!
+----------------------------------------------------------------
+WP stores a URL containing the canonical host name in the database.
+
+o  E.g., http://bette.tomwhartung.com
+
+This value is ALSO defined in the admin console under:
+
+o  Admin -> Settings -> General -> WordPress Address (URL)
+o  Admin -> Settings -> General -> Site Address (URL)
+
+This value is ALSO defined in wp-config.php (near the end) as:
+
+o  WP_HOME
+o  WP_SITEURL
+
+EVEN IF THESE VALUES ARE CORRECT, THE VALUE STORED IN THE DB MAY BE WRONG!  I KNOW!!!
+
+This can cause issues when copying the DB between hosts.
+
+The Fix
+-------
+How to fix issues where the WP site is looking for resources on a development or test host (due to copying the DB):
+
+1. Access the Admin -> Settings -> General page
+   Note that these values are NOT editable
+2. Comment out the lines that define WP_HOME and WP_SITEURL in settings.php
+3. Reload the Admin -> Settings -> General page
+   Note that these values are NOW editable
+4. Edit the settings in the Admin page (even if they are correct)
+5. Scroll down and click Save Changes
+6. Un-comment the lines that define WP_HOME and WP_SITEURL in settings.php
+
+Good to know!

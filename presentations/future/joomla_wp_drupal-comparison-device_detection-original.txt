@@ -1,0 +1,39 @@
+
+ Adding Device Detection to Joomla, WordPress, and Drupal: Compare and Contrast
+================================================================================
+
+Why do this?
+Because it's there.
+It is difficult to imagine someone paying someone else to do something like this.
+It does not make much business sense.
+
+Adding options:
+all are different, joomla (xml-based) more so than the others (array based)
+
+Finding markup:
+again, joomla is different, having a "mainline" in index.php
+wp and drupal use templates, which is a little confusing at first, but easy enough once you get going
+Drupal Reference: https://www.drupal.org/node/190815
+
+Managing js and css:
+Much more difficult than it should be!
+It should be OK to just include a link tag.
+But instead, each has its vastly different "super clever" way of doing things.  Uhg what a pain.
+
+Summary/Conclusions:
+If trying to learn WordPress, Drupal, and jQuery Mobile all at the same time sound challenging, I can say that yes, it is.
+
+I was able to use quite a bit of code, more than expected, on all three.
+
+I really did not need to set up separate repos for the different CMSes; branching would have been a better solution.
+
+Doing two templates/themes at a time is a good idea, if one is simpler (do it first) than the other.
+
+Not a fan of the draconian drupal code standards.  Makes using the same IDE for wp a pain (have to change the options all too frequently).
+
+Making use of inheritance in separating what works for all of them from the CMS-specific functionality, is huge fun for me.
+
+Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places, so easy and hard at the same time).
+
+
+

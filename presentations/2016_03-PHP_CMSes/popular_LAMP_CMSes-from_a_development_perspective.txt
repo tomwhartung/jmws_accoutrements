@@ -1,0 +1,104 @@
+
+ Looking at Three Popular LAMP CMSes From a Developer's Perspective
+===================================================================
+Adding Device Detection to Joomla, WordPress, and Drupal: Compare and Contrast
+
+ Introduction
+--------------
+What I did on my summer code-cation (that lasted well into the winter, thanks in large part to Drupal 8)
+Implemented Adaptive Web Design (as opposed to Responsive Web Design) by adding Device Detection to Drupal 7 & 8, Joomla, and WordPress
+
+Why do this? (Other than "because it's there.")
+o Have been curious about Drupal for many years.
+o Want to find where I want to be in the new gadget-laden technological environment.
+o Frankly, it does not make much business sense to take the better part of a year off to do this.
+o But I have learned what my ideal job (this year, anyway) would be (see conclusion).
+
+ Caveat/Disclaimer
+-------------------
+I am not an expert in any one of these.
+Being so seems to preclude the ability to be objective, which is my goal.
+I have more experience in Joomla than the others, and like it best, and cannot say for sure whether the experience is prejudicing me....
+
+ Details
+---------
+Hi-Level/Overview:
+o Drupal 7: hooks
+o Drupal 8: Symfony used for modules, themes still use mainly hooks
+o Joomla:
+o Wordpress: hooks
+
+Finding documentation:
+o Drupal 7: 
+o Drupal 8: When I was working on it, much was missing and incomplete.  It's nice that they tell you when pages "Need Work."
+o Joomla:
+o Wordpress:
+
+Extension Types:
+o Drupal 7: modules and themes
+o Drupal 8: modules and themes
+o Joomla: components, modules, templates, plugins (not the same as WP plugins), and libraries
+o Wordpress: plugins and themes
+
+Adding options:
+All are different:
+o Drupal 7: array based
+o Drupal 8: OOP and array based
+o Joomla: xml-based)
+o Wordpress: array based
+
+Finding markup:
+o Drupal 7: 
+o Drupal 8: When I was working on it, much was missing and incomplete.  It's nice that they tell you when pages "Need Work."
+o Joomla:
+o Wordpress:
+
+again, joomla is different, having a "mainline" in index.php
+wp and drupal use templates, which is a little confusing at first, but easy enough once you get going
+Drupal Reference: https://www.drupal.org/node/190815
+
+Managing js and css:
+Much more difficult than it should be!
+The CMS wants to control that for you.
+It should be OK to just include a link tag, and I suppose you could, but that is not what you are supposed to do.
+Instead, each has its vastly different "super clever" way of doing things.  Uhg what a pain.
+o Drupal 7: 
+o Drupal 8:
+o Joomla:
+o Wordpress: enqueue something
+
+Community:
+Drupal seems to have the most closely-knit community, with many conferences.
+Tried to create an account on joomla.org several times, to no avail
+Was able to create one easily on drupal.org and wordpress.org.
+
+XXXXXX:
+o Drupal 7: 
+o Drupal 8:
+o Joomla:
+o Wordpress:
+
+ Recommendations:
+------------------
+If I was going to do this again, I would do Drupal first.
+o It forces you to organize your code better
+o The others (especially WP) would be a piece of cake
+
+ Summary/Conclusions:
+----------------------
+If trying to learn WordPress, Drupal, and jQuery Mobile all at the same time sound challenging, I can say that yes, it is.
+
+I was able to use quite a bit of code, more than expected, on all three.
+
+I really did not need to set up separate repos for the different CMSes; branching would have been a better solution.
+
+Doing two templates/themes at a time is a good idea, if one is simpler (do it first) than the other.
+
+Not a fan of the draconian drupal code standards.  Makes using the same IDE for wp a pain (have to change the options all too frequently).
+
+Making use of inheritance in separating what works for all of them from the CMS-specific functionality, is huge fun for me.
+
+Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places, so easy and hard at the same time).
+
+
+

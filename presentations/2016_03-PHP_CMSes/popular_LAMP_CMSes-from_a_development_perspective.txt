@@ -3,15 +3,17 @@
 ===================================================================
 Adding Device Detection to Joomla, WordPress, and Drupal: Compare and Contrast
 
+What I did on my summer code-cation (that lasted well into the winter, thanks in large part to Drupal 8).
+
  Introduction
 --------------
-What I did on my summer code-cation (that lasted well into the winter, thanks in large part to Drupal 8)
+What:
 Implemented Adaptive Web Design (as opposed to Responsive Web Design) by adding Device Detection to Drupal 7 & 8, Joomla, and WordPress
 
-Why do this? (Other than "because it's there.")
+Why (other than "because it's there"):
 o Have been curious about Drupal for many years.
-o Want to find where I want to be in the new gadget-laden technological environment.
-o Frankly, it does not make much business sense to take the better part of a year off to do this.
+o Want to find where I want to be in the new gadget-laden technological environment. (1)
+o Frankly, it does not make much business sense to take the better part of a year off to do this. (2)
 o But I have learned what my ideal job (this year, anyway) would be (see conclusion).
 
  Caveat/Disclaimer
@@ -81,7 +83,7 @@ o Wordpress:
  Recommendations:
 ------------------
 If I was going to do this again, I would do Drupal first.
-o It forces you to organize your code better
+o It forces (or at least strongly encourages and enables) you to organize your code better (e.g., namespaces)
 o The others (especially WP) would be a piece of cake
 
  Summary/Conclusions:
@@ -101,4 +103,9 @@ Making use of inheritance in separating what works for all of them from the CMS-
 Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places, so easy and hard at the same time).
 
 
+
+ Notes:
+--------
+(1) I was reading a lot of the O'Reilly books and was very intrigued by some information about device detection in Building Android Apps with CSS, JavaScript, and HTML5 by Jonathan Stark, which has some information about device detection in an appendix.
+(2) I keep reading in various email newsletters I get, about how more and more people are freelancing, and must admit it holds a certain appeal....
 

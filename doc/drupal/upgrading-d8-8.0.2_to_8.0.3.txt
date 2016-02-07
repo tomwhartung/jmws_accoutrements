@@ -66,9 +66,13 @@ Upgrading 8.0.2 to 8.0.3 on 2016_02_05:
    gothh
    diff tomhartung.com-d8.0.2/sites/default/default.services.yml tomhartung.com-d8.0.3/sites/default/default.services.yml
    diff tomhartung.com-d8.0.2/sites/default/default.settings.php  tomhartung.com-d8.0.3/sites/default/default.settings.php
+   ###
    ### See what changes have been made (that I need to migrate) along with my secret db info and other customizations:
    ### Migrate these changes into the copies of these files that we are using as necessary
    ### Note that the copies of these files that we are using are under htdocs/gitignored/sites/default
+   ###
+   ### ??? Do we need to monitor sites/example.settings.local.php for changes, and integrate them into our files ???
+   ###
 6. Update new release tree with links to my gitignored files
    gothh
    cd tomhartung.com-d8.0.3
@@ -138,34 +142,52 @@ Commands:
 2. Re-enable caching in settings.local.php
    gothh
    cd gitignored/sites/default/
-   rd *.*   # make sure all our changes are checked in before messing with these settings files
+   rd *.*              # Make sure all changes are checked in before messing with these settings files!
    cp settings.local.php-no_caching settings.local.php
 3. Ensure all the caches are cleared
    gotht
    drush cr
    # Also: Admin -> Configuration -> Performance -> Clear all caches
 4. Backup the currently used DB and restore a copy of the upgraded DB from bette
-   rs -d 2016_01_09 -h jane d8 04-no_custom_extensions-after_upgrading_to_8.0.2
+   bu d8 01-before_upgrading_to_8.0.3
+   rs -h bette d8 02-no_extensions_installed-upgraded_to_8.0.3
 5. Switch the link
    gothh
    l
    rm tomhartung.com
-   ln -s tomhartung.com-d8.0.2 tomhartung.com
+   ln -s tomhartung.com-d8.0.3 tomhartung.com
    l
 5. Link customizations
    gotht
    # Currently we have some third party modules (for migration) plus my jmws one
    cd modules
-   cp -rp ../../tomhartung.com-d8.0.1/modules/*   .
+   cp -rp ../../tomhartung.com-d8.0.2/modules/*   .
    # Currently we do not have any third party themes so just copy over the links to my jmws ones
    cd ../themes
-   cp -rp ../../tomhartung.com-d8.0.1/themes/jmws   .
-6. Link gitignored files and subsites
-   cd ../sites/default
+   cp -rp ../../tomhartung.com-d8.0.2/themes/jmws   .
+6. Migrate changes to settings, and link the gitignored files and subsites
+6a. Migrate any changes made to the default.settings.php and settings.php files
+   gothh
+   cd gitignored/sites/default/
+   rd *.*                          # Make sure all changes are checked in before messing with these settings files!
+   diffBette default.settings.php  # Make sure we are not losing any changes made and forgotten about!
+   diffBette settings.php          # Make sure we are not losing any changes made and forgotten about!
+   fromBette default.settings.php
+   fromBette settings.php
+   rd default.settings.php
+   rd settings.php
+   ci -l default.settings.php
+   ci -l settings.php
+6b. Link the files and subsites
+   gotht
+   cd sites/default
    ln -s ../../../gitignored/sites/default/*.* .
    ln -s ../../../gitignored/sites/default/files .
    lnSubsites.py
-7. Test!
+7. Test and if it looks good, back up the db!
+   Check that site loads
+   Check that Admin -> Reports shows we are running the new version.
+   bu d8 02-no_extensions_installed-upgraded_to_8.0.3
 
 Production Host:
 ----------------

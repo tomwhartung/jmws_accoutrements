@@ -30,6 +30,11 @@ Upgrading 8.0.2 to 8.0.3 on 2016_02_05:
    ### OR optionally disable all custom extensions: https://www.drupal.org/node/1494290
    ### rs -d YYY_MM_DD d8 0X-no_custom_extensions
    ### Be sure to re-enable caching first!
+   ###
+   ### This process needs to be re-examined: in the future we will no longer be able to
+   ### revert to an older version of the db and start all over with reinstalling and
+   ### reconfiguring our extentions, etc.
+   ###
    gothh
    cd gitignored/sites/default
    cp settings.local.php-caching_enabled settings.local.php
@@ -112,10 +117,14 @@ o  Test disabling cache
 
 Process:
 1. Grab updated code base (leaving old base for backup)
-2. Clear cache (drush and admin)
-3. Restore DB used on jane (no custom extensions installed)
-4. Link customizations to new code
-5. Link gitignored and subsites to new code
+2. Re-enable caching in settings.local.php
+3. Clear cache (drush and admin)
+4. Restore DB used on jane to one with no custom extensions installed
+  (** re-examine the "no custom extensions installed" part of this step **)
+5. Switch the link to point to the new code
+6. Link customizations to the new code
+7. Link gitignored and subsites to the new code
+8. Test
 
 Commands:
 1. Grab new code base
@@ -123,16 +132,27 @@ Commands:
    mkdir fresh_clone.tmp
    cd fresh_clone.tmp
    git clone git@github.com:tomwhartung/tomhartung.com-d8.git
-   mv tomhartung.com-d8 tomhartung.com-d8.0.2
+   mv tomhartung.com-d8 tomhartung.com-d8.0.3
    cd ..
-   mv fresh_clone.tmp/tomhartung.com-d8.0.2 .
-2. Clear cache
+   mv fresh_clone.tmp/tomhartung.com-d8.0.3 .
+2. Re-enable caching in settings.local.php
+   gothh
+   cd gitignored/sites/default/
+   rd *.*   # make sure all our changes are checked in before messing with these settings files
+   cp settings.local.php-no_caching settings.local.php
+3. Ensure all the caches are cleared
    gotht
-   drush cr   # also do Admin -> Configuration -> Performance -> Clear all caches
-3. Restore DB
+   drush cr
+   # Also: Admin -> Configuration -> Performance -> Clear all caches
+4. Backup the currently used DB and restore a copy of the upgraded DB from bette
    rs -d 2016_01_09 -h jane d8 04-no_custom_extensions-after_upgrading_to_8.0.2
-   rm tomhartung.com; ln -s tomhartung.com-d8.0.2 tomhartung.com ; l
-4. Link customizations
+5. Switch the link
+   gothh
+   l
+   rm tomhartung.com
+   ln -s tomhartung.com-d8.0.2 tomhartung.com
+   l
+5. Link customizations
    gotht
    # Currently we have some third party modules (for migration) plus my jmws one
    cd modules
@@ -140,12 +160,12 @@ Commands:
    # Currently we do not have any third party themes so just copy over the links to my jmws ones
    cd ../themes
    cp -rp ../../tomhartung.com-d8.0.1/themes/jmws   .
-5. Link gitignored files and subsites
+6. Link gitignored files and subsites
    cd ../sites/default
    ln -s ../../../gitignored/sites/default/*.* .
    ln -s ../../../gitignored/sites/default/files .
    lnSubsites.py
-6. Test!
+7. Test!
 
 Production Host:
 ----------------

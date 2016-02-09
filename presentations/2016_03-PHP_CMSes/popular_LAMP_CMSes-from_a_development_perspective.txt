@@ -16,15 +16,25 @@ o Want to find where I want to be in the new gadget-laden technological environm
 o Frankly, it does not make much business sense to take the better part of a year off to do this. (2)
 o But I have learned what my ideal job (this year, anyway) would be (see conclusion).
 
+How:
+
  Caveat/Disclaimer
 -------------------
 I am not an expert in any one of these.
 Being so seems to preclude the ability to be objective, which is my goal.
 I have more experience in Joomla than the others, and like it best, and cannot say for sure whether the experience is prejudicing me....
 
+ Miscellaneous Thoughts Had While Working on Other Things
+----------------------------------------------------------
+Joomla: the Goldilocks CMS: not too wordpressy/php4 time bomb, not too drupally/complicated, just right?
+
  Details
 ---------
-By the numbers: download size, number of files, number of DB tables,
+By the numbers:
+o download size,
+o number of files,
+o number of DB tables,
+o lines of css
 
 Hi-Level/Overview:
 o Drupal 7: hooks
@@ -85,12 +95,18 @@ o Wordpress:
  Challenges:
 -------------
 Multiple IDEs
+o Drupal coding standards
 
  Recommendations:
 ------------------
 If I was going to do this again, I would do Drupal first.
 o It forces (or at least strongly encourages and enables) you to organize your code better (e.g., namespaces)
 o The others (especially WP) would be a piece of cake
+
+It is much easier to find a simplistic, minimal template and add device detection to that first, then work on one that is more complicated.
+
+In a case like this, where I am inventing the process as I go, it is nice when I can work on things in parallel.
+E.g., add the module/library to each CMS, instantiate and initialze device detection in all CMSes, add css to all templates/themes, add js to all templates/themes, add the options, update the html, etc.
 
  Summary/Conclusions:
 ----------------------

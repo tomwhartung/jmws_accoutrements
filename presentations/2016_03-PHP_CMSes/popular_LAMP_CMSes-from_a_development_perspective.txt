@@ -24,6 +24,8 @@ I have more experience in Joomla than the others, and like it best, and cannot s
 
  Details
 ---------
+By the numbers: download size, number of files, number of DB tables,
+
 Hi-Level/Overview:
 o Drupal 7: hooks
 o Drupal 8: Symfony used for modules, themes still use mainly hooks
@@ -79,6 +81,10 @@ o Drupal 7:
 o Drupal 8:
 o Joomla:
 o Wordpress:
+
+ Challenges:
+-------------
+Multiple IDEs
 
  Recommendations:
 ------------------

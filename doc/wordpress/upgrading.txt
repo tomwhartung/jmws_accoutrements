@@ -10,63 +10,76 @@ The Latest References (from upgrade to 4.3.1):
    https://wordpress.org/support/topic/core-or-plugin-update-could-not-create-directory-httpdocs?replies=27
    http://wordpress.stackexchange.com/questions/141063/when-fs-method-direct-is-chosen
 
-Getting core update to work from back end on bette (4.3.1 to 4.4.1):
----------------------------------------------------------------------
-The process of using the back end to update the code rather than downloading it 
-has been evolving.  For details, see later in this document.
+Log
+---
+[ ] 2016-
+[ ] 2016-xx-xx: 4.4.2 to 4.4.x
+[ ] 2016-02-11: 4.4.1 to 4.4.2
+[ ] 2016-01-15: 4.3.1 to 4.4.1
+
+All Hosts
+---------
 1. Backup db on all hosts:
-   bu tw 01-before_upgrade_4.3.1_to_4.4.1
-2. Ensure the following line has been added to wp-config.php :
+   bu tw 01-before_upgrade_4.4.1_to_4.4.2
+   [ ] jane
+   [ ] bette
+   [ ] lauren
+
+Getting core update to work from back end:
+------------------------------------------
+To enable using the back end to update the code rather than downloading it, follow these steps.
+We need to do this for at least one host (e.g., jane).
+1. Ensure the following line has been added to wp-config.php :
    define('FS_METHOD','direct');     # This is one key
-3. Make the following changes:
+2. Ensure the web server can write the files by making the following changes:
    Change ownership of all files to www-data, create directory wp-content/upgrade
    gotwt
-   sudo chown -R www-data *          # This is another key
    mkdir wp-content/upgrade
-   Change perms of wp-content and all subdirectories of wp-content to 775
-?? sudo chmod 775 wp-content wp-content/*  # Unsure whether this step is necessary
+   sudo chown -R www-data:tomh *          # This is another key
+   Change perms of wp-content/upgrade and any subdirectories of it to 775
+   sudo chmod -R 775 wp-content/upgrade*  # Unsure whether this step is necessary
+   ls -al wp-content/upgrade
+
+Update wp core on jane using admin panel:
+-----------------------------------------
+1. Update in back end:
+   Admin -> Dashboard -> Updates
+2. Check in browser for each gadget type:
+   If it looks OK, proceed, else figure out what went wrong.
+3. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
+   gotwt
+   sudo chown -R tomh:www-data *
+   sudo chmod 755 wp-content wp-content/*
    ls -al wp-content/
-4. Quick check in browser: Looks OK
+4. Check the changes into git:
+   gotwt
+   git status
+   git add --all .
+   git commit -m 'Upgrading from 4.4.1_to_4.4.2.' ; git push origin master
+5. Backup db on this host:
+   bu tw 02-after_upgrade_4.4.1_to_4.4.2
 
 Updating wp core on bette:
 --------------------------
-1. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
+1. Make sure database is backed up (in previous section "All Hosts: above)
+   bu tw 01-before_upgrade_4.4.1_to_4.4.2
+2. Open browser windows:
+   Admin panel -> Dashboard -> Updates
+   One tab per device - ensure each one looks ok
+3. Update core code on bette using git pull:
    gotwt
-   sudo chown -R tomh *
-   sudo chmod 775 wp-content wp-content/*
-   ls -al wp-content/
-2. Test (in browser) and, if it looks ok, backup DB and link in the subsites
-   bu tw 02-after_upgrade_4.3.1_to_4.4.1
-   gothh
-   ln_subsites.py
-3. Checkin to git on bette and push:
-   gotwt
-   gs
-   ga --all .
-   gc 'Updated wp core code to 4.4.1' ; gpom
-
-Updating wp core on jane
-------------------------
-1. Update core code on jane - in one of two ways
-1.1 ** EITHER **
-   Extract (git pull or git clone) on jane (lauren)
-   gotwt
-   gp
-1.2 ** OR **
-   Keep copy of old code, clone fresh version of site, and create links to customizations etc.
-   gotwh
-   git clone git@github.com:tomwhartung/tomwhartung.com.git
-   mv tomwhartung.com tomwhartung.com-4.4.1 ; ln -s tomwhartung.com-4.4.1 tomwhartung.com
-   gotwt
-   ln -s ../gitignored/wp-config.php .
-   ln_wordpress_customizations
-   ln_subsites.py
-2. Test in browser
-   Load admin panel: "Database update required."
-   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
-   Click "Continue" button: looks like we are good to go!
-3. Backup new copy of db
-   bu tw 02-after_upgrade_4.3.1_to_4.4.1
+   git pull
+4. Test in browser
+   Load admin panel
+   If there are db updates will see: "Database update required."
+      Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+      Click "Continue" button: looks like we are good to go!
+   Admin panel -> Dashboard -> Updates
+   Ensure it is running the new version
+5. Test each tab (gadget type) in browser
+   If something is wrong, figure it out and fix it
+6. Backup new copy of db
+   bu tw 02-after_upgrade_4.4.1_to_4.4.2
 
 Updating wp core on lauren (production!)
 ----------------------------------------
@@ -206,9 +219,15 @@ you can never have too many backups of the DB!
    test
    bu tw 06-after_upgrade_themes
 
+======================================================================================
+ *** OLD OLD OLD *** DELETE ME YOU WUSS *** OLD OLD OLD *** *** DELETE ME YOU WUSS ***
+======================================================================================
 ================================================================================
 Old notes (from before moving server to lauren) for possible future reference
 ================================================================================
+======================================================================================
+ *** OLD OLD OLD *** DELETE ME YOU WUSS *** OLD OLD OLD *** *** DELETE ME YOU WUSS ***
+======================================================================================
 
 TomWHartung.com - WP Upgrading Notes for 2015
 ---------------------------------------------

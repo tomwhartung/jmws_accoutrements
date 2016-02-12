@@ -77,7 +77,9 @@ Updating wp core on bette:
    Admin panel -> Dashboard -> Updates
    Ensure it is running the new version
 5. Test each tab (gadget type) in browser
-   If something is wrong, figure it out and fix it
+   If something is wrong,
+      Figure it out and fix it
+      Consider using the "Alternative Method" when upgrading lauren (to facilitate backing out of the new code)
 6. Backup new copy of db
    bu tw 02-after_upgrade_4.4.1_to_4.4.2
 
@@ -90,12 +92,37 @@ Updating wp core on lauren (production!)
    ls -al
    sudo service apache2  restart
    ## Load in browser (verify it is down)
-2. Update core code on lauren - in one of two ways
-2.1 ** EITHER **
-   Extract (git pull or git clone) on jane (lauren)
+2. Update core code and extensions on lauren:
+   Extract (git pull) on lauren
    gotwt
-   gp
-2.2 ** OR **
+   git pull
+   gotwc
+   gac p    # fun script that pulls code for all customizations
+3. Re-enable site (have admin window ready to go)
+   cd /etc/apache2/sites-enabled/
+   ls -al
+   sudo ln -s ../sites-available/080-tomwhartung.com.conf .
+   ls -al
+   sudo service apache2  restart
+4. Test in browser
+   If there are db updates will see: "Database update required."
+      Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+      Click "Continue" button: looks like we are good to go!
+   Admin panel -> Dashboard -> Updates
+   Ensure it is running the new version
+   Load admin panel: "Database update required."
+   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+   Click "Continue" button: looks like we are good to go!
+5. Test each tab (gadget type) in browser
+   If something is wrong, figure it out and fix it
+6. Backup new copy of db
+   bu tw 02-after_upgrade_4.4.1_to_4.4.2
+
+Alternative Process for Step 2 Above
+------------------------------------
+This is more work but enables us to keep a copy of the old code on the disk,
+which might be helpful in case there is an issue with the new version.
+2. ** Alternative process **
    Keep copy of old code, clone fresh version of site, and create links to customizations etc.
    gotwh
    mkdir tmp
@@ -111,18 +138,6 @@ Updating wp core on lauren (production!)
    ln_wordpress_customizations
    gotwh
    ln_subsites.py
-3. Re-enable site (have admin window ready to go)
-   cd /etc/apache2/sites-enabled/
-   ls -al
-   sudo ln -s ../sites-available/080-tomwhartung.com.conf .
-   ls -al
-   sudo service apache2  restart
-4. Test in browser
-   Load admin panel: "Database update required."
-   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
-   Click "Continue" button: looks like we are good to go!
-5. Backup new copy of db
-   bu tw 02-after_upgrade_4.3.1_to_4.4.1
 
 Updating plugins
 ----------------

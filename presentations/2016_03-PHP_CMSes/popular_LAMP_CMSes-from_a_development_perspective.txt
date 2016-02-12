@@ -28,13 +28,34 @@ I have more experience in Joomla than the others, and like it best, and cannot s
 ----------------------------------------------------------
 Joomla: the Goldilocks CMS: not too wordpressy/php4 time bomb, not too drupally/complicated, just right?
 
+Observation: Switching between these is difficult, and not very productive, but fun, and very enlightening.
+
+Observation: Doing something like this takes a long time the first time, but goes more quickly with "practice."
+I would like to do more work like this, and not just with PHP CMSes....
+
+Observation: PHP Namespaces, part of the language as of version 5.3, is a language feature these tools should definitely be using.
+Drupal 8 is the only one using them, it will be interesting to see if and when Joomla and WP follow suit.
+
  Details
 ---------
 By the numbers:
-o download size,
+o download sizes,
 o number of files,
 o number of DB tables,
 o lines of css
+
+By the not-so-quantifiable other stuff:
+o difficulty of upgrading minor revisions (scale of 1-10)
+
+License:
+o Drupal: GPLv2 or later
+o Joomla: GNU General Public License
+o Wordpress: GNU GPLv2+
+
+Versions and histories
+o Drupal: 8.0.3; Initial release	January, 2001
+o Joomla: 3.4.8; Initial release	August 17, 2005
+o Wordpress: 4.4.1; Initial release May 27, 2003
 
 Hi-Level/Overview:
 o Drupal 7: hooks

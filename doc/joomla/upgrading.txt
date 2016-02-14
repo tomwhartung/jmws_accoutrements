@@ -130,9 +130,7 @@ Upgrading Production host:
    bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
    cd joomoowebsites.com
    git pull
-2. Fix Permissions and Test in browswer
-   gojmj
-   sudo chown -R www-data:tomh .
+2. Test in browswer
    ### Test front end in browser
    ###    e.g., Check articles with images
    ### Test back end in browser,

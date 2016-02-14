@@ -126,10 +126,18 @@ and use it for the main procedure, if we want to, next time.
 
 Upgrading Production host:
 --------------------------
+1. Backup DB and pull the code:
    bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
    cd joomoowebsites.com
    git pull
-   test in browswer
+2. Fix Permissions and Test in browswer
+   gojmj
+   sudo chown -R www-data:tomh .
+   ### Test front end in browser
+   ###    e.g., Check articles with images
+   ### Test back end in browser,
+   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
+3. Backup DB and we are done:
    bu j  02-after_upgrade
 
 ##########################################################################

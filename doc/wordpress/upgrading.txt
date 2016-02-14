@@ -19,11 +19,14 @@ Log
 
 All Hosts
 ---------
-1. Backup db on all hosts:
-   bu tw 01-before_upgrade_4.4.1_to_4.4.2
+1. Backup db on all hosts and ensure code matches what is in github:
    [ ] jane
    [ ] bette
    [ ] lauren
+   bu tw 01-before_upgrade_4.4.1_to_4.4.2
+   gotwt
+   git pull
+   git status
 
 Getting core update to work from back end:
 ------------------------------------------

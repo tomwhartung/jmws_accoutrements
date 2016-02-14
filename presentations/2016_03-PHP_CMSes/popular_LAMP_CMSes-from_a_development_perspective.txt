@@ -22,7 +22,7 @@ How:
 -------------------
 I am not an expert in any one of these.
 Being so seems to preclude the ability to be objective, which is my goal.
-I have more experience in Joomla than the others, and like it best, and cannot say for sure whether the experience is prejudicing me....
+I have more experience in Joomla than the others, so that, and the Goldilocks Effect, make me a bit biased.
 
  Miscellaneous Thoughts Had While Working on Other Things
 ----------------------------------------------------------
@@ -38,14 +38,32 @@ Drupal 8 is the only one using them, it will be interesting to see if and when J
 
  Details
 ---------
-By the numbers:
+XXXXXX:
+o Drupal 7: 
+o Drupal 8: 
+o Joomla: 
+o Wordpress: 
+
+XXXXXX:
+  o Drupal: 
+  o Joomla: 
+  o Wordpress: 
+
+By the numbers (spreadsheet?):
 o download sizes,
 o number of files,
 o number of DB tables,
 o lines of css
+o Contributed extensions:
+  o Drupal: 31,000 contributed modules
+  o Joomla: over 7,700 free and commercial extensions
+  o Wordpress: over 40,501 plugins
+
 
 By the not-so-quantifiable other stuff:
-o difficulty of upgrading minor revisions (scale of 1-10)
+---------------------------------------
+Difficulty of upgrading minor revisions (scale of 1-10)
+
 
 License:
 o Drupal: GPLv2 or later
@@ -53,8 +71,8 @@ o Joomla: GNU General Public License
 o Wordpress: GNU GPLv2+
 
 Versions and histories
-o Drupal: 8.0.3; Initial release	January, 2001
-o Joomla: 3.4.8; Initial release	August 17, 2005
+o Drupal: 8.0.3; Initial release January, 2001
+o Joomla: 3.4.8; Initial release August 17, 2005
 o Wordpress: 4.4.1; Initial release May 27, 2003
 
 Hi-Level/Overview:

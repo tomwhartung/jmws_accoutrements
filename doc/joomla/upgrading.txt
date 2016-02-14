@@ -1,6 +1,10 @@
 
 JooMooWebSites.com - Upgrading Notes for 2016
 ---------------------------------------------
+We're always changing this, so this file is mostly to keep track of
+what was done the last time or two, in case we find issues, and to
+give us a starting point, with appropriate cautions and tips, for
+next time.
 
 Before You Start
 ----------------
@@ -9,6 +13,8 @@ Before You Start
    gojmj
    git status
    git pull
+1. Decide which host to do most of the work on:
+   bette (formerly) or jane (most recently)
 
 Log
 ---
@@ -33,6 +39,7 @@ Installation method: Write files directly
 
 Fall Back to Tried and True Manual Procedure - 3.4.5 to 3.4.8:
 --------------------------------------------------------------
+Doing this on jane today.
 0. Always backup DB and ensure code matches what is in github ("Before You Start" above)
 1. Download zip into /var/www/joomoowebsites.com/downloads and unpack
    gojmh
@@ -68,15 +75,57 @@ Fall Back to Tried and True Manual Procedure - 3.4.5 to 3.4.8:
    lnJoomlaCustomizations
    l modules/ templates/    # should see links to my customizations
    l language/en-GB/        # should see links to my customizations
-5. Test All the Things!
-   Test front end in browser
-   Test back end in browser
-6. cd joomoowebsites.com
+5. Fix Permissions and Test All the Things!
+   gojmj
+   sudo chown -R www-data:tomh .
+   ### Test front end in browser
+   ###    e.g., Check articles with images
+   ### Test back end in browser,
+   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
+6. Commit the changes and push to github
    git status
    git add --all
-   gc 'Updated to 3.4.8.' ; gpom
+   gc 'Updated to 3.4.8.' ; git push origin master
+7. Backup the DB and we are done!
    bu j  02-after_upgrade
-7. On backup and production hosts:
+
+Upgrading backup host:
+----------------------
+We have a bit of a history of versions on bette, but have just started it on jane.
+So rather than start from scratch or something, for shitz and gigglez, this time around,
+ran these somewhat unlikely commands to upgrade bette, enabling us to keep the history
+and use it for the main procedure, if we want to, next time.
+1. Upgrade bette using github, keeping version 3.4.5 around for historical and consistency purposes:
+   tar -cvzf joomoowebsites.com-3.4.5.tgz joomoowebsites.com-3.4.5/
+   mkdir unpack
+   mv joomoowebsites.com-3.4.5.tgz unpack/
+   cd unpack/
+   tar -xvzf  joomoowebsites.com-3.4.5.tgz 
+   mv joomoowebsites.com-3.4.5 joomoowebsites.com-3.4.8    # bwahahahah
+   rm joomoowebsites.com-3.4.5.tgz 
+   cd joomoowebsites.com-3.4.8/
+   git pull   # get core upgrade changes checked in on jane
+   cd ../..
+   mv unpack/joomoowebsites.com-3.4.8 .
+   l
+   rm joomoowebsites.com ; ln -s joomoowebsites.com-3.4.8 joomoowebsites.com ; ls -al
+2. Check links and images
+   gojmj
+   l modules/ templates/           # ensure there are links to my customizations
+   l language/en-GB/               # ensure there are links to my customizations
+   l images/joomoowebsites.com/    # ensure there are a few subdirectories
+3. Fix Permissions and Test All the Things!
+   gojmj
+   sudo chown -R www-data:tomh .
+   ### Test front end in browser
+   ###    e.g., Check articles with images
+   ### Test back end in browser,
+   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
+4. Backup the DB and we are done!
+   bu j  02-after_upgrade
+
+Upgrading Production host:
+--------------------------
    bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
    cd joomoowebsites.com
    git pull

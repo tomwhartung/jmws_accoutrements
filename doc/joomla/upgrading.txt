@@ -1,4 +1,92 @@
 
+JooMooWebSites.com - Upgrading Notes for 2016
+---------------------------------------------
+
+Before You Start
+----------------
+0. On ALL hosts: backup DB and ensure code matches what is in github
+   bu jm 01-before_upgrading_to_3.4.8
+   gojmj
+   git status
+   git pull
+
+Log
+---
+[ ] 2016-
+[ ] 2016-xx-xx: 3.4.8 to 3.4.x
+[ ] 2016-02-13: 3.4.5 to 3.4.8
+
+New for 2016: Trying to upgrade via the admin panel (like we do for WP)
+-----------------------------------------------------------------------
+Installation method: Write files directly
+1. Error occurred (unable to write to logs dir).
+   gojmj
+   chmod 775 logs/
+   sudo chgrp www-data logs/
+2. Message: "Download of update package failed."
+   chmod 775 tmp/
+   sudo chgrp www-data tmp/
+3. Pop-up: "Error: Invalid login"
+   Acts like it is working but I suspect it is not
+   Not seeing any solutions right off the bat (and don't feel like more digging)
+
+
+Fall Back to Tried and True Manual Procedure - 3.4.5 to 3.4.8:
+--------------------------------------------------------------
+0. Always backup DB and ensure code matches what is in github ("Before You Start" above)
+1. Download zip into /var/www/joomoowebsites.com/downloads and unpack
+   gojmh
+   mkdir unzip
+   cp ../downloads/Joomla_3.4.8-Stable-Full_Package.zip unzip
+   cd unzip
+   unzip Joomla_3.4.8-Stable-Full_Package.zip
+   rm Joomla_3.4.8-Stable-Full_Package.zip
+   cd ..
+   mv unzip joomoowebsites.com-3.4.8
+2. Copy over the images and switch the link
+   gojmj
+   tar -cvzf images_joomoowebsites.com.tgz images/joomoowebsites.com/
+   cd ..
+   mv  joomoowebsites.com-3.4.5/images_joomoowebsites.com.tgz joomoowebsites.com-3.4.8
+   cd joomoowebsites.com-3.4.8
+   l images                        # should be no subdirectory named joomoowebsites.com !
+   tar -xvzf images_joomoowebsites.com.tgz 
+   rm images_joomoowebsites.com.tgz 
+   l images/joomoowebsites.com/    # should see a few subdirectories now
+   rm joomoowebsites.com  # assuming it's a link to 3.4.5!
+   ln -s joomoowebsites.com-3.4.8 joomoowebsites.com
+3. Update the new directory tree with a copy of the git files, and remove installation directory
+   gojmj
+   cp -r ../joomoowebsites.com-3.4.5/.git* .   # bwahahah
+   rm -fr installation/
+   bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
+4. Update the new directory tree with a link to the configuration file and link in subsites and customizations
+   gojmj
+   ln -s ../gitignored/configuration.php .
+   lnSubsites
+   cd ..
+   lnJoomlaCustomizations
+   l modules/ templates/    # should see links to my customizations
+   l language/en-GB/        # should see links to my customizations
+5. Test All the Things!
+   Test front end in browser
+   Test back end in browser
+6. cd joomoowebsites.com
+   git status
+   git add --all
+   gc 'Updated to 3.4.8.' ; gpom
+   bu j  02-after_upgrade
+7. On backup and production hosts:
+   bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
+   cd joomoowebsites.com
+   git pull
+   test in browswer
+   bu j  02-after_upgrade
+
+##########################################################################
+*** OLD OLD OLD *** FOR POSSIBLE FUTURE REFERENCE ONLY *** OLD OLD OLD ***
+##########################################################################
+
 Introduction
 ------------
 The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.

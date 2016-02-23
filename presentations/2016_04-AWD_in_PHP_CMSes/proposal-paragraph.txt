@@ -1,0 +1,3 @@
+
+I would like to present the work I have been doing lately, with using device detection to determine whether the user is on a phone, tablet, or desktop browser.  I have been adding this capability to the three LAMP CMSes, Wordpress, Joomla, and Drupal (both 7 and 8).  The code uses options set by the administrator to customize the markup, specifically the headings and menus, for each type of device.  The options also determine whether to include jQuery Mobile, adding it and HTML5 data attributes as appropriate, to the markup sent in the response to the target device.
+

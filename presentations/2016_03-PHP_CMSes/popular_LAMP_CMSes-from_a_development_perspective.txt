@@ -24,6 +24,25 @@ I am not an expert in any one of these.
 Being so seems to preclude the ability to be objective, which is my goal.
 I have more experience in Joomla than the others, so that, and the Goldilocks Effect, make me a bit biased.
 
+Google and SEO - "Dynamic Serving:"
+-----------------------------------
+I have found some information on what google thinks about testing the User Agent string.
+References:
+o https://support.google.com/webmasters/answer/66355?hl=en&ref_topic=6001971 (cloaking)
+o https://developers.google.com/webmasters/mobile-sites/mobile-seo/dynamic-serving
+Google has various methods for crawling your site.
+It uses Fetch as Google but they understand that things may look different to curl, wget, and in the browser.
+Google considers cloaking - testing the User Agent string for the google bot and serving different
+content to the google bot/crawler than to browsers - to be serious violation of their guidelines.
+Obviously, if a site serves disney characters to the crawler and porn to browsers, we have a serious problem.
+Google also expresses concern about trusting the User Agent string, due to changes (new devices)
+o See dynamic serving link
+o Ensure the package you are using is kept up to date
+o Use an adapter class that enables easily switching between third party detectors
+o It depends on your use case - what you want to accomplish
+o My work is strictly experimental, prototyping, having fun exploring this idea
+o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
+
  Miscellaneous Thoughts Had While Working on Other Things
 ----------------------------------------------------------
 Joomla: the Goldilocks CMS: not too wordpressy/php4 time bomb, not too drupally/complicated, just right?

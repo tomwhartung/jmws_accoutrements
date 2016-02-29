@@ -14,7 +14,7 @@ Why (other than "because it's there"):
 o Have been curious about Drupal for many years.
 o Want to find where I want to be in the new gadget-laden technological environment. (1)
 o Frankly, it does not make much business sense to take the better part of a year off to do this. (2)
-o But I have learned what my ideal job (this year, anyway) would be (see conclusion).
+o But I have learned what my ideal job (this year, anyway) would be (see very end of file).
 
 How:
 
@@ -51,6 +51,7 @@ o First real job was programming assembler in 1976
 o Not ashamed to admit that I did COBOL for ten years
 o Not competitive whatsoever, born in NC, did not watch Super Bowl, just really truly hate all that....
 o All about being unique and enjoy doing something no one else is doing
+o Very proud of my github streak.
 
 Use Cases:
 My original use case: enhance web presence to make it easier to find a job
@@ -205,13 +206,19 @@ I really did not need to set up separate repos for the different CMSes; branchin
 
 Doing two templates/themes at a time is a good idea, if one is simpler (do it first) than the other.
 
-Not a fan of the draconian drupal code standards.  Makes using the same IDE for wp a pain (have to change the options all too frequently).
+Not a fan of the draconian drupal code standards. Makes using the same IDE for wp a pain (have to change the options all too frequently).
 
 Making use of inheritance in separating what works for all of them from the CMS-specific functionality, is huge fun for me.
 
-Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places, so easy and hard at the same time).
+Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places,
+so easy and hard at the same time).
 
-
+Ideal Job?
+----------
+I think my ideal job would be doing this at a company with several other people.
+I would like to do some of the production coding but also mentor others on how to do that.
+I would like to spend 10-20 hrs per week on research: implementing similar techniques in (adding similar functionality to)
+python CMSes (e.g., Django), JS frameworks (e.g., MEAN stack), maybe even java.
 
  Notes:
 --------

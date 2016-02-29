@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #
-# ln_wordpress_customizations.py: links our customizations, so we can keep them separate from the wordpress code
-# ----------------------------------------------------------------------------------------------------------------
+# lnWordpressCustomizations.py: links our customizations, so we can keep them separate from the wordpress core code
+# -----------------------------------------------------------------------------------------------------------------
 #
 import os
 from os import chdir, getcwd, listdir

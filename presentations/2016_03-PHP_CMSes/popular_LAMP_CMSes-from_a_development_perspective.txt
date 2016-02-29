@@ -38,14 +38,15 @@ Obviously, if a site serves disney characters to the crawler and porn to browser
 Google also expresses concern about trusting the User Agent string, due to changes (new devices)
 o See dynamic serving link
 o Ensure the package you are using is kept up to date
+o Continuous Integration (frequently deploying even minor changes) is becoming increasingly popular
+  Moreover, anything that can be done with a fixed set of specific commands is subject to automation
 o Use an adapter class that enables easily switching between third party detectors
 o It depends on your use case - what you want to accomplish
 o My work is strictly experimental, prototyping, having fun exploring this idea
-o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
 
  Some Ideas About Format/Goals:
 --------------------------------
-Open to Suggestions for How, or even Whether, to Proceed With This Idea
+Open to Suggestions for How, or even Whether, to Proceed With This Idea ("Your mission, should you choose to accept it....")
 Some personal facts to keep in mind:
 o First real job was programming assembler in 1976
 o Not ashamed to admit that I did COBOL for ten years
@@ -54,16 +55,24 @@ o All about being unique and enjoy doing something no one else is doing
 o Very proud of my github streak.
 
 Use Cases:
-My original use case: enhance web presence to make it easier to find a job
+My original use case: enhance web presence to make it easier to find a job (also see Another Reason below)
 Mobile-only navigation: which seems most practical?
 a. header and footer nav
 b. hamburger menu icons
 c. both
 d. other? _____________________________________
 Mobile-Only Forms
+o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
 o jQuery Mobile is very nice, but you would not want to use it on the desktop
   Just including this and allowing people to build on and use it, might be a valuable use-case in and of itself
 o HTML5 form elements address some of these issues, but I am unsure about specifics and mobile browser support.
+O Potentially a lot of people don't even use mobile devices because they think their fingers are too fat (possible line in Rescue Me?)
+
+Another important reason for doing this:
+o Wrote a joomla 1.5 component, currently running on seeourminds.com (1.7) that I need to upgrade
+o People say that to migrate from 1.x to 2.x or 3.x, you might as well start over
+o This exercise was also to gain experience with WP and Drupal, to see if maybe I should just switch to one of them
+o Verdict on this count: sticking with Joomla, as it is the Goldilocks Option in so many ways.
 
 Phase 1: Develop these extensions
 Phase 2: See several possibilities.  Not sure how to proceed and would appreciate some gentle feedback.
@@ -112,7 +121,9 @@ o Contributed extensions:
 By the not-so-quantifiable other stuff:
 ---------------------------------------
 Difficulty of upgrading minor revisions (scale of 1-10)
-
+  o Drupal: 
+  o Joomla: 
+  o Wordpress: 
 
 License:
 o Drupal: GPLv2 or later
@@ -182,8 +193,18 @@ o Wordpress:
 
  Challenges:
 -------------
+Caching in drupal is a major issue
+o If the caching mechanism does not know that you are using device detection, it will not work properly
+  It caches the markup for whatever type of device hits it first, then serves that to all devices
+o There is a way to turn it off but I do not trust it for Drupal 8
+  o whitescreens (state of DB and filesystem are intertwined, if it gets "confused" your site dies, totally)
+  o experience makes me believe that turning it off is not enough
+    (sometimes I do not see changes to code reflected in the markup, so I clear it anyway, to be "safe")
+  o clearing in back end seems to be more thorough (but subject to being disabled by whitescreens)
+  o clearing using drush is easier but seems to not do quite as thorough a job
 Multiple IDEs
-o Drupal coding standards
+o Drupal has strict coding standards, indent by two spaces, do not use tabs
+o I was a spaces person for a long time but just recently converted to tabs...
 
  Recommendations:
 ------------------

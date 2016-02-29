@@ -205,6 +205,16 @@ o There is a way to turn it off but I do not trust it for Drupal 8
 Multiple IDEs
 o Drupal has strict coding standards, indent by two spaces, do not use tabs
 o I was a spaces person for a long time but just recently converted to tabs...
+Where I spent my time
+o Really I spent very little time on coding
+o A great deal of time was spent researching, especially device detection and drupal
+o Spent quite a bit of time learning jQuery Mobile but did not use very much of it
+o Spent a huge amount of time on Drupal but have very little to show for it
+o Something complicated like is best learned in a book, so you can:
+  o Get background information by reading the first few chapters sequentially
+  o Use the TOC, flip through apparently-relevant chapters, and use the index to find what you need
+  o The web is a viable substitute, but many of the D8 pages are labelled "Incomplete" or "Needs Updating"
+  o Resorting to having to find info on youtube, twitter, and in the core source is time consuming
 
  Recommendations:
 ------------------

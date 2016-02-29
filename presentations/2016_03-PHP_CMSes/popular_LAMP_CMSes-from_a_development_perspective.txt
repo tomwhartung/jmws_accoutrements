@@ -43,6 +43,35 @@ o It depends on your use case - what you want to accomplish
 o My work is strictly experimental, prototyping, having fun exploring this idea
 o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
 
+ Some Ideas About Format/Goals:
+--------------------------------
+Open to Suggestions for How, or even Whether, to Proceed With This Idea
+Some personal facts to keep in mind:
+o First real job was programming assembler in 1976
+o Not ashamed to admit that I did COBOL for ten years
+o Not competitive whatsoever, born in NC, did not watch Super Bowl, just really truly hate all that....
+o All about being unique and enjoy doing something no one else is doing
+
+Use Cases:
+My original use case: enhance web presence to make it easier to find a job
+Mobile-only navigation: which seems most practical?
+a. header and footer nav
+b. hamburger menu icons
+c. both
+d. other? _____________________________________
+Mobile-Only Forms
+o jQuery Mobile is very nice, but you would not want to use it on the desktop
+  Just including this and allowing people to build on and use it, might be a valuable use-case in and of itself
+o HTML5 form elements address some of these issues, but I am unsure about specifics and mobile browser support.
+
+Phase 1: Develop these extensions
+Phase 2: See several possibilities.  Not sure how to proceed and would appreciate some gentle feedback.
+o Look for corporate minion job
+o Polish one or more of these and put in the extension store for the CMS(es)
+o Continue CMS work on a freelance basis
+o Found a startup that specializes in this sort of work
+  - Make it easy for site admins and other extension developers to do this
+
  Miscellaneous Thoughts Had While Working on Other Things
 ----------------------------------------------------------
 Joomla: the Goldilocks CMS: not too wordpressy/php4 time bomb, not too drupally/complicated, just right?

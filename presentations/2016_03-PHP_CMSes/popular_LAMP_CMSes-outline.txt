@@ -1,4 +1,15 @@
 
+ High-Level Outline
+====================
+1. Brief Description of What I Am Working On
+2. Questions I Have for You at the End
+3. Comparing the Three CMSes - Quick Facts
+4. Status of What I Am Working On
+5. Details: Delving Into Code
+6. Lessons and other Take-Aways
+7. Your Questions for Me
+8. My Questions for You
+
  Looking at Three Popular LAMP CMSes From a Developer's Perspective
 ===================================================================
 Adding Device Detection to Joomla, WordPress, and Drupal: Compare and Contrast

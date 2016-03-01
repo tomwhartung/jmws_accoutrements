@@ -1,0 +1,38 @@
+
+ Adding Device Detection to Three Popular LAMP CMSes
+=====================================================
+Tom W. Hartung
+
+Denver Joomla Meetup Group, March 1, 2016.
+
+My Questions for You!
+
+
+
+Name (optional): __________________________________________________________
+
+
+Occupation (optional): ____________________________________________________
+
+1. Do you think this idea is worth pursuing, or should I go back to
+   full time corporate drone work?
+
+
+
+
+
+
+2. Do you have any use cases - scenarios in which you think this
+   technique would be useful?
+
+
+
+
+
+
+
+
+3. What is, or could be, the most interesting thing or things I could
+   present about this topic?
+
+

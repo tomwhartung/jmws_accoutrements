@@ -1,4 +1,8 @@
 
+ Adding Device Detectio to Three Popular LAMP CMSes
+====================================================
+Aka. What I did on my code-cation.
+
  High-Level Outline
 ====================
 1. Brief Description of What I Am Working On
@@ -6,34 +10,55 @@
 3. Comparing the Three CMSes - Quick Facts
 4. Status of What I Am Working On
 5. Details: Delving Into Code
-6. Lessons and other Take-Aways
+6. Lessons and other Takeaways
 7. Your Questions for Me
 8. My Questions for You
 
- Looking at Three Popular LAMP CMSes From a Developer's Perspective
-===================================================================
-Adding Device Detection to Joomla, WordPress, and Drupal: Compare and Contrast
-
-What I did on my summer code-cation (that lasted well into the winter, thanks in large part to Drupal 8).
-
  Introduction
 --------------
+A Little Bit About Me:
+o First real job was programming assembler in 1976
+o Not ashamed to admit that I did COBOL for ten years
+o Not competitive whatsoever, born in NC, did not watch Super Bowl, just really truly hate all that....
+o All about being unique and enjoy doing something no one else is doing
+o Very proud of my github streak.
+
 What:
-Implemented Adaptive Web Design (as opposed to Responsive Web Design) by adding Device Detection to Drupal 7 & 8, Joomla, and WordPress
+o Implemented Adaptive Web Design (as opposed to Responsive Web Design) by adding Device Detection to Joomla, WordPress, and Drupal 7 & 8
+o Started with an adapter class (IdMyGadget), allowing easily switching between different Device Detectors
+  o To see IdMyGadget in action without a CMS, see my resume at tomwhartung.com/resume
+o Adaptive Web Design seeks to solve the same problem as Responsive Web Design, but in a different way
+  o Responsive techniques serve the same markup to all devices, along with CSS rules (media queries)
 
-Why (other than "because it's there"):
-o Have been curious about Drupal for many years.
-o Want to find where I want to be in the new gadget-laden technological environment. (1)
-o Frankly, it does not make much business sense to take the better part of a year off to do this. (2)
-o But I have learned what my ideal job (this year, anyway) would be (see very end of file).
+Why:
+o Wanted to improve my web presence, to make it easier to find a job
+o Thinking that I might want to try free-lancing rather than full time employment (because that is a trend)
+o Thinking that the three are similar and learning all can give me insight and allow me to leverage commonalities
+o Have to re-do my groja.com/seeourminds.com component, so may want to pick a different CMS
+o Have been curious about Drupal for many years
 
-How:
+Takeaways:
+o Joomla is in many respects the Goldilocks CMS
+o I will be sticking with Joomla for my groja.com/seeourminds.com component (but convert as much as possible to JavaScript, because it is ubiquitous)
+o Drupal (especially D8) has a lot of unique and valuable features, but is also very very complicated,
+  o This makes it more time-consuming than the others to work with
 
- Caveat/Disclaimer
--------------------
-I am not an expert in any one of these.
-Being so seems to preclude the ability to be objective, which is my goal.
-I have more experience in Joomla than the others, so that, and the Goldilocks Effect, make me a bit biased.
+My Opinions Are Subject to Bias:
+o I have more experience in Joomla than the others, so that, and the Goldilocks Effect, make me a bit biased.
+o Please do not repeat any of the negative things I might say about Drupal, if I get an offer of $$$ to work with it, I will probably go for it
+    "Will do Drupal (or most any other type of coding) for food."
+
+ My Questions for You (Your Mission: To Answer These at the End)
+-----------------------------------------------------------------
+1. Do you think this idea is worth pursuing, or should I go back to full time corporate drone work?
+   I have been hanging out a bit with the startup community....
+   There may not be a high demand for this (right now) but I am fine with that
+   I believe that as time goes on demand will grow, and it would be very cool to be prepared to take advantage of that
+   (This seems to be what people expect now: for someone to have already solved a problem they just now became aware of.)
+
+2. Do you have any use cases - scenarios in which you think this technique would be useful?
+
+
 
 Google and SEO - "Dynamic Serving:"
 -----------------------------------
@@ -57,13 +82,6 @@ o My work is strictly experimental, prototyping, having fun exploring this idea
 
  Some Ideas About Format/Goals:
 --------------------------------
-Open to Suggestions for How, or even Whether, to Proceed With This Idea ("Your mission, should you choose to accept it....")
-Some personal facts to keep in mind:
-o First real job was programming assembler in 1976
-o Not ashamed to admit that I did COBOL for ten years
-o Not competitive whatsoever, born in NC, did not watch Super Bowl, just really truly hate all that....
-o All about being unique and enjoy doing something no one else is doing
-o Very proud of my github streak.
 
 Use Cases:
 My original use case: enhance web presence to make it easier to find a job (also see Another Reason below)
@@ -261,9 +279,4 @@ I think my ideal job would be doing this at a company with several other people.
 I would like to do some of the production coding but also mentor others on how to do that.
 I would like to spend 10-20 hrs per week on research: implementing similar techniques in (adding similar functionality to)
 python CMSes (e.g., Django), JS frameworks (e.g., MEAN stack), maybe even java.
-
- Notes:
---------
-(1) I was reading a lot of the O'Reilly books and was very intrigued by some information about device detection in Building Android Apps with CSS, JavaScript, and HTML5 by Jonathan Stark, which has some information about device detection in an appendix.
-(2) I keep reading in various email newsletters I get, about how more and more people are freelancing, and must admit it holds a certain appeal....
 

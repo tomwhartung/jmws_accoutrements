@@ -1,6 +1,6 @@
 
- Adding Device Detectio to Three Popular LAMP CMSes
-====================================================
+ Adding Device Detection to Three Popular LAMP CMSes
+=====================================================
 Aka. What I did on my code-cation.
 
  High-Level Outline
@@ -73,6 +73,10 @@ o  Looking to brainstorm ideas....
 o  I believe more people would be willing to use this technique if they had easy-to-use tools already built
 o  I'd like to think that offering a freemium-type product would be an excellent way to bring in business
 o  To do this right, I'd want to know what sort of things would interest people, i.e., use cases
+
+3. What is, or could be, the most interesting things I could present about this topic?
+o  HTML5 meetup: hoping to give a lightning talk about this in April
+o  Willing and would like to give other talks to this and other groups (PHP, Drupal, WP) around town 
 
  Status of What I Am Working On
 --------------------------------
@@ -172,28 +176,18 @@ o Drupal 7: figure out how to create the magic array in the correct hook
 o Drupal 8: similar to D7: figure out how to create the magic array in the correct hook
 
 Community:
-Was able to create accounts easily on drupal.org and wordpress.org.
-Tried to create an account on joomla.org several times, and finally succeeded (I hope)
-Drupal seems to have the most closely-knit community, with many conferences and four meetups along the Front Range
-I think this is because to use it, you really need help (one of the books mentions this)
-Apparently they have code sprints (slave labor ;-) ) at their conferences
+o Wordpress: was able to create accounts easily on wordpress.org; did not attempt any edits, etc.
+o Joomla: it took several tries to successfully create an account on joomla.org, and finally succeeded only recently (I hope)
+o Drupal: was able to create accounts easily on drupal.org; did not attempt any edits, etc.
+  Drupal seems to have the most closely-knit community, with many conferences and four meetups along the Front Range
+  I think this is because to use it, you really need help (one of the books mentions this)
+  Apparently they have code sprints (slave labor ;-) ) at their conferences
 
 XXXXXX:
 o Wordpress:
 o Joomla:
 o Drupal 7: 
 o Drupal 8:
-
-XXXXXX:
-o Wordpress: 
-o Joomla: 
-o Drupal 7: 
-o Drupal 8: 
-
-XXXXXX:
-o Wordpress: 
-o Joomla: 
-o Drupal: 
 
 
  Details: Delving Into Code

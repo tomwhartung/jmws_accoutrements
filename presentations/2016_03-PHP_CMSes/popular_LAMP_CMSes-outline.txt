@@ -49,12 +49,14 @@ o Have been curious about Drupal for many years
 
 My Opinions Are Subject to Bias:
 o I have more experience in Joomla than the others, so that, and the Goldilocks Effect, make me a bit biased.
-o Please do not repeat any of the negative things I might say about Drupal, if I get an offer of $$$ to work with it, I will probably go for it
+o Please do not repeat any of the negative things I might say about Drupal,
+  If I get an offer of $$$ to work with it, I will probably go for it
     "Will do Drupal (or most any other type of coding) for food."
 
 Takeaways:
 o Joomla is in many respects the Goldilocks CMS
-o I will be sticking with Joomla for my groja.com/seeourminds.com component (but convert as much as possible to JavaScript, because it is ubiquitous)
+o I will be sticking with Joomla for my groja.com/seeourminds.com component
+  (but want to convert as much as possible to JavaScript, because it is ubiquitous)
 o Drupal (especially D8) has a lot of unique and valuable features, but is also very very complicated,
   o This makes it more time-consuming than the others to work with
 
@@ -80,100 +82,118 @@ Drupal site (tomhartung.com): device-specific headings are working, menus not ye
 
  Comparing the Three CMSes
 ---------------------------
-By the numbers (spreadsheet?):
-o download sizes,
-o number of files,
-o number of DB tables,
-o lines of css
-o Contributed extensions:
-  o Drupal: 31,000 contributed modules
-  o Joomla: over 7,700 free and commercial extensions
-  o Wordpress: over 40,501 plugins
+Download sizes:
+o Wordpress: 6.8M (wordpress-4.3.1.zip)
+o Joomla:   11.0M (Joomla_3.4.5-Stable-Full_Package.zip)
+o Drupal 7:  3.2M (drupal-7.41.tar.gz)
+o Drupal 8: 12.0M (drupal-8.0.3.tar.gz)
 
+Number of files (source: my installations):
+o Wordpress: 1,350
+o Joomla:    4,692
+o Drupal 7:  1,086
+o Drupal 8: 14,387
 
-By the not-so-quantifiable other stuff:
----------------------------------------
-Difficulty of upgrading minor revisions (scale of 1-10)
-  o Drupal: 
-  o Joomla: 
-  o Wordpress: 
+Number of DB tables (source: my installations):
+o Wordpress: 12
+o Joomla:    67
+o Drupal 7:  76
+o Drupal 8: 187 (some tables linger from automatic conversion)
 
-License:
-o Drupal: GPLv2 or later
-o Joomla: GNU General Public License
+Contributed extensions (Source: wikipedia):
+o Drupal:         31,000 contributed modules
+o Joomla:     over 7,700 free and commercial extensions
+o Wordpress: over 40,501 plugins
+
+Difficulty of upgrading minor revisions (subjective, scale of 1-10)
+o Wordpress: 2 (super easy, can configure to update automatically)
+o Joomla: 5
+o Drupal 7 & 8: 9 (still working on optimizing this process)
+
+License (essentially all the same):
 o Wordpress: GNU GPLv2+
+o Joomla: GNU General Public License
+o Drupal: GPLv2 or later
 
-Versions and histories
-o Drupal: 8.0.3; Initial release January, 2001
-o Joomla: 3.4.8; Initial release August 17, 2005
+Current Versions and Initial Release Dates
 o Wordpress: 4.4.1; Initial release May 27, 2003
+o Joomla: 3.4.8; Initial release August 17, 2005
+o Drupal: 8.0.3; Initial release January, 2001
 
-Hi-Level/Overview:
+Development How-To - Hi-Level/Overview:
+o Wordpress: hooks
+o Joomla: regular programming (MVC framework available) - for lack of a better term
 o Drupal 7: hooks
 o Drupal 8: Symfony used for modules, themes still use mainly hooks
-o Joomla:
-o Wordpress: hooks
 
 Finding documentation:
-o Drupal 7: 
-o Drupal 8: When I was working on it, much was missing and incomplete.  It's nice that they tell you when pages "Need Work."
-o Joomla:
 o Wordpress:
+  - bought one book that covers admin and touches on development
+  - site is well-organized, info easy to find
+o Joomla:
+  - bought several Packt books for 1.5 (meh), and one 3.x O'Reilly book that has very little info for devs.
+  - site is well-organized, info easy to find
+o Drupal 7:
+  - bought two O'Reilly books, one for admin, one for dev; dev book has very little concrete info for devs though
+  - site is well-organized, info easy to find
+o Drupal 8:
+  - bought updated O'Reilly dev book, has very little concrete info for devs but it was helpful
+  - site: when I was working on it, much was missing and incomplete.  It's nice that they tell you when pages "Need Work."
 
 Extension Types:
+o Wordpress: plugins and themes
+o Joomla: components, modules, templates, plugins (not the same as WP plugins), and libraries
 o Drupal 7: modules and themes
 o Drupal 8: modules and themes
-o Joomla: components, modules, templates, plugins (not the same as WP plugins), and libraries
-o Wordpress: plugins and themes
 
-Adding options:
-All are different:
+Adding options (might be nice to look at the code next time):
+o Wordpress: array based
+o Joomla: xml-based
 o Drupal 7: array based
 o Drupal 8: OOP and array based
-o Joomla: xml-based)
-o Wordpress: array based
 
 Finding markup:
-o Drupal 7: 
-o Drupal 8: When I was working on it, much was missing and incomplete.  It's nice that they tell you when pages "Need Work."
-o Joomla:
 o Wordpress:
-
-again, joomla is different, having a "mainline" in index.php
-wp and drupal use templates, which is a little confusing at first, but easy enough once you get going
-Drupal Reference: https://www.drupal.org/node/190815
+  PHP template based
+o Joomla:
+  Has a "mainline" in index.php, that allows using templates
+o Drupal 7: 
+  PHP template based, similar to WordPress, but different
+o Drupal 8:
+  Twig template based, similar to D7, but using Twig
 
 Managing js and css:
-Much more difficult than it should be!
-The CMS wants to control that for you.
-It should be OK to just include a link tag, and I suppose you could, but that is not what you are supposed to do.
-Instead, each has its vastly different "super clever" way of doing things.  Uhg what a pain.
-o Drupal 7: 
-o Drupal 8:
-o Joomla:
+In all cases, this is much more difficult than it should be, and each has it's own way of doing things
+But the CMS wants to control that for you, for good reason
+(i.e., so you can selectively include files, based on what page is being served).
 o Wordpress: enqueue something
+o Joomla:
+o Drupal 7: figure out how to create the magic array in the correct hook
+o Drupal 8: similar to D7: figure out how to create the magic array in the correct hook
 
 Community:
-Drupal seems to have the most closely-knit community, with many conferences.
-Tried to create an account on joomla.org several times, to no avail
-Was able to create one easily on drupal.org and wordpress.org.
+Was able to create accounts easily on drupal.org and wordpress.org.
+Tried to create an account on joomla.org several times, and finally succeeded (I hope)
+Drupal seems to have the most closely-knit community, with many conferences and four meetups along the Front Range
+I think this is because to use it, you really need help (one of the books mentions this)
+Apparently they have code sprints (slave labor ;-) ) at their conferences
 
 XXXXXX:
+o Wordpress:
+o Joomla:
 o Drupal 7: 
 o Drupal 8:
-o Joomla:
-o Wordpress:
 
 XXXXXX:
+o Wordpress: 
+o Joomla: 
 o Drupal 7: 
 o Drupal 8: 
-o Joomla: 
-o Wordpress: 
 
 XXXXXX:
-  o Drupal: 
-  o Joomla: 
-  o Wordpress: 
+o Wordpress: 
+o Joomla: 
+o Drupal: 
 
 
  Details: Delving Into Code

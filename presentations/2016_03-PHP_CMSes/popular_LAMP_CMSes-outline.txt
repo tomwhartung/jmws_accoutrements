@@ -73,16 +73,34 @@ o  Looking to brainstorm ideas....
 o  I believe more people would be willing to use this technique if they had easy-to-use tools already built
 o  I'd like to think that offering a freemium-type product would be an excellent way to bring in business
 o  To do this right, I'd want to know what sort of things would interest people, i.e., use cases
+o  Use jQuery Mobile's Form Elements on mobile devices only
+   o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
+   o jQuery Mobile is very nice, but you would not want to use it on the desktop
+     Just including this and allowing people to build on and use it, might be a valuable use-case in and of itself
+   o HTML5 form elements address some of these issues, but I am unsure about specifics and mobile browser support.
+   O Potentially a lot of people don't even use mobile devices because they think their fingers are too fat
+    (believe I heard this "punch line" on Rescue Me?)
 
 3. What is, or could be, the most interesting things I could present about this topic?
 o  HTML5 meetup: hoping to give a lightning talk about this in April
 o  Willing and would like to give other talks to this and other groups (PHP, Drupal, WP) around town 
+Mobile-only navigation: which seems most practical?
+a. header and footer nav
+b. hamburger menu icons
+
+4. Is it worthwhile to polish one or more of these and put in the extension store for the CMS(es)?
+
 
  Status of What I Am Working On
 --------------------------------
-Joomla site (joomoowebsites.com): development done but could be refactored
-WordPress site (tomwhartung.com): development mostly done, menus not yet fully functional because I need to add content first
-Drupal site (tomhartung.com): device-specific headings are working, menus not yet fully functional because I need to add content first
+My use case (enhancements that I want for myself)
+o  Headings configurable by device type
+o  Header and footer phone navigation
+o  Hamburger Menu Icon
+Status:
+o  Joomla site (joomoowebsites.com): development done but could be refactored
+o  WordPress site (tomwhartung.com): development mostly done, menus not yet fully functional because I need to add content first
+o  Drupal site (tomhartung.com): device-specific headings are working, menus not yet fully functional because I need to add content first
 
  Comparing the Three CMSes
 ---------------------------
@@ -195,8 +213,54 @@ o Drupal 8:
 Optional, depending on interest
 Maybe save this for next time?
 
- Lessons and other Takeaways
-----------------------------
+ Lessons Learned and Other Takeaways
+-------------------------------------
+If trying to learn WordPress, Drupal, and jQuery Mobile all at the same time sound challenging, I can say that yes, it is.
+To me though, this is really fun.  And it is super fun to work on different CMSes in parallel.  Tired of working for free though.
+
+Making use of inheritance in separating what works for all of them from the CMS-specific functionality, is huge fun for me.
+
+I was able to use quite a bit of code, more than expected, on all three.  I find this to be super-fun!
+
+I really did not need to set up separate repos for the different CMSes; branching would have been a better solution.
+
+Doing two templates/themes at a time is a good idea, if one is simpler (do it first) than the other.
+
+Because I was learning these (especially WP and the Drupals) as I went along, I found it easier
+to add the functionality to a simple theme (Our Theme in WP, Stark in Drupal), then once that
+looked OK, add the bare minimum to the "real" theme (TwentyThirteen and Bartik).
+
+Doing something like this takes a long time the first time, but goes more quickly with "practice."
+I would like to do more work like this, and not just with PHP CMSes....
+
+Adaptive WD and Responsive WD can work fine together.
+I'd suggest doing the Adaptive part first, and use it to make adding the Responsive part easier.
+
+Not a fan of the Drupal coding standards. Makes using the same IDE for Joomla and/or WP a pain;
+have to change the options all too frequently, wound up switching between eclipse and netbeans (always using vi).
+
+Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places,
+so easy and hard at the same time).
+
+Miss-steps:
+WP - TwentyFifteen: adding DD to it did not work well, started over with TwentyThirteen
+Drupal 7: jQuery Mobile incompatibility issue
+Drupal 8: there were many miss-steps, see obsolete repos on github
+    actually found valuable information on youtube and even twitter
+
+Drupal 8: what you get for enduring its complexity
+o  Caching - great for production
+o  Core is now largely based on the Symfony framework
+o  Unit testing framework built in
+o  (Mostly) clear separation of backend and front end code
+   (Did see a <p> tag in a module's message, when my understanding was that all markup was in the theme layer)
+o  Ready (or getting there) for IoT (REST/"headless drupal")
+o  Uses PHP Name spaces (a new development in the language,
+   but very valuable for this sort of kernel_plugin type of architecture)
+
+If I was going to do this again, I would do Drupal first.
+o It forces (or at least strongly encourages and enables) you to organize your code better (e.g., namespaces)
+o The others (especially WP) would be a piece of cake
 
  Your Questions for Me
 -----------------------
@@ -225,37 +289,10 @@ New Questions?
 
  My Questions for You
 ----------------------
-Possible Use Cases:
-My original use case: enhance web presence to make it easier to find a job (also see Another Reason below)
-Mobile-only navigation: which seems most practical?
-a. header and footer nav
-b. hamburger menu icons
-Mobile-Only Forms
-o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
-o jQuery Mobile is very nice, but you would not want to use it on the desktop
-  Just including this and allowing people to build on and use it, might be a valuable use-case in and of itself
-o HTML5 form elements address some of these issues, but I am unsure about specifics and mobile browser support.
-O Potentially a lot of people don't even use mobile devices because they think their fingers are too fat (possible line in Rescue Me?)
-
-Phase 1: Develop these extensions
-Phase 2: See several possibilities.  Not sure how to proceed and would appreciate some gentle feedback.
-o Look for corporate minion job
-o Polish one or more of these and put in the extension store for the CMS(es)
-o Continue CMS work on a freelance basis
-o Found a startup that specializes in this sort of work
-  - Make it easy for site admins and other extension developers to do this
-
  Miscellaneous Thoughts Had While Working on Other Things
 ----------------------------------------------------------
 Joomla: the Goldilocks CMS: not too wordpressy/php4 time bomb, not too drupally/complicated, just right?
 
-Observation: Switching between these is difficult, and not very productive, but fun, and very enlightening.
-
-Observation: Doing something like this takes a long time the first time, but goes more quickly with "practice."
-I would like to do more work like this, and not just with PHP CMSes....
-
-Observation: PHP Namespaces, part of the language as of version 5.3, is a language feature these tools should definitely be using.
-Drupal 8 is the only one using them, it will be interesting to see if and when Joomla and WP follow suit.
 
 
  Challenges:
@@ -285,32 +322,11 @@ o Something complicated like is best learned in a book, so you can:
 
  Recommendations:
 ------------------
-If I was going to do this again, I would do Drupal first.
-o It forces (or at least strongly encourages and enables) you to organize your code better (e.g., namespaces)
-o The others (especially WP) would be a piece of cake
-
-It is much easier to find a simplistic, minimal template and add device detection to that first, then work on one that is more complicated.
-
 In a case like this, where I am inventing the process as I go, it is nice when I can work on things in parallel.
 E.g., add the module/library to each CMS, instantiate and initialze device detection in all CMSes, add css to all templates/themes, add js to all templates/themes, add the options, update the html, etc.
 
  Summary/Conclusions:
 ----------------------
-If trying to learn WordPress, Drupal, and jQuery Mobile all at the same time sound challenging, I can say that yes, it is.
-
-I was able to use quite a bit of code, more than expected, on all three.
-
-I really did not need to set up separate repos for the different CMSes; branching would have been a better solution.
-
-Doing two templates/themes at a time is a good idea, if one is simpler (do it first) than the other.
-
-Not a fan of the draconian drupal code standards. Makes using the same IDE for wp a pain (have to change the options all too frequently).
-
-Making use of inheritance in separating what works for all of them from the CMS-specific functionality, is huge fun for me.
-
-Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places,
-so easy and hard at the same time).
-
 Ideal Job?
 ----------
 I think my ideal job would be doing this at a company with several other people.

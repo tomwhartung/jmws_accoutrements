@@ -164,7 +164,7 @@ change the owner of the files in the WP installation directory tree.
    git add --all
    git commit -m 'Upgraded akismet to latest version' ; gpom
 7. Never hurts to backup the db!
-   bu tw 02-upgraded_akismet_to_latest version
+   bu tw 02-upgraded_akismet_to_latest_version
 
 [ ] bette:
 Right now we are just updating akismet, which we are not using, but we

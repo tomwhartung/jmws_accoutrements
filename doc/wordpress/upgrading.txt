@@ -144,51 +144,75 @@ which might be helpful in case there is an issue with the new version.
 
 Updating plugins
 ----------------
-[ ] bette: 
-We are able to update plugins using the admin back end, as long as we ...
-1. Ensure the following line is in wp-config.php :
+[ ] jane:
+We are able to update plugins using the admin back end, as long as we
+change the owner of the files in the WP installation directory tree.
+1. It never hurts to backup the db!
+   bu tw 01-before_upgrading_akismet
+2. Ensure the following line is in wp-config.php :
    define('FS_METHOD','direct');
-2. Change the owner of all files to www-data:
+3. Change the owner of all files to www-data:
    gotwt
    sudo chown -R www-data *
-3. Update in admin back end
+4. Update in admin back end
    Admin -> Plugins -> "update now" link for the plugin
-4. Change the owner of all files back to tomh:
+5. Change the owner of all files back to tomh:
    gotwt
    sudo chown -R tomh *
-5. Commit changes and push
+6. Commit changes and push
    gotwt
    git add --all
-   git commit -m 'Upgrade akismet to 3.1.5' ; gpom
-6. Never hurts to backup the db!
-   bu tw 03-after_upgrade_akismet_to_3.1.5
+   git commit -m 'Upgraded akismet to latest version' ; gpom
+7. Never hurts to backup the db!
+   bu tw 02-upgraded_akismet_to_latest_version
 
-[ ] jane: 
+[ ] bette:
 Right now we are just updating akismet, which we are not using, but we
 do want to clear the update flag.  The question is, does updating the
 plugin affect the database?  To be on the safe side, we must assume it does.
 So we will update it in the back end - to make any DB changes needed in the
 local DB, then remove those files and pull code to make git happy.
-1. Ensure the following line is in wp-config.php :
-   define('FS_METHOD','direct');
-2. Change the owner of all files to www-data:
-   gotwt
-   sudo chown -R www-data *
-3. Update in admin back end (to get any changes needed to local DB)
-   Admin -> Plugins -> "update now" link for the plugin
-4. Change the owner of all files back to tomh:
-   gotwt
-   sudo chown -R tomh *
-5. Remove changes, checkout current version, and pull code
-   gotwt
-   gs
-   cd wp-content/plugins/
-   l akismet/
-   rm -fr akismet/ ; git checkout akismet/ ; gp
-   sum akismet/*   # optionally/for best results compare to version on bette...
-   gotwt
-6. Never hurts to backup the db!
-   bu tw 03-after_upgrade_akismet_to_3.1.5
+1. It never hurts to backup the dbs!
+   jane: bu tw 03-before_changing_urls
+   bette: bu tw 01-before_updating_from_jane
+2. Change URLS on jane to point to bette:
+   jane: Admin -> General Settings
+   Change the WordPress Address (URL) to point to bette
+   Change the Site Address (URL) to point to bette
+3. Backup DB on jane and copy to bette
+   jane: gobu
+   jane: bu tw 04-changed_urls_to_bette
+   toBette tomwhartung.com-2016_03_24-jane-04-changed_urls_to_bette.sql.gz
+4. Restore db on jane to version saved before changing the URLs
+   jane: rs tw 03-before_changing_urls
+5. Restore new db on bette
+   bette: gobu
+   bette: rs -h jane tw 04-changed_urls_to_bette
+6. Backup both dbs so that the most recent copy is readily available
+   jane: bu tw 05-restored_to_latest_version
+   bette: bu tw 02-updated_to_latest_from_jane
+
+### Old Process (save for possible future reference):
+### 1. Ensure the following line is in wp-config.php :
+###    define('FS_METHOD','direct');
+### 2. Change the owner of all files to www-data:
+###    gotwt
+###    sudo chown -R www-data *
+### 3. Update in admin back end (to get any changes needed to local DB)
+###    Admin -> Plugins -> "update now" link for the plugin
+### 4. Change the owner of all files back to tomh:
+###    gotwt
+###    sudo chown -R tomh *
+### 5. Remove changes, checkout current version, and pull code
+###    gotwt
+###    gs
+###    cd wp-content/plugins/
+###    l akismet/
+###    rm -fr akismet/ ; git checkout akismet/ ; gp
+###    sum akismet/*   # optionally/for best results compare to version on bette...
+###    gotwt
+### 6. Never hurts to backup the db!
+###    bu tw 03-after_upgrade_akismet_to_3.1.5
 
 [ ] lauren: 
 As long as jane works, follow same processs to update lauren.

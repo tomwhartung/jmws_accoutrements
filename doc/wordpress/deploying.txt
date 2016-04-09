@@ -1,12 +1,50 @@
 
  WordPress Deployment Notes:
 =============================
-When deploying, I am a big fan of copying the db on my development or test host to production.
+When deploying, I like to copy the db on my development or test host to production.
 
-This can cause issues, and specifically ...
+The Process: (tested 3/24/2016)
+-------------------------------
+1. Backup db on jane (or bette) and in production
+   jane (or bette): bu tw 01-before_changing_urls_to_www
+   lauren: bu tw 01-before_updating_to_latest
+2. Change URLs to point to www:
+   jane (or bette): Admin -> General Settings
+   Change the WordPress Address (URL) to point to www
+   Change the Site Address (URL) to point to www
+   Click on Save Changes button
+3. Backup copy of db with the new URLs:
+   jane (or bette): gobu
+   jane (or bette): bu tw 02-changed_urls_to_www
+4. Copy new db to lauren:
+   jane (or bette): toLauren tomwhartung.com-2016_03_24-jane-02-changed_urls_to_www
+5. Restore and re-backup db on host where the URLs were changed:
+   jane (or bette): rs tw 01-before_changing_urls_to_www
+   jane (or bette): bu tw 03-changed_urls_back_to_jane
+6. Take the site down:
+   lauren as root:
+      cd /etc/apache2/sites-available
+      rm 080-*
+      service apache2 restart
+7. Pull latest code on lauren:
+   gotwc
+   gac p
+   gotwt
+   gp
+8. Restore db using version from jane (or bette):
+   lauren: rs -h jane tw 02-changed_urls_to_www
+9. Bring the site back up:
+   lauren as root:
+      cd /etc/apache2/sites-enabled
+      ln -s ../sites-available/080-* .
+      service apache2 restart
+10. Test site
+11. Backup new production db just to be safe
+   lauren: bu tw 02-after_updating_to_latest
 
+Warning: This can cause issues, and specifically ...
+-----------------------------------------------------
 Here is an important note that it took many hours to figure out!
-----------------------------------------------------------------
 WP stores a URL containing the canonical host name in the database.
 
 o  E.g., http://bette.tomwhartung.com

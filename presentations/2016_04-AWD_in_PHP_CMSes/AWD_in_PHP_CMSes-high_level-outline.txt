@@ -1,0 +1,15 @@
+
+ Three Popular LAMP CMSes: Adaptive Web Design Using Device Detection
+======================================================================
+What I did on my code-cation: 10 Slides in 10 minutes.
+
+ High-Level Outline
+--------------------
+1-3 slides each and that's all
+
+1. Who - Introduction
+2. What - Overview
+3. Why - Try the Five Whys
+4. When - Took About a Year
+5. Results - 
+

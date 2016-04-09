@@ -1,0 +1,336 @@
+
+ Adding Device Detection to Three Popular LAMP CMSes
+=====================================================
+Aka. What I did on my code-cation.
+
+ High-Level Outline
+====================
+1. Brief Description of What I Am Working On
+2. Questions I Have for You at the End
+3. Status of What I Am Working On
+4. Comparing the Three CMSes
+5. Details: Delving Into Code (Optional, Depending on Interest)
+   Idea: let me clean up the code a bit then submit it to the group for review at a future date
+   --> Is this of interest to people?
+6. Lessons and other Takeaways
+7. Your Questions for Me
+8. My Questions for You
+
+ Introduction
+--------------
+A Little Bit About Me:
+o First real job was programming assembler in 1976
+o Not ashamed to admit that I did COBOL for ten years
+o Not competitive whatsoever, born in NC, did not watch Super Bowl, just really truly hate all that....
+o All about being unique and enjoy doing something no one else is doing
+o Very proud of my github streak.
+
+What:
+o Implemented Adaptive Web Design (as opposed to Responsive Web Design) by adding Device Detection to Joomla, WordPress, and Drupal 7 & 8
+o Started with an adapter class (IdMyGadget), allowing easily switching between different Device Detectors
+  o To see IdMyGadget in action without a CMS, see my resume at tomwhartung.com/resume
+o Adaptive Web Design seeks to solve the same problem as Responsive Web Design, but in a different way
+  o Responsive techniques serve the same markup to all devices, along with CSS rules (media queries), and
+    the CSS rules cause the browser to position, show, and hide markup based on parameters such as resolution, screen width, etc.
+  o Adaptive techniques use the User Agent string to determine the type of device the user is on, and
+    based on that, serves (slightly or massively) different content to the browser
+o Takeaways:
+  o It is not an either-or type situation
+  o I believe a combination of the two is the best solution
+  o If not done properly, this can get very complicated very quickly, so
+    proper encapsulation and scoping is essential
+
+Why:
+o Wanted to improve my web presence, to make it easier to find a job
+o Thinking that I might want to try free-lancing rather than full time employment (because that is a trend)
+o Thinking that the three are similar and learning all can give me insight and allow me to leverage commonalities
+o Have to re-do my groja.com/seeourminds.com component, so may want to pick a different CMS
+o Have been curious about Drupal for many years
+
+My Opinions Are Subject to Bias:
+o I have more experience in Joomla than the others, so that, and the Goldilocks Effect, make me a bit biased.
+o Please do not repeat any of the negative things I might say about Drupal,
+  If I get an offer of $$$ to work with it, I will probably go for it
+    "Will do Drupal (or most any other type of coding) for food."
+
+Takeaways:
+o Joomla is in many respects the Goldilocks CMS
+o I will be sticking with Joomla for my groja.com/seeourminds.com component
+  (but want to convert as much as possible to JavaScript, because it is ubiquitous)
+o Drupal (especially D8) has a lot of unique and valuable features, but is also very very complicated,
+  o This makes it more time-consuming than the others to work with
+
+ My Questions for You (Your Mission: To Answer These at the End)
+-----------------------------------------------------------------
+1. Do you think this idea is worth pursuing, or should I go back to full time corporate drone work?
+o  I have been hanging out a bit with the startup community....
+o  There may not be a high demand for this (right now) but I am fine with that
+o  I believe that as time goes on demand will grow, and it would be very cool to be prepared to take advantage of that
+   (This seems to be what people expect now: for someone to have already solved a problem they just now became aware of.)
+
+2. Do you have any use cases - scenarios in which you think this technique would be useful?
+o  Looking to brainstorm ideas....
+o  I believe more people would be willing to use this technique if they had easy-to-use tools already built
+o  I'd like to think that offering a freemium-type product would be an excellent way to bring in business
+o  To do this right, I'd want to know what sort of things would interest people, i.e., use cases
+o  Use jQuery Mobile's Form Elements on mobile devices only
+   o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
+   o jQuery Mobile is very nice, but you would not want to use it on the desktop
+     Just including this and allowing people to build on and use it, might be a valuable use-case in and of itself
+   o HTML5 form elements address some of these issues, but I am unsure about specifics and mobile browser support.
+   O Potentially a lot of people don't even use mobile devices because they think their fingers are too fat
+    (believe I heard this "punch line" on Rescue Me?)
+
+3. What is, or could be, the most interesting things I could present about this topic?
+o  HTML5 meetup: hoping to give a lightning talk about this in April
+o  Willing and would like to give other talks to this and other groups (PHP, Drupal, WP) around town 
+Mobile-only navigation: which seems most practical?
+a. header and footer nav
+b. hamburger menu icons
+
+4. Is it worthwhile to polish one or more of these and put in the extension store for the CMS(es)?
+
+
+ Status of What I Am Working On
+--------------------------------
+My use case (enhancements that I want for myself)
+o  Headings configurable by device type
+o  Header and footer phone navigation
+o  Hamburger Menu Icon
+Status:
+o  Joomla site (joomoowebsites.com): development done but could be refactored
+o  WordPress site (tomwhartung.com): development mostly done, menus not yet fully functional because I need to add content first
+o  Drupal site (tomhartung.com): device-specific headings are working, menus not yet fully functional because I need to add content first
+
+ Comparing the Three CMSes
+---------------------------
+Download sizes:
+o Wordpress: 6.8M (wordpress-4.3.1.zip)
+o Joomla:   11.0M (Joomla_3.4.5-Stable-Full_Package.zip)
+o Drupal 7:  3.2M (drupal-7.41.tar.gz)
+o Drupal 8: 12.0M (drupal-8.0.3.tar.gz)
+
+Number of files (source: my installations):
+o Wordpress: 1,350
+o Joomla:    4,692
+o Drupal 7:  1,086
+o Drupal 8: 14,387
+
+Number of DB tables (source: my installations):
+o Wordpress: 12
+o Joomla:    67
+o Drupal 7:  76
+o Drupal 8: 187 (some tables linger from automatic conversion)
+
+Contributed extensions (Source: wikipedia):
+o Drupal:         31,000 contributed modules
+o Joomla:     over 7,700 free and commercial extensions
+o Wordpress: over 40,501 plugins
+
+Difficulty of upgrading minor revisions (subjective, scale of 1-10)
+o Wordpress: 2 (super easy, can configure to update automatically)
+o Joomla: 5
+o Drupal 7 & 8: 9 (still working on optimizing this process)
+
+License (essentially all the same):
+o Wordpress: GNU GPLv2+
+o Joomla: GNU General Public License
+o Drupal: GPLv2 or later
+
+Current Versions and Initial Release Dates
+o Wordpress: 4.4.1; Initial release May 27, 2003
+o Joomla: 3.4.8; Initial release August 17, 2005
+o Drupal: 8.0.3; Initial release January, 2001
+
+Development How-To - Hi-Level/Overview:
+o Wordpress: hooks
+o Joomla: regular programming (MVC framework available) - for lack of a better term
+o Drupal 7: hooks
+o Drupal 8: Symfony used for modules, themes still use mainly hooks
+
+Finding documentation:
+o Wordpress:
+  - bought one book that covers admin and touches on development
+  - site is well-organized, info easy to find
+o Joomla:
+  - bought several Packt books for 1.5 (meh), and one 3.x O'Reilly book that has very little info for devs.
+  - site is well-organized, info easy to find
+o Drupal 7:
+  - bought two O'Reilly books, one for admin, one for dev; dev book has very little concrete info for devs though
+  - site is well-organized, info easy to find
+o Drupal 8:
+  - bought updated O'Reilly dev book, has very little concrete info for devs but it was helpful
+  - site: when I was working on it, much was missing and incomplete.  It's nice that they tell you when pages "Need Work."
+
+Extension Types:
+o Wordpress: plugins and themes
+o Joomla: components, modules, templates, plugins (not the same as WP plugins), and libraries
+o Drupal 7: modules and themes
+o Drupal 8: modules and themes
+
+Adding options (might be nice to look at the code next time):
+o Wordpress: array based
+o Joomla: xml-based
+o Drupal 7: array based
+o Drupal 8: OOP and array based
+
+Finding markup:
+o Wordpress:
+  PHP template based
+o Joomla:
+  Has a "mainline" in index.php, that allows using templates
+o Drupal 7: 
+  PHP template based, similar to WordPress, but different
+o Drupal 8:
+  Twig template based, similar to D7, but using Twig
+
+Managing js and css:
+In all cases, this is much more difficult than it should be, and each has it's own way of doing things
+But the CMS wants to control that for you, for good reason
+(i.e., so you can selectively include files, based on what page is being served).
+o Wordpress: enqueue something
+o Joomla:
+o Drupal 7: figure out how to create the magic array in the correct hook
+o Drupal 8: similar to D7: figure out how to create the magic array in the correct hook
+
+Community:
+o Wordpress: was able to create accounts easily on wordpress.org; did not attempt any edits, etc.
+o Joomla: it took several tries to successfully create an account on joomla.org, and finally succeeded only recently (I hope)
+o Drupal: was able to create accounts easily on drupal.org; did not attempt any edits, etc.
+  Drupal seems to have the most closely-knit community, with many conferences and four meetups along the Front Range
+  I think this is because to use it, you really need help (one of the books mentions this)
+  Apparently they have code sprints (slave labor ;-) ) at their conferences
+
+XXXXXX:
+o Wordpress:
+o Joomla:
+o Drupal 7: 
+o Drupal 8:
+
+
+ Details: Delving Into Code
+----------------------------
+Optional, depending on interest
+Maybe save this for next time?
+
+ Lessons Learned and Other Takeaways
+-------------------------------------
+If trying to learn WordPress, Drupal, and jQuery Mobile all at the same time sound challenging, I can say that yes, it is.
+To me though, this is really fun.  And it is super fun to work on different CMSes in parallel.  Tired of working for free though.
+
+Making use of inheritance in separating what works for all of them from the CMS-specific functionality, is huge fun for me.
+
+I was able to use quite a bit of code, more than expected, on all three.  I find this to be super-fun!
+
+I really did not need to set up separate repos for the different CMSes; branching would have been a better solution.
+
+Doing two templates/themes at a time is a good idea, if one is simpler (do it first) than the other.
+
+Because I was learning these (especially WP and the Drupals) as I went along, I found it easier
+to add the functionality to a simple theme (Our Theme in WP, Stark in Drupal), then once that
+looked OK, add the bare minimum to the "real" theme (TwentyThirteen and Bartik).
+
+Doing something like this takes a long time the first time, but goes more quickly with "practice."
+I would like to do more work like this, and not just with PHP CMSes....
+
+Adaptive WD and Responsive WD can work fine together.
+I'd suggest doing the Adaptive part first, and use it to make adding the Responsive part easier.
+
+Not a fan of the Drupal coding standards. Makes using the same IDE for Joomla and/or WP a pain;
+have to change the options all too frequently, wound up switching between eclipse and netbeans (always using vi).
+
+Adding the jQuery Mobile data role attributes was particularly fun (same for all, but go in different places,
+so easy and hard at the same time).
+
+Miss-steps:
+WP - TwentyFifteen: adding DD to it did not work well, started over with TwentyThirteen
+Drupal 7: jQuery Mobile incompatibility issue
+Drupal 8: there were many miss-steps, see obsolete repos on github
+    actually found valuable information on youtube and even twitter
+
+Drupal 8: what you get for enduring its complexity
+o  Caching - great for production
+o  Core is now largely based on the Symfony framework
+o  Unit testing framework built in
+o  (Mostly) clear separation of backend and front end code
+   (Did see a <p> tag in a module's message, when my understanding was that all markup was in the theme layer)
+o  Ready (or getting there) for IoT (REST/"headless drupal")
+o  Uses PHP Name spaces (a new development in the language,
+   but very valuable for this sort of kernel_plugin type of architecture)
+
+If I was going to do this again, I would do Drupal first.
+o It forces (or at least strongly encourages and enables) you to organize your code better (e.g., namespaces)
+o The others (especially WP) would be a piece of cake
+
+ Your Questions for Me
+-----------------------
+First, this answer to some questions from last time.
+
+Google and SEO - "Dynamic Serving"
+I have found some information on what google thinks about testing the User Agent string.
+References:
+o https://support.google.com/webmasters/answer/66355?hl=en&ref_topic=6001971 (cloaking)
+o https://developers.google.com/webmasters/mobile-sites/mobile-seo/dynamic-serving
+Google has various methods for crawling your site.
+It uses Fetch as Google but they understand that things may look different to curl, wget, and in the browser.
+Google considers cloaking - testing the User Agent string for the google bot and serving different
+content to the google bot/crawler than to browsers - to be serious violation of their guidelines.
+Obviously, if a site serves disney characters to the crawler and porn to browsers, we have a serious problem.
+Google also expresses concern about trusting the User Agent string, due to changes (new devices)
+o See dynamic serving link
+o Ensure the package you are using is kept up to date
+o Continuous Integration (frequently deploying even minor changes) is becoming increasingly popular
+  Moreover, anything that can be done with a fixed set of specific commands is subject to automation
+o Use an adapter class that enables easily switching between third party detectors
+o It depends on your use case - what you want to accomplish
+o My work is strictly experimental, prototyping, having fun exploring this idea
+
+New Questions?
+
+ My Questions for You
+----------------------
+ Miscellaneous Thoughts Had While Working on Other Things
+----------------------------------------------------------
+Joomla: the Goldilocks CMS: not too wordpressy/php4 time bomb, not too drupally/complicated, just right?
+
+
+
+ Challenges:
+-------------
+Caching in drupal is a major issue
+o If the caching mechanism does not know that you are using device detection, it will not work properly
+  It caches the markup for whatever type of device hits it first, then serves that to all devices
+o There is a way to turn it off but I do not trust it for Drupal 8
+  o whitescreens (state of DB and filesystem are intertwined, if it gets "confused" your site dies, totally)
+  o experience makes me believe that turning it off is not enough
+    (sometimes I do not see changes to code reflected in the markup, so I clear it anyway, to be "safe")
+  o clearing in back end seems to be more thorough (but subject to being disabled by whitescreens)
+  o clearing using drush is easier but seems to not do quite as thorough a job
+Multiple IDEs
+o Drupal has strict coding standards, indent by two spaces, do not use tabs
+o I was a spaces person for a long time but just recently converted to tabs...
+Where I spent my time
+o Really I spent very little time on coding
+o A great deal of time was spent researching, especially device detection and drupal
+o Spent quite a bit of time learning jQuery Mobile but did not use very much of it
+o Spent a huge amount of time on Drupal but have very little to show for it
+o Something complicated like is best learned in a book, so you can:
+  o Get background information by reading the first few chapters sequentially
+  o Use the TOC, flip through apparently-relevant chapters, and use the index to find what you need
+  o The web is a viable substitute, but many of the D8 pages are labelled "Incomplete" or "Needs Updating"
+  o Resorting to having to find info on youtube, twitter, and in the core source is time consuming
+
+ Recommendations:
+------------------
+In a case like this, where I am inventing the process as I go, it is nice when I can work on things in parallel.
+E.g., add the module/library to each CMS, instantiate and initialze device detection in all CMSes, add css to all templates/themes, add js to all templates/themes, add the options, update the html, etc.
+
+ Summary/Conclusions:
+----------------------
+Ideal Job?
+----------
+I think my ideal job would be doing this at a company with several other people.
+I would like to do some of the production coding but also mentor others on how to do that.
+I would like to spend 10-20 hrs per week on research: implementing similar techniques in (adding similar functionality to)
+python CMSes (e.g., Django), JS frameworks (e.g., MEAN stack), maybe even java.
+

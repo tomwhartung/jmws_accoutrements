@@ -51,9 +51,10 @@ What I did on my code-cation: 10 Slides in 10 minutes.
    6.1.5 Learned why Drupal people specialize on it (it's complicated)
    6.2 Opinions
    6.2.1 Still convinced that sending the same content to all devices is not optimal
-   6.2.2 Still convinced 
-   6.2.3 I am sorry to have spent so much time with Drupal but glad I finally satisfied my curiosity about it
-   6.2.4 
+   6.2.2 I am sorry to have spent so much time with Drupal but glad I finally satisfied my curiosity about it
+   6.2.3 ...............
+   6.2.4 My curiosity about Drupal has now been replaced by curiosity about Python CMSes, django, tornado, etc.
    6.2.5 Not sure how, but I do believe what I have learned will come in handy as I forge into the Internet of Things.
+         (which brings us back to one of the Five Whys)
 
 

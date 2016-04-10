@@ -49,9 +49,9 @@ What I did on my code-cation: 10 Slides in 10 minutes.
    6.1.5 Learned why Drupal people specialize on it (it's complicated)
    6.2 Opinions
    6.2.1 Still convinced that sending the same content to all devices is not optimal
-   6.2.2 Still convinced 
+   6.2.2 Still convinced .....................
    6.2.3 I am sorry to have spent so much time with Drupal but glad I finally satisfied my curiosity about it
-   6.2.4 
-   6.2.5 
+   6.2.4 .....................
+   6.2.5 My curiosity about Drupal has now been replaced by curiosity about Python CMSes, django, tornado, etc.
 
 

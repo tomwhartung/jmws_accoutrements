@@ -7,10 +7,11 @@ What I did on my code-cation: 10 Slides in 10 minutes.
 -------------------------
 1. Who - Introduction
    1.1 Elevator Speech & Favorite Quotes
-       1.1.0 First job, Masters Degree, most marketable skills: Java & PHP
-       1.1.1 "... not the best, but the only one ..."
-       1.1.2 "Specialization is for insects"
-       1.1.3 "Will specialize for food"
+       1.1.1 First job, Masters Degree, most marketable skills: Java & PHP
+       1.1.2 A bit of a polyglot - interested in pretty much everything
+       1.1.3 "... not the best, but the only one ..."
+       1.1.4 "Specialization is for insects"
+       1.1.5 "Will specialize for food"
    1.2 Shot of Github account - current streak
 2. What - Overview
    2.1 Added Device Detection
@@ -21,11 +22,12 @@ What I did on my code-cation: 10 Slides in 10 minutes.
 3. Why - The Five Whys, and More
    3.1 Why?
    3.1.1 Increase web presence
+   3.1.1.1 Don't think well on my feet during interviews, so "get my story straight"
+   3.1.1.2 Don't want to waste time in interviews when it is not a match - answer "the usual questions" in advance
    3.1.2 Heard in a previous HTML5 meetup that having a personal site that looks different...
-   3.1.3 Don't think well on my feet during interviews, so "get my story straigh"
-   3.1.4 Don't want to waste time in interviews when it is not a match - answer "the usual questions" in advance
-   3.1.5 Have something to present at meetups
-   3.1.6 (Bonus) Fun fun fun to be the first and learn why no one else has bothered
+   3.1.3 Have something to present at meetups
+   3.1.4 Think this knowledge may be useful as the Internet of Things gains traction
+   3.1.5 Fun fun fun to be the first (and learn why no one else has bothered)
 4. When - Took About a Year (including resume)
    4.1 Pie Chart(s) - 1 or 2 slides???
    4.1.1 Time by CMS: 25% Joomla, 25% Wordpress, 10% Drupal 7, 40% Drupal 8
@@ -52,6 +54,6 @@ What I did on my code-cation: 10 Slides in 10 minutes.
    6.2.2 Still convinced 
    6.2.3 I am sorry to have spent so much time with Drupal but glad I finally satisfied my curiosity about it
    6.2.4 
-   6.2.5 
+   6.2.5 Not sure how, but I do believe what I have learned will come in handy as I forge into the Internet of Things.
 
 

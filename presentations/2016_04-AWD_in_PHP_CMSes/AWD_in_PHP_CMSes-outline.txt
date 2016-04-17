@@ -29,7 +29,8 @@ What I did on my code-cation: 10 Slides in 10 minutes.
    3.1.4 Think this knowledge may be useful as the Internet of Things gains traction
    3.1.5 Demonstrate some of the potential this idea has (e.g., targeting ads)
    3.1.6 Nice to be the first (and learn why no one else has bothered)
-4. When - Took About a Year (including resume)
+4. How (new section - see slides)
+5. When - Took About a Year (including resume)
    4.1 Pie Chart(s) - 1 or 2 slides???
    4.1.1 Time by CMS: 25% Joomla, 25% Wordpress, 10% Drupal 7, 40% Drupal 8
    4.1.2 Time by Activity: 40% Learning, 20% Coding, 20% Experimenting,
@@ -37,13 +38,13 @@ What I did on my code-cation: 10 Slides in 10 minutes.
    -->   Need to think about this
    4.2 One pie chart per slide?  Additional pie charts desired/relevant?
    4.2.1 
-5. Results - Just the Facts
+6. Results - Just the Facts
    5.1 JooMooWebSites.com - the Joomla site
    5.1.1 Three views of home page, using the override
    5.2 TomWHartung.com - the WordPress site
    5.2.1 Three views of home page, using the override
 
-6. Conclusions - Lessons Learned and Resultant Opinions
+7. Conclusions - Lessons Learned and Resultant Opinions
    6.1 Lessons Learned
    6.1.1 Learned I am more of a back-end person
    6.1.2 Learned why more people are not doing this: it is difficult and not guaranteed to work

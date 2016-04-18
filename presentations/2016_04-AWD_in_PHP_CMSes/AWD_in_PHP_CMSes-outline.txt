@@ -35,7 +35,6 @@ What I did on my code-cation: 10 Slides in 10 minutes.
    4.1.1 Time by CMS: 25% Joomla, 25% Wordpress, 10% Drupal 7, 40% Drupal 8
    4.1.2 Time by Activity: 40% Learning, 20% Coding, 20% Experimenting,
          20% Maintenance (updates, deployment, content, etc)
-   -->   Need to think about this
    4.2 One pie chart per slide?  Additional pie charts desired/relevant?
    4.2.1 
 6. Results - Just the Facts

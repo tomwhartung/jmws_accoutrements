@@ -16,4 +16,12 @@ http://joomoowebsites.com/administrator/
 http://tomwhartung.com/wp-admin/
 http://tomhartung.com/admin/
 
+Window 3: Results
+-----------------
+http://www.joomoowebsites.com/?gadgetType=phone
+http://www.joomoowebsites.com/?gadgetType=tablet
+http://www.joomoowebsites.com/?gadgetType=desktop
+http://www.tomwhartung.com/?gadgetType=phone
+http://www.tomwhartung.com/?gadgetType=tablet
+http://www.tomwhartung.com/?gadgetType=desktop
 

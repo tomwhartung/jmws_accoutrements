@@ -1,0 +1,11 @@
+
+Panel Photo
+Montage of Drupal, Joomla, and WordPress logos
+
+Title
+Adaptive Web Design in Three Popular LAMP CMSes
+
+Categories (comma separated)
+
+Description
+

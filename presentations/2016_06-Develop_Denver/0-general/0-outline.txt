@@ -1,0 +1,9 @@
+
+Panel Photo
+
+Title
+
+Categories (comma separated)
+
+Description
+

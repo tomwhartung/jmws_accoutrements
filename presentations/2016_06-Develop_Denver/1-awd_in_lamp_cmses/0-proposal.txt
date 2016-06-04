@@ -14,5 +14,13 @@ Description
 ....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0
 Learn the ins and outs of implementing AWD (RESS) by integrating Device Detection with the popular LAMP CMSes Joomla, WordPress, and Drupal.
 
-Learn the advantages and pitfalls of integrating Device Detection with Joomla, WordPress, and Drupal to achieve Adaptive Web Design (AWD) or more specifically, Responsive Design with Server Side Components (RESS).
+What do the terms Device Detection, Adaptive Web Design (AWD), and Responsive Design With Server Side Components (RESS) mean?
+
+Why would someone want to integrate Device Detection with the three popular LAMP CMSes Joomla, WordPress, and Drupal?
+
+How does someone go about doing this, serially (one CMS at a time) or in parallel?  Is there shared code and if so, how is it managed?
+
+What are the take-aways from this exercise?
+
+Learn about the advantages and pitfalls of using Device Detection to implement Adaptive Web Design (AWD) or more specifically, Responsive Design with Server Side Components (RESS) to build websites in general and LAMP-based CMS sites in particular.
 

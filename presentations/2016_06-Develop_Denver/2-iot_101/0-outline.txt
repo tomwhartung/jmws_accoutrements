@@ -6,6 +6,10 @@ Title
 IoT 101 With the Intel Edison
 
 Categories (comma separated)
+Internet of Things (IoT), Edison, Arduino, C/C++, JavaScript, Node.js, Python
 
 Description
+Learn about programming the postage-stamp sized Edison in Arduino (C/C++), JavaScript (Node.js), and Python.
+
+
 

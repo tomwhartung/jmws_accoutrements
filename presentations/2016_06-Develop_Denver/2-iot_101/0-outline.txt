@@ -9,7 +9,19 @@ Categories (comma separated)
 Internet of Things (IoT), Edison, Arduino, C/C++, JavaScript, Node.js, Python
 
 Description
-Learn about programming the postage-stamp sized Edison in Arduino (C/C++), JavaScript (Node.js), and Python.
+                                                                                                   1
+         1         2         3         4         5         6         7         8         9         0         1         2         3         4
+....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0....5....0
 
+Learn about programming the easily-wearable, postage-stamp sized Intel Edison in Arduino (C/C++), JavaScript (Node.js), and Python.
 
+This language-agnostic presentation showcases a set of programs that demonstrate how to achieve basic IoT functionality on the Intel Edison.
+
+It starts with the basics, covering Digital Output, Digital Input, Analog Input, and Analog Output via Pulse Width Modulation (PWM).
+
+It then covers some more advanced topics, including inter integrated circuits (I2C) and using the Edison as a web server.
+
+As the power of hardware grows exponentially and the size of chips and peripherals shrink, forecasters are predicting strong growth for the IoT marketplace.
+
+Now is the time to start familiarizing yourself with this landscape and begin thinking about what role you want to play in it.
 

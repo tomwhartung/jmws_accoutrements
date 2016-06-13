@@ -16,4 +16,23 @@ Ranking in these hand-written notes should follow this scheme:
 A. During Recessions
 --------------------
 A.1. 
+A.2. 
+A.3. 
+
+
+B. Overall - Regardless of Economic Cycles
+------------------------------------------
+B.1.
+B.2.
+B.3.
+B.4.
+
+
+C. Misc. (rename to something more specific when done!!!)
+--------
+C.1.
+C.2.
+C.3.
+C.4.
+
 

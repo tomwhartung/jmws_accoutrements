@@ -15,9 +15,11 @@ Ranking in these hand-written notes should follow this scheme:
 
 A. During Recessions
 --------------------
-A.1. 
-A.2. 
-A.3. 
+A.1. Startups tend to fair better overall
+A.2. Startups often even help pull the economy out of the rut
+A.3. During a recession:
+A.3.1. the number of freelance opportunities rise while
+A.3.2. the number of full time positions fall
 
 
 B. Overall - Regardless of Economic Cycles

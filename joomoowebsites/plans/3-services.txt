@@ -1,0 +1,30 @@
+
+ Target Market and Services to Offer
+=====================================
+Ideas that have been rolling around in my head for the past few weeks/months/years even
+
+Targeting
+---------
+o Startups
+o Small businesses
+
+Services
+--------
+Currently feel qualified to offer:
+o General free-lancing: LAMP, CMS, Java
+  No project to small (smaller projects preferred)
+o Device Detection in LAMP CMSes (e.g., targeting ads)
+o De-mystify technology and jargon
+o CMS selection
+o Training
+Would like to be able to offer: (apply for business loan for initial funding??)
+o Research IoT Ideas
+o Simple watch apps (e.g., background)
+  Think this would be easy, but
+  Would need some sort of loan to buy watch(es?)
+
+Freemium Offers
+---------------
+o Free: 1 hour meeting to discuss your situation
+o
+

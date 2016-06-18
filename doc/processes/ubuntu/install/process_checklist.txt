@@ -1,0 +1,95 @@
+
+ Upgrading From Fresh Install
+==============================
+Download correct iso file, verify md5sum, and burn to CD
+
+ On Old System, Before Install:
+--------------------------------
+[ ] Backup all DBs and home directory:
+	bua
+	tarHome
+[ ] Find spare disk partitions that can be used for install
+[ ] 
+
+ Install:
+----------
+[ ] Check checkboxes:
+	[ ] Download updates while installing
+	[ ] Install third-party software
+
+ On New System, After Install:
+-------------------------------
+[ ] Unpack home tar file and merge with new home
+[ ] Update system, reboot
+
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+[ ] Install rcs, synaptic, vim, openssh-server
+[ ] Install subversion, git, git-stuff, git-svn, (??git-magic??)
+[ ] Install chromium-browser
+[ ] Set preferences, lock terminal and firefox to launcher
+
+[ ] Copy /etc/hosts from old install and setup static IP
+[ ] Check /etc/hosts and /etc/fstab into RCS
+	Disk Space Spotcheck, bette: /: 4.4G; /home: 2.5G
+	Disk Space Spotcheck, jane:  /: 4.4G; /home: 163M
+
+[ ] Install apache2, apache2-utils,
+[ ] Install php5, php5-gd, php5-mysql, mysql-server
+[ ] Enable mod_rewrite: as root:
+	cd /etc/apache2/mods-enabled
+	ln -s ../mods-available/rewrite.load .
+[ ] Get all websites' source files in /var/www
+[ ] Config files in /etc/apache2/sites-avaialble
+    Copy from lauren (already created based on new 000-default.conf)
+[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
+	For bette: change "lauren" to "bette" in conf files
+	For jane: ensure both www.site.com and site.com will work
+
+[ ] Install xscreensaver, xscreensaver-data-extra
+[ ] Install xscreensaver-screensaver-diz, xscreensaver-gl-extra,   
+[ ] Lock most or all of those to launcher
+	Disk Space Spotcheck, bette: /: 4.5G; /home: 2.6G
+	Disk Space Spotcheck, jane:  /: 4.6G; /home: 291M
+
+*************** YOU ARE HERE (jane install) ***********************
+
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+[ ] ln -s /art/images ~/Pictures
+[ ] Get sites running: see site_checklist.txt
+[ ] Create and populate databases
+    See checklist
+[ ] System Settings -> Updates -> Check never (check manually only)
+[ ] Set up backups
+
+---------------------------------------------
+If installing on a server, you can stop here.
+---------------------------------------------
+
+[ ] Lock disks [manager], rhythmbox, and thunderbird to launcher
+[ ] Install audacious, easytag, audex, banshee, vlc media player
+[ ] Install compizconf settings manager
+[ ] Install  gwenview, gimp, (??xeyes??),
+[ ] Lock most or all of those to launcher
+	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
+
+********************  YOU ARE HERE (bette install) ********************
+[ ] Install java, jdk
+[ ] Install netbeans 8+
+[ ] Install opera
+	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
+[ ] Set up backups
+
+[ ] Install
+[ ] Install
+[ ] Install
+[ ] Install
+[ ] 
+[ ] 
+[ ] Configure wordpress updates
+[ ] 
+[ ] 
+[ ] 
+[ ] 
+[ ] 
+[ ] 
+

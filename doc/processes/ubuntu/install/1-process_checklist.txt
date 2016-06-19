@@ -30,26 +30,29 @@ Download correct iso file, verify md5sum, and burn to CD
 
 [ ] Copy /etc/hosts from old install and setup static IP
 [ ] Check /etc/hosts and /etc/fstab into RCS
-	Disk Space Spotcheck, bette: /: 4.4G; /home: 2.5G
-	Disk Space Spotcheck, jane:  /: 4.4G; /home: 163M
-
-[ ] Install apache2, apache2-utils,
-[ ] Install php7.0, php7.0-gd, php7.0-mysql, mysql-server
-[ ] Enable mod_rewrite: as root:
-	cd /etc/apache2/mods-enabled
-	ln -s ../mods-available/rewrite.load .
-[ ] Get all websites' source files in /var/www
-[ ] Config files in /etc/apache2/sites-avaialble
-->  Copy from jane (already created based on new 000-default.conf)
-[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
-	For jane: ensure both www.site.com and site.com will work
-	For bette: change "jane" to "bette" in conf files
+	Disk Space Spotchec - / and /home - ensure we have enough
 
 [ ] Install fortune-mod, fortunes, other fortune* packages as desired
 [ ] Install xscreensaver, xscreensaver-data-extra
-[ ] Install xscreensaver-gl-extra (?? xscreensaver-screensaver-diz ??)
+[ ] Install xscreensaver-gl-extra (?? defunct in 16.04: xscreensaver-screensaver-diz ??)
 [ ] Lock xscreensaver to launcher
-	Disk Space Spotcheck: ensure we have plenty left
+
+[ ] Install apache2, apache2-utils,
+[ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+[ ] Install mysql-server, 
+[ ] Enable mod_rewrite and start apache2 (as root):
+	### cd /etc/apache2/mods-enabled
+	### ln -s ../mods-available/rewrite.load .
+   a2enmod rewrite
+   service apache2 start
+[ ] Get all websites' source files in /var/www
+[ ] Config files in /etc/apache2/sites-avaialble
+->  For 16.04, copy conf files from jane:
+    Already vetted currently used versions against the new 000-default.conf for 16.04, no changes needed!
+[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
+	For jane: ensure both www.site.com and site.com will work
+	For bette: change "jane" to "bette" in conf files
+	Disk Space Spotcheck - / and /home - ensure we have plenty left
 
 [ ] ln -s /art/images ~/Pictures
 [ ] Create and populate databases: see database_checklist.txt

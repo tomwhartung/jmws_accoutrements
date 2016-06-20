@@ -3,8 +3,16 @@
 ============================
 Sifting through all this and ....
 
-Bottom Lines (du jour?)
------------------------
+Major and Majorly Recurring Thoughts
+------------------------------------
+I am sure that with enough effort I could find a job, but
+I am also sure it will only last so long, and then
+I will be back here anyway sooner or later.
+
+BLQ.1. Is it worth the effort?
+
+More Bottom Lines
+-----------------
 It seems to me that codifying and figuring out some use cases for the Device Detection + LAMP CMS work
   and figuring out how to sell that would be much easier, and potentially a bit more profitable,
   than looking for a job in the traditional sense.
@@ -12,6 +20,7 @@ It seems to me that trying to juggle the job search, with a nascent freelancing 
   with all this learning, looking at things a new way, introspection and planning, is problematic
   (nothing really solid gets done).
 
+BLQ.2. Should I start looking at applying for a small business loan?
 Actually a small business loan at this point would be very nice, and force me to formally cross this line.
 And if it was coupled with some gentle oversight and advice, it could prove to be very advantageous.
 

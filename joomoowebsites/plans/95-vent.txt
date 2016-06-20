@@ -1,11 +1,21 @@
 
  Sometimes We Need to Vent
 ===========================
+Sometimes....
+
+Random Frustrations
+-------------------
 Job searching is like the new smoking.
 I feel like I am doing it just out of habit.
 It is not doing anything for me but sucking up time that could be put to much better use elsewhere.
 Feels like jumping through randomly-placed invisible hoops that I cannot see until it's too late
 Feels like I am trying to fit into oddly-shaped places, and when my effort fails, the only feedback is "you didn't fit."
+
+More Positive Spins on All This
+-------------------------------
+It seems as though I am supposed to somehow predict these companies' needs and satisfy them in advance.
+   This is a big part of what's behind the Device Detection work.
 Seems like it would be much easier to say "I am this shape, if you want one of these services, let me know, else go away."
+
 
 

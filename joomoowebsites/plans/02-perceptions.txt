@@ -5,6 +5,8 @@ Making a list of some of my perceptions to show others for confirmation, discuss
 
 Numbering these for easy reference when taking notes while talking to people whom I trust.
 
+These Are Questions Worded as Statements
+----------------------------------------
 Ranking in these hand-written notes should follow this scheme:
 0 - N/A No perception or prefer not to say
 1 - Strongly Disagree
@@ -20,25 +22,24 @@ A.2. Startups often even help pull the economy out of the rut
 A.3. During a recession:
 A.3.1. the number of freelance opportunities rise while
 A.3.2. the number of full time positions fall
-A.3.3. more people available
-A.3.4. higher uncertainty over all in the economy
-A.3.5. companies need to get work done but are more short-sighted and less willing to make commitments to full time employees
+A.3.3. as more people become available, freelancing grows more competitive
+A.3.4. companies need to get work done but are more short-sighted and less willing to make commitments to full time employees
 
 B. Overall - Regardless of Economic Cycles
 ------------------------------------------
 B.1. Freelancing is on the rise, overall (dice.com articles, etc. - rise of the gig economy)
-B.2. Freelancing can accomoate specialists, surely
-*** B.3. Can the freelancing marketplace accomoate generalists (???)
-    ***  Or is this just my wishful thinking?? ***
+B.2. Freelancing can accomoate specialists (surely)
+*** B.3. (Can) The freelancing marketplace can accomoate generalists (yes?)
+***      Or is this just my wishful thinking?? ***
 B.4. Freelancing can be tough starting out but subsequent gigs can be easier to find if you do well
-B.4.1. word of mouth
-B.4.2. assumes some sort of specialty
+B.4.1. many gigs come from word of mouth
+B.4.2. but word-of-mouth assumes some sort of specialty, so in lieu of that...?
 B.4.3. the current marketplace can accomodate most any type of specialty
 B.4.4. the number of these specialties is increasing rapidly
 B.4.5. the nature of these specialties is changing rapidly
+B.5. Freelancing demographics
 *** B.5. Freelancing tends to be done more by those who are:
-    ***  Somewhat unsure about these assertions, too ***
-*** B.5.1. younger (just starting out, no references yet)
+*** B.5.1. younger (just starting out, no references yet) and
 *** B.5.2. older, female, lgbt, etc. (experiencing discrimination) (???)
 
 C. Startups, Generalists, and Diversity
@@ -48,24 +49,32 @@ C.2. As the product becomes more well-defined, the startup needs more specialize
 C.3. Startups appear to be more open to having a diverse workforce
 C.3.1. Less time to be picky about choices
 C.3.2. More tuned in to the leading edge (as opposed to "tried and true" more discriminatory methods)
-C.4. IoT and Diversity (Meetups Only??)
-C.4.1. The few IoT meetups I have been to have seemed to be more diverse than the other technical meetups
-*** C.4.2. I for one would like to think the industry's hiring practices will reflect this diversity
-C.5. Overthinking and INFP-ing (if you will)
-C.5.1. Employers often look down on employees who over-think things
-C.5.2. Overthinking is considered more tolerable in appropriate situations
+C.4. Startups appear to be more open to freelancing
+C.4.1. More uncertainty, less money, less open to commitment
+C.5. IoT and Diversity (Meetups Only??)
+C.5.1. The few IoT meetups I have been to have seemed to be more diverse than the other technical meetups
+*** C.5.2. I for one would like to think the industry's hiring practices will reflect this diversity
+*** C.5.3. Arduino meetups, maker faires, etc: good way to get started.
 
 D. Freelancing Perceptions and Questions
 ----------------------------------------
 D.1. Freelancing feels incompatible with full time employment
-***  D.1.1. How to reconcile web presence? (See branding text file.)
-D.2. Freelancing: can be done part-time while working full-time?
+***  D.1.1. how to reconcile web presence? (See branding text file.)
+***  D.1.2. how to manage perceptions??
+***  D.1.3. how to manage time??
+D.2. Freelancing: can be done part-time while working full-time
 D.2.1. Be careful with Non-Disclosure Agreements
-D.2.2. Check with full-time employer first: required or optional?
+D.2.2. Check with full-time employer first (required or optional?)
 D.3. Big versus small freelancing projects
 ***  D.3.1. Is it possible to focus solely (at least at first) on small freelancing projects?
 D.3.2. This would certainly impact web presence needed
 D.4. Due to a variety of reasons (given elsewhere):
 D.4.1. It seems like it might be best to get established in the freelance marketplace sooner than later
-D.5. How to go about this?  Specific steps needed.
+D.4.2. How to go about this?  Specific steps needed.
+
+E. Optional Last-minute Additions
+---------------------------------
+E.1. Overthinking and INFP-ing (if you will)
+E.1.1. Employers often look down on employees who over-think things
+E.1.2. Overthinking is considered more tolerable in appropriate situations (e.g., a founder maybe?)
 

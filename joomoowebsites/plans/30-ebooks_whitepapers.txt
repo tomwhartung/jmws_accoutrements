@@ -10,6 +10,8 @@ o Demonstrate ability to reason and write, and desire to work on short leading-e
 o Freemium - to get people's attention and possibly email addresses
 o Possibly expand into full-fledged book (for $$$)
 
+Possibly More Practical
+-----------------------
 Device Detection and CMSes
 CRM tool: deliver only on confirmation of email address
 
@@ -22,12 +24,8 @@ Yeah don't laugh, I have some secrets....
 E.g., confront the whole self-esteem thing head on.
 
 
-Advice to Younger Devs
-Stay Flexible
-Happiness depends on being well-rounded, general knowledge
-??? Much would depend on how I get through this current little hump ???
-
-
+Possibly More Speculative (TBD)
+-------------------------------
 Expert in Absolutely Nothing
 This could go with branding such as:
 "Small projects for small companies."
@@ -36,4 +34,11 @@ High-Level Outline:
 2. But things change so quickly, this sort of expertise is soon obsolete
 3. Idea that it takes 100 hours to be better at something than most people - top 10%
 4. Local focus: in top 10% internationally can be top 1% locally!
+
+Advice to Younger Devs
+Burnout and unrealistic expectations are real
+To maintain passion, one must stay flexible
+But a "laundry list" of qualifications is a turn-off to many employers
+Happiness depends on being well-rounded, general knowledge
+??? Much of this would depend on how I get through this current little hump ???
 

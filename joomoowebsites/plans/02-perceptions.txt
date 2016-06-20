@@ -41,11 +41,18 @@ B.4.5. the nature of these specialties is changing rapidly
 *** B.5.1. younger (just starting out, no references yet)
 *** B.5.2. older, female, lgbt, etc. (experiencing discrimination) (???)
 
-C. Misc. (rename to something more specific when done!!!)
---------
-C.1.
-C.2.
-C.3.
-C.4.
+C. Startups and Generalists
+---------------------------
+C.1. Generalists can contribute a great deal at first but
+C.2. As the product becomes more well-defined, the startup needs more specialized people
 
+D. Freelancing Perceptions and Questions
+----------------------------------------
+D.1. Freelancing feels incompatible with full time employment
+*** D.1.1. How to reconcile web presence?
+D.2. Freelancing: can be done part-time while working full-time?
+D.2.1. Be careful with Non-Disclosure Agreements
+D.2.2. Check with full-time employer first: required or optional?
+D.3. Due to a variety of reasons (given elsewhere):
+D.3.1. It seems like it might be best to get established in the freelance marketplace sooner than later
 

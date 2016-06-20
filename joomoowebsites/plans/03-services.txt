@@ -11,8 +11,8 @@ o (Early stage) Startups
 o Small businesses
   "Small projects for small businesses"
 
-Services
---------
+Services - Initial Offerings
+----------------------------
 Currently feel qualified to offer:
 o General free-lancing: LAMP, CMS, Java
   No project too small (smaller projects preferred)
@@ -21,35 +21,40 @@ o De-mystify technology and jargon
 o CMS selection
 o Training
 o Documentation
-Would like to be able to offer: (apply for business loan for initial funding??)
+
+Services - Possible Future Offerings
+------------------------------------
+Maybe apply for business loan for initial funding for some of these?
+o GROJA/seeourminds.com
+  Upgrade site
+  Monetization: everyone wants to hook up
+  o Articles on site explaining this (end users)
+  o Whitepaper/ebook to describe background and lend authenticity (investors)
+  Watch app
+  IoT component - neopixels
 o Research IoT Ideas
 o Simple watch apps (e.g., background)
   Think this would be easy, but
   Would need some sort of loan to buy watch(es?)
+o Forecast need: galvanize(-type) IoT instructor
+  How would one qualify for this?
+  Surely an advanced degree and mucho experience are needed (check!)
 
-Freemium Offers
----------------
+Questions
+---------
+Q.1 Do any of these seem feasible?
+Q.1 How to prioritize?
+Q.3 Will it turn people off if I offer too many services?
+    A generalist who is willing to do short projects of most any nature - seems to me like it could be a thing I could do, and enjoy doing.
+Q.4. How to pursue freelancing?
+Q.5. How to update web presence?
+
+Freemium Offer Ideas
+--------------------
 o Free: 1 hour meeting to discuss your situation
 o E-books: there is a separate file for these
 
 More Startupy Idea(s)
 ---------------------
 Are any of these ideas feasible?
-
-1. GROJA/seeourminds.com
-
-2. Kitty cat door (Sammy's idea) - using facial recognition
-
-More General Fishing-Type Questions
------------------------------------
-Q.1 Do any of these seem feasible?
-Q.1 How to prioritize?
-Q.3 Will it turn people off if I offer too many services?
-
-A generalist who is willing to do short projects of most any nature - seems to me like it could be a thing I could do, and enjoy doing.
-
-More Practical Questions:
--------------------------
-Q.4. How to pursue freelancing?
-Q.5. How to update web presence?
-
+1. Kitty cat door (Sammy's idea) - using facial recognition

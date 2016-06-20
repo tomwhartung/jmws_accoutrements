@@ -1,10 +1,17 @@
 
- E-Book Ideas
-==============
+ E-Book and White Paper Ideas
+==============================
+Short, pdf, offered for free.
+
 Reasons to do this:
+-------------------
 o Describe who I am and what my values are
 o Demonstrate ability to reason and write, and desire to work on short leading-edge type projects
-o Freemium - to get people's attention
+o Freemium - to get people's attention and possibly email addresses
+o Possibly expand into full-fledged book (for $$$)
+
+Device Detection and CMSes
+CRM tool: deliver only on confirmation of email address
 
 GROJA
 Explain it in a book.
@@ -13,6 +20,12 @@ Should have much content already written
 Memoirs
 Yeah don't laugh, I have some secrets....
 E.g., confront the whole self-esteem thing head on.
+
+
+Advice to Younger Devs
+Stay Flexible
+Happiness depends on being well-rounded, general knowledge
+??? Much would depend on how I get through this current little hump ???
 
 
 Expert in Absolutely Nothing

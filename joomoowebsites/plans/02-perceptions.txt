@@ -49,10 +49,14 @@ C.2. As the product becomes more well-defined, the startup needs more specialize
 D. Freelancing Perceptions and Questions
 ----------------------------------------
 D.1. Freelancing feels incompatible with full time employment
-*** D.1.1. How to reconcile web presence?
+***  D.1.1. How to reconcile web presence?
 D.2. Freelancing: can be done part-time while working full-time?
 D.2.1. Be careful with Non-Disclosure Agreements
 D.2.2. Check with full-time employer first: required or optional?
-D.3. Due to a variety of reasons (given elsewhere):
-D.3.1. It seems like it might be best to get established in the freelance marketplace sooner than later
+D.3. Big versus small freelancing projects
+***  D.3.1. Is it possible to focus solely (at least at first) on small freelancing projects?
+D.3.2. This would certainly impact web presence needed
+D.4. Due to a variety of reasons (given elsewhere):
+D.4.1. It seems like it might be best to get established in the freelance marketplace sooner than later
+D.5. How to go about this?  Specific steps needed.
 

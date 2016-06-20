@@ -51,6 +51,9 @@ C.3.2. More tuned in to the leading edge (as opposed to "tried and true" more di
 C.4. IoT and Diversity (Meetups Only??)
 C.4.1. The few IoT meetups I have been to have seemed to be more diverse than the other technical meetups
 *** C.4.2. I for one would like to think the industry's hiring practices will reflect this diversity
+C.5. Overthinking and INFP-ing (if you will)
+C.5.1. Employers often look down on employees who over-think things
+C.5.2. Overthinking is considered more tolerable in appropriate situations
 
 D. Freelancing Perceptions and Questions
 ----------------------------------------

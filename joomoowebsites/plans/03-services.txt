@@ -5,18 +5,22 @@ Ideas that have been rolling around in my head for the past few weeks/months/yea
 
 Targeting
 ---------
-o Startups
+o (Early stage) Startups
+  Seems like early stage startups are more likely to be able to use generalists
+  "First consultation free"
 o Small businesses
+  "Small projects for small businesses"
 
 Services
 --------
 Currently feel qualified to offer:
 o General free-lancing: LAMP, CMS, Java
-  No project to small (smaller projects preferred)
+  No project too small (smaller projects preferred)
 o Device Detection in LAMP CMSes (e.g., targeting ads)
 o De-mystify technology and jargon
 o CMS selection
 o Training
+o Documentation
 Would like to be able to offer: (apply for business loan for initial funding??)
 o Research IoT Ideas
 o Simple watch apps (e.g., background)
@@ -26,15 +30,26 @@ o Simple watch apps (e.g., background)
 Freemium Offers
 ---------------
 o Free: 1 hour meeting to discuss your situation
-o E-books ...
+o E-books: there is a separate file for these
 
-My Startup Idea(s)
-------------------
+More Startupy Idea(s)
+---------------------
 Are any of these ideas feasible?
 
 1. GROJA/seeourminds.com
 
 2. Kitty cat door (Sammy's idea) - using facial recognition
 
+More General Fishing-Type Questions
+-----------------------------------
+Q.1 Do any of these seem feasible?
+Q.1 How to prioritize?
+Q.3 Will it turn people off if I offer too many services?
 
+A generalist who is willing to do short projects of most any nature - seems to me like it could be a thing I could do, and enjoy doing.
+
+More Practical Questions:
+-------------------------
+Q.4. How to pursue freelancing?
+Q.5. How to update web presence?
 

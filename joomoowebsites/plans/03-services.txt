@@ -32,19 +32,19 @@ o GROJA/seeourminds.com
   o Whitepaper/ebook to describe background and lend authenticity (investors)
   Watch app
   IoT component - neopixels
-o Research IoT Ideas
 o Simple watch apps (e.g., background)
   Think this would be easy, but
   Would need some sort of loan to buy watch(es?)
+o Research IoT Ideas
 o Forecast need: galvanize(-type) IoT instructor
   How would one qualify for this?
   Surely an advanced degree and mucho experience are needed (check!)
 
 Questions
 ---------
-Q.1 Do any of these seem feasible?
-Q.1 How to prioritize?
-Q.3 Will it turn people off if I offer too many services?
+Q.1. Do any of these seem feasible?
+Q.2. How to prioritize?
+Q.3. Will it turn people off if I offer too many services?
     A generalist who is willing to do short projects of most any nature - seems to me like it could be a thing I could do, and enjoy doing.
 Q.4. How to pursue freelancing?
 Q.5. How to update web presence?
@@ -58,3 +58,4 @@ More Startupy Idea(s)
 ---------------------
 Are any of these ideas feasible?
 1. Kitty cat door (Sammy's idea) - using facial recognition
+2.

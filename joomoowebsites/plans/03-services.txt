@@ -1,10 +1,9 @@
-
  Target Market and Services to Offer
 =====================================
 Ideas that have been rolling around in my head for the past few weeks/months/years even
 
-Targeting
----------
+Targeting – Initial Offerings
+-----------------------------
 o (Early stage) Startups
   Seems like early stage startups are more likely to be able to use generalists
   "First consultation free"
@@ -14,17 +13,19 @@ o Small businesses
 Services - Initial Offerings
 ----------------------------
 Currently feel qualified to offer:
-o General free-lancing: LAMP, CMS, Java
+o General free-lancing: LAMP, PHP, Linux, CMSes, Java, Python
   No project too small (smaller projects preferred)
-o Device Detection in LAMP CMSes (e.g., targeting ads)
+→ Need freelancing tips – specific steps and techniques, please!
 o De-mystify technology and jargon
 o CMS selection
 o Training
 o Documentation
 
-Services - Possible Future Offerings
-------------------------------------
+Services - Possible Future Offerings – Broad Market
+---------------------------------------------------
 Maybe apply for business loan for initial funding for some of these?
+o Device Detection in LAMP CMSes (e.g., targeting ads) – work already done!
+o Device Detection in other stacks (MEAN, Java, Python) – would love to do this!
 o GROJA/seeourminds.com
   Upgrade site
   Monetization: everyone wants to hook up
@@ -45,7 +46,8 @@ Questions
 Q.1. Do any of these seem feasible?
 Q.2. How to prioritize?
 Q.3. Will it turn people off if I offer too many services?
-    A generalist who is willing to do short projects of most any nature - seems to me like it could be a thing I could do, and enjoy doing.
+    A generalist who is willing to do short projects of most any nature:
+    - this seems to me like it could be a thing I could do, and enjoy doing.
 Q.4. How to pursue freelancing?
 Q.5. How to update web presence?
 
@@ -54,8 +56,8 @@ Freemium Offer Ideas
 o Free: 1 hour meeting to discuss your situation
 o E-books: there is a separate file for these
 
-More Startupy Idea(s)
----------------------
+More Startup Idea(s)
+--------------------
 Are any of these ideas feasible?
 1. Kitty cat door (Sammy's idea) - using facial recognition
-2.
+2. 

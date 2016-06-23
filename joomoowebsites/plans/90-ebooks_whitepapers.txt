@@ -2,6 +2,7 @@
  E-Book and White Paper Ideas
 ==============================
 Short, pdf, offered for free.
+--> Some of these ideas might make a good blog post.
 
 Reasons to do this:
 -------------------
@@ -26,9 +27,11 @@ E.g., confront the whole self-esteem thing head on.
 
 Possibly More Speculative (TBD)
 -------------------------------
+Developer Stereotypes
+
 Expert in Absolutely Nothing
-This could go with branding such as:
-"Small projects for small companies."
+Subtitled: "I know I know, but bear with me...."
+?? This could go with branding such as: "Small projects for small companies." ??
 High-Level Outline:
 1. Idea that it takes 10,000 hours to become an expert - top 1%
 2. But things change so quickly, this sort of expertise is soon obsolete

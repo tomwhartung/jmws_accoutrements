@@ -60,6 +60,7 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] ln -s /art/images ~/Pictures
 [ ] Install chrome and chromium-browser
     Had to download the .deb file for chrome and install by double-clicking on it.
+    After rebooting, and reinstalling (and deleting ~/.cache/google-chrome!): it is not working, fuuuuuuuuck...
 
 *************** YOU ARE HERE (jane install) ***********************
 

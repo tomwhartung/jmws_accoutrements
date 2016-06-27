@@ -38,6 +38,15 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] Install unity-tweak-tool
     apt-get install unity-tweak-tool
 [ ] Lock xscreensaver and unity-tweak-tool to launcher
+[ ] Remove gnome-screensaver
+    apt list gnome-screensaver
+    apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    gnome-session-properties
+[ ] Update System Settings -> Brightness & Lock
+[ ] Update System Settings -> Power
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
 
 [ ] Install apache2, apache2-utils,
 [ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt

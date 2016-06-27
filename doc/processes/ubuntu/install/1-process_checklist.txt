@@ -35,7 +35,9 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] Install fortune-mod, fortunes, other fortune* packages as desired
 [ ] Install xscreensaver, xscreensaver-data-extra
 [ ] Install xscreensaver-gl-extra (?? defunct in 16.04: xscreensaver-screensaver-diz ??)
-[ ] Lock xscreensaver to launcher
+[ ] Install unity-tweak-tool
+    apt-get install unity-tweak-tool
+[ ] Lock xscreensaver and unity-tweak-tool to launcher
 
 [ ] Install apache2, apache2-utils,
 [ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt

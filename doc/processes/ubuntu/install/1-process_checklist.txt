@@ -27,6 +27,11 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] Install rcs, synaptic, vim, openssh-server
 [ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
 [ ] Set preferences, lock terminal and firefox to launcher
+[ ] Set terminal double-click word boundary preferences
+    Either: Edit -> Profile Preferences -> General -> Select by word characters
+    Or: use dconf command, e.g.:
+       dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
+    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
 
 [ ] Copy /etc/hosts from old install and setup static IP
 [ ] Check /etc/hosts and /etc/fstab into RCS

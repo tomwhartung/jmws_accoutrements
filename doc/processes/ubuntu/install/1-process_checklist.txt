@@ -80,11 +80,10 @@ Download correct iso file, verify md5sum, and burn to CD
     Had issues with chrome, thought they were specific to my 14.04 install
     *** Had to start with a copy of the newly-installed /home/tomh
 
-*************** YOU ARE HERE (jane install) ***********************
-
+[ ] System Settings -> Automatically check for updates -> Every two weeks
 [ ] Create and populate databases: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
-[ ] System Settings -> Updates -> Check never (check manually only)
+[ ] Configure wordpress updates
 [ ] Set up backups
 
 ---------------------------------------------
@@ -94,23 +93,25 @@ If installing on a server, you can stop here.
 [ ] cd /art; ln -s /media/ext4backupA/images ~/Pictures
 [ ] Install audacious, easytag, audex, banshee, vlc media player
 [ ] Install compizconf settings manager
-[ ] Install  gwenview, gimp, (??xeyes??),
+[ ] Install gwenview, gimp, gthumb, screenshot
 [ ] Install rhythmbox and thunderbird
-[ ] Lock most or all of those to launcher
+[ ] Lock all or most (not using thunderbird on jane) of those to launcher
 [ ] Lock disks [manager] to launcher
+[ ] Confirm installation of image viewer xeyes (pre-installed??),
 	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
 
-********************  YOU ARE HERE (bette install) ********************
+Extra Credit (install as desired, if desired)
+---------------------------------------------
 [ ] Install java, jdk
-[ ] Install netbeans 8+
+[ ] Install netbeans
+[ ] Install eclipse
 [ ] Install opera
+[ ] Install skype
 	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
-[ ] Set up backups
 
 [ ] Install
 [ ] Install
 [ ] 
 [ ] 
-[ ] Configure wordpress updates
 [ ] 
 

@@ -98,13 +98,21 @@ If installing on a server, you can stop here.
 [ ] Lock all or most (not using thunderbird on jane) of those to launcher
 [ ] Lock disks [manager] to launcher
 [ ] Confirm installation of image viewer xeyes (pre-installed??),
-	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
+	Disk Space Spotcheck:
+      /:     8.3G (48%)
+      /home: 4.1G (25%)
+
+*************** YOU ARE HERE (jane install) ***********************
+
+[ ] Install netbeans
+[ ] Install eclipse
+	Disk Space Spotcheck:
+      /:     ??? G;
+      /home: ??? G
 
 Extra Credit (install as desired, if desired)
 ---------------------------------------------
 [ ] Install java, jdk
-[ ] Install netbeans
-[ ] Install eclipse
 [ ] Install opera
 [ ] Install skype
 	Disk Space Spotcheck: /: ?.?G; /home: ?.?G

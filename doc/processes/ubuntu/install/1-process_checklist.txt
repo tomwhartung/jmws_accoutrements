@@ -119,28 +119,31 @@ If installing on a server, you can stop here.
     --> On jane: use apt to install the current versions available for 16.04: 4.2.6 and 3.5.2
     As root:
         apt-get install nodejs
-    Reference:
+        cd /usr/bin
+        ls -al node*    # verify we have no executable here named just "node"
+        ln -s nodejs node
+    Reference for installing using apt-get:
         https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
 [ ] Install npm
     As root:
         apt-get install npm
 [ ] NODE AND NPM INSTALLATION NOTES:
         The installation process that I ran on bette (14.04), using wget:
-        o installed the node executable as /opt/node/bin/node
-        o installed the npm executable as /opt/node/bin/npm
-        o created a link in /usr/local/bin to /opt/node/bin/node
-        o created a link in /usr/local/bin to /opt/node/bin/npm
-        --> I do not like these links in my /usr/local/bin , because I manage that separately!
+        o  installed the node executable as /opt/node/bin/node
+        o  installed the npm executable as /opt/node/bin/npm
+        o  created a link in /usr/local/bin to /opt/node/bin/node
+        o  created a link in /usr/local/bin to /opt/node/bin/npm
+        --> I DO NOT LIKE THESE LINKS IN MY /usr/local/bin , BECAUSE I MANAGE THAT SEPARATELY!
         The installation process that I ran on jane (16.04), using apt:
         o installed the node executable as nodejs in /usr/bin/nodejs
         o installed the npm  executable as npm    in /usr/bin/npm
-        --> This is more like what I would expect!
+        --> This is more like what I would expect - except I cannot run "node" on the command line.
+        --> Hence the "ln -s nodejs node" command!
+[ ] Node and npm installation - notes for the future:
+    --> If we want to use this in production (on 14.04):
+    -->    use wget to get that version,
+    -->    OR upgrade server to 16.04
     --> In the future, consider using NVM
-    --> If we want to use this in production, use wget to get that version
-    ### For consistency, I am linking these to
-    ###     ~/bin/node
-    ### "Just thought you should know this."
-    ### Oops, this did not work....
 
 *************** YOU ARE HERE (jane install) ***********************
 

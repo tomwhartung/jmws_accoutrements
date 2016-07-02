@@ -144,6 +144,16 @@ If installing on a server, you can stop here.
     -->    use wget to get that version,
     -->    OR upgrade server to 16.04
     --> In the future, consider using NVM
+[ ] Install express
+    Ubuntu 14.04 - as root:
+        apt-get install node-express
+    Ubuntu 16.04 - as root:
+        ### npm install express            // do not think this is needed
+        npm install -g express-generator   // allows running from command line
+        ln -s /usr/local/lib/node_modules/express-generator/bin/express .
+        which express
+    All - as tomh:
+        which express
 
 *************** YOU ARE HERE (jane install) ***********************
 

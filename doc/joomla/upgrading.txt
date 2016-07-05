@@ -41,15 +41,31 @@ NOTE:
 -----
 NOT bothering with trying to upgrade via the admin panel this go around.
 
-Using Tried and True Manual Procedure - 3.4.8 to 3.5.1:
---------------------------------------------------------------
+Using Recommended Manual Procedure - 3.4.8 to 3.5.1:
+----------------------------------------------------
+Rather than downloading a fresh install, following the procedure given here:
+    https://docs.joomla.org/J3.x:Upgrading_from_Joomla_3.4.x_to_3.5
+It appears there are some major changes so it would be best to follow this procedure.
+
 Doing this on bette first (upgraded jane to 16.04 and it is not working right now).
+
 0. Always backup DB and ensure code matches what is in github ("Before You Start" above)
-1. Download zip into /var/www/joomoowebsites.com/downloads and unpack
-   gojmh
-   mkdir unzip
-   cp ../downloads/Joomla_3.4.8-Stable-Full_Package.zip unzip
-   cd unzip
+1. Download Joomla_3.5.1-Stable-Update_Package.zip into /var/www/joomoowebsites.com/tmp
+   gojmj
+   cp ../downloads/Joomla_3.5.1-Stable-Update_Package.zip tmp
+2. Fix permissions:
+   See: System -> System Information -> Folder Permissions
+      http://bette.joomoowebsites.com/administrator/index.php?option=com_admin&view=sysinfo
+   [Copy/Paste -> awk -> chmod_dirs.sh]
+3. Following Method A at the URL listed above:
+   *** Pop-up: "Error: Invalid login"
+   *** Acts like it is working but I suspect it is not
+   Following Method B at the URL listed above:
+   gojmj
+   cp tmp/Joomla_3.5.1-Stable-Update_Package.zip .
+
+
+   cd tmp
    unzip Joomla_3.4.8-Stable-Full_Package.zip
    rm Joomla_3.4.8-Stable-Full_Package.zip
    cd ..

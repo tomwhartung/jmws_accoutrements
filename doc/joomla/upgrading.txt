@@ -50,20 +50,31 @@ It appears there are some major changes so it would be best to follow this proce
 Doing this on bette first (upgraded jane to 16.04 and it is not working right now).
 
 0. Always backup DB and ensure code matches what is in github ("Before You Start" above)
-1. Download Joomla_3.5.1-Stable-Update_Package.zip into /var/www/joomoowebsites.com/tmp
+1. Fix DB:
+   *** "Fix" DB from last time: Extensions -> Manage -> Database
+   *** Warning: Database is not up to date!
+   *** Database update version (3.4.3) does not match CMS version (3.4.8).
+   -> Click on "Fix" in the upper left corner
+   bu jm 02-after_fixing_db
+2. Download Joomla_3.5.1-Stable-Update_Package.zip into /var/www/joomoowebsites.com/tmp
    gojmj
    cp ../downloads/Joomla_3.5.1-Stable-Update_Package.zip tmp
-2. Fix permissions:
+3. Fix permissions:
    See: System -> System Information -> Folder Permissions
       http://bette.joomoowebsites.com/administrator/index.php?option=com_admin&view=sysinfo
    [Copy/Paste -> awk -> chmod_dirs.sh]
-3. Following Method A at the URL listed above:
+4. Following Method A at the URL listed above:
+   Components -> Joomla Update
+   Write Files Directly -> Install the Update
    *** Pop-up: "Error: Invalid login"
    *** Acts like it is working but I suspect it is not
-   Following Method B at the URL listed above:
+5. Following Method B at the URL listed above:
    gojmj
    cp tmp/Joomla_3.5.1-Stable-Update_Package.zip .
+   unzip -f -o Joomla_3.5.1-Stable-Update_Package.zip
+   *** Whitescreens - Yikes....
 
+************** TBD ************
 
    cd tmp
    unzip Joomla_3.4.8-Stable-Full_Package.zip

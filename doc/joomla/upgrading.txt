@@ -56,7 +56,7 @@ Doing this on bette first (upgraded jane to 16.04 and it is not working right no
    *** Database update version (3.4.3) does not match CMS version (3.4.8).
    -> Click on "Fix" in the upper left corner
    bu jm 02-after_fixing_db
-2. Download Joomla_3.5.1-Stable-Update_Package.zip into /var/www/joomoowebsites.com/tmp
+2. Download Joomla_3.5.1-Stable-Update_Package.zip into /var/www/joomoowebsites.com/downloads
    gojmj
    cp ../downloads/Joomla_3.5.1-Stable-Update_Package.zip tmp
 3. Fix permissions:
@@ -69,18 +69,19 @@ Doing this on bette first (upgraded jane to 16.04 and it is not working right no
    *** Pop-up: "Error: Invalid login"
    *** Acts like it is working but I suspect it is not
 5. Following Method B at the URL listed above:
-   gojmj
-   cp tmp/Joomla_3.5.1-Stable-Update_Package.zip .
-   unzip -f -o Joomla_3.5.1-Stable-Update_Package.zip
-   *** Whitescreens - Yikes....
+   *** Make sure that the joomoowebsites.com directory is not a link ***
+   *** (We tried with it being a link and the site whitescreened.)   ***
+   gojm
+   ls -al
+   rm joomoowebsites.com  // assuming it is a link
+   mv joomoowebsites.com-3.4.8 joomoowebsites.com
+   cd joomoowebsites.com
+   cp ../../downloads/Joomla_3.5.1-Stable-Update_Package.zip .
+   unzip -o Joomla_3.5.1-Stable-Update_Package.zip
+   rm Joomla_3.5.1-Stable-Update_Package.zip
 
 ************** TBD ************
 
-   cd tmp
-   unzip Joomla_3.4.8-Stable-Full_Package.zip
-   rm Joomla_3.4.8-Stable-Full_Package.zip
-   cd ..
-   mv unzip joomoowebsites.com-3.4.8
 2. Copy over the images and switch the link
    gojmj
    tar -cvzf images_joomoowebsites.com.tgz images/joomoowebsites.com/
@@ -104,6 +105,7 @@ Doing this on bette first (upgraded jane to 16.04 and it is not working right no
    lnSubsites
    cd ..
    lnJoomlaCustomizations
+   cd -
    l modules/ templates/    # should see links to my customizations
    l language/en-GB/        # should see links to my customizations
 5. Fix Permissions and Test All the Things!

@@ -1,0 +1,30 @@
+
+
+Warning
+Failed deleting metadata.xml
+Failed deleting default.js
+Failed deleting encryption.js
+Failed deleting json2.js
+Failed deleting update.js
+Failed deleting Dumper.php
+Failed deleting Escaper.php
+Failed deleting Inline.php
+Failed deleting LICENSE
+Failed deleting Parser.php
+Failed deleting Unescaper.php
+Failed deleting Yaml.php
+Failed deleting DumpException.php
+Failed deleting ExceptionInterface.php
+Failed deleting ParseException.php
+Failed deleting RuntimeException.php
+Failed deleting class.html2text.php
+Failed deleting error.php
+Failed deleting feed.php
+Failed deleting html.php
+Failed deleting image.php
+Failed deleting json.php
+Failed deleting opensearch.php
+Failed deleting raw.php
+Failed deleting xml.php
+Failed deleting pkg_weblinks.xml
+

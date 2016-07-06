@@ -79,6 +79,14 @@ Doing this on bette first (upgraded jane to 16.04 and it is not working right no
    cp ../../downloads/Joomla_3.5.1-Stable-Update_Package.zip .
    unzip -o Joomla_3.5.1-Stable-Update_Package.zip
    rm Joomla_3.5.1-Stable-Update_Package.zip
+      Fix DB: Extensions -> Manage -> Database
+      -> Click on "Fix" in the upper left corner
+   Discover and install Core Extensions:
+      Extensions -> Manage -> Discover
+      -> Select all core extensions and click on "Install" in the upper left corner
+   System → Clear Cache and if any rows are shown, select them and click the Delete
+   bu jm 02-after_fixing_db
+
 
 ************** TBD ************
 

@@ -86,6 +86,7 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] For joomla on a fresh install of 16.04, install simplexml:
     Check for it in phpinfo.php
        sudo apt-get install php7.0-simplexml
+       sudo service apache2 restart
     Reference: http://forum.joomla.org/viewtopic.php?t=916040
 [ ] Configure wordpress updates
 [ ] Set up backups

@@ -83,6 +83,10 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] System Settings -> Automatically check for updates -> Every two weeks
 [ ] Create and populate databases: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
+[ ] For joomla on a fresh install of 16.04, install simplexml:
+    Check for it in phpinfo.php
+       sudo apt-get install php7.0-simplexml
+    Reference: http://forum.joomla.org/viewtopic.php?t=916040
 [ ] Configure wordpress updates
 [ ] Set up backups
 

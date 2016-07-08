@@ -132,6 +132,7 @@ If installing on a server, you can stop here.
 [ ] Install npm
     As root:
         apt-get install npm
+        npm set prefix /usr    # needed so it does not install CLIs in /usr/local
 [ ] NODE AND NPM INSTALLATION NOTES:
         The installation process that I ran on bette (14.04), using wget:
         o  installed the node executable as /opt/node/bin/node
@@ -139,6 +140,8 @@ If installing on a server, you can stop here.
         o  created a link in /usr/local/bin to /opt/node/bin/node
         o  created a link in /usr/local/bin to /opt/node/bin/npm
         --> I DO NOT LIKE THESE LINKS IN MY /usr/local/bin , BECAUSE I MANAGE THAT SEPARATELY!
+        --> NEED TO CHANGE THE PREFIX:
+        npm set prefix /usr
         The installation process that I ran on jane (16.04), using apt:
         o installed the node executable as nodejs in /usr/bin/nodejs
         o installed the npm  executable as npm    in /usr/bin/npm

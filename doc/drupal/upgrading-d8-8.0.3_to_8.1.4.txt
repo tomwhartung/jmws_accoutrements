@@ -1,0 +1,233 @@
+
+ Upgrading Drupal 8.0.x!
+=========================
+Old Reference: https://www.drupal.org/node/1223018
+New Reference: https://www.drupal.org/node/1494290 (found at end of installation procedure)
+Untried References:
+   https://www.drupal.org/node/1494290#comment-9488185 how to tell if settings.php needs updating
+   https://www.drupal.org/node/570162 (found while looking for info on using drush)
+
+Development Host (currently bette):
+----------------------------------
+Upgrading 8.0.2 to 8.0.3 on 2016_02_05:
+1. Download the tgz file and unpack it.
+   Download tgz file from:
+      https://www.drupal.org/project/drupal
+   Unpack into:
+      /var/www/tomhartung.com/htdocs/drupal-8.0.3
+2. Ensure current site code matches github repo
+   gotht
+   git pull
+   git status
+   # Ensure the code currently being used matches what's in the repo
+   ga; gc 'Latest updates yadda yadda yadda.'; gpom   # as necessary
+3. Clear the cache, backup the DB, and put the site into maintenance mode
+3a NOTE: if actively developing new extensions, first restore DB to latest
+   version that has no installed extensions,
+   gobu
+   ls -altr
+   ### Restore DB to early version
+   ### OR optionally disable all custom extensions: https://www.drupal.org/node/1494290
+   ### rs -d YYY_MM_DD d8 0X-no_custom_extensions
+   ### Be sure to re-enable caching first!
+   ###
+   ### This process needs to be re-examined: in the future we will no longer be able to
+   ### revert to an older version of the db and start all over with reinstalling and
+   ### reconfiguring our extentions, etc.
+   ###
+   gothh
+   cd gitignored/sites/default
+   cp settings.local.php-caching_enabled settings.local.php
+   rs -d 2016_01_09 d8 04-no_custom_extensions-after_upgrading_to_8.0.2
+   ### Verify no custom themes installed: Admin -> Appearance
+   ### Verify no custom modules installed: Admin -> Extend
+3b Clear cache, etc.
+   gotht
+   drush cr   # Also (if paranoid) Admin -> Configuration -> Performance -> Clear All Caches ("why not?")
+   bu d8 01-before_upgrade_to-8.0.2
+   Admin -> Configuration -> Development -> Maintenance Mode
+4. Update new release tree with the .git dir and my customizations
+   gothh
+   cd tomhartung.com-d8.0.3
+   cp -rp ../tomhartung.com-d8.0.2/.git .
+   cp -p ../tomhartung.com-d8.0.2/.gitignore  .
+   cp ../tomhartung.com-d8.0.2/README.md .
+   # Currently we have some third party modules (for migration) plus my jmws one
+   cd modules
+   cp -rp ../../tomhartung.com-d8.0.2/modules/*   .
+   # Currently we do not have any third party themes so just copy over the links to my jmws ones
+   cd ../themes
+   cp -rp ../../tomhartung.com-d8.0.2/themes/jmws   .
+   # Make sure we didn't add something then forget about it, etc.
+   cd ..
+   gs | grep deleted
+5. Check for changes to default.services.yml and default.settings.php
+   ### See https://www.drupal.org/node/1494290#comment-9488185
+   gothh
+   diff tomhartung.com-d8.0.2/sites/default/default.services.yml tomhartung.com-d8.0.3/sites/default/default.services.yml
+   diff tomhartung.com-d8.0.2/sites/default/default.settings.php  tomhartung.com-d8.0.3/sites/default/default.settings.php
+   ###
+   ### See what changes have been made (that I need to migrate) along with my secret db info and other customizations:
+   ### Migrate these changes into the copies of these files that we are using as necessary
+   ### Note that the copies of these files that we are using are under htdocs/gitignored/sites/default
+   ###
+   ### ??? Do we need to monitor sites/example.settings.local.php for changes, and integrate them into our files ???
+   ###
+6. Update new release tree with links to my gitignored files
+   gothh
+   cd tomhartung.com-d8.0.3
+   cd sites/default
+   # *** Optionally *** double-check for changes if you like!  Paranoia will destroy ya!!
+   diff ../../../gitignored/sites/default/default.services.yml default.services.yml
+   diff ../../../gitignored/sites/default/default.settings.php default.settings.php
+   # *** End optional commands ***
+   rm default.se*
+   ln -s ../../../gitignored/sites/default/*.* .
+   ln -s ../../../gitignored/sites/default/files .
+7. Switch the link and run lnSubsites.py
+   gothh
+   rm tomhartung.com ; ln -s tomhartung.com-d8.0.3 tomhartung.com
+   l   # check link to main site
+   lnSubsites.py
+   l tomhartung.com/   # check links
+8. Visit site to upgrade db as necessary:
+   http://bette.tomhartung.com/update.php
+   http://jane.tomhartung.com/update.php
+   ##
+   ## Note: there were two DB updates upgrading from 8.0.2 to 8.0.3
+   ##
+  -> Test!!
+9. If the site looks OK, commit code and backup db:
+9.1. Commit and push code:
+   gothd
+   git status
+   ga --all
+   gc 'Upgraded to the new release, 8.0.3 .' ; gpom
+   gs
+9.2. Remove from maintenance mode and backup DB:
+   As admin -> Configuration -> "Go online."
+   bu th 02-no_extensions_installed-upgraded_to_8.0.3
+   tarHome
+
+Backup Host:
+------------
+[ ] jane
+
+Currently these are the goals and concerns:
+o  Use already-upgraded copy of db from bette (no extensions installed)
+o  Use already-upgraded copy of code from bette (github)
+o  Test with idmygadget_bartik
+o  Test disabling cache
+
+Process:
+1. Grab updated code base (leaving old base for backup)
+2. Re-enable caching in settings.local.php
+3. Clear cache (drush and admin)
+4. Restore DB used on jane to one with no custom extensions installed
+  (** re-examine the "no custom extensions installed" part of this step **)
+5. Switch the link to point to the new code
+6. Link customizations to the new code
+7. Link gitignored and subsites to the new code
+8. Test
+
+Commands:
+1. Grab new code base
+   gothh
+   mkdir fresh_clone.tmp
+   cd fresh_clone.tmp
+   git clone git@github.com:tomwhartung/tomhartung.com-d8.git
+   mv tomhartung.com-d8 tomhartung.com-d8.0.3
+   cd ..
+   mv fresh_clone.tmp/tomhartung.com-d8.0.3 .
+2. Re-enable caching in settings.local.php
+   gothh
+   cd gitignored/sites/default/
+   rd *.*              # Make sure all changes are checked in before messing with these settings files!
+   cp settings.local.php-no_caching settings.local.php
+3. Ensure all the caches are cleared
+   gotht
+   drush cr
+   # Also: Admin -> Configuration -> Performance -> Clear all caches
+4. Backup the currently used DB and restore a copy of the upgraded DB from bette
+   bu d8 01-before_upgrading_to_8.0.3
+   rs -h bette d8 02-no_extensions_installed-upgraded_to_8.0.3
+5. Switch the link
+   gothh
+   l
+   rm tomhartung.com
+   ln -s tomhartung.com-d8.0.3 tomhartung.com
+   l
+5. Link customizations
+   gotht
+   # Currently we have some third party modules (for migration) plus my jmws one
+   cd modules
+   cp -rp ../../tomhartung.com-d8.0.2/modules/*   .
+   # Currently we do not have any third party themes so just copy over the links to my jmws ones
+   cd ../themes
+   cp -rp ../../tomhartung.com-d8.0.2/themes/jmws   .
+6. Migrate changes to settings, and link the gitignored files and subsites
+6a. Migrate any changes made to the default.settings.php and settings.php files
+   gothh
+   cd gitignored/sites/default/
+   rd *.*                          # Make sure all changes are checked in before messing with these settings files!
+   diffBette default.settings.php  # Make sure we are not losing any changes made and forgotten about!
+   diffBette settings.php          # Make sure we are not losing any changes made and forgotten about!
+   fromBette default.settings.php
+   fromBette settings.php
+   rd default.settings.php
+   rd settings.php
+   ci -l default.settings.php
+   ci -l settings.php
+6b. Link the files and subsites
+   gotht
+   cd sites/default
+   ln -s ../../../gitignored/sites/default/*.* .
+   ln -s ../../../gitignored/sites/default/files .
+   lnSubsites.py
+7. Test and if it looks good, back up the db!
+   Check that site loads
+   Check that Admin -> Reports shows we are running the new version.
+   bu d8 02-no_extensions_installed-upgraded_to_8.0.3
+
+Production Host:
+----------------
+[ ] lauren - only when the others are done and all bugs are worked out
+
+Notes:
+o  Cache needs to be disabled for device detection to work
+o  Last time we had issues with the cache, unable to clear it in back end
+   due to whitescreens when trying to access Admin -> Configuration -> Performance
+*** Possible solution: clear cache using drush
+o  Was able to deply from jane to bette with cache enabled 
+o  8.0.1 DB should be compatible with 8.0.2 code but we need to have a process
+   that allows for updating the DB on one host with an updated copy from another.
+
+Standard Plan Prologue (can not have too many copies of the db!):
+0. Clear cache on all three sites
+   (Both drush and in admin because, paranoia and safety first)
+1. Enable caching on all three sites (hosts)
+   gothh
+   cd gitignored/sites/default
+   cp settings.local.php-caching_enabled settings.local.php
+2. Clear cache on all three sites
+   (Both drush and in admin because, paranoia and safety first)
+3. Backup DB on all three sites
+4. Take site offline
+
+Plan A (safest and probably best for now):
+5. Pull code, core and customizations
+6. Run update.php:
+   http://tomhartung.com/update.php
+7. Test
+8. Put online
+
+Plan B (maybe faster and we will want to do something like this when we are adding content):
+5. Ensure we have the right versions of the extensions we want running on bette
+6. Restore db running on bette on lauren.
+7. Test
+
+(Old d7) Overview of Process on backup and production hosts:
+o  Pull the new code into the directory that is already being served
+   (so we do not have to run any of the ln* scripts)
+o  Restore already-updated db from bette to this host
+

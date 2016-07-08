@@ -79,6 +79,9 @@ Download correct iso file, verify md5sum, and burn to CD
 (*) NOTE: was unable to run chrome after installing it.
     Had issues with chrome, thought they were specific to my 14.04 install
     *** Had to start with a copy of the newly-installed /home/tomh
+[ ] Disable annoying popup asking for password to unlock keyring
+    See #10 on this list of tips:
+        https://sites.google.com/site/easylinuxtipsproject/tips
 
 [ ] System Settings -> Automatically check for updates -> Every two weeks
 [ ] Create and populate databases: see database_checklist.txt

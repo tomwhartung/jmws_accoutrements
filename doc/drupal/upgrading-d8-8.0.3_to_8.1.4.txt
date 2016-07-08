@@ -1,11 +1,45 @@
 
- Upgrading Drupal 8.0.x!
-=========================
-Old Reference: https://www.drupal.org/node/1223018
-New Reference: https://www.drupal.org/node/1494290 (found at end of installation procedure)
+ Upgrading Drupal 8.0.3 to 8.1.5
+=================================
+Old Reference (upgrading 7.x):
+   https://www.drupal.org/node/1494290
+Current Reference:
+   https://www.drupal.org/node/1223018
+Official Reference:
+   https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.0.x
+OH that "8.0.x" at the end looks a little suspicious!
+NOTE that this link (changed the "0" to a "1") has nothing - as of today!
+   https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.1.x
+HOWEVER the guaranteed current version is available in the download file as:
+  core/UPGRADE.txt
+
 Untried References:
-   https://www.drupal.org/node/1494290#comment-9488185 how to tell if settings.php needs updating
    https://www.drupal.org/node/570162 (found while looking for info on using drush)
+
+Preparation:
+------------
+Review what has changed, specifically determine whether settings.php or other important
+files need to be updated.  According to this comment:
+   https://www.drupal.org/node/1494290#comment-9488185
+there is information about how to tell if settings.php, .htaccess, and other important
+files need updating - but where to look.
+Looking at several posts (including one on stackexchange) I am finding 404s and
+processes for old versions (7.x, etc.).  So do this instead!
+0. Get this information from the distribution itself.
+0.1 Download the latest version (in this case 8.1.5).
+    When upgrading past more than one release, download them all
+    (in this case, we are downloading 8.0.4 and 8.1.3 as well).
+    Use the links on the admin panel or find the file(s) on drupal.org .
+        Admin -> Reports -> Available Updates
+     OR
+        https://www.drupal.org/project/drupal/releases/8.1.5 (includes Release notes)
+        https://www.drupal.org/project/drupal/releases/8.1.3 (does not include Release notes)
+        https://www.drupal.org/project/drupal/releases/8.0.4 (does not include Release notes)
+    Copy the file(s) into:
+        /var/www/tomhartung.com/downloads
+0.2 Unpack and examine these files for each release:
+    core/CHANGELOG.txt
+    core/UPGRADE.txt
 
 Development Host (currently bette):
 ----------------------------------

@@ -37,9 +37,30 @@ processes for old versions (7.x, etc.).  So do this instead!
         https://www.drupal.org/project/drupal/releases/8.0.4 (does not include Release notes)
     Copy the file(s) into:
         /var/www/tomhartung.com/downloads
-0.2 Unpack and examine these files for each release:
-    core/CHANGELOG.txt
-    core/UPGRADE.txt
+0.2 Unpack each tar file into its own directory
+    mkdir ../unpack
+    cp  drupal-8.0.4.tar.gz drupal-8.1* ../unpack
+    cd ../unpack
+    mkdir drupal-8.0.4
+    mkdir drupal-8.1.3
+    mkdir drupal-8.1.5
+    mv drupal-8.0.4.tar.gz drupal-8.0.4
+    mv drupal-8.1.3.tar.gz drupal-8.1.3 
+    mv drupal-8.1.5.tar.gz drupal-8.1.5
+    l
+    cd drupal-8.0.4/
+    tar -xvzf drupal-8.0.4.tar.gz 
+    cd ../drupal-8.1.3/
+    tar -xvzf drupal-8.1.3.tar.gz 
+    cd ../drupal-8.1.5
+    tar -xvzf drupal-8.1.5.tar.gz 
+    cd ..
+0.3 For each release, find and review these files:
+    l */*/core/CHANGELOG.txt
+    l */*/core/UP*.txt
+    more */*/core/CHANGELOG.txt
+    more */*/core/UP*.txt
+
 
 Development Host (currently bette):
 ----------------------------------

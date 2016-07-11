@@ -1,0 +1,189 @@
+
+ Performing a Fresh Install
+============================
+Download correct iso file, verify md5sum, and burn to CD
+
+ On Windows System, Before Install:
+------------------------------------
+[ ] Ensure all updates are installed
+[ ] Computer -> C: Drive -> Properties
+    Tools tab -> Error Checking -> Check now...
+    
+
+ Install:
+----------
+[ ] Check checkboxes:
+	[ ] Download updates while installing
+	[ ] Install third-party software
+
+ On New System, After Install:
+-------------------------------
+[ ] Re-using /home (*), /usr/local/bin , /usr/local/tar , and /var/www
+    After copying to / (root) partition of 14.04 install.
+[ ] Update system, reboot
+
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+[ ] Install rcs, synaptic, vim, openssh-server
+[ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
+[ ] Set preferences, lock terminal and firefox to launcher
+[ ] Set terminal double-click word boundary preferences
+    Either: Edit -> Profile Preferences -> General -> Select by word characters
+    Or: use dconf command, e.g.:
+       dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
+    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
+
+[ ] Copy /etc/hosts from old install and setup static IP
+[ ] Check /etc/hosts and /etc/fstab into RCS
+	Disk Space Spotchec - / and /home - ensure we have enough
+
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+[ ] Install xscreensaver, xscreensaver-data-extra
+[ ] Install xscreensaver-gl-extra (?? defunct in 16.04: xscreensaver-screensaver-diz ??)
+[ ] Install unity-tweak-tool
+    apt-get install unity-tweak-tool
+[ ] Lock xscreensaver and unity-tweak-tool to launcher
+[ ] Remove gnome-screensaver
+    apt list gnome-screensaver
+    apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    gnome-session-properties
+[ ] Update System Settings -> Brightness & Lock
+[ ] Update System Settings -> Power
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
+
+[ ] Install apache2, apache2-utils,
+[ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+[ ] Install mysql-server, 
+[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
+   ### cd /etc/apache2/mods-enabled
+   ### ln -s ../mods-available/rewrite.load .
+   a2enmod rewrite
+   a2enmod php7.0
+   a2dismod mpm_event
+   a2enmod mpm_prefork
+   service apache2 start
+[ ] Get all websites' source files in /var/www
+[ ] Config files in /etc/apache2/sites-avaialble
+->  For 16.04, copy conf files from jane:
+    Already vetted currently used versions against the new 000-default.conf for 16.04, no changes needed!
+[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
+   For jane: ensure both www.site.com and site.com will work
+   For bette: change "jane" to "bette" in conf files
+	Disk Space Spotcheck - / and /home - ensure we have plenty left
+
+[ ] ln -s /art/images ~/Pictures
+[ ] Install chrome and chromium-browser
+    Download the .deb file for chrome and install by double-clicking on it.
+(*) NOTE: was unable to run chrome after installing it.
+    Had issues with chrome, thought they were specific to my 14.04 install
+    *** Had to start with a copy of the newly-installed /home/tomh
+[ ] Disable annoying popup asking for password to unlock keyring
+    See #10 on this list of tips:
+        https://sites.google.com/site/easylinuxtipsproject/tips
+
+[ ] System Settings -> Automatically check for updates -> Every two weeks
+[ ] Create and populate databases: see database_checklist.txt
+[ ] Get sites running: see site_checklist.txt
+[ ] For joomla on a fresh install of 16.04, install simplexml:
+    Check for it in phpinfo.php
+       sudo apt-get install php7.0-simplexml
+       sudo service apache2 restart
+    Reference: http://forum.joomla.org/viewtopic.php?t=916040
+[ ] Configure wordpress updates
+[ ] Set up backups
+
+---------------------------------------------
+If installing on a server, you can stop here.
+---------------------------------------------
+
+[ ] cd /art; ln -s /media/ext4backupA/images ~/Pictures
+[ ] Install audacious, easytag, audex, banshee, vlc media player
+[ ] Install compizconf settings manager
+[ ] Install gwenview, gimp, gthumb, screenshot
+[ ] Install rhythmbox and thunderbird
+[ ] Lock all or most (not using thunderbird on jane) of those to launcher
+[ ] Lock disks [manager] to launcher
+[ ] Confirm installation of image viewer xeyes (pre-installed??),
+	Disk Space Spotcheck:
+      /:     8.3G (48%)
+      /home: 4.1G (25%)
+
+[ ] Install nodejs: analysis and commands
+    *** Which version of node to install, and installation method to use? ***
+    2016-06-29: stable versions of node listed on wikipedia: 6.2.2 & 4.4.6 (LTS)
+    2016-06-29: stable version  of npm  listed on wikipedia: 3.9.0
+    2016-06-29: version of node installed on bette (14.04: obtained via wget): 4.2.3
+    2016-06-29: version of npm  installed on bette (14.04: obtained via wget): 2.14.7
+    2016-06-29: version of node available on jane in synaptic (16.04): 4.2.6
+    2016-06-29: version of npm  available on jane in synaptic (16.04): (none!)
+    2016-06-29: version of node available on jane in apt (16.04): 4.2.6
+    2016-06-29: version of npm  available on jane in apt (16.04): 3.5.2
+    2016-06-29: version of node available on lauren in synaptic (14.04 - production server): 0.10.37
+    2016-06-29: version of npm  available on lauren in synaptic (14.04 - production server): 1.3.10
+    2016-06-29: version of node available on lauren in apt (14.04 - production server): 0.10.37
+    2016-06-29: version of npm  available on lauren in apt (14.04 - production server): 1.3.10
+    --> On jane: use apt to install the current versions available for 16.04: 4.2.6 and 3.5.2
+    As root:
+        apt-get install nodejs
+        cd /usr/bin
+        ls -al node*    # verify we have no executable here named just "node"
+        ln -s nodejs node
+    Reference for installing using apt-get:
+        https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+[ ] Install npm
+    As root:
+        apt-get install npm
+        npm set prefix /usr    # needed so it does not install CLIs in /usr/local
+[ ] NODE AND NPM INSTALLATION NOTES:
+        The installation process that I ran on bette (14.04), using wget:
+        o  installed the node executable as /opt/node/bin/node
+        o  installed the npm executable as /opt/node/bin/npm
+        o  created a link in /usr/local/bin to /opt/node/bin/node
+        o  created a link in /usr/local/bin to /opt/node/bin/npm
+        --> I DO NOT LIKE THESE LINKS IN MY /usr/local/bin , BECAUSE I MANAGE THAT SEPARATELY!
+        --> NEED TO CHANGE THE PREFIX:
+        npm set prefix /usr
+        The installation process that I ran on jane (16.04), using apt:
+        o installed the node executable as nodejs in /usr/bin/nodejs
+        o installed the npm  executable as npm    in /usr/bin/npm
+        --> This is more like what I would expect - except I cannot run "node" on the command line.
+        --> Hence the "ln -s nodejs node" command!
+[ ] Node and npm installation - notes for the future:
+    --> If we want to use this in production (on 14.04):
+    -->    use wget to get that version,
+    -->    OR upgrade server to 16.04
+    --> In the future, consider using NVM
+[ ] Install express
+    Ubuntu 14.04 - as root:
+        apt-get install node-express
+    Ubuntu 16.04 - as root:
+        ### npm install express            // do not think this is needed
+        npm install -g express-generator   // allows running from command line
+        cd /usr/bin
+        ln -s /usr/local/lib/node_modules/express-generator/bin/express .
+        which express
+    All - as tomh:
+        which express
+
+*************** YOU ARE HERE (jane install) ***********************
+
+[ ] Install netbeans
+[ ] Install eclipse
+	Disk Space Spotcheck:
+      /:     ??? G;
+      /home: ??? G
+
+Extra Credit (install as desired, if desired)
+---------------------------------------------
+[ ] Install java, jdk
+[ ] Install opera
+[ ] Install skype
+	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
+
+[ ] Install
+[ ] Install
+[ ] 
+[ ] 
+[ ] 
+

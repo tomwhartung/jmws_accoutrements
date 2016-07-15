@@ -8,18 +8,20 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] Ensure all updates are installed
 [ ] Computer -> C: Drive -> Properties
     Tools tab -> Error Checking -> Check now...
-    
+[ ] Defragment disk
+    My Computer (Win 7) or File Explorer (Win 10)
+    Select C: drive
+    Properties (Win 7) or Drive Tools (Win 10)
+    Defragment Disk (Win 7) or Optimize Drives (Win 10)
 
  Install:
 ----------
 [ ] Check checkboxes:
-	[ ] Download updates while installing
-	[ ] Install third-party software
+    [ ] Download updates while installing
+    [ ] Install third-party software
 
  On New System, After Install:
 -------------------------------
-[ ] Re-using /home (*), /usr/local/bin , /usr/local/tar , and /var/www
-    After copying to / (root) partition of 14.04 install.
 [ ] Update system, reboot
 
 [ ] Set up root account: .bashrc, links to .bash_aliases*
@@ -32,9 +34,9 @@ Download correct iso file, verify md5sum, and burn to CD
        dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
     Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
 
-[ ] Copy /etc/hosts from old install and setup static IP
+[ ] Copy /etc/hosts from another host and setup static IP
 [ ] Check /etc/hosts and /etc/fstab into RCS
-	Disk Space Spotchec - / and /home - ensure we have enough
+    Disk Space Spotchec - / and /home - ensure we have enough
 
 [ ] Install fortune-mod, fortunes, other fortune* packages as desired
 [ ] Install xscreensaver, xscreensaver-data-extra
@@ -70,9 +72,8 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
    For jane: ensure both www.site.com and site.com will work
    For bette: change "jane" to "bette" in conf files
-	Disk Space Spotcheck - / and /home - ensure we have plenty left
+    Disk Space Spotcheck - / and /home - ensure we have plenty left
 
-[ ] ln -s /art/images ~/Pictures
 [ ] Install chrome and chromium-browser
     Download the .deb file for chrome and install by double-clicking on it.
 (*) NOTE: was unable to run chrome after installing it.
@@ -81,6 +82,7 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] Disable annoying popup asking for password to unlock keyring
     See #10 on this list of tips:
         https://sites.google.com/site/easylinuxtipsproject/tips
+[ ] Lock chrome and chromium browser to launcher
 
 [ ] System Settings -> Automatically check for updates -> Every two weeks
 [ ] Create and populate databases: see database_checklist.txt
@@ -93,19 +95,10 @@ Download correct iso file, verify md5sum, and burn to CD
 [ ] Configure wordpress updates
 [ ] Set up backups
 
----------------------------------------------
-If installing on a server, you can stop here.
----------------------------------------------
-
-[ ] cd /art; ln -s /media/ext4backupA/images ~/Pictures
-[ ] Install audacious, easytag, audex, banshee, vlc media player
-[ ] Install compizconf settings manager
-[ ] Install gwenview, gimp, gthumb, screenshot
-[ ] Install rhythmbox and thunderbird
-[ ] Lock all or most (not using thunderbird on jane) of those to launcher
-[ ] Lock disks [manager] to launcher
+[ ] Install screenshot (app)
+[ ] Lock screenshot and disks [manager] to launcher
 [ ] Confirm installation of image viewer xeyes (pre-installed??),
-	Disk Space Spotcheck:
+    Disk Space Spotcheck:
       /:     8.3G (48%)
       /home: 4.1G (25%)
 
@@ -166,24 +159,9 @@ If installing on a server, you can stop here.
     All - as tomh:
         which express
 
-*************** YOU ARE HERE (jane install) ***********************
+[?] Install compizconf settings manager
 
-[ ] Install netbeans
-[ ] Install eclipse
-	Disk Space Spotcheck:
-      /:     ??? G;
-      /home: ??? G
-
-Extra Credit (install as desired, if desired)
 ---------------------------------------------
-[ ] Install java, jdk
-[ ] Install opera
-[ ] Install skype
-	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
-
-[ ] Install
-[ ] Install
-[ ] 
-[ ] 
-[ ] 
+If installing on a server, you can stop here.
+---------------------------------------------
 

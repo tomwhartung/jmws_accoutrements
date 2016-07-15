@@ -44,8 +44,8 @@ Download correct iso file, verify md5sum, and burn to CD
     -  Allowing for installing a new OS at some point
     -  Allowing spares
     2 X 14G /       (/mnt/future/)
-    2 X 10G /home   (/mnt/future/home/)
     2 X  1G /boot   (/mnt/future/boot/)
+    2 X 10G /home   (/mnt/future/home/)
 2 X 25G = 50G
     1 X 11G /var/www
     1 X  1G /usr/local/bin
@@ -61,7 +61,8 @@ Download correct iso file, verify md5sum, and burn to CD
 1 X 10G = 10G
 50 + 12 + 14 + 10 = 86
 110 - 86 = 24
-    1 X 24G /usr/local/tar
+    1 X  4G swap
+    1 X 20G /usr/local/tar
 
  On New System, After Install:
 -------------------------------

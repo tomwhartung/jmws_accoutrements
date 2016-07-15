@@ -64,13 +64,33 @@ Download correct iso file, verify md5sum, and burn to CD
     1 X  4G swap
     1 X 20G /usr/local/tar
 
- On New System, After Install:
--------------------------------
+ Install Essential System Tools:
+---------------------------------
 [ ] Update system, reboot
-
-[ ] Set up root account: .bashrc, links to .bash_aliases*
+    Repeat as necessary
+[ ] Install unity-tmeak-tool
+    apt-get install unity-tweak-tool
 [ ] Install rcs, synaptic, vim, openssh-server
 [ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+[ ] Install xscreensaver, xscreensaver-data-extra
+[ ] Install xscreensaver-gl-extra
+[ ] Lock xscreensaver and unity-tweak-tool to launcher
+[ ] Remove gnome-screensaver
+    apt-get update
+    apt list gnome-screensaver
+    apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    gnome-session-properties
+[ ] Update System Settings -> Brightness & Lock
+[ ] Update System Settings -> Power
+[ ] Update Terminal Preferences
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
+
+[ ] Set up root and tomh accounts:
+    Copy to thumb drive then to barbara:
+    .bashrc, links to .bash_aliases*
 [ ] Set preferences, lock terminal and firefox to launcher
 [ ] Set terminal double-click word boundary preferences
     Either: Edit -> Profile Preferences -> General -> Select by word characters
@@ -80,24 +100,10 @@ Download correct iso file, verify md5sum, and burn to CD
 
 [ ] Copy /etc/hosts from another host and setup static IP
 [ ] Check /etc/hosts and /etc/fstab into RCS
-    Disk Space Spotchec - / and /home - ensure we have enough
+    Disk Space Spotcheck - / and /home - ensure we have enough
 
-[ ] Install fortune-mod, fortunes, other fortune* packages as desired
-[ ] Install xscreensaver, xscreensaver-data-extra
-[ ] Install xscreensaver-gl-extra (?? defunct in 16.04: xscreensaver-screensaver-diz ??)
-[ ] Install unity-tweak-tool
-    apt-get install unity-tweak-tool
-[ ] Lock xscreensaver and unity-tweak-tool to launcher
-[ ] Remove gnome-screensaver
-    apt list gnome-screensaver
-    apt-get remove gnome-screensaver
-[ ] Add xscreensaver to startup programs
-    gnome-session-properties
-[ ] Update System Settings -> Brightness & Lock
-[ ] Update System Settings -> Power
-[ ] Check man page for other steps needed to get it working at startup
-    man xscreensaver
-
+ Get Sites Running
+-------------------
 [ ] Install apache2, apache2-utils,
 [ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
 [ ] Install mysql-server, 

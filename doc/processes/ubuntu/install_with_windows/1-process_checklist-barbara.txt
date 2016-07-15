@@ -13,6 +13,22 @@ Download correct iso file, verify md5sum, and burn to CD
     Select C: drive
     Properties (Win 7) or Drive Tools (Win 10)
     Defragment Disk (Win 7) or Optimize Drives (Win 10)
+[ ] Shrink Win 10 partition
+    Start (Cortana) -> Disk Management (window appears
+    Right-click on C: -> Shrink volume
+    Accept defaults: 116G NTFS and 103G Unallocated
+    Reference: http://www.everydaylinuxuser.com/2015/11/how-to-shrink-windows-10-to-make-space.html
+[ ] Turn off fast startup (Win 10 but Win 7 is similar)
+    Settings -> System -> Power and Sleep
+    Click on "Additional power settings" then
+    Click on "Choose what the power buttons do" then
+    Click on "Change settings that are currently available" then
+    Under Shutdown settings UN-check the "Turn on fast startup" checkbox then
+    Click on "Save changes"
+    Reference: https://sites.google.com/site/easylinuxtipsproject/windows
+[ ] Note: Press F2 to get into BIOS (e.g. to change boot device order)
+    I am not seeing any settings - specifically the UEFI Secure Boot option -
+    mentioned in the Reference, so did not make any changes.
 
  Install:
 ----------

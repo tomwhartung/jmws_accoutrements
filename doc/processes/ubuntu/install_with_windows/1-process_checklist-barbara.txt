@@ -125,16 +125,18 @@ Download correct iso file, verify md5sum, and burn to CD
     Disk Space Spotcheck - / and /home - ensure we have plenty left
 
 [ ] Install chrome and chromium-browser
+    Found chromium-browser in synaptic
     Download the .deb file for chrome and install by double-clicking on it.
-(*) NOTE: was unable to run chrome after installing it.
-    Had issues with chrome, thought they were specific to my 14.04 install
-    *** Had to start with a copy of the newly-installed /home/tomh
+    http://google.com/chrome
 [ ] Disable annoying popup asking for password to unlock keyring
     See #10 on this list of tips:
         https://sites.google.com/site/easylinuxtipsproject/tips
 [ ] Lock chrome and chromium browser to launcher
 
 [ ] System Settings -> Automatically check for updates -> Every two weeks
+[ ] System Settings -> Keyboard -> Shortcuts
+    Update shortcut for switching between workspaces
+
 [ ] Create and populate databases: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
 [ ] For joomla on a fresh install of 16.04, install simplexml:
@@ -142,8 +144,6 @@ Download correct iso file, verify md5sum, and burn to CD
        sudo apt-get install php7.0-simplexml
        sudo service apache2 restart
     Reference: http://forum.joomla.org/viewtopic.php?t=916040
-[ ] Configure wordpress updates
-[ ] Set up backups
 
 [ ] Install screenshot (app)
 [ ] Lock screenshot and disks [manager] to launcher
@@ -151,6 +151,11 @@ Download correct iso file, verify md5sum, and burn to CD
     Disk Space Spotcheck:
       /:     8.3G (48%)
       /home: 4.1G (25%)
+
+------------------
+
+[ ] Configure wordpress updates
+[ ] Set up backups
 
 [ ] Install nodejs: analysis and commands
     *** Which version of node to install, and installation method to use? ***

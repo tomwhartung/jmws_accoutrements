@@ -104,7 +104,7 @@ Download correct iso file, verify md5sum, and burn to CD
 
  Get Sites Running
 -------------------
-[ ] Install apache2, apache2-utils,
+[ ] Install apache2, apache2-utils, libapache2-mod-php7.0
 [ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
 [ ] Install mysql-server, 
 [ ] Enable mod_rewrite and php7.0, and start apache2 (as root):

@@ -122,6 +122,7 @@ Download correct iso file, verify md5sum, and burn to CD
     For barbara (ultimately): ensure both www.site.com and site.com will work
     For bette: change "jane" to "bette" in conf files
     service apache2 start
+    Disk Space Spotcheck: /: 4.2G/13G (35%); /home: 0.5G/9G (6%); and /var/www: 5.6G/10G (59%)
 
 [ ] Install chrome and chromium-browser
     Found chromium-browser in synaptic

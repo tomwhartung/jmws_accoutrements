@@ -1,40 +1,52 @@
 
- Upgrading Drupal 8.0.3 to 8.1.5
+ Upgrading Drupal 8.0.3 to 8.1.7
 =================================
 Old Reference (upgrading 7.x):
    https://www.drupal.org/node/1494290
 Current Reference:
    https://www.drupal.org/node/1223018
+
+More References
+---------------
+List of all releases:
+   https://www.drupal.org/project/drupal/releases?api_version%5B%5D=7234
 Official Reference:
    https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.0.x
 OH that "8.0.x" at the end looks a little suspicious!
 NOTE that this link (changed the "0" to a "1") has nothing - as of today!
    https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.1.x
 HOWEVER the guaranteed current version is available in the download file as:
-  core/UPGRADE.txt
+  core/UPGRADE.txt (8.0.4)
+  core/UPDATE.txt (8.1.3+)
 
-Untried References:
+To Do: Try updating using drush (looks to be easier):
+   https://www.drupal.org/node/2550801
+Untried Reference:
    https://www.drupal.org/node/570162 (found while looking for info on using drush)
 
 Preparation:
 ------------
 Review what has changed, specifically determine whether settings.php or other important
-files need to be updated.  According to this comment:
+files need to be updated.
+
+According to this comment:
    https://www.drupal.org/node/1494290#comment-9488185
 there is information about how to tell if settings.php, .htaccess, and other important
-files need updating - but where to look.
+files need updating - but exactly where to find this is not immediately evident (or is it?).
 Looking at several posts (including one on stackexchange) I am finding 404s and
 processes for old versions (7.x, etc.).  So do this instead!
+
 0. Get this information from the distribution itself.
-0.1 Download the latest version (in this case 8.1.5).
+0.1 Download the latest version (in this case 8.1.7).
     When upgrading past more than one release, download them all
     (in this case, we are downloading 8.0.4 and 8.1.3 as well).
     Use the links on the admin panel or find the file(s) on drupal.org .
         Admin -> Reports -> Available Updates
      OR
-        https://www.drupal.org/project/drupal/releases/8.1.5 (includes Release notes)
-        https://www.drupal.org/project/drupal/releases/8.1.3 (does not include Release notes)
-        https://www.drupal.org/project/drupal/releases/8.0.4 (does not include Release notes)
+        https://www.drupal.org/project/drupal/releases/8.0.4 (page includes minimal Release notes)
+        https://www.drupal.org/project/drupal/releases/8.1.3 (page includes minimal Release notes)
+        https://www.drupal.org/project/drupal/releases/8.1.5 (page includes list of all changes since 8.1.3)
+        https://www.drupal.org/project/drupal/releases/8.1.7 (page includes updates to .htaccess, web.config, and settings)
     Copy the file(s) into:
         /var/www/tomhartung.com/downloads
 0.2 Unpack each tar file into its own directory
@@ -54,13 +66,18 @@ processes for old versions (7.x, etc.).  So do this instead!
     tar -xvzf drupal-8.1.3.tar.gz 
     cd ../drupal-8.1.5
     tar -xvzf drupal-8.1.5.tar.gz 
+    cd ../drupal-8.1.7
+    tar -xvzf drupal-8.1.7.tar.gz
     cd ..
 0.3 For each release, find and review these files:
     l */*/core/CHANGELOG.txt
     l */*/core/UP*.txt
     more */*/core/CHANGELOG.txt
     more */*/core/UP*.txt
-
+0.4 Results of reviewing all this:
+    Verified minimal changes only between drupal-8.0.4/core/UPGRADE.txt and drupal-8.1.3/core/UPDATE.txt
+    Verified drupal-8.1.3/core/UPDATE.txt, drupal-8.1.5/core/UPDATE.txt, and drupal-8.1.7/core/UPDATE.txt are identical
+    --> It looks like we can go straight from 8.0.3 to 8.1.7
 
 Development Host (currently bette):
 ----------------------------------

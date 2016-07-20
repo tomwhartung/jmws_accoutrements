@@ -26,6 +26,8 @@ Untried Reference:
 
 Preparation:
 ------------
+This time we have missed a few upgrades, and need to verify we are using the right process.
+
 Review what has changed, specifically determine whether settings.php or other important
 files need to be updated.
 
@@ -57,15 +59,15 @@ processes for old versions (7.x, etc.).  So do this instead!
     mkdir drupal-8.1.3
     mkdir drupal-8.1.5
     mv drupal-8.0.4.tar.gz drupal-8.0.4
-    mv drupal-8.1.3.tar.gz drupal-8.1.3 
+    mv drupal-8.1.3.tar.gz drupal-8.1.3
     mv drupal-8.1.5.tar.gz drupal-8.1.5
     l
     cd drupal-8.0.4/
-    tar -xvzf drupal-8.0.4.tar.gz 
+    tar -xvzf drupal-8.0.4.tar.gz
     cd ../drupal-8.1.3/
-    tar -xvzf drupal-8.1.3.tar.gz 
+    tar -xvzf drupal-8.1.3.tar.gz
     cd ../drupal-8.1.5
-    tar -xvzf drupal-8.1.5.tar.gz 
+    tar -xvzf drupal-8.1.5.tar.gz
     cd ../drupal-8.1.7
     tar -xvzf drupal-8.1.7.tar.gz
     cd ..
@@ -74,19 +76,27 @@ processes for old versions (7.x, etc.).  So do this instead!
     l */*/core/UP*.txt
     more */*/core/CHANGELOG.txt
     more */*/core/UP*.txt
-0.4 Results of reviewing all this:
-    Verified minimal changes only between drupal-8.0.4/core/UPGRADE.txt and drupal-8.1.3/core/UPDATE.txt
+0.4 Links to release notes available in admin panel:
+    Reports -> Available
+    Review these links for information about changes to important files (settings files, etc.)
+0.5 Results of reviewing all this:
+    Verified minimal (inconsequential) changes only between drupal-8.0.4/core/UPGRADE.txt and drupal-8.1.3/core/UPDATE.txt
     Verified drupal-8.1.3/core/UPDATE.txt, drupal-8.1.5/core/UPDATE.txt, and drupal-8.1.7/core/UPDATE.txt are identical
+    Based on the facts that the list of all releases doesn't include all of them and
+       that it says you can update from any minor release to any other minor release on this page:
+          https://www.drupal.org/node/2700999
     --> It looks like we can go straight from 8.0.3 to 8.1.7
+0.5 Reconciling the processes:
+o  My process below (changed as deemed necessary - for my original process used, see previous files)
+o  Process in drupal-8.1.*/core/UPDATE.txt
+o  Online main process: https://www.drupal.org/node/2700999
+o  Online simplified process: https://www.drupal.org/node/1494290
 
 Development Host (currently bette):
 ----------------------------------
-Upgrading 8.0.2 to 8.0.3 on 2016_02_05:
-1. Download the tgz file and unpack it.
-   Download tgz file from:
-      https://www.drupal.org/project/drupal
-   Unpack into:
-      /var/www/tomhartung.com/htdocs/drupal-8.0.3
+Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
+1.  Unpack the downloaded 8.1.7 tgz file into:
+      /var/www/tomhartung.com/htdocs/tomhartung-8.1.7
 2. Ensure current site code matches github repo
    gotht
    git pull
@@ -94,6 +104,9 @@ Upgrading 8.0.2 to 8.0.3 on 2016_02_05:
    # Ensure the code currently being used matches what's in the repo
    ga; gc 'Latest updates yadda yadda yadda.'; gpom   # as necessary
 3. Clear the cache, backup the DB, and put the site into maintenance mode
+   Configuration -> (Development section) Performance -> Clear All Caches
+   bu th 01-before_updating_8.0.3-8.1.7
+   Configuration -> (Development section) Maintenance mode
 3a NOTE: if actively developing new extensions, first restore DB to latest
    version that has no installed extensions,
    gobu
@@ -270,7 +283,7 @@ o  Cache needs to be disabled for device detection to work
 o  Last time we had issues with the cache, unable to clear it in back end
    due to whitescreens when trying to access Admin -> Configuration -> Performance
 *** Possible solution: clear cache using drush
-o  Was able to deply from jane to bette with cache enabled 
+o  Was able to deply from jane to bette with cache enabled
 o  8.0.1 DB should be compatible with 8.0.2 code but we need to have a process
    that allows for updating the DB on one host with an updated copy from another.
 

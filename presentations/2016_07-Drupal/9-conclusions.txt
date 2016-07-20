@@ -1,0 +1,14 @@
+
+Conclusions
+-----------
+
+If responsive works for you, go for it.
+
+As mobile bloat increases how long will that last?
+
+If you need to use device detection:
+
+o  Allow easily switching between multiple options
+
+o  Fail gracefully - have a reasonable default for unrecognized devices
+

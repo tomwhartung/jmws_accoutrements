@@ -5,8 +5,13 @@
 /.project
 __pycache__/
 
+#
+# For vim temporary files
+#
 *.swp
 .~lock.*
+.*~
+*~
 
 tmp/
 

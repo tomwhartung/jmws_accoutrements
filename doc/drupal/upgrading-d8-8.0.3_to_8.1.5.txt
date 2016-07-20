@@ -95,18 +95,59 @@ o  Online simplified process: https://www.drupal.org/node/1494290
 Development Host (currently bette):
 ----------------------------------
 Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
-1.  Unpack the downloaded 8.1.7 tgz file into:
-      /var/www/tomhartung.com/htdocs/tomhartung-8.1.7
+1. Unpack the downloaded 8.1.7 tgz file into the unpack directory:
+      goth
+      cd unpack
+      cp ../../downloads/drupal-8.1.7.tar.gz .
+      tar -xvzf drupal-8.1.7.tar.gz
+      /var/www/tomhartung.com/htdocs/unpack/drupal-8.1.7
+   Move that directory tree to the htdocs directory:
+      mv unpack/drupal-8.1.7 .
 2. Ensure current site code matches github repo
    gotht
    git pull
    git status
    # Ensure the code currently being used matches what's in the repo
    ga; gc 'Latest updates yadda yadda yadda.'; gpom   # as necessary
-3. Clear the cache, backup the DB, and put the site into maintenance mode
+3. Clear the cache using drush and in backend, backup the DB, and
+      put the site into maintenance mode
+   gotht
+   drush cr
    Configuration -> (Development section) Performance -> Clear All Caches
    bu th 01-before_updating_8.0.3-8.1.7
    Configuration -> (Development section) Maintenance mode
+4. Grab fresh clone of site, and replace the core and vendor directories
+   gothh
+   cd tmp
+   git clone git@github.com:tomwhartung/tomhartung.com-d8.git
+   mv tomhartung.com-d8 tomhartung.com-d8.1.7
+   mv tomhartung.com-d8.1.7 ..
+   cd ../tomhartung.com-d8.1.7
+   rm -fr core vendor
+   rm autoload.php composer.* example.gitignore index.php LICENSE.txt README.txt robots.txt update.php web.config
+   rm .csslintrc .editorconfig .eslint* .gitattributes  .htaccess
+
+5. Replace deleted files with the corresponding files from the new release:
+   Be careful to not overwrite any customizations made to any of these files:
+      .htaccess, composer.json, robots.txt, etc.
+   If desired, you can run git log on these to ensure they have not been changed
+   goth
+   cd drupal-8.1.7
+   mv core vendor ../tomhartung.com-d8.1.7
+   mv autoload.php composer.* example.gitignore index.php LICENSE.txt README.txt robots.txt update.php web.config ../tomhartung.com-d8.1.7
+   mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tomhartung.com-d8.1.7
+
+6. Reconcile any changes made to "*settings*" files
+   At this point in time this part of the process is a bit difficult to codify into specific steps.
+   It boils down to seeing what, if anything, has changed in *settings* files under the "sites/" directory
+   goth
+   Run ls and diff commands from this directory to compare:
+      old production files under tomhartung.com/sites to the
+      newly released versions under drupal-8.1.7/sites
+
+********************************
+*** Not doing this this time ***
+********************************
 3a NOTE: if actively developing new extensions, first restore DB to latest
    version that has no installed extensions,
    gobu
@@ -131,6 +172,10 @@ Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
    drush cr   # Also (if paranoid) Admin -> Configuration -> Performance -> Clear All Caches ("why not?")
    bu d8 01-before_upgrade_to-8.0.2
    Admin -> Configuration -> Development -> Maintenance Mode
+
+******************************************
+*** Doing things differently this time ***
+******************************************
 4. Update new release tree with the .git dir and my customizations
    gothh
    cd tomhartung.com-d8.0.3

@@ -187,10 +187,13 @@ Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
    diffBarbara settings*      ## Ensure these files match what is on the new server
    diffJane settings*         ## Ensure these files match what is on the new development host
    diffLauren settings*       ## Ensure any changes on the production host are desired there only
-   cp default.settings.php default.settings.php-old
-   cp settings.php settings.php-old
-   gothh
-   cp drupal-8.1.7/sites/default/default.settings.php gitignored/sites/default/default.settings.php
+   ###
+   ### If any of these files do not match what is on the other hosts
+   ### OR
+   ### If any of these files do not match what is in RCS on the corresponding local host
+   ###   We need to justify why the difference exists or make sure the files match
+   ###
+6.3 Choose your process:
 XXX Option 1) Identify changes made between:
 XXX    gitignored/sites/default/default.settings.php and
 XXX    gitignored/sites/default/settings.php
@@ -207,7 +210,22 @@ XXX OR
        Copy the new default.settings.php to settings.php
        Identify the changes made to default.settings.php-old to get what is now settings.php-old
        Apply those changes to the new default.settings.php to get the new settings.php
-6.3 Proceeding with Option 3 - details
+6.4 Proceeding with Option 3 - details
+   gothh
+   cd gitignored/sites/default
+   cp default.settings.php default.settings.php-old
+   cp settings.php settings.php-old
+   cd -
+   cp drupal-8.1.7/sites/default/default.settings.php gitignored/sites/default/default.settings.php
+   cd -
+   cp default.settings.php settings.php
+   diff default.settings.php-old settings.php-old
+   ###
+   ### Manually apply these changes, that were made
+   ###    to default.settings.php-old to get settings.php-old
+   ### To the current settings.php (which matches the current default.settings.php)
+   ###    to get the new settings.php
+   ###
     
 
 ********************************

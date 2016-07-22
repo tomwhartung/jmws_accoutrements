@@ -150,11 +150,17 @@ Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
       sites/development.services.yml
       sites/example.settings.php
          New setting:
-         $settings['skip_permissions_hardening'] = TRUE;
+            $settings['skip_permissions_hardening'] = TRUE;
+         Moved over to new version of code
       sites/example.sites.php
       sites/default/default.services.yml
       sites/default/default.settings.php
-         Many changes!  Not mentioned in the Release notes?!?!!
+         Many changes (but not seeing any mentioned in the Release notes?)
+      sites/default/settings.local.php
+         Included by settings.php (at the very end)
+         Not in new releases, so there is NO need to merge it.
+      ** Name may be changing in 8.2 to local.settings.php
+         Reference: https://www.drupal.org/node/2419213
 6.1 Process for updating sites/default/settings.php when there are new settings:
     Option 1) Identify changes made between:
        gitignored/sites/default/default.settings.php and

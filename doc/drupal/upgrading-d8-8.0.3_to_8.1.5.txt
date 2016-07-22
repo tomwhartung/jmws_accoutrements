@@ -162,22 +162,23 @@ Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
       ** Name may be changing in 8.2 to local.settings.php
          Reference: https://www.drupal.org/node/2419213
 6.1 Process for updating sites/default/settings.php when there are new settings:
-    Option 1) Identify changes made between:
-       gitignored/sites/default/default.settings.php and
-       gitignored/sites/default/settings.php
-    and make those changes to the new default.settings.php file to get a new settings.php file
-    OR
-    Option 2) Identify changes made between:
-       gitignored/sites/default/default.settings.php and
-       drupal-8.1.7/sites/default/default.settings.php
-    and make those to the old settings.php file to get a new settings.php file
-    OR
+XXX Option 1) Identify changes made between:
+XXX    gitignored/sites/default/default.settings.php and
+XXX    gitignored/sites/default/settings.php
+XXX and make those changes to the new default.settings.php file to get a new settings.php file
+XXX OR
+XXX Option 2) Identify changes made between:
+XXX    gitignored/sites/default/default.settings.php and
+XXX    drupal-8.1.7/sites/default/default.settings.php
+XXX and make those to the old settings.php file to get a new settings.php file
+XXX OR
     Option 3) as Step 3 of the process in UPDATE.txt recommends:
        Save the version of settings.php currently in production as settings.php-old
        [Also save the version of default.settings.php currently in production as default.settings.php-old]
        Copy the new default.settings.php to settings.php
        Identify the changes made to default.settings.php-old to get what is now settings.php-old
        Apply those changes to the new default.settings.php to get the new settings.php
+   Option 3
     
 
 ********************************

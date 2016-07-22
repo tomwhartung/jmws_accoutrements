@@ -160,8 +160,37 @@ Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
          Included by settings.php (at the very end)
          Not in new releases, so there is NO need to merge it.
       ** Name may be changing in 8.2 to local.settings.php
-         Reference: https://www.drupal.org/node/2419213
-6.1 Process for updating sites/default/settings.php when there are new settings:
+      ** (apparently this is checked for elsewhere in the code?!?)
+      ** References (bug/feature reports):
+      **    https://www.drupal.org/node/2419213
+      **    https://www.drupal.org/node/1118520
+6.1 Process for updating sites/default/services.yml when there are new settings:
+   gothh
+   diff drupal-8.1.7/sites/default/default.services.yml  gitignored/sites/default/default.services.yml
+   ###
+   ### Notes:
+   ###    Currently the version we are using on the dev host differs from that used in production (debug setting)
+   ###    No changes need to be made to this file for this upgrade
+   ###
+6.2 Process for updating sites/default/settings.php when there are new settings:
+   gothh
+   diff drupal-8.1.7/sites/default/default.settings.php gitignored/sites/default/default.settings.php
+   ###
+   ### See what changes have been made that I need to migrate to the new settings file
+   ###    (which also contains my secret db info and other customizations).
+   ### Migrate these changes into the copies of these files that we are using as necessary
+   ### Note that the copies of these files that we are using are under htdocs/gitignored/sites/default
+   ###
+   gothh
+   cd gitignored/sites/default
+   rd default.settings.php    ## Ensure it is up to date in RCS
+   diffBarbara settings*      ## Ensure these files match what is on the new server
+   diffJane settings*         ## Ensure these files match what is on the new development host
+   diffLauren settings*       ## Ensure any changes on the production host are desired there only
+   cp default.settings.php default.settings.php-old
+   cp settings.php settings.php-old
+   gothh
+   cp drupal-8.1.7/sites/default/default.settings.php gitignored/sites/default/default.settings.php
 XXX Option 1) Identify changes made between:
 XXX    gitignored/sites/default/default.settings.php and
 XXX    gitignored/sites/default/settings.php
@@ -178,7 +207,7 @@ XXX OR
        Copy the new default.settings.php to settings.php
        Identify the changes made to default.settings.php-old to get what is now settings.php-old
        Apply those changes to the new default.settings.php to get the new settings.php
-   Option 3
+6.3 Proceeding with Option 3 - details
     
 
 ********************************

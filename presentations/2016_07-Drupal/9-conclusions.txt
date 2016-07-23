@@ -2,13 +2,35 @@
 Conclusions
 -----------
 
+Responsive vs. Adaptive vs. RESS
+--------------------------------
 If responsive works for you, go for it.
 
-As mobile bloat increases how long will that last?
+As mobile bloat increases, though, how long will that last?
 
 If you need to use device detection:
+
+o  RESS - using a combo technique, is best.
 
 o  Allow easily switching between multiple options
 
 o  Fail gracefully - have a reasonable default for unrecognized devices
+
+o  For the sake of users' data plans, please don't send a lot of contetnt to phones only to hide it
+   I feel tablets are a different matter, and it's fine to group them with desktops, because both are more likely to be connected via wifi
+
+o  For the sake of the developers, keep it as simple as possible
+
+Using Adaptive on its own, without using any Responsive techniques, seems to be best suited to simpler sites, e.g., SPAs such as my resume.
+
+Drupal!
+-------
+
+Having built-in caching is a huge distinguishing feature of Drupal, but increases the complexity of implementing something like this properly.
+
+Happy to have learned a bit about Drupal - to have gotten my feet wet so to speak.
+
+Drupal is definitely the most complicated of the CMSes and it changes very quickly.
+
+After just a little experience with it, it is easy to see why the people who use it don't have time to play around with the others
 

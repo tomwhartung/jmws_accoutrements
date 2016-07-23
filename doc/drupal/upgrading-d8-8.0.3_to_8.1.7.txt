@@ -218,15 +218,62 @@ XXX OR
    cd -
    cp drupal-8.1.7/sites/default/default.settings.php gitignored/sites/default/default.settings.php
    cd -
+   diff default.settings.php-old settings.php-old      # 54 lines changed: migrate changes to new settings.php
+   diff default.settings.php-old default.settings.php  # 104 lines changed: hence the preference for option 3 (ymmv next time!)
    cp default.settings.php settings.php
-   diff default.settings.php-old settings.php-old
+   vi settings.php
    ###
    ### Manually apply these changes, that were made
    ###    to default.settings.php-old to get settings.php-old
    ### To the current settings.php (which matches the current default.settings.php)
    ###    to get the new settings.php
    ###
-    
+   ### Following is a list of changes that need to be ported into the new settings.php :
+   ###
+   - hash_salt - supply value
+   - uncomment code to include settings.local.php
+   - cusTOMizations comment
+   - settings for trusted host patterns
+   - ye olde database config settings
+   - install_profile and config_directories settings
+
+*** You are here ***
+
+7. Update new release tree with links to my gitignored files
+   gothh
+   cd tomhartung.com-d8.0.3
+   cd sites/default
+   # *** Optionally *** double-check for changes if you like!  Paranoia will destroy ya!!
+   diff ../../../gitignored/sites/default/default.services.yml default.services.yml
+   diff ../../../gitignored/sites/default/default.settings.php default.settings.php
+   # *** End optional commands ***
+   rm default.se*
+   ln -s ../../../gitignored/sites/default/*.* .
+   ln -s ../../../gitignored/sites/default/files .
+7. Switch the link and run lnSubsites.py
+   gothh
+   rm tomhartung.com ; ln -s tomhartung.com-d8.0.3 tomhartung.com
+   l   # check link to main site
+   lnSubsites.py
+   l tomhartung.com/   # check links
+8. Visit site to upgrade db as necessary:
+   http://bette.tomhartung.com/update.php
+   http://jane.tomhartung.com/update.php
+   ##
+   ## Note: there were two DB updates upgrading from 8.0.2 to 8.0.3
+   ##
+  -> Test!!
+9. If the site looks OK, commit code and backup db:
+9.1. Commit and push code:
+   gothd
+   git status
+   ga --all
+   gc 'Upgraded to the new release, 8.0.3 .' ; gpom
+   gs
+9.2. Remove from maintenance mode and backup DB:
+   As admin -> Configuration -> "Go online."
+   bu th 02-no_extensions_installed-upgraded_to_8.0.3
+   tarHome
 
 ********************************
 *** Not doing this this time ***
@@ -259,6 +306,9 @@ XXX OR
 ******************************************
 *** Doing things differently this time ***
 ******************************************
+*************************************************
+*** Saving this for possible future reference ***
+*************************************************
 4. Update new release tree with the .git dir and my customizations
    gothh
    cd tomhartung.com-d8.0.3

@@ -236,31 +236,38 @@ XXX OR
    - settings for trusted host patterns
    - ye olde database config settings
    - install_profile and config_directories settings
+7. Update new release tree with links to my gitignored files
+   gothh
+   cd tomhartung.com-d8.1.7
+   cd sites
+   rm development.services.yml       # (if necessary)
+   ln -s ../../gitignored/sites/development.services.yml .
+   mkdir default                     # (if necessary)
+   cd default
+   l ../../../gitignored/sites/default
+7.1 Optional: double-check for changes if you like!  Paranoia will destroy ya!!
+   diff ../../../drupal-8.1.7/sites/default/default.services.yml default.services.yml
+   diff ../../../drupal-8.1.7/sites/default/default.settings.php default.settings.php
+7.2 Link all of the sites/default/* files into the current directory tree
+   rm default.se*      # (if necessary)
+   ln -s ../../../gitignored/sites/default/*.* .
+   ln -s ../../../gitignored/sites/default/files .
+   rm *-old
 
 *** You are here ***
 
-7. Update new release tree with links to my gitignored files
+7.3 Switch the link and run lnSubsites.py
    gothh
-   cd tomhartung.com-d8.0.3
-   cd sites/default
-   # *** Optionally *** double-check for changes if you like!  Paranoia will destroy ya!!
-   diff ../../../gitignored/sites/default/default.services.yml default.services.yml
-   diff ../../../gitignored/sites/default/default.settings.php default.settings.php
-   # *** End optional commands ***
-   rm default.se*
-   ln -s ../../../gitignored/sites/default/*.* .
-   ln -s ../../../gitignored/sites/default/files .
-7. Switch the link and run lnSubsites.py
-   gothh
-   rm tomhartung.com ; ln -s tomhartung.com-d8.0.3 tomhartung.com
+   rm tomhartung.com ; ln -s tomhartung.com-d8.1.7 tomhartung.com
    l   # check link to main site
    lnSubsites.py
    l tomhartung.com/   # check links
+
 8. Visit site to upgrade db as necessary:
    http://bette.tomhartung.com/update.php
    http://jane.tomhartung.com/update.php
    ##
-   ## Note: there were two DB updates upgrading from 8.0.2 to 8.0.3
+   ## Note: there were ?????? DB updates upgrading from 8.0.3 to 8.1.7
    ##
   -> Test!!
 9. If the site looks OK, commit code and backup db:

@@ -253,10 +253,34 @@ XXX OR
    ln -s ../../../gitignored/sites/default/*.* .
    ln -s ../../../gitignored/sites/default/files .
    rm *-old
+7.3 Link in the customizations
+   gothh
+   cd tomhartung.com-d8.1.7
+   cd modules/
+   mkdir jmws
+   cd ../themes/
+   mkdir jmws
+   cd -
+   l ../../customizations/*/modules/jmws  # these are the customized modules that are available
+   cd -
+   l ../../customizations/*/themes/jmws   # these are the customized themes that are available
+   cd jmws/
+   l ../../../customizations/*/themes/jmws
+   ln -s ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark .
+   ln -s ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik .
+   cd ../../modules/jmws/
+   l ../../../customizations/*/modules/jmws
+   ln -s ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget .
+   ###
+   ### Check: compare to the links in the current directory tree:
+   ###
+   gothh
+   l tomhartung.com/modules/jmws/ tomhartung.com/themes/jmws/
+   l tomhartung.com-d8.1.7/modules/jmws/ tomhartung.com-d8.1.7/themes/jmws/
 
 *** You are here ***
 
-7.3 Switch the link and run lnSubsites.py
+7.4 Switch the link and run lnSubsites.py
    gothh
    rm tomhartung.com ; ln -s tomhartung.com-d8.1.7 tomhartung.com
    l   # check link to main site

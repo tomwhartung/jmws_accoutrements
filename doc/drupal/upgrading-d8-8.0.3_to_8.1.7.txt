@@ -322,21 +322,100 @@ XXX OR
    gothh
    cd gitignored/sites/default/
    tar -cvzf files-06-after_updating-all_caches_cleared.tgz files/
+   tarHome
 8.3 -> Test!!
-
-*** You are here ***
-
 9. If the site looks OK, commit code and backup db:
 9.1. Commit and push code:
    gothd
    git status
    ga --all
-   gc 'Upgraded to the new release, 8.0.3 .' ; gpom
+   gc 'Upgraded to the new release, 8.1.7 .' ; gpom
    gs
 9.2. Remove from maintenance mode and backup DB:
    As admin -> Configuration -> "Go online."
-   bu th 02-no_extensions_installed-upgraded_to_8.0.3
-   tarHome
+
+*** You are here ***
+
+New Server!
+-----------
+[ ] barbara (not yet online!)
+
+Currently these are the goals and concerns:
+o  Use already-upgraded copy of db from bette (no extensions installed)
+o  Use already-upgraded copy of code from bette (github)
+o  ??? Test with idmygadget_bartik  ??? (concern copied from below)
+o  ??? Test disabling cache  ??? (concern copied from below)
+
+Process:
+1. git pull updated code base and customizations (checked in from bette)
+2. Copy gitignored files from bette
+3. Backup current copy of db on bette
+4. Resture bette's DB on barbara
+5. Check and create links as necessary:
+5.1 Main link to point to the new code
+5.2 Links in the new code to gitignored files and customizations
+??? 7. Link gitignored and subsites to the new code
+8. Test
+
+Commands:
+1. Grab new code base
+   gothh
+   mkdir fresh_clone.tmp
+   cd fresh_clone.tmp
+   git clone git@github.com:tomwhartung/tomhartung.com-d8.git
+   mv tomhartung.com-d8 tomhartung.com-d8.0.3
+   cd ..
+   mv fresh_clone.tmp/tomhartung.com-d8.0.3 .
+2. Re-enable caching in settings.local.php
+   gothh
+   cd gitignored/sites/default/
+   rd *.*              # Make sure all changes are checked in before messing with these settings files!
+   cp settings.local.php-no_caching settings.local.php
+3. Ensure all the caches are cleared
+   gotht
+   drush cr
+   # Also: Admin -> Configuration -> Performance -> Clear all caches
+4. Backup the currently used DB and restore a copy of the upgraded DB from bette
+   bu d8 01-before_upgrading_to_8.0.3
+   rs -h bette d8 02-no_extensions_installed-upgraded_to_8.0.3
+5. Switch the link
+   gothh
+   l
+   rm tomhartung.com
+   ln -s tomhartung.com-d8.0.3 tomhartung.com
+   l
+5. Link customizations
+   gotht
+   # Currently we have some third party modules (for migration) plus my jmws one
+   cd modules
+   cp -rp ../../tomhartung.com-d8.0.2/modules/*   .
+   # Currently we do not have any third party themes so just copy over the links to my jmws ones
+   cd ../themes
+   cp -rp ../../tomhartung.com-d8.0.2/themes/jmws   .
+6. Migrate changes to settings, and link the gitignored files and subsites
+6a. Migrate any changes made to the default.settings.php and settings.php files
+   gothh
+   cd gitignored/sites/default/
+   rd *.*                          # Make sure all changes are checked in before messing with these settings files!
+   diffBette default.settings.php  # Make sure we are not losing any changes made and forgotten about!
+   diffBette settings.php          # Make sure we are not losing any changes made and forgotten about!
+   fromBette default.settings.php
+   fromBette settings.php
+   rd default.settings.php
+   rd settings.php
+   ci -l default.settings.php
+   ci -l settings.php
+6b. Link the files and subsites
+   gotht
+   cd sites/default
+   ln -s ../../../gitignored/sites/default/*.* .
+   ln -s ../../../gitignored/sites/default/files .
+   lnSubsites.py
+7. Test and if it looks good, back up the db!
+   Check that site loads
+   Check that Admin -> Reports shows we are running the new version.
+   bu d8 02-no_extensions_installed-upgraded_to_8.0.3
+
 
 ********************************
 *** Not doing this this time ***

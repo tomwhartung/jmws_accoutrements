@@ -96,7 +96,7 @@ Development Host (currently bette):
 ----------------------------------
 Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
 1. Unpack the downloaded 8.1.7 tgz file into the unpack directory:
-      goth
+      gothh
       cd unpack
       cp ../../downloads/drupal-8.1.7.tar.gz .
       tar -xvzf drupal-8.1.7.tar.gz
@@ -131,7 +131,7 @@ Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
    Be careful to not overwrite any customizations made to any of these files:
       .htaccess, composer.json, robots.txt, etc.
    If desired, you can run git log on these to ensure they have not been changed
-   goth
+   gothh
    cd drupal-8.1.7
    mv core vendor ../tomhartung.com-d8.1.7
    mv autoload.php composer.* example.gitignore index.php LICENSE.txt README.txt robots.txt update.php web.config ../tomhartung.com-d8.1.7
@@ -141,7 +141,7 @@ Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
    At this point in time this part of the process is a bit difficult to codify into specific steps.
    It boils down to seeing what, if anything, has changed in *settings* files under the "sites/" directory
    Most of these files should be kept locally only, in the gitignored directory (versioned in RCS)
-   goth
+   gothh
    Run ls and diff commands from this directory to compare:
       old production files under tomhartung.com/sites to the
       newly released versions under drupal-8.1.7/sites ,
@@ -277,10 +277,22 @@ XXX OR
    gothh
    l tomhartung.com/modules/jmws/ tomhartung.com/themes/jmws/
    l tomhartung.com-d8.1.7/modules/jmws/ tomhartung.com-d8.1.7/themes/jmws/
-
-*** You are here ***
-
-7.4 Switch the link and run lnSubsites.py
+7.4 Clear caches and backup DB for good measure
+   ### Ok I have had issues with trying to restore backups and clear caches etc. so
+   ### I am thinking it is better to have too many of these than not enough
+   bu th 01-before_updating_8.0.3-8.1.7
+   # Admin -> Configuration -> (Development section) Performance -> Clear All Caches
+   bu th 02-before_updating-caches_cleared_in_backend
+   gothh
+   cd gitignored/sites/default/
+   tar -cvzf files-02-before_updating-caches_cleared_in_backend.tgz files/
+   gotht
+   drush cr
+   bu th 03-before_updating-all_caches_cleared
+   gothh
+   cd gitignored/sites/default/
+   tar -cvzf files-03-before_updating-all_caches_cleared.tgz files/
+7.5 Switch the link and run lnSubsites.py
    gothh
    rm tomhartung.com ; ln -s tomhartung.com-d8.1.7 tomhartung.com
    l   # check link to main site
@@ -289,11 +301,31 @@ XXX OR
 
 8. Visit site to upgrade db as necessary:
    http://bette.tomhartung.com/update.php
-   http://jane.tomhartung.com/update.php
    ##
-   ## Note: there were ?????? DB updates upgrading from 8.0.3 to 8.1.7
+   ## Note: there were 12 pending DB updates found when upgrading from 8.0.3 to 8.1.7
    ##
-  -> Test!!
+8.1 Review log for db update errors:
+      http://bette.tomhartung.com/admin/reports/dblog
+8.2 If able to access site, backup immediately!  Paranoia will destroy ya!
+   bu th 04-after_updating_8.0.3-8.1.7
+   gothh
+   cd gitignored/sites/default/
+   tar -cvzf files-04-after_updating_8.0.3-8.1.7.tgz files/
+   # Admin -> Configuration -> (Development section) Performance -> Clear All Caches
+   bu th 05-after_updating-caches_cleared_in_backend
+   gothh
+   cd gitignored/sites/default/
+   tar -cvzf files-05-after_updating-caches_cleared_in_backend.tgz files/
+   gotht
+   drush cr
+   bu th 06-after_updating-all_caches_cleared
+   gothh
+   cd gitignored/sites/default/
+   tar -cvzf files-06-after_updating-all_caches_cleared.tgz files/
+8.3 -> Test!!
+
+*** You are here ***
+
 9. If the site looks OK, commit code and backup db:
 9.1. Commit and push code:
    gothd

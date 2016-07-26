@@ -333,8 +333,19 @@ XXX OR
    gs
 9.2. Remove from maintenance mode and backup DB:
    As admin -> Configuration -> "Go online."
-
-*** You are here ***
+9.3 Check new settings files into RCS:
+   gothh
+   cd gitignored/sites
+   rd RCS/*,v
+   cd default
+   mkdir old
+   mv settings.php-old settings.php-d8.0.3
+   mv default.settings.php-old default.settings.php-d8.0.3
+   mv *-d8.0.3 old/
+   rd RCS/*,v
+   ci -l default.settings.php
+   ci -l settings.php
+   rd RCS/*,v
 
 New Server!
 -----------
@@ -360,61 +371,58 @@ Process:
 Commands:
 1. Grab new code base
    gothh
-   mkdir fresh_clone.tmp
-   cd fresh_clone.tmp
    git clone git@github.com:tomwhartung/tomhartung.com-d8.git
-   mv tomhartung.com-d8 tomhartung.com-d8.0.3
-   cd ..
-   mv fresh_clone.tmp/tomhartung.com-d8.0.3 .
-2. Re-enable caching in settings.local.php
-   gothh
-   cd gitignored/sites/default/
-   rd *.*              # Make sure all changes are checked in before messing with these settings files!
-   cp settings.local.php-no_caching settings.local.php
-3. Ensure all the caches are cleared
+   mv tomhartung.com-d8 tomhartung.com-d8.1.7
+   ln -s tomhartung.com-d8.1.7 tomhartung.com
+2. Link customizations
    gotht
-   drush cr
-   # Also: Admin -> Configuration -> Performance -> Clear all caches
-4. Backup the currently used DB and restore a copy of the upgraded DB from bette
-   bu d8 01-before_upgrading_to_8.0.3
-   rs -h bette d8 02-no_extensions_installed-upgraded_to_8.0.3
-5. Switch the link
+   mkdir -p  modules/jmws themes/jmws
+   cd modules/jmws/
+   l ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget/
+   ln -s ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget .
+   cd ../../themes/jmws
+   l ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik/
+   ln -s ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik .
+   l ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark/
+   ln -s ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark .
+
+   !!! Test to see if we need these !!!
+   ??? # Currently we have some third party modules (for migration) plus my jmws one  ???
+   !!! Test to see if we need these !!!
+   ??? cd modules
+   ??? cp -rp ../../tomhartung.com-d8.0.2/modules/*   .
+   !!! Test to see if we need these !!!
+
+3. Copy over db and gitignored files from bette to barbara
+3.1 On bette:
+   gobu
+   bu th 07-for_barbara
+   toBarbara tomhartung.d8-2016_07_25-bette-07-for_barbara.sql.gz
    gothh
-   l
-   rm tomhartung.com
-   ln -s tomhartung.com-d8.0.3 tomhartung.com
-   l
-5. Link customizations
-   gotht
-   # Currently we have some third party modules (for migration) plus my jmws one
-   cd modules
-   cp -rp ../../tomhartung.com-d8.0.2/modules/*   .
-   # Currently we do not have any third party themes so just copy over the links to my jmws ones
-   cd ../themes
-   cp -rp ../../tomhartung.com-d8.0.2/themes/jmws   .
-6. Migrate changes to settings, and link the gitignored files and subsites
-6a. Migrate any changes made to the default.settings.php and settings.php files
+   tar -cvzf gitignored-2016_07_25-for_barbara.tgz gitignored
+   toBarbara gitignored-2016_07_25-for_barbara.tgz
+3.2 On barbara:
    gothh
-   cd gitignored/sites/default/
-   rd *.*                          # Make sure all changes are checked in before messing with these settings files!
-   diffBette default.settings.php  # Make sure we are not losing any changes made and forgotten about!
-   diffBette settings.php          # Make sure we are not losing any changes made and forgotten about!
-   fromBette default.settings.php
-   fromBette settings.php
-   rd default.settings.php
-   rd settings.php
-   ci -l default.settings.php
-   ci -l settings.php
-6b. Link the files and subsites
+   tar -xvzf gitignored-2016_07_25-for_barbara.tgz
    gotht
-   cd sites/default
+   cd sites
+   ln -s ../../gitignored/sites/development.services.yml .
+   mkdir default
+   cd default
    ln -s ../../../gitignored/sites/default/*.* .
    ln -s ../../../gitignored/sites/default/files .
+   gothh
    lnSubsites.py
+3.3 Restore a copy of the upgraded DB from bette
+   rs -h bette th 07-for_barbara
+
 7. Test and if it looks good, back up the db!
    Check that site loads
    Check that Admin -> Reports shows we are running the new version.
    bu d8 02-no_extensions_installed-upgraded_to_8.0.3
+
+
+*** You are here ***
 
 
 ********************************

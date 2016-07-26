@@ -4,6 +4,8 @@
 
 Really, just mainly out of curiosity.
 
+Noticed that very few people were doing this - integrating Device Detection with LAMP CMSes - so it seemed like an opportunity to do something unique.
+
 A side goal: intuitively it seems to me that knowing about LAMP CMSes would be a good start to getting possible freelance work.
 
 Another side goal: CMS selection for Groja/SeeOurMinds.com

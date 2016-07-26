@@ -404,6 +404,7 @@ Commands:
 3.2 On barbara:
    gothh
    tar -xvzf gitignored-2016_07_25-for_barbara.tgz
+3.3 Create the links
    gotht
    cd sites
    ln -s ../../gitignored/sites/development.services.yml .
@@ -415,45 +416,53 @@ Commands:
    lnSubsites.py
 3.3 Restore a copy of the upgraded DB from bette
    rs -h bette th 07-for_barbara
-
-7. Test and if it looks good, back up the db!
+4. Test and if it looks good, back up the db!
    Check that site loads
    Check that Admin -> Reports shows we are running the new version.
-   bu d8 02-no_extensions_installed-upgraded_to_8.0.3
+   bu th 08-upgraded_to_8.1.7
 
 Backup Host:
 ------------
 [ ] jane
 
-1. Follow same process as we did for barbara, re-using files when possible
-1.1 Grab new code base
+Follow same process as we did for barbara, re-using files when possible
+1. Grab new code base
    gothh
    ln -s tomhartung.com-d8.1.7 tomhartung.com
    cd fresh_clone.tmp/
    git clone git@github.com:tomwhartung/tomhartung.com-d8.git
    mv tomhartung.com-d8 tomhartung.com-d8.1.7
    mv fresh_clone.tmp ..
-1.2 Reuse backup of db and gitignored tar file
+2. Link customizations
+   Follow commands run on barbara for step 2 (above).
+3. Copy over db and gitignored files from bette to barbara
+3.1 Reuse backup of db and gitignored tar file
    On bette:
    gobu
    toJane tomhartung.d8-2016_07_25-bette-07-for_barbara.sql.gz
    gothh
    toJane gitignored-2016_07_25-for_barbara.tgz
-1.3 Restore backup of db and unpack gitignored tar file
+3.2 Restore backup of db and unpack gitignored tar file
    On jane:
    gothh
    mv gitignored gitignored-old-8.0.3-delete_me_you_wuss
    tar -xvzf gitignored-2016_07_25-for_barbara.tgz
-2. Link customizations
+3.3 Create the links
+   Follow commands run on barbara for step 3,3 (above).
+4. Test and if it looks good, back up the db!
+   bu th 08-upgraded_to_8.1.7
+   tarHome
+
 
 *** You are here ***
 
+#####################################################################################
+#####################################################################################
 #####################################################################################
 ### The remainder of this file is old old old, for possible future reference only ###
 #####################################################################################
-
-*** You are here ***
-
+#####################################################################################
+#####################################################################################
 
 ********************************
 *** Not doing this this time ***

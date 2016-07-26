@@ -1,0 +1,61 @@
+
+ Three Popular LAMP CMSes: Adaptive Web Design Using Device Detection
+======================================================================
+What I did on my code-cation: 10 Slides in 10 minutes.
+
+ Outline: List of Slides
+-------------------------
+1. Who - Introduction
+   1.1 Elevator Speech & Favorite Quotes
+       1.1.1 First job, Masters Degree, most marketable skills: Java & PHP
+       1.1.2 A bit of a polyglot - interested in pretty much everything
+       1.1.3 "... not the best, but the only one ..."
+       1.1.4 "Specialization is for insects"
+       1.1.5 "Will specialize for food"
+   1.2 Shot of Github account - current streak
+2. What - Overview
+   2.1 Added Device Detection
+       List Device Detectors
+   2.2 To (resume and) three popular CMSes
+       List the CMSes with some relevant details
+   2.3 Adaptive Web Design (AWD), more accurately RESS
+3. Why - The Five Whys, and More
+   3.1 Why?
+   3.1.1 Heard in a previous HTML5 meetup that having a personal site that looks different...
+   3.1.2 Increase web presence
+   3.1.2.1 Don't think well on my feet during interviews, so "get my story straight"
+   3.1.2.2 Don't want to waste time in interviews when it is not a match - answer "the usual questions" in advance
+   3.1.3 Have something to present at meetups
+   3.1.4 Think this knowledge may be useful as the Internet of Things gains traction
+   3.1.5 Demonstrate some of the potential this idea has (e.g., targeting ads)
+   3.1.6 Nice to be the first (and learn why no one else has bothered)
+4. How (new section - see slides)
+5. When - Took About a Year (including resume)
+   4.1 Pie Chart(s) - 1 or 2 slides???
+   4.1.1 Time by CMS: 25% Joomla, 25% Wordpress, 10% Drupal 7, 40% Drupal 8
+   4.1.2 Time by Activity: 40% Learning, 20% Coding, 20% Experimenting,
+         20% Maintenance (updates, deployment, content, etc)
+   4.2 One pie chart per slide?  Additional pie charts desired/relevant?
+   4.2.1 
+6. Results - Just the Facts
+   5.1 JooMooWebSites.com - the Joomla site
+   5.1.1 Three views of home page, using the override
+   5.2 TomWHartung.com - the WordPress site
+   5.2.1 Three views of home page, using the override
+
+7. Conclusions - Lessons Learned and Resultant Opinions
+   6.1 Lessons Learned
+   6.1.1 Learned I am more of a back-end person
+   6.1.2 Learned why more people are not doing this: it is difficult and not guaranteed to work
+   6.1.3 Learned new sources for information about new software (youtube and twitter)
+   6.1.4 Learned that this is fairly easy with a single page document, but not so much with a CMS
+   6.1.5 Learned why Drupal people specialize on it (it's complicated)
+   6.2 Opinions
+   6.2.1 Still convinced that sending the same content to all devices is not optimal
+   6.2.2 I am sorry to have spent so much time with Drupal but glad I finally satisfied my curiosity about it
+   6.2.3 Seems like this would be an excellent technique for targeting ads
+   6.2.4 My curiosity about Drupal has now been replaced by curiosity about Python CMSes, django, tornado, etc.
+   6.2.5 I believe knowing about this will come in handy as I learn about the Internet of Things, but I am not sure how.
+         (which brings us back to one of the Five Whys)
+
+

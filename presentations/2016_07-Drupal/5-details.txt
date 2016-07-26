@@ -15,42 +15,8 @@ o Takeaways:
   o If not done properly, this can get very complicated very quickly, so
     proper encapsulation and scoping is essential
 
-Takeaways:
-o Joomla is in many respects the Goldilocks CMS
-o I will be sticking with Joomla for my groja.com/seeourminds.com component
-  (but want to convert as much as possible to JavaScript, because it is ubiquitous)
-o Drupal (especially D8) has a lot of unique and valuable features, but is also very very complicated,
-  o This makes it more time-consuming than the others to work with
-
- My Questions for You (Your Mission: To Answer These at the End)
------------------------------------------------------------------
-1. Do you think this idea is worth pursuing, or should I go back to full time corporate drone work?
-o  I have been hanging out a bit with the startup community....
-o  There may not be a high demand for this (right now) but I am fine with that
-o  I believe that as time goes on demand will grow, and it would be very cool to be prepared to take advantage of that
-   (This seems to be what people expect now: for someone to have already solved a problem they just now became aware of.)
-
-2. Do you have any use cases - scenarios in which you think this technique would be useful?
-o  Looking to brainstorm ideas....
-o  I believe more people would be willing to use this technique if they had easy-to-use tools already built
-o  I'd like to think that offering a freemium-type product would be an excellent way to bring in business
-o  To do this right, I'd want to know what sort of things would interest people, i.e., use cases
-o  Use jQuery Mobile's Form Elements on mobile devices only
-   o Using jQuery Mobile for navigation introduces the possibilities of more practical applications, i.e., input elements on forms
    o jQuery Mobile is very nice, but you would not want to use it on the desktop
      Just including this and allowing people to build on and use it, might be a valuable use-case in and of itself
-   o HTML5 form elements address some of these issues, but I am unsure about specifics and mobile browser support.
-   O Potentially a lot of people don't even use mobile devices because they think their fingers are too fat
-    (believe I heard this "punch line" on Rescue Me?)
-
-3. What is, or could be, the most interesting things I could present about this topic?
-o  HTML5 meetup: hoping to give a lightning talk about this in April
-o  Willing and would like to give other talks to this and other groups (PHP, Drupal, WP) around town 
-Mobile-only navigation: which seems most practical?
-a. header and footer nav
-b. hamburger menu icons
-
-4. Is it worthwhile to polish one or more of these and put in the extension store for the CMS(es)?
 
 
  Status of What I Am Working On

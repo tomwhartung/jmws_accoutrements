@@ -14,82 +14,8 @@ o Takeaways:
   o I believe a combination of the two is the best solution
   o If not done properly, this can get very complicated very quickly, so
     proper encapsulation and scoping is essential
-
    o jQuery Mobile is very nice, but you would not want to use it on the desktop
      Just including this and allowing people to build on and use it, might be a valuable use-case in and of itself
-
-
- Status of What I Am Working On
---------------------------------
-My use case (enhancements that I want for myself)
-o  Headings configurable by device type
-o  Header and footer phone navigation
-o  Hamburger Menu Icon
-Status:
-o  Joomla site (joomoowebsites.com): development done but could be refactored
-o  WordPress site (tomwhartung.com): development mostly done, menus not yet fully functional because I need to add content first
-o  Drupal site (tomhartung.com): device-specific headings are working, menus not yet fully functional because I need to add content first
-
- Comparing the Three CMSes
----------------------------
-Download sizes:
-o Wordpress: 6.8M (wordpress-4.3.1.zip)
-o Joomla:   11.0M (Joomla_3.4.5-Stable-Full_Package.zip)
-o Drupal 7:  3.2M (drupal-7.41.tar.gz)
-o Drupal 8: 12.0M (drupal-8.0.3.tar.gz)
-
-Number of files (source: my installations):
-o Wordpress: 1,350
-o Joomla:    4,692
-o Drupal 7:  1,086
-o Drupal 8: 14,387
-
-Number of DB tables (source: my installations):
-o Wordpress: 12
-o Joomla:    67
-o Drupal 7:  76
-o Drupal 8: 187 (some tables linger from automatic conversion)
-
-Contributed extensions (Source: wikipedia):
-o Drupal:         31,000 contributed modules
-o Joomla:     over 7,700 free and commercial extensions
-o Wordpress: over 40,501 plugins
-
-Difficulty of upgrading minor revisions (subjective, scale of 1-10)
-o Wordpress: 2 (super easy, can configure to update automatically)
-o Joomla: 5
-o Drupal 7 & 8: 9 (still working on optimizing this process)
-
-License (essentially all the same):
-o Wordpress: GNU GPLv2+
-o Joomla: GNU General Public License
-o Drupal: GPLv2 or later
-
-Current Versions and Initial Release Dates
-o Wordpress: 4.4.1; Initial release May 27, 2003
-o Joomla: 3.4.8; Initial release August 17, 2005
-o Drupal: 8.0.3; Initial release January, 2001
-
-Development How-To - Hi-Level/Overview:
-o Wordpress: hooks
-o Joomla: regular programming (MVC framework available) - for lack of a better term
-o Drupal 7: hooks
-o Drupal 8: Symfony used for modules, themes still use mainly hooks
-
-Finding documentation:
-o Wordpress:
-  - bought one book that covers admin and touches on development
-  - site is well-organized, info easy to find
-o Joomla:
-  - bought several Packt books for 1.5 (meh), and one 3.x O'Reilly book that has very little info for devs.
-  - site is well-organized, info easy to find
-o Drupal 7:
-  - bought two O'Reilly books, one for admin, one for dev; dev book has very little concrete info for devs though
-  - site is well-organized, info easy to find
-o Drupal 8:
-  - bought updated O'Reilly dev book, has very little concrete info for devs but it was helpful
-  - site: when I was working on it, much was missing and incomplete.  It's nice that they tell you when pages "Need Work."
-
 
 
  Lessons Learned and Other Takeaways

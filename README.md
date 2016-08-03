@@ -8,7 +8,7 @@ Repo for JooMooWebSites documentation, scripts, presentations, and other files t
 
 Although these accoutrements are intended for my personal use, I am sharing them in the hopes that you may find them useful in your own work.
 
-Because many of these are works in progress, some of them may not be very documented.
+Because many of these are works in progress, some of them may not be very well-documented.
 
 If you have any questions, please feel free to contact me.
 

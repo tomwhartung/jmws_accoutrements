@@ -9,19 +9,27 @@ next time.
 Before You Start
 ----------------
 0. On ALL hosts: backup DB and ensure code matches what is in github
-   bu jm 01-before_upgrading_to_3.4.8
+   bu jm 01-before_upgrading_3.5.0_to_3.6.0
    gojmj
    git status
    git pull
 1. Decide which host to do most of the work on:
-   bette - upgraded jane to 16.04 and it is not working right now
+   jane - moving production to barbara, which is also running Ubuntu 16.04
+       Never updated lauren last time
+       May not even bother with bette this time...
 
 Log
 ---
 [ ] 2016-
-[ ] 2016-xx-xx: 3.5.1 to 3.x.x
+[ ] 2016-xx-xx: 3.6.0 to 3.x.x
+[ ] 2016-08-29: 3.5.1 to 3.6.0
 [ ] 2016-07-03: 3.4.8 to 3.5.1
 [ ] 2016-02-13: 3.4.5 to 3.4.8
+
+ Optional (Untested - for future reference)
+============================================
+Not sure whether we will be able to do this, but don't want to forget
+that it may be an option at some point.
 
 New for 2016: Trying to upgrade via the admin panel (like we do for WP)
 -----------------------------------------------------------------------
@@ -36,6 +44,179 @@ Installation method: Write files directly
 3. Pop-up: "Error: Invalid login"
    Acts like it is working but I suspect it is not
    Not seeing any solutions right off the bat (and don't feel like more digging)
+
+
+ 2016-08-29: Notes on Upgrading From 3.5.1 to 3.6.0
+====================================================
+There are some major caveats in upgrading these versions!  (3.6.1 is apparently a bad release)
+   https://www.joomla.org/announcements/release-news/5666-the-joomla-3-6-1-update.html
+It says to "Update to Joomla! 3.6.0 through the Joomla! Update component"
+   https://docs.joomla.org/J3.x:Updating_from_an_existing_version
+Looks easy enough but let's do some checks first:
+
+1. Check and fix file permissions
+   System Information -> Folder Permissions
+   If one or more of these is Unwritable, run these commands and recheck:
+      gojmj
+      ./fix_permissions.sh   # will ask for password to run sudo commands
+   To get configuration.php to show up as writable, may need to:
+   o  ** TEMPORARILY ** break the link and
+   o  ** TEMPORARILY ** copy the file from ../gitignored
+   rm configuration.php
+   cp ../gitignored/configuration.php .
+   sudo chgrp www-data configuration.php
+   chmod 775 configuration.php
+   Recheck in back end:
+      System Information -> Folder Permissions
+2. 
+
+
+**************************************************
+OLD - Copied for Possible Reference This Time Only
+PLEASE DELETE THROUGH UPDATE TO 3.5.1 IF UNUSED
+**************************************************
+
+Using Recommended Manual Procedure - 3.4.8 to 3.5.1:
+----------------------------------------------------
+Rather than downloading a fresh install, following the procedure given here:
+    https://docs.joomla.org/J3.x:Upgrading_from_Joomla_3.4.x_to_3.5
+It appears there are some major changes so it would be best to follow this procedure.
+
+Doing this on jane first.
+
+0. Always backup DB and ensure code matches what is in github ("Before You Start" above)
+1. Fix DB:
+   *** "Fix" DB from last time: Extensions -> Manage -> Database
+   *** Warning: Database is not up to date!
+   *** Database update version (3.4.3) does not match CMS version (3.4.8).
+   -> Click on "Fix" in the upper left corner
+   bu jm 02-after_fixing_db
+2. Download Joomla_3.5.1-Stable-Update_Package.zip into /var/www/joomoowebsites.com/downloads
+   gojmj
+   cp ../downloads/Joomla_3.5.1-Stable-Update_Package.zip tmp
+3. Fix permissions:
+   See: System -> System Information -> Folder Permissions
+      http://bette.joomoowebsites.com/administrator/index.php?option=com_admin&view=sysinfo
+   [Copy/Paste -> awk -> chmod_dirs.sh]
+4. Following Method A at the URL listed above:
+   Components -> Joomla Update
+   Write Files Directly -> Install the Update
+   *** Pop-up: "Error: Invalid login"
+   *** Acts like it is working but I suspect it is not
+5. Following Method B at the URL listed above:
+   *** Make sure that the joomoowebsites.com directory is not a link ***
+   *** (We tried with it being a link and the site whitescreened.)   ***
+   gojm
+   ls -al
+   rm joomoowebsites.com  // assuming it is a link
+   mv joomoowebsites.com-3.4.8 joomoowebsites.com
+   cd joomoowebsites.com
+   cp ../../downloads/Joomla_3.5.1-Stable-Update_Package.zip .
+   unzip -o Joomla_3.5.1-Stable-Update_Package.zip
+   rm Joomla_3.5.1-Stable-Update_Package.zip
+      Fix DB: Extensions -> Manage -> Database
+      -> Click on "Fix" in the upper left corner
+   Discover and install Core Extensions:
+      Extensions -> Manage -> Discover
+      -> Select all core extensions and click on "Install" in the upper left corner
+   System → Clear Cache and if any rows are shown, select them and click the Delete
+   bu jm 02-after_fixing_db
+
+
+************** TBD ************
+
+2. Copy over the images and switch the link
+   gojmj
+   tar -cvzf images_joomoowebsites.com.tgz images/joomoowebsites.com/
+   cd ..
+   mv  joomoowebsites.com-3.4.5/images_joomoowebsites.com.tgz joomoowebsites.com-3.4.8
+   cd joomoowebsites.com-3.4.8
+   l images                        # should be no subdirectory named joomoowebsites.com !
+   tar -xvzf images_joomoowebsites.com.tgz
+   rm images_joomoowebsites.com.tgz
+   l images/joomoowebsites.com/    # should see a few subdirectories now
+   rm joomoowebsites.com  # assuming it's a link to 3.4.5!
+   ln -s joomoowebsites.com-3.4.8 joomoowebsites.com
+3. Update the new directory tree with a copy of the git files, and remove installation directory
+   gojmj
+   cp -r ../joomoowebsites.com-3.4.5/.git* .   # bwahahah
+   rm -fr installation/
+   bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
+4. Update the new directory tree with a link to the configuration file and link in subsites and customizations
+   gojmj
+   ln -s ../gitignored/configuration.php .
+   lnSubsites
+   cd ..
+   lnJoomlaCustomizations
+   cd -
+   l modules/ templates/    # should see links to my customizations
+   l language/en-GB/        # should see links to my customizations
+5. Fix Permissions and Test All the Things!
+   gojmj
+   sudo chown -R www-data:tomh .
+   ### Test front end in browser
+   ###    e.g., Check articles with images
+   ### Test back end in browser,
+   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
+6. Commit the changes and push to github
+   git status
+   git add --all
+   gc 'Updated to 3.4.8.' ; git push origin master
+7. Backup the DB and we are done!
+   bu j  02-after_upgrade
+
+Upgrading backup host:
+----------------------
+We have a bit of a history of versions on bette, but have just started it on jane.
+So rather than start from scratch or something, for shitz and gigglez, this time around,
+ran these somewhat unlikely commands to upgrade bette, enabling us to keep the history
+and use it for the main procedure, if we want to, next time.
+1. Upgrade bette using github, keeping version 3.4.5 around for historical and consistency purposes:
+   tar -cvzf joomoowebsites.com-3.4.5.tgz joomoowebsites.com-3.4.5/
+   mkdir unpack
+   mv joomoowebsites.com-3.4.5.tgz unpack/
+   cd unpack/
+   tar -xvzf  joomoowebsites.com-3.4.5.tgz
+   mv joomoowebsites.com-3.4.5 joomoowebsites.com-3.4.8    # bwahahahah
+   rm joomoowebsites.com-3.4.5.tgz
+   cd joomoowebsites.com-3.4.8/
+   git pull   # get core upgrade changes checked in on jane
+   cd ../..
+   mv unpack/joomoowebsites.com-3.4.8 .
+   l
+   rm joomoowebsites.com ; ln -s joomoowebsites.com-3.4.8 joomoowebsites.com ; ls -al
+2. Check links and images
+   gojmj
+   l modules/ templates/           # ensure there are links to my customizations
+   l language/en-GB/               # ensure there are links to my customizations
+   l images/joomoowebsites.com/    # ensure there are a few subdirectories
+3. Fix Permissions and Test All the Things!
+   gojmj
+   sudo chown -R www-data:tomh .
+   ### Test front end in browser
+   ###    e.g., Check articles with images
+   ### Test back end in browser,
+   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
+4. Backup the DB and we are done!
+   bu j  02-after_upgrade
+
+Upgrading Production host:
+--------------------------
+1. Backup DB and pull the code:
+   bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
+   cd joomoowebsites.com
+   git pull
+2. Test in browswer
+   ### Test front end in browser
+   ###    e.g., Check articles with images
+   ### Test back end in browser,
+   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
+3. Backup DB and we are done:
+   bu j  02-after_upgrade
+
+######################################################################
+*** OLD *** Process Used for Upgrading from 3.4.8 to 3.5.1 *** OLD ***
+######################################################################
 
 NOTE:
 -----
@@ -97,8 +278,8 @@ Doing this on bette first (upgraded jane to 16.04 and it is not working right no
    mv  joomoowebsites.com-3.4.5/images_joomoowebsites.com.tgz joomoowebsites.com-3.4.8
    cd joomoowebsites.com-3.4.8
    l images                        # should be no subdirectory named joomoowebsites.com !
-   tar -xvzf images_joomoowebsites.com.tgz 
-   rm images_joomoowebsites.com.tgz 
+   tar -xvzf images_joomoowebsites.com.tgz
+   rm images_joomoowebsites.com.tgz
    l images/joomoowebsites.com/    # should see a few subdirectories now
    rm joomoowebsites.com  # assuming it's a link to 3.4.5!
    ln -s joomoowebsites.com-3.4.8 joomoowebsites.com
@@ -141,9 +322,9 @@ and use it for the main procedure, if we want to, next time.
    mkdir unpack
    mv joomoowebsites.com-3.4.5.tgz unpack/
    cd unpack/
-   tar -xvzf  joomoowebsites.com-3.4.5.tgz 
+   tar -xvzf  joomoowebsites.com-3.4.5.tgz
    mv joomoowebsites.com-3.4.5 joomoowebsites.com-3.4.8    # bwahahahah
-   rm joomoowebsites.com-3.4.5.tgz 
+   rm joomoowebsites.com-3.4.5.tgz
    cd joomoowebsites.com-3.4.8/
    git pull   # get core upgrade changes checked in on jane
    cd ../..
@@ -203,8 +384,8 @@ Doing this on jane today.
    mv  joomoowebsites.com-3.4.5/images_joomoowebsites.com.tgz joomoowebsites.com-3.4.8
    cd joomoowebsites.com-3.4.8
    l images                        # should be no subdirectory named joomoowebsites.com !
-   tar -xvzf images_joomoowebsites.com.tgz 
-   rm images_joomoowebsites.com.tgz 
+   tar -xvzf images_joomoowebsites.com.tgz
+   rm images_joomoowebsites.com.tgz
    l images/joomoowebsites.com/    # should see a few subdirectories now
    rm joomoowebsites.com  # assuming it's a link to 3.4.5!
    ln -s joomoowebsites.com-3.4.8 joomoowebsites.com
@@ -246,9 +427,9 @@ and use it for the main procedure, if we want to, next time.
    mkdir unpack
    mv joomoowebsites.com-3.4.5.tgz unpack/
    cd unpack/
-   tar -xvzf  joomoowebsites.com-3.4.5.tgz 
+   tar -xvzf  joomoowebsites.com-3.4.5.tgz
    mv joomoowebsites.com-3.4.5 joomoowebsites.com-3.4.8    # bwahahahah
-   rm joomoowebsites.com-3.4.5.tgz 
+   rm joomoowebsites.com-3.4.5.tgz
    cd joomoowebsites.com-3.4.8/
    git pull   # get core upgrade changes checked in on jane
    cd ../..

@@ -68,7 +68,29 @@ Looks easy enough but let's do some checks first:
    chmod 775 configuration.php
    Recheck in back end:
       System Information -> Folder Permissions
-2. 
+2. Trying Components -> Joomla Update
+   Popup: "Error: Invalid Login"  (getting deja vu)
+   Doesn't seem to be doing anything....
+2.1 Update Installer Plugin
+-> Try updating the installer plugin first
+   Control Panel -> (red banner) "1 Extension Update(s) are available"
+   Click on "View Updates"
+   Click the "Clear Cache" button
+   Click the "Find Updates" button
+   Check the "Installer - Install from Web" checkbox
+   Click the "Update" button
+   Results:
+      "Warning - JInstaller: :Install: Can't find XML setup file."
+      "Message - Updating plugin was successful."
+   Click the "Clear Cache" button (safety check)
+   Click the "Find Updates" button
+   Results:
+      "No updates available
+2.2 Try again
+   Trying Components -> Joomla Update
+
+
+
 
 
 **************************************************

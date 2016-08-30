@@ -29,6 +29,18 @@ Before You Start
 =================================================================
  Optional (Untested - for future reference) *** DO NOT USE!!! ***
 =================================================================
+THIS JUST IN!
+GO TO Extensions -> Manage -> Install
+CURRENTLY IT SAYS:
+   Warning: No installation plugin has been enabled. At least one
+      must be enabled to be able to use the installer. Go to the
+      Plugin Manager to enable the plugins
+MAYBE THIS IS WHY TRYING TO UPDATE IN THE ADMIN PANEL IS NOT WORKING??
+
+-----------------------------------------------------------
+*** MY OWN WARNING: DO NOT WASTE MUCH TIME ON THIS!!!!! ***
+-----------------------------------------------------------
+
 IF YOU LOOK AT THE HISTORY YOU WILL SEE WE HAVE WASTED HOURS IN
 TRYING TO GET THIS TO WORK!  WE HAVE:
 
@@ -309,7 +321,7 @@ New production host (server) is barbara.
 3. Ensure configuration.php matches that on jane:
    gojmj
    cd ../gitignored/
-   diffJane configuration.php 
+   diffJane configuration.php
 4. Test in browswer
    Test front end in browser
    - Check a few menu options

@@ -93,14 +93,15 @@ Looks easy enough but let's do some checks first:
    Popup: "ERROR: Invalid login"  (getting deja vu)
    Doesn't seem to be doing anything....
    Not seeing any recent posts about this....
--> Fall back to manual procedure (as usual)
 3. This page offers three options:
+   **************************************************************
+   *** THIS DID NOT WORK - KEEPING FOR FUTURE REFERENCE ONLY  ***
+   *** PLEASE SKIP TO STEP 4 AND IGNORE THIS MESS - THANK YOU ***
+   **************************************************************
    https://docs.joomla.org/J3.x:Updating_Joomla_(Install_Method)
    They all assume I am using something like Go Daddy or CPanel
    Components -> Joomla Update
    Download zip file "Update package URL"
-   *** THIS DID NOT WORK - KEEPING FOR FUTURE REFERENCE ONLY  ***
-   *** PLEASE SKIP TO STEP 4 AND IGNORE THIS MESS - THANK YOU ***
 3.1 Unpack the zip file in /var/www/joomoowebsites.com/htdocs/unpack
    gojmh
    mkdir unpack
@@ -135,10 +136,54 @@ Looks easy enough but let's do some checks first:
    Results: more errors!
    ** Warning: JInstaller: :Install: Can't find XML setup file.
    ** Error: Unable to find install package
-
-
-
-
+   *******************************
+   *** ABOVE STEP DID NOT WORK ***
+   *** USING MANUAL PROCEDURE  ***
+   *******************************
+4. Fall back to manual procedure (as usual)
+   See very bottom of this page:
+      https://www.joomla.org/announcements/release-news/5666-the-joomla-3-6-1-update.html
+   Refers to this page:
+      https://gist.github.com/mbabker/d7bfb4e1e2fbc6b7815a733607f89281
+   Process actually looks similar to what we did last time
+4.1 Overview of preparatory steps (used last time and previously covered above)
+   Check DB Schema: Extensions -> Manage -> Database
+   Download Joomla_3.6.0-Stable-Update_Package.zip
+   Fix permissions
+4.2 A process similar to this worked last time:
+   gojmj
+   cp ../../downloads/Joomla_3.6.0-Stable-Update_Package.zip .
+   unzip -o Joomla_3.6.0-Stable-Update_Package.zip 
+   rm Joomla_3.6.0-Stable-Update_Package.zip
+   **************************
+   *** DO NOT ACCESS SITE ***
+   **************************
+4.3 Now for the special script part - see URLs immediately above
+   github gist: Download zip file from:
+      https://gist.github.com/mbabker/d7bfb4e1e2fbc6b7815a733607f89281
+   gojmh
+   cp ~/Downloads/d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip ../downloads
+   mkdir -p unpack/script/
+   cp ../downloads/d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip unpack/script/
+   cd unpack/script/
+   unzip d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip 
+   l d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236
+   cp d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236/postupdate.php ../../joomoowebsites.com
+   gojmj
+   mv postupdate.php administrator
+4.4 Run the postupdate.php script, then remove it:
+   Run it in the browser:
+      jane.joomoowebsites.com/administrator/postupdate.php
+   Response:
+      "Update to 3.6.0 completed successfully."
+   gojmj
+   rm administrator/postupdate.php
+4.5 Check:
+   Extensions -> Manage -> Database
+      "Database table structure is up to date. "
+   System -> System Information
+      Joomla Version: 3.6.0
+4.6 Note: now at 4.6.0, still need to update to 4.6.2
 
 
 
@@ -151,33 +196,6 @@ PLEASE DELETE FROM HERE THROUGH UPDATE TO 3.5.1
 BECAUSE THIS IS ALL A DUPLICATION OF THAT
 **************************************************
 
-Using Recommended Manual Procedure - 3.4.8 to 3.5.1:
-----------------------------------------------------
-Rather than downloading a fresh install, following the procedure given here:
-    https://docs.joomla.org/J3.x:Upgrading_from_Joomla_3.4.x_to_3.5
-It appears there are some major changes so it would be best to follow this procedure.
-
-Doing this on jane first.
-
-0. Always backup DB and ensure code matches what is in github ("Before You Start" above)
-1. Fix DB:
-   *** "Fix" DB from last time: Extensions -> Manage -> Database
-   *** Warning: Database is not up to date!
-   *** Database update version (3.4.3) does not match CMS version (3.4.8).
-   -> Click on "Fix" in the upper left corner
-   bu jm 02-after_fixing_db
-2. Download Joomla_3.5.1-Stable-Update_Package.zip into /var/www/joomoowebsites.com/downloads
-   gojmj
-   cp ../downloads/Joomla_3.5.1-Stable-Update_Package.zip tmp
-3. Fix permissions:
-   See: System -> System Information -> Folder Permissions
-      http://bette.joomoowebsites.com/administrator/index.php?option=com_admin&view=sysinfo
-   [Copy/Paste -> awk -> chmod_dirs.sh]
-4. Following Method A at the URL listed above:
-   Components -> Joomla Update
-   Write Files Directly -> Install the Update
-   *** Pop-up: "Error: Invalid login"
-   *** Acts like it is working but I suspect it is not
 5. Following Method B at the URL listed above:
    *** Make sure that the joomoowebsites.com directory is not a link ***
    *** (We tried with it being a link and the site whitescreened.)   ***

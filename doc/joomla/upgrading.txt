@@ -153,7 +153,7 @@ Looks easy enough but let's do some checks first:
 4.2 A process similar to this worked last time:
    gojmj
    cp ../../downloads/Joomla_3.6.0-Stable-Update_Package.zip .
-   unzip -o Joomla_3.6.0-Stable-Update_Package.zip 
+   unzip -o Joomla_3.6.0-Stable-Update_Package.zip
    rm Joomla_3.6.0-Stable-Update_Package.zip
    **************************
    *** DO NOT ACCESS SITE ***
@@ -166,7 +166,7 @@ Looks easy enough but let's do some checks first:
    mkdir -p unpack/script/
    cp ../downloads/d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip unpack/script/
    cd unpack/script/
-   unzip d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip 
+   unzip d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip
    l d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236
    cp d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236/postupdate.php ../../joomoowebsites.com
    gojmj
@@ -264,14 +264,13 @@ Looks easy enough but let's do some checks first:
    bu jm 03-after_upgrading_3.6.0_to_3.6.2
    tarHome
 6.1 Replace hard copy of configuration.php with link.
-   diff configuration.php ../gitignored/configuration.php 
+   diff configuration.php ../gitignored/configuration.php
    rm configuration.php ; ln -s ../gitignored/configuration.php .
    ls -al
    cd ../gitignored/
-   rd configuration.php 
+   rd configuration.php
    ci -l configuration.php
-
-
+7. Note: Updating barbara (also running Ubuntu 16.04), the new server, only
 
 
 **************************************************
@@ -282,42 +281,7 @@ PLEASE DELETE FROM HERE THROUGH UPDATE TO 3.5.1
 BECAUSE THIS IS ALL A DUPLICATION OF THAT
 **************************************************
 
-Upgrading backup host:
-----------------------
-We have a bit of a history of versions on bette, but have just started it on jane.
-So rather than start from scratch or something, for shitz and gigglez, this time around,
-ran these somewhat unlikely commands to upgrade bette, enabling us to keep the history
-and use it for the main procedure, if we want to, next time.
-1. Upgrade bette using github, keeping version 3.4.5 around for historical and consistency purposes:
-   tar -cvzf joomoowebsites.com-3.4.5.tgz joomoowebsites.com-3.4.5/
-   mkdir unpack
-   mv joomoowebsites.com-3.4.5.tgz unpack/
-   cd unpack/
-   tar -xvzf  joomoowebsites.com-3.4.5.tgz
-   mv joomoowebsites.com-3.4.5 joomoowebsites.com-3.4.8    # bwahahahah
-   rm joomoowebsites.com-3.4.5.tgz
-   cd joomoowebsites.com-3.4.8/
-   git pull   # get core upgrade changes checked in on jane
-   cd ../..
-   mv unpack/joomoowebsites.com-3.4.8 .
-   l
-   rm joomoowebsites.com ; ln -s joomoowebsites.com-3.4.8 joomoowebsites.com ; ls -al
-2. Check links and images
-   gojmj
-   l modules/ templates/           # ensure there are links to my customizations
-   l language/en-GB/               # ensure there are links to my customizations
-   l images/joomoowebsites.com/    # ensure there are a few subdirectories
-3. Fix Permissions and Test All the Things!
-   gojmj
-   sudo chown -R www-data:tomh .
-   ### Test front end in browser
-   ###    e.g., Check articles with images
-   ### Test back end in browser,
-   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
-4. Backup the DB and we are done!
-   bu j  02-after_upgrade
-
-Upgrading Production host:
+Upgrading New Production host:
 --------------------------
 1. Backup DB and pull the code:
    bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
@@ -330,6 +294,8 @@ Upgrading Production host:
    ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
 3. Backup DB and we are done:
    bu j  02-after_upgrade
+
+
 
 ######################################################################
 *** OLD *** Process Used for Upgrading from 3.4.8 to 3.5.1 *** OLD ***

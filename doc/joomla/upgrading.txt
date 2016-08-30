@@ -180,7 +180,7 @@ Looks easy enough but let's do some checks first:
    rm administrator/postupdate.php
 4.5 Check:
    Extensions -> Manage -> Database
-      "Database table structure is up to date. "
+      "Database table structure is up to date."
    System -> System Information
       Joomla Version: 3.6.0
 5. Upgrade to 3.6.2
@@ -206,9 +206,56 @@ Looks easy enough but let's do some checks first:
    Apparently not.
    Results:
    ** No error messages, does not upgrade **
-5.4 When will I learn to:
+5.4 Oops forgot to update the plugin!
+   Extensions -> Manage -> Update
+   Click the "Clear Cache" button
+   Click the "Find Updates" button
+   Check the "Installer - Install from Web" checkbox
+   Click the "Update" button
+   Results - 1st attempt:
+      Copy failed:
+         /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/tmp/install_57c4ea4a2a024/admin/access.xml to
+         /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/administrator/components/com_joomlaupdate/access.xml
+      JInstaller: :Install: Failed to copy file
+         /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/tmp/install_57c4ea4a2a024/admin/access.xml to
+         /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/administrator/components/com_joomlaupdate/access.xml
+      Component Update: Failed to copy administrator files.
+      Message: Error updating component.
+   No files in /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/tmp
+   chmod 777 /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/tmp
+   Retry - same results
+   *********************
+   *** Well crap.... ***
+   *********************
+5.5 When will I learn to:
 -> Skip the backend folderol and just go with downloading and unzipping the update package?
-
+   But: will it still work without the plugin that I could not install in step 5.4?
+   gojmj
+   cp ../../downloads/Joomla_3.6.2-Stable-Update_Package.zip .
+   unzip -o Joomla_3.6.2-Stable-Update_Package.zip
+   rm Joomla_3.6.2-Stable-Update_Package.zip
+   Run the post update script from:
+      https://gist.github.com/mbabker/d7bfb4e1e2fbc6b7815a733607f89281
+   Download a zip of the gist
+   gojmh
+   mv ~/Downloads/d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip unpack/
+   cd unpack/
+   unzip d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236.zip
+   cp d7bfb4e1e2fbc6b7815a733607f89281-4f8bd9cfd2c54f853ca99bae3033586a81f9f236/postupdate.php ~/tmp
+   gojmj
+   mv ~/tmp/postupdate.php administrator/
+5.6 Run the postupdate.php script, then remove it:
+   Run it in the browser:
+      jane.joomoowebsites.com/administrator/postupdate.php
+   Response:
+      "Update to 3.6.2 completed successfully."
+   gojmj
+   rm administrator/postupdate.php
+5.7 Check:
+   Extensions -> Manage -> Database
+      "Database table structure is up to date."
+   System -> System Information
+      Joomla Version: 3.6.2
 
 
 

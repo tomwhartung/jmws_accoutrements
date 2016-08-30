@@ -256,6 +256,20 @@ Looks easy enough but let's do some checks first:
       "Database table structure is up to date."
    System -> System Information
       Joomla Version: 3.6.2
+6. Backup and cleanup
+   gojmj
+   git add --all
+   gs
+   gc 'Upgraded to 3.6.2.' ; gpom
+   bu jm 03-after_upgrading_3.6.0_to_3.6.2
+   tarHome
+6.1 Replace hard copy of configuration.php with link.
+   diff configuration.php ../gitignored/configuration.php 
+   rm configuration.php ; ln -s ../gitignored/configuration.php .
+   ls -al
+   cd ../gitignored/
+   rd configuration.php 
+   ci -l configuration.php
 
 
 
@@ -267,68 +281,6 @@ WHEN DONE WITH MOST RECENT UPGRADE,
 PLEASE DELETE FROM HERE THROUGH UPDATE TO 3.5.1
 BECAUSE THIS IS ALL A DUPLICATION OF THAT
 **************************************************
-
-5. Following Method B at the URL listed above:
-   *** Make sure that the joomoowebsites.com directory is not a link ***
-   *** (We tried with it being a link and the site whitescreened.)   ***
-   gojm
-   ls -al
-   rm joomoowebsites.com  // assuming it is a link
-   mv joomoowebsites.com-3.4.8 joomoowebsites.com
-   cd joomoowebsites.com
-   cp ../../downloads/Joomla_3.5.1-Stable-Update_Package.zip .
-   unzip -o Joomla_3.5.1-Stable-Update_Package.zip
-   rm Joomla_3.5.1-Stable-Update_Package.zip
-      Fix DB: Extensions -> Manage -> Database
-      -> Click on "Fix" in the upper left corner
-   Discover and install Core Extensions:
-      Extensions -> Manage -> Discover
-      -> Select all core extensions and click on "Install" in the upper left corner
-   System → Clear Cache and if any rows are shown, select them and click the Delete
-   bu jm 02-after_fixing_db
-
-
-************** TBD ************
-
-2. Copy over the images and switch the link
-   gojmj
-   tar -cvzf images_joomoowebsites.com.tgz images/joomoowebsites.com/
-   cd ..
-   mv  joomoowebsites.com-3.4.5/images_joomoowebsites.com.tgz joomoowebsites.com-3.4.8
-   cd joomoowebsites.com-3.4.8
-   l images                        # should be no subdirectory named joomoowebsites.com !
-   tar -xvzf images_joomoowebsites.com.tgz
-   rm images_joomoowebsites.com.tgz
-   l images/joomoowebsites.com/    # should see a few subdirectories now
-   rm joomoowebsites.com  # assuming it's a link to 3.4.5!
-   ln -s joomoowebsites.com-3.4.8 joomoowebsites.com
-3. Update the new directory tree with a copy of the git files, and remove installation directory
-   gojmj
-   cp -r ../joomoowebsites.com-3.4.5/.git* .   # bwahahah
-   rm -fr installation/
-   bu j  01-before_upgrade          # IF NOT DONE ALREADY, DO IT NOW
-4. Update the new directory tree with a link to the configuration file and link in subsites and customizations
-   gojmj
-   ln -s ../gitignored/configuration.php .
-   lnSubsites
-   cd ..
-   lnJoomlaCustomizations
-   cd -
-   l modules/ templates/    # should see links to my customizations
-   l language/en-GB/        # should see links to my customizations
-5. Fix Permissions and Test All the Things!
-   gojmj
-   sudo chown -R www-data:tomh .
-   ### Test front end in browser
-   ###    e.g., Check articles with images
-   ### Test back end in browser,
-   ###    e.g., System Information -> System Information (check version) and -> Folder Permissions
-6. Commit the changes and push to github
-   git status
-   git add --all
-   gc 'Updated to 3.4.8.' ; git push origin master
-7. Backup the DB and we are done!
-   bu j  02-after_upgrade
 
 Upgrading backup host:
 ----------------------

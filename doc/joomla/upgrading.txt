@@ -183,7 +183,32 @@ Looks easy enough but let's do some checks first:
       "Database table structure is up to date. "
    System -> System Information
       Joomla Version: 3.6.0
-4.6 Note: now at 4.6.0, still need to update to 4.6.2
+5. Upgrade to 3.6.2
+   Note: now at 3.6.0, still need to upgrade to 3.6.2
+5.1 Commit code and backup database
+   gojmj
+   git add --all
+   gs
+   gc 'Upgraded to 3.6.0.' ; gpom
+   bu jm 02-before_upgrading_3.6.0_to_3.6.2
+5.2 Which to use?
+   Option 1: found via joomla.org/download.html:
+      Joomla_3.6.x_to_3.6.2-Stable-Patch_Package.zip
+   Option 2: found via Admin -> Components -> Joomla Update (-> 1st tab: Live Update)
+      Joomla_3.6.2-Stable-Update_Package.zip
+-> Picking option 2:
+   gojmh
+   cd downloads
+   mv ~/Downloads/Joomla_3.6.2-Stable-Update_Package.zip .
+5.3 Trying the second tab on the page:
+      Components -> Joomla Update -> 2nd tab: Upload and Update
+   Maybe it is the firewall that is causing the update to fail?
+   Apparently not.
+   Results:
+   ** No error messages, does not upgrade **
+5.4 When will I learn to:
+-> Skip the backend folderol and just go with downloading and unzipping the update package?
+
 
 
 

@@ -69,7 +69,7 @@ Looks easy enough but let's do some checks first:
    Recheck in back end:
       System Information -> Folder Permissions
 2. Trying Components -> Joomla Update
-   Popup: "Error: Invalid Login"  (getting deja vu)
+   Popup: "ERROR: Invalid login"  (getting deja vu)
    Doesn't seem to be doing anything....
 2.1 Update Installer Plugin
 -> Try updating the installer plugin first
@@ -85,9 +85,59 @@ Looks easy enough but let's do some checks first:
    Click the "Clear Cache" button (safety check)
    Click the "Find Updates" button
    Results:
-      "No updates available
+      "No updates available"
 2.2 Try again
    Trying Components -> Joomla Update
+   Click the "Clear Cache" button (always try to be safe)
+   Click the "Install the Update" button
+   Popup: "ERROR: Invalid login"  (getting deja vu)
+   Doesn't seem to be doing anything....
+   Not seeing any recent posts about this....
+-> Fall back to manual procedure (as usual)
+3. This page offers three options:
+   https://docs.joomla.org/J3.x:Updating_Joomla_(Install_Method)
+   They all assume I am using something like Go Daddy or CPanel
+   Components -> Joomla Update
+   Download zip file "Update package URL"
+   *** THIS DID NOT WORK - KEEPING FOR FUTURE REFERENCE ONLY  ***
+   *** PLEASE SKIP TO STEP 4 AND IGNORE THIS MESS - THANK YOU ***
+3.1 Unpack the zip file in /var/www/joomoowebsites.com/htdocs/unpack
+   gojmh
+   mkdir unpack
+   cd unpack
+   ls -altr ~/Downloads/
+   mv ~/Downloads/Joomla_3.6.0-Stable-Update_Package.zip .
+   cd ../../downloads/
+   cp ../htdocs/unpack/Joomla_3.6.0-Stable-Update_Package.zip .
+   cd -     # back to /var/www/joomoowebsites.com/htdocs/unpack
+3.2 Install the new code
+-> Trying Option 2: Install from Directory
+   (Admin) -> Extensions -> Manage -> Install
+   Install from folder (tab)
+   Enter the following value for "Install folder:"
+      /var/www/joomoowebsites.com/htdocs/unpack
+   Get errors - with both the .zip file and with unzipped .zip file:
+   ** Warning: JInstaller: :Install: Can't find XML setup file.
+   ** Error: Path does not have a valid package.  Unable to find install package
+-> Trying Option 3: Upload a Package File
+   (Admin) -> Extensions -> Manage -> Install
+   Upload Package File (tab)
+   Browse - select downloaded file (Joomla_3.6.0-Stable-Update_Package.zip)
+   Click the Upload and Install button
+   ** Does not do anything except spin for a second or two max
+-> Updated php.ini and fixed all warnings in:
+   Extensions -> Manage -> Warnings
+   ** Try Option 3 again! -> Same result
+   ** Try Option 2 again! -> Same result (both zipped and unzipped)
+-> Try Option 1: Install from URL
+   Using URL from Components -> Joomla Update , i.e.:
+      https://github.com/joomla/joomla-cms/releases/download/3.6.0/Joomla_3.6.0-Stable-Update_Package.zip
+   Results: more errors!
+   ** Warning: JInstaller: :Install: Can't find XML setup file.
+   ** Error: Unable to find install package
+
+
+
 
 
 
@@ -95,7 +145,10 @@ Looks easy enough but let's do some checks first:
 
 **************************************************
 OLD - Copied for Possible Reference This Time Only
-PLEASE DELETE THROUGH UPDATE TO 3.5.1 IF UNUSED
+**************************************************
+WHEN DONE WITH MOST RECENT UPGRADE,
+PLEASE DELETE FROM HERE THROUGH UPDATE TO 3.5.1
+BECAUSE THIS IS ALL A DUPLICATION OF THAT
 **************************************************
 
 Using Recommended Manual Procedure - 3.4.8 to 3.5.1:

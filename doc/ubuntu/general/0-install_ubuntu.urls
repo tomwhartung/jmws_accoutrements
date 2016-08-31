@@ -14,6 +14,9 @@ Articles about swap:
 I say go with first article
 	16G memory * 0.5 => 8G swap (same as we are using for 14.04)
 
+For Java, Netbeans, Eclipse, etc.
+	http://askubuntu.com/questions/762999/how-to-install-java-8-in-ubuntu-16-04
+
 For first install on new windows PC (barbara):
 	https://sites.google.com/site/easylinuxtipsproject/installation
 	https://sites.google.com/site/easylinuxtipsproject/windows

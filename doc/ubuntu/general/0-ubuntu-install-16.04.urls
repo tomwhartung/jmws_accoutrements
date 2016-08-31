@@ -1,4 +1,10 @@
 
+ Useful Links - Summer 2016
+============================
+For possible future reference.
+
+Installing Ubuntu 16.04 xenial on jane and barbara
+--------------------------------------------------
 Start here:
 	http://www.ubuntu.com/download/desktop/install-ubuntu-desktop
 
@@ -8,7 +14,7 @@ Articles about swap:
 I say go with first article
 	16G memory * 0.5 => 8G swap (same as we are using for 14.04)
 
-For first install on new windows PC:
+For first install on new windows PC (barbara):
 	https://sites.google.com/site/easylinuxtipsproject/installation
 	https://sites.google.com/site/easylinuxtipsproject/windows
 	http://www.everydaylinuxuser.com/2015/11/how-to-shrink-windows-10-to-make-space.html

@@ -3,6 +3,10 @@
 ============================
 Download correct iso file, verify md5sum, and burn to CD
 
+This is the process we are running to set up jane.
+--------------------------------------------------
+It should be perfectly usable on bette and lauren, when we get to that.
+
  On Old System, Before Install:
 --------------------------------
 [ ] Backup all DBs and home directory:
@@ -167,17 +171,26 @@ If installing on a server, you can stop here.
     All - as tomh:
         which express
 
-*************** YOU ARE HERE (jane install) ***********************
-
+[ ] Install java, jdk
+   For java, there are two choices (see 0-install_ubuntu.urls)
+   Installing the default installs the open java 8 jdk
+   As root:
+      apt-get --simulate install default-jre
+      apt-get install default-jre
+   As tomh:
+      which java
+      java -version
+ 
 [ ] Install netbeans
 [ ] Install eclipse
 	Disk Space Spotcheck:
       /:     ??? G;
       /home: ??? G
 
+*************** YOU ARE HERE (jane install) ***********************
+
 Extra Credit (install as desired, if desired)
 ---------------------------------------------
-[ ] Install java, jdk
 [ ] Install opera
 [ ] Install skype
 	Disk Space Spotcheck: /: ?.?G; /home: ?.?G

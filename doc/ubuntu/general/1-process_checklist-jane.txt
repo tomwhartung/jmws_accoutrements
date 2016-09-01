@@ -10,16 +10,15 @@ It should be perfectly usable on bette and lauren, when we get to that.
  On Old System, Before Install:
 --------------------------------
 [ ] Backup all DBs and home directory:
-	bua
-	tarHome
+   bua
+   tarHome
 [ ] Find spare disk partitions that can be used for install
-[ ] 
 
  Install:
 ----------
 [ ] Check checkboxes:
-	[ ] Download updates while installing
-	[ ] Install third-party software
+   [ ] Download updates while installing
+   [ ] Install third-party software
 
  On New System, After Install:
 -------------------------------
@@ -39,7 +38,7 @@ It should be perfectly usable on bette and lauren, when we get to that.
 
 [ ] Copy /etc/hosts from old install and setup static IP
 [ ] Check /etc/hosts and /etc/fstab into RCS
-	Disk Space Spotchec - / and /home - ensure we have enough
+   Disk Space Spotchec - / and /home - ensure we have enough
 
 [ ] Install fortune-mod, fortunes, other fortune* packages as desired
 [ ] Install xscreensaver, xscreensaver-data-extra
@@ -59,7 +58,7 @@ It should be perfectly usable on bette and lauren, when we get to that.
 
 [ ] Install apache2, apache2-utils,
 [ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
-[ ] Install mysql-server, 
+[ ] Install mysql-server,
 [ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
    ### cd /etc/apache2/mods-enabled
    ### ln -s ../mods-available/rewrite.load .
@@ -75,7 +74,7 @@ It should be perfectly usable on bette and lauren, when we get to that.
 [ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
    For jane: ensure both www.site.com and site.com will work
    For bette: change "jane" to "bette" in conf files
-	Disk Space Spotcheck - / and /home - ensure we have plenty left
+   Disk Space Spotcheck - / and /home - ensure we have plenty left
 
 [ ] ln -s /art/images ~/Pictures
 [ ] Install chrome and chromium-browser
@@ -110,7 +109,7 @@ If installing on a server, you can stop here.
 [ ] Lock all or most (not using thunderbird on jane) of those to launcher
 [ ] Lock disks [manager] to launcher
 [ ] Confirm installation of image viewer xeyes (pre-installed??),
-	Disk Space Spotcheck:
+   Disk Space Spotcheck:
       /:     8.3G (48%)
       /home: 4.1G (25%)
 
@@ -201,7 +200,7 @@ If installing on a server, you can stop here.
    mkdir install_neon
    mv eclipse-inst-linux64.tar.gz install_neon/
    cd install_neon/
-   tar -xvzf eclipse-inst-linux64.tar.gz 
+   tar -xvzf eclipse-inst-linux64.tar.gz
    eclipse-installer/eclipse-inst   # runs installer
    Click on: Eclipse IDE for PHP Developers
    ** Changing folder from /home/tomh/eclipse/php-neon to /opt/eclipse/php-neon **
@@ -211,8 +210,7 @@ If installing on a server, you can stop here.
    Click on: Launch
    ** Changing workspace folder from /home/tomh/workspace to /opt/eclipse/workspace **
    Lock to Launcher
-
-	Disk Space Spotcheck:
+   Disk Space Spotcheck:
       /:     11.0G of 19G - 59%
       /home:  3.5G of 19G - 21%
 
@@ -222,7 +220,7 @@ Extra Credit (install as desired, if desired)
 ---------------------------------------------
 [ ] Install opera
 [ ] Install skype
-	Disk Space Spotcheck: /: ?.?G; /home: ?.?G
+   Disk Space Spotcheck: /: ?.?G; /home: ?.?G
 
 [ ] Install
 [ ] Install

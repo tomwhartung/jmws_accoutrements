@@ -171,21 +171,50 @@ If installing on a server, you can stop here.
     All - as tomh:
         which express
 
+2016-08-31 - Picking up the jane install where we left off
+----------------------------------------------------------
 [ ] Install java, jdk
    For java, there are two choices (see 0-install_ubuntu.urls)
-   Installing the default installs the open java 8 jdk
+   Installing the default installs the open java 8 jdk (not adding PPA for Oracle)
    As root:
       apt-get --simulate install default-jre
       apt-get install default-jre
    As tomh:
       which java
       java -version
- 
 [ ] Install netbeans
+   Seeing version 8.1 in the "Software Updater" tool's search results
+   Wikipedia calls 8.1 the current "stable release"
+   In Software Updater (Search for netbeans) -> Click on Install
+   Launch it when done
+   Lock to Launcher
 [ ] Install eclipse
+   Seeing version 3.8 in the "Software Updater" tool's search results
+   Wikipedia calls 4.6 the current "stable release"
+   Following process in link added to 0-install_ubuntu.urls
+   Download installer for neon from http://www.eclipse.org/downloads/
+   sudo mkdir /opt/eclipse
+   sudo chown tomh /opt/eclipse
+   mv eclipse-inst-linux64.tar.gz /opt/eclipse
+   cd /opt/eclipse
+   l
+   mkdir install_neon
+   mv eclipse-inst-linux64.tar.gz install_neon/
+   cd install_neon/
+   tar -xvzf eclipse-inst-linux64.tar.gz 
+   eclipse-installer/eclipse-inst   # runs installer
+   Click on: Eclipse IDE for PHP Developers
+   ** Changing folder from /home/tomh/eclipse/php-neon to /opt/eclipse/php-neon **
+   Click on: Install
+      Popup appears: "Do you trust these certificates?"
+      Check the box and click continue (it finishes this time)
+   Click on: Launch
+   ** Changing workspace folder from /home/tomh/workspace to /opt/eclipse/workspace **
+   Lock to Launcher
+
 	Disk Space Spotcheck:
-      /:     ??? G;
-      /home: ??? G
+      /:     11.0G of 19G - 59%
+      /home:  3.5G of 19G - 21%
 
 *************** YOU ARE HERE (jane install) ***********************
 

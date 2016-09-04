@@ -1,0 +1,267 @@
+
+Introduction
+------------
+The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
+Plus we don't run it often enough to be really confident about it or good at it etc.
+
+TomWHartung.com - WP Upgrading Notes for 2016
+---------------------------------------------
+The Latest References (from upgrade to 4.3.1):
+   https://wordpress.org/support/topic/core-or-plugin-update-could-not-create-directory-httpdocs?replies=27
+   http://wordpress.stackexchange.com/questions/141063/when-fs-method-direct-is-chosen
+
+Log
+---
+[ ] 2016-
+[ ] 2016-xx-xx: 4.6   to 4.x.x
+[ ] 2016-09-02: 4.4.2 to 4.6
+[ ] 2016-02-11: 4.4.1 to 4.4.2
+[ ] 2016-01-15: 4.3.1 to 4.4.1
+
+All Hosts
+---------
+1. Backup db on all hosts and ensure code matches what is in github:
+   [ ] bette
+   [ ] barbara
+   [ ] jane
+   [ ] lauren
+   bu tw 01-before_upgrade-4_4_2-to-4_6
+   gotwt
+   git pull
+   git status
+
+
+Getting core update to work from back end:
+------------------------------------------
+To enable using the back end to update the code rather than downloading it, follow these steps.
+We need to do this for at least one host
+-> *bette* on 2016-09-03
+1. Ensure the following line has been added to wp-config.php :
+   define('FS_METHOD','direct');     # This is one key
+2. Ensure the web server can write the files by making the following changes:
+   Change ownership of all files to www-data, create directory wp-content/upgrade
+   gotwt
+   mkdir wp-content/upgrade
+   sudo chown -R www-data:tomh *          # This is another key
+   Change perms of wp-content/upgrade and any subdirectories of it to 775
+   sudo chmod -R 775 wp-content/upgrade*  # Unsure whether this step is necessary
+   ls -al wp-content/upgrade
+
+Update wp core on *bette* using admin panel:
+--------------------------------------------
+1. Update in back end:
+   Admin -> Dashboard -> Updates
+2. Check in browser for each gadget type:
+   If it looks OK, proceed, else figure out what went wrong.
+3. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
+   gotwt
+   sudo chown -R tomh:www-data *
+   sudo chmod 755 wp-content wp-content/*
+   ls -al wp-content/
+4. Check the changes into git:
+   gotwt
+   git status
+   git add --all .
+   git commit -m 'Upgrading from 4.4.1_to_4.4.2.' ; git push origin master
+5. Backup db on this host:
+   bu tw 02-after_upgrade_4.4.1_to_4.4.2
+
+Updating wp core on bette:
+--------------------------
+1. Make sure database is backed up (in previous section "All Hosts: above)
+   bu tw 01-before_upgrade_4.4.1_to_4.4.2
+2. Open browser windows:
+   Admin panel -> Dashboard -> Updates
+   One tab per device - ensure each one looks ok
+3. Update core code on bette using git pull:
+   gotwt
+   git pull
+4. Test in browser
+   Load admin panel
+   If there are db updates will see: "Database update required."
+      Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+      Click "Continue" button: looks like we are good to go!
+   Admin panel -> Dashboard -> Updates
+   Ensure it is running the new version
+5. Test each tab (gadget type) in browser
+   If something is wrong,
+      Figure it out and fix it
+      Consider using the "Alternative Method" when upgrading lauren (to facilitate backing out of the new code)
+6. Backup new copy of db
+   bu tw 02-after_upgrade_4.4.1_to_4.4.2
+
+Updating wp core on lauren (production!)
+----------------------------------------
+1. Disable site
+   cd /etc/apache2/sites-enabled/
+   ls -al
+   sudo rm 080-tomwhartung.com.conf 
+   ls -al
+   sudo service apache2  restart
+   ## Load in browser (verify it is down)
+2. Update core code and extensions on lauren:
+   Extract (git pull) on lauren
+   gotwt
+   git pull
+   gotwc
+   gac p    # fun script that pulls code for all customizations
+3. Re-enable site (have admin window ready to go)
+   cd /etc/apache2/sites-enabled/
+   ls -al
+   sudo ln -s ../sites-available/080-tomwhartung.com.conf .
+   ls -al
+   sudo service apache2  restart
+4. Test in browser
+   If there are db updates will see: "Database update required."
+      Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+      Click "Continue" button: looks like we are good to go!
+   Admin panel -> Dashboard -> Updates
+   Ensure it is running the new version
+   Load admin panel: "Database update required."
+   Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+   Click "Continue" button: looks like we are good to go!
+5. Test each tab (gadget type) in browser
+   If something is wrong, figure it out and fix it
+6. Backup new copy of db
+   bu tw 02-after_upgrade_4.4.1_to_4.4.2
+
+Alternative Process for Step 2 Above
+------------------------------------
+This is more work but enables us to keep a copy of the old code on the disk,
+which might be helpful in case there is an issue with the new version.
+2. ** Alternative process **
+   Keep copy of old code, clone fresh version of site, and create links to customizations etc.
+   gotwh
+   mkdir tmp
+   cd tmp
+   git clone git@github.com:tomwhartung/tomwhartung.com.git
+   l
+   mv tomwhartung.com tomwhartung.com-4.4.1
+   mv tomwhartung.com-4.4.1 ..
+   cd ..
+   mv tomwhartung.com tomwhartung.com-4.3.1 ; ln -s tomwhartung.com-4.4.1 tomwhartung.com
+   gotwt
+   ln -s ../gitignored/wp-config.php .
+   ln_wordpress_customizations
+   gotwh
+   ln_subsites.py
+
+Updating plugins
+----------------
+[ ] jane:
+We are able to update plugins using the admin back end, as long as we
+change the owner of the files in the WP installation directory tree.
+1. It never hurts to backup the db!
+   bu tw 01-before_upgrading_akismet
+2. Ensure the following line is in wp-config.php :
+   define('FS_METHOD','direct');
+3. Change the owner of all files to www-data:
+   gotwt
+   sudo chown -R www-data *
+4. Update in admin back end
+   Admin -> Plugins -> "update now" link for the plugin
+5. Change the owner of all files back to tomh:
+   gotwt
+   sudo chown -R tomh *
+6. Commit changes and push
+   gotwt
+   git add --all
+   git commit -m 'Upgraded akismet to latest version' ; gpom
+7. Never hurts to backup the db!
+   bu tw 02-upgraded_akismet_to_latest_version
+
+[ ] bette:
+Right now we are just updating akismet, which we are not using, but we
+do want to clear the update flag.  The question is, does updating the
+plugin affect the database?  To be on the safe side, we must assume it does.
+So we will update it in the back end - to make any DB changes needed in the
+local DB, then remove those files and pull code to make git happy.
+1. It never hurts to backup the dbs!
+   jane: bu tw 03-before_changing_urls
+   bette: bu tw 01-before_updating_from_jane
+2. Change URLS on jane to point to bette:
+   jane: Admin -> General Settings
+   Change the WordPress Address (URL) to point to bette
+   Change the Site Address (URL) to point to bette
+3. Backup DB on jane and copy to bette
+   jane: gobu
+   jane: bu tw 04-changed_urls_to_bette
+   toBette tomwhartung.com-2016_03_24-jane-04-changed_urls_to_bette.sql.gz
+4. Restore db on jane to version saved before changing the URLs
+   jane: rs tw 03-before_changing_urls
+5. Restore new db on bette
+   bette: gobu
+   bette: rs -h jane tw 04-changed_urls_to_bette
+6. Backup both dbs so that the most recent copy is readily available
+   jane: bu tw 05-restored_to_latest_version
+   bette: bu tw 02-updated_to_latest_from_jane
+
+### Old Process (save for possible future reference):
+### 1. Ensure the following line is in wp-config.php :
+###    define('FS_METHOD','direct');
+### 2. Change the owner of all files to www-data:
+###    gotwt
+###    sudo chown -R www-data *
+### 3. Update in admin back end (to get any changes needed to local DB)
+###    Admin -> Plugins -> "update now" link for the plugin
+### 4. Change the owner of all files back to tomh:
+###    gotwt
+###    sudo chown -R tomh *
+### 5. Remove changes, checkout current version, and pull code
+###    gotwt
+###    gs
+###    cd wp-content/plugins/
+###    l akismet/
+###    rm -fr akismet/ ; git checkout akismet/ ; gp
+###    sum akismet/*   # optionally/for best results compare to version on bette...
+###    gotwt
+### 6. Never hurts to backup the db!
+###    bu tw 03-after_upgrade_akismet_to_3.1.5
+
+[ ] lauren: 
+As long as jane works, follow same processs to update lauren.
+
+Updating themes
+---------------
+Need to update three themes.
+
+[ ] Upgrade all themes on bette:
+   bu tw 04-before_upgrade_twentyfifteen
+   gotwt
+   sudo chown -R www-data *
+   ## upgrade twentyfifteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentyfifteen to version 1.4 .'
+   bu tw 05-before_upgrade_twentyfourteen
+   ## upgrade twentyfourteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentyfourteen to version 1.7 .'
+   bu tw 06-before_upgrade_twentythirteen
+   ## upgrade twentythirteen in admin panel
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentythirteen to version 1.7 .'
+   sudo chown -R tomh *
+   test
+   git push origin master
+   bu tw 07-after_upgrade_all_themes
+
+Checking the diffs after installing these on bette, I can see there
+are no database changes.  So we just pull the code.  Note however that
+you can never have too many backups of the DB!
+[ ] Upgrade code on jane using code from upgrade on bette (checked in to git)
+   gotwt
+   git pull
+   test
+   bu tw 06-after_upgrade_themes
+[ ] Upgrade code on lauren using code from upgrade on bette (checked in to git)
+   gotwt
+   git pull
+   test
+   bu tw 06-after_upgrade_themes
+

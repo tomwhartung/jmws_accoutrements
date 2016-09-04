@@ -109,7 +109,7 @@ Upgrade each theme on bette, then jane and barbara
    bu tw 03-before_upgrade_themes
    gotwt
    ## upgrade twentyfifteen in admin panel
-   Test bette in browser
+   Test bette in browser 
    - admin: check version number
    - site: ensure it loads
    gs
@@ -130,7 +130,7 @@ Upgrade each theme on bette, then jane and barbara
 2. Follow above process for twentyfourteen
    bu tw 04-before_upgrade_twentyfourteen
    ## upgrade twentyfourteen in admin panel
-   Test bette in browser
+   Test bette in browser 
    - admin: check version number
    - site: ensure it loads
    gs
@@ -145,7 +145,7 @@ Upgrade each theme on bette, then jane and barbara
 3. Follow above process for twentythirteen
    bu tw 05-before_upgrade_twentythirteen
    ## upgrade twentythirteen in admin panel
-   Test bette in browser
+   Test bette in browser 
    - admin: check version number
    - site: ensure it loads
    gs
@@ -157,8 +157,25 @@ Upgrade each theme on bette, then jane and barbara
    As above
 3.2 Pull code on barbara, test
    As above
-4.
+4. Install twentysixteen
+   bu tw 06-before_add_twentysixteen
+   ## install twentysixteen in admin panel
+   Test bette in browser 
+   - admin: activate theme
+   - site: ensure it loads
+**** decide whether we want to add idMyGadget
+   gs
+   gd
+   git add --all
+   gc 'Upgraded theme twentythirteen to version 2.0 .'
+   git push origin master
+4.1 Pull code on jane, test
+   As above
+4.2 Pull code on barbara, test
+   As above
+   bu tw 07-after_upgrade_all_themes
 
+====---- ???? ----====
 
 5. Change the owner of all files back to tomh:
    gotwt

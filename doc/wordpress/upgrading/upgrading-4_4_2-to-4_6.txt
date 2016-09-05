@@ -163,42 +163,23 @@ Upgrade each theme on bette, then jane and barbara
    Test bette in browser 
    - admin: activate theme
    - site: ensure it loads
-**** decide whether we want to add idMyGadget
    gs
    gd
    git add --all
-   gc 'Upgraded theme twentythirteen to version 2.0 .'
+   gc 'Added theme twentysixteen.'
    git push origin master
 4.1 Pull code on jane, test
    As above
 4.2 Pull code on barbara, test
    As above
    bu tw 07-after_upgrade_all_themes
-
-====---- ???? ----====
-
-5. Change the owner of all files back to tomh:
-   gotwt
-   sudo chown -R tomh *
-6. Commit changes and push
-   gotwt
-   git add --all
-   git commit -m 'Upgraded akismet to latest version' ; gpom
-7. Never hurts to backup the db!
-   bu tw 02-upgraded_akismet_to_latest_version
-
-
-Checking the diffs after installing these on bette, I can see there
+5. Change the owner of all files back to tomh
+   On bette:
+      gotwt
+      sudo chown -R tomh *
+Conclusion:
+-----------
+Checking the diffs after installing the themes on bette, I can see there
 are no database changes.  So we just pull the code.  Note however that
 you can never have too many backups of the DB!
-[ ] Upgrade code on jane using code from upgrade on bette (checked in to git)
-   gotwt
-   git pull
-   test
-   bu tw 06-after_upgrade_themes
-[ ] Upgrade code on lauren using code from upgrade on bette (checked in to git)
-   gotwt
-   git pull
-   test
-   bu tw 06-after_upgrade_themes
 

@@ -224,6 +224,16 @@ If installing on a server, you can stop here.
       /:     11.0G of 19G - 59%
       /home:  3.5G of 19G - 21%
 
+[ ] Install phpmyadmin
+   apt-get update
+   apt-get install phpmyadmin php-mbstring php-gettext
+   -> Select apache (the red block is a cursor, an asterisk appears when apache is selected)
+   -> Configuring phpmyadmin dialog: do it now or later
+      References: /usr/share/doc/phpmyadmin
+      Select Yes
+      "Please provide a password for myphpmyadmin to register with the database server."
+
+
 *************** YOU ARE HERE (jane install) ***********************
 
 Extra Credit (install as desired, if desired)

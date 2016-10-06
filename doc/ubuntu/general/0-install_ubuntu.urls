@@ -6,22 +6,43 @@ For possible future reference.
 Installing Ubuntu 16.04 xenial on jane and barbara
 --------------------------------------------------
 Start here:
-	http://www.ubuntu.com/download/desktop/install-ubuntu-desktop
+    http://www.ubuntu.com/download/desktop/install-ubuntu-desktop
 
 Articles about swap:
-	http://askubuntu.com/questions/49109/i-have-16gb-ram-do-i-need-32gb-swap
-	http://www.tecmint.com/ubuntu-16-04-installation-guide/
+    http://askubuntu.com/questions/49109/i-have-16gb-ram-do-i-need-32gb-swap
+    http://www.tecmint.com/ubuntu-16-04-installation-guide/
 I say go with first article
-	16G memory * 0.5 => 8G swap (same as we are using for 14.04)
+    16G memory * 0.5 => 8G swap (same as we are using for 14.04)
 
 For Java, Netbeans, Eclipse, etc.
-	http://askubuntu.com/questions/762999/how-to-install-java-8-in-ubuntu-16-04
-   https://orangletrik.wordpress.com/2012/03/04/install-php-plugin-in-netbeans/
-   http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/
+    http://askubuntu.com/questions/762999/how-to-install-java-8-in-ubuntu-16-04
+    https://orangletrik.wordpress.com/2012/03/04/install-php-plugin-in-netbeans/
+    http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/
 
 For first install on new windows PC (barbara):
-	https://sites.google.com/site/easylinuxtipsproject/installation
-	https://sites.google.com/site/easylinuxtipsproject/windows
-	http://www.everydaylinuxuser.com/2015/11/how-to-shrink-windows-10-to-make-space.html
-	http://www.everydaylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside.html
+    https://sites.google.com/site/easylinuxtipsproject/installation
+    https://sites.google.com/site/easylinuxtipsproject/windows
+    http://www.everydaylinuxuser.com/2015/11/how-to-shrink-windows-10-to-make-space.html
+    http://www.everydaylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside.html
+
+For adding apache2 mod_wsgi, to support django:
+  This is the first django site on my server, so I want to be sure I keep a record of how I do my due diligence.
+  djangoproject.com recommends downloading, building, and installing the latest version:
+  - Use these for formulating the process we use, in 1-process_checklist-jane.txt .
+    https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
+    - From comments in the generated settings.py file
+    https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
+    - A version of the previous page specific to the version we are using
+    https://modwsgi.readthedocs.io/en/develop/
+    - Home page for mod_wsgi
+    https://modwsgi.readthedocs.io/en/develop/installation.html
+    - Installation instructions for mod_wsgi
+  There are some sites that suggest simpler procedures, but I believe "the hard way" is better
+  - Use these for comparison and possible trouble-shooting.
+    https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
+    - uses apt-get to install mod_wsgi (bad) but sets up virtualenv and all (good)
+    https://www.server-world.info/en/note?os=Ubuntu_16.04&p=httpd&f=17
+    - looks unsuited to a server using virtual hosts but has some details about how to configure apache
+    https://www.linode.com/docs/websites/frameworks/django-apache-and-modwsgi-on-centos-5
+    - Over five years old (2011-08-22) but has some details about how to configure apache
 

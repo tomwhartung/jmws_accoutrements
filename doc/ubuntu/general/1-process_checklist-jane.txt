@@ -97,6 +97,29 @@ It should be perfectly usable on bette and lauren, when we get to that.
 [ ] Configure wordpress updates
 [ ] Set up backups
 
+2016-10-05 - Install and configure wsgi for serving django sites
+----------------------------------------------------------------
+[ ] Install apache mod_wsgi
+[ ] First we need a plan for getting the versions right and all
+    The following urls are most important; see 0-install_ubuntu.urls for a
+    comprehensive list of links to valuable information about this process
+    The starting point:
+        https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
+    I think we want to use daemon mode:
+        https://docs.djangoproject.com/en/1.10/topics/install/#install-apache-and-mod-wsgi
+    And I think we want to install the latest version:
+        https://modwsgi.readthedocs.io/en/develop/installation.html
+    Because although it is available via apt-get:
+        apt-get install -s libapache2-mod-wsgi-py3   ## found package name via digitalocean link
+    It is, like he says, a fairly old version:
+        apt-cache policy libapache2-mod-wsgi-py3     ## Candidate: 4.3.0-1.1build1
+    Version 4.5.7 is avaialbe On github:
+        https://github.com/GrahamDumpleton/mod_wsgi/releases
+
+[ ] Review Deployment Checklists
+    For a few of these that we have found along the way, see
+    0-install_ubuntu.urls
+ 
 ---------------------------------------------
 If installing on a server, you can stop here.
 ---------------------------------------------

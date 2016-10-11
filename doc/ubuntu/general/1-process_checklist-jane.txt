@@ -155,7 +155,7 @@ It should be perfectly usable on bette and lauren, when we get to that.
         git commit 'Adding downloaded mod_wsgi-4.5.7.tar.gz because I want to be sure I have a copy of the exact file I am installing.'
         git push origin master
         cd ../3-mod_wsgi
-        mkdir unpack
+        mkdir unpack        ## assuming "unpack" is in the .gitignore file - we do not want to commit any of this to github!
         cd unpack
         cp ../../downloads/mod_wsgi-4.5.7.tar.gz .
         tar -xvzf mod_wsgi-4.5.7.tar.gz
@@ -187,6 +187,31 @@ It should be perfectly usable on bette and lauren, when we get to that.
         ### See any operating system documentation about shared libraries for
         ### more information, such as the ld(1) and ld.so(8) manual pages.
         ### ----------------------------------------------------------------------
+    Quick Installation Guide -> Loading Module Into Apache
+        sudo su -
+        cd /etc/apache2/mods-available/
+        more *.load         # many are one-liners
+        vi wsgi.load
+        cat wsgi.load       # contents: only this one line
+        LoadModule wsgi_module modules/mod_wsgi.so
+        a2enmod wsgi
+        service apache2 stop
+        service apache2 start
+        systemctl status apache2.service    # used to identify error ('/usr/lib/apache2/' missing path)
+        systemctl status apache2.service > /tmp/apache_error.txt
+        cat /tmp/apache_error.txt
+        l /usr/lib/apache2/modules/mod_wsgi.so
+        vi wsgi.load
+        cat wsgi.load       # contents: only this one line (corrected version)
+        LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+        service apache2 restart
+        upapa
+        mkdir RCS
+        ci -l wsgi.load
+    Quick Configuration Guide - getting the "Hello World" wsgi app to run:
+        https://modwsgi.readthedocs.io/en/develop/user-guides/quick-configuration-guide.html
+
+
 
 
 

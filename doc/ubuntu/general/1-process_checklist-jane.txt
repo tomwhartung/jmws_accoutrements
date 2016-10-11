@@ -100,8 +100,8 @@ It should be perfectly usable on bette and lauren, when we get to that.
 2016-10-05 - Install and configure wsgi for serving django sites
 ----------------------------------------------------------------
 [ ] Install apache mod_wsgi
-[ ] First we need a plan for getting the versions right and all
-    The following urls are most important; see 0-install_ubuntu.urls for a
+    We need a plan for getting the versions right and all
+[ ] References: the following urls are most important; see 0-install_ubuntu.urls for a
     comprehensive list of links to valuable information about this process
     The starting point:
         https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
@@ -113,8 +113,38 @@ It should be perfectly usable on bette and lauren, when we get to that.
         apt-get install -s libapache2-mod-wsgi-py3   ## found package name via digitalocean link
     It is, like he says, a fairly old version:
         apt-cache policy libapache2-mod-wsgi-py3     ## Candidate: 4.3.0-1.1build1
-    Version 4.5.7 is avaialbe On github:
+    Version 4.5.7 is avaiable on github:
         https://github.com/GrahamDumpleton/mod_wsgi/releases
+    And on pypi.python.org:
+        https://pypi.python.org/pypi/mod_wsgi
+[ ] First get mod-wsgi "Hello World" example working
+    Starting here:
+         https://modwsgi.readthedocs.io/en/develop/getting-started.html
+    Requirements:
+        "It is highly recommended that you use Apache 2.4"
+    apache2 -v   ## Server version: Apache/2.4.18 (Ubuntu)
+    Requirements (cont'd):
+        "If your Python web application doesn’t comply properly with the WSGI specification,
+         then it may fail to run or may run sub optimally...."
+    Installation:
+        As noted above, we want to install the latest version
+    Installation -> Quick Installation Guide -> Apache Requirements
+        "On Linux systems, if Apache has been installed from a package repository, you must have
+         installed the corresponding Apache “dev” package as well."
+    Synaptic -> Search for apache2 -> If dev package not installed, mark it for installation -> Apply
+    Quick Installation Guide -> Python Requirements
+        "On Linux systems, if Python has been installed from a package repository, you must have
+         installed the corresponding Python “dev” package as well."
+    Synaptic -> Search for python -> If dev package not installed, mark it for installation -> Apply
+    Synaptic -> Search for python3 -> If dev package not installed, mark it for installation -> Apply
+    Quick Installation Guide -> Downloading, Unpacking and Configuring
+        Download current version (4.5.7) from github, unpack, and follow configuration instructions:
+            https://github.com/GrahamDumpleton/mod_wsgi/releases
+    cd /var/www/learn/django/github/customizations/always_learning_python/3-mod_wsgi
+    
+
+
+
 
 [ ] Review Deployment Checklists
     For a few of these that we have found along the way, see

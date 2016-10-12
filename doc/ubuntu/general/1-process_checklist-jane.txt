@@ -210,6 +210,19 @@ It should be perfectly usable on bette and lauren, when we get to that.
         ci -l wsgi.load
     Quick Configuration Guide - getting the "Hello World" wsgi app to run:
         https://modwsgi.readthedocs.io/en/develop/user-guides/quick-configuration-guide.html
+        Using daemon mode, as proposed above, even though it does not seem to make much difference
+        See the 3-mod_wsgi directory in the always_learning_python repo, especially the README.md file.
+            https://github.com/tomwhartung/always_learning_python/tree/master/3-mod_wsgi
+            https://github.com/tomwhartung/always_learning_python/blob/master/3-mod_wsgi/README.md
+        Also see the configuration on jane:
+            /etc/apache2/sites-available/150-wsgi.test.conf
+        Note that to get this to work, I had to add the following line to /etc/hosts :
+            127.0.1.1	jane.wsgi.test
+[ ] OK!  Now to get mod_wsgi to work with Django!
+    Update /etc/apache2/sites-available/050-seeourminds.com.conf , combining
+    - what we have in /etc/apache2/sites-available/150-wsgi.test.conf with
+    - the django-specific information here:
+        https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
 
 
 

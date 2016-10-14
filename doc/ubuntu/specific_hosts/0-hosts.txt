@@ -1,0 +1,20 @@
+
+ My Hosts and Their Purposes
+=============================
+My main dev host jane is acting up, making the '/' filesystem read-only,
+segfaulting on "df" commands and the like.
+
+This means that barbara, which was destined to be the new production host,
+is now taking over that role, at least temporarily.
+
+It also means that we will be buying a new computer for the production
+host role, probably this weekend.
+
+List of Hosts and the Purpose of Each
+-------------------------------------
+ava (new) - Ubuntu 16.04 - production host
+barbara - Ubuntu 16.04 - test, staging, and backup development and production
+jane - Ubuntu 16.04 - run memcheck, fsck, and take in to get fixed
+bette - Ubuntu 14.04 - upgrade to Ubuntu 16.04 when we get ava into production
+lauren - Ubuntu 14.04 - upgrade to Ubuntu 16.04 when we get ava into production
+

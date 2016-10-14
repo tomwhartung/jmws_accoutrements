@@ -2,122 +2,77 @@
  Hosting Django - Setup
 ========================
 
-This is the process we are running to set up jane.
-It should be perfectly usable on bette and lauren, when we get to that.
+This is the process we are running to set up barbara.
+This is the second time going through this process.
 
 Serving Django Via Apache and Deploying a Django Site!
 ------------------------------------------------------
-Having never hosted a django site, I want to be sure I do my due diligence in this regard.
+Having never hosted a django site, I want to be sure I do my due diligence
+in this regard.
+
+Strategy with Regards to Virtual Environments
+---------------------------------------------
+On jane we followed the tutorials and played around with virtual environments
+(the virtualenv command, etc.) a bit and wound up using only the virtualenv
+that uses python3 and django 1.10 .
+
+Since then we got mod_wsgi to work with apache, but jane started having issues
+before we got it to work with django
+
+In light of this experience, we will follow this strategy on barbara and ava,
+and probably other hosts as well:
+
+1. Install python3 as the python used by mod_wsgi.
+2. Install django 1.10 for use globally by default.
+3. Maintain some sort of record (copy of source, or github version hash, or?) of
+   precisely which version of django 1.10 we installed globally.
+4. Use virtual environments (virtualenv command, etc.) experiment with and
+   upgrade to other versions of python or django or both, on specific hosts only
 
 References:
 -----------
-For adding apache2 mod_wsgi, to support django:
-  This is the first django site on my server, so I want to be sure I keep a record of how I do my due diligence.
-  djangoproject.com recommends downloading, building, and installing the latest version:
-  Use these for formulating the process we use, in 1-process_checklist-jane.txt .
-  - Start here:
-    https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
-  - Home page and installation instructions for mod_wsgi
-    https://modwsgi.readthedocs.io/en/develop/
-    https://modwsgi.readthedocs.io/en/develop/installation.html
-    https://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html
-  - Actually this looks like a very helpful resource for getting the versions right and all:
-    https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
-    - Uses apt-get to install mod_wsgi (bad) but sets up virtualenv and all (good)
+Using this page as the driver:
+    https://docs.djangoproject.com/en/1.10/topics/install/
 
-Deploying django - checklists and the like
-    https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
-    - From comments in the generated settings.py file
-    https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
-    - A version of the previous page specific to the version we are using
-    https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
-    - Instructions specific to wsgi
-    http://djangobook.com/deploying-django/
-    - Deployment chapter in "The Django Book," relevant for version 1.8
+For many many many more links to info about adding apache2 mod_wsgi, see
+the file ../general/2-hosting_django-jane.txt
 
-More django/mod_wsgi urls:
-  There are some sites that suggest simpler procedures, but I believe "the hard way" is better
-  - Use these for comparison, future reference, and possible trouble-shooting.
-    https://code.google.com/archive/p/modwsgi/wikis/IntegrationWithDjango.wiki
-    - Might come in handy but unsure of its relevance
-    https://www.server-world.info/en/note?os=Ubuntu_16.04&p=httpd&f=17
-    - Looks unsuited to a server using virtual hosts but has some details about how to configure apache
-    https://www.linode.com/docs/websites/frameworks/django-apache-and-modwsgi-on-centos-5
-    - Over five years old (2011-08-22) but has some details about how to configure apache
-  A few additional references:
-    http://stackoverflow.com/questions/10081062/django-virtual-host-setup-apache-mod-wsgi
-    - Specifics about the WSGIScriptAlias directive
+Process: - Install and configure apache mod_wsgi for serving django sites
+-------------------------------------------------------------------------
+2016-10-14 - doing this on barbara
 
-Process: - Install and configure wsgi for serving django sites
---------------------------------------------------------------
-2016-10-05 - running this on jane
-
-[ ] Install apache mod_wsgi
-    We need a plan for getting the versions right and all
-[ ] References: the following urls are most important; see 0-install_ubuntu.urls for a
-    comprehensive list of links to valuable information about this process
-    The starting point:
-        https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
-    I think we want to use daemon mode:
-        https://docs.djangoproject.com/en/1.10/topics/install/#install-apache-and-mod-wsgi
-    And I think we want to install the latest version:
-        https://modwsgi.readthedocs.io/en/develop/installation.html
-    Because although it is available via apt-get:
-        apt-get install -s libapache2-mod-wsgi-py3   ## found package name via digitalocean link
-    It is, like he says, a fairly old version:
-        apt-cache policy libapache2-mod-wsgi-py3     ## Candidate: 4.3.0-1.1build1
-    Version 4.5.7 is avaiable on github:
-        https://github.com/GrahamDumpleton/mod_wsgi/releases
-    And on pypi.python.org:
-        https://pypi.python.org/pypi/mod_wsgi
-    That page looks to be a better-formated version of this one:
-        https://github.com/GrahamDumpleton/mod_wsgi
-    The pypi.python.org stuff seems focused on "the new way," using mod_wsgi-express,
-    which looks like it was meant more for use on development hosts, especially when running docker.
 [ ] First get mod-wsgi "Hello World" example working
+    For security reasons, we are installing the latest version
     Starting here:
          https://modwsgi.readthedocs.io/en/develop/getting-started.html
     Requirements:
         "It is highly recommended that you use Apache 2.4"
-    apache2 -v   ## Server version: Apache/2.4.18 (Ubuntu)
-    Requirements (cont'd):
-        "If your Python web application doesn’t comply properly with the WSGI specification,
-         then it may fail to run or may run sub optimally...."
-    Installation:
-        As noted above, we want to install the latest version
+[ ] apache2 -v   ## Server version: Apache/2.4.18 (Ubuntu)
     Installation -> Quick Installation Guide -> Apache Requirements
         "On Linux systems, if Apache has been installed from a package repository, you must have
          installed the corresponding Apache “dev” package as well."
-    Synaptic -> Search for apache2 -> If dev package not installed, mark it for installation -> Apply
+[ ] Synaptic -> Search for apache2 -> If dev package not installed, mark it for installation -> Apply
     Quick Installation Guide -> Python Requirements
         "On Linux systems, if Python has been installed from a package repository, you must have
          installed the corresponding Python “dev” package as well."
-    Synaptic -> Search for python -> If dev package not installed, mark it for installation -> Apply
-    Synaptic -> Search for python3 -> If dev package not installed, mark it for installation -> Apply
-    Quick Installation Guide -> Downloading, Unpacking and Configuring
-        Download current version (4.5.7) from github, unpack, and follow configuration instructions:
-            https://github.com/GrahamDumpleton/mod_wsgi/releases
-    First try: using python3 - specifying it in ./configure command below
-        https://docs.djangoproject.com/en/1.10/faq/install/
-        "If you’re starting a new project, and the dependencies you plan to use work on Python 3,
-         you should use Python 3. If they don’t, consider contributing to the porting efforts, or stick to Python 2.
-        cd /var/www/learn/django/github/customizations/always_learning_python/
-        cd downloads/
-        cp ~/Downloads/mod_wsgi-4.5.7.tar.gz .
-        git add mod_wsgi-4.5.7.tar.gz
-        git commit 'Adding downloaded mod_wsgi-4.5.7.tar.gz because I want to be sure I have a copy of the exact file I am installing.'
-        git push origin master
-        cd ../3-mod_wsgi
-        mkdir unpack        ## assuming "unpack" is in the .gitignore file - we do not want to commit any of this to github!
-        cd unpack
-        cp ../../downloads/mod_wsgi-4.5.7.tar.gz .
-        tar -xvzf mod_wsgi-4.5.7.tar.gz
-        l
-        cd mod_wsgi-4.5.7/
-        l
-    Quick Installation Guide -> Configuring the Source Code
-        ./configure --with-apxs=/usr/bin/apxs --with-python=/usr/bin/python3   ## config.status: creating Makefile
-        echo $?   ## exit status: 0
+[ ] Synaptic -> Search for python -> If dev package not installed, mark it for installation -> Apply
+[ ] Synaptic -> Search for python3 -> If dev package not installed, mark it for installation -> Apply
+[ ] Unpack the mod_wsgi tarball saved in git from when we did it on jane
+    cd /var/www/learn/django/github/customizations/always_learning_python/
+    cd downloads/
+    cp mod_wsgi-4.5.7.tar.gz ../unpack
+    mkdir ../unpack
+    cd ../unpack
+    tar -xvzf mod_wsgi-4.5.7.tar.gz
+    l
+    cd mod_wsgi-4.5.7/
+    l
+[ ] Quick Installation Guide -> Configuring the Source Code
+    -> Using python3, it worked on jane - specifying it in ./configure command below
+    which apxs      # /usr/bin/apxs
+    which python3   # /usr/bin/python3
+    ./configure --with-apxs=/usr/bin/apxs --with-python=/usr/bin/python3   ## config.status: creating Makefile
+    echo $?   ## exit status: 0
     Quick Installation Guide -> Building the Source Code
         make
         echo $?   ## exit status: 0

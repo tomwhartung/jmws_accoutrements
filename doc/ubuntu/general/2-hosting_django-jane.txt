@@ -54,7 +54,7 @@ Process: - Install and configure wsgi for serving django sites
 
 [ ] Install apache mod_wsgi
     We need a plan for getting the versions right and all
-[ ] References: the following urls are most important; see 0-install_ubuntu.urls for a
+[ ] References: the following urls are most important; see above for a
     comprehensive list of links to valuable information about this process
     The starting point:
         https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
@@ -183,6 +183,5 @@ Process: - Install and configure wsgi for serving django sites
 
 
 [ ] Review Deployment Checklists
-    For a few of these that we have found along the way, see
-    0-install_ubuntu.urls
+    For a few of these that we have found along the way, see the References at the top of this file.
  

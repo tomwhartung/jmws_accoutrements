@@ -3,11 +3,54 @@
 ========================
 
 This is the process we are running to set up jane.
-
 It should be perfectly usable on bette and lauren, when we get to that.
 
-2016-10-05 - Install and configure wsgi for serving django sites
-----------------------------------------------------------------
+Serving Django Via Apache and Deploying a Django Site!
+------------------------------------------------------
+Having never hosted a django site, I want to be sure I do my due diligence in this regard.
+
+References:
+-----------
+For adding apache2 mod_wsgi, to support django:
+  This is the first django site on my server, so I want to be sure I keep a record of how I do my due diligence.
+  djangoproject.com recommends downloading, building, and installing the latest version:
+  Use these for formulating the process we use, in 1-process_checklist-jane.txt .
+  - Start here:
+    https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
+  - Home page and installation instructions for mod_wsgi
+    https://modwsgi.readthedocs.io/en/develop/
+    https://modwsgi.readthedocs.io/en/develop/installation.html
+    https://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html
+  - Actually this looks like a very helpful resource for getting the versions right and all:
+    https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
+    - Uses apt-get to install mod_wsgi (bad) but sets up virtualenv and all (good)
+
+Deploying django - checklists and the like
+    https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
+    - From comments in the generated settings.py file
+    https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
+    - A version of the previous page specific to the version we are using
+    https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
+    - Instructions specific to wsgi
+    http://djangobook.com/deploying-django/
+    - Deployment chapter in "The Django Book," relevant for version 1.8
+
+More django/mod_wsgi urls:
+  There are some sites that suggest simpler procedures, but I believe "the hard way" is better
+  - Use these for comparison, future reference, and possible trouble-shooting.
+    https://code.google.com/archive/p/modwsgi/wikis/IntegrationWithDjango.wiki
+    - Might come in handy but unsure of its relevance
+    https://www.server-world.info/en/note?os=Ubuntu_16.04&p=httpd&f=17
+    - Looks unsuited to a server using virtual hosts but has some details about how to configure apache
+    https://www.linode.com/docs/websites/frameworks/django-apache-and-modwsgi-on-centos-5
+    - Over five years old (2011-08-22) but has some details about how to configure apache
+  A few additional references:
+    http://stackoverflow.com/questions/10081062/django-virtual-host-setup-apache-mod-wsgi
+    - Specifics about the WSGIScriptAlias directive
+
+Process: - Install and configure wsgi for serving django sites
+--------------------------------------------------------------
+2016-10-05 - running this on jane
 
 [ ] Install apache mod_wsgi
     We need a plan for getting the versions right and all

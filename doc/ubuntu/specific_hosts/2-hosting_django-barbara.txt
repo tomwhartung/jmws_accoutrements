@@ -112,15 +112,22 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     mkdir RCS
     ci -l wsgi.load
 [ ] Quick Configuration Guide - getting the "Hello World" wsgi app to run:
-        https://modwsgi.readthedocs.io/en/develop/user-guides/quick-configuration-guide.html
-        Using daemon mode, as proposed above, even though it does not seem to make much difference
-        See the 3-mod_wsgi directory in the always_learning_python repo, especially the README.md file.
-            https://github.com/tomwhartung/always_learning_python/tree/master/3-mod_wsgi
-            https://github.com/tomwhartung/always_learning_python/blob/master/3-mod_wsgi/README.md
-        Also see the configuration on jane:
-            /etc/apache2/sites-available/150-wsgi.test.conf
-        Note that to get this to work, I had to add the following line to /etc/hosts :
-            127.0.1.1	jane.wsgi.test
+    https://modwsgi.readthedocs.io/en/develop/user-guides/quick-configuration-guide.html
+    Get a copy of the configuration file and update as appropriate (fix host name in ServerAlias):
+    sudo su -
+    cd /etc/apache2/sites-available/
+    vi 150-wsgi.test.conf
+    a2ensite 150-wsgi.test.conf
+    service apache2 reload
+    Add the following line to /etc/hosts :
+        127.0.1.1	barbara.wsgi.test
+    vi /etc/hosts
+    Using daemon mode, as proposed in original process run on jane
+    Access in browser:
+        http://barbara.wsgi.test/
+    For details on how we came up with the 150-wsgi.test.conf file, see:
+        https://github.com/tomwhartung/always_learning_python/tree/master/3-mod_wsgi
+        https://github.com/tomwhartung/always_learning_python/blob/master/3-mod_wsgi/README.md
 [ ] OK!  Now to get mod_wsgi to work with Django!
     Update /etc/apache2/sites-available/050-seeourminds.com.conf , combining
     - what we have in /etc/apache2/sites-available/150-wsgi.test.conf with

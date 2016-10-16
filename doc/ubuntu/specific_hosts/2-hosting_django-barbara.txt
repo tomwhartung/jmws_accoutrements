@@ -133,7 +133,10 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     - what we have in /etc/apache2/sites-available/150-wsgi.test.conf with
     - the django-specific information here:
         https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
-    See 
+    One issue encountered:
+        Unable to use WSGIPythonPath in virtual host definition
+    See http://stackoverflow.com/questions/11034571/stuck-with-deploying-django-with-apache-mod-wsgi
+        Added python-path to the WSGIDaemonProcess instead
 [ ] Install pip3, virtualenv, and django
     For details about how we arrived at using these commands, see:
         https://github.com/tomwhartung/always_learning_python/blob/master/README.md
@@ -153,6 +156,11 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     Check for previous installs and uninstall as necessary:
       python3 -m django --version
       python3 -c "import django; print(django.__path__)"
+    I tried installing with just pip3, but it didn't seem to work - it installed the code
+      but when I tried to load the module it couldn't find it.
+      This may have been because I did not try loading it with python3 specifically.
+    This process is what we used in the always_learning_python repo's README.md file, and
+      is based on the process used to get the development version of the code
     Clone latest source into djangostable, checkout latest branch, and install it globally
       git clone git@github.com:django/django.git
       cd django

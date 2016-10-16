@@ -133,6 +133,43 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     - what we have in /etc/apache2/sites-available/150-wsgi.test.conf with
     - the django-specific information here:
         https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
+    See 
+[ ] Install pip3, virtualenv, and django
+    For details about how we arrived at using these commands, see:
+        https://github.com/tomwhartung/always_learning_python/blob/master/README.md
+      sudo apt-get install python3-pip
+      pip3 install virtualenv       ## It said installed 8.1.1 and to upgrade to 8.1.2 ...
+      pip3 install --upgrade pip    ## ... so I did, but it is still not in my path
+      which virtualenv              ## nada
+      sudo apt install virtualenv   ## Also had to do this for some strange reason...
+      which virtualenv              ## /usr/bin/virtualenv
+    Note:
+        We are installing django globally...
+        We are not going to use virtualenv right now on production and backup hosts
+        Installing it anyway because we may (will probably) want it when it comes time to
+           try running our site using different versions of python or django or both.
+        For reference, in case we change our mind, we can use it with commands like:
+        ## virtualenv --python=`which python3` ~/.virtualenvs/djangodev
+    Check for previous installs and uninstall as necessary:
+      python3 -m django --version
+      python3 -c "import django; print(django.__path__)"
+    Clone latest source into djangostable, checkout latest branch, and install it globally
+      git clone git@github.com:django/django.git
+      cd django
+      git checkout stable/1.10.x
+      git status   # check status
+      git branch   # check branch
+      git log      # commit 8f428c82969d6f1e90f9fe2cbaff346d5d8c711a dated Sat Oct 15
+      cd ..
+      sudo -H pip3 install Django
+    Verify the current install:
+      python3 -m django --version                         ## 1.10.2
+      python3 -c "import django; print(django.__path__)"  ## ['/usr/local/lib/python3.5/dist-packages/django']
+    Note: django is currently NOT available for use with python2:
+      python -m django --version                          ## /usr/bin/python: No module named django
+      python -c "import django; print(django.__path__)"   ## ImportError: No module named django
+
+
 
 
 

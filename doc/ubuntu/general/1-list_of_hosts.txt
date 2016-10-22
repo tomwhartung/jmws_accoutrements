@@ -10,11 +10,11 @@ is now taking over that role, at least temporarily.
 It also means that we will be buying a new computer for the production
 host role, probably this weekend.
 
-List of Hosts and the Purpose of Each
--------------------------------------
-ava (new) - Ubuntu 16.04 - production host
-barbara - Ubuntu 16.04 - test, staging, and backup development and production
-jane - Ubuntu 16.04 - run memcheck, fsck, and take in to get fixed
-bette - Ubuntu 14.04 - upgrade to Ubuntu 16.04 when we get ava into production
-lauren - Ubuntu 14.04 - upgrade to Ubuntu 16.04 when we get ava into production
+List of Hosts and the Updates Needed
+------------------------------------
+=-> ava - Ubuntu 16.04 server - production host, setup from scratch ASAP
+=-> jane - Ubuntu 16.04 desktop - new disk, re-setup from scratch (and backups) ASAP
+-> lauren - Ubuntu 14.04 desktop - upgrade to Ubuntu 16.04 when we get ava into production
+-> bette - Ubuntu 14.04 desktop - upgrade to Ubuntu 16.04 when we get ava is done & grojas working in a VM
+barbara - Ubuntu 16.04 desktop - test, staging, and backup development and production - ok for now!
 

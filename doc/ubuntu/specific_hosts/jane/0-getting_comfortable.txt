@@ -1,12 +1,39 @@
 
- Adding Tools to Make a Development Host
-=========================================
-Adding artsy stuff, eclipse, netbeans, phpmyadmin - all of the many
-standard tools and files that do not belong on a server.
+ Getting Comfortable
+=====================
+Install the basic stuff we need to get around and do the other stuff.
 
 This is the process we are running to set up jane.
 --------------------------------------------------
-It should be perfectly usable on bette and lauren, when we get to that.
+Parts of it should be perfectly usable on other hosts.
+Trying to make this more of a command line process, so we can identify
+the essentials and get them set up, making getting other stuff done easier
+
+
+Server Necessities for Comfortableness
+--------------------------------------
+[ ] Home Directory
+   Restore home directory from backup, or take a copy from another host
+[ ] Settings
+   Network -> Setup static IP
+
+Desktop Necessities for Comfortableness
+---------------------------------------
+[ ] Home Directory
+   Restore home directory from backup, or take a copy from another host
+[ ] Settings
+   Go through list making initial adjustments:
+   Appearance -> Background
+   Brightness & Lock -> Turn all that shit off
+   Network -> Setup static IP
+   Power -> Adjust as necessary
+   User Accounts -> Automatic Login (On)
+
+
+
+
+*************** YOU ARE HERE (jane install) ***********************
+
 
 Getting standard artsy stuff
 ----------------------------
@@ -22,81 +49,4 @@ Getting standard artsy stuff
       /:     8.3G (48%)
       /home: 4.1G (25%)
 
-2016-08-31 - Picking up the jane install where we left off
-----------------------------------------------------------
-[ ] Install java, jdk
-   For java, there are two choices (see 0-install_ubuntu.urls)
-   Installing the default installs the open java 8 jdk (not adding PPA for Oracle)
-   As root:
-      apt-get --simulate install default-jre
-      apt-get install default-jre
-   As tomh:
-      which java
-      java -version
-[ ] Install netbeans
-   Seeing version 8.1 in the "Software Updater" tool's search results
-   Wikipedia calls 8.1 the current "stable release"
-   In Software Updater (Search for netbeans) -> Click on Install
-   Launch it when done
-   Lock to Launcher
-   Add PHP support:
-   In NetBeans: Tools -> Plugins
-   Settings tab: check NetBeans Distribution (and Certified Plugins)
-   Available Plugins tab: Click on Check for Newest
-      check HTML5 Kit, PHP, Twig Templates, and PHPUnit
-      click on Install, Next, "I agree," Install, Finish
-   Restart NetBeans
-   In NetBeans: Tools -> Plugins
-   Updates tab: click on Check for Updates
-      Click on Update button, Next, "I agree," Update, Finish
-[ ] Install eclipse
-   Seeing version 3.8 in the "Software Updater" tool's search results
-   Wikipedia calls 4.6 the current "stable release"
-   Following process in link added to 0-install_ubuntu.urls
-   Download installer for neon from http://www.eclipse.org/downloads/
-   sudo mkdir /opt/eclipse
-   sudo chown tomh /opt/eclipse
-   mv eclipse-inst-linux64.tar.gz /opt/eclipse
-   cd /opt/eclipse
-   l
-   mkdir install_neon
-   mv eclipse-inst-linux64.tar.gz install_neon/
-   cd install_neon/
-   tar -xvzf eclipse-inst-linux64.tar.gz
-   eclipse-installer/eclipse-inst   # runs installer
-   Click on: Eclipse IDE for PHP Developers
-   ** Changing folder from /home/tomh/eclipse/php-neon to /opt/eclipse/php-neon **
-   Click on: Install
-      Popup appears: "Do you trust these certificates?"
-      Check the box and click continue (it finishes this time)
-   Click on: Launch
-   ** Changing workspace folder from /home/tomh/workspace to /opt/eclipse/workspace **
-   Lock to Launcher
-   Disk Space Spotcheck:
-      /:     11.0G of 19G - 59%
-      /home:  3.5G of 19G - 21%
-
-[ ] Install phpmyadmin
-   apt-get update
-   apt-get install phpmyadmin php-mbstring php-gettext
-   -> Select apache (the red block is a cursor, an asterisk appears when apache is selected)
-   -> Configuring phpmyadmin dialog: do it now or later
-      References: /usr/share/doc/phpmyadmin
-      Select Yes
-      "Please provide a password for myphpmyadmin to register with the database server."
-
-
-*************** YOU ARE HERE (jane install) ***********************
-
-Extra Credit (install as desired, if desired)
----------------------------------------------
-[ ] Install opera
-[ ] Install skype
-   Disk Space Spotcheck: /: ?.?G; /home: ?.?G
-
-[ ] Install
-[ ] Install
-[ ] 
-[ ] 
-[ ] 
 

@@ -1,0 +1,106 @@
+
+ Performing a Fresh Install
+============================
+New disk, fresh install, allowing room for next version.
+
+ Install:
+----------
+[ ] Check checkboxes:
+   [ ] Download updates while installing
+   [ ] Install third-party software
+
+Disk Partitions:
+----------------
+Primary   1G sda1  /boot
+Primary   1G sda2  /future-boot
+Logical   8G sda5  swap
+Logical  25G sda6  /
+Logical  25G sda7  /future-
+Logical  25G sda8  /home
+Logical  25G sda9  /future-home
+Logical  20G sda10 /var/www
+Logical   1G sda11 /usr/local/bin
+Logical 100G sda12 /usr/local/tar
+Logical 250G sda13 /mnt/spare/sda13
+
+ On New System, After Install:
+-------------------------------
+[ ] Re-using /home (*), /usr/local/bin , /usr/local/tar , and /var/www
+    After copying to / (root) partition of 14.04 install.
+[ ] Update system, reboot
+
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+[ ] Install rcs, synaptic, vim, openssh-server
+[ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
+[ ] Set preferences, lock terminal and firefox to launcher
+[ ] Set terminal double-click word boundary preferences
+    Either: Edit -> Profile Preferences -> General -> Select by word characters
+    Or: use dconf command, e.g.:
+       dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
+    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
+
+[ ] Copy /etc/hosts from old install and setup static IP
+[ ] Check /etc/hosts and /etc/fstab into RCS
+   Disk Space Spotchec - / and /home - ensure we have enough
+
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+[ ] Install xscreensaver, xscreensaver-data-extra
+[ ] Install xscreensaver-gl-extra (?? defunct in 16.04: xscreensaver-screensaver-diz ??)
+[ ] Install unity-tweak-tool
+    apt-get install unity-tweak-tool
+[ ] Lock xscreensaver and unity-tweak-tool to launcher
+[ ] Remove gnome-screensaver
+    apt list gnome-screensaver
+    apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    gnome-session-properties
+[ ] Update System Settings -> Brightness & Lock
+[ ] Update System Settings -> Power
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
+
+[ ] Install apache2, apache2-utils,
+[ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+[ ] Install mysql-server,
+[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
+   ### cd /etc/apache2/mods-enabled
+   ### ln -s ../mods-available/rewrite.load .
+   a2enmod rewrite
+   a2enmod php7.0
+   a2dismod mpm_event
+   a2enmod mpm_prefork
+   service apache2 start
+[ ] Get all websites' source files in /var/www
+[ ] Config files in /etc/apache2/sites-avaialble
+->  For 16.04, copy conf files from jane:
+    Already vetted currently used versions against the new 000-default.conf for 16.04, no changes needed!
+[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
+   For jane: ensure both www.site.com and site.com will work
+   For bette: change "jane" to "bette" in conf files
+   Disk Space Spotcheck - / and /home - ensure we have plenty left
+
+[ ] ln -s /art/images ~/Pictures
+[ ] Install chrome and chromium-browser
+    Download the .deb file for chrome and install by double-clicking on it.
+(*) NOTE: was unable to run chrome after installing it.
+    Had issues with chrome, thought they were specific to my 14.04 install
+    *** Had to start with a copy of the newly-installed /home/tomh
+[ ] Disable annoying popup asking for password to unlock keyring
+    See #10 on this list of tips:
+        https://sites.google.com/site/easylinuxtipsproject/tips
+
+[ ] System Settings -> Automatically check for updates -> Every two weeks
+[ ] Create and populate databases: see database_checklist.txt
+[ ] Get sites running: see site_checklist.txt
+[ ] For joomla on a fresh install of 16.04, install simplexml:
+    Check for it in phpinfo.php
+       sudo apt-get install php7.0-simplexml
+       sudo service apache2 restart
+    Reference: http://forum.joomla.org/viewtopic.php?t=916040
+[ ] Configure wordpress updates
+[ ] Set up backups
+
+---------------------------------------------
+If installing on a server, you can stop here.
+---------------------------------------------
+

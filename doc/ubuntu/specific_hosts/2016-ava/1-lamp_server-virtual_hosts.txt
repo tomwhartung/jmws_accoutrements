@@ -1,0 +1,184 @@
+
+ Performing a Fresh Install
+============================
+Download correct iso file, verify md5sum, and burn to CD
+
+ On Windows System, Before Install:
+------------------------------------
+[ ] Ensure all updates are installed
+[ ] Computer -> C: Drive -> Properties
+    Tools tab -> Error Checking -> Check now...
+[ ] Defragment disk
+    My Computer (Win 7) or File Explorer (Win 10)
+    Select C: drive
+    Properties (Win 7) or Drive Tools (Win 10)
+    Defragment Disk (Win 7) or Optimize Drives (Win 10)
+[ ] Shrink Win 10 partition
+    Start (Cortana) -> Disk Management (window appears
+    Right-click on C: -> Shrink volume
+    Accept defaults: 116G NTFS and 103G Unallocated
+    Reference: http://www.everydaylinuxuser.com/2015/11/how-to-shrink-windows-10-to-make-space.html
+[ ] Turn off fast startup (Win 10 but Win 7 is similar)
+    Settings -> System -> Power and Sleep
+    Click on "Additional power settings" then
+    Click on "Choose what the power buttons do" then
+    Click on "Change settings that are currently available" then
+    Under Shutdown settings UN-check the "Turn on fast startup" checkbox then
+    Click on "Save changes"
+    Reference: https://sites.google.com/site/easylinuxtipsproject/windows
+[ ] Confirm that the sustem does not use UEFI
+    Start icon -> type "System Information"
+    Find BIOS Mode: barbara's value is "Legacy," we are good to go
+    Reference: http://www.everydaylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside.html
+[ ] Note: Press F2 to get into BIOS (e.g. to change boot device order)
+    I am not seeing any settings - specifically the UEFI Secure Boot option -
+    mentioned in the Reference, so did not make any changes.
+
+ Install:
+----------
+[ ] Check checkboxes:
+    [ ] Download updates while installing
+    [ ] Install third-party software
+[ ] Fresh disk partitions:
+    -  Modeled after actual use on lauren and allowing for growth
+    -  Allowing for installing a new OS at some point
+    -  Allowing spares
+    2 X 14G /       (/mnt/future/)
+    2 X  1G /boot   (/mnt/future/boot/)
+    2 X 10G /home   (/mnt/future/home/)
+2 X 25G = 50G
+    1 X 11G /var/www
+    1 X  1G /usr/local/bin
+1 X 12G = 12G
+    1 X  5G /usr/src
+    1 X  4G /lib/modules
+    1 X  3G /var/cache
+    1 X  2G /var/log
+1 X 14G = 14G
+    1 X  5G /mnt/spare
+    1 X  3G /mnt/spare
+    1 X  2G /mnt/spare
+1 X 10G = 10G
+50 + 12 + 14 + 10 = 86
+110 - 86 = 24
+    1 X  4G swap
+    1 X 20G /usr/local/tar
+
+ Install Essential System Tools:
+---------------------------------
+[ ] Update system, reboot
+    Repeat as necessary
+[ ] Install unity-tmeak-tool
+    apt-get install unity-tweak-tool
+[ ] Install rcs, synaptic, vim, openssh-server
+[ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+[ ] Install xscreensaver, xscreensaver-data-extra
+[ ] Install xscreensaver-gl-extra
+[ ] Lock xscreensaver and unity-tweak-tool to launcher
+[ ] Remove gnome-screensaver
+    apt-get update
+    apt list gnome-screensaver
+    apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    gnome-session-properties
+[ ] Update System Settings -> Brightness & Lock
+[ ] Update System Settings -> Power
+[ ] Update Terminal Preferences
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
+
+[ ] Set up root and tomh accounts:
+    Copy to thumb drive then to barbara:
+    .bashrc, links to .bash_aliases*
+[ ] Set preferences, lock terminal and firefox to launcher
+[ ] Set terminal double-click word boundary preferences
+    Either: Edit -> Profile Preferences -> General -> Select by word characters
+    Or: use dconf command, e.g.:
+       dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
+    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
+
+[ ] Copy /etc/hosts from another host and setup static IP
+[ ] Check /etc/hosts and /etc/fstab into RCS
+    Disk Space Spotcheck - / and /home - ensure we have enough
+
+ Get Sites Running
+-------------------
+[ ] Install apache2, apache2-utils, libapache2-mod-php7.0
+[ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+[ ] Install mysql-server, 
+[ ] Config files in /etc/apache2/sites-avaialble
+->  For 16.04, copy conf files from jane or barbara:
+    Already vetted currently used versions against the new 000-default.conf for 16.04, no changes needed!
+[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
+    a2enmod rewrite
+    a2enmod php7.0
+    a2dismod mpm_event
+    a2enmod mpm_prefork
+    cd /etc/apache2/sites-enabled
+    ln -s ../sites-available/0[1-9]*.conf .
+[ ] Get all websites' source files in /var/www
+[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
+    For barbara (ultimately): ensure both www.site.com and site.com will work
+    For bette: change "jane" to "bette" in conf files
+    service apache2 start
+    Disk Space Spotcheck: /: 4.2G/13G (35%); /home: 0.5G/9G (6%); and /var/www: 5.6G/10G (59%)
+
+[ ] Install chrome and chromium-browser
+    Found chromium-browser in synaptic
+    Download the .deb file for chrome and install by double-clicking on it.
+    http://google.com/chrome
+[ ] Disable annoying popup asking for password to unlock keyring
+    When the popup appears, click on Continue (as I recall?) without entering a password.
+    When the next popup appears (some sort of warning, as I recall) - click OK
+[ ] Lock chrome and chromium browser to launcher
+
+[ ] System Settings -> Automatically check for updates -> Every two weeks
+[ ] System Settings -> Keyboard -> Shortcuts
+    Update shortcut for switching between workspaces
+
+[ ] Disk Space Spotcheck:
+      /: 4.2G/13G (35%)
+      /home: 0.5G/9G (6%)
+      /var/www: 5.6G/10G (59%)
+
+[ ] Create and populate databases: see database_checklist.txt
+[ ] Get sites running: see site_checklist.txt
+
+[ ] For joomla on a fresh install of 16.04, install simplexml:
+    Check for it in phpinfo.php
+       sudo apt-get install php7.0-simplexml
+       sudo service apache2 restart
+    Reference: http://forum.joomla.org/viewtopic.php?t=916040
+
+[ ] Databases used on barbara:
+    groja.com & seeourminds.com:
+      try using current db from lauren:
+        seeourminds.com-2016_07_16-lauren.sql.gz
+      try using current db from bette:
+        seeourminds.com-2016_07_16-bette.sql.gz
+    joomoowebsites.com: using db from bette (version 3.5.1)
+        joomoowebsites.com-2016_07_16-bette-02-mobile_detect.sql.gz
+    tomhartung.com: using db from bette
+        tomwhartung.com-2016_07_16-bette.sql.gz
+
+[ ] Find screenshot (app) in Ubuntu Software (already installed?)
+[ ] Lock screenshot and disks [manager] to launcher
+[ ] Confirm installation of image viewer xeyes (pre-installed??),
+
+[ ] Disk Space Spotcheck:
+      /:     
+      /home: 
+      /var/www: X.XG/XXG (XX%)
+
+------------------
+
+[ ] Configure wordpress updates
+[ ] Set up backups
+
+[?] Install compizconf settings manager
+
+---------------------------------------------
+If installing on a server, you can stop here.
+---------------------------------------------
+

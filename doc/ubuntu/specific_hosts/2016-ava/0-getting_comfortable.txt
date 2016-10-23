@@ -1,0 +1,143 @@
+
+ Getting Comfortable
+=====================
+Install the basic stuff we need to get around and do the other stuff.
+
+This is the process we are running to set up jane.
+--------------------------------------------------
+Parts of it should be perfectly usable on other hosts.
+Trying to make this more of a command line process, so we can identify
+the essentials and get them set up, making getting other stuff done easier
+
+
+Desktop & Server Necessities for Comfortableness
+------------------------------------------------
+[ ] Home Directory
+   Restore home directory from backup, or take a copy from another host
+[ ] Install any new updates
+    sudo apt-get update
+    sudo apt-get upgrade
+[ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
+    sudo apt-get install rcs vim subversion
+    sudo apt-get install openssh-server
+    sudo apt-get install git git-svn
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+    As root:
+      ln -s ~tomh/.bash_aliases .
+      ln -s ~tomh/.bash_aliases-jane  .
+      ln -s ~tomh/bin  .
+      ln -s ~tomh/.vimrc   .
+      vi .bashrc    ## Add cusTOMizations
+      which ci
+      mkdir RCS
+      ci -l .bashrc
+[ ] Update /etc/hosts and verify ssh is working
+    Installing openssh-server seems to be enough to get it going
+    As tomh:
+      Remove or rename ~/.ssh/known-hosts
+      Push over a copy of /etc/hosts
+    As root:
+      cd /etc
+      mkdir RCS
+      ci -l hosts fstab
+      cat hosts
+      more ~tomh/tmp/hosts
+      mv ~tomh/tmp/hosts .
+      vi hosts
+      ci -l hosts
+    Test using ssh to get from host to host.
+
+
+    sudo apt-get install
+    sudo apt-get install
+    sudo apt-get install
+
+
+Server Necessities for Comfortableness
+--------------------------------------
+[ ] Settings
+   Network -> Setup static IP
+
+Desktop Necessities for Comfortableness
+---------------------------------------
+[ ] Settings
+    Go through list making initial adjustments:
+    Appearance -> Background
+    Brightness & Lock -> Turn all that shit off
+    Network -> Setup static IP
+    Power -> Adjust as necessary
+    Software & Updates -> Updates -> Automatically check for updates -> Every week
+    User Accounts -> Automatic Login (On)
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+    dpkg-query -l 'fortune*'
+    apt-get install fortunes fortune-mod
+[ ] Install xscreensaver, xscreensaver-data-extra
+    dpkg-query -l xscreensaver xscreensaver-data-extra
+    dpkg-query -l 'xscreensaver*'
+    apt-get install xscreensaver xscreensaver-data-extra
+[ ] Install xscreensaver-gl-extra
+    apt-get install xscreensaver-gl-extra
+[ ] Install unity-tweak-tool
+    apt-get install unity-tweak-tool
+[ ] Start and lock xscreensaver and unity-tweak-tool to launcher
+    As tomh:
+      which unity-tweak-tool
+      unity-tweak-tool &
+      which xscreensave-demor
+      xscreensaver-demo &
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
+[ ] Remove gnome-screensaver
+    As root:
+      apt list gnome-screensaver
+      apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    As tomh:
+      gnome-session-properties
+    Window Manager -> Window Snapping -> turn all that shit off
+[ ] Install synaptic and maybe some extra git packages
+    sudo apt-get install synaptic
+    (?? sudo apt-get install git-stuff git-magic ??)
+[ ] Start and lock synaptic to launcher
+    As root:
+      synaptic
+[ ] Install chrome, start and lock to launcher
+    Reference:
+      https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-16-04-lts
+    As root:
+      sudo apt install google-chrome-stable
+    As tomh:
+      google-chrome &  ## lock to launcher
+[ ] Install chromium-browser, start and lock to launcher
+   dpkg-query --list chromium-browser
+   apt-get install -y chromium-browser
+[ ] Install xeyes (part of x11-apps), and add to startup programs
+    As root:
+      dpkg-query --list xeyes
+      apt-get install xeyes
+      apt-get install x11-apps
+    As tomh:
+      which xeyes
+      gnome-session-properties
+
+   apt-get install
+
+
+*************** YOU ARE HERE (jane install) ***********************
+
+
+Getting standard artsy stuff
+----------------------------
+[ ] cd /art; ln -s /media/ext4backupA/images ~/Pictures
+[ ] Install audacious, easytag, audex, banshee, vlc media player
+[ ] Install compizconf settings manager
+[ ] Install gwenview, gimp, gthumb, screenshot
+[ ] Install rhythmbox and thunderbird
+[ ] Lock all or most (not using thunderbird on jane) of those to launcher
+[ ] Lock disks [manager] to launcher
+[ ] Confirm installation of image viewer xeyes (pre-installed??),
+   Disk Space Spotcheck:
+      /:     8.3G (48%)
+      /home: 4.1G (25%)
+
+

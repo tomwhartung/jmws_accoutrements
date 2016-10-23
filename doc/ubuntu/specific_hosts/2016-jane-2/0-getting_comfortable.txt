@@ -17,12 +17,36 @@ Desktop & Server Necessities for Comfortableness
 [ ] Install any new updates
     sudo apt-get update
     sudo apt-get upgrade
-[ ] Set up root account: .bashrc, links to .bash_aliases*
-[ ] Update /etc/hosts and get ssh working
 [ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
     sudo apt-get install rcs vim subversion
     sudo apt-get install openssh-server
-    sudo apt-get install git, git-svn, (??git-stuff, git-magic??)
+    sudo apt-get install git git-svn
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+    As root:
+      ln -s ~tomh/.bash_aliases .
+      ln -s ~tomh/.bash_aliases-jane  .
+      ln -s ~tomh/bin  .
+      ln -s ~tomh/.vimrc   .
+      vi .bashrc    ## Add cusTOMizations
+      which ci
+      mkdir RCS
+      ci -l .bashrc
+[ ] Update /etc/hosts and verify ssh is working
+    Installing openssh-server seems to be enough to get it going
+    As tomh:
+      Remove or rename ~/.ssh/known-hosts
+      Push over a copy of /etc/hosts
+    As root:
+      cd /etc
+      mkdir RCS
+      ci -l hosts fstab
+      cat hosts
+      more ~tomh/tmp/hosts
+      mv ~tomh/tmp/hosts .
+      vi hosts
+      ci -l hosts
+    Test using ssh to get from host to host.
+
 
     sudo apt-get install
 
@@ -41,8 +65,9 @@ Desktop Necessities for Comfortableness
    Network -> Setup static IP
    Power -> Adjust as necessary
    User Accounts -> Automatic Login (On)
-[ ] Install synaptic
+[ ] Install synaptic and maybe some extra git packages
     sudo apt-get install synaptic
+    (?? sudo apt-get install git-stuff git-magic ??)
 
 
 

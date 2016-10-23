@@ -29,9 +29,6 @@ Logical 250G sda13 /mnt/spare/sda13
     After copying to / (root) partition of 14.04 install.
 [ ] Update system, reboot
 
-[ ] Set up root account: .bashrc, links to .bash_aliases*
-[ ] Install rcs, synaptic, vim, openssh-server
-[ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
 [ ] Set preferences, lock terminal and firefox to launcher
 [ ] Set terminal double-click word boundary preferences
     Either: Edit -> Profile Preferences -> General -> Select by word characters

@@ -66,6 +66,7 @@ Desktop Necessities for Comfortableness
     Brightness & Lock -> Turn all that shit off
     Network -> Setup static IP
     Power -> Adjust as necessary
+    Software & Updates -> Updates -> Automatically check for updates -> Every week
     User Accounts -> Automatic Login (On)
 [ ] Install fortune-mod, fortunes, other fortune* packages as desired
     dpkg-query -l 'fortune*'
@@ -93,15 +94,33 @@ Desktop Necessities for Comfortableness
 [ ] Add xscreensaver to startup programs
     As tomh:
       gnome-session-properties
+    Window Manager -> Window Snapping -> turn all that shit off
 [ ] Install synaptic and maybe some extra git packages
     sudo apt-get install synaptic
     (?? sudo apt-get install git-stuff git-magic ??)
 [ ] Start and lock synaptic to launcher
     As root:
       synaptic
+[ ] Install chrome, start and lock to launcher
+    Reference:
+      https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-16-04-lts
+    As root:
+      sudo apt install google-chrome-stable
+    As tomh:
+      google-chrome &  ## lock to launcher
+[ ] Install chromium-browser, start and lock to launcher
+   dpkg-query --list chromium-browser
+   apt-get install -y chromium-browser
+[ ] Install xeyes (part of x11-apps), and add to startup programs
+    As root:
+      dpkg-query --list xeyes
+      apt-get install xeyes
+      apt-get install x11-apps
+    As tomh:
+      which xeyes
+      gnome-session-properties
 
    apt-get install
-
 
 
 *************** YOU ARE HERE (jane install) ***********************

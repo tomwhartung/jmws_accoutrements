@@ -58,17 +58,6 @@ Logical 250G sda13 /mnt/spare/sda13
    For bette: change "jane" to "bette" in conf files
    Disk Space Spotcheck - / and /home - ensure we have plenty left
 
-[ ] ln -s /art/images ~/Pictures
-[ ] Install chrome and chromium-browser
-    Download the .deb file for chrome and install by double-clicking on it.
-(*) NOTE: was unable to run chrome after installing it.
-    Had issues with chrome, thought they were specific to my 14.04 install
-    *** Had to start with a copy of the newly-installed /home/tomh
-[ ] Disable annoying popup asking for password to unlock keyring
-    See #10 on this list of tips:
-        https://sites.google.com/site/easylinuxtipsproject/tips
-
-[ ] System Settings -> Automatically check for updates -> Every two weeks
 [ ] Create and populate databases: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
 [ ] For joomla on a fresh install of 16.04, install simplexml:

@@ -10,17 +10,30 @@ Trying to make this more of a command line process, so we can identify
 the essentials and get them set up, making getting other stuff done easier
 
 
-Server Necessities for Comfortableness
---------------------------------------
+Desktop & Server Necessities for Comfortableness
+------------------------------------------------
 [ ] Home Directory
    Restore home directory from backup, or take a copy from another host
+[ ] Install any new updates
+    sudo apt-get update
+    sudo apt-get upgrade
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+[ ] Update /etc/hosts and get ssh working
+[ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
+    sudo apt-get install rcs vim subversion
+    sudo apt-get install openssh-server
+    sudo apt-get install git, git-svn, (??git-stuff, git-magic??)
+
+    sudo apt-get install
+
+
+Server Necessities for Comfortableness
+--------------------------------------
 [ ] Settings
    Network -> Setup static IP
 
 Desktop Necessities for Comfortableness
 ---------------------------------------
-[ ] Home Directory
-   Restore home directory from backup, or take a copy from another host
 [ ] Settings
    Go through list making initial adjustments:
    Appearance -> Background
@@ -28,6 +41,8 @@ Desktop Necessities for Comfortableness
    Network -> Setup static IP
    Power -> Adjust as necessary
    User Accounts -> Automatic Login (On)
+[ ] Install synaptic
+    sudo apt-get install synaptic
 
 
 

@@ -36,25 +36,7 @@ Logical 250G sda13 /mnt/spare/sda13
        dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
     Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
 
-[ ] Copy /etc/hosts from old install and setup static IP
-[ ] Check /etc/hosts and /etc/fstab into RCS
-   Disk Space Spotchec - / and /home - ensure we have enough
 
-[ ] Install fortune-mod, fortunes, other fortune* packages as desired
-[ ] Install xscreensaver, xscreensaver-data-extra
-[ ] Install xscreensaver-gl-extra (?? defunct in 16.04: xscreensaver-screensaver-diz ??)
-[ ] Install unity-tweak-tool
-    apt-get install unity-tweak-tool
-[ ] Lock xscreensaver and unity-tweak-tool to launcher
-[ ] Remove gnome-screensaver
-    apt list gnome-screensaver
-    apt-get remove gnome-screensaver
-[ ] Add xscreensaver to startup programs
-    gnome-session-properties
-[ ] Update System Settings -> Brightness & Lock
-[ ] Update System Settings -> Power
-[ ] Check man page for other steps needed to get it working at startup
-    man xscreensaver
 
 [ ] Install apache2, apache2-utils,
 [ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt

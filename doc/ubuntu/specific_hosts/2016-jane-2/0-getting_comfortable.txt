@@ -49,6 +49,8 @@ Desktop & Server Necessities for Comfortableness
 
 
     sudo apt-get install
+    sudo apt-get install
+    sudo apt-get install
 
 
 Server Necessities for Comfortableness
@@ -59,16 +61,46 @@ Server Necessities for Comfortableness
 Desktop Necessities for Comfortableness
 ---------------------------------------
 [ ] Settings
-   Go through list making initial adjustments:
-   Appearance -> Background
-   Brightness & Lock -> Turn all that shit off
-   Network -> Setup static IP
-   Power -> Adjust as necessary
-   User Accounts -> Automatic Login (On)
+    Go through list making initial adjustments:
+    Appearance -> Background
+    Brightness & Lock -> Turn all that shit off
+    Network -> Setup static IP
+    Power -> Adjust as necessary
+    User Accounts -> Automatic Login (On)
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+    dpkg-query -l 'fortune*'
+    apt-get install fortunes fortune-mod
+[ ] Install xscreensaver, xscreensaver-data-extra
+    dpkg-query -l xscreensaver xscreensaver-data-extra
+    dpkg-query -l 'xscreensaver*'
+    apt-get install xscreensaver xscreensaver-data-extra
+[ ] Install xscreensaver-gl-extra
+    apt-get install xscreensaver-gl-extra
+[ ] Install unity-tweak-tool
+    apt-get install unity-tweak-tool
+[ ] Start and lock xscreensaver and unity-tweak-tool to launcher
+    As tomh:
+      which unity-tweak-tool
+      unity-tweak-tool &
+      which xscreensave-demor
+      xscreensaver-demo &
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
+[ ] Remove gnome-screensaver
+    As root:
+      apt list gnome-screensaver
+      apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    As tomh:
+      gnome-session-properties
 [ ] Install synaptic and maybe some extra git packages
     sudo apt-get install synaptic
     (?? sudo apt-get install git-stuff git-magic ??)
+[ ] Start and lock synaptic to launcher
+    As root:
+      synaptic
 
+   apt-get install
 
 
 

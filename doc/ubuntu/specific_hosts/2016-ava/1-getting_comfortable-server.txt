@@ -36,7 +36,15 @@ Server Necessities for Comfortableness
       mkdir RCS
       ci -l .bashrc
 [ ] Setup static IP
-    Network -> Setup static IP
+    References:
+      http://askubuntu.com/questions/766131/set-static-ip-ubuntu-16-04
+      https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
+    As root:
+      cd /etc/network
+      mkdir RCS
+      ci -l interfaces
+      vi interfaces
+      -> Update as indicated in References above
 [ ] Update /etc/hosts and verify ssh is working
     Installing openssh-server seems to be enough to get it going
     Combine public keys from other hosts into authorized_keys

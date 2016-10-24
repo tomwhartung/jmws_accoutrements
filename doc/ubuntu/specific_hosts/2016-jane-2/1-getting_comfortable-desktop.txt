@@ -10,8 +10,8 @@ Trying to make this more of a command line process, so we can identify
 the essentials and get them set up, making getting other stuff done easier
 
 
-Desktop & Server Necessities for Comfortableness
-------------------------------------------------
+Desktop Necessities for Comfortableness
+---------------------------------------
 [ ] Home Directory
    Restore home directory from backup, or take a copy from another host
 [ ] Install any new updates
@@ -46,20 +46,6 @@ Desktop & Server Necessities for Comfortableness
       vi hosts
       ci -l hosts
     Test using ssh to get from host to host.
-
-
-    sudo apt-get install
-    sudo apt-get install
-    sudo apt-get install
-
-
-Server Necessities for Comfortableness
---------------------------------------
-[ ] Settings
-   Network -> Setup static IP
-
-Desktop Necessities for Comfortableness
----------------------------------------
 [ ] Settings
     Go through list making initial adjustments:
     Appearance -> Background

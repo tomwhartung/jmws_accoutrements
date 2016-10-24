@@ -27,13 +27,9 @@ Download correct iso file, verify md5sum, and burn to CD
       -> Shrink
       -> 213.61 GB unallocated
 [ ] Turn off fast startup (Win 7)
-    Control Panel -> System -> Power and Sleep
-    Click on "Additional power settings" then
+    Control Panel -> System -> Power Options
     Click on "Choose what the power buttons do" then
-    Click on "Change settings that are currently available" then
-    Under Shutdown settings UN-check the "Turn on fast startup" checkbox then
-    Click on "Save changes"
-    Reference: https://sites.google.com/site/easylinuxtipsproject/windows
+    -> Not seeing this option in Win 7, and googling for it did not reveal anything
 [ ] Turn off fast startup (Win 10 - barbara)
     Settings -> System -> Power and Sleep
     Click on "Additional power settings" then
@@ -42,16 +38,23 @@ Download correct iso file, verify md5sum, and burn to CD
     Under Shutdown settings UN-check the "Turn on fast startup" checkbox then
     Click on "Save changes"
     Reference: https://sites.google.com/site/easylinuxtipsproject/windows
-[ ] Confirm that the sustem does not use UEFI
+[ ] Confirm that the system does not use UEFI
     Start icon -> type "System Information"
-    Find BIOS Mode: barbara's value is "Legacy," we are good to go
-    Reference: http://www.everydaylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside.html
-[ ] Note: Press F2 to get into BIOS (e.g. to change boot device order)
+    Unable to find BIOS mode; googling was not fruitful
+    Press F2 to get into BIOS (this does not look like other BIOS screens I have seen)
     I am not seeing any settings - specifically the UEFI Secure Boot option -
     mentioned in the Reference, so did not make any changes.
 
  Install:
 ----------
+[ ] Boot options: check disk for defects - why not?
+[ ] Configuring install as usual, then get this about message UEFI
+    - Installer started in UEFI mode
+    - Continuing may make it difficult to reboot into "any BIOS-mode OSes later."
+    - Asking whether I want to force UEFI mode?
+    - Forcing may make it difficult to boot into windows later
+    -> "Force UEFI installation"
+       Selecting "No"
 [ ] Check checkboxes:
     [ ] Download updates while installing
     [ ] Install third-party software
@@ -60,9 +63,9 @@ Download correct iso file, verify md5sum, and burn to CD
     -  Allowing for installing a new OS at some point
     -  Allowing spares
     2 X 14G /       (/mnt/future/)
-    2 X  1G /boot   (/mnt/future/boot/)
-    2 X 10G /home   (/mnt/future/home/)
-2 X 25G = 50G
+    2 X  1G /boot   (/mnt/future-boot/)
+    2 X  5G /home   (/mnt/future-home/)
+2 X 25G = 40G
     1 X 11G /var/www
     1 X  1G /usr/local/bin
 1 X 12G = 12G

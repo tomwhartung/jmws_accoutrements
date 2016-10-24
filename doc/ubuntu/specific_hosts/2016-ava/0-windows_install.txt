@@ -55,33 +55,36 @@ Download correct iso file, verify md5sum, and burn to CD
     - Forcing may make it difficult to boot into windows later
     -> "Force UEFI installation"
        Selecting "No"
-[ ] Check checkboxes:
-    [ ] Download updates while installing
-    [ ] Install third-party software
 [ ] Fresh disk partitions:
+    229.4G available
     -  Modeled after actual use on lauren and allowing for growth
     -  Allowing for installing a new OS at some point
     -  Allowing spares
-    2 X 14G /       (/mnt/future/)
-    2 X  1G /boot   (/mnt/future-boot/)
-    2 X  5G /home   (/mnt/future-home/)
-2 X 25G = 40G
-    1 X 11G /var/www
-    1 X  1G /usr/local/bin
-1 X 12G = 12G
-    1 X  5G /usr/src
-    1 X  4G /lib/modules
-    1 X  3G /var/cache
-    1 X  2G /var/log
-1 X 14G = 14G
-    1 X  5G /mnt/spare
-    1 X  3G /mnt/spare
-    1 X  2G /mnt/spare
-1 X 10G = 10G
-50 + 12 + 14 + 10 = 86
-110 - 86 = 24
-    1 X  4G swap
-    1 X 20G /usr/local/tar
+    Partitions specific to a version of the OS
+      2 X 24G /       (/mnt/future/)
+      2 X  1G /boot   (/mnt/future-boot/)
+      2 X  5G /home   (/mnt/future-home/)
+      2 X 30G = 60G Total
+    Partitions that can be shared with other versions of the OS
+      1 X 21G /var/www
+      1 X  1G /usr/local/bin
+      1 X  8G swap
+      1 X 30G = 30G Total
+    Partitions for file systems that can cause trouble (by filling up, etc.)
+      These should NOT be shared, but we are creating only one of each
+      -> See how it goes with these, and if they prove useful,
+         create new ones when installing the next "future" OS.
+      1 X  5G /usr/src
+      1 X  5G /lib/modules
+      1 X  5G /var/cache
+      1 X  5G /var/log
+      1 X 20G = 20G Total
+    Grand total:
+      60G + 30G + 20G = 110G
+    Left Over:
+      229.4G - 110G = 119.4G
+      1 X 20.0G /mnt/spare/sda?
+      1 X 99.4G /usr/local/tar - Use remainder of disk
 
  Install Essential System Tools:
 ---------------------------------

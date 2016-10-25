@@ -71,8 +71,8 @@ Disk Space Spotcheck
     /:        1.8G/22G (9%)
     /home:    257M/4.5G (6%)
     /var/www: 8.1G/20G (45%)
-[ ] NOTE: if we need space in /var/www, we can delete files in:
-      /var/www/zzz-tar_files-old
+NOTE: if we need space in /var/www, we can delete files in:
+    /var/www/zzz-tar_files-old
 
 Configure Apache
 ----------------
@@ -98,13 +98,46 @@ Configure Apache
       a2enmod php7.0
       a2dismod mpm_event
       a2enmod mpm_prefork
+[ ] Check that we have not yet enabled any sites:
+    As root:
+      cd /etc/apache2
+      ls -al l sites*/*.conf
+    Only the sites-available/000-default.conf file should be linked to
+      the sites-enabled directory
+[ ] Put a minimal index.html file in /var/www
+    As tomh:
+      vi /var/www/index.html
+[ ] Restart apache and test in browser, to ensure we are good to go.
+    As root:
       service apache2 stop
       service apache2 start
+    Access in browser:
+      http://ava
+    Should see the minimal index.html file put in /var/www
 
 Ensure Static Sites Work
 ------------------------
 [ ] artsyvisions.com
+    As root:
+      a2ensite 010-artsyvisions.com.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/010-artsyvisions.com.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://ava.artsyvisions.com
 [ ] tomh.info
+    As root:
+      a2ensite 070-tomh.info.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/070-tomh.info.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://jane.tomh.info
+So far so good, I hope.  And this is where the fun starts!
 
 Finding the Right Copy of the Database
 --------------------------------------

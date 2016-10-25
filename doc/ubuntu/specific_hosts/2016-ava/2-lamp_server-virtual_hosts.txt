@@ -22,6 +22,24 @@ Many if not most or all of these LAMP packages have been already installed
 Populate /var/www
 -----------------
 [ ] Get all websites' source files in /var/www
+    artsyvisions.com:
+      best to use a tar file
+    github_pages:
+      mkdir -p github_pages/customizations
+      cd github_pages/customizations
+      git clone git@github.com:JoomooWebsites/joomoowebsites.github.io.git
+      git clone git@github.com:tomwhartung/tomwhartung.github.io.git
+      cd -
+    groja.com:
+      mkdir -p groja.com/htdocs
+      cd groja.com/htdocs
+      git clone git@github.com:tomwhartung/groja.com.git
+      cd -
+    jmws_accoutrements:
+      git clone git@github.com:tomwhartung/jmws_accoutrements.git
+    joomoowebsites.com:
+      best to use a tar file (copy from barbara; bette has more files e.g., downloads dir.)
+
 
 [ ] Disk Space Spotcheck:
     /:     

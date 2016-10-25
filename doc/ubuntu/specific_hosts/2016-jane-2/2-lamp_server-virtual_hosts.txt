@@ -24,6 +24,8 @@ Populate /var/www
 [ ] Get all websites' source files in /var/www
     artsyvisions.com:
       best to use a tar file
+    exp (jane only):
+      best to use a tar file
     github_pages:
       mkdir -p github_pages/customizations
       cd github_pages/customizations
@@ -39,6 +41,33 @@ Populate /var/www
       git clone git@github.com:tomwhartung/jmws_accoutrements.git
     joomoowebsites.com:
       best to use a tar file (copy from barbara; bette has more files e.g., downloads dir.)
+    learn (jane only):
+      best to use a tar file (copy from bette)
+    seeourminds.com:
+      mkdir -p seeourminds.com/htdocs/
+      cd seeourminds.com/htdocs/
+      git clone git@github.com:tomwhartung/seeourminds.com.git
+      cd -
+    subsites:
+      mkdir subsites
+      cd subsites
+      git clone git@github.com:tomwhartung/resume.git
+      git clone git@github.com:tomwhartung/idMyGadget.git
+      cd -
+    tomhartung.com:
+      ** COME BACK TO THIS LATER **
+      -> Get it working on barbara, then copy only essential code to ava and jane
+      Add placeholder html file to DocumentRoot only
+      mkdir -p tomhartung.com/htdocs/tomhartung.com
+      vi tomhartung.com/htdocs/tomhartung.com/index.html
+    tomh.info
+      best to use a tar file
+    tomwhartung.com:
+      ** COME BACK TO THIS LATER **
+      -> Ensure it works on barbara, then copy only essential code to ava and jane
+      Add placeholder html file to DocumentRoot only
+      mkdir -p tomwhartung.com/htdocs/tomhartung.com
+      vi tomwhartung.com/htdocs/tomhartung.com/index.html
 
 
 [ ] Disk Space Spotcheck:

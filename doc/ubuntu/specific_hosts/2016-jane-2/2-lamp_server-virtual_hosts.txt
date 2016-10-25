@@ -57,7 +57,7 @@ Populate /var/www
     tomhartung.com:
       ** COME BACK TO THIS LATER **
       -> Get it working on barbara, then copy only essential code to ava and jane
-      Add placeholder html file to DocumentRoot only
+      For now: add only a placeholder html file to the DocumentRoot directory
       mkdir -p tomhartung.com/htdocs/tomhartung.com
       vi tomhartung.com/htdocs/tomhartung.com/index.html
     tomh.info
@@ -65,15 +65,18 @@ Populate /var/www
     tomwhartung.com:
       ** COME BACK TO THIS LATER **
       -> Ensure it works on barbara, then copy only essential code to ava and jane
-      Add placeholder html file to DocumentRoot only
+      For now: add only a placeholder html file to the DocumentRoot directory
       mkdir -p tomwhartung.com/htdocs/tomhartung.com
       vi tomwhartung.com/htdocs/tomhartung.com/index.html
 
-
+Disk Space Spotcheck
+--------------------
 [ ] Disk Space Spotcheck:
-    /:     
-    /home: 
-    /var/www: X.XG/XXG (XX%)
+    /:        6.3G/23G (29%)
+    /home:    1.1G/23G (5%)
+    /var/www: 9.1G/19G (53%)
+[ ] NOTE: if we need space in /var/www, we can delete files in:
+      /var/www/zzz-tar_files-old
 
 Configure Apache
 ----------------
@@ -102,21 +105,53 @@ Configure Apache
       service apache2 stop
       service apache2 start
 
-Restore databases
------------------
+Ensure Static Sites Work
+------------------------
+[ ] artsyvisions.com
+[ ] tomh.info
+
+Finding the Right Copy of the Database
+--------------------------------------
+[ ] Databases used on barbara:
+    groja.com & seeourminds.com:
+      try using current db from lauren:
+        seeourminds.com-2016_07_16-lauren.sql.gz
+      try using current db from bette:
+        seeourminds.com-2016_07_16-bette.sql.gz
+    joomoowebsites.com: using db from bette (version 3.5.1)
+        joomoowebsites.com-2016_07_16-bette-02-mobile_detect.sql.gz
+    tomhartung.com: using db from bette
+        tomwhartung.com-2016_07_16-bette.sql.gz
+
+Ensure WordPress Sites Work
+---------------------------
 [ ] Create and restore databases: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
+[ ] Configure wordpress updates
+
+Ensure Joomla Site Works
+-------------------------
+[ ] Create and restore database: see database_checklist.txt
+[ ] Get site running: see site_checklist.txt
 [ ] For joomla on a fresh install of 16.04, install simplexml:
     Check for it in phpinfo.php
        sudo apt-get install php7.0-simplexml
        sudo service apache2 restart
     Reference: http://forum.joomla.org/viewtopic.php?t=916040
-[ ] Configure wordpress updates
+
+Ensure Drupal Site Works
+------------------------
+[ ] Create and restore database: see database_checklist.txt
+[ ] Get sites running: see site_checklist.txt
+
+Back It All Up
+--------------
+[ ] Ensure we have backups of everything, including a copy for off-site
 [ ] Set up backups
 
-   Disk Space Spotcheck - / and /home - ensure we have plenty left
 
----------------------------------------------
-If installing on a server, you can stop here.
----------------------------------------------
+[ ] Disk Space Spotcheck:
+    /:     
+    /home: 
+    /var/www: X.XG/XXG (XX%)
 

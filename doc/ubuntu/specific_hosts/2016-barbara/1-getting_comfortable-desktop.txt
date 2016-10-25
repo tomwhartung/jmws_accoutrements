@@ -1,0 +1,69 @@
+
+ Getting Comfortable
+=====================
+Install the basic stuff we need to get around and do the other stuff.
+
+This is the process we ran to set up barbara.
+---------------------------------------------
+It is ok to use it as a guide to set up other hosts.
+
+ Install Essential System Tools:
+---------------------------------
+[ ] Update system, reboot
+    Repeat as necessary
+[ ] Install unity-tmeak-tool
+    apt-get install unity-tweak-tool
+[ ] Install rcs, synaptic, vim, openssh-server
+[ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
+[ ] Install fortune-mod, fortunes, other fortune* packages as desired
+[ ] Install xscreensaver, xscreensaver-data-extra
+[ ] Install xscreensaver-gl-extra
+[ ] Lock xscreensaver and unity-tweak-tool to launcher
+[ ] Remove gnome-screensaver
+    apt-get update
+    apt list gnome-screensaver
+    apt-get remove gnome-screensaver
+[ ] Add xscreensaver to startup programs
+    gnome-session-properties
+[ ] Update System Settings -> Brightness & Lock
+[ ] Update System Settings -> Power
+[ ] Update Terminal Preferences
+[ ] Check man page for other steps needed to get it working at startup
+    man xscreensaver
+
+[ ] Set up root and tomh accounts:
+    Copy to thumb drive then to barbara:
+    .bashrc, links to .bash_aliases*
+[ ] Set preferences, lock terminal and firefox to launcher
+[ ] Set terminal double-click word boundary preferences
+    Either: Edit -> Profile Preferences -> General -> Select by word characters
+    Or: use dconf command, e.g.:
+       dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
+    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
+
+[ ] Copy /etc/hosts from another host and setup static IP
+[ ] Check /etc/hosts and /etc/fstab into RCS
+    Disk Space Spotcheck - / and /home - ensure we have enough
+
+[ ] Install chrome and chromium-browser
+    Found chromium-browser in synaptic
+    Download the .deb file for chrome and install by double-clicking on it.
+    http://google.com/chrome
+[ ] Disable annoying popup asking for password to unlock keyring
+    When the popup appears, click on Continue (as I recall?) without entering a password.
+    When the next popup appears (some sort of warning, as I recall) - click OK
+[ ] Lock chrome and chromium browser to launcher
+
+[ ] System Settings -> Automatically check for updates -> Every two weeks
+[ ] System Settings -> Keyboard -> Shortcuts
+    Update shortcut for switching between workspaces
+
+[ ] Disk Space Spotcheck:
+      /: 4.2G/13G (35%)
+      /home: 0.5G/9G (6%)
+      /var/www: 5.6G/10G (59%)
+
+[ ] Find screenshot (app) in Ubuntu Software (already installed?)
+[ ] Lock screenshot and disks [manager] to launcher
+[ ] Confirm installation of image viewer xeyes (pre-installed??),
+

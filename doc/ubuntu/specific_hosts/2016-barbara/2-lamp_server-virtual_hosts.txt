@@ -74,3 +74,17 @@ And the following is unchanged from when we performed the process:
 [ ] Configure wordpress updates
 [ ] Set up backups
 
+Checking the Sites:
+-------------------
+Checking all sites, in conjunction with getting them to work on jane and ava:
+[ ] Checking the static sites:
+    [ ] artsyvisions.com
+    [ ] tomh.info
+[ ] Checking the WordPress site:
+    [ ] tomwhartung.com
+[ ] Checking the Joomla site:
+    [ ] joomoowebsites.com
+[ ] Checking the Drupal site:
+    [ ] tomhartung.com
+
+

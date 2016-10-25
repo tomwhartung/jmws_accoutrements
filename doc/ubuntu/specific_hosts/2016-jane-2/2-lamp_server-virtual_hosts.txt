@@ -1,64 +1,63 @@
 
- Performing a Fresh Install
-============================
-New disk, fresh install, allowing room for next version.
+ Get LAMP Sites Running
+========================
+LAMP as in LAM-PHP.  We do Python separately.
 
- Install:
-----------
-[ ] Check checkboxes:
-   [ ] Download updates while installing
-   [ ] Install third-party software
+Ensure Required LAMP Packages Are Installed
+-------------------------------------------
+Some of these LAMP packages may or may not yet be installed.
+[ ] Install as necessary, and ensure the installed versions of these packages match on:
+    [ ] ava
+    [ ] barbara
+    [ ] jane
+    Commands (as root):
+      dpkg-query -l 'package_name_or_regex'   ## if it's not found, it needs to be installed
+      apt-get install -s package_name         ## Simulate installation
+      apt-get install -y package_name         ## Do it without requesting confirmation
+    Install apache2, apache2-utils, apache2-dev (needed for wsgi)
+    Install libapache2-mod-php7.0
+    Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+    Install mysql-server
 
-Disk Partitions:
-----------------
-Primary   1G sda1  /boot
-Primary   1G sda2  /future-boot
-Logical   8G sda5  swap
-Logical  25G sda6  /
-Logical  25G sda7  /future-
-Logical  25G sda8  /home
-Logical  25G sda9  /future-home
-Logical  20G sda10 /var/www
-Logical   1G sda11 /usr/local/bin
-Logical 100G sda12 /usr/local/tar
-Logical 250G sda13 /mnt/spare/sda13
-
- On New System, After Install:
--------------------------------
-[ ] Re-using /home (*), /usr/local/bin , /usr/local/tar , and /var/www
-    After copying to / (root) partition of 14.04 install.
-[ ] Update system, reboot
-
-[ ] Set preferences, lock terminal and firefox to launcher
-[ ] Set terminal double-click word boundary preferences
-    Either: Edit -> Profile Preferences -> General -> Select by word characters
-    Or: use dconf command, e.g.:
-       dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
-    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
-
-
-
-[ ] Install apache2, apache2-utils,
-[ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
-[ ] Install mysql-server,
-[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
-   ### cd /etc/apache2/mods-enabled
-   ### ln -s ../mods-available/rewrite.load .
-   a2enmod rewrite
-   a2enmod php7.0
-   a2dismod mpm_event
-   a2enmod mpm_prefork
-   service apache2 start
+Populate /var/www
+-----------------
 [ ] Get all websites' source files in /var/www
-[ ] Config files in /etc/apache2/sites-avaialble
-->  For 16.04, copy conf files from jane:
-    Already vetted currently used versions against the new 000-default.conf for 16.04, no changes needed!
-[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
-   For jane: ensure both www.site.com and site.com will work
-   For bette: change "jane" to "bette" in conf files
-   Disk Space Spotcheck - / and /home - ensure we have plenty left
 
-[ ] Create and populate databases: see database_checklist.txt
+[ ] Disk Space Spotcheck:
+    /:     
+    /home: 
+    /var/www: X.XG/XXG (XX%)
+
+Configure Apache
+----------------
+[ ] Add and update config files in /etc/apache2/sites-available as appropriate
+    As root:
+      cd /etc/apache2/sites-available
+      mkdir RCS
+      ci -l *.conf   ## "Installed version"
+    For best results, copy conf files from another host and check in to RCS
+    Fix ServerAlias specifications in apache2/sites-available/*.conf files
+    As root:
+      ci -l *.conf   ## "Copied from host xxxxx and updated for this host"
+[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
+    As root:
+      cd /etc/apache2
+      ls -al mods-*/rewrite*
+      ls -al mods-*/php7.0*
+      ls -al mods-*/mpm*
+    If not enabled (or disabled, as in the case of mpm_event),
+      run one or more of these commands as appropriate:
+    As root:
+      a2enmod rewrite
+      a2enmod php7.0
+      a2dismod mpm_event
+      a2enmod mpm_prefork
+      service apache2 stop
+      service apache2 start
+
+Restore databases
+-----------------
+[ ] Create and restore databases: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
 [ ] For joomla on a fresh install of 16.04, install simplexml:
     Check for it in phpinfo.php
@@ -67,6 +66,8 @@ Logical 250G sda13 /mnt/spare/sda13
     Reference: http://forum.joomla.org/viewtopic.php?t=916040
 [ ] Configure wordpress updates
 [ ] Set up backups
+
+   Disk Space Spotcheck - / and /home - ensure we have plenty left
 
 ---------------------------------------------
 If installing on a server, you can stop here.

@@ -1,49 +1,60 @@
 
- Get Sites Running
-===================
-Many if not most or all of these have been already installed
+ Get LAMP Sites Running
+========================
+LAMP as in LAM-PHP.  We do Python separately.
+
+Ensure Required LAMP Packages Are Installed
+-------------------------------------------
+Many if not most or all of these LAMP packages have been already installed
 [ ] Install as necessary, and ensure the installed versions of these packages match on:
     [ ] ava
     [ ] barbara
     [ ] jane
-    Install apache2, apache2-utils, libapache2-mod-php7.0 as necessary and verify version consistency
-    Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt as necessary and verify version consistency
-    Install mysql-server as necessary and verify version consistency
+    Commands (as root):
+      dpkg-query -l 'package_name_or_regex'   ## if it's not found, it needs to be installed
+      apt-get install -s package_name         ## Simulate installation
+      apt-get install -y package_name         ## Do it without requesting confirmation
+    Install apache2, apache2-utils, apache2-dev (needed for wsgi)
+    Install libapache2-mod-php7.0
+    Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+    Install mysql-server
 
-[ ] Config files in /etc/apache2/sites-avaialble
-->  For 16.04, copy conf files from jane or barbara:
-    Already vetted currently used versions against the new 000-default.conf for 16.04, no changes needed!
-[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
-    a2enmod rewrite
-    a2enmod php7.0
-    a2dismod mpm_event
-    a2enmod mpm_prefork
-    cd /etc/apache2/sites-enabled
-    ln -s ../sites-available/0[1-9]*.conf .
+Populate /var/www
+-----------------
 [ ] Get all websites' source files in /var/www
-[ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
-    For barbara (ultimately): ensure both www.site.com and site.com will work
-    For bette: change "jane" to "bette" in conf files
-    service apache2 start
-    Disk Space Spotcheck: /: 4.2G/13G (35%); /home: 0.5G/9G (6%); and /var/www: 5.6G/10G (59%)
-
-[ ] Install chrome and chromium-browser
-    Found chromium-browser in synaptic
-    Download the .deb file for chrome and install by double-clicking on it.
-    http://google.com/chrome
-[ ] Disable annoying popup asking for password to unlock keyring
-    When the popup appears, click on Continue (as I recall?) without entering a password.
-    When the next popup appears (some sort of warning, as I recall) - click OK
-[ ] Lock chrome and chromium browser to launcher
-
-[ ] System Settings -> Automatically check for updates -> Every two weeks
-[ ] System Settings -> Keyboard -> Shortcuts
-    Update shortcut for switching between workspaces
 
 [ ] Disk Space Spotcheck:
-      /: 4.2G/13G (35%)
-      /home: 0.5G/9G (6%)
-      /var/www: 5.6G/10G (59%)
+    /:     
+    /home: 
+    /var/www: X.XG/XXG (XX%)
+
+Configure Apache
+----------------
+[ ] Add and update config files in /etc/apache2/sites-available as appropriate
+    As root:
+      cd /etc/apache2/sites-available
+      mkdir RCS
+      ci -l *.conf   ## "Installed version"
+    For best results, copy conf files from another host and check in to RCS
+    Fix ServerAlias specifications in apache2/sites-available/*.conf files
+    As root:
+      ci -l *.conf   ## "Copied from host xxxxx and updated for this host"
+[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
+    As root:
+      cd /etc/apache2
+      ls -al mods-*/rewrite*
+      ls -al mods-*/php7.0*
+      ls -al mods-*/mpm*
+    If not enabled (or disabled, as in the case of mpm_event),
+      run one or more of these commands as appropriate:
+    As root:
+      a2enmod rewrite
+      a2enmod php7.0
+      a2dismod mpm_event
+      a2enmod mpm_prefork
+      service apache2 stop
+      service apache2 start
+
 
 [ ] Create and populate databases: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
@@ -65,10 +76,6 @@ Many if not most or all of these have been already installed
     tomhartung.com: using db from bette
         tomwhartung.com-2016_07_16-bette.sql.gz
 
-[ ] Find screenshot (app) in Ubuntu Software (already installed?)
-[ ] Lock screenshot and disks [manager] to launcher
-[ ] Confirm installation of image viewer xeyes (pre-installed??),
-
 [ ] Disk Space Spotcheck:
       /:     
       /home: 
@@ -78,8 +85,6 @@ Many if not most or all of these have been already installed
 
 [ ] Configure wordpress updates
 [ ] Set up backups
-
-[?] Install compizconf settings manager
 
 ---------------------------------------------
 If installing on a server, you can stop here.

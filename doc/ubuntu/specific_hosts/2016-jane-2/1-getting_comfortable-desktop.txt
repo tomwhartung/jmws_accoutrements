@@ -13,7 +13,7 @@ the essentials and get them set up, making getting other stuff done easier
 Desktop Necessities for Comfortableness
 ---------------------------------------
 [ ] Home Directory
-   Restore home directory from backup, or take a copy from another host
+    Restore home directory from backup, or take a copy from another host
 [ ] Install any new updates
     sudo apt-get update
     sudo apt-get upgrade
@@ -48,12 +48,15 @@ Desktop Necessities for Comfortableness
     Test using ssh to get from host to host.
 [ ] Settings
     Go through list making initial adjustments:
-    Appearance -> Background
+    Appearance -> Look -> Background (find something nice!)
+    Appearance -> Behavior -> Enable workspaces
+    Appearance -> Behavior -> Show the menus for a window -> In the window's title bar
     Brightness & Lock -> Turn all that shit off
     Network -> Setup static IP
     Power -> Adjust as necessary
     Software & Updates -> Updates -> Automatically check for updates -> Every week
     User Accounts -> Automatic Login (On)
+[ ] Lock terminal and firefox to launcher
 [ ] Install fortune-mod, fortunes, other fortune* packages as desired
     dpkg-query -l 'fortune*'
     apt-get install fortunes fortune-mod
@@ -66,6 +69,7 @@ Desktop Necessities for Comfortableness
 [ ] Install unity-tweak-tool
     apt-get install unity-tweak-tool
 [ ] Start and lock xscreensaver and unity-tweak-tool to launcher
+    Peruse and adjust all unity-tweak-tool for maximum comfort
     As tomh:
       which unity-tweak-tool
       unity-tweak-tool &
@@ -105,25 +109,31 @@ Desktop Necessities for Comfortableness
     As tomh:
       which xeyes
       gnome-session-properties
-
-   apt-get install
-
+[ ] Get rid of annoying icons on desktop: (!!!)
+    As tomh:
+      gsettings set org.gnome.desktop.background  show-desktop-icons false
+[ ] Lock disks [manager] to launcher
+[ ] Setup important /art links to external disk
+    As tomh:
+      cd /art; ln -s /media/ext4backupA/art/* .
+      cd ; ln -s /art/images ~/Pictures
+[ ] Set terminal double-click word boundary preferences
+    Edit -> Profile Preferences -> General -> Copy Profile ID
+    Plug the Profile ID into the following dconf command:
+       dconf write /org/gnome/terminal/legacy/profiles:/:<Profile_ID>/word-char-exceptions '@ms "?_+~·:"'
+    For example:
+       dconf write /org/gnome/terminal/legacy/profiles:/:a69aef0d-01c0-40a0-a343-7c2d19d66673/word-char-exceptions '@ms "?_+~·:"'
+    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
+[ ] Ok to use "Ubuntu Software" (orange icon) GUI to install these
+    Install audacious, easytag, audex, banshee, vlc media player
+    Install compizconf settings manager
+    Install gwenview, gimp, gthumb,
+    Install screenshot (if necessary)
+    Install rhythmbox and thunderbird (if necessary)
+    Lock all or most (not using thunderbird on jane) of those to launcher (as necessary)
+[ ] Disk Space Spotcheck:
+      /:     6.0G (28%)
+      /home: 1.0G (5%)
 
 *************** YOU ARE HERE (jane install) ***********************
-
-
-Getting standard artsy stuff
-----------------------------
-[ ] cd /art; ln -s /media/ext4backupA/images ~/Pictures
-[ ] Install audacious, easytag, audex, banshee, vlc media player
-[ ] Install compizconf settings manager
-[ ] Install gwenview, gimp, gthumb, screenshot
-[ ] Install rhythmbox and thunderbird
-[ ] Lock all or most (not using thunderbird on jane) of those to launcher
-[ ] Lock disks [manager] to launcher
-[ ] Confirm installation of image viewer xeyes (pre-installed??),
-   Disk Space Spotcheck:
-      /:     8.3G (48%)
-      /home: 4.1G (25%)
-
 

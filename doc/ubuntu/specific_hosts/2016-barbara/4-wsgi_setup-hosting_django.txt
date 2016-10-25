@@ -196,3 +196,14 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     For a few of these that we have found along the way, see
     0-install_ubuntu.urls
  
+
+
+[ ] Disk Space Spotcheck:
+    /:     
+    /home: 
+    /var/www: X.XG/XXG (XX%)
+
+---------------------------------------------
+If installing on a server, you can stop here.
+---------------------------------------------
+

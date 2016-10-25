@@ -1,106 +1,28 @@
 
- Performing a Fresh Install
-============================
-Download correct iso file, verify md5sum, and burn to CD
+ Get LAMP Sites Running
+========================
+LAMP as in LAM-PHP.  We do Python separately.
 
- On Windows System, Before Install:
-------------------------------------
-[ ] Ensure all updates are installed
-[ ] Computer -> C: Drive -> Properties
-    Tools tab -> Error Checking -> Check now...
-[ ] Defragment disk
-    My Computer (Win 7) or File Explorer (Win 10)
-    Select C: drive
-    Properties (Win 7) or Drive Tools (Win 10)
-    Defragment Disk (Win 7) or Optimize Drives (Win 10)
-[ ] Shrink Win 10 partition
-    Start (Cortana) -> Disk Management (window appears
-    Right-click on C: -> Shrink volume
-    Accept defaults: 116G NTFS and 103G Unallocated
-    Reference: http://www.everydaylinuxuser.com/2015/11/how-to-shrink-windows-10-to-make-space.html
-[ ] Turn off fast startup (Win 10 but Win 7 is similar)
-    Settings -> System -> Power and Sleep
-    Click on "Additional power settings" then
-    Click on "Choose what the power buttons do" then
-    Click on "Change settings that are currently available" then
-    Under Shutdown settings UN-check the "Turn on fast startup" checkbox then
-    Click on "Save changes"
-    Reference: https://sites.google.com/site/easylinuxtipsproject/windows
-[ ] Confirm that the sustem does not use UEFI
-    Start icon -> type "System Information"
-    Find BIOS Mode: barbara's value is "Legacy," we are good to go
-    Reference: http://www.everydaylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside.html
-[ ] Note: Press F2 to get into BIOS (e.g. to change boot device order)
-    I am not seeing any settings - specifically the UEFI Secure Boot option -
-    mentioned in the Reference, so did not make any changes.
+Ensure Required LAMP Packages Are Installed
+-------------------------------------------
+Many if not most or all of these LAMP packages have been already installed
+[ ] Install as necessary, and ensure the installed versions of these packages match on:
+    [ ] ava
+    [ ] barbara
+    [ ] jane
+    Commands (as root):
+      dpkg-query -l 'package_name_or_regex'   ## if it's not found, it needs to be installed
+      apt-get install -s package_name         ## Simulate installation
+      apt-get install -y package_name         ## Do it without requesting confirmation
+    Install apache2, apache2-utils, apache2-dev (needed for wsgi)
+    Install libapache2-mod-php7.0
+    Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+    Install mysql-server
 
- Install:
-----------
-[ ] Check checkboxes:
-    [ ] Download updates while installing
-    [ ] Install third-party software
-[ ] Fresh disk partitions:
-    -  Modeled after actual use on lauren and allowing for growth
-    -  Allowing for installing a new OS at some point
-    -  Allowing spares
-    2 X 14G /       (/mnt/future/)
-    2 X  1G /boot   (/mnt/future/boot/)
-    2 X 10G /home   (/mnt/future/home/)
-2 X 25G = 50G
-    1 X 11G /var/www
-    1 X  1G /usr/local/bin
-1 X 12G = 12G
-    1 X  5G /usr/src
-    1 X  4G /lib/modules
-    1 X  3G /var/cache
-    1 X  2G /var/log
-1 X 14G = 14G
-    1 X  5G /mnt/spare
-    1 X  3G /mnt/spare
-    1 X  2G /mnt/spare
-1 X 10G = 10G
-50 + 12 + 14 + 10 = 86
-110 - 86 = 24
-    1 X  4G swap
-    1 X 20G /usr/local/tar
-
- Install Essential System Tools:
----------------------------------
-[ ] Update system, reboot
-    Repeat as necessary
-[ ] Install unity-tmeak-tool
-    apt-get install unity-tweak-tool
-[ ] Install rcs, synaptic, vim, openssh-server
-[ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
-[ ] Install fortune-mod, fortunes, other fortune* packages as desired
-[ ] Install xscreensaver, xscreensaver-data-extra
-[ ] Install xscreensaver-gl-extra
-[ ] Lock xscreensaver and unity-tweak-tool to launcher
-[ ] Remove gnome-screensaver
-    apt-get update
-    apt list gnome-screensaver
-    apt-get remove gnome-screensaver
-[ ] Add xscreensaver to startup programs
-    gnome-session-properties
-[ ] Update System Settings -> Brightness & Lock
-[ ] Update System Settings -> Power
-[ ] Update Terminal Preferences
-[ ] Check man page for other steps needed to get it working at startup
-    man xscreensaver
-
-[ ] Set up root and tomh accounts:
-    Copy to thumb drive then to barbara:
-    .bashrc, links to .bash_aliases*
-[ ] Set preferences, lock terminal and firefox to launcher
-[ ] Set terminal double-click word boundary preferences
-    Either: Edit -> Profile Preferences -> General -> Select by word characters
-    Or: use dconf command, e.g.:
-       dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/word-char-exceptions '@ms "?_+~·:"'
-    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
-
-[ ] Copy /etc/hosts from another host and setup static IP
-[ ] Check /etc/hosts and /etc/fstab into RCS
-    Disk Space Spotcheck - / and /home - ensure we have enough
+Note:
+-----
+The above was copied from ../2016-ava/2-lamp_server-virtual_hosts.txt .
+And the following is unchanged from when we performed the process:
 
  Get Sites Running
 -------------------
@@ -123,19 +45,6 @@ Download correct iso file, verify md5sum, and burn to CD
     For bette: change "jane" to "bette" in conf files
     service apache2 start
     Disk Space Spotcheck: /: 4.2G/13G (35%); /home: 0.5G/9G (6%); and /var/www: 5.6G/10G (59%)
-
-[ ] Install chrome and chromium-browser
-    Found chromium-browser in synaptic
-    Download the .deb file for chrome and install by double-clicking on it.
-    http://google.com/chrome
-[ ] Disable annoying popup asking for password to unlock keyring
-    When the popup appears, click on Continue (as I recall?) without entering a password.
-    When the next popup appears (some sort of warning, as I recall) - click OK
-[ ] Lock chrome and chromium browser to launcher
-
-[ ] System Settings -> Automatically check for updates -> Every two weeks
-[ ] System Settings -> Keyboard -> Shortcuts
-    Update shortcut for switching between workspaces
 
 [ ] Disk Space Spotcheck:
       /: 4.2G/13G (35%)
@@ -162,23 +71,6 @@ Download correct iso file, verify md5sum, and burn to CD
     tomhartung.com: using db from bette
         tomwhartung.com-2016_07_16-bette.sql.gz
 
-[ ] Find screenshot (app) in Ubuntu Software (already installed?)
-[ ] Lock screenshot and disks [manager] to launcher
-[ ] Confirm installation of image viewer xeyes (pre-installed??),
-
-[ ] Disk Space Spotcheck:
-      /:     
-      /home: 
-      /var/www: X.XG/XXG (XX%)
-
-------------------
-
 [ ] Configure wordpress updates
 [ ] Set up backups
-
-[?] Install compizconf settings manager
-
----------------------------------------------
-If installing on a server, you can stop here.
----------------------------------------------
 

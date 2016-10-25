@@ -75,8 +75,8 @@ Disk Space Spotcheck
     /:        6.3G/23G (29%)
     /home:    1.1G/23G (5%)
     /var/www: 9.1G/19G (53%)
-[ ] NOTE: if we need space in /var/www, we can delete files in:
-      /var/www/zzz-tar_files-old
+NOTE: if we need space in /var/www, we can delete files in:
+    /var/www/zzz-tar_files-old
 
 Configure Apache
 ----------------
@@ -102,13 +102,43 @@ Configure Apache
       a2enmod php7.0
       a2dismod mpm_event
       a2enmod mpm_prefork
+[ ] Check that we have not yet enabled any sites:
+    As root:
+      cd /etc/apache2
+      ls -al l sites*/*.conf
+    Only the sites-available/000-default.conf file should be linked to
+      the sites-enabled directory
+[ ] Restart apache and test in browser, to ensure we are good to go.
+    As root:
       service apache2 stop
       service apache2 start
+    Access in browser:
+      http://localhost
+    Should see our customary behind-the-firewall version of index.html
 
 Ensure Static Sites Work
 ------------------------
 [ ] artsyvisions.com
+    As root:
+      a2ensite 010-artsyvisions.com.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/010-artsyvisions.com.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://jane.artsyvisions.com
 [ ] tomh.info
+    As root:
+      a2ensite 070-tomh.info.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/070-tomh.info.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://jane.tomh.info
+So far so good, I hope.  And this is where the fun starts!
 
 Finding the Right Copy of the Database
 --------------------------------------

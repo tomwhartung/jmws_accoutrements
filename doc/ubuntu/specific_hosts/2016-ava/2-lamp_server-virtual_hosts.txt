@@ -59,7 +59,6 @@ Populate /var/www
     tomh.info
       best to use a tar file
     tomwhartung.com:
-      ** COME BACK TO THIS LATER **
       -> Ensure it works on barbara, then copy only essential code to ava and jane
       For now: add only a placeholder html file to the DocumentRoot directory
       mkdir -p tomwhartung.com/htdocs/tomhartung.com
@@ -166,7 +165,7 @@ Overview of Process for CMS Sites
 Ensure WordPress Site Works
 ---------------------------
 Site: tomwhartung.com
-[ ] Create and restore databases
+[ ] Create and restore database
     See ~/technical/cmses/wordpress
 [ ] Enable site and restart apache
     a2ensite 080-tomwhartung.com.conf
@@ -182,10 +181,15 @@ Ensure Joomla Site Works
 -------------------------
 Site: joomoowebsites.com
 
-[ ] Create and restore database: see database_checklist.txt
-[ ] Get site running: see site_checklist.txt
+[ ] Create and restore database
+    See ~/technical/cmses/wordpress
+[ ] Enable site and restart apache
+    a2ensite 040-joomoowebsites.com.conf
+    service apache2 stop
+    service apache2 start
 [ ] For joomla on a fresh install of 16.04, install simplexml:
-    Check for it in phpinfo.php
+    Check for it in phpinfo.php - it has its own section
+    If it is not installed:
        sudo apt-get install php7.0-simplexml
        sudo service apache2 restart
     Reference: http://forum.joomla.org/viewtopic.php?t=916040

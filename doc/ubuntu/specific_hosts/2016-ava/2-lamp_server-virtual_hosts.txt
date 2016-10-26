@@ -152,14 +152,36 @@ Finding the Right Copy of the Database
     tomhartung.com: using db from bette
         tomwhartung.com-2016_07_16-bette.sql.gz
 
-Ensure WordPress Sites Work
+Overview of Process for CMS Sites
+---------------------------------
+1. Ensure it is working on barbara (or bette or lauren)
+2. Copy code and db to jane
+3. Ensure it works on jane
+4. Cleanup: delete as many files as possible (downloads, old releases, tmp dirs., etc.)
+5. Ensure it still works on jane
+6. Copy code and db to ava
+7. Ensure it works on ava
+8. Consider cleaning up downloads, etc. on barbara as well
+
+Ensure WordPress Site Works
 ---------------------------
-[ ] Create and restore databases: see database_checklist.txt
-[ ] Get sites running: see site_checklist.txt
+Site: tomwhartung.com
+[ ] Create and restore databases
+    See ~/technical/cmses/wordpress
+[ ] Enable site and restart apache
+    a2ensite 080-tomwhartung.com.conf
+    service apache2 stop
+    service apache2 start
+[ ] Edit wp-config.php and update Settings -> URLs in back end
+    Chrome browser redirect issue:
+      Menu -> More Tools -> Clear Browsing Data
 [ ] Configure wordpress updates
+    See ~/technical/cmses/wordpress/README.txt
 
 Ensure Joomla Site Works
 -------------------------
+Site: joomoowebsites.com
+
 [ ] Create and restore database: see database_checklist.txt
 [ ] Get site running: see site_checklist.txt
 [ ] For joomla on a fresh install of 16.04, install simplexml:
@@ -170,13 +192,15 @@ Ensure Joomla Site Works
 
 Ensure Drupal Site Works
 ------------------------
+Site: tomhartung.com
+
 [ ] Create and restore database: see database_checklist.txt
 [ ] Get sites running: see site_checklist.txt
 
 Back It All Up
 --------------
 [ ] Ensure we have backups of everything, including a copy for off-site
-[ ] Set up backups
+[ ] Set up (semi-)automatic backups as appropriate
 
 [ ] Disk Space Spotcheck:
       /:     

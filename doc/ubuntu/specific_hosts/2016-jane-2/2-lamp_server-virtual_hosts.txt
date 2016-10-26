@@ -169,8 +169,15 @@ Ensure WordPress Site Works
 Site: tomwhartung.com
 [ ] Create and restore databases
     See ~/technical/cmses/wordpress
-[ ] Get sites running: see site_checklist.txt
+[ ] Enable site and restart apache
+    a2ensite 080-tomwhartung.com.conf
+    service apache2 stop
+    service apache2 start
+[ ] Edit wp-config.php and update Settings -> URLs in back end
+    Chrome browser redirect issue:
+      Menu -> More Tools -> Clear Browsing Data
 [ ] Configure wordpress updates
+    See ~/technical/cmses/wordpress/README.txt
 
 Ensure Joomla Site Works
 -------------------------

@@ -169,9 +169,10 @@ Site: tomwhartung.com
 [ ] Create and restore database
     See ~/technical/cmses/wordpress
 [ ] Enable site and restart apache
-    a2ensite 080-tomwhartung.com.conf
-    service apache2 stop
-    service apache2 start
+    As root:
+      a2ensite 080-tomwhartung.com.conf
+      service apache2 stop
+      service apache2 start
 [ ] Edit wp-config.php and update Settings -> URLs in back end
     Chrome browser redirect issue:
       Menu -> More Tools -> Clear Browsing Data
@@ -184,15 +185,21 @@ Site: joomoowebsites.com
 [ ] Create and restore database
     See ~/technical/cmses/wordpress
 [ ] Enable site and restart apache
-    a2ensite 040-joomoowebsites.com.conf
-    service apache2 stop
-    service apache2 start
+    As root:
+      a2ensite 040-joomoowebsites.com.conf
+      service apache2 stop
+      service apache2 start
 [ ] For joomla on a fresh install of 16.04, install simplexml:
     Check for it in phpinfo.php - it has its own section
     If it is not installed:
-      sudo apt-get install php7.0-simplexml
-      sudo service apache2 restart
+    As root:
+      apt-get install php7.0-simplexml
+      service apache2 restart
     Reference: http://forum.joomla.org/viewtopic.php?t=916040
+[ ] To fix "The file Cache Storage is not supported on this platform." error:
+    As root:
+      cd /var/www/joomoowebsites.com/htdocs/joomoowebsites.com
+      chgrp www-data cache/ administrator/cache/ tmp
 
 Ensure Drupal Site Works
 ------------------------

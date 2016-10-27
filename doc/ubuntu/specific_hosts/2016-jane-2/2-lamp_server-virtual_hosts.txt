@@ -27,46 +27,59 @@ Populate /var/www
     exp (jane only):
       best to use a tar file
     github_pages:
-      mkdir -p github_pages/customizations
-      cd github_pages/customizations
-      git clone git@github.com:JoomooWebsites/joomoowebsites.github.io.git
-      git clone git@github.com:tomwhartung/tomwhartung.github.io.git
-      cd -
+      As tomh:
+        mkdir -p github_pages/customizations
+        cd github_pages/customizations
+        git clone git@github.com:JoomooWebsites/joomoowebsites.github.io.git
+        git clone git@github.com:tomwhartung/tomwhartung.github.io.git
+        cd -
     groja.com:
-      mkdir -p groja.com/htdocs
-      cd groja.com/htdocs
-      git clone git@github.com:tomwhartung/groja.com.git
-      cd -
+      NOTE: this is now a python site and will not work until we get WSGI going
+        For more information see: 4-setup_wsgi_for_hosting_python.txt
+      As tomh:
+        mkdir -p groja.com/htdocs
+        cd groja.com/htdocs
+        git clone git@github.com:tomwhartung/groja.com.git
+        cd -
     jmws_accoutrements:
-      git clone git@github.com:tomwhartung/jmws_accoutrements.git
+      As tomh:
+        git clone git@github.com:tomwhartung/jmws_accoutrements.git
     joomoowebsites.com:
       best to use a tar file (copy from barbara; bette has more files e.g., downloads dir.)
     learn (jane only):
       best to use a tar file (copy from bette)
     seeourminds.com:
-      mkdir -p seeourminds.com/htdocs/
-      cd seeourminds.com/htdocs/
-      git clone git@github.com:tomwhartung/seeourminds.com.git
-      cd -
+      NOTE: this is now a python site and will not work until we get WSGI going
+        For more information see: 4-setup_wsgi_for_hosting_python.txt
+      As tomh:
+        mkdir -p seeourminds.com/htdocs/
+        cd seeourminds.com/htdocs/
+        git clone git@github.com:tomwhartung/seeourminds.com.git
+        cd -
     subsites:
-      mkdir subsites
-      cd subsites
-      git clone git@github.com:tomwhartung/resume.git
-      git clone git@github.com:tomwhartung/idMyGadget.git
-      cd -
+      As tomh:
+        mkdir subsites
+        cd subsites
+        git clone git@github.com:tomwhartung/resume.git
+        git clone git@github.com:tomwhartung/idMyGadget.git
+        cd -
     tomhartung.com:
-      ** COME BACK TO THIS LATER **
-      -> Get it working on barbara, then copy only essential code to ava and jane
-      For now: add only a placeholder html file to the DocumentRoot directory
-      mkdir -p tomhartung.com/htdocs/tomhartung.com
-      vi tomhartung.com/htdocs/tomhartung.com/index.html
+      -> Try using version from bette
+      Clear caches, create tar file of tomhartung.com/htdocs/ , copy to barbara
+      As tomh on bette:
+        cd /var/www
+        tar -cvzf tomhartung.com_htdocs-bette-2016_10_27.tgz tomhartung.com/htdocs/
+        bu th 01-goes_with_tar_file
     tomh.info
       best to use a tar file
     tomwhartung.com:
-      -> Ensure it works on barbara, then copy only essential code to ava and jane
-      For now: add only a placeholder html file to the DocumentRoot directory
-      mkdir -p tomwhartung.com/htdocs/tomhartung.com
-      vi tomwhartung.com/htdocs/tomhartung.com/index.html
+      -> Copy only essential code from barbara to ava and jane
+      Create a tar file of the tomwhartung.com/htdocs directory on barbara and
+        copy it to jane and ava
+      As tomh on barbara:
+        cd /var/www
+        tar -cvzf tomwhartung.com_htdocs-barbara-2016_10_25.tgz tomhartung.com/htdocs/
+        bu tw 01-baseline
 
 Disk Space Spotcheck
 --------------------
@@ -107,6 +120,10 @@ Configure Apache
       ls -al l sites*/*.conf
     Only the sites-available/000-default.conf file should be linked to
       the sites-enabled directory
+[ ] Put our standard index.html file in /var/www
+    As tomh on bette:
+      cd /var/www/
+      toJane index.html
 [ ] Restart apache and test in browser, to ensure we are good to go.
     As root:
       service apache2 stop
@@ -183,7 +200,7 @@ Ensure Joomla Site Works
 -------------------------
 Site: joomoowebsites.com
 [ ] Create and restore database
-    See ~/technical/cmses/wordpress
+    See ~/technical/cmses/joomla
 [ ] Enable site and restart apache
     As root:
       a2ensite 040-joomoowebsites.com.conf
@@ -204,15 +221,16 @@ Site: joomoowebsites.com
 Ensure Drupal Site Works
 ------------------------
 Site: tomhartung.com
+[ ] Create and restore database
+    See ~/technical/cmses/drupal
 
-[ ] Create and restore database: see database_checklist.txt
-[ ] Get sites running: see site_checklist.txt
+
+
 
 Back It All Up
 --------------
 [ ] Ensure we have backups of everything, including a copy for off-site
 [ ] Set up (semi-)automatic backups as appropriate
-
 
 [ ] Disk Space Spotcheck:
     /:     

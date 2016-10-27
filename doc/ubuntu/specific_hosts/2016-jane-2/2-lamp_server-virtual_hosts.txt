@@ -65,11 +65,13 @@ Populate /var/www
         cd -
     tomhartung.com:
       -> Try using version from bette
-      Clear caches, create tar file of tomhartung.com/htdocs/ , copy to barbara
+      Clear caches, create tar file of tomhartung.com/htdocs/ , copy to barbara, jane, and ava
+      Browser:
+        bette.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
       As tomh on bette:
+        bu th 01-goes_with_tar_file
         cd /var/www
         tar -cvzf tomhartung.com_htdocs-bette-2016_10_27.tgz tomhartung.com/htdocs/
-        bu th 01-goes_with_tar_file
     tomh.info
       best to use a tar file
     tomwhartung.com:
@@ -120,7 +122,7 @@ Configure Apache
       ls -al l sites*/*.conf
     Only the sites-available/000-default.conf file should be linked to
       the sites-enabled directory
-[ ] Put our standard index.html file in /var/www
+[ ] Put our standard, behind-the-firewall version of index.html file in /var/www
     As tomh on bette:
       cd /var/www/
       toJane index.html
@@ -130,7 +132,7 @@ Configure Apache
       service apache2 start
     Access in browser:
       http://localhost
-    Should see our customary behind-the-firewall version of index.html
+    Should see our standard, behind-the-firewall version of index.html
 
 Ensure Static Sites Work
 ------------------------
@@ -159,6 +161,7 @@ So far so good, I hope.  And this is where the fun starts!
 Finding the Right Copy of the Database
 --------------------------------------
 [ ] Databases used on barbara:
+    NOTE: this is FOR REFERENCE ONLY - i.e., it is what we did LAST TIME
     groja.com & seeourminds.com:
       try using current db from lauren:
         seeourminds.com-2016_07_16-lauren.sql.gz
@@ -222,8 +225,18 @@ Ensure Drupal Site Works
 ------------------------
 Site: tomhartung.com
 [ ] Create and restore database
+    -> using version from bette
     See ~/technical/cmses/drupal
-
+[ ] Enable site and restart apache
+    As root:
+      a2ensite 060-tomhartung.com.conf
+      service apache2 stop
+      service apache2 start
+      cd /etc/apache2
+      l sites-*/*.conf
+[ ] Get the site working on barbara, jane, and ava
+    Looks like using code and db from bette is indeed the best choice
+    -> Hunt down issues on barbara and apply those fixes to jane and ava
 
 
 

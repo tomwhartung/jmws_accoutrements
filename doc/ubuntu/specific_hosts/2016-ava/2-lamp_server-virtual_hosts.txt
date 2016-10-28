@@ -63,7 +63,7 @@ Populate /var/www
       -> Try using version from bette
       Clear caches, create tar file of tomhartung.com/htdocs/ , copy to barbara, jane, and ava
       Browser:
-        bette.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
+        ava.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
       As tomh on bette:
         bu th 01-goes_with_tar_file
         cd /var/www
@@ -222,7 +222,12 @@ Ensure Drupal Site Works
 ------------------------
 Site: tomhartung.com
 [ ] Create and restore database
+    -> using version from bette
     See ~/technical/cmses/drupal
+[ ] Set ownership of cache files
+    As root:
+      cd sites/default
+      chown -R www-data:www-data files
 [ ] Enable site and restart apache
     As root:
       a2ensite 060-tomhartung.com.conf
@@ -230,7 +235,11 @@ Site: tomhartung.com
       service apache2 start
       cd /etc/apache2
       l sites-*/*.conf
-
+[ ] Log into back end and clear cache
+    Browser:
+      ava.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
+    
+*** YOU ARE HERE ***
 
 Back It All Up
 --------------

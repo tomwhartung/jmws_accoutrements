@@ -1,0 +1,209 @@
+
+ Hosting Django - Setup
+========================
+
+This is the process we are running to set up barbara.
+This is the second time going through this process.
+
+Serving Django Via Apache and Deploying a Django Site!
+------------------------------------------------------
+Having never hosted a django site, I want to be sure I do my due diligence
+in this regard.
+
+Strategy with Regards to Virtual Environments
+---------------------------------------------
+On jane we followed the tutorials and played around with virtual environments
+(the virtualenv command, etc.) a bit and wound up using only the virtualenv
+that uses python3 and django 1.10 .
+
+Since then we got mod_wsgi to work with apache, but jane started having issues
+before we got it to work with django
+
+In light of this experience, we will follow this strategy on barbara and ava,
+and probably other hosts as well:
+
+1. Install python3 as the python used by mod_wsgi.
+2. Install django 1.10 for use globally by default.
+3. Maintain some sort of record (copy of source, or github version hash, or?) of
+   precisely which version of django 1.10 we installed globally.
+4. Use virtual environments (virtualenv command, etc.) experiment with and
+   upgrade to other versions of python or django or both, on specific hosts only
+
+References:
+-----------
+Using this page as the driver:
+    https://docs.djangoproject.com/en/1.10/topics/install/
+
+For many many many more links to info about adding apache2 mod_wsgi, see
+the file ../general/2-hosting_django-jane.txt
+
+Process: - Install and configure apache mod_wsgi for serving django sites
+-------------------------------------------------------------------------
+2016-10-14 - doing this on barbara
+
+[ ] First get mod-wsgi "Hello World" example working
+    For security reasons, we are installing the latest version
+    Starting here:
+         https://modwsgi.readthedocs.io/en/develop/getting-started.html
+    Requirements:
+        "It is highly recommended that you use Apache 2.4"
+[ ] apache2 -v   ## Server version: Apache/2.4.18 (Ubuntu)
+    Installation -> Quick Installation Guide -> Apache Requirements
+        "On Linux systems, if Apache has been installed from a package repository, you must have
+         installed the corresponding Apache “dev” package as well."
+[ ] Synaptic -> Search for apache2 -> If dev package not installed, mark it for installation -> Apply
+    Quick Installation Guide -> Python Requirements
+        "On Linux systems, if Python has been installed from a package repository, you must have
+         installed the corresponding Python “dev” package as well."
+[ ] Synaptic -> Search for python -> If dev package not installed, mark it for installation -> Apply
+[ ] Synaptic -> Search for python3 -> If dev package not installed, mark it for installation -> Apply
+[ ] Unpack the mod_wsgi tarball saved in git from when we did it on jane
+    cd /var/www/learn/django/github/customizations/always_learning_python/
+    cd downloads/
+    cp mod_wsgi-4.5.7.tar.gz ../unpack
+    mkdir ../unpack
+    cd ../unpack
+    tar -xvzf mod_wsgi-4.5.7.tar.gz
+    l
+    cd mod_wsgi-4.5.7/
+    l
+[ ] Quick Installation Guide -> Configuring the Source Code
+    -> Using python3, it worked on jane - specifying it in ./configure command below
+    which apxs      # /usr/bin/apxs
+    which python3   # /usr/bin/python3
+    ./configure --with-apxs=/usr/bin/apxs --with-python=/usr/bin/python3   ## config.status: creating Makefile
+    echo $?   ## exit status: 0
+[ ] Quick Installation Guide -> Building the Source Code
+    make
+    echo $?   ## exit status: 0
+    sudo make install
+    ### ----------------------------------------------------------------------
+    ### Libraries have been installed in:
+    ###    /usr/lib/apache2/modules
+    ###
+    ### If you ever happen to want to link against installed libraries
+    ### in a given directory, LIBDIR, you must either use libtool, and
+    ### specify the full pathname of the library, or use the `-LLIBDIR'
+    ### flag during linking and do at least one of the following:
+    ###    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+    ###      during execution
+    ###    - add LIBDIR to the `LD_RUN_PATH' environment variable
+    ###      during linking
+    ###    - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+    ###    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+    ###
+    ### See any operating system documentation about shared libraries for
+    ### more information, such as the ld(1) and ld.so(8) manual pages.
+    ### ----------------------------------------------------------------------
+[ ] Quick Installation Guide -> Loading Module Into Apache
+    sudo su -
+    cd /etc/apache2/mods-available/
+    more *.load         # many are one-liners
+    vi wsgi.load
+    cat wsgi.load       # contents: only this one line
+    LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+    a2enmod wsgi
+    service apache2 stop
+    service apache2 start
+    systemctl status apache2.service    # used to identify error ('/usr/lib/apache2/' missing path)
+    systemctl status apache2.service > /tmp/apache_error.txt
+    cat /tmp/apache_error.txt
+    upapa
+    mkdir RCS
+    ci -l wsgi.load
+[ ] Quick Configuration Guide - getting the "Hello World" wsgi app to run:
+    https://modwsgi.readthedocs.io/en/develop/user-guides/quick-configuration-guide.html
+    Get a copy of the configuration file and update as appropriate (fix host name in ServerAlias):
+    sudo su -
+    cd /etc/apache2/sites-available/
+    vi 150-wsgi.test.conf
+    a2ensite 150-wsgi.test.conf
+    service apache2 reload
+    Add the following line to /etc/hosts :
+        127.0.1.1	barbara.wsgi.test
+    vi /etc/hosts
+    Using daemon mode, as proposed in original process run on jane
+    Access in browser:
+        http://barbara.wsgi.test/
+    For details on how we came up with the 150-wsgi.test.conf file, see:
+        https://github.com/tomwhartung/always_learning_python/tree/master/3-mod_wsgi
+        https://github.com/tomwhartung/always_learning_python/blob/master/3-mod_wsgi/README.md
+[ ] OK!  Now to get mod_wsgi to work with Django!
+    Update /etc/apache2/sites-available/050-seeourminds.com.conf , combining
+    - what we have in /etc/apache2/sites-available/150-wsgi.test.conf with
+    - the django-specific information here:
+        https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
+    One issue encountered:
+        Unable to use WSGIPythonPath in virtual host definition
+    See http://stackoverflow.com/questions/11034571/stuck-with-deploying-django-with-apache-mod-wsgi
+        Added python-path to the WSGIDaemonProcess instead
+[ ] Install pip3, virtualenv, and django
+    For details about how we arrived at using these commands, see:
+        https://github.com/tomwhartung/always_learning_python/blob/master/README.md
+      sudo apt-get install python3-pip
+      pip3 install virtualenv       ## It said installed 8.1.1 and to upgrade to 8.1.2 ...
+      pip3 install --upgrade pip    ## ... so I did, but it is still not in my path
+      which virtualenv              ## nada
+      sudo apt install virtualenv   ## Also had to do this for some strange reason...
+      which virtualenv              ## /usr/bin/virtualenv
+    Note:
+        We are installing django globally...
+        We are not going to use virtualenv right now on production and backup hosts
+        Installing it anyway because we may (will probably) want it when it comes time to
+           try running our site using different versions of python or django or both.
+        For reference, in case we change our mind, we can use it with commands like:
+        ## virtualenv --python=`which python3` ~/.virtualenvs/djangodev
+    Check for previous installs and uninstall as necessary:
+      python3 -m django --version
+      python3 -c "import django; print(django.__path__)"
+    I tried installing with just pip3, but it didn't seem to work - it installed the code
+      but when I tried to load the module it couldn't find it.
+      This may have been because I did not try loading it with python3 specifically.
+    This process is what we used in the always_learning_python repo's README.md file, and
+      is based on the process used to get the development version of the code
+    Clone latest source into djangostable, checkout latest branch, and install it globally
+      git clone git@github.com:django/django.git
+      cd django
+      git checkout stable/1.10.x
+      git status   # check status
+      git branch   # check branch
+      git log      # commit 8f428c82969d6f1e90f9fe2cbaff346d5d8c711a dated Sat Oct 15
+      cd ..
+      sudo -H pip3 install Django
+    Verify the current install:
+      python3 -m django --version                         ## 1.10.2
+      python3 -c "import django; print(django.__path__)"  ## ['/usr/local/lib/python3.5/dist-packages/django']
+    Note: django is currently NOT available for use with python2, aka. "python" :
+      python -m django --version                          ## /usr/bin/python: No module named django
+      python -c "import django; print(django.__path__)"   ## ImportError: No module named django
+[ ] Fix static content problem without breaking the ability to run python's built-in server on localhost
+    Note: django is currently NOT available for use with python2, aka. "python" :
+      python manage.py runserver    ## "ImportError: Couldn't import Django. Are you sure it's installed..."
+      python3 manage.py runserver   ## Runs ok
+    Test running the site through apache and python's internal server side-by-side:
+      http://localhost:8000/           ## Still finds static content ok
+      http://barbara.seeourminds.com/  ## Unable to find static content
+    Fix by adding an Alias for the static content dir to the apache config file (050-seeourminds.com.conf)
+      Reference: https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/#serving-files
+      > Alias /static/ /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/static
+
+
+
+
+
+
+[ ] Review Deployment Checklists
+    For a few of these that we have found along the way, see
+    0-install_ubuntu.urls
+ 
+
+
+[ ] Disk Space Spotcheck:
+    /:     
+    /home: 
+    /var/www: X.XG/XXG (XX%)
+
+---------------------------------------------
+If installing on a server, you can stop here.
+---------------------------------------------
+

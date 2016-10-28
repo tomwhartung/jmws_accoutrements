@@ -134,6 +134,13 @@ Desktop Necessities for Comfortableness
 [ ] Disk Space Spotcheck:
       /:     6.0G (28%)
       /home: 1.0G (5%)
+[ ] Use compizconfig-settings-manager to turn off annoying snapping behavior
+    Apparently turning this off in the unity tweak tool was not enough?
+    Access compizconfig-settings-manager via "Search Your Computer" icon
+    Run and lock to launcher
+    Window Management -> Resize Window -> General tab ->
+      Uncheck "Maximize Vertically if screen edge hit."
+
 
 *************** YOU ARE HERE (jane install) ***********************
 

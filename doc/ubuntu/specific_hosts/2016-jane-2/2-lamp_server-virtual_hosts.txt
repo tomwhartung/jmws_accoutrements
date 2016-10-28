@@ -227,6 +227,10 @@ Site: tomhartung.com
 [ ] Create and restore database
     -> using version from bette
     See ~/technical/cmses/drupal
+[ ] Set ownership of cache files
+    As root:
+      cd sites/default
+      chown -R www-data:www-data files
 [ ] Enable site and restart apache
     As root:
       a2ensite 060-tomhartung.com.conf
@@ -234,11 +238,11 @@ Site: tomhartung.com
       service apache2 start
       cd /etc/apache2
       l sites-*/*.conf
-[ ] Get the site working on barbara, jane, and ava
-    Looks like using code and db from bette is indeed the best choice
-    -> Hunt down issues on barbara and apply those fixes to jane and ava
+[ ] Log into back end and clear cache
+    Browser:
+      jane.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
 
-
+*** YOU ARE HERE ***
 
 Back It All Up
 --------------

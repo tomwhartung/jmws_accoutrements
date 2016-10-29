@@ -8,7 +8,7 @@ This is the third and fourth time going through this process, respectively.
 Previously we did it on:
 
 1. jane (before the disk crashed) and
-2. barbara 
+2. barbara
 
 So for additional details you may want to see:
 

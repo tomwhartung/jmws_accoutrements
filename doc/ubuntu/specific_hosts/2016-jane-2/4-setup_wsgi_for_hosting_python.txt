@@ -39,6 +39,8 @@ Process: - Install and configure apache mod_wsgi for serving django sites
 -------------------------------------------------------------------------
 2016-10-28 - doing this on jane (again!)
 
+1. Mod-wsgi "Hello World" Program
+---------------------------------
 [ ] First get mod-wsgi "Hello World" example working
     For security reasons, we are installing the latest version
     Starting here:
@@ -49,12 +51,13 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     Installation -> Quick Installation Guide -> Apache Requirements
         "On Linux systems, if Apache has been installed from a package repository, you must have
          installed the corresponding Apache “dev” package as well."
-[ ] Synaptic -> Search for apache2 -> If dev package not installed, mark it for installation -> Apply
+    As root:
+      dpkg-query -l apache2-dev
+      apt-get install -y apache2-dev
+[ ] If dev packages for python and python3 are not installed, install them
     Quick Installation Guide -> Python Requirements
         "On Linux systems, if Python has been installed from a package repository, you must have
          installed the corresponding Python “dev” package as well."
-[ ] If not installed, install dev packages for python and python3
-    ** USING apt-get THIS TIME - Synaptic not available on ava **
     As root:
       dpkg-query -l python-dev
       apt-get install -y python-dev
@@ -73,7 +76,7 @@ Process: - Install and configure apache mod_wsgi for serving django sites
       (4)      70     66    25
     ** TODO: RECONCILE THESE DIFFERENCES (remove or install packages as appropriate) **
     ** NOTE: There may well be valid reasons for the server (ava) to have fewer packages **
-[ ] Unpack the mod_wsgi tarball saved in git from when we did it on jane
+[ ] Unpack the mod_wsgi tarball saved in the always_learning_python repon on github
     As tomh:
       cd /var/www/learn/django/github/customizations/always_learning_python/
       cd downloads/
@@ -82,69 +85,77 @@ Process: - Install and configure apache mod_wsgi for serving django sites
       cd ../unpack
       tar -xvzf mod_wsgi-4.5.7.tar.gz
       l
+      rm mod_wsgi-4.5.7.tar.gz
       cd mod_wsgi-4.5.7/
       l
 [ ] Quick Installation Guide -> Configuring the Source Code
-    -> Using python3, it worked on jane - specifying it in ./configure command below
-    which apxs      # /usr/bin/apxs
-    which python3   # /usr/bin/python3
-    ./configure --with-apxs=/usr/bin/apxs --with-python=/usr/bin/python3   ## config.status: creating Makefile
-    echo $?   ## exit status: 0
+    Note: specifying python3 in ./configure command below
+    As tomh:
+      which apxs      # /usr/bin/apxs
+      which python3   # /usr/bin/python3
+      ./configure --with-apxs=/usr/bin/apxs --with-python=/usr/bin/python3   ## config.status: creating Makefile
+      echo $?   ## exit status: 0
 [ ] Quick Installation Guide -> Building the Source Code
-    make
-    echo $?   ## exit status: 0
-    sudo make install
-    ### ----------------------------------------------------------------------
-    ### Libraries have been installed in:
-    ###    /usr/lib/apache2/modules
-    ###
-    ### If you ever happen to want to link against installed libraries
-    ### in a given directory, LIBDIR, you must either use libtool, and
-    ### specify the full pathname of the library, or use the `-LLIBDIR'
-    ### flag during linking and do at least one of the following:
-    ###    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
-    ###      during execution
-    ###    - add LIBDIR to the `LD_RUN_PATH' environment variable
-    ###      during linking
-    ###    - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
-    ###    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
-    ###
-    ### See any operating system documentation about shared libraries for
-    ### more information, such as the ld(1) and ld.so(8) manual pages.
-    ### ----------------------------------------------------------------------
+    As tomh:
+      make
+      echo $?   ## exit status: 0
+      sudo make install
+      ### ----------------------------------------------------------------------
+      ### Libraries have been installed in:
+      ###    /usr/lib/apache2/modules
+      ###
+      ### If you ever happen to want to link against installed libraries
+      ### in a given directory, LIBDIR, you must either use libtool, and
+      ### specify the full pathname of the library, or use the `-LLIBDIR'
+      ### flag during linking and do at least one of the following:
+      ###    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+      ###      during execution
+      ###    - add LIBDIR to the `LD_RUN_PATH' environment variable
+      ###      during linking
+      ###    - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+      ###    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+      ###
+      ### See any operating system documentation about shared libraries for
+      ### more information, such as the ld(1) and ld.so(8) manual pages.
+      ### ----------------------------------------------------------------------
 [ ] Quick Installation Guide -> Loading Module Into Apache
-    sudo su -
-    cd /etc/apache2/mods-available/
-    more *.load         # many are one-liners
-    vi wsgi.load
-    cat wsgi.load       # contents: only this one line
-    LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
-    a2enmod wsgi
-    service apache2 stop
-    service apache2 start
-    systemctl status apache2.service    # used to identify error ('/usr/lib/apache2/' missing path)
-    systemctl status apache2.service > /tmp/apache_error.txt
-    cat /tmp/apache_error.txt
-    upapa
-    mkdir RCS
-    ci -l wsgi.load
+    As root:
+      cd /etc/apache2/mods-available/
+      more *.load         # many are one-liners
+      vi wsgi.load
+      cat wsgi.load       # contents: only this one line
+      LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+      a2enmod wsgi
+      service apache2 stop
+      service apache2 start
+      mkdir RCS
+      ci -l wsgi.load
 [ ] Quick Configuration Guide - getting the "Hello World" wsgi app to run:
     https://modwsgi.readthedocs.io/en/develop/user-guides/quick-configuration-guide.html
     Get a copy of the configuration file and update as appropriate (fix host name in ServerAlias):
-    sudo su -
-    cd /etc/apache2/sites-available/
-    vi 150-wsgi.test.conf
-    a2ensite 150-wsgi.test.conf
-    service apache2 reload
+    As root:
+      cd /etc/apache2/sites-available/
+      vi 150-wsgi.test.conf
+      a2ensite 150-wsgi.test.conf
+      service apache2 reload
+      vi /etc/hosts
     Add the following line to /etc/hosts :
-        127.0.1.1	barbara.wsgi.test
-    vi /etc/hosts
+      127.0.1.1	jane.wsgi.test
     Using daemon mode, as proposed in original process run on jane
     Access in browser:
-        http://barbara.wsgi.test/
+      http://jane.wsgi.test/
     For details on how we came up with the 150-wsgi.test.conf file, see:
         https://github.com/tomwhartung/always_learning_python/tree/master/3-mod_wsgi
         https://github.com/tomwhartung/always_learning_python/blob/master/3-mod_wsgi/README.md
+[ ] Cleanup hello world files
+    As root:
+      a2dissite 150-wsgi.test.conf
+      service apache2 stop
+      service apache2 start
+      vi /etc/hosts  ## comment out line added above
+
+2. Mod_wsgi and Django
+----------------------
 [ ] OK!  Now to get mod_wsgi to work with Django!
     Update /etc/apache2/sites-available/050-seeourminds.com.conf , combining
     - what we have in /etc/apache2/sites-available/150-wsgi.test.conf with

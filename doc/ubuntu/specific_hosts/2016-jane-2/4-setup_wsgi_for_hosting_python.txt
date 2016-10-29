@@ -2,44 +2,42 @@
  Hosting Django - Setup
 ========================
 
-This is the process we are running to set up barbara.
-This is the second time going through this process.
+This is the process we are running to set up jane, in parallel with ava.
 
-Serving Django Via Apache and Deploying a Django Site!
-------------------------------------------------------
-Having never hosted a django site, I want to be sure I do my due diligence
-in this regard.
+This is the third and fourth time going through this process, respectively.
+Previously we did it on:
+
+1. jane (before the disk crashed) and
+2. barbara 
+
+So for additional details you may want to see:
+
+o ../2016-jane-1/4-setup_wsgi_for_hosting_python.txt or
+o ../2016-barbara/4-setup_wsgi_for_hosting_python.txt
 
 Strategy with Regards to Virtual Environments
 ---------------------------------------------
-On jane we followed the tutorials and played around with virtual environments
-(the virtualenv command, etc.) a bit and wound up using only the virtualenv
-that uses python3 and django 1.10 .
-
-Since then we got mod_wsgi to work with apache, but jane started having issues
-before we got it to work with django
-
-In light of this experience, we will follow this strategy on barbara and ava,
-and probably other hosts as well:
+We are setting up jane and ava the same as we set up barbara:
 
 1. Install python3 as the python used by mod_wsgi.
 2. Install django 1.10 for use globally by default.
 3. Maintain some sort of record (copy of source, or github version hash, or?) of
    precisely which version of django 1.10 we installed globally.
-4. Use virtual environments (virtualenv command, etc.) experiment with and
-   upgrade to other versions of python or django or both, on specific hosts only
+4. Use virtual environments (virtualenv command, etc.) to experiment with and
+   upgrade python or django or both, first on jane, then on barbara, then on ava
 
 References:
 -----------
 Using this page as the driver:
     https://docs.djangoproject.com/en/1.10/topics/install/
 
-For many many many more links to info about adding apache2 mod_wsgi, see
-the file ../general/2-hosting_django-jane.txt
+For many many many more links to info about adding apache2 mod_wsgi, see:
+
+o ../2016-jane-1/4-setup_wsgi_for_hosting_python.txt
 
 Process: - Install and configure apache mod_wsgi for serving django sites
 -------------------------------------------------------------------------
-2016-10-14 - doing this on barbara
+2016-10-28 - doing this on jane (again!)
 
 [ ] First get mod-wsgi "Hello World" example working
     For security reasons, we are installing the latest version
@@ -55,18 +53,37 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     Quick Installation Guide -> Python Requirements
         "On Linux systems, if Python has been installed from a package repository, you must have
          installed the corresponding Python “dev” package as well."
-[ ] Synaptic -> Search for python -> If dev package not installed, mark it for installation -> Apply
-[ ] Synaptic -> Search for python3 -> If dev package not installed, mark it for installation -> Apply
+[ ] If not installed, install dev packages for python and python3
+    ** USING apt-get THIS TIME - Synaptic not available on ava **
+    As root:
+      dpkg-query -l python-dev
+      apt-get install -y python-dev
+      dpkg-query -l python3-dev
+      apt-get install -y python3-dev
+    On barbara, jane, and ava:
+      dpkg-query -l 'python*' | wc -l                 ## (1)
+      dpkg-query -l 'python*' | grep '^i' | wc -l     ## (2)
+      dpkg-query -l 'python3*' | wc -l                ## (3)
+      dpkg-query -l 'python3*' | grep '^i' | wc -l    ## (4)
+    Results:
+          barbara   jane   ava
+      (1)     266    194   108
+      (2)     111     78    33
+      (3)     125    122    59
+      (4)      70     66    25
+    ** TODO: RECONCILE THESE DIFFERENCES (remove or install packages as appropriate) **
+    ** NOTE: There may well be valid reasons for the server (ava) to have fewer packages **
 [ ] Unpack the mod_wsgi tarball saved in git from when we did it on jane
-    cd /var/www/learn/django/github/customizations/always_learning_python/
-    cd downloads/
-    cp mod_wsgi-4.5.7.tar.gz ../unpack
-    mkdir ../unpack
-    cd ../unpack
-    tar -xvzf mod_wsgi-4.5.7.tar.gz
-    l
-    cd mod_wsgi-4.5.7/
-    l
+    As tomh:
+      cd /var/www/learn/django/github/customizations/always_learning_python/
+      cd downloads/
+      cp mod_wsgi-4.5.7.tar.gz ../unpack
+      mkdir ../unpack
+      cd ../unpack
+      tar -xvzf mod_wsgi-4.5.7.tar.gz
+      l
+      cd mod_wsgi-4.5.7/
+      l
 [ ] Quick Installation Guide -> Configuring the Source Code
     -> Using python3, it worked on jane - specifying it in ./configure command below
     which apxs      # /usr/bin/apxs

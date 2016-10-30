@@ -1,0 +1,15 @@
+
+ Going Live With the New Server
+================================
+Note to self: be discreet about details shared with the world here on github.
+Just sayin'!
+
+[ ] Ensure all LAMP sites are running the latest version
+    [ ] joomoowebsites.com
+    [ ] tomhartung.com
+    [ ] tomwhartung.com
+
+[ ] Review Django Deployment Checklists
+    For a few of these that we have found along the way, see
+    ../../general/0-install_ubuntu.urls
+

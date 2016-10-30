@@ -215,43 +215,33 @@ Process: - Install and configure apache mod_wsgi for serving django sites
           git checkout stable/1.10.x
           git status   # check status
           git branch   # check branch
-          git log      # commit 8f428c82969d6f1e90f9fe2cbaff346d5d8c711a dated Sat Oct 15
+          git log      # commit 59001ca2130ede98d02476ebf3dc50f9cab68780 dated Mon Oct 24
           cd ..
           sudo -H pip3 install Django
     [ ] Step (3) Verify the current install:
-      python3 -m django --version                         ## 1.10.2
-      python3 -c "import django; print(django.__path__)"  ## ['/usr/local/lib/python3.5/dist-packages/django']
-    Note: django is currently NOT available for use with python2, aka. "python" :
+        As tomh:
+          python3 -m django --version
+          python3 -c "import django; print(django.__path__)"
+        ** Again it complains that I am 'using pip version 8.1.1, however version 8.1.2 is available.' **
+    [ ] Step (4) copy settings.py and test in browser
+        As tomh:
+          cd /var/www/seeourminds.com/htdocs/seeourminds.com/Site/Site
+          fromBarbara settings.py
+        Test in browser:
+          http://jane.seeourminds.com/
+[ ] Note that django is currently NOT available for use with python2, aka. "python" :
+    As tomh:
       python -m django --version                          ## /usr/bin/python: No module named django
       python -c "import django; print(django.__path__)"   ## ImportError: No module named django
-[ ] Fix static content problem without breaking the ability to run python's built-in server on localhost
-    Note: django is currently NOT available for use with python2, aka. "python" :
-      python manage.py runserver    ## "ImportError: Couldn't import Django. Are you sure it's installed..."
-      python3 manage.py runserver   ## Runs ok
-    Test running the site through apache and python's internal server side-by-side:
-      http://localhost:8000/           ## Still finds static content ok
-      http://barbara.seeourminds.com/  ## Unable to find static content
-    Fix by adding an Alias for the static content dir to the apache config file (050-seeourminds.com.conf)
-      Reference: https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/#serving-files
-      > Alias /static/ /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/static
-
-
-
-
-
-
-[ ] Review Deployment Checklists
-    For a few of these that we have found along the way, see
-    0-install_ubuntu.urls
- 
-
-
+[ ] Ensure we can still develop using the interal server
+    As tomh:
+      cd /var/www/seeourminds.com/htdocs/seeourminds.com/Site
+      python3 manage.py runserver
+    Test in browser:
+      http://127.0.0.1:8000/ or
+      http://localhost:8000/
 [ ] Disk Space Spotcheck:
-    /:     
-    /home: 
-    /var/www: X.XG/XXG (XX%)
-
----------------------------------------------
-If installing on a server, you can stop here.
----------------------------------------------
+    /:        6.5G/23G (31%)
+    /home:    1.1G/23G (6%)
+    /var/www: 7.7G/19G (45%)
 

@@ -178,7 +178,10 @@ Process: - Install and configure wsgi for serving django sites
         https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
 
 
-
+*******************************************
+*** THIS IS WHERE JANE'S HARD DISK DIED ***
+********** RIP JANE'S HARD DISK ***********
+*******************************************
 
 
 

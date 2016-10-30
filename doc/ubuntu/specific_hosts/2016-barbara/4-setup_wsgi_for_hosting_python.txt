@@ -171,8 +171,8 @@ Process: - Install and configure apache mod_wsgi for serving django sites
       cd ..
       sudo -H pip3 install Django
     Verify the current install:
-      python3 -m django --version                         ## 1.10.2
-      python3 -c "import django; print(django.__path__)"  ## ['/usr/local/lib/python3.5/dist-packages/django']
+      python3 -m django --version
+      python3 -c "import django; print(django.__path__)"
     Note: django is currently NOT available for use with python2, aka. "python" :
       python -m django --version                          ## /usr/bin/python: No module named django
       python -c "import django; print(django.__path__)"   ## ImportError: No module named django
@@ -186,24 +186,8 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     Fix by adding an Alias for the static content dir to the apache config file (050-seeourminds.com.conf)
       Reference: https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/#serving-files
       > Alias /static/ /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/static
-
-
-
-
-
-
-[ ] Review Deployment Checklists
-    For a few of these that we have found along the way, see
-    0-install_ubuntu.urls
- 
-
-
 [ ] Disk Space Spotcheck:
-    /:     
-    /home: 
-    /var/www: X.XG/XXG (XX%)
-
----------------------------------------------
-If installing on a server, you can stop here.
----------------------------------------------
+    /:        4.8G/13G (40%)
+    /home:    9.8G/9.1G (9%)
+    /var/www: 6.3G/10G (67%)
 

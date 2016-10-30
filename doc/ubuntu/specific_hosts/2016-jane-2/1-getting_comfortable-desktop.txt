@@ -98,6 +98,16 @@ Desktop Necessities for Comfortableness
       sudo apt install google-chrome-stable
     As tomh:
       google-chrome &  ## lock to launcher
+[ ] Disable annoying popup, asking for keyring password when starting chrome
+    Reference:
+      http://askubuntu.com/questions/867/how-can-i-stop-being-prompted-to-unlock-the-default-keyring-on-boot?noredirect=1&lq=1
+    Click on the "Search your computer" Ubuntu icon
+    Search for "Passwords and Keys"
+    Ensure the menu option View -> By Keyring is checked
+    Right-click on "Login" in the panel on the left
+    Click on "Change Password"
+    Enter the old (login) password
+    Leave new password blank
 [ ] Install chromium-browser, start and lock to launcher
    dpkg-query --list chromium-browser
    apt-get install -y chromium-browser
@@ -156,4 +166,5 @@ Desktop Necessities for Comfortableness
       git clone https://github.com/tomwhartung/edison_usr_local_bin.git
       cd /usr/local/bin
       ln -s /home/tomh/iot/customizations/edison_usr_local_bin/bin/pythonLibs .
+
 

@@ -78,7 +78,10 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     ** NOTE: There may well be valid reasons for the server (ava) to have fewer packages **
 [ ] Unpack the mod_wsgi tarball saved in the always_learning_python repon on github
     As tomh:
-      cd /var/www/learn/django/github/customizations/always_learning_python/
+      cd /var/www/
+      mkdir -p learn/django/github/customizations
+      cd learn/django/github/customizations
+      git clone https://github.com/tomwhartung/always_learning_python.git
       cd downloads/
       cp mod_wsgi-4.5.7.tar.gz ../unpack
       mkdir ../unpack
@@ -184,7 +187,7 @@ Process: - Install and configure apache mod_wsgi for serving django sites
       dpkg-query -l python3-pip
       dpkg-query -l '*pip*'
       dpkg-query -l virtualenv
-[ ] Install django globally
+[ ] Install django globally - rationale
     We are installing django globally...
     We are not going to use virtualenv right now on production and backup hosts
     Installing it anyway because we may (will probably) want it when it comes time to
@@ -195,21 +198,27 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     As tomh:
       python3 -m django --version
       python3 -c "import django; print(django.__path__)"
-    I tried installing with just pip3, but it didn't seem to work - it installed the code
-      but when I tried to load the module it couldn't find it.
-      This may have been because I did not try loading it with python3 specifically.
+[ ] Clone latest source into djangostable, checkout latest branch, and install it globally
     This process is what we used in the always_learning_python repo's README.md file, and
-      is based on the process used to get the development version of the code
-    Clone latest source into djangostable, checkout latest branch, and install it globally
-      git clone git@github.com:django/django.git
-      cd django
-      git checkout stable/1.10.x
-      git status   # check status
-      git branch   # check branch
-      git log      # commit 8f428c82969d6f1e90f9fe2cbaff346d5d8c711a dated Sat Oct 15
-      cd ..
-      sudo -H pip3 install Django
-    Verify the current install:
+      seems to work well enough
+    [ ] Step (1) ensure we have a copy of the seeourminds.com repo:
+        As tomh (these steps may already be done, but just in case...):
+          cd /var/www
+          mkdir -p seeourminds.com/htdocs/
+          cd seeourminds.com/htdocs/
+          git clone https://github.com/tomwhartung/seeourminds.com.git
+    [ ] Step (2) clone a copy of the stable version of django:
+        As tomh:
+          cd seeourminds.com/djangostable/
+          git clone git@github.com:django/django.git
+          cd django
+          git checkout stable/1.10.x
+          git status   # check status
+          git branch   # check branch
+          git log      # commit 8f428c82969d6f1e90f9fe2cbaff346d5d8c711a dated Sat Oct 15
+          cd ..
+          sudo -H pip3 install Django
+    [ ] Step (3) Verify the current install:
       python3 -m django --version                         ## 1.10.2
       python3 -c "import django; print(django.__path__)"  ## ['/usr/local/lib/python3.5/dist-packages/django']
     Note: django is currently NOT available for use with python2, aka. "python" :

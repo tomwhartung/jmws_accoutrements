@@ -156,18 +156,19 @@ Process: - Install and configure apache mod_wsgi for serving django sites
 
 2. Mod_wsgi and Django
 ----------------------
-[ ] OK!  Now to get mod_wsgi to work with Django!
-    Update /etc/apache2/sites-available/050-seeourminds.com.conf , combining
-    - what we have in /etc/apache2/sites-available/150-wsgi.test.conf with
-    - the django-specific information here:
-        https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
-    One issue encountered:
-        Unable to use WSGIPythonPath in virtual host definition
-    See http://stackoverflow.com/questions/11034571/stuck-with-deploying-django-with-apache-mod-wsgi
-        Added python-path to the WSGIDaemonProcess instead
+[ ] Obtain a copy of 050-seeourminds.com.conf
+    Copy /etc/apache2/sites-available/050-seeourminds.com.conf from barbara
+    Update 050-seeourminds.com.conf as appropriate
+    Enable the site and restart apache
+    As root:
+      a2ensite 050-seeourminds.com.conf
+      service apache2 reload
+    Optional: access the site at http://jane.seeourminds.com/
+      -> should get "Internal Server Error"
 [ ] Install pip3, virtualenv, and django
-    For details about how we arrived at using these commands, see:
+    Reference:
         https://github.com/tomwhartung/always_learning_python/blob/master/README.md
+    As tomh:
       sudo apt-get install python3-pip
       pip3 install virtualenv       ## It said installed 8.1.1 and to upgrade to 8.1.2 ...
       pip3 install --upgrade pip    ## ... so I did, but it is still not in my path

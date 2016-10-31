@@ -8,6 +8,11 @@ Just sayin'!
     For a few of these that we have found along the way, see
     ../../general/0-install_ubuntu.urls
 
+[ ] Update tera-wurfl
+    Review and update docs (README files, etc.)
+    Update code
+    Update db
+
 [ ] Clean obsolete code out of all LAMP sites' directories
     [ ] ava - make it ultra-clean
     [ ] jane - ok to leave some stuff (e.g., drupal7 code)

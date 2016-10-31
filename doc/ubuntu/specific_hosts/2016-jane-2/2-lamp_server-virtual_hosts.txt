@@ -34,8 +34,6 @@ Populate /var/www
         git clone git@github.com:tomwhartung/tomwhartung.github.io.git
         cd -
     groja.com:
-      NOTE: this is now a python site and will not work until we get WSGI going
-        For more information see: 4-setup_wsgi_for_hosting_python.txt
       As tomh:
         mkdir -p groja.com/htdocs
         cd groja.com/htdocs
@@ -146,6 +144,16 @@ Ensure Static Sites Work
       the sites-enabled directory
     Access in browser:
       http://jane.artsyvisions.com
+[ ] groja.com
+    As root:
+      a2ensite 020-groja.com.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/020-groja.com.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://jane.groja.com
 [ ] tomh.info
     As root:
       a2ensite 070-tomh.info.conf

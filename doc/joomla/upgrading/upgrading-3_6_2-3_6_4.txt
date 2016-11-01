@@ -127,28 +127,30 @@ If we are going that route, let's at least perform these preparatory steps.
    Choosing: "Write files directly" in drop-down
    It tried to do something!
    "Message: Download of update package failed."
-
-   ************************************
-   *** Sheesh what the actual fuck. ***
-   ************************************
-
-   Found a couple more patch files at:
-     https://downloads.joomla.org/cms/joomla3/3-6-4
-   (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
-   (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip
-5.1 Try using backend one more time with these guys....
-   Admin -> Components -> Joomla Update -> Upload & Update (tab)
-5.1.1 Using (1):
+5.1 Trying more stuff
+   Handy tip: sometimes you need to check for upgrades to the upgrade component
+      https://www.joomla-monster.com/blog/joomla-templates/5-issues-that-may-appear-while-updating-to-joomla-3-6-1-or-later
+   Admin -> Extensions -> Manage -> Update -> Clear Cache
+   Admin -> Extensions -> Manage -> Update -> Find Updates
+5.2 Found a couple more patch files at:
+      https://downloads.joomla.org/cms/joomla3/3-6-4
+      (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+      (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip
+   Try using backend one more time with these guys....
+      Admin -> Components -> Joomla Update -> Upload & Update (tab)
+5.2.1 Using (1):
    This time, an "Are you sure you want to update!" dialog with login box appears!
      Credentials filled in
      Got "ERROR: invalid login" error (again)
      Tried retyping password from scratch, and got it twice
      Tried in chrome, same result
-5.1.2 Using (2):
+5.2.2 Using (2):
    Again, an "Are you sure you want to update!" dialog with login box appears
      Got "ERROR: invalid login" error (again)
      Tried in chrome, same result
    Tried uploading from /var/.../joomoowebsites.com/tmp , same result
+5.2.3 Posted in the forums about all this:
+   https://forum.joomla.org/viewtopic.php?f=710&t=929038&p=3439721#p3439721
 
    **********************************
    *** ABOVE PROCESS DID NOT WORK ***
@@ -158,6 +160,10 @@ If we are going that route, let's at least perform these preparatory steps.
 6. Fall back to manual procedure (as usual)
    Starting with this page:
       https://docs.joomla.org/J3.x:Updating_from_an_existing_version
+   Also we have this one, but is it applicable to 3.6.x???
+      https://docs.joomla.org/J3.x:Upgrading_from_Joomla_3.4.x_to_3.5
+   Not seeing any caveats in that regard.
+   Updating
 6.1 Overview of preparatory steps (used last time and previously covered above)
    Check DB Schema: Extensions -> Manage -> Database
    Download Joomla_3.6.0-Stable-Update_Package.zip

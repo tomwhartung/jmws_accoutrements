@@ -83,92 +83,132 @@ Coped this code into the site directory tree and it fixed the errors!
 
 Looking at the process recommended on joomla.org, presumably we can update using the back end.
 That's what it's telling me to do.
+
 We have fallen for that crap before.
 If we are going that route, let's at least perform these preparatory steps.
 
-1. Check and fix file permissions
+#### 1.1. Check and fix file permissions
    System Information -> Folder Permissions
    If one or more of these is Unwritable, run these commands and recheck:
 ```
 gojmj
 ./fix_permissions.sh   # will ask for password to run sudo commands
 ```
-   To get configuration.php to show up as writable, may need to:
-   o  ** TEMPORARILY ** break the link and
-   o  ** TEMPORARILY ** copy the file from ../gitignored
+
+To get configuration.php to show up as writable, may need to:
+
+* **TEMPORARILY** break the link and
+* **TEMPORARILY** copy the file from ../gitignored
+
 ```
 rm configuration.php
 cp ../gitignored/configuration.php .
 sudo chgrp www-data configuration.php
 chmod 775 configuration.php
 ```
-   Recheck in back end:
-      System Information -> Folder Permissions
+Recheck in back end:
+
+* System Information -> Folder Permissions
 
 ### Steps (2) through (5) Get Frustrated With Joomla Update
 
 #### Step (2) Fixing warnings in Components -> Joomla Update
 
-   Components -> Joomla Update -> Upload & Update tab has two warnings
+Components -> Joomla Update -> Upload & Update tab has two warnings
 
-   2.1. "the php temporary folder is not set"
-     Fixed by setting the following values in /etc/php/7.0/apache2/php.ini
-       sys_temp_dir = "/tmp"     ;; first try, did not fix warning, but shouldn't hurt
-       upload_tmp_dir = "/tmp"   ;; second try, see reference, fixed warning
-     Restart apache
-     Reference: https://forum.joomla.org/viewtopic.php?t=933658
+##### 2.1. "the php temporary folder is not set"
 
-   2.2. "Maximum PHP file upload size is too small: ... both upload_max_filesize and post_max_size settings of ... php.ini"
-     Fixed by setting the following value in /etc/php/7.0/apache2/php.ini
-       upload_max_filesize = 8M
-     Restart apache
+Fixed by setting the following values in /etc/php/7.0/apache2/php.ini
+
+* sys_temp_dir = "/tmp"     ;; first try, did not fix warning, but shouldn't hurt
+* upload_tmp_dir = "/tmp"   ;; second try, see reference, fixed warning
+
+Restart apache!
+
+Reference: https://forum.joomla.org/viewtopic.php?t=933658
+
+##### 2.2. "Maximum PHP file upload size is too small: ... both upload_max_filesize and post_max_size settings of ... php.ini"
+
+Fixed by setting the following value in /etc/php/7.0/apache2/php.ini
+
+* upload_max_filesize = 8M
+
+Restart apache!
 
 #### Step (3) Clear all caches and check for db schema changes
 
-   Click on System -> Clear Cache
-   Click on System -> Clear Expired Cache
+* Click on System -> Clear Cache
+* Click on System -> Clear Expired Cache
       -> Clear Expired Cache (Icon/Button just below heading)
-   Check DB Schema: Extensions -> Manage -> Database
+* Check DB Schema: Extensions -> Manage -> Database
 
 #### Step (4) Trying Components -> Joomla Update -> Upload & Update tab
 
-   Because jane is behind two firewalls
-   Download file, put in:
-     /var/www/joomoowebsites.com/downloads/Joomla_3.6.4-Stable-Update_Package.zip
-   Choosing: "Write files directly" in drop-down
-   Click: Upload & Install
-   Doesn't do anything.
+Because jane is behind two firewalls, download the file in advance, and put it in:
+
+* /var/www/joomoowebsites.com/downloads/Joomla_3.6.4-Stable-Update_Package.zip
+
+Choosing: "Write files directly" in drop-down
+
+* Click: Upload & Install
+
+Doesn't do anything.
 
 #### Step (5) Trying Components -> Joomla Update -> Live Update tab (default)
 
 Choosing: "Write files directly" in drop-down ....
 
-It tried to do something!  "Message: Download of update package failed."
+**OMFG! It tried to do something!**
 
-5.1 Trying more stuff
-   Handy tip: sometimes you need to check for upgrades to the upgrade component
+**Bzzt!  "Message: Download of update package failed."**
+
+
+##### 5.1 Trying more stuff
+Handy tip: sometimes you need to check for upgrades to the upgrade component
       https://www.joomla-monster.com/blog/joomla-templates/5-issues-that-may-appear-while-updating-to-joomla-3-6-1-or-later
-   Admin -> Extensions -> Manage -> Update -> Clear Cache
-   Admin -> Extensions -> Manage -> Update -> Find Updates
-5.2 Found a couple more patch files at:
-      https://downloads.joomla.org/cms/joomla3/3-6-4
-      (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
-      (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip
-   Try using backend one more time with these guys....
-      Admin -> Components -> Joomla Update -> Upload & Update (tab)
-5.2.1 Using (1):
-   This time, an "Are you sure you want to update!" dialog with login box appears!
-     Credentials filled in
-     Got "ERROR: invalid login" error (again)
-     Tried retyping password from scratch, and got it twice
-     Tried in chrome, same result
-5.2.2 Using (2):
-   Again, an "Are you sure you want to update!" dialog with login box appears
-     Got "ERROR: invalid login" error (again)
-     Tried in chrome, same result
-   Tried uploading from /var/.../joomoowebsites.com/tmp , same result
-5.2.3 Posted in the forums about all this:
-   https://forum.joomla.org/viewtopic.php?f=710&t=929038&p=3439721#p3439721
+Admin -> Extensions -> Manage -> Update -> Clear Cache
+Admin -> Extensions -> Manage -> Update -> Find Updates
+
+##### 5.2 Found a couple more patch files ...
+
+... at:
+
+* https://downloads.joomla.org/cms/joomla3/3-6-4
+
+(1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+(2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip
+
+Try using backend one more time with these guys....
+
+* Admin -> Components -> Joomla Update -> Upload & Update (tab)
+
+###### 5.2.1 Using (1):
+
+This time, an "Are you sure you want to update!" dialog with login box appears!
+
+1. Filled in credentials
+
+2. Got "ERROR: invalid login" error (again)
+
+3. Tried retyping password from scratch, and got it twice
+
+4. Tried in chrome, same result
+
+###### 5.2.2 Using (2):
+
+Again, an "Are you sure you want to update!" dialog with login box appears
+
+1. Got "ERROR: invalid login" error (again)
+
+2. Tried in chrome, same result
+
+3. Tried uploading from /var/.../joomoowebsites.com/tmp , same result
+
+##### 5.3 Posted in the forums about all this:
+
+* https://forum.joomla.org/viewtopic.php?f=710&t=929038&p=3439721#p3439721
+
+Ahem.
 
 ```
 ----------------------------------

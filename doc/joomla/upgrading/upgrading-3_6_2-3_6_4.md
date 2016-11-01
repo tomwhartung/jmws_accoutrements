@@ -42,7 +42,7 @@ I feel like Charley Brown here, and joomla.org is Lucy holding the football.
 
 ### Not cool
 
-1. In ../upgrading_in_backend_never_works.txt it says to access: Adminitrator -> Extensions -< Manage -> Install 
+1. In ../upgrading_in_backend_never_works.txt it says to access: Adminitrator -> Extensions -< Manage -> Install
 
 2. That page says:
 "**Warning:** No installation plugin has been enabled.
@@ -162,12 +162,15 @@ Choosing: "Write files directly" in drop-down ....
 
 **Bzzt!  "Message: Download of update package failed."**
 
-
 ##### 5.1 Trying more stuff
+
 Handy tip: sometimes you need to check for upgrades to the upgrade component
-      https://www.joomla-monster.com/blog/joomla-templates/5-issues-that-may-appear-while-updating-to-joomla-3-6-1-or-later
-Admin -> Extensions -> Manage -> Update -> Clear Cache
-Admin -> Extensions -> Manage -> Update -> Find Updates
+
+* Reference: https://www.joomla-monster.com/blog/joomla-templates/5-issues-that-may-appear-while-updating-to-joomla-3-6-1-or-later
+
+* Admin -> Extensions -> Manage -> Update -> Clear Cache
+
+* Admin -> Extensions -> Manage -> Update -> Find Updates
 
 ##### 5.2 Found a couple more patch files ...
 
@@ -176,6 +179,7 @@ Admin -> Extensions -> Manage -> Update -> Find Updates
 * https://downloads.joomla.org/cms/joomla3/3-6-4
 
 (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+
 (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip
 
 Try using backend one more time with these guys....
@@ -232,78 +236,110 @@ Also we have this one, but is it applicable to 3.6.x???
 Not seeing any caveats in that regard.
 As long as everything is backed up, there should be No Fear Here.
 
-6.1 Overview of preparatory steps (Steps 1-3 above, before Joomla Update frustration set in)
-   Fixed permissions
-   Fixed warnings on joomla update page
-   Check DB Schema: Extensions -> Manage -> Database
-   Downloaded a few files:
-      (0) Joomla_3.6.0-Stable-Update_Package.zip - referenced on update page
-      (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz - found on downloads page
-      (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip - found on downloads page
-   -> I am thinking (1) is our best bet for this
+##### 6.1 Overview of preparatory steps (Steps 1-3 above, before Joomla Update frustration set in)
 
-6.2 A process similar to this has worked before:
-   gojmj
-   cp ../../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz .
-   tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
-   rm Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
-   ****************************************************
-   ** Oops, should have run fix_permissions.sh here  **
-   ** See ammended procedure - 6.4 Try again - below **
-   ** (Update: fix_permissions didn't help, oh well) **
-   ****************************************************
-6.3 Check for changes needed for database:
-   Extensions -> Manage -> Database
-      "Warning: Database is not up to date!"
-   Click on "Fix" button at top of page
-   -> Got a bunch of warnings, "Failed deleting xxx.xx"
-6.4 Try again, this time be sure to fix permissions
-6.4.1 Restore db:
-   Command:
+1. Fixed permissions
+2. Fixed warnings on joomla update page
+3. Check DB Schema: Extensions -> Manage -> Database
+4. Downloaded a few files:
+
+* (0) Joomla_3.6.0-Stable-Update_Package.zip - referenced on update page
+
+* (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz - found on downloads page
+
+* (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip - found on downloads page
+
+-> I am thinking (1) is our best bet for this
+
+##### 6.2 A process similar to this has worked before:
+
+Run commands:
+
+```
+gojmj
+cp ../../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz .
+tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+rm Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+```
+
+This did not work, rats.
+
+* Oops, should have run fix_permissions.sh here
+* See ammended procedure - 6.4 Try again - below
+* (Update: fix_permissions didn't help, oh well)
+
+##### 6.3 Check for changes needed for database:
+
+Extensions -> Manage -> Database
+
+* "Warning: Database is not up to date!"
+
+Click on "Fix" button at top of page
+
+* -> Got a bunch of warnings, "Failed deleting xxx.xx"
+
+##### 6.4 Try again, this time be sure to fix permissions
+
+###### 6.4.1 Restore db:
+
+Run command:
 ```
 rs -d 2016_10_31 jm 01-before_upgrading_3.6.2_to_3.6.4
 ```
-6.4.2 Restore code:
+###### 6.4.2 Restore code:
 
-Commands:
+Run commands:
 
 ```
 cd ..
 l
 mv joomoowebsites.com joomoowebsites.com-manual_upgrade_gave_warnings
 git clone git@github.com:tomwhartung/joomoowebsites.com.git
-cp gitignored/configuration.php joomoowebsites.com 
+cp gitignored/configuration.php joomoowebsites.com
 cp ../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz joomoowebsites.com
 cd joomoowebsites.com
-tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz 
+tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
 ```
 
-6.4.3 Fix permissions and verify they are ok
+###### 6.4.3 Fix permissions and verify they are ok
 
-Command:
+Run command:
 
 ```
 gojmj
 fix_permissions.sh
 ```
-   Relogin to admin panel -> System -> System Information -> File permissions
-      Verify all are writable
 
-6.4.4 Check for changes needed for database:
-   Extensions -> Manage -> Database
-      "Warning: Database is not up to date!"
-   Click on "Fix" button at top of page
-   +++ STILL got a bunch of "Failed deleting" warnings +++
-   +++ Guess we will have to live with the cruft!?!?!? +++
-   To see the warnings we got, see ../details/2016_11_01-upgrading-3_6_2-3_6_4.txt
-   -> Moving on!
-   System -> System Information
-      Joomla Version: 3.6.4
-   -> Still a whole lot easier and quicker ( < 1 hr.!) than trying to use the back end!!!
+Relogin to admin panel:
 
-6.5 Commit the code, backup the database, backup the backup, and fix the link
+*  System -> System Information -> File permissions
 
-Commands:
+Verify all are writable
+
+###### 6.4.4 Check for changes needed for database:
+
+Admin panel:
+
+* Extensions -> Manage -> Database
+* "Warning: Database is not up to date!"
+
+Click on "Fix" button at top of page
+
+* STILL got a bunch of "Failed deleting" warnings
+* Guess we will have to live with the cruft!?!?!?
+
+To see the warnings we got, see ../details/2016_11_01-upgrading-3_6_2-3_6_4.txt .
+Moving on!
+
+###### 6.4.5 Verify we are done
+
+System -> System Information -> Joomla Version: 3.6.4
+
+-> Still a whole lot easier and quicker ( < 1 hr.!) than trying to use the back end!!!
+
+##### 6.6 Commit the code, backup the database, backup the backup, and fix the link
+
+Run commands:
 
 ```
 gojmj
@@ -313,13 +349,41 @@ git commit -m 'Upgraded to 3.6.4.'
 git push origin master
 bu jm 02-after_upgrading_3.6.2_to_3.6.4
 tarHome
-diff configuration.php ../gitignored/configuration.php 
+diff configuration.php ../gitignored/configuration.php
 rm configuration.php ; ln -s ../gitignored/configuration.php .
 ```
 
-Upgrading New Production host:
-------------------------------
-New production host (server) is barbara.
+### Step (7) Upgrading backup host:
+
+New backup host is barbara.
+
+1. Backup current DB and restore final copy of DB from jane:
+   bu jm  01-before_upgrading_3.5.1_to_3.6.2          # IF NOT DONE ALREADY, DO IT NOW
+   rs -h jane -d 2016_08_29 jm 03-after_upgrading_3.6.0_to_3.6.2
+2. Pull the code and fix the permissions
+   gojmj
+   git pull
+   fix_permissions.sh  # Does checking this file in pose a security risk?  I don't see how, but...
+3. Ensure configuration.php matches that on jane:
+   gojmj
+   cd ../gitignored/
+   diffJane configuration.php
+4. Test in browswer
+   Test front end in browser
+   - Check a few menu options
+   - Check articles with images
+   Test back end in browser
+   - System -> System Information -> System Information (check Joomla version)
+   - System -> System Information -> Folder Permissions (Unwritable configuration.php is ok)
+   - Extensions -> Manage -> Database (check schema version)
+5. Backup DB and we are done:
+   bu j  02-after_upgrade
+
+
+### Step (8) Upgrading production host:
+
+New production host (server) is ava.
+
 1. Backup current DB and restore final copy of DB from jane:
    bu jm  01-before_upgrading_3.5.1_to_3.6.2          # IF NOT DONE ALREADY, DO IT NOW
    rs -h jane -d 2016_08_29 jm 03-after_upgrading_3.6.0_to_3.6.2

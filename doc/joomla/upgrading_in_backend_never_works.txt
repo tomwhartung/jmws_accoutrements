@@ -1,0 +1,60 @@
+
+ JooMooWebSites.com - Upgrading Notes for 2016
+===============================================
+As mentioned below, we have wasted hours trying to use
+the admin panel to upgrade the site, but so far 
+upgrading in the backend never works.
+
+If we want to try it again, these notes may offer some
+insight into what might go wrong.
+
+=================================================================
+ Optional (Untested - for future reference) *** DO NOT USE!!! ***
+=================================================================
+THIS JUST IN!
+GO TO Extensions -> Manage -> Install
+CURRENTLY IT SAYS:
+   Warning: No installation plugin has been enabled. At least one
+      must be enabled to be able to use the installer. Go to the
+      Plugin Manager to enable the plugins
+MAYBE THIS IS WHY TRYING TO UPDATE IN THE ADMIN PANEL IS NOT WORKING??
+
+-----------------------------------------------------------
+*** MY OWN WARNING: DO NOT WASTE MUCH TIME ON THIS!!!!! ***
+-----------------------------------------------------------
+
+IF YOU LOOK AT THE HISTORY YOU WILL SEE WE HAVE WASTED HOURS IN
+TRYING TO GET THIS TO WORK!  WE HAVE:
+
+o GOOGLED FOR ANSWERS TO ERROR MESSAGES
+o READ AND RE-READ INSTRUCTIONS (THAT KEEP CHANGING)
+o FIXED WARNINGS AND PERMISSIONS
+o TRIED TO GET THIS TO WORK SEVERAL TIMES
+
+I HAVE *NEVER* GOTTEN THIS PROCESS TO WORK AND THE MANUAL PROCESS
+OF UNZIPPING THE STABLE PATCH FILE SO FAR WORKS EVERY TIME AND ONLY
+TAKES A FEW MINUTES.
+
+*****************************************************************************
+*** So think twice before trying to upgrade via the admin panel yet again ***
+*****************************************************************************
+
+Optional (Untested - for future reference)
+------------------------------------------
+Not sure whether we will be able to do this, but don't want to forget
+that it may be an option at some point.
+
+New for 2016: Trying to upgrade via the admin panel (like we do for WP)
+-----------------------------------------------------------------------
+Installation method: Write files directly
+1. Error occurred (unable to write to logs dir).
+   gojmj
+   chmod 775 logs/
+   sudo chgrp www-data logs/
+2. Message: "Download of update package failed."
+   chmod 775 tmp/
+   sudo chgrp www-data tmp/
+3. Pop-up: "Error: Invalid login"
+   Acts like it is working but I suspect it is not
+   Not seeing any solutions right off the bat (and don't feel like more digging)
+

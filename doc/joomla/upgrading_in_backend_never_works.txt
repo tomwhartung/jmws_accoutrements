@@ -8,6 +8,9 @@ upgrading in the backend never works.
 I feel like "they" all assume I am using something like
 Go Daddy or CPanel.
 
+On 11/1/2016 I actually posted in the forums about all this:
+   https://forum.joomla.org/viewtopic.php?f=710&t=929038&p=3439721#p3439721
+
 If we want to try it again, these notes may offer some
 insight into what might go wrong.
 

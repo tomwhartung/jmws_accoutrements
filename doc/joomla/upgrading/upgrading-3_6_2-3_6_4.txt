@@ -1,34 +1,90 @@
 
- JooMooWebSites.com - Upgrading Notes for 2016
-===============================================
+# JooMooWebSites.com - Upgrading Notes for 2016
+
 We're always changing this, so this file is mostly to keep track of
 what was done the last time or two, in case we find issues, and to
 give us a starting point, with appropriate cautions and tips, for
 next time.
 
-Log
----
-[ ] 2016-08-29: 3.5.1 to 3.6.0
+## Reference:
 
-Before You Start
-----------------
-0. On ALL hosts: backup DB and ensure code matches what is in github
-   bu jm 01-before_upgrading_3.5.0_to_3.6.0
+Always check out the release news:
+
+* https://www.joomla.org/announcements/release-news.html
+
+Sometimes special instructions apply.
+
+## Log
+
+2016-10-31: Upgrading from 3.6.2 to 3.6.4 .
+(Unsure how we got from 3.6.0 to 3.6.2 .)
+
+## Before You Start
+
+Always backup db and ensure code is up-to-date and checked in.
+
+1. On ALL hosts: backup DB and ensure code matches what is in github
+   bu jm 01-before_upgrading_3.6.2_to_3.6.4
    gojmj
    git status
    git pull
-1. Decide which host to do most of the work on:
-   jane - moving production to barbara, which is also running Ubuntu 16.04
-       Never updated lauren last time
-       May not even bother with bette this time...
+2. Decide which host to do most of the work on:
+   jane - our development server, with a new disk and plenty of memory, should do well
 
- 2016-08-29: Notes on Upgrading From 3.5.1 to 3.6.0
-====================================================
-There are some major caveats in upgrading these versions!  (3.6.1 is apparently a bad release)
-   https://www.joomla.org/announcements/release-news/5666-the-joomla-3-6-1-update.html
-It says to "Update to Joomla! 3.6.0 through the Joomla! Update component"
-   https://docs.joomla.org/J3.x:Updating_from_an_existing_version
-Looks easy enough but let's do some checks first:
+## 2016-10-31: Notes on Upgrading From 3.6.2 to 3.6.4
+
+The Release News page links to this process:
+
+* https://docs.joomla.org/J3.x:Updating_from_an_existing_version
+
+Reviewing past attempts (../upgrading_in_backend_never_works.txt),
+I feel like Charley Brown here, and joomla.org is Lucy holding the football.
+
+### Not cool
+
+1. In ../upgrading_in_backend_never_works.txt it says to access: Adminitrator -> Extensions -< Manage -> Install 
+
+2. That page says:
+"**Warning:** No installation plugin has been enabled.
+At least one must be enabled to be able to use the installer.
+Go to the Plugin Manager to enable the plugins."
+
+3. Going to the Plugin Manager confirms that four installation plugins are installed and enabled.
+
+4. Returning to the Adminitrator -> Extensions -< Manage -> Install page, it still displays that warning.  Sheesh fml.
+
+### Observations
+
+Aha! Checking the permissions in Step (1) it says plugins/installer is unwritable - added that to fix_permissions.sh ....
+
+Still seeing the warning message.
+
+Trying to edit the plugins listed (by clicking on their names), three of the four give me an error:
+
+1. Installer - Install from Web: able to open it up, not many options to edit though
+
+2. Installer - Install from Upload: "Error The file packageinstaller.xml could not be found."
+
+3. Installer - Install from Folder: "Error The file folderinstaller.xml could not be found."
+
+4. Installer - Install from URL: "Error The file folderinstaller.xml could not be found."
+
+### The Fix!?!
+
+Downloaded Joomla_3.6.4-Stable-Full_Package.zip and found code in the following directories:
+
+* plugins/installer/folderinstaller/
+* plugins/installer/packageinstaller/
+* plugins/installer/urlinstaller/
+
+Coped this code into the site directory tree and it fixed the errors!
+
+### Step (1) Standard Preparatory Steps
+
+Looking at the process recommended on joomla.org, presumably we can update using the back end.
+That's what it's telling me to do.
+We have fallen for that crap before.
+If we are going that route, let's at least perform these preparatory steps.
 
 1. Check and fix file permissions
    System Information -> Folder Permissions

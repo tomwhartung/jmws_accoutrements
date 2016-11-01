@@ -112,10 +112,11 @@ If we are going that route, let's at least perform these preparatory steps.
      Fixed by setting the following value in /etc/php/7.0/apache2/php.ini
        upload_max_filesize = 8M
      Restart apache
-3. Clear all caches
+3. Clear all caches and check for db schema changes
    Click on System -> Clear Cache
    Click on System -> Clear Expired Cache
       -> Clear Expired Cache (Icon/Button just below heading)
+   Check DB Schema: Extensions -> Manage -> Database
 4. Trying Components -> Joomla Update -> Upload & Update tab
    Because jane is behind two firewalls
    Download file, put in:
@@ -156,6 +157,7 @@ If we are going that route, let's at least perform these preparatory steps.
    *** ABOVE PROCESS DID NOT WORK ***
    ***** USING MANUAL PROCEDURE *****
    **********************************
+   Even though they advise against it...
 
 6. Fall back to manual procedure (as usual)
    Starting with this page:
@@ -163,37 +165,73 @@ If we are going that route, let's at least perform these preparatory steps.
    Also we have this one, but is it applicable to 3.6.x???
       https://docs.joomla.org/J3.x:Upgrading_from_Joomla_3.4.x_to_3.5
    Not seeing any caveats in that regard.
+      As long as everything is backed up, there should be No Fear Here
    Updating
-6.1 Overview of preparatory steps (used last time and previously covered above)
+6.1 Overview of preparatory steps (Steps 1-3 above, before Joomla Update frustration set in)
+   Fixed permissions
+   Fixed warnings on joomla update page
    Check DB Schema: Extensions -> Manage -> Database
-   Download Joomla_3.6.0-Stable-Update_Package.zip
-   Fix permissions
-
-*** I want to try the manual process, even though they advise against it ***
+   Downloaded a few files:
+      (0) Joomla_3.6.0-Stable-Update_Package.zip - referenced on update page
+      (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz - found on downloads page
+      (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip - found on downloads page
+   -> I am thinking (1) is our best bet for this
 
 6.2 A process similar to this has worked before:
    gojmj
-   cp ../../downloads/Joomla_3.6.4-Stable-Update_Package.zip .
-   unzip -o Joomla_3.6.4-Stable-Update_Package.zip
-   rm Joomla_3.6.4-Stable-Update_Package.zip
-
-   **************************
-   *** DO NOT ACCESS SITE ***
-   **************************
-4.5 Check:
+   cp ../../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz .
+   tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+   rm Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+   ****************************************************
+   ** Oops, should have run fix_permissions.sh here  **
+   ** See ammended procedure - 6.4 Try again - below **
+   ** (Update: fix_permissions didn't help, oh well) **
+   ****************************************************
+6.3 Check for changes needed for database:
    Extensions -> Manage -> Database
-      "Database table structure is up to date."
+      "Warning: Database is not up to date!"
+   Click on "Fix" button at top of page
+   -> Got a bunch of warnings, "Failed deleting xxx.xx"
+6.4 Try again, this time be sure to fix permissions
+6.4.1 Restore db:
+   Command:
+      rs -d 2016_10_31 jm 01-before_upgrading_3.6.2_to_3.6.4
+6.4.2 Restore code:
+   Commands:
+      cd ..
+      l
+      mv joomoowebsites.com joomoowebsites.com-manual_upgrade_gave_warnings
+      git clone git@github.com:tomwhartung/joomoowebsites.com.git
+      cp gitignored/configuration.php joomoowebsites.com 
+      cp ../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz joomoowebsites.com
+      cd joomoowebsites.com
+      tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz 
+6.4.3 Fix permissions and verify they are ok
+   Command:
+      gojmj
+      fix_permissions.sh
+   Relogin to admin panel -> System -> System Information -> File permissions
+      Verify all are writable
+6.4.4 Check for changes needed for database:
+   Extensions -> Manage -> Database
+      "Warning: Database is not up to date!"
+   Click on "Fix" button at top of page
+   *** STILL got a bunch of warnings, "Failed deleting" ***
+   *** Guess we will have to live with the cruft!?!?  ***
+   To see the warnings we got, see ../details/2016_11_01-upgrading-3_6_2-3_6_4.txt
+   -> Moving on!
    System -> System Information
-      Joomla Version: 3.6.0
-
-5. Upgrade to 3.6.2
-   Note: now at 3.6.0, still need to upgrade to 3.6.2
-5.1 Commit code and backup database
+      Joomla Version: 3.6.4
+   -> Still a whole lot easier and quicker ( < 1 hr.!) than trying to use the back end!!!
+6.5 Commit the code, backup the database, and backup the backup
    gojmj
    git add --all
-   gs
-   gc 'Upgraded to 3.6.0.' ; gpom
-   bu jm 02-before_upgrading_3.6.0_to_3.6.2
+   git status
+   git commit -m 'Upgraded to 3.6.4.'
+   git push origin master
+   bu jm 02-after_upgrading_3.6.2_to_3.6.4
+   tarHome
+
 5.2 Which to use?
    Found a few more patch files at:
      https://downloads.joomla.org/cms/joomla3/3-6-4

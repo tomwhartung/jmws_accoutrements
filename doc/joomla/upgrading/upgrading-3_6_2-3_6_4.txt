@@ -100,12 +100,38 @@ If we are going that route, let's at least perform these preparatory steps.
    chmod 775 configuration.php
    Recheck in back end:
       System Information -> Folder Permissions
-2. Trying Components -> Joomla Update
-   Popup: "ERROR: Invalid login"  (getting deja vu)
-   Doesn't seem to be doing anything....
-2.1 Update Installer Plugin
--> Try updating the installer plugin first
-   Control Panel -> (red banner) "1 Extension Update(s) are available"
+2. Fixing warnings in Components -> Joomla Update
+   Components -> Joomla Update -> Upload & Update tab has two warnings
+   2.1. "the php temporary folder is not set"
+     Fixed by setting the following values in /etc/php/7.0/apache2/php.ini
+       sys_temp_dir = "/tmp"     ;; first try, did not fix warning, but shouldn't hurt
+       upload_tmp_dir = "/tmp"   ;; second try, see reference, fixed warning
+     Restart apache
+     Reference: https://forum.joomla.org/viewtopic.php?t=933658
+   2.2. "Maximum PHP file upload size is too small: ... both upload_max_filesize and post_max_size settings of ... php.ini"
+     Fixed by setting the following value in /etc/php/7.0/apache2/php.ini
+       upload_max_filesize = 8M
+     Restart apache
+3. Clear all caches
+   Click on System -> Clear Cache
+   Click on System -> Clear Expired Cache
+      -> Clear Expired Cache (Icon/Button just below heading)
+4. Trying Components -> Joomla Update -> Upload & Update tab
+   Because jane is behind two firewalls
+   Download file, put in:
+     /var/www/joomoowebsites.com/downloads/Joomla_3.6.4-Stable-Update_Package.zip
+   Choosing: "Write files directly" in drop-down
+   Click: Upload & Install
+   Doesn't do anything.
+5. Trying Components -> Joomla Update -> Live Update tab (default)
+   Choosing: "Write files directly" in drop-down
+   It tried to do something!
+   "Message: Download of update package failed."
+
+   ************************************
+   *** Sheesh what the actual fuck. ***
+   ************************************
+
    Click on "View Updates"
    Click the "Clear Cache" button
    Click the "Find Updates" button

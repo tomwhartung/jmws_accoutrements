@@ -5,6 +5,9 @@ As mentioned below, we have wasted hours trying to use
 the admin panel to upgrade the site, but so far 
 upgrading in the backend never works.
 
+I feel like "they" all assume I am using something like
+Go Daddy or CPanel.
+
 If we want to try it again, these notes may offer some
 insight into what might go wrong.
 

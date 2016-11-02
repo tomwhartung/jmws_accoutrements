@@ -121,21 +121,55 @@ tarHome
 
 ## Step (3) Updating Plugins
 
-Doing this on *jane*.
+Doing this on **jane**.
 
 We are able to update plugins using the admin back end, as long as we
 change the owner of the files in the WP installation directory tree.
 
-1. Update in admin back end
-   Admin -> Plugins -> "update now" link for the plugin
-2. Commit files to git
-   gotwt
-   git status
-   git add wp-content/
-   gc 'Upgraded akismet to version 3.1.11 .' ; gpom
+Run commands:
 
-Updating wp core and plugins on jane and barbara:
--------------------------------------------------
+```
+gotwt
+sudo chown -R www-data:tomh *
+```
+
+### 3.1. Update in admin back end
+
+*  Admin -> Plugins -> "update now" link for the plugin
+
+### 3.2. Change perms back to the way they were:
+
+Run commands:
+
+```
+gotwt
+sudo chown -R tomh:www-data *
+```
+
+### 3.3. Commit files to git
+
+Run commands:
+
+```
+gotwt
+git status
+git add wp-content/
+git commit -m 'Upgraded akismet to version 3.2 .' ; git push origin master
+```
+
+### 3.4 Backup the db and backup the backup
+
+Run commands:
+
+```
+bu tw 03-after_upgrade_4_6_to_4_6_1
+tarHome
+```
+
+(Actually I am unsure whether this step is necessary.)
+
+## Step (4) Updating wp core and plugins on barbara and ava:
+
 1. Make sure database is backed up (in previous section "All Hosts: above)
    bu tw 01-before_upgrade_4.4.2_to_4.6    # should have already been done!
 2. Open browser window on jane:
@@ -232,9 +266,5 @@ Upgrade each theme on bette, then jane and barbara
    On bette:
       gotwt
       sudo chown -R tomh *
-Conclusion:
------------
-Checking the diffs after installing the themes on bette, I can see there
-are no database changes.  So we just pull the code.  Note however that
-you can never have too many backups of the DB!
+
 

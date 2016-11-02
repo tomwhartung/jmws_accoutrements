@@ -15,7 +15,7 @@ The Latest References (from upgrade to 4.3.1):
 
 - [ ] 2016-
 - [ ] 2016-xx-xx: 4.6   to 4.x.x
-- [X] 2016-11-01: 4.6   to 4.6.1
+- [ ] 2016-11-01: 4.6   to 4.6.1
 - [X] 2016-09-02: 4.4.2 to 4.6
 - [X] 2016-02-11: 4.4.1 to 4.4.2
 - [X] 2016-01-15: 4.3.1 to 4.4.1
@@ -24,9 +24,9 @@ The Latest References (from upgrade to 4.3.1):
 
 Backup db on all hosts and ensure code matches what is in github:
 
-- [ ] jane
-- [ ] barbara
-- [ ] ava
+- [X] jane
+- [X] barbara
+- [X] ava
 
 Run these commands on each host listed above:
 
@@ -41,17 +41,19 @@ git status
 
 To enable using the back end to update the code rather than downloading it, follow these steps.
 
-We need to do this for at least one host:
+We need to do this for **only one host:**
 
 * jane on 2016-11-01
 
-### 2.1. Ensure the following line has been added to wp-config.php :
+### 1.1. Ensure the following line has been added to wp-config.php :
 
 ```
-define('FS_METHOD','direct');     # This is one key
+define('FS_METHOD','direct');
 ```
 
-### 2.2. Ensure the web server can write the files by making the following changes:
+This is one key.
+
+### 1.2. Ensure the web server can write the files by making the following changes:
 
    Change ownership of all files to www-data, create directory wp-content/upgrade
 
@@ -60,41 +62,70 @@ Run commands:
 ```
 gotwt
 mkdir wp-content/upgrade
-sudo chown -R www-data:tomh *          # This is another key
+sudo chown -R www-data:tomh *
 ```
 
-Change perms of wp-content/upgrade and any subdirectories of it to 775
+This is another key.
+
+Change perms of wp-content/upgrade and any subdirectories of it to 775.
+
 Run commands:
 
 ```
-sudo chmod -R 775 wp-content/upgrade*  # Unsure whether this step is necessary
+sudo chmod -R 775 wp-content/upgrade*
 ls -al wp-content/upgrade
 ```
 
+(Actually I am unsure whether this step is necessary.)
+
 ## Step (2) Update WP Core on *jane* Using Admin Panel:
 
-1. Update in back end:
-   Admin -> Dashboard -> Updates
-2. Check in browser for each gadget type:
-   If it looks OK, proceed, else figure out what went wrong.
-3. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
-   gotwt
-   sudo chown -R tomh:www-data *
-   sudo chmod 755 wp-content wp-content/*
-   ls -al wp-content/
-4. Check the changes into git:
-   gotwt
-   git status
-   git add --all .
-   git commit -m 'Upgrading from 4.4.2_to_4.6.' ; git push origin master
-5. Backup db on this host:
-   bu tw 02-after_upgrade_4.4.2_to_4.6
+### 2.1. Update in back end:
 
-Updating plugins on *bette*
----------------------------
-[ ] bette:
+* Admin -> Dashboard -> Updates
+
+### 2.2. Check in browser for each gadget type:
+
+If it looks OK, proceed, else figure out what went wrong.
+
+### 2.3. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
+
+Run commands:
+
+```
+gotwt
+sudo chown -R tomh:www-data *
+sudo chmod 755 wp-content wp-content/*
+ls -al wp-content/
+```
+
+### 2.4. Check the changes into git:
+
+Run commands:
+
+```
+gotwt
+git status
+git add --all .
+git commit -m 'Upgrading from 4.6 to 4.6.1 .' ; git push origin master
+```
+
+### 2.5. Backup db on this host, and backup the backup:
+
+Run commands:
+
+```
+bu tw 02-after_upgrade_4_6_to_4_6_1
+tarHome
+```
+
+## Step (3) Updating Plugins
+
+Doing this on *jane*.
+
 We are able to update plugins using the admin back end, as long as we
 change the owner of the files in the WP installation directory tree.
+
 1. Update in admin back end
    Admin -> Plugins -> "update now" link for the plugin
 2. Commit files to git

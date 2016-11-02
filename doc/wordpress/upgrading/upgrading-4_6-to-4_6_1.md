@@ -1,55 +1,78 @@
 
-Introduction
-------------
+# Introduction
+
 The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
 Plus we don't run it often enough to be really confident about it or good at it etc.
 
-TomWHartung.com - WP Upgrading Notes for 2016
----------------------------------------------
+## TomWHartung.com - WP Upgrading Notes for 2016
+
 The Latest References (from upgrade to 4.3.1):
-   https://wordpress.org/support/topic/core-or-plugin-update-could-not-create-directory-httpdocs?replies=27
-   http://wordpress.stackexchange.com/questions/141063/when-fs-method-direct-is-chosen
 
-Log
----
-[ ] 2016-
-[ ] 2016-xx-xx: 4.6   to 4.x.x
-[ ] 2016-11-01: 4.6   to 4.6.1
-[ ] 2016-09-02: 4.4.2 to 4.6
-[ ] 2016-02-11: 4.4.1 to 4.4.2
-[ ] 2016-01-15: 4.3.1 to 4.4.1
+* https://wordpress.org/support/topic/core-or-plugin-update-could-not-create-directory-httpdocs?replies=27
+* http://wordpress.stackexchange.com/questions/141063/when-fs-method-direct-is-chosen
 
-All Hosts
----------
-1. Backup db on all hosts and ensure code matches what is in github:
-   [ ] jane
-   [ ] barbara
-   [ ] ava
-   bu tw 01-before_upgrade-4_6-to-4_6_1
-   gotwt
-   git pull
-   git status
+## Log
 
-Getting core update to work from back end:
-------------------------------------------
+- [ ] 2016-
+- [ ] 2016-xx-xx: 4.6   to 4.x.x
+- [X] 2016-11-01: 4.6   to 4.6.1
+- [X] 2016-09-02: 4.4.2 to 4.6
+- [X] 2016-02-11: 4.4.1 to 4.4.2
+- [X] 2016-01-15: 4.3.1 to 4.4.1
+
+## Step (0) Before Starting, on All Hosts
+
+Backup db on all hosts and ensure code matches what is in github:
+
+- [ ] jane
+- [ ] barbara
+- [ ] ava
+
+Run these commands on each host listed above:
+
+```
+bu tw 01-before_upgrade-4_6-to-4_6_1
+gotwt
+git pull
+git status
+```
+
+## Step (1) Setting up Core Update via Admin Panel
+
 To enable using the back end to update the code rather than downloading it, follow these steps.
+
 We need to do this for at least one host:
 
 * jane on 2016-11-01
 
-1. Ensure the following line has been added to wp-config.php :
-   define('FS_METHOD','direct');     # This is one key
-2. Ensure the web server can write the files by making the following changes:
-   Change ownership of all files to www-data, create directory wp-content/upgrade
-   gotwt
-   mkdir wp-content/upgrade
-   sudo chown -R www-data:tomh *          # This is another key
-   Change perms of wp-content/upgrade and any subdirectories of it to 775
-   sudo chmod -R 775 wp-content/upgrade*  # Unsure whether this step is necessary
-   ls -al wp-content/upgrade
+### 2.1. Ensure the following line has been added to wp-config.php :
 
-Update wp core on *jane* using admin panel:
---------------------------------------------
+```
+define('FS_METHOD','direct');     # This is one key
+```
+
+### 2.2. Ensure the web server can write the files by making the following changes:
+
+   Change ownership of all files to www-data, create directory wp-content/upgrade
+
+Run commands:
+
+```
+gotwt
+mkdir wp-content/upgrade
+sudo chown -R www-data:tomh *          # This is another key
+```
+
+Change perms of wp-content/upgrade and any subdirectories of it to 775
+Run commands:
+
+```
+sudo chmod -R 775 wp-content/upgrade*  # Unsure whether this step is necessary
+ls -al wp-content/upgrade
+```
+
+## Step (2) Update WP Core on *jane* Using Admin Panel:
+
 1. Update in back end:
    Admin -> Dashboard -> Updates
 2. Check in browser for each gadget type:

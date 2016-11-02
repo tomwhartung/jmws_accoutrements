@@ -31,7 +31,7 @@ Backup db on all hosts and ensure code matches what is in github:
 Run these commands on each host listed above:
 
 ```
-bu tw 01-before_upgrade-4_6-to-4_6_1
+bu tw 01-before_upgrade_4_6_to_4_6_1
 gotwt
 git pull
 git status
@@ -170,24 +170,68 @@ tarHome
 
 ## Step (4) Updating wp core and plugins on barbara and ava:
 
-1. Make sure database is backed up (in previous section "All Hosts: above)
-   bu tw 01-before_upgrade_4.4.2_to_4.6    # should have already been done!
-2. Open browser window on jane:
--> May have to edit wp-config.php to ensure you are on jane
-   Admin panel -> Dashboard -> Updates
-3. Update core code on jane using git pull:
-   gotwt
-   git pull
-4. Test in browser
-   Load admin panel
-   If there are db updates will see: "Database update required."
-      Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
-      Click "Continue" button: looks like we are good to go!
-   Admin panel -> Dashboard -> Updates
-   Ensure it is running the new versions of core and akismet
-5. Backup new copy of db
-   bu tw 02-after_upgrade_4.4.2_to_4.6
-6. If everything looks ok, repeat process on barbara
+### 4.1. Make sure database is backed up (in previous section "All Hosts: above)
+
+Run commands:
+
+```
+# This should have already been done!
+bu tw 01-before_upgrade_4_6_to_4_6_1
+```
+
+### 4.2. Open browser window to admin page on barbara:
+
+* Admin panel -> Dashboard -> Updates
+
+#### Warning!
+
+**Copying the database and wp-config.php from host to host, sometimes WP redirects!**
+
+* When it happens, this can be extremely confusing
+
+* Keep an eye on the URL in the browser's address bar!
+
+You may have to edit wp-config.php to ensure you are on barbara!
+
+### 4.3. Update core code on barbara using git pull:
+
+Run commands:
+
+```
+gotwt
+git pull
+```
+
+Should see it pull down all those changes.
+
+### 4.4. Access in Browser and Update DB
+
+Access admin panel in browser.
+
+If there are db updates will see: "Database update required."
+
+* Click "Update Wordpress Database " button: "Your WordPress database has been successfully updated."
+
+* Click "Continue" button
+
+**Did not see any updates to db this time.**
+
+### 4.5. Verify Updated Versions
+
+* Admin panel -> Dashboard -> Updates
+
+Ensure it is running the new versions of core and akismet
+
+### 4.6. Backup new copy of db, and backup the backup
+
+Run commands:
+
+```
+bu tw 02-after_upgrade_4_6_to_6_6_1
+tarHome
+```
+
+**If everything looks ok, repeat process on ava.**
 
 Updating themes and installing twentysixteen on all hosts
 ---------------------------------------------------------

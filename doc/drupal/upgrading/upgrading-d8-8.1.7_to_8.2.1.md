@@ -1,31 +1,84 @@
 
- Upgrading Drupal 8.0.3 to 8.1.7
-=================================
-Old Reference (upgrading 7.x):
-   https://www.drupal.org/node/1494290
-Current Reference:
-   https://www.drupal.org/node/1223018
+# Upgrading Drupal 8.1.7 to 8.2.2
 
-More References
----------------
-List of all releases:
-   https://www.drupal.org/project/drupal/releases?api_version%5B%5D=7234
-Official Reference:
-   https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.0.x
-OH that "8.0.x" at the end looks a little suspicious!
-NOTE that this link (changed the "0" to a "1") has nothing - as of today!
-   https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.1.x
-HOWEVER the guaranteed current version is available in the download file as:
-  core/UPGRADE.txt (8.0.4)
-  core/UPDATE.txt (8.1.3+)
+There are so many references!  Let's try to focus here people!
 
-To Do: Try updating using drush (looks to be easier):
-   https://www.drupal.org/node/2550801
-Untried Reference:
-   https://www.drupal.org/node/570162 (found while looking for info on using drush)
+Original Reference - has links to other references:
 
-Preparation:
-------------
+* https://www.drupal.org/node/1494290
+
+Drupal 8 Reference:
+
+* https://www.drupal.org/docs/8/update/update-procedure-in-drupal-8
+
+## List of All Releases
+
+**Absolutely always check this out!**
+
+* **https://www.drupal.org/project/drupal/releases?api_version%5B%5D=7234**
+
+I actually found out **on this page** they had just released 8.2.2 while I was in the process of upgrading to 8.2.1,
+so be sure to check it!
+
+## Release Notes
+
+Release notes for each release:
+
+* **https://www.drupal.org/project/drupal**
+
+**Search for `settings` to see whether there are changes required to settings.php .**
+
+## Lessons Learned
+
+Observations and lessons learned from previous experience with upgrading drupal:
+
+* Use drush, it makes the process much quicker
+
+* Be sure to reference documentation for version 8 of Drupal, NOT version 7
+
+* The standard procedure is to follow the instructions in the copy of UPGRADE.TXT that comes with the source
+
+* We are going to start using Drush to do this!
+
+## More References
+
+To use drush or to not use drush?
+The answer looks rather obvious to me right now....
+
+### Using Drush
+
+In addition to allowing us to do it on the command line, using drush to update the core looks like it is very easy.
+
+* https://www.drupal.org/node/2550801 - Update using drush
+
+* http://www.drush.org/en/master/ - Drush docs
+
+For steps to install drush, see the most recent of the files with names matching the pattern
+`doc/ubuntu/specific_hosts/2016-*/2-lamp_server-virtual_hosts.txt` in this repo.
+
+### Manual methods:
+
+Of course previous versions of this file in this directory contain many details about previous efforts - hence our interest in Drush!
+
+#### UPGRADING.txt
+
+For safety, review the UPGRADING.txt file that comes with the distribution as it may contain last-minute information.
+
+* https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.0.x - UPGRADE.TXT
+
+This looks to be mostly boilerplate, though.
+
+#### Very Manual Method
+
+This looks very much like what we have been doing:
+
+* https://www.drupal.org/node/570162
+
+
+
+
+## Preparation
+
 This time we have missed a few upgrades, and need to verify we are using the right process.
 
 Review what has changed, specifically determine whether settings.php or other important

@@ -1,0 +1,52 @@
+
+ JooMooWebSites.com - Upgrading Notes for 2016
+===============================================
+We're always changing this, so this file is mostly to keep track of
+what was done the last time or two, in case we find issues, and to
+give us a starting point, with appropriate cautions and tips, for
+next time.
+
+Log
+---
+[ ] 2015-11-08: 3.4.3 to 3.4.5
+
+Introduction
+------------
+The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
+Plus we don't run it often enough to be really confident about it or good at it etc.
+If the download button doesn't work it is probably because of my firewall or there is something missing in my configuration, or both.
+Moreover, I feel it's best to fall back on the tried and true command line methods, so I know what's going on in the event of a problem.
+This could back fire though, I suppose, in the event of changes to the structure of the db.  Hmmm.
+So we save the old code and db, just in case we need to back up and problem solve....
+
+JooMooWebSites.com - Upgrading Notes for 2015
+---------------------------------------------
+1. Download zip, e.g. for 3.4.5 and unpack
+2. cd joomoowebsites.com
+   tar -cvzf images_joomoowebsites.com.tgz images/joomoowebsites.com/
+   cd ..
+   mv  joomoowebsites.com-3.4.3/images_joomoowebsites.com.tgz joomoowebsites.com-3.4.5
+   rm joomoowebsites.com  # assuming it's a link to 3.4.3!
+   ln -s joomoowebsites.com-3.4.5 joomoowebsites.com
+3. cd joomoowebsites.com
+   cp -r ../joomoowebsites.com-3.4.3/.git* .   # bwahahah
+   ln -s ../gitignored/configuration.php .
+   bu j  01-before_upgrade # aliased to dbMySqlBackup
+4. rm -fr installation/
+   cd ..
+   ln_joomla_customizations
+   ln_subsites
+5. Test front end in browser
+   Test back end in browser
+6. cd joomoowebsites.com
+   gs
+   ga .
+   gc 'Updated to 3.4.5' ; gpom
+   bu j  02-after_upgrade # aliased to dbMySqlBackup
+7. On backup and production hosts:
+   bu j  01-before_upgrade # aliased to dbMySqlBackup
+   cd joomoowebsites.com
+   git pull
+   test in browswer
+   bu j  02-after_upgrade # aliased to dbMySqlBackup
+

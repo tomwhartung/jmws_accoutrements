@@ -17,7 +17,6 @@ Sometimes special instructions apply.
 ## Log
 
 2016-10-31: Upgrading from 3.6.2 to 3.6.4 .
-(Unsure how we got from 3.6.0 to 3.6.2 .)
 
 ## Before You Start
 
@@ -359,7 +358,7 @@ rm configuration.php ; ln -s ../gitignored/configuration.php .
 
 New backup host is barbara.
 
-1. Backup and restore
+#### 7.1. Backup and restore
 
 Backup current DB and restore final copy of DB from jane:
 
@@ -368,7 +367,7 @@ bu jm  01-before_upgrading_3.6.2_to_3.6.4          # IF NOT DONE ALREADY, DO IT 
 rs -h jane -d 2016_08_29 jm 02-after_upgrading_3.6.2_to_3.6.4
 ```
 
-2. Pull the code and fix the permissions
+#### 7.2. Pull the code and fix the permissions
 
 Run commands:
 
@@ -378,7 +377,7 @@ git pull
 fix_permissions.sh  # Does checking this file in pose a security risk?  I don't see how, but...
 ```
 
-3. Test in browswer
+#### 7.3. Test in browswer
 
 Test front end in browser
 
@@ -394,7 +393,7 @@ Test back end in browser
 
 * Extensions -> Manage -> Database (check schema version)
 
-4. Backup DB and backup the backup
+#### 7.4. Backup DB and backup the backup
 
 Run commands:
 

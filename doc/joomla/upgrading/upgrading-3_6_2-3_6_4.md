@@ -336,7 +336,7 @@ Moving on!
 
 System -> System Information -> Joomla Version: 3.6.4
 
--> Still a whole lot easier and quicker ( < 1 hr.!) than trying to use the back end!!!
+-> Still a whole lot easier and quicker ( < 1 hr.!) than trying to use Joomla Update in the back end!!!
 
 ##### 6.6 Commit the code, backup the database, backup the backup, and fix the link
 
@@ -364,7 +364,7 @@ Backup current DB and restore final copy of DB from jane:
 
 ```
 bu jm  01-before_upgrading_3.6.2_to_3.6.4          # IF NOT DONE ALREADY, DO IT NOW
-rs -h jane -d 2016_08_29 jm 02-after_upgrading_3.6.2_to_3.6.4
+rs -h jane -d 2016_11_01 jm 02-after_upgrading_3.6.2_to_3.6.4
 ```
 
 #### 7.2. Pull the code and fix the permissions
@@ -377,7 +377,7 @@ git pull
 fix_permissions.sh  # Does checking this file in pose a security risk?  I don't see how, but...
 ```
 
-#### 7.3. Test in browswer
+#### 7.3. Test in broswer
 
 Test front end in browser
 
@@ -402,30 +402,17 @@ bu jm  02-after_upgrading_3.6.2_to_3.6.4
 tarHome
 ```
 
-
 ### Step (8) Upgrading production host:
 
 New production host (server) is ava.
 
-1. Backup current DB and restore final copy of DB from jane:
-   bu jm  01-before_upgrading_3.5.1_to_3.6.2          # IF NOT DONE ALREADY, DO IT NOW
-   rs -h jane -d 2016_08_29 jm 03-after_upgrading_3.6.0_to_3.6.2
-2. Pull the code and fix the permissions
-   gojmj
-   git pull
-   fix_permissions.sh  # Does checking this file in pose a security risk?  I don't see how, but...
-3. Ensure configuration.php matches that on jane:
-   gojmj
-   cd ../gitignored/
-   diffJane configuration.php
-4. Test in browswer
-   Test front end in browser
-   - Check a few menu options
-   - Check articles with images
-   Test back end in browser
-   - System -> System Information -> System Information (check Joomla version)
-   - System -> System Information -> Folder Permissions (Unwritable configuration.php is ok)
-   - Extensions -> Manage -> Database (check schema version)
-5. Backup DB and we are done:
-   bu j  02-after_upgrade
+Follow the same process we did on barbara:
+
+1. Backup (should be done) and restore final copy of DB from jane.
+
+2. Pull the code and fix the permissions.
+
+3. Test in browser.
+
+4. Backup DB and we are done!
 

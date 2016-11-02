@@ -14,6 +14,7 @@ Log
 ---
 [ ] 2016-
 [ ] 2016-xx-xx: 4.6   to 4.x.x
+[ ] 2016-11-01: 4.6   to 4.6.1
 [ ] 2016-09-02: 4.4.2 to 4.6
 [ ] 2016-02-11: 4.4.1 to 4.4.2
 [ ] 2016-01-15: 4.3.1 to 4.4.1
@@ -21,21 +22,21 @@ Log
 All Hosts
 ---------
 1. Backup db on all hosts and ensure code matches what is in github:
-   [ ] bette
-   [ ] barbara
    [ ] jane
-   [ ] lauren
-   bu tw 01-before_upgrade-4_4_2-to-4_6
+   [ ] barbara
+   [ ] ava
+   bu tw 01-before_upgrade-4_6-to-4_6_1
    gotwt
    git pull
    git status
 
-
 Getting core update to work from back end:
 ------------------------------------------
 To enable using the back end to update the code rather than downloading it, follow these steps.
-We need to do this for at least one host
--> *bette* on 2016-09-03
+We need to do this for at least one host:
+
+* jane on 2016-11-01
+
 1. Ensure the following line has been added to wp-config.php :
    define('FS_METHOD','direct');     # This is one key
 2. Ensure the web server can write the files by making the following changes:
@@ -47,7 +48,7 @@ We need to do this for at least one host
    sudo chmod -R 775 wp-content/upgrade*  # Unsure whether this step is necessary
    ls -al wp-content/upgrade
 
-Update wp core on *bette* using admin panel:
+Update wp core on *jane* using admin panel:
 --------------------------------------------
 1. Update in back end:
    Admin -> Dashboard -> Updates

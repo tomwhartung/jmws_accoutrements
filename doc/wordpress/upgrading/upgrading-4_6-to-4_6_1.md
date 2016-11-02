@@ -222,6 +222,8 @@ If there are db updates will see: "Database update required."
 
 Ensure it is running the new versions of core and akismet
 
+Access the site, perform a "Smoke Test."
+
 ### 4.6. Backup new copy of db, and backup the backup
 
 Run commands:
@@ -231,5 +233,18 @@ bu tw 02-after_upgrade_4_6_to_6_6_1
 tarHome
 ```
 
-**If everything looks ok, repeat process on ava.**
+### 4.7. Repeat process on ava.
+
+1. Backup: should be done
+
+2. Access admin panel in browser
+
+3. Pull the code
+
+4. Reload admin panel in browser
+4.1. Update db as necessary
+
+5. Verify updated versions in admin panel
+
+6. Backup db `bu tw 02-after_upgrade_4_6_to_6_6_1`
 

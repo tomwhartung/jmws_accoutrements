@@ -295,6 +295,8 @@ cd ..
 l
 mv joomoowebsites.com joomoowebsites.com-manual_upgrade_gave_warnings
 git clone git@github.com:tomwhartung/joomoowebsites.com.git
+lnJoomlaCustomizations
+lnSubSites
 cp gitignored/configuration.php joomoowebsites.com
 cp ../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz joomoowebsites.com
 cd joomoowebsites.com
@@ -357,27 +359,49 @@ rm configuration.php ; ln -s ../gitignored/configuration.php .
 
 New backup host is barbara.
 
-1. Backup current DB and restore final copy of DB from jane:
-   bu jm  01-before_upgrading_3.5.1_to_3.6.2          # IF NOT DONE ALREADY, DO IT NOW
-   rs -h jane -d 2016_08_29 jm 03-after_upgrading_3.6.0_to_3.6.2
+1. Backup and restore
+
+Backup current DB and restore final copy of DB from jane:
+
+```
+bu jm  01-before_upgrading_3.6.2_to_3.6.4          # IF NOT DONE ALREADY, DO IT NOW
+rs -h jane -d 2016_08_29 jm 02-after_upgrading_3.6.2_to_3.6.4
+```
+
 2. Pull the code and fix the permissions
-   gojmj
-   git pull
-   fix_permissions.sh  # Does checking this file in pose a security risk?  I don't see how, but...
-3. Ensure configuration.php matches that on jane:
-   gojmj
-   cd ../gitignored/
-   diffJane configuration.php
-4. Test in browswer
-   Test front end in browser
-   - Check a few menu options
-   - Check articles with images
-   Test back end in browser
-   - System -> System Information -> System Information (check Joomla version)
-   - System -> System Information -> Folder Permissions (Unwritable configuration.php is ok)
-   - Extensions -> Manage -> Database (check schema version)
-5. Backup DB and we are done:
-   bu j  02-after_upgrade
+
+Run commands:
+
+```
+gojmj
+git pull
+fix_permissions.sh  # Does checking this file in pose a security risk?  I don't see how, but...
+```
+
+3. Test in browswer
+
+Test front end in browser
+
+* Check a few menu options
+
+* Check articles with images
+
+Test back end in browser
+
+* System -> System Information -> System Information (check Joomla version)
+
+* System -> System Information -> Folder Permissions (Unwritable configuration.php is ok)
+
+* Extensions -> Manage -> Database (check schema version)
+
+4. Backup DB and backup the backup
+
+Run commands:
+
+```
+bu jm  02-after_upgrading_3.6.2_to_3.6.4
+tarHome
+```
 
 
 ### Step (8) Upgrading production host:

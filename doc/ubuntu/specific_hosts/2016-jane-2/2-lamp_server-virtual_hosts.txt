@@ -250,6 +250,95 @@ Site: tomhartung.com
     Browser:
       jane.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
 
+Install Drush to Facilitate Drupal Site Updates
+-----------------------------------------------
+Site: tomhartung.com
+[ ] Consider reviewing the following references for changes to the process:
+    **Official official docs:**
+      http://docs.drush.org/en/master/install/
+    **Official official process using composer:**
+      http://docs.drush.org/en/master/install-alternative/
+    Official drupal docs - uses composer and apt-get (last updated in 10/2015 though - before d8 and xenial 16.04):
+      https://www.drupal.org/node/1248790   -- looks to be fairly outdated, but has info on how to get latest version
+    High-level "second opinion:"
+      http://tutorialforlinux.com/2015/05/16/how-to-install-drush-cli-for-drupal-8-on-ubuntu-15-04-vivid-32-64bit-gnulinux-easy-guide/
+    Token stackexchange post (moral of the story: be sure to get the right version)
+      http://drupal.stackexchange.com/questions/200539/drush-drush-dev-master-requires-codegyre-robo-1-0-0-beta1
+    This makes it seem easy, but I would bet you get an old old old version:
+      https://www.howtoinstall.co/en/ubuntu/xenial/drush
+[ ] Simulate install via apt-get, to see what it would do:
+    As root:
+      apt-get -s install drush
+      ## The following NEW packages will be installed:
+      ##   drush php-cli php-console-table php-mbstring php-mysql php7.0-mbstring
+      ## ...
+      ## Conf drush (5.10.0-2ubuntu1 Ubuntu:16.04/xenial [all])
+--> Verified that these NEW packages are not currently installed, and wondering why
+       they are not mentioned in the **Official official docs.**
+[ ] Follow the **Official official docs:**
+      http://docs.drush.org/en/master/install/   - "official official docs home
+    Specifically, follow the alternative process that uses composer
+      http://docs.drush.org/en/master/install-alternative/
+    Refer to the other references for confirmation, reassurances, and possible alternatives and troubleshooting techniques
+[ ] Following steps in "Install a global drush"
+    Following this process, from the **Official official docs:**
+    Installing composer and drush into:
+      /opt/bin
+[ ] 1. Download and install composer globally:
+    Top-level reference:
+      https://getcomposer.org/doc/00-intro.md#globally
+    Commands to download composer:
+      https://getcomposer.org/download/
+    As tomh:
+      cd ~/tmp
+      mkdir install_composer
+      php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+      php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c27919f1eb05f21c248b987e6195cad9690d5c1ff713d53020a02ac8c217dbf90a7eacc9d141d') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+      ##
+      php composer-setup.php
+      ## (output follows:)
+      ## All settings correct for using Composer
+      ## Downloading 1.2.2...
+      ##
+      ## Composer successfully installed to: /home/tomh/tmp/install_composer/composer.phar
+      ## Use it: php composer.phar
+      ##
+      sudo mkdir /opt/bin
+      sudo mv composer.phar /opt/bin/composer
+      cd ..
+      rmdir install_composer
+      which composer  ## /opt/bin/composer
+[ ] 2. Add composer's bin directory ($HOME/.composer/vendor/bin) to your PATH
+    Done (in ~/.bash_aliases)
+[ ] 3. Install latest stable Drush:
+    As tomh:
+      composer global require drush/drush
+[ ] 4. Verify that Drush works:
+    As tomh:
+      drush status
+    ## Output follows:
+    ## The program 'drush' is currently not installed. You can install it by typing:
+    ## sudo apt install drush
+[ ] Following steps in "Install Drush for all users via Composer"
+
+
+
+
+
+      # Download latest stable release using the code below or browse to github.com/drush-ops/drush/releases.
+      php -r "readfile('https://s3.amazonaws.com/files.drush.org/drush.phar');" > drush
+      # Or use our upcoming release: php -r "readfile('https://s3.amazonaws.com/files.drush.org/drush-unstable.phar');" > drush
+      #
+      # Test your install.
+      php drush core-status
+      #
+      # Make `drush` executable as a command from anywhere. Destination can be anywhere on $PATH.
+      chmod +x drush
+      sudo mv drush /usr/local/bin
+      # Optional. Enrich the bash startup file with completion and aliases.
+      drush init
+
+
 *** YOU ARE HERE ***
 
 Back It All Up

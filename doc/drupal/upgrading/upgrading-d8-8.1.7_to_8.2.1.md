@@ -56,6 +56,14 @@ In addition to allowing us to do it on the command line, using drush to update t
 For steps to install drush, see the most recent of the files with names matching the pattern
 `doc/ubuntu/specific_hosts/2016-*/2-lamp_server-virtual_hosts.txt` in this repo.
 
+### Hybrid Drush/Manual Method
+
+**This just in!**
+
+* https://drupal.org/node/2700999
+
+It is concise, covers both how to do it manually and use drush, and was literally just updated this week!
+
 ### Manual methods:
 
 Of course previous versions of this file in this directory contain many details about previous efforts - hence our interest in Drush!
@@ -68,14 +76,28 @@ For safety, review the UPGRADING.txt file that comes with the distribution as it
 
 This looks to be mostly boilerplate, though.
 
-#### Very Manual Method
+#### Very Manual Method:
 
 This looks very much like what we have been doing:
 
 * https://www.drupal.org/node/570162
 
+#### The D7 Manual Method - With Links
 
+Another, similar (but less complicated - and perhaps less safe) process:
 
+* https://www.drupal.org/node/1494290
+
+Note though that it has links to:
+
+* The D8 method mentioned above at https://www.drupal.org/node/2700999 - updated just this week!
+
+* How to use drush at https://www.drupal.org/node/2550801 - let's give that a try!
+
+* How to update using a patch file at https://www.drupal.org/node/359234 - save that for later!
+
+See what I mean about there being a lot of references?!?
+I find confidence in their similarities, though, and want to distill an efficient drush/command-line version from all of these.
 
 ## Preparation
 

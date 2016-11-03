@@ -26,7 +26,7 @@ Release notes for each release:
 
 * **https://www.drupal.org/project/drupal**
 
-**Search for `settings` to see whether there are changes required to settings.php .**
+**Search the page for `'settings'` to see whether there are changes required to settings.php .**
 
 ## Lessons Learned
 
@@ -38,7 +38,7 @@ Observations and lessons learned from previous experience with upgrading drupal:
 
 * The standard procedure is to follow the instructions in the copy of UPGRADE.TXT that comes with the source
 
-* We are going to start using Drush to do this!
+We are going to start using drush to do this!
 
 ## More References
 
@@ -51,7 +51,7 @@ In addition to allowing us to do it on the command line, using drush to update t
 
 * https://www.drupal.org/node/2550801 - Update using drush
 
-* http://www.drush.org/en/master/ - Drush docs
+* http://www.drush.org/en/master/ - drush docs
 
 For steps to install drush, see the most recent of the files with names matching the pattern
 `doc/ubuntu/specific_hosts/2016-*/2-lamp_server-virtual_hosts.txt` in this repo.
@@ -66,7 +66,7 @@ It is concise, covers both how to do it manually and use drush, and was literall
 
 ### Manual methods:
 
-Of course previous versions of this file in this directory contain many details about previous efforts - hence our interest in Drush!
+Of course previous versions of this file in this directory contain many details about previous efforts - hence our interest in drush!
 
 #### UPGRADING.txt
 

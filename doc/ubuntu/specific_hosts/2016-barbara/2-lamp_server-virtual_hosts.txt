@@ -71,6 +71,26 @@ And the following is unchanged from when we performed the process:
     tomhartung.com: using db from bette
         tomwhartung.com-2016_07_16-bette.sql.gz
 
+
+*****************************************************************************
+*** For missing steps, see ../2016-jane-2/2-lamp_server-virtual_hosts.txt ***
+*****************************************************************************
+
+
+Install Drush Using apt-get
+---------------------------
+Tried installing this a couple of ways on jane, using composer, based on up-to-date info on docs.drush.org
+Unfortunately that process did not work.
+For details about steps taken on jane, see ../2016-jane-2/2-lamp_server-virtual_hosts.txt
+[ ] Using apt-get:
+    As tomh:
+      sudo apt-get install drush
+      which drush      ## /usr/bin/drush
+      drush --version  ## drush version 5.10.0
+
+*** YOU ARE HERE ***
+
+
 [ ] Configure wordpress updates
 [ ] Set up backups
 

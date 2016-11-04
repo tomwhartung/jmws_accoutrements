@@ -259,7 +259,27 @@ For details about steps taken on jane, see ../2016-jane-2/2-lamp_server-virtual_
       drush --version  ## drush version 5.10.0
 
     
+********************
 *** YOU ARE HERE ***
+********************
+
+
+Final Steps
+-----------
+[ ] Configure automatic wordpress updates
+
+Checking the Sites:
+-------------------
+Checking all sites, in conjunction with getting them to work on jane and barbara:
+[ ] Checking the static sites:
+    [ ] artsyvisions.com
+    [ ] tomh.info
+[ ] Checking the WordPress site:
+    [ ] tomwhartung.com
+[ ] Checking the Joomla site:
+    [ ] joomoowebsites.com
+[ ] Checking the Drupal site:
+    [ ] tomhartung.com
 
 Back It All Up
 --------------
@@ -267,7 +287,7 @@ Back It All Up
 [ ] Set up (semi-)automatic backups as appropriate
 
 [ ] Disk Space Spotcheck:
-      /:     
-      /home: 
-      /var/www: X.XG/XXG (XX%)
+    /:     
+    /home: 
+    /var/www: X.XG/XXG (XX%)
 

@@ -119,9 +119,9 @@ I find confidence in their similarities, though, and want to distill an efficien
 
 There are so many references!  Let's try to focus here people!
 
-### Essential References
+### Review Essential References
 
-Reviewing all of the references listed above is not necessary.
+### Release Notes
 
 When we have missed one or more upgrades, we need to review the release notes for each missed release.
 
@@ -129,45 +129,48 @@ When we have missed one or more upgrades, we need to review the release notes fo
 
 Review what has changed, specifically determine whether settings.php or other important files need to be updated.
 
-* D8 Hybrid Process:
+### References to Processes:
 
-* Using drush:
+We are working on simplifying the process used.
 
+* D8 Hybrid Process: https://www.drupal.org/node/2700999
+* Using drush: https://www.drupal.org/node/2550801
 
+Specifically we are very interested in using drush.
 
-0. Get this information from the distribution itself.
-0.1 Download the latest version (in this case 8.1.7).
-    When upgrading past more than one release, download them all
-    (in this case, we are downloading 8.0.4 and 8.1.3 as well).
-    Use the links on the admin panel or find the file(s) on drupal.org .
-        Admin -> Reports -> Available Updates
-     OR
-        https://www.drupal.org/project/drupal/releases/8.0.4 (page includes minimal Release notes)
-        https://www.drupal.org/project/drupal/releases/8.1.3 (page includes minimal Release notes)
-        https://www.drupal.org/project/drupal/releases/8.1.5 (page includes list of all changes since 8.1.3)
-        https://www.drupal.org/project/drupal/releases/8.1.7 (page includes updates to .htaccess, web.config, and settings)
-    Copy the file(s) into:
-        /var/www/tomhartung.com/downloads
-0.2 Unpack each tar file into its own directory
-    mkdir ../unpack
-    cp  drupal-8.0.4.tar.gz drupal-8.1* ../unpack
-    cd ../unpack
-    mkdir drupal-8.0.4
-    mkdir drupal-8.1.3
-    mkdir drupal-8.1.5
-    mv drupal-8.0.4.tar.gz drupal-8.0.4
-    mv drupal-8.1.3.tar.gz drupal-8.1.3
-    mv drupal-8.1.5.tar.gz drupal-8.1.5
-    l
-    cd drupal-8.0.4/
-    tar -xvzf drupal-8.0.4.tar.gz
-    cd ../drupal-8.1.3/
-    tar -xvzf drupal-8.1.3.tar.gz
-    cd ../drupal-8.1.5
-    tar -xvzf drupal-8.1.5.tar.gz
-    cd ../drupal-8.1.7
-    tar -xvzf drupal-8.1.7.tar.gz
-    cd ..
+## Step (1) Backup the Old
+
+Backup the database and ensure the code on all hosts matches what is in git:
+
+```
+bu th 01-before_upgrading_8_1_7_to_8_2_2
+gotht       # cd var/www/tomhartung.com/htdocs/tomhartung.com
+git status
+git pull
+```
+
+Reconcile any differences as appropriate.
+
+## Step (2) Download, Unpack, and Review the New
+
+Use the links on the admin panel or find the file(s) on drupal.org .
+
+* Admin -> Reports -> Available Updates
+
+See the Release notes or just use the download link.
+
+Download (or copy) the file(s) into `/var/www/tomhartung.com/downloads` and unpack the tar file into the `../unpack` directory:
+
+```
+cd /var/www/tomhartung.com/downloads
+mkdir ../unpack
+cp  drupal-8.2.2.tar.gz ../unpack
+cd ../unpack
+tar -xvzf drupal-8.2.2.tar.gz
+rm drupal-8.2.2.tar.gz
+cd ../drupal-8.2.2/
+```
+
 0.3 For each release, find and review these files:
     l */*/core/CHANGELOG.txt
     l */*/core/UP*.txt
@@ -176,6 +179,12 @@ Review what has changed, specifically determine whether settings.php or other im
 0.4 Links to release notes available in admin panel:
     Reports -> Available
     Review these links for information about changes to important files (settings files, etc.)
+* 8.1.8 - https://www.drupal.org/project/drupal/releases/8.1.8
+* 8.1.9 - https://www.drupal.org/project/drupal/releases/8.1.9
+* 8.1.10 - https://www.drupal.org/project/drupal/releases/8.1.10
+* 8.2.0 - https://www.drupal.org/project/drupal/releases/8.2.0
+* 8.2.1 - https://www.drupal.org/project/drupal/releases/8.2.1
+* 8.2.2 - https://www.drupal.org/project/drupal/releases/8.2.2
 0.5 Results of reviewing all this:
     Verified minimal (inconsequential) changes only between drupal-8.0.4/core/UPGRADE.txt and drupal-8.1.3/core/UPDATE.txt
     Verified drupal-8.1.3/core/UPDATE.txt, drupal-8.1.5/core/UPDATE.txt, and drupal-8.1.7/core/UPDATE.txt are identical

@@ -352,7 +352,28 @@ Install Drush Using apt-get
       which drush      ## /usr/bin/drush
       drush --version  ## drush version 5.10.0
 
+
+********************
 *** YOU ARE HERE ***
+********************
+
+
+Final Steps
+-----------
+[ ] Configure automatic wordpress updates
+
+Checking the Sites:
+-------------------
+Checking all sites, in conjunction with getting them to work on jane and ava:
+[ ] Checking the static sites:
+    [ ] artsyvisions.com
+    [ ] tomh.info
+[ ] Checking the WordPress site:
+    [ ] tomwhartung.com
+[ ] Checking the Joomla site:
+    [ ] joomoowebsites.com
+[ ] Checking the Drupal site:
+    [ ] tomhartung.com
 
 Back It All Up
 --------------

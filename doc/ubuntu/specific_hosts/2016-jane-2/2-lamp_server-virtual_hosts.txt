@@ -276,6 +276,13 @@ Site: tomhartung.com
 --> Verified that these NEW packages are not currently installed, and wondering why
        they are not mentioned in the **Official official docs.**
 [ ] Follow the **Official official docs:**
+*********************************************
+*** TRIED THIS METHOD AND IT DID NOT WORK ***
+*** USING apt-get AS OTHER RESOURCES RECOMMEND
+*** LEAVING POSSIBLE CRUFT ON JANE (e.g., in ~/.config/composer)
+***************************************************
+*** SKIP TO "Install Drush Using apt-get" BELOW ***
+***************************************************
       http://docs.drush.org/en/master/install/   - "official official docs home
     Specifically, follow the alternative process that uses composer
       http://docs.drush.org/en/master/install-alternative/
@@ -294,6 +301,8 @@ Site: tomhartung.com
       mkdir install_composer
       php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
       php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c27919f1eb05f21c248b987e6195cad9690d5c1ff713d53020a02ac8c217dbf90a7eacc9d141d') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+      ##
+      ## "Installer verified"
       ##
       php composer-setup.php
       ## (output follows:)
@@ -320,24 +329,28 @@ Site: tomhartung.com
     ## The program 'drush' is currently not installed. You can install it by typing:
     ## sudo apt install drush
 [ ] Following steps in "Install Drush for all users via Composer"
+    ** THIS DID NOT WORK **
+    Concerns:
+    - Followed steps but no ~/.composer dir and no clue about installing the
+        dependencies mentioned in the "apt-get -s" command output
+    - Still want to get a more recent version than what apt-get will install
+    - Double-checked (re-ran procedure given) with same results
+    - I can see it put it into ~/.config/composer/vendor/drush/drush/
+    As tomh:
+      sudo mkdir --parents /opt/drush-8.x
+      cd /opt/drush-8.x
+      [sudo] [/opt/bin/]composer init --require=drush/drush:8.* -n
+    Getting errors - with and without sudo and the path, eff this...
 
-
-
-
-
-      # Download latest stable release using the code below or browse to github.com/drush-ops/drush/releases.
-      php -r "readfile('https://s3.amazonaws.com/files.drush.org/drush.phar');" > drush
-      # Or use our upcoming release: php -r "readfile('https://s3.amazonaws.com/files.drush.org/drush-unstable.phar');" > drush
-      #
-      # Test your install.
-      php drush core-status
-      #
-      # Make `drush` executable as a command from anywhere. Destination can be anywhere on $PATH.
-      chmod +x drush
-      sudo mv drush /usr/local/bin
-      # Optional. Enrich the bash startup file with completion and aliases.
-      drush init
-
+Install Drush Using apt-get
+---------------------------
+[ ] Falling back to the apt-get method:
+    Keeping composer (in /opt/bin) and associated cruft (in ~/.config/composer) on jane, for
+      possible future reference
+    As tomh:
+      sudo apt-get install drush
+      which drush      ## /usr/bin/drush
+      drush --version  ## drush version 5.10.0
 
 *** YOU ARE HERE ***
 

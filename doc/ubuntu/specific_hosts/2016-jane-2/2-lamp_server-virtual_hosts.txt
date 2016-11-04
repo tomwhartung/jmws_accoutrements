@@ -364,7 +364,7 @@ Final Steps
 
 Checking the Sites:
 -------------------
-Checking all sites, in conjunction with getting them to work on jane and ava:
+Checking all sites, in conjunction with getting them to work on barbara and ava:
 [ ] Checking the static sites:
     [ ] artsyvisions.com
     [ ] tomh.info

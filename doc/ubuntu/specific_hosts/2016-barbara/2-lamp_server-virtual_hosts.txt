@@ -19,30 +19,63 @@ Many if not most or all of these LAMP packages have been already installed
     Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
     Install mysql-server
 
-Note:
------
-The above was copied from ../2016-ava/2-lamp_server-virtual_hosts.txt .
-And the following is unchanged from when we performed the process:
-
- Get Sites Running
--------------------
-[ ] Install apache2, apache2-utils, libapache2-mod-php7.0
-[ ] Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
-[ ] Install mysql-server, 
+Configure Apache
+----------------
+[ ] Add and update config files in /etc/apache2/sites-available as appropriate
+    As root:
+      cd /etc/apache2/sites-available
+      mkdir RCS
+      ci -l *.conf   ## "Installed version"
+    For best results, copy conf files from another host and check in to RCS
+    Fix ServerAlias specifications in apache2/sites-available/*.conf files
+    As root:
+      ci -l *.conf   ## "Copied from host xxxxx and updated for this host"
 [ ] Config files in /etc/apache2/sites-avaialble
 ->  For 16.04, copy conf files from jane or barbara:
     Already vetted currently used versions against the new 000-default.conf for 16.04, no changes needed!
 [ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
-    a2enmod rewrite
-    a2enmod php7.0
-    a2dismod mpm_event
-    a2enmod mpm_prefork
+    As root:
+      cd /etc/apache2
+      ls -al mods-*/rewrite*
+      ls -al mods-*/php7.0*
+      ls -al mods-*/mpm*
+    If not enabled (or disabled, as in the case of mpm_event),
+      run one or more of these commands as appropriate:
+[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
+    As root:
+      a2enmod rewrite
+      a2enmod php7.0
+      a2dismod mpm_event
+      a2enmod mpm_prefork
+[ ] Check that we have not yet enabled any sites:
+    As root:
+      cd /etc/apache2
+      ls -al l sites*/*.conf
+    Only the sites-available/000-default.conf file should be linked to
+      the sites-enabled directory
     cd /etc/apache2/sites-enabled
     ln -s ../sites-available/0[1-9]*.conf .
+[ ] Put our standard, behind-the-firewall version of index.html file in /var/www
+    As tomh on bette:
+      cd /var/www/
+      toJane index.html
+[ ] Restart apache and test in browser, to ensure we are good to go.
+    As root:
+      service apache2 stop
+      service apache2 start
+    Access in browser:
+      http://localhost
+    Should see our standard, behind-the-firewall version of index.html
+
+Populate /var/www
+-----------------
 [ ] Get all websites' source files in /var/www
+    Copy all of /var/www from an existing host or,
+       for a painfully detailed process, see this section
+       in ../2016-jane-2/2-lamp_server-virtual_hosts.txt or
+          ../2016-ava/2-lamp_server-virtual_hosts.txt
 [ ] Fix ServerAlias specifications in apache2/sites-available/*.conf files
-    For barbara (ultimately): ensure both www.site.com and site.com will work
-    For bette: change "jane" to "bette" in conf files
+    For barbara change "jane" to "barbara" in conf files
     service apache2 start
     Disk Space Spotcheck: /: 4.2G/13G (35%); /home: 0.5G/9G (6%); and /var/www: 5.6G/10G (59%)
 
@@ -51,15 +84,8 @@ And the following is unchanged from when we performed the process:
       /home: 0.5G/9G (6%)
       /var/www: 5.6G/10G (59%)
 
-[ ] Create and populate databases: see database_checklist.txt
-[ ] Get sites running: see site_checklist.txt
-
-[ ] For joomla on a fresh install of 16.04, install simplexml:
-    Check for it in phpinfo.php
-       sudo apt-get install php7.0-simplexml
-       sudo service apache2 restart
-    Reference: http://forum.joomla.org/viewtopic.php?t=916040
-
+Populate databases
+------------------
 [ ] Databases used on barbara:
     groja.com & seeourminds.com:
       try using current db from lauren:
@@ -71,28 +97,53 @@ And the following is unchanged from when we performed the process:
     tomhartung.com: using db from bette
         tomwhartung.com-2016_07_16-bette.sql.gz
 
+Getting All Sites to Work
+-------------------------
+For details about this process, see the corresponding sections in
+    ../2016-jane-2/2-lamp_server-virtual_hosts.txt or
+    ../2016-ava/2-lamp_server-virtual_hosts.txt
+[ ] Ensure Static Sites Work
+    artsyvisions.com
+    groja.com
+    tomh.info
+[ ] Ensure LAMP CMS Sites Work
+    tomwhartung.com
+    joomoowebsites.com
+    tomhartung.com
 
-*****************************************************************************
-*** For missing steps, see ../2016-jane-2/2-lamp_server-virtual_hosts.txt ***
-*****************************************************************************
-
+Additional Joomla Caveat
+------------------------
+For details about this process, see the corresponding sections in
+    ../2016-jane-2/2-lamp_server-virtual_hosts.txt or
+    ../2016-ava/2-lamp_server-virtual_hosts.txt
+[ ] For joomla on a fresh install of 16.04, install simplexml:
+    Check for it in phpinfo.php
+       sudo apt-get install php7.0-simplexml
+       sudo service apache2 restart
+    Reference: http://forum.joomla.org/viewtopic.php?t=916040
 
 Install Drush Using apt-get
 ---------------------------
 Tried installing this a couple of ways on jane, using composer, based on up-to-date info on docs.drush.org
 Unfortunately that process did not work.
-For details about steps taken on jane, see ../2016-jane-2/2-lamp_server-virtual_hosts.txt
+For details about steps taken on jane, and why I suspect those steps failed, see
+    ../2016-jane-2/2-lamp_server-virtual_hosts.txt or
+    ../2016-ava/2-lamp_server-virtual_hosts.txt
 [ ] Using apt-get:
     As tomh:
       sudo apt-get install drush
       which drush      ## /usr/bin/drush
       drush --version  ## drush version 5.10.0
 
+
+********************
 *** YOU ARE HERE ***
+********************
 
 
-[ ] Configure wordpress updates
-[ ] Set up backups
+Final Steps
+-----------
+[ ] Configure automatic wordpress updates
 
 Checking the Sites:
 -------------------
@@ -107,4 +158,13 @@ Checking all sites, in conjunction with getting them to work on jane and ava:
 [ ] Checking the Drupal site:
     [ ] tomhartung.com
 
+Back It All Up
+--------------
+[ ] Ensure we have backups of everything, including a copy for off-site
+[ ] Set up (semi-)automatic backups as appropriate
+
+[ ] Disk Space Spotcheck:
+    /:     
+    /home: 
+    /var/www: X.XG/XXG (XX%)
 

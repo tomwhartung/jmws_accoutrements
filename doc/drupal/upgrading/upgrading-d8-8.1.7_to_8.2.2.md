@@ -1,32 +1,9 @@
 
 # Upgrading Drupal 8.1.7 to 8.2.2
 
-There are so many references!  Let's try to focus here people!
+## Purpose
 
-Original Reference - has links to other references:
-
-* https://www.drupal.org/node/1494290
-
-Drupal 8 Reference:
-
-* https://www.drupal.org/docs/8/update/update-procedure-in-drupal-8
-
-## List of All Releases
-
-**Absolutely always check this out!**
-
-* **https://www.drupal.org/project/drupal/releases?api_version%5B%5D=7234**
-
-I actually found out **on this page** they had just released 8.2.2 while I was in the process of upgrading to 8.2.1,
-so be sure to check it!
-
-## Release Notes
-
-Release notes for each release:
-
-* **https://www.drupal.org/project/drupal**
-
-**Search the page for `'settings'` to see whether there are changes required to settings.php .**
+The purpose of this document is to detail a process we can use without doing a lot of preparatory research.
 
 ## Lessons Learned
 
@@ -40,12 +17,51 @@ Observations and lessons learned from previous experience with upgrading drupal:
 
 We are going to start using drush to do this!
 
-## More References
+## References
+
+**Reviewing all of these references is NOT necessary.**
+
+### The Original Reference
+
+This one has links to other references:
+
+* https://www.drupal.org/node/1494290
+
+Drupal 8 Reference:
+
+* https://www.drupal.org/docs/8/update/update-procedure-in-drupal-8
+
+### List of All Releases
+
+**Absolutely always check this out!**
+
+* **https://www.drupal.org/project/drupal/releases
+
+I actually found out **on this page** they had just released 8.2.2 while I was in the process of upgrading to 8.2.1,
+so be sure to check it!
+
+### Release Notes
+
+Release notes for each release:
+
+* **https://www.drupal.org/project/drupal**
+
+**Check the release notes for every version missed, as well as for the current, latest version.**
+
+**Search the page for `'settings'` to see whether there are changes required to settings.php .**
+
+Following is an example of a release notes page that mentions updates to .htaccess, web.config, and settings files:
+
+* https://www.drupal.org/project/drupal/releases/8.1.7
+
+Note that they make it very obvious.
+
+### More References
 
 To use drush or to not use drush?
 The answer looks rather obvious to me right now....
 
-### Using Drush
+#### Using Drush
 
 In addition to allowing us to do it on the command line, using drush to update the core looks like it is very easy.
 
@@ -56,7 +72,7 @@ In addition to allowing us to do it on the command line, using drush to update t
 For steps to install drush, see the most recent of the files with names matching the pattern
 `doc/ubuntu/specific_hosts/2016-*/2-lamp_server-virtual_hosts.txt` in this repo.
 
-### Hybrid Drush/Manual Method
+#### Hybrid Drush/Manual Method
 
 **This just in!**
 
@@ -64,11 +80,11 @@ For steps to install drush, see the most recent of the files with names matching
 
 It is concise, covers both how to do it manually and use drush, and was literally just updated this week!
 
-### Manual methods:
+#### Manual methods:
 
 Of course previous versions of this file in this directory contain many details about previous efforts - hence our interest in drush!
 
-#### UPGRADING.txt
+##### UPGRADING.txt
 
 For safety, review the UPGRADING.txt file that comes with the distribution as it may contain last-minute information.
 
@@ -76,13 +92,13 @@ For safety, review the UPGRADING.txt file that comes with the distribution as it
 
 This looks to be mostly boilerplate, though.
 
-#### Very Manual Method:
+##### Very Manual Method:
 
 This looks very much like what we have been doing:
 
 * https://www.drupal.org/node/570162
 
-#### The D7 Manual Method - With Links
+##### The D7 Manual Method - With Links
 
 Another, similar (but less complicated - and perhaps less safe) process:
 
@@ -101,17 +117,23 @@ I find confidence in their similarities, though, and want to distill an efficien
 
 ## Preparation
 
-This time we have missed a few upgrades, and need to verify we are using the right process.
+There are so many references!  Let's try to focus here people!
 
-Review what has changed, specifically determine whether settings.php or other important
-files need to be updated.
+### Essential References
 
-According to this comment:
-   https://www.drupal.org/node/1494290#comment-9488185
-there is information about how to tell if settings.php, .htaccess, and other important
-files need updating - but exactly where to find this is not immediately evident (or is it?).
-Looking at several posts (including one on stackexchange) I am finding 404s and
-processes for old versions (7.x, etc.).  So do this instead!
+Reviewing all of the references listed above is not necessary.
+
+When we have missed one or more upgrades, we need to review the release notes for each missed release.
+
+* Release notes: https://www.drupal.org/project/drupal/releases
+
+Review what has changed, specifically determine whether settings.php or other important files need to be updated.
+
+* D8 Hybrid Process:
+
+* Using drush:
+
+
 
 0. Get this information from the distribution itself.
 0.1 Download the latest version (in this case 8.1.7).

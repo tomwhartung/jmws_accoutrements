@@ -225,26 +225,36 @@ I want to try skipping going straight to 8.2.2.
 
 ## Step (3) Update the Development Host (jane)
 
+Use drush or the **Configuration -> (Development section) Maintenance mode** admin option to put the site into maintenance mode:
+
+```
+gotht
+drush sset system.maintenance_mode 1
+```
+
+### Update Drupal Core
+
+Grab fresh clone of site, and replace the core and vendor directories.
+
+```
+gothh
+cd tmp
+git clone git@github.com:tomwhartung/tomhartung.com-d8.git
+mv tomhartung.com-d8 tomhartung.com-d8.2.2
+mv tomhartung.com-d8.2.2 ..
+cd ../tomhartung.com-d8.2.2
+rm -fr core vendor
+
+---------------
+
+   rm autoload.php composer.* example.gitignore index.php LICENSE.txt README.txt robots.txt update.php web.config
+   rm .csslintrc .editorconfig .eslint* .gitattributes  .htaccess
+
+
 ********************
 *** You are here ***
 ********************
 
-Put the site into maintenance mode
-   gotht
-   drush cr
-   Configuration -> (Development section) Performance -> Clear All Caches
-   bu th 01-before_updating_8.0.3-8.1.7
-   Configuration -> (Development section) Maintenance mode
-4. Grab fresh clone of site, and replace the core and vendor directories
-   gothh
-   cd tmp
-   git clone git@github.com:tomwhartung/tomhartung.com-d8.git
-   mv tomhartung.com-d8 tomhartung.com-d8.1.7
-   mv tomhartung.com-d8.1.7 ..
-   cd ../tomhartung.com-d8.1.7
-   rm -fr core vendor
-   rm autoload.php composer.* example.gitignore index.php LICENSE.txt README.txt robots.txt update.php web.config
-   rm .csslintrc .editorconfig .eslint* .gitattributes  .htaccess
 
 5. Replace deleted files with the corresponding files from the new release:
    Be careful to not overwrite any customizations made to any of these files:

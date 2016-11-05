@@ -232,6 +232,26 @@ gotht
 drush sset system.maintenance_mode 1
 ```
 
+### 3.0 Try Using Drush Next Time
+
+This is where we can supposedly update the site using drush.
+After the drush install failed to go as hoped
+(for details, see doc/ubuntu/specific_hosts/2016-jane-2/2-lamp_server-virtual_hosts.txt in this repo),
+I am mildly suspicious as to whether this will work.
+
+Presumably we can do all this with one command:
+
+```
+composer update
+drush pm-update drupal
+```
+
+Maybe next time re-check out drush docs, find out what they or I or both of us did wrong.
+(At this time I am in no mood to be trying to fix others' docs or code or both.)
+
+**I would definitely feel more comfortable with trying that if we were updating to each new release one at a time,
+instead of upgrading through several, as we have been doing.**
+
 ### 3.1 Update Drupal Core
 
 Grab fresh clone of site, and replace the core and vendor directories.
@@ -281,12 +301,6 @@ mv README.txt robots.txt update.php web.config ../tomhartung.com-d8.2.2
 mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tomhartung.com-d8.2.2
 ```
 
-
-********************
-*** You are here ***
-********************
-
-
 #### 3.1.3 Reconcile any changes made to "*settings*" files
 
 At this point in time this part of the process is a bit difficult to codify into specific steps.
@@ -294,13 +308,21 @@ It boils down to seeing what, if anything, has changed in *settings* files under
 Most of these files should be kept locally only, in the gitignored directory (versioned in RCS)
 
 ```
-   gothh
+gothh
 ```
 
-   Run ls and diff commands from this directory to compare:
-      old production files under tomhartung.com/sites to the
-      newly released versions under drupal-8.1.7/sites ,
-      many of which are linked to files in gitignored/sites
+Run ls and diff commands from this directory to compare:
+
+* old production files under tomhartung.com/sites to the
+* newly released versions under drupal-8.1.7/sites ,
+
+many of which are linked to files in gitignored/sites
+
+
+********************
+*** You are here ***
+********************
+
 
 Important files of note:
 ```

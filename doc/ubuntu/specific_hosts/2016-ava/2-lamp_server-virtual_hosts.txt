@@ -257,6 +257,11 @@ For details about steps taken on jane, see ../2016-jane-2/2-lamp_server-virtual_
       sudo apt-get install drush
       which drush      ## /usr/bin/drush
       drush --version  ## drush version 5.10.0
+[ ] Update: This version of drush does not work with Drupal 8
+    For now:
+      -> Use the version we installed on jane
+      -> Hope that because we keep the source on github, we will not need to use it on barbara and ava
+    Stay tuned for more updates
 
     
 ********************

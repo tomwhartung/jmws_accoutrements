@@ -232,9 +232,11 @@ gotht
 drush sset system.maintenance_mode 1
 ```
 
-### Update Drupal Core
+### 3.1 Update Drupal Core
 
 Grab fresh clone of site, and replace the core and vendor directories.
+
+#### 3.1.1 Delete the Old Files
 
 ```
 gothh
@@ -244,11 +246,40 @@ mv tomhartung.com-d8 tomhartung.com-d8.2.2
 mv tomhartung.com-d8.2.2 ..
 cd ../tomhartung.com-d8.2.2
 rm -fr core vendor
+## rm autoload.php composer.* example.gitignore index.php LICENSE.txt
+## rm README.txt robots.txt update.php web.config
+## rm .csslintrc .editorconfig .eslint* .gitattributes  .htaccess
+mv autoload.php composer.* example.gitignore index.php LICENSE.txt ../tmp
+mv README.txt robots.txt update.php web.config ../tmp
+mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tmp
+```
 
----------------
+#### 3.1.2 Add in the New Files
 
-   rm autoload.php composer.* example.gitignore index.php LICENSE.txt README.txt robots.txt update.php web.config
-   rm .csslintrc .editorconfig .eslint* .gitattributes  .htaccess
+Replace deleted files with the corresponding files from the new release.
+
+Be careful to not overwrite any customizations made to any of the following files!
+
+* `.htaccess`
+* `composer.json`
+* `robots.txt`
+* (etc.)
+
+If desired, you can run git log on these to ensure they have not been changed.
+If they have changed, migrate the changes I have made from old to new, or
+migrate the changes they made from new to old to make newer.
+
+```
+gothh
+cp ../downloads/drupal-8.2.2.tar.gz .
+tar -xvzf drupal-8.2.2.tar.gz
+rm drupal-8.2.2.tar.gz
+cd drupal-8.2.2
+mv core vendor ../tomhartung.com-d8.2.2
+mv autoload.php composer.* example.gitignore index.php LICENSE.txt ../tomhartung.com-d8.2.2
+mv README.txt robots.txt update.php web.config ../tomhartung.com-d8.2.2
+mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tomhartung.com-d8.2.2
+```
 
 
 ********************
@@ -256,26 +287,23 @@ rm -fr core vendor
 ********************
 
 
-5. Replace deleted files with the corresponding files from the new release:
-   Be careful to not overwrite any customizations made to any of these files:
-      .htaccess, composer.json, robots.txt, etc.
-   If desired, you can run git log on these to ensure they have not been changed
-   gothh
-   cd drupal-8.1.7
-   mv core vendor ../tomhartung.com-d8.1.7
-   mv autoload.php composer.* example.gitignore index.php LICENSE.txt README.txt robots.txt update.php web.config ../tomhartung.com-d8.1.7
-   mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tomhartung.com-d8.1.7
+#### 3.1.3 Reconcile any changes made to "*settings*" files
 
-6. Reconcile any changes made to "*settings*" files
-   At this point in time this part of the process is a bit difficult to codify into specific steps.
-   It boils down to seeing what, if anything, has changed in *settings* files under the "sites/" directory
-   Most of these files should be kept locally only, in the gitignored directory (versioned in RCS)
+At this point in time this part of the process is a bit difficult to codify into specific steps.
+It boils down to seeing what, if anything, has changed in *settings* files under the "sites/" directory
+Most of these files should be kept locally only, in the gitignored directory (versioned in RCS)
+
+```
    gothh
+```
+
    Run ls and diff commands from this directory to compare:
       old production files under tomhartung.com/sites to the
       newly released versions under drupal-8.1.7/sites ,
       many of which are linked to files in gitignored/sites
-   Important files of note:
+
+Important files of note:
+```
       sites/development.services.yml
       sites/example.settings.php
          New setting:
@@ -293,6 +321,8 @@ rm -fr core vendor
       ** References (bug/feature reports):
       **    https://www.drupal.org/node/2419213
       **    https://www.drupal.org/node/1118520
+```
+
 6.1 Process for updating sites/default/services.yml when there are new settings:
    gothh
    diff drupal-8.1.7/sites/default/default.services.yml  gitignored/sites/default/default.services.yml

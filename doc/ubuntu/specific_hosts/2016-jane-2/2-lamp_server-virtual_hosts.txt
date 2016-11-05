@@ -264,8 +264,8 @@ Site: tomhartung.com
       http://tutorialforlinux.com/2015/05/16/how-to-install-drush-cli-for-drupal-8-on-ubuntu-15-04-vivid-32-64bit-gnulinux-easy-guide/
     Token stackexchange post (moral of the story: be sure to get the right version)
       http://drupal.stackexchange.com/questions/200539/drush-drush-dev-master-requires-codegyre-robo-1-0-0-beta1
-    This makes it seem easy, but I would bet you get an old old old version:
-      https://www.howtoinstall.co/en/ubuntu/xenial/drush
+    **This makes it seem easy, but I would bet you get an old old old version:**
+      https://www.howtoinstall.co/en/ubuntu/xenial/drush - **We have decided to use this option**
 [ ] Simulate install via apt-get, to see what it would do:
     As root:
       apt-get -s install drush
@@ -352,6 +352,33 @@ Install Drush Using apt-get
       which drush      ## /usr/bin/drush
       drush --version  ## drush version 5.10.0
 
+Set up Alias to Run Correct Version of Drush
+--------------------------------------------
+[ ] Update: This version of drush does not work with Drupal 8
+    For now:
+      -> Use the version we installed on jane by setting up an alias (see below)
+      -> Hope that because we keep the source on github, we will not need to use it on barbara and ava
+[ ] Set up an alias so we can run the version of drush we installed yesterday:
+    As tomh:
+      alias 'drush'='~/.config/composer/vendor/drush/drush/drush'    ## add to ~/.bash_aliases-jane
+      which drush       ## /usr/bin/drush
+      alias drush       ## bash: alias: drush: not found
+      drush --version   ## drush version 5.10.0
+      . ~/.bash_aliases-jane
+      which drush       ## /usr/bin/drush
+      alias drush       ## alias drush='~/.config/composer/vendor/drush/drush/drush'
+      drush --version   ## Drush Version   :  8.1.7
+[ ] Stay tuned for more updates
+
+
+
+Ensure All CMS Sites Are Running the Latest Version
+---------------------------------------------------
+Find detailed instructions for these processes in files in the following directories in this repo:
+   doc/drupal/upgrading
+   doc/joomla/upgrading
+   doc/wordpress/upgrading
+
 
 ********************
 *** YOU ARE HERE ***
@@ -360,6 +387,8 @@ Install Drush Using apt-get
 
 Final Steps
 -----------
+[ ] Review security checklists as appropriate
+    --> This is especially important when deploying a new server!!
 [ ] Configure automatic wordpress updates
 
 Checking the Sites:

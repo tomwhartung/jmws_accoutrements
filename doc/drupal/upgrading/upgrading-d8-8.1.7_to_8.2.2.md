@@ -119,9 +119,7 @@ I find confidence in their similarities, though, and want to distill an efficien
 
 There are so many references!  Let's try to focus here people!
 
-### Review Essential References
-
-### Release Notes
+### Review Release Notes
 
 When we have missed one or more upgrades, we need to review the release notes for each missed release.
 
@@ -129,7 +127,7 @@ When we have missed one or more upgrades, we need to review the release notes fo
 
 Review what has changed, specifically determine whether settings.php or other important files need to be updated.
 
-### References to Processes:
+### Review References to Processes:
 
 We are working on simplifying the process used.
 
@@ -138,12 +136,24 @@ We are working on simplifying the process used.
 
 Specifically we are very interested in using drush.
 
+### Check Drush Version Compatibility
+
+For drupal 8 we need version 8 or higher of drush.
+
+For jane, we have set up an alias; for more information see the file (in this repo) named
+`doc/ubuntu/specific_hosts/2016-jane-2/2-lamp_server-virtual_hosts.txt` .
+
 ## Step (1) Backup the Old
 
-Backup the database and ensure the code on all hosts matches what is in git:
+Do this on all hosts:
+
+- [x] jane
+- [x] barbara
+- [x] ava
+
+Ensure the code on all hosts matches what is in git:
 
 ```
-bu th 01-before_upgrading_8_1_7_to_8_2_2
 gotht       # cd var/www/tomhartung.com/htdocs/tomhartung.com
 git status
 git pull
@@ -151,7 +161,20 @@ git pull
 
 Reconcile any differences as appropriate.
 
+Clear the caches and backup the database on all hosts:
+
+```
+drush cr    # or Admin -> Configuration -> Development -> Performance -> Clear All Caches
+bu th 01-before_upgrading_8_1_7_to_8_2_2
+```
+
+If unable to use drush, use Admin -> Configuration -> Development -> Performance -> Clear All Caches .
+
 ## Step (2) Download, Unpack, and Review the New
+
+Do this on the development host only:
+
+- [x] jane
 
 Use the links on the admin panel or find the file(s) on drupal.org .
 
@@ -171,52 +194,42 @@ rm drupal-8.2.2.tar.gz
 cd ../drupal-8.2.2/
 ```
 
-0.3 For each release, find and review these files:
-    l */*/core/CHANGELOG.txt
-    l */*/core/UP*.txt
-    more */*/core/CHANGELOG.txt
-    more */*/core/UP*.txt
-0.4 Links to release notes available in admin panel:
-    Reports -> Available
-    Review these links for information about changes to important files (settings files, etc.)
+### **THE CURRENT QUESTION WE WANT TO ANSWER**
+
+Following is a list of all pertinent releases since 8.1.7:
+
 * 8.1.8 - https://www.drupal.org/project/drupal/releases/8.1.8
 * 8.1.9 - https://www.drupal.org/project/drupal/releases/8.1.9
 * 8.1.10 - https://www.drupal.org/project/drupal/releases/8.1.10
 * 8.2.0 - https://www.drupal.org/project/drupal/releases/8.2.0
 * 8.2.1 - https://www.drupal.org/project/drupal/releases/8.2.1
 * 8.2.2 - https://www.drupal.org/project/drupal/releases/8.2.2
-0.5 Results of reviewing all this:
-    Verified minimal (inconsequential) changes only between drupal-8.0.4/core/UPGRADE.txt and drupal-8.1.3/core/UPDATE.txt
-    Verified drupal-8.1.3/core/UPDATE.txt, drupal-8.1.5/core/UPDATE.txt, and drupal-8.1.7/core/UPDATE.txt are identical
-    Based on the facts that the list of all releases doesn't include all of them and
-       that it says you can update from any minor release to any other minor release on this page:
-          https://www.drupal.org/node/2700999
-    --> It looks like we can go straight from 8.0.3 to 8.1.7
-0.5 Reconciling the processes:
-o  My process below (changed as deemed necessary - for my original process used, see previous files)
-o  Process in drupal-8.1.*/core/UPDATE.txt
-o  Online main process: https://www.drupal.org/node/2700999
-o  Online simplified process: https://www.drupal.org/node/1494290
 
-Development Host (currently bette):
-----------------------------------
-Upgrading 8.0.3 to 8.1.7 on 2016_02_05:
-1. Unpack the downloaded 8.1.7 tgz file into the unpack directory:
-      gothh
-      cd unpack
-      cp ../../downloads/drupal-8.1.7.tar.gz .
-      tar -xvzf drupal-8.1.7.tar.gz
-      /var/www/tomhartung.com/htdocs/unpack/drupal-8.1.7
-   Move that directory tree to the htdocs directory:
-      mv unpack/drupal-8.1.7 .
-2. Ensure current site code matches github repo
-   gotht
-   git pull
-   git status
-   # Ensure the code currently being used matches what's in the repo
-   ga; gc 'Latest updates yadda yadda yadda.'; gpom   # as necessary
-3. Clear the cache using drush and in backend, backup the DB, and
-      put the site into maintenance mode
+The admin panel lists two releases, 8.1.10 and 8.2.2.
+
+* See Reports -> Available Updates
+
+#### THE QUESTION
+
+**Do I need to process both, or can I just process the one for 8.2.2 ??**
+
+I believe we can skip to 8.2.2 .
+
+I also believe it is important to check all the release notes for updates to files like `settings.php` , etc.
+
+### Results of reviewing all the release notes:
+
+Not seeing anything about updates to the DB or settings.
+
+I want to try skipping going straight to 8.2.2.
+
+## Step (3) Update the Development Host (jane)
+
+********************
+*** You are here ***
+********************
+
+Put the site into maintenance mode
    gotht
    drush cr
    Configuration -> (Development section) Performance -> Clear All Caches
@@ -527,9 +540,9 @@ Commands:
    Check that Admin -> Reports shows we are running the new version.
    bu th 08-upgraded_to_8.1.7
 
-Backup Host:
-------------
-[ ] jane
+Production Host:
+----------------
+[ ] ava
 
 Follow same process as we did for barbara, re-using files when possible
 1. Grab new code base
@@ -560,5 +573,4 @@ Follow same process as we did for barbara, re-using files when possible
    tarHome
 
 
-*** You are here ***
 

@@ -313,10 +313,30 @@ gothh
 
 Run ls and diff commands from this directory to compare:
 
-* old production files under tomhartung.com/sites to the
+* old production files under tomhartung.com/sites (most of which are linked to files in gitignored/sites) to the
 * newly released versions under drupal-8.1.7/sites ,
 
-many of which are linked to files in gitignored/sites
+```
+diff gitignored/sites/development.services.yml drupal-8.2.2/sites/development.services.yml
+diff gitignored/sites/default/default.services.yml drupal-8.2.2/sites/default/default.services.yml
+diff gitignored/sites/default/default.settings.php  drupal-8.2.2/sites/default/default.settings.php
+```
+
+##### Reconciling the changes
+
+Output from the diffs reveal we need to do the following:
+
+- [ ] Use the gitignored version of `sites/development.services.yml`
+
+- [ ] Merge the differences between `gitignored/sites/default/default.services.yml` and `drupal-8.2.2/sites/default/default.services.yml`
+into `services.yml`
+
+- [ ] Merge the differences between `gitignored/sites/default/default.settings.php` and `drupal-8.2.2/sites/default/default.settings.php`
+into `settings.php`
+
+
+```
+```
 
 
 ********************
@@ -326,7 +346,7 @@ many of which are linked to files in gitignored/sites
 
 Important files of note:
 ```
-      sites/development.services.yml
+sites/development.services.yml
       sites/example.settings.php
          New setting:
             $settings['skip_permissions_hardening'] = TRUE;

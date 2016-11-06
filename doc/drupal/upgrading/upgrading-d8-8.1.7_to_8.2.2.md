@@ -342,7 +342,7 @@ gothh
 
 Run ls and diff commands from this directory to compare:
 
-* old production tomhartung.com/sites/default/default.services.yml (linked to gitignored/sites/default/default.services.yml) to the
+* the production version, tomhartung.com/sites/default/default.services.yml (linked to the `gitignored` directory) to the
 * newly released version, drupal-8.2.2/sites/default/default.services.yml
 
 ```
@@ -356,9 +356,21 @@ diff   gitignored/sites/default/default.services.yml drupal-8.2.2/sites/default/
 Output from the diffs reveal that changes have been made in the new release to `sites/default/default.services.yml` , so
 we need to do the following:
 
-- [ ] Merge the differences between `gitignored/sites/default/default.services.yml` and `drupal-8.2.2/sites/default/default.services.yml`
+- [X] Merge the differences between `gitignored/sites/default/default.services.yml` and `drupal-8.2.2/sites/default/default.services.yml`
 into `services.yml`
-- [ ] Copy the new version of `default.services.yml` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.services.yml`
+- [X] Copy the new version of `default.services.yml` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.services.yml`
+
+```
+ls -al gitignored/sites/default drupal-8.2.2/sites/default
+cd gitignored/sites/default/
+rd services.yml
+vi services.yml
+diff default.services.yml services.yml
+cp ../../../drupal-8.2.2/sites/default/default.services.yml .
+diff default.services.yml services.yml
+rd services.yml default.services.yml
+ci -l  services.yml default.services.yml     ## "Updated for drupal 8.2.2"
+```
 
 #### 3.1.5 Migrate any changes made to the `sites/default/default.settings.php` file to `settings.php`
 
@@ -370,8 +382,8 @@ gothh
 
 Run ls and diff commands from this directory to compare:
 
-* old production files under tomhartung.com/sites/default (most of which are linked to files in gitignored/sites/default) to the
-* newly released versions under drupal-8.2.2/sites/default
+* the production version, tomhartung.com/sites/default/default.settings.php (linked to the `gitignored` directory) to the
+* newly released version, drupal-8.2.2/sites/default/default.settings.php
 
 ```
 ls -al gitignored/sites/default/default.settings.php drupal-8.2.2/sites/default/default.settings.php
@@ -380,17 +392,24 @@ diff   gitignored/sites/default/default.settings.php drupal-8.2.2/sites/default/
 
 ##### Updating the `sites/default/*settings.php` file
 
-Output from the diffs reveal that changes have been made in the new release to both of these files, so
+Output from the diffs reveal that changes have been made in the new release to `sites/default/default.settings.php`, so
 we need to do the following:
 
 - [ ] Merge the differences between `gitignored/sites/default/default.settings.php` and `drupal-8.2.2/sites/default/default.settings.php`
 into `settings.php`
 - [ ] Copy the new version of `default.settings.php` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.settings.php`
 
+```
+cd gitignored/sites/default/
+vi settings.php
+cp ../../../drupal-8.2.2/sites/default/default.settings.php .
+rd default.settings.php
+diff default.settings.php settings.php
+rd default.settings.php settings.php
+ci -l default.settings.php settings.php
+```
 
-
-
-#### 3.1.6 Migrate any changes made to "sites/example.*" files
+#### 3.1.6 Migrate any changes made to "sites/example.*" files?
 
 I am not sure whether we need to be concerned about changes to these files, but
 I feel it's worth taking a moment to look for changes anyway.
@@ -406,10 +425,10 @@ Run ls and diff commands from this directory to compare:
 
 ```
 ls -al gitignored/sites drupal-8.2.2/sites
-ls -al tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php 
-diff tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php 
-ls -al tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.php 
-diff tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.php 
+ls -al tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php
+diff tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php
+ls -al tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.php
+diff tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.php
 ```
 
 ##### Updating the "sites/example.*" files

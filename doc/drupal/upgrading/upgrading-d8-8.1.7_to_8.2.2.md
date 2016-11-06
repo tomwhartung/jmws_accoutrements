@@ -301,10 +301,37 @@ mv README.txt robots.txt update.php web.config ../tomhartung.com-d8.2.2
 mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tomhartung.com-d8.2.2
 ```
 
-#### 3.1.3 Migrate any changes made to the `sites/development.services.yml` file
+#### 3.1.3 Cleanup
+
+Clean up the new code source directory to enable easy file name completion in the shell"
+
+```
+gothh
+cd drupal-8.2.2
+ls -al
+ls -al modules/
+rm modules/README.txt 
+rmdir modules/
+ls -al profiles/
+rm profiles/README.txt 
+rmdir profiles/
+ls -al themes/
+rm themes/README.txt 
+rmdir themes/
+ls -al
+```
+
+The only thing remaining should be the sites directory.
+
+### 3.2 Migrate any changes made to the `sites/*` and `sites/default/*` files
 
 At this point in time this part of the process is a bit difficult to codify into specific steps.
-It boils down to seeing what, if anything, has changed in the sites/development.services.yml and sites/*settings* files.
+It boils down to seeing what, if anything, has changed in the `sites/development.services.yml` and `sites/default/*settings*` files.
+
+**It is hoped that we will begin to update this code more regularly, so we are more familiar and comfortable with all this,
+we feel it is safe to use drush, have more confidence in and knowledge about the process, etc.**
+
+#### 3.2.1 Migrate any changes made to the `sites/development.services.yml` file
 
 Most of these files should be kept locally only (i.e., not in git), in the gitignored directory (and versioned in RCS).
 
@@ -332,7 +359,7 @@ we need to do the following:
 
 In other words, no changes are needed for this file.
 
-#### 3.1.4 Migrate any changes made to the `sites/default/default.services.yml` file to `services.yml`
+#### 3.2.2 Migrate any changes made to the `sites/default/default.services.yml` file to `services.yml`
 
 These files should **definitely** be kept locally only, in the gitignored directory (versioned in RCS).
 
@@ -372,7 +399,26 @@ rd services.yml default.services.yml
 ci -l  services.yml default.services.yml     ## "Updated for drupal 8.2.2"
 ```
 
-#### 3.1.5 Migrate any changes made to the `sites/default/default.settings.php` file to `settings.php`
+##### Check the `sites/default/default.services.yml` and `services.yml` files
+
+Ensure that these files match, except for the changes we have made to them:
+
+```
+gothh
+diff gitignored/sites/default/default.services.yml gitignored/sites/default/services.yml
+```
+
+##### Link `gitignored/sites/default/services.yml` into the updated site code
+
+```
+gothh
+cd tomhartung.com-d8.2.2/sites
+mkdir default
+cd default
+ln -s ../../../gitignored/sites/default/services.yml .
+```
+
+#### 3.2.3 Migrate any changes made to the `sites/default/default.settings.php` file to `settings.php`
 
 These files should **definitely** be kept locally only, in the gitignored directory (versioned in RCS).
 
@@ -408,6 +454,18 @@ diff default.settings.php settings.php
 rd default.settings.php settings.php
 ci -l default.settings.php settings.php
 ```
+##### Check the `sites/default/default.services.yml` and `services.yml` files
+
+Ensure that these files match, except for the changes we have made to them:
+
+```
+gothh
+diff gitignored/sites/default/default.services.yml gitignored/sites/default/services.yml
+```
+
+
+
+
 
 #### 3.1.6 Migrate any changes made to "sites/example.*" files?
 

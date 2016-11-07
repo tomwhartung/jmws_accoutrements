@@ -699,79 +699,74 @@ git status
 
 [ ] barbara
 
-### 4.0 Goals and concerns
+Formerly we would update the development host the copy the code and db to the other hosts, as we like to do with joomla.
+This is a good technique to use if we get hacked and want to start fresh with a "new" db.
 
-Currently these are the goals and concerns:
-
-* Use already-upgraded copy of db from jane (no extensions installed)
-* Use already-upgraded copy of code from jane (github)
-* ??? Test with idmygadget_bartik  ??? (concern copied from below)
-* ??? Test disabling cache  ??? (concern copied from below)
+This time let's update the code on barbara and run update.php to update the db, as we like to do with wordpress.
 
 ### 4.1 Overview of process:
 
-1. git pull updated code base and customizations (checked in from jane)
-2. Copy gitignored files from jane
-3. Backup current copy of db on jane
-4. Rest0re jane's DB on barbara
-5. Check and create links as necessary:
-5.1 Main link to point to the new code
-5.2 Links in the new code to gitignored files and customizations
-??? 7. Link gitignored and subsites to the new code
-8. Test
+1. Clear cache and backup db on barbara
+2. git pull updated code base and customizations (checked in from jane)
+3. Copy updated gitignored files from jane
+4. Run update.php to update the db on barbara
+5. Test
 
-Commands:
-1. Grab new code base
-   gothh
-   git clone git@github.com:tomwhartung/tomhartung.com-d8.git
-   mv tomhartung.com-d8 tomhartung.com-d8.1.7
-   ln -s tomhartung.com-d8.1.7 tomhartung.com
-2. Link customizations
-   gotht
-   mkdir -p  modules/jmws themes/jmws
-   cd modules/jmws/
-   l ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget/
-   ln -s ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget .
-   cd ../../themes/jmws
-   l ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik/
-   ln -s ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik .
-   l ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark/
-   ln -s ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark .
+### 4.2 Backup db and pull new code
 
-   !!! Test to see if we need these !!!
-   ??? # Currently we have some third party modules (for migration) plus my jmws one  ???
-   !!! Test to see if we need these !!!
-   ??? cd modules
-   ??? cp -rp ../../tomhartung.com-d8.0.2/modules/*   .
-   !!! Test to see if we need these !!!
+Use these admin options to clear the cache:
 
-3. Copy over db and gitignored files from bette to barbara
-3.1 On bette:
-   gobu
-   bu th 07-for_barbara
-   toBarbara tomhartung.d8-2016_07_25-bette-07-for_barbara.sql.gz
-   gothh
-   tar -cvzf gitignored-2016_07_25-for_barbara.tgz gitignored
-   toBarbara gitignored-2016_07_25-for_barbara.tgz
-3.2 On barbara:
-   gothh
-   tar -xvzf gitignored-2016_07_25-for_barbara.tgz
-3.3 Create the links
-   gotht
-   cd sites
-   ln -s ../../gitignored/sites/development.services.yml .
-   mkdir default
-   cd default
-   ln -s ../../../gitignored/sites/default/*.* .
-   ln -s ../../../gitignored/sites/default/files .
-   gothh
-   lnSubsites.py
-3.3 Restore a copy of the upgraded DB from bette
-   rs -h bette th 07-for_barbara
-4. Test and if it looks good, back up the db!
-   Check that site loads
-   Check that Admin -> Reports shows we are running the new version.
-   bu th 08-upgraded_to_8.1.7
+* Admin -> Configuration -> Development -> Clear All Caches
+
+Run these commands **on barbara** to backup the database and pull the new code base:
+
+```
+bu th 02-before_updating_8_1_7_to_8_2_2
+gothh
+cd gitignored/sites/default
+tar -cvzf files-02-before_updating-caches_cleared_in_backend.tgz files/
+gotht
+git pull
+```
+
+Note that we should already have a backup from Step (1) above, so this one's kind of redundant, "just in case."
+
+### 4.3. Copy updated gitignored files from jane
+
+Run these commands **on jane** to copy the new files over to barbara.
+
+```
+gothh      ## ON JANE!!
+cd gitignored/sites/
+diffBarbara development.services.yml   ## no changes
+cd default/
+diffBarbara default.se*                ## should see the changes made upgrading to new release
+toBarbara default.se*
+diffBarbara services.yml               ## should see the changes we made above
+toBarbara services.yml
+diffBarbara settings.php               ## should see the changes we made above
+toBarbara settings.php
+diffBarbara settings.local.php*        ## no changes
+```
+
+We run diff commands to be sure we don't accidentally overwrite any local changes we have made.
+
+### 4.4 Run `update.php`
+
+Access the following link to update the db:
+
+* http://barbara.tomhartung.com/update.php
+
+Applied 11 pending updates, and got the message same as above.
+
+### 4.5 Test and if it looks good, back up the db
+
+Check that the site loads and that Admin -> Reports -> Available Updates shows we are running the new version.
+
+```
+bu th 03-upgraded_8_1_7_to_8_2_2
+tarHome
+```
 
 
 ********************

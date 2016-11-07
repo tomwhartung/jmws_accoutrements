@@ -338,7 +338,7 @@ Most of these files should be kept locally only (i.e., not in git), in the gitig
 Run `ls` and `diff` commands to compare:
 
 * the current production version of `sites/development.services.yml` (linked to the `gitignored` directory) to the
-* newly released version in drupal-8.2.2/sites
+* the newly released version in `drupal-8.2.2/sites`
 
 ```
 gothh
@@ -373,7 +373,7 @@ These files should **definitely** be kept locally only, in the gitignored direct
 Run `ls` and `diff` commands to compare:
 
 * the current production version of `sites/default/default.services.yml` (linked to the `gitignored` directory) to the
-* newly released version, drupal-8.2.2/sites/default/default.services.yml
+* the newly released version, `drupal-8.2.2/sites/default/default.services.yml`
 
 ```
 gothh
@@ -403,6 +403,7 @@ rd services.yml default.services.yml
 ci -l  services.yml default.services.yml     ## "Updated for drupal 8.2.2"
 ```
 
+
 ##### 3.2.2.2 Checking the `sites/default/default.services.yml` and `services.yml` files
 
 Ensure that these files match, except for the changes ("CusTOMizations") we have made to them:
@@ -431,7 +432,7 @@ These files should **definitely** be kept locally only, in the gitignored direct
 Run `ls` and `diff` commands to compare:
 
 * the production version of `sites/default/default.settings.php` (linked to the `gitignored` directory) to the
-* newly released version, `drupal-8.2.2/sites/default/default.settings.php`
+* the newly released version, `drupal-8.2.2/sites/default/default.settings.php`
 
 ```
 gothh
@@ -458,16 +459,7 @@ rd default.settings.php settings.php
 ci -l default.settings.php settings.php
 ```
 
-##### 3.2.3.2 Check the `sites/default/default.services.yml` and `services.yml` files
-
-Ensure that these files match, except for the changes we have made to them:
-
-```
-gothh
-diff gitignored/sites/default/default.services.yml gitignored/sites/default/services.yml
-```
-
-##### 3.2.3.3 Check the `sites/default/default.settings.php` and `settings.php` files
+##### 3.2.3.2 Check the `sites/default/default.settings.php` and `settings.php` files
 
 Ensure that these files match, except for the changes we have made to them:
 
@@ -476,7 +468,7 @@ gothh
 diff gitignored/sites/default/default.settings.php gitignored/sites/default/settings.php
 ```
 
-##### 3.2.3.4 Link `gitignored/sites/default/settings.php` into the updated site code
+##### 3.2.3.3 Link `gitignored/sites/default/settings.php` into the updated site code
 
 Link our updated `settings.php` file into the new `tomhartung.com-d8.2.2/sites` directory tree.
 
@@ -498,23 +490,18 @@ ln -s ../../../gitignored/sites/default/files .
 ls -al
 ```
 
---------------------------------------------------
-
 #### 3.2.5 Migrate any changes made to "sites/example.*" files (???)
 
 I am not sure whether we need to be concerned about changes to these files, but
 I feel it's worth taking a moment to look for changes anyway.
 
+Run `ls` and `diff` commands to compare:
+
+* the old versions of files matching the pattern `tomhartung.com/sites/example.*` to
+* the newly released versions in `drupal-8.2.2/sites`
+
 ```
 gothh
-```
-
-Run `ls` and `diff` commands from this directory to compare:
-
-* old production files matching the pattern tomhartung.com/sites/example.*
-* newly released versions matching the pattern drupal-8.1.7/sites/example.*
-
-```
 ls -al gitignored/sites drupal-8.2.2/sites
 ls -al tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php
 diff tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php
@@ -522,17 +509,45 @@ ls -al tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.
 diff tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.php
 ```
 
-##### Updating the "sites/example.*" files
+##### 3.2.5.1 Updating the "sites/example.*" files
 
 No changes need to be made to these files in this release.
 
+### 3.3 Summary:
 
---------------------------------------------------
-
+Following is a list of important files to note:
 
 ```
-ln -s ../../../gitignored/sites/default/files .
+sites/development.services.yml
+sites/default/default.services.yml
+sites/default/default.settings.php
+sites/default/settings.local.php   ## Not in new releases, so there is NO need to merge it.
+sites/example.settings.php         ## Unsure of this file's importance, best to play it safe
+sites/example.sites.php            ## Unsure of this file's importance, best to play it safe
 ```
+
+#### 3.3.1 Changes made to `settings.php`
+
+Following is a list of the changes that need to be ported into the new settings.php :
+
+- hash_salt - supply value
+- uncomment code to include settings.local.php
+- cusTOMizations comment
+- settings for trusted host patterns
+- ye olde database config settings
+- install_profile and config_directories settings
+
+**Can we not migrate these changes to `settings.local.php` , and forget about them?
+
+#### 3.3.2 A Final Word of Caution:
+
+The name of the `settings.local.php` file may be changing (in 8.2 - NOT!!!) to `local.settings.php` .
+References (bug/feature reports):
+
+* https://www.drupal.org/node/2419213
+* https://www.drupal.org/node/1118520
+
+I am not sure whether we need to worry about this, but maybe this is checked for elsewhere in the code?!?
 
 
 ********************
@@ -540,116 +555,6 @@ ln -s ../../../gitignored/sites/default/files .
 ********************
 
 
-Important files of note:
-```
-sites/development.services.yml
-      sites/example.settings.php
-         New setting:
-            $settings['skip_permissions_hardening'] = TRUE;
-         Moved over to new version of code
-      sites/example.sites.php
-      sites/default/default.services.yml
-      sites/default/default.settings.php
-         Many changes (but not seeing any mentioned in the Release notes?)
-      sites/default/settings.local.php
-         Included by settings.php (at the very end)
-         Not in new releases, so there is NO need to merge it.
-      ** Name may be changing in 8.2 to local.settings.php
-      ** (apparently this is checked for elsewhere in the code?!?)
-      ** References (bug/feature reports):
-      **    https://www.drupal.org/node/2419213
-      **    https://www.drupal.org/node/1118520
-```
-
-6.1 Process for updating sites/default/services.yml when there are new settings:
-   gothh
-   diff drupal-8.1.7/sites/default/default.services.yml  gitignored/sites/default/default.services.yml
-   ###
-   ### Notes:
-   ###    Currently the version we are using on the dev host differs from that used in production (debug setting)
-   ###    No changes need to be made to this file for this upgrade
-   ###
-6.2 Process for updating sites/default/settings.php when there are new settings:
-   gothh
-   diff drupal-8.1.7/sites/default/default.settings.php gitignored/sites/default/default.settings.php
-   ###
-   ### See what changes have been made that I need to migrate to the new settings file
-   ###    (which also contains my secret db info and other customizations).
-   ### Migrate these changes into the copies of these files that we are using as necessary
-   ### Note that the copies of these files that we are using are under htdocs/gitignored/sites/default
-   ###
-   gothh
-   cd gitignored/sites/default
-   rd default.settings.php    ## Ensure it is up to date in RCS
-   diffBarbara settings*      ## Ensure these files match what is on the new server
-   diffJane settings*         ## Ensure these files match what is on the new development host
-   diffLauren settings*       ## Ensure any changes on the production host are desired there only
-   ###
-   ### If any of these files do not match what is on the other hosts
-   ### OR
-   ### If any of these files do not match what is in RCS on the corresponding local host
-   ###   We need to justify why the difference exists or make sure the files match
-   ###
-6.3 Choose your process:
-XXX Option 1) Identify changes made between:
-XXX    gitignored/sites/default/default.settings.php and
-XXX    gitignored/sites/default/settings.php
-XXX and make those changes to the new default.settings.php file to get a new settings.php file
-XXX OR
-XXX Option 2) Identify changes made between:
-XXX    gitignored/sites/default/default.settings.php and
-XXX    drupal-8.1.7/sites/default/default.settings.php
-XXX and make those to the old settings.php file to get a new settings.php file
-XXX OR
-    Option 3) as Step 3 of the process in UPDATE.txt recommends:
-       Save the version of settings.php currently in production as settings.php-old
-       [Also save the version of default.settings.php currently in production as default.settings.php-old]
-       Copy the new default.settings.php to settings.php
-       Identify the changes made to default.settings.php-old to get what is now settings.php-old
-       Apply those changes to the new default.settings.php to get the new settings.php
-6.4 Proceeding with Option 3 - details
-   gothh
-   cd gitignored/sites/default
-   cp default.settings.php default.settings.php-old
-   cp settings.php settings.php-old
-   cd -
-   cp drupal-8.1.7/sites/default/default.settings.php gitignored/sites/default/default.settings.php
-   cd -
-   diff default.settings.php-old settings.php-old      # 54 lines changed: migrate changes to new settings.php
-   diff default.settings.php-old default.settings.php  # 104 lines changed: hence the preference for option 3 (ymmv next time!)
-   cp default.settings.php settings.php
-   vi settings.php
-   ###
-   ### Manually apply these changes, that were made
-   ###    to default.settings.php-old to get settings.php-old
-   ### To the current settings.php (which matches the current default.settings.php)
-   ###    to get the new settings.php
-   ###
-   ### Following is a list of changes that need to be ported into the new settings.php :
-   ###
-   - hash_salt - supply value
-   - uncomment code to include settings.local.php
-   - cusTOMizations comment
-   - settings for trusted host patterns
-   - ye olde database config settings
-   - install_profile and config_directories settings
-7. Update new release tree with links to my gitignored files
-   gothh
-   cd tomhartung.com-d8.1.7
-   cd sites
-   rm development.services.yml       # (if necessary)
-   ln -s ../../gitignored/sites/development.services.yml .
-   mkdir default                     # (if necessary)
-   cd default
-   l ../../../gitignored/sites/default
-7.1 Optional: double-check for changes if you like!  Paranoia will destroy ya!!
-   diff ../../../drupal-8.1.7/sites/default/default.services.yml default.services.yml
-   diff ../../../drupal-8.1.7/sites/default/default.settings.php default.settings.php
-7.2 Link all of the sites/default/* files into the current directory tree
-   rm default.se*      # (if necessary)
-   ln -s ../../../gitignored/sites/default/*.* .
-   ln -s ../../../gitignored/sites/default/files .
-   rm *-old
 7.3 Link in the customizations
    gothh
    cd tomhartung.com-d8.1.7

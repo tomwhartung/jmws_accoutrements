@@ -683,53 +683,37 @@ tarHome
 
 Paranoia will destroy ya!
 
-#### 3.6.3 Test!!
+#### 3.6.5 Test, and commit and backup
 
+If the site looks OK, commit code and backup db:
 
-********************
-*** You are here ***
-********************
-
-
-
-9. If the site looks OK, commit code and backup db:
-9.1. Commit and push code:
-   gothd
-   git status
-   ga --all
-   gc 'Upgraded to the new release, 8.1.7 .' ; gpom
-   gs
-9.2. Remove from maintenance mode and backup DB:
-   As admin -> Configuration -> "Go online."
-9.3 Check new settings files into RCS:
-   gothh
-   cd gitignored/sites
-   rd RCS/*,v
-   cd default
-   mkdir old
-   mv settings.php-old settings.php-d8.0.3
-   mv default.settings.php-old default.settings.php-d8.0.3
-   mv *-d8.0.3 old/
-   rd RCS/*,v
-   ci -l default.settings.php
-   ci -l settings.php
-   rd RCS/*,v
+```
+gothd
+git status
+git add --all
+git commit -m 'Upgraded to the new release, 8.2.2 .' ; gpom
+git status
+```
 
 ## Step (4) Update the Backup Host (barbara)
 
 [ ] barbara
 
-Currently these are the goals and concerns:
-o  Use already-upgraded copy of db from bette (no extensions installed)
-o  Use already-upgraded copy of code from bette (github)
-o  ??? Test with idmygadget_bartik  ??? (concern copied from below)
-o  ??? Test disabling cache  ??? (concern copied from below)
+### 4.0 Goals and concerns
 
-Process:
-1. git pull updated code base and customizations (checked in from bette)
-2. Copy gitignored files from bette
-3. Backup current copy of db on bette
-4. Resture bette's DB on barbara
+Currently these are the goals and concerns:
+
+* Use already-upgraded copy of db from jane (no extensions installed)
+* Use already-upgraded copy of code from jane (github)
+* ??? Test with idmygadget_bartik  ??? (concern copied from below)
+* ??? Test disabling cache  ??? (concern copied from below)
+
+### 4.1 Overview of process:
+
+1. git pull updated code base and customizations (checked in from jane)
+2. Copy gitignored files from jane
+3. Backup current copy of db on jane
+4. Rest0re jane's DB on barbara
 5. Check and create links as necessary:
 5.1 Main link to point to the new code
 5.2 Links in the new code to gitignored files and customizations
@@ -788,6 +772,13 @@ Commands:
    Check that site loads
    Check that Admin -> Reports shows we are running the new version.
    bu th 08-upgraded_to_8.1.7
+
+
+********************
+*** You are here ***
+********************
+
+
 
 ## Step (5) Update the Production Host (ava)
 

@@ -335,7 +335,7 @@ we feel it is safe to use drush, have more confidence in and knowledge about the
 
 Most of these files should be kept locally only (i.e., not in git), in the gitignored directory (and versioned in RCS).
 
-Run ls and diff commands to compare:
+Run `ls` and `diff` commands to compare:
 
 * the current production version of `sites/development.services.yml` (linked to the `gitignored` directory) to the
 * newly released version in drupal-8.2.2/sites
@@ -349,7 +349,7 @@ diff gitignored/sites/development.services.yml drupal-8.2.2/sites/development.se
 
 ##### 3.2.1.1 Updating the "sites/development.services.yml" file
 
-Output from the diffs reveal we have made changes to this file, and it did not change in the current release, so
+Output from the `diff` commands reveals we have made changes to this file, and it did not change in the current release, so
 we need to do the following:
 
 - [X] Use the gitignored version of `sites/development.services.yml`
@@ -358,7 +358,7 @@ In other words, no changes are needed for this file.
 
 ##### 3.2.1.2 Link `gitignored/sites/development.services.yml` into the updated site code
 
-Link our updated development.services.yml file into the new tomhartung.com-d8.2.2/sites directory tree.
+Link our updated `development.services.yml` file into the new `tomhartung.com-d8.2.2/sites` directory tree.
 
 ```
 gothh
@@ -370,7 +370,7 @@ ln -s ../../gitignored/sites/development.services.yml .
 
 These files should **definitely** be kept locally only, in the gitignored directory (versioned in RCS).
 
-Run ls and diff commands to compare:
+Run `ls` and `diff` commands to compare:
 
 * the current production version of `sites/default/default.services.yml` (linked to the `gitignored` directory) to the
 * newly released version, drupal-8.2.2/sites/default/default.services.yml
@@ -384,11 +384,11 @@ diff   gitignored/sites/default/default.services.yml drupal-8.2.2/sites/default/
 
 ##### 3.2.2.1 Updating the `sites/default/default.services.yml` and `services.yml` files
 
-Output from the diffs reveal that changes have been made in the new release to `sites/default/default.services.yml` , so
+Output from the `diff` commands reveals that changes have been made in the new release to `sites/default/default.services.yml` , so
 we need to do the following:
 
 - [X] Merge the differences between `gitignored/sites/default/default.services.yml` and `drupal-8.2.2/sites/default/default.services.yml`
-into `services.yml`
+into **`services.yml`**
 - [X] Copy the new version of `default.services.yml` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.services.yml`
 
 ```
@@ -405,7 +405,7 @@ ci -l  services.yml default.services.yml     ## "Updated for drupal 8.2.2"
 
 ##### 3.2.2.2 Checking the `sites/default/default.services.yml` and `services.yml` files
 
-Ensure that these files match, except for the changes we have made to them:
+Ensure that these files match, except for the changes ("CusTOMizations") we have made to them:
 
 ```
 gothh
@@ -414,7 +414,7 @@ diff gitignored/sites/default/default.services.yml gitignored/sites/default/serv
 
 ##### 3.2.2.3 Link `gitignored/sites/default/services.yml` into the updated site code
 
-Link our updated services.yml file into the new tomhartung.com-d8.2.2/sites directory tree.
+Link our updated `services.yml` file into the new `tomhartung.com-d8.2.2/sites` directory tree.
 
 ```
 gothh
@@ -428,28 +428,25 @@ ln -s ../../../gitignored/sites/default/services.yml .
 
 These files should **definitely** be kept locally only, in the gitignored directory (versioned in RCS).
 
+Run `ls` and `diff` commands to compare:
+
+* the production version of `sites/default/default.settings.php` (linked to the `gitignored` directory) to the
+* newly released version, `drupal-8.2.2/sites/default/default.settings.php`
+
 ```
 gothh
-```
-
-Run ls and diff commands from this directory to compare:
-
-* the production version, tomhartung.com/sites/default/default.settings.php (linked to the `gitignored` directory) to the
-* newly released version, drupal-8.2.2/sites/default/default.settings.php
-
-```
 ls -al gitignored/sites/default/default.settings.php drupal-8.2.2/sites/default/default.settings.php
 diff   gitignored/sites/default/default.settings.php drupal-8.2.2/sites/default/default.settings.php
 ```
 
-##### Updating the `sites/default/*settings.php` file
+##### 3.2.3.1 Updating the `sites/default/*settings.php` files
 
-Output from the diffs reveal that changes have been made in the new release to `sites/default/default.settings.php`, so
+Output from the `diff` commands reveals that changes have been made in the new release to `sites/default/default.settings.php`, so
 we need to do the following:
 
-- [ ] Merge the differences between `gitignored/sites/default/default.settings.php` and `drupal-8.2.2/sites/default/default.settings.php`
-into `settings.php`
-- [ ] Copy the new version of `default.settings.php` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.settings.php`
+- [X] Merge the differences between `gitignored/sites/default/default.settings.php` and `drupal-8.2.2/sites/default/default.settings.php`
+into **`settings.php`**
+- [X] Copy the new version of `default.settings.php` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.settings.php`
 
 ```
 cd gitignored/sites/default/
@@ -460,7 +457,8 @@ diff default.settings.php settings.php
 rd default.settings.php settings.php
 ci -l default.settings.php settings.php
 ```
-##### Check the `sites/default/default.services.yml` and `services.yml` files
+
+##### 3.2.3.2 Check the `sites/default/default.services.yml` and `services.yml` files
 
 Ensure that these files match, except for the changes we have made to them:
 
@@ -469,7 +467,7 @@ gothh
 diff gitignored/sites/default/default.services.yml gitignored/sites/default/services.yml
 ```
 
-##### Check the `sites/default/default.settings.php` and `settings.php` files
+##### 3.2.3.3 Check the `sites/default/default.settings.php` and `settings.php` files
 
 Ensure that these files match, except for the changes we have made to them:
 
@@ -478,22 +476,31 @@ gothh
 diff gitignored/sites/default/default.settings.php gitignored/sites/default/settings.php
 ```
 
-##### Link `gitignored/sites/default/settings.php` into the updated site code
+##### 3.2.3.4 Link `gitignored/sites/default/settings.php` into the updated site code
 
-Link our updated settings.php file into the new tomhartung.com-d8.2.2/sites directory tree.
+Link our updated `settings.php` file into the new `tomhartung.com-d8.2.2/sites` directory tree.
 
 ```
 gothh
-cd tomhartung.com-d8.2.2/sites/default  ## Made in the last step!
+cd tomhartung.com-d8.2.2/sites/default  ## Directory was created in the last step!
 ln -s ../../../gitignored/sites/default/settings.php .
 ```
 
+#### 3.2.4 Link `settings.local*` files and the `files` directory into the updated site code
+
+Link in the other files and the `files` directory, that we keep on the localhost.
+
+```
+gothh
+cd tomhartung.com-d8.2.2/sites/default
+ln -s ../../../gitignored/sites/default/settings.local* .
+ln -s ../../../gitignored/sites/default/files .
+ls -al
+```
 
 --------------------------------------------------
 
-
-
-#### 3.2.4 Migrate any changes made to "sites/example.*" files?
+#### 3.2.5 Migrate any changes made to "sites/example.*" files (???)
 
 I am not sure whether we need to be concerned about changes to these files, but
 I feel it's worth taking a moment to look for changes anyway.
@@ -502,7 +509,7 @@ I feel it's worth taking a moment to look for changes anyway.
 gothh
 ```
 
-Run ls and diff commands from this directory to compare:
+Run `ls` and `diff` commands from this directory to compare:
 
 * old production files matching the pattern tomhartung.com/sites/example.*
 * newly released versions matching the pattern drupal-8.1.7/sites/example.*

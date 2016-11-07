@@ -513,7 +513,7 @@ diff tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.ph
 
 No changes need to be made to these files in this release.
 
-### 3.3 Summary:
+### 3.2.6 Summary:
 
 Following is a list of important files to note:
 
@@ -526,7 +526,7 @@ sites/example.settings.php         ## Unsure of this file's importance, best to 
 sites/example.sites.php            ## Unsure of this file's importance, best to play it safe
 ```
 
-#### 3.3.1 Changes made to `settings.php`
+#### 3.2.6.1 Changes made to `settings.php`
 
 Following is a list of the changes that need to be ported into the new settings.php :
 
@@ -539,7 +539,7 @@ Following is a list of the changes that need to be ported into the new settings.
 
 **Can we not migrate these changes to `settings.local.php` , and forget about them?
 
-#### 3.3.2 A Final Word of Caution:
+#### 3.2.6.2 A Final Word of Caution:
 
 The name of the `settings.local.php` file may be changing (in 8.2 - NOT!!!) to `local.settings.php` .
 References (bug/feature reports):
@@ -549,39 +549,46 @@ References (bug/feature reports):
 
 I am not sure whether we need to worry about this, but maybe this is checked for elsewhere in the code?!?
 
+### 3.3 Link in the customizations
 
-********************
-*** You are here ***
-********************
+Link in the customizations that we worked so hard on earlier this year.
 
+```
+gothh
+cd tomhartung.com-d8.2.2
+cd modules/
+mkdir jmws
+cd jmws/
+l ../../../customizations/*/modules/jmws
+ln -s ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget .
+cd ../../themes/
+mkdir jmws
+cd -
+l ../../customizations/*/modules/jmws  # these are the customized modules that are available
+cd -
+l ../../customizations/*/themes/jmws   # these are the customized themes that are available
+cd jmws/
+l ../../../customizations/*/themes/jmws
+ln -s ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark .
+ln -s ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik .
+```
 
-7.3 Link in the customizations
-   gothh
-   cd tomhartung.com-d8.1.7
-   cd modules/
-   mkdir jmws
-   cd ../themes/
-   mkdir jmws
-   cd -
-   l ../../customizations/*/modules/jmws  # these are the customized modules that are available
-   cd -
-   l ../../customizations/*/themes/jmws   # these are the customized themes that are available
-   cd jmws/
-   l ../../../customizations/*/themes/jmws
-   ln -s ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark .
-   ln -s ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik .
-   cd ../../modules/jmws/
-   l ../../../customizations/*/modules/jmws
-   ln -s ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget .
-   ###
-   ### Check: compare to the links in the current directory tree:
-   ###
-   gothh
-   l tomhartung.com/modules/jmws/ tomhartung.com/themes/jmws/
-   l tomhartung.com-d8.1.7/modules/jmws/ tomhartung.com-d8.1.7/themes/jmws/
-7.4 Clear caches and backup DB for good measure
-   ### Ok I have had issues with trying to restore backups and clear caches etc. so
-   ### I am thinking it is better to have too many of these than not enough
+### 3.3.1 Check the links
+
+Compare to the links in the current directory tree, to make sure we didn't miss anything.
+
+```
+gothh
+l tomhartung.com/modules/jmws/ tomhartung.com/themes/jmws/
+l tomhartung.com-d8.2.2/modules/jmws/ tomhartung.com-d8.2.2/themes/jmws/
+```
+
+### 3.4 Clear caches and backup DB one extra time
+
+Ok I have had issues with trying to restore backups and clear caches etc. so
+I am thinking it is better to have too many of these backups than not enough.
+
+```
    bu th 01-before_updating_8.0.3-8.1.7
    # Admin -> Configuration -> (Development section) Performance -> Clear All Caches
    bu th 02-before_updating-caches_cleared_in_backend
@@ -594,12 +601,21 @@ I am not sure whether we need to worry about this, but maybe this is checked for
    gothh
    cd gitignored/sites/default/
    tar -cvzf files-03-before_updating-all_caches_cleared.tgz files/
+```
+
 7.5 Switch the link and run lnSubsites.py
    gothh
    rm tomhartung.com ; ln -s tomhartung.com-d8.1.7 tomhartung.com
    l   # check link to main site
    lnSubsites.py
    l tomhartung.com/   # check links
+
+
+********************
+*** You are here ***
+********************
+
+
 
 8. Visit site to upgrade db as necessary:
    http://bette.tomhartung.com/update.php
@@ -649,9 +665,9 @@ I am not sure whether we need to worry about this, but maybe this is checked for
    ci -l settings.php
    rd RCS/*,v
 
-New Server!
------------
-[ ] barbara (not yet online!)
+## Step (4) Update the Backup Host (barbara)
+
+[ ] barbara
 
 Currently these are the goals and concerns:
 o  Use already-upgraded copy of db from bette (no extensions installed)
@@ -723,8 +739,8 @@ Commands:
    Check that Admin -> Reports shows we are running the new version.
    bu th 08-upgraded_to_8.1.7
 
-Production Host:
-----------------
+## Step (5) Update the Production Host (ava)
+
 [ ] ava
 
 Follow same process as we did for barbara, re-using files when possible

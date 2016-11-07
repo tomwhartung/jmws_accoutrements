@@ -583,32 +583,44 @@ l tomhartung.com/modules/jmws/ tomhartung.com/themes/jmws/
 l tomhartung.com-d8.2.2/modules/jmws/ tomhartung.com-d8.2.2/themes/jmws/
 ```
 
-### 3.4 Clear caches and backup DB one extra time
+### 3.4 Optional: Clear caches and backup DB for safety
 
-Ok I have had issues with trying to restore backups and clear caches etc. so
+Ok this is the paranoia will destroy ya part!
+
+But seriously, I have had issues with trying to restore backups and clear caches etc., so
 I am thinking it is better to have too many of these backups than not enough.
 
 ```
-   bu th 01-before_updating_8.0.3-8.1.7
-   # Admin -> Configuration -> (Development section) Performance -> Clear All Caches
-   bu th 02-before_updating-caches_cleared_in_backend
-   gothh
-   cd gitignored/sites/default/
-   tar -cvzf files-02-before_updating-caches_cleared_in_backend.tgz files/
-   gotht
-   drush cr
-   bu th 03-before_updating-all_caches_cleared
-   gothh
-   cd gitignored/sites/default/
-   tar -cvzf files-03-before_updating-all_caches_cleared.tgz files/
+bu th 02-before_updating_8_1_7_to_8_2_2
+# Admin -> Configuration -> (Development section) Performance -> Clear All Caches
+bu th 03-before_updating-caches_cleared_in_backend
+gothh
+cd gitignored/sites/default/
+tar -cvzf files-03-before_updating-caches_cleared_in_backend.tgz files/
+gotht
+drush cr
+bu th 04-before_updating-all_caches_cleared
+gothh
+cd gitignored/sites/default/
+tar -cvzf files-04-before_updating-all_caches_cleared.tgz files/
 ```
 
-7.5 Switch the link and run lnSubsites.py
-   gothh
-   rm tomhartung.com ; ln -s tomhartung.com-d8.1.7 tomhartung.com
-   l   # check link to main site
-   lnSubsites.py
-   l tomhartung.com/   # check links
+This step is optional but if you skip it you might jinx it!!  ;-)
+
+### 3.5 Switch the link and run lnSubsites.py
+
+Time to give it a try!
+
+```
+gothh
+rm tomhartung.com
+ln -s tomhartung.com-d8.2.2 tomhartung.com
+ls -al            # check link to main site
+lnSubsites.py
+ls -al tomhartung.com/               # check links
+ls -al tomhartung.com/modules/jmws   # check links
+ls -al tomhartung.com/themes/jmws    # check links
+```
 
 
 ********************

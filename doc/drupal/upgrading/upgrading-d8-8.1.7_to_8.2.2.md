@@ -622,6 +622,69 @@ ls -al tomhartung.com/modules/jmws   # check links
 ls -al tomhartung.com/themes/jmws    # check links
 ```
 
+### 3.6 Run `update.php`
+
+Access the following link to update the db as necessary:
+
+* http://jane.tomhartung.com/update.php
+
+Ran 11 updates and returned the following message:
+
+* **comment module**
+* - Update #8200
+* - entity displays updated: node.article.default, node.article.default, node.page.default.
+
+#### 3.6.1 Review log
+
+Access the following link to check for db update errors:
+
+* http://jane.tomhartung.com/admin/reports/dblog
+
+#### 3.6.2 Take site out of maintenance mode
+
+Run this command:
+
+```
+drush sset system.maintenance_mode 0
+```
+
+Or use the admin option Configuration -> Development -> Performance -> Maintenance Mode
+
+#### 3.6.3 Check the site
+
+If able to access site, backup immediately!  Paranoia will destroy ya!
+
+```
+bu th 05-after_updating_8_1_7_to_8_2_2
+gothh
+cd gitignored/sites/default/
+tar -cvzf files-05-after_updating_8_1_7_to_8_2_2.tgz files/
+```
+
+#### 3.6.4 Optional: take more backups
+
+We really do not need all of these backups...!
+(What we need is more confidence in the process.)
+
+```
+# Admin -> Configuration -> (Development section) Performance -> Clear All Caches
+bu th 06-after_updating-caches_cleared_in_backend
+gothh
+cd gitignored/sites/default/
+tar -cvzf files-06-after_updating-caches_cleared_in_backend.tgz files/
+gotht
+drush cr
+bu th 07-after_updating-all_caches_cleared
+gothh
+cd gitignored/sites/default/
+tar -cvzf files-07-after_updating-all_caches_cleared.tgz files/
+tarHome
+```
+
+Paranoia will destroy ya!
+
+#### 3.6.3 Test!!
+
 
 ********************
 *** You are here ***
@@ -629,31 +692,6 @@ ls -al tomhartung.com/themes/jmws    # check links
 
 
 
-8. Visit site to upgrade db as necessary:
-   http://bette.tomhartung.com/update.php
-   ##
-   ## Note: there were 12 pending DB updates found when upgrading from 8.0.3 to 8.1.7
-   ##
-8.1 Review log for db update errors:
-      http://bette.tomhartung.com/admin/reports/dblog
-8.2 If able to access site, backup immediately!  Paranoia will destroy ya!
-   bu th 04-after_updating_8.0.3-8.1.7
-   gothh
-   cd gitignored/sites/default/
-   tar -cvzf files-04-after_updating_8.0.3-8.1.7.tgz files/
-   # Admin -> Configuration -> (Development section) Performance -> Clear All Caches
-   bu th 05-after_updating-caches_cleared_in_backend
-   gothh
-   cd gitignored/sites/default/
-   tar -cvzf files-05-after_updating-caches_cleared_in_backend.tgz files/
-   gotht
-   drush cr
-   bu th 06-after_updating-all_caches_cleared
-   gothh
-   cd gitignored/sites/default/
-   tar -cvzf files-06-after_updating-all_caches_cleared.tgz files/
-   tarHome
-8.3 -> Test!!
 9. If the site looks OK, commit code and backup db:
 9.1. Commit and push code:
    gothd

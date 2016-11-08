@@ -1,14 +1,12 @@
 
  My Hosts and Their Purposes
 =============================
-My main dev host jane is acting up, making the '/' filesystem read-only,
-segfaulting on "df" commands and the like.
 
-This means that barbara, which was destined to be the new production host,
-is now taking over that role, at least temporarily.
+Ubuntu Hosts
 
-It also means that we will be buying a new computer for the production
-host role, probably this weekend.
+jane - main dev host
+barbara - backup
+ava - new production host
 
 List of Hosts and the Updates Needed
 ------------------------------------

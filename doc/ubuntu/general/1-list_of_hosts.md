@@ -58,4 +58,5 @@ Can we have a moment of silence for our deceased hosts?
 * gloria (Gloria Grahame) - original development host
 * marilyn (Marilyn Monroe) - original backup host
 * ida (Ida Lupino) - original production host
+* lizabeth (Lizabeth Scott) - $4000 Dell laptop that wasn't worth the price, so now I always buy cheap ones!
 

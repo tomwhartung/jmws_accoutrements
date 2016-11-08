@@ -26,5 +26,5 @@ For first install on new windows PC (barbara):
     http://www.everydaylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside.html
 
 Serving Django Via Apache and Deploying a Django Site
-    See 2-hosting_django-jane.txt in this directory
+    See ../specific_hosts/2016-jane-1/4-setup_wsgi_for_hosting_python.txt
 

@@ -738,7 +738,7 @@ Run these commands **on jane** to copy the new files over to barbara.
 ```
 gothh      ## ON JANE!!
 cd gitignored/sites/
-diffBarbara development.services.yml   ## no changes
+diffBarbara development.services.yml   ## should see only changes we want only on dev host (e.g., for debugging)
 cd default/
 diffBarbara default.se*                ## should see the changes made upgrading to new release
 toBarbara default.se*
@@ -787,7 +787,8 @@ tarHome
 
 Follow same process as we did for barbara, except that on ava:
 
-* **be sure to put the site in maintenance mode first!!**
+* **Be sure to put the site in maintenance mode first!!**
+* We are now pushing files from barbara to ava (instead of from jane to barbara)
 
 ### 5.2 Backup db and pull new code
 
@@ -804,12 +805,12 @@ git pull
 
 Note that we should already have a backup from Step (1) above, so this one's kind of redundant, "just in case."
 
-### 5.3. Copy updated gitignored files from jane
+### 5.3. Copy updated gitignored files from barbara to ava
 
-Run these commands **on jane** to copy the new files over to barbara.
+Run these commands **on barbara** to copy the new files over to ava.
 
 ```
-gothh      ## ON JANE!!
+gothh      ## ON BARBARA!!
 cd gitignored/sites/
 diffAva development.services.yml   ## no changes
 cd default/

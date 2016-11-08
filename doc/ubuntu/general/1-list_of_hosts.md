@@ -6,18 +6,30 @@ I have mostly Ubuntu hosts but there are a few others.
 
 ## Ubuntu Hosts
 
-jane - main dev host
-barbara - backup
-ava - new production host
+Ubuntu is so easy to install and keep updated, and everyone knows what it is.
 
-lauren - upgrade OS and use for social networking, maybe more
-bette - upgrade OS and use for email, maybe more
+### Workflow Ubuntu Hosts
+
+Currently using these hosts for creating, maintaining, and updating my sites.
+
+* jane - main dev host
+* barbara - backup
+* ava - new production host
+
+### Extra Ubuntu Hosts
+
+I was using these for backup and production, until barbara and ava came along this year.
+
+* lauren - upgrade OS and use for social networking, maybe more
+* bette - upgrade OS and use for email, maybe more
 
 ## Other Hosts
 
-humphrey - Intel Edison (Yocto)
-rita - Mac Mini
-veronica - Raspberry Pi (debian)
+Bought these pretty much out of curiosity, the satisfying of which gives me extreme pleasure.
+
+* humphrey - Intel Edison (Yocto)
+* rita - Mac Mini
+* veronica - Raspberry Pi (debian)
 
 ## List of Hosts That Need Updates
 

@@ -6,7 +6,7 @@ Just sayin'!
 
 [ ] Review Django Deployment Checklists
     For a few of these that we have found along the way, see
-    ../../general/0-install_ubuntu.urls
+    ../2016-jane-1/4-setup_wsgi_for_hosting_python.txt
 
 [ ] Update tera-wurfl
     Review and update docs (README files, etc.)

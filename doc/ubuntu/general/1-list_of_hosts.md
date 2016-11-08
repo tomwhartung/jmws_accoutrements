@@ -36,3 +36,26 @@ Bought these pretty much out of curiosity, the satisfying of which gives me extr
 - [ ] lauren - Ubuntu 14.04 desktop - upgrade to Ubuntu 16.04 when we get ava into production
 - [ ] bette - Ubuntu 14.04 desktop - upgrade to Ubuntu 16.04 when we get ava is done & grojas working in a VM
 
+## Who are These People?
+
+I name all my hosts after Film Noir actors and (mostly) acresses.
+
+* ava - Ava Gardner
+* barbara - Barbara Stanwyck
+* bette - Bette Davis
+* humphrey - Humphrey Bogard
+* jane - Jane Russell
+* lauren - Lauren Bacall
+* rita - Rita Hayworth
+* veronica - Veronica Lake
+
+The more you know!
+
+### A Moment of Silence
+
+Can we have a moment of silence for our deceased hosts?
+
+* gloria (Gloria Grahame) - original development host
+* marilyn (Marilyn Monroe) - original backup host
+* ida (Ida Lupino) - original production host
+

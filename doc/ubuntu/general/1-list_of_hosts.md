@@ -4,6 +4,18 @@
 Sometimes we need to look at the big picture, and stay focused on the long-term goals.
 I have mostly Ubuntu hosts but there are a few others.
 
+## First: A Moment of Silence
+
+Can we have a moment of silence for our deceased hosts?
+
+* gloria (Gloria Grahame) - original development host (SuSE)
+* marilyn (Marilyn Monroe) - original backup host (Gentoo)
+* ida (Ida Lupino) - original production host (Gentoo)
+* lizabeth (Lizabeth Scott) - $4000 Dell laptop that wasn't worth the price, so now I always buy cheap ones! (Red Hat)
+
+There may have been one or more hosts previous to these, but if so, it was in the 1990s and I have forgotten their names.
+If any of those come back to me, I will be sure to add them, because all my hosts are awesome!!
+
 ## Ubuntu Hosts
 
 Ubuntu is so easy to install and keep updated, and everyone knows what it is.
@@ -50,13 +62,4 @@ I name all my hosts after Film Noir actors and (mostly) acresses.
 * veronica - Veronica Lake
 
 The more you know!
-
-### A Moment of Silence
-
-Can we have a moment of silence for our deceased hosts?
-
-* gloria (Gloria Grahame) - original development host
-* marilyn (Marilyn Monroe) - original backup host
-* ida (Ida Lupino) - original production host
-* lizabeth (Lizabeth Scott) - $4000 Dell laptop that wasn't worth the price, so now I always buy cheap ones!
 

@@ -697,7 +697,7 @@ git status
 
 ## Step (4) Update the Backup Host (barbara)
 
-[ ] barbara
+[X] barbara
 
 Formerly we would update the development host the copy the code and db to the other hosts, as we like to do with joomla.
 This is a good technique to use if we get hacked and want to start fresh with a "new" db.
@@ -738,7 +738,7 @@ Run these commands **on jane** to copy the new files over to barbara.
 ```
 gothh      ## ON JANE!!
 cd gitignored/sites/
-diffBarbara development.services.yml   ## no changes
+diffBarbara development.services.yml   ## should see only changes we want only on dev host (e.g., for debugging)
 cd default/
 diffBarbara default.se*                ## should see the changes made upgrading to new release
 toBarbara default.se*
@@ -757,7 +757,7 @@ Access the following link to update the db:
 
 * http://barbara.tomhartung.com/update.php
 
-Applied 11 pending updates, and got the message same as above.
+Applied 11 pending updates, and got the message same as we got on jane.
 
 ### 4.5 Test and if it looks good, back up the db
 
@@ -765,47 +765,95 @@ Check that the site loads and that Admin -> Reports -> Available Updates shows w
 
 ```
 bu th 03-upgraded_8_1_7_to_8_2_2
-tarHome
 ```
 
+### 4.6 Clear caches and backup again, just in case
 
-********************
-*** You are here ***
-********************
+Clear all caches in admin panel, then run these commands:
 
-
+```
+bu th 04-upgraded_8_1_7_to_8_2_2-cleared_caches
+gothh
+cd gitignored/sites/default
+tar -cvzf files-04-upgraded_8_1_7_to_8_2_2-cleared_caches.tgz files/
+tarHome
+```
 
 ## Step (5) Update the Production Host (ava)
 
 [ ] ava
 
-Follow same process as we did for barbara, re-using files when possible
-1. Grab new code base
-   gothh
-   ln -s tomhartung.com-d8.1.7 tomhartung.com
-   cd fresh_clone.tmp/
-   git clone git@github.com:tomwhartung/tomhartung.com-d8.git
-   mv tomhartung.com-d8 tomhartung.com-d8.1.7
-   mv fresh_clone.tmp ..
-2. Link customizations
-   Follow commands run on barbara for step 2 (above).
-3. Copy over db and gitignored files from bette to barbara
-3.1 Reuse backup of db and gitignored tar file
-   On bette:
-   gobu
-   toJane tomhartung.d8-2016_07_25-bette-07-for_barbara.sql.gz
-   gothh
-   toJane gitignored-2016_07_25-for_barbara.tgz
-3.2 Restore backup of db and unpack gitignored tar file
-   On jane:
-   gothh
-   mv gitignored gitignored-old-8.0.3-delete_me_you_wuss
-   tar -xvzf gitignored-2016_07_25-for_barbara.tgz
-3.3 Create the links
-   Follow commands run on barbara for step 3,3 (above).
-4. Test and if it looks good, back up the db!
-   bu th 08-upgraded_to_8.1.7
-   tarHome
+### 5.1 Process
 
+Follow same process as we did for barbara, except that on ava:
 
+* **Be sure to put the site in maintenance mode first!!**
+* We are now pushing files from barbara to ava (instead of from jane to barbara)
+
+### 5.2 Backup db and pull new code
+
+Clear all caches in admin panel, then run these commands:
+
+```
+bu th 02-before_updating_8_1_7_to_8_2_2
+gothh
+cd gitignored/sites/default
+tar -cvzf files-02-before_updating-caches_cleared_in_backend.tgz files/
+gotht
+git pull
+```
+
+Note that we should already have a backup from Step (1) above, so this one's kind of redundant, "just in case."
+
+### 5.3. Copy updated gitignored files from barbara to ava
+
+Run these commands **on barbara** to copy the new files over to ava.
+
+```
+gothh      ## ON BARBARA!!
+cd gitignored/sites/
+diffAva development.services.yml   ## no changes
+cd default/
+diffAva default.se*                ## should see the changes made upgrading to new release
+toAva default.se*
+diffAva services.yml               ## should see the changes we made above
+toAva services.yml
+diffAva settings.php               ## should see the changes we made above
+toAva settings.php
+diffAva settings.local.php*        ## no changes
+```
+
+We run diff commands to be sure we don't accidentally overwrite any local changes we have made.
+
+### 5.4 Run `update.php`
+
+Access the following link to update the db:
+
+* http://ava.tomhartung.com/update.php
+
+Applied 11 pending updates, and got the message same as we got on jane.
+
+### 5.5 Test and if it looks good, back up the db
+
+Check that the site loads and that Admin -> Reports -> Available Updates shows we are running the new version.
+
+```
+bu th 03-upgraded_8_1_7_to_8_2_2
+gothh
+cd gitignored/sites/default
+tar -cvzf files-03-upgraded_8_1_7_to_8_2_2.tgz files/
+tarHome
+```
+
+### 5.6 Clear caches and backup again, just in case
+
+Clear all caches in admin panel, then run these commands:
+
+```
+bu th 04-upgraded_8_1_7_to_8_2_2-cleared_caches
+gothh
+cd gitignored/sites/default
+tar -cvzf files-04-upgraded_8_1_7_to_8_2_2-cleared_caches.tgz files/
+tarHome
+```
 

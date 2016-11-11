@@ -55,7 +55,7 @@ I name all my hosts after Film Noir actors and (mostly) acresses.
 * ava - Ava Gardner
 * barbara - Barbara Stanwyck
 * bette - Bette Davis
-* humphrey - Humphrey Bogard
+* humphrey - Humphrey Bogart
 * jane - Jane Russell
 * lauren - Lauren Bacall
 * rita - Rita Hayworth

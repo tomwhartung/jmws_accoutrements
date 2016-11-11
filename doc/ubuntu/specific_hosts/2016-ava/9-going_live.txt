@@ -8,6 +8,9 @@ Just sayin'!
     For a few of these that we have found along the way, see
     ../../general/0-install_ubuntu.urls
 
+[ ] Update mobile_detect
+    Review and update docs (README files, etc.)
+
 [ ] Update tera-wurfl
     Review and update docs (README files, etc.)
     Update code

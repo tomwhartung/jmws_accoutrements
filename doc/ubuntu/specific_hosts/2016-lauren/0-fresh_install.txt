@@ -1,7 +1,10 @@
 
  Performing a Fresh Install
 ============================
-New disk, fresh install, allowing room for next version.
+Fresh install, trying to:
+
+o keep 14.04 availiable and
+o allow room for next version
 
  Install:
 ----------
@@ -12,15 +15,22 @@ New disk, fresh install, allowing room for next version.
 Disk Partitions:
 ----------------
 I always consider this to be the hardest part.
-    Primary   1G sda1  /boot
-    Primary   1G sda2  /mnt/future/boot
-    Logical   8G sda5  swap
-    Logical  25G sda6  /
-    Logical  25G sda7  /mnt/future
-    Logical  25G sda8  /home
-    Logical  25G sda9  /mnt/future/home
-    Logical  20G sda10 /var/www
-    Logical   1G sda11 /usr/local/bin
-    Logical  92G sda12 /usr/local/tar
-    Logical 250G sda13 /mnt/spare/sda13
 
+Existing File Systems
+
+/dev/sda1 	/ubuntu-14.04/boot            922M  228M  631M  27% /boot
+/dev/sda2 	/                              82G   56M   78G   1% /ubuntu-16.04.1
+/dev/sda3 	/usr/local/tar                 82G   44G   35G  56% /usr/local/tar
+/dev/sda5 	/usr/local/bin                942M  1.8M  891M   1% /usr/local/bin
+/dev/sda6 	/ubuntu-14.04/home            9.3G  3.7G  5.2G  42% /home
+/dev/sda7 	/ubuntu-14.04/var/cache       1.9G  463M  1.3G  27% /var/cache
+/dev/sda8   /home                         1.9G  2.9M  1.8G   1% /ubuntu-16.04.1/home
+/dev/sda9   /mnt/spare/sda9               2.0G  3.1M  1.8G   1% /mnt/spare/sda9
+/dev/sda10	/ubuntu-14.04/usr/src         3.0G  853M  2.0G  31% /usr/src
+/dev/sda11 	/ubuntu-14.04/lib/modules     4.9G  1.2G  3.5G  25% /lib/modules
+/dev/sda12 	/ubuntu-14.04/                9.8G  8.0G  1.4G  86% /
+/dev/sda13 	/ubuntu-14.04/var/www          17G  5.7G   11G  36% /var/www
+/dev/sda14 	/ubuntu-14.04/var/log/apache2  11G  577M  9.0G   6% /var/log/apache2
+/dev/sda15 	swap                            4G                  swap
+
+Note that we can *not* split /dev/sda2 up into smaller parts.

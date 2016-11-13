@@ -1,0 +1,26 @@
+
+ Performing a Fresh Install
+============================
+New disk, fresh install, allowing room for next version.
+
+ Install:
+----------
+[ ] Check checkboxes:
+   [ ] Download updates while installing
+   [ ] Install third-party software
+
+Disk Partitions:
+----------------
+I always consider this to be the hardest part.
+    Primary   1G sda1  /boot
+    Primary   1G sda2  /mnt/future/boot
+    Logical   8G sda5  swap
+    Logical  25G sda6  /
+    Logical  25G sda7  /mnt/future
+    Logical  25G sda8  /home
+    Logical  25G sda9  /mnt/future/home
+    Logical  20G sda10 /var/www
+    Logical   1G sda11 /usr/local/bin
+    Logical  92G sda12 /usr/local/tar
+    Logical 250G sda13 /mnt/spare/sda13
+

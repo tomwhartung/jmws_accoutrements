@@ -34,7 +34,7 @@ Desktop Necessities for Comfortableness
     Installing openssh-server seems to be enough to get it going
     As tomh:
       Remove or rename ~/.ssh/known-hosts
-      Push over a copy of /etc/hosts
+      Copy /etc/hosts from previous release
     As root:
       cd /etc
       mkdir RCS
@@ -51,6 +51,7 @@ Desktop Necessities for Comfortableness
     Appearance -> Behavior -> Enable workspaces
     Appearance -> Behavior -> Show the menus for a window -> In the window's title bar
     Brightness & Lock -> Turn all that shit off
+    Keyboard -> Shortcuts -> Navigation
     Power -> Adjust as necessary
     Software & Updates -> Updates -> Automatically check for updates -> Every week
     User Accounts -> Automatic Login (On)
@@ -71,7 +72,7 @@ Desktop Necessities for Comfortableness
     As tomh:
       which unity-tweak-tool
       unity-tweak-tool &
-      which xscreensave-demor
+      which xscreensaver-demo
       xscreensaver-demo &
 [ ] Check man page for other steps needed to get it working at startup
     man xscreensaver
@@ -83,12 +84,16 @@ Desktop Necessities for Comfortableness
     As tomh:
       gnome-session-properties
     Window Manager -> Window Snapping -> turn all that shit off
-[ ] Install synaptic and maybe some extra git packages
-    sudo apt-get install synaptic
-    (?? sudo apt-get install git-stuff git-magic ??)
-[ ] Start and lock synaptic to launcher
-    As root:
-      synaptic
+[ ] Terminal -> Edit -> Preferences
+    Create a new profile named "tomh"
+    Profiles tab -> Use "tomh" when launching new terminal
+[ ] Terminal -> Edit -> Preferences
+    Shortcuts -> Tabs -> "You know how I like it baby!"
+
+************************
+***** You Are Here *****
+************************
+
 [ ] Install chrome, start and lock to launcher
     Reference:
       https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-16-04-lts

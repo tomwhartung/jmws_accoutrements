@@ -3,24 +3,23 @@
 =====================
 Install the basic stuff we need to get around and do the other stuff.
 
-This is the process we are running to set up jane.
---------------------------------------------------
-Parts of it should be perfectly usable on other hosts.
-Trying to make this more of a command line process, so we can identify
-the essentials and get them set up, making getting other stuff done easier
-
+This is the process we are running to set up lauren.
+----------------------------------------------------
+Lauren is our oldest PC and the plan is to use it only for social networking.
 
 Desktop Necessities for Comfortableness
 ---------------------------------------
 [ ] Home Directory
-    Restore home directory from backup, or take a copy from another host
+    Copy relevant files and directories to home directory from 14.04 install
 [ ] Install any new updates
     sudo apt-get update
     sudo apt-get upgrade
-[ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
-    sudo apt-get install rcs vim subversion
-    sudo apt-get install openssh-server
-    sudo apt-get install git git-svn
+[ ] Install rcs, vim, subversion, openssh-server, git, git-svn
+    sudo apt-get -y install rcs vim subversion
+    sudo apt-get -y install openssh-server
+    sudo apt-get -y install git git-svn
+[ ] Set up static ip
+    Settings -> Network -> ...
 [ ] Set up root account: .bashrc, links to .bash_aliases*
     As root:
       ln -s ~tomh/.bash_aliases .
@@ -52,22 +51,21 @@ Desktop Necessities for Comfortableness
     Appearance -> Behavior -> Enable workspaces
     Appearance -> Behavior -> Show the menus for a window -> In the window's title bar
     Brightness & Lock -> Turn all that shit off
-    Network -> Setup static IP
     Power -> Adjust as necessary
     Software & Updates -> Updates -> Automatically check for updates -> Every week
     User Accounts -> Automatic Login (On)
 [ ] Lock terminal and firefox to launcher
 [ ] Install fortune-mod, fortunes, other fortune* packages as desired
     dpkg-query -l 'fortune*'
-    apt-get install fortunes fortune-mod
+    apt-get install -y fortunes fortune-mod
 [ ] Install xscreensaver, xscreensaver-data-extra
     dpkg-query -l xscreensaver xscreensaver-data-extra
     dpkg-query -l 'xscreensaver*'
     apt-get install xscreensaver xscreensaver-data-extra
 [ ] Install xscreensaver-gl-extra
-    apt-get install xscreensaver-gl-extra
+    apt-get install -y xscreensaver-gl-extra
 [ ] Install unity-tweak-tool
-    apt-get install unity-tweak-tool
+    apt-get install -y unity-tweak-tool
 [ ] Start and lock xscreensaver and unity-tweak-tool to launcher
     Peruse and adjust all unity-tweak-tool for maximum comfort
     As tomh:

@@ -90,18 +90,33 @@ Desktop Necessities for Comfortableness
 [ ] Terminal -> Edit -> Preferences
     Shortcuts -> Tabs -> "You know how I like it baby!"
 
-************************
-***** You Are Here *****
-************************
-
-[ ] Install chrome, start and lock to launcher
+***********************************************************
+*** Unable to install chrome on 32 bit arch
+*** Saving these steps for future reference on 64 bit hosts
+***********************************************************
+[ ] Install "Web" instead
+    Search Your Computer -> Ubuntu Software (Lock to Launcher)
+    Search for "web browser"
+    Install "Web," the "web browser for GNOME, and lock to launcher
+[N] Install chrome, start and lock to launcher
     Reference:
       https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-16-04-lts
     As root:
-      sudo apt install google-chrome-stable
+      vi /etc/apt/sources.list
+      ## Add line to end of file:
+          deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+      mkdir ~/get-google-chrome-stable
+      cd ~/get-google-chrome-stable
+      wget https://dl.google.com/linux/linux_signing_key.pub
+      apt-key add linux_signing_key.pub
+      apt install -y google-chrome-stable
+    Oops that did not work!
+    Oops too bad, chrome does not run on 32 bit arch!
+    New Reference:
+      http://askubuntu.com/questions/763298/where-can-you-download-32-bit-edition-of-google-chrome-for-ubuntu-os
     As tomh:
       google-chrome &  ## lock to launcher
-[ ] Disable annoying popup, asking for keyring password when starting chrome
+[N] Disable annoying popup, asking for keyring password when starting chrome
     Reference:
       http://askubuntu.com/questions/867/how-can-i-stop-being-prompted-to-unlock-the-default-keyring-on-boot?noredirect=1&lq=1
     Click on the "Search your computer" Ubuntu icon
@@ -111,6 +126,10 @@ Desktop Necessities for Comfortableness
     Click on "Change Password"
     Enter the old (login) password
     Leave new password blank
+***********************************************************
+*** Unable to install chrome on 32 bit arch
+*** Saving these steps for future reference on 64 bit hosts
+***********************************************************
 [ ] Install chromium-browser, start and lock to launcher
    dpkg-query --list chromium-browser
    apt-get install -y chromium-browser
@@ -130,13 +149,19 @@ Desktop Necessities for Comfortableness
     As tomh:
       cd /art; ln -s /media/ext4backupA/art/* .
       cd ; ln -s /art/images ~/Pictures
+
+************************
+***** You Are Here *****
+************************
+
 [ ] Set terminal double-click word boundary preferences
+    Reference:
+      http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
     Edit -> Profile Preferences -> General -> Copy Profile ID
     Plug the Profile ID into the following dconf command:
        dconf write /org/gnome/terminal/legacy/profiles:/:<Profile_ID>/word-char-exceptions '@ms "?_+~·:"'
     For example:
        dconf write /org/gnome/terminal/legacy/profiles:/:a69aef0d-01c0-40a0-a343-7c2d19d66673/word-char-exceptions '@ms "?_+~·:"'
-    Reference: http://unix.stackexchange.com/questions/174728/gnome-classic-terminal-mouse-double-click-selection
 [ ] Ok to use "Ubuntu Software" (orange icon) GUI to install these
     Install audacious, easytag, audex, banshee, vlc media player
     Install compizconf settings manager

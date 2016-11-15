@@ -65,4 +65,10 @@ Server Necessities for Comfortableness
       vi hosts
       ci -l hosts
     Test using ssh to get from host to host.
+[ ] To support automounting of usb thumb drives
+    References:
+      https://help.ubuntu.com/community/Mount/USB
+      https://usbmount.alioth.debian.org/
+    As tomh:
+      sudo apt-get -y install usbmount
 

@@ -116,7 +116,14 @@ Desktop Necessities for Comfortableness
       http://askubuntu.com/questions/763298/where-can-you-download-32-bit-edition-of-google-chrome-for-ubuntu-os
     As tomh:
       google-chrome &  ## lock to launcher
-[N] Disable annoying popup, asking for keyring password when starting chrome
+***********************************************************
+*** Unable to install chrome on 32 bit arch
+*** Saving these steps for future reference on 64 bit hosts
+***********************************************************
+[ ] Install chromium-browser, start and lock to launcher
+   dpkg-query --list chromium-browser
+   apt-get install -y chromium-browser
+[ ] Disable annoying popup, asking for keyring password when starting chromium
     Reference:
       http://askubuntu.com/questions/867/how-can-i-stop-being-prompted-to-unlock-the-default-keyring-on-boot?noredirect=1&lq=1
     Click on the "Search your computer" Ubuntu icon
@@ -126,13 +133,6 @@ Desktop Necessities for Comfortableness
     Click on "Change Password"
     Enter the old (login) password
     Leave new password blank
-***********************************************************
-*** Unable to install chrome on 32 bit arch
-*** Saving these steps for future reference on 64 bit hosts
-***********************************************************
-[ ] Install chromium-browser, start and lock to launcher
-   dpkg-query --list chromium-browser
-   apt-get install -y chromium-browser
 [ ] Install xeyes (part of x11-apps), and add to startup programs
     As root:
       dpkg-query --list xeyes

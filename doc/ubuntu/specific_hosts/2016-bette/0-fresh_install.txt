@@ -2,7 +2,6 @@
  Performing a Fresh Install
 ============================
 Fresh install, trying to:
-
 o keep 14.04 availiable and
 o allow room for next version
 
@@ -16,21 +15,26 @@ Disk Partitions:
 ----------------
 I always consider this to be the hardest part.
 
-Existing File Systems
+Overview:
+o Use old partitions from previous Windows 7 install
+o Skip allocating a separate /boot partition this time (I believe it doesn't really help anyting)
 
-/dev/sda1 	/ubuntu-14.04/boot            922M  228M  631M  27% /boot
-/dev/sda2 	/                              82G   56M   78G   1% /ubuntu-16.04.1
-/dev/sda3 	/usr/local/tar                 82G   44G   35G  56% /usr/local/tar
-/dev/sda5 	/usr/local/bin                942M  1.8M  891M   1% /usr/local/bin
-/dev/sda6 	/ubuntu-14.04/home            9.3G  3.7G  5.2G  42% /home
-/dev/sda7 	/ubuntu-14.04/var/cache       1.9G  463M  1.3G  27% /var/cache
-/dev/sda8   /home                         1.9G  2.9M  1.8G   1% /ubuntu-16.04.1/home
-/dev/sda9   /mnt/spare/sda9               2.0G  3.1M  1.8G   1% /mnt/spare/sda9
-/dev/sda10	/ubuntu-14.04/usr/src         3.0G  853M  2.0G  31% /usr/src
-/dev/sda11 	/ubuntu-14.04/lib/modules     4.9G  1.2G  3.5G  25% /lib/modules
-/dev/sda12 	/ubuntu-14.04/                9.8G  8.0G  1.4G  86% /
-/dev/sda13 	/ubuntu-14.04/var/www          17G  5.7G   11G  36% /var/www
-/dev/sda14 	/ubuntu-14.04/var/log/apache2  11G  577M  9.0G   6% /var/log/apache2
-/dev/sda15 	swap                            4G                  swap
+File System  16.04 Mount Point             Size  Used  Avail  %  14.04 Mount Point
+---------------------------------------------------------------------------------
+/dev/sda1    /home                          13G  --------------- Reformat from ntfs -> ext4
+/dev/sda2    /mnt/spare/sda2               105M  --------------- Reformat from ntfs -> ext4
+/dev/sda3    /                              13G  --------------- Reformat from ntfs -> ext4
+/dev/sda5    /usr/local/tar                 23G   12G  9.9G  55% /usr/local/tar
+/dev/sda6    swqp                          9.0G  --------------- [swap space]
+/dev/sda7    /mnt/spare/sda7               4.5G  9.4M  4.2G   1% /mnt/spare/sda7
+/dev/sda8    /mnt/spare/sda8               4.5G  9.3M  4.2G   1% /mnt/spare/sda8
+/dev/sda9    /mnt/spare/sda9               4.5G  9.3M  4.2G   1% /mnt/spare/sda9
+/dev/sda10   /usr/local/bin                922M  2.6M  856M   1% /usr/local/bin
+/dev/sda11   /mnt/future/home               19G   44M   18G   1% /mnt/spare/sda11
+/dev/sda12   /ubuntu-14.04/boot_partition  922M  123M  736M  15% /boot_partition   ## I believe this can become spare
+/dev/sda13   /mnt/spare/sda13              4.5G  9.3M  4.2G   1% /mnt/spare/sda13
+/dev/sda14   /ubuntu-14.04/var/www         9.1G  5.1G  3.6G  59% /var/www
+/dev/sda15   /ubuntu-14.04/                 19G   15G  3.2G  82% /
+/dev/sda16   /ubuntu-14.04/home             46G   23G   21G  52% /home
+/dev/sda17   /mnt/future                   216G   60M  205G   1% /mnt/spare/sda17
 
-Note that we can *not* split /dev/sda2 up into smaller parts.

@@ -16,8 +16,8 @@ Disk Partitions:
 ----------------
 I always consider this to be the hardest part.
 
-File System  New Mount Point                Size  Used  Avail  %  Old Mount Point
----------------------------------------------------------------------------------
+File System  16.04.1 Mount Point            Size  Used  Avail  %  14.04 Mount Point
+-----------------------------------------------------------------------------------
 /dev/sda1    /ubuntu-14.04/boot             922M  228M  631M  27% /boot
 /dev/sda2    /                               82G   56M   78G   1% /ubuntu-16.04.1
 /dev/sda3    /usr/local/tar                  82G   44G   35G  56% /usr/local/tar

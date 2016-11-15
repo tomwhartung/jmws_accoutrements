@@ -73,7 +73,7 @@ Desktop Necessities for Comfortableness
     As tomh:
       which unity-tweak-tool
       unity-tweak-tool &
-      which xscreensave-demor
+      which xscreensaver-demo
       xscreensaver-demo &
 [ ] Check man page for other steps needed to get it working at startup
     man xscreensaver
@@ -95,9 +95,17 @@ Desktop Necessities for Comfortableness
     Reference:
       https://www.linuxbabe.com/ubuntu/install-google-chrome-ubuntu-16-04-lts
     As root:
-      sudo apt install google-chrome-stable
+      mkdir ~/tmp
+      cd ~/tmp
+      wget https://dl.google.com/linux/linux_signing_key.pub
+      apt-key add linux_signing_key.pub
+      apt update
+      apt install google-chrome-stable
     As tomh:
       google-chrome &  ## lock to launcher
+
+------------------------------
+
 [ ] Disable annoying popup, asking for keyring password when starting chrome
     Reference:
       http://askubuntu.com/questions/867/how-can-i-stop-being-prompted-to-unlock-the-default-keyring-on-boot?noredirect=1&lq=1

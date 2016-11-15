@@ -21,9 +21,9 @@ o Skip allocating a separate /boot partition this time (I believe it doesn't rea
 
 File System  16.04 Mount Point             Size  Used  Avail  %  14.04 Mount Point
 ---------------------------------------------------------------------------------
-/dev/sda1    /home                          13G  --------------- Reformat from ntfs -> ext4
-/dev/sda2    /mnt/spare/sda2               105M  --------------- Reformat from ntfs -> ext4
-/dev/sda3    /                              13G  --------------- Reformat from ntfs -> ext4
+/dev/sda1    /home                          13G  --------------- Reformat from ntfs -> ext4  (*)
+/dev/sda2    /mnt/spare/sda2               105M  --------------- Reformat from ntfs -> ext4  (*)
+/dev/sda3    /                              13G  --------------- Reformat from ntfs -> ext4  (*)
 /dev/sda5    /usr/local/tar                 23G   12G  9.9G  55% /usr/local/tar
 /dev/sda6    swqp                          9.0G  --------------- [swap space]
 /dev/sda7    /mnt/spare/sda7               4.5G  9.4M  4.2G   1% /mnt/spare/sda7
@@ -37,4 +37,13 @@ File System  16.04 Mount Point             Size  Used  Avail  %  14.04 Mount Poi
 /dev/sda15   /ubuntu-14.04/                 19G   15G  3.2G  82% /
 /dev/sda16   /ubuntu-14.04/home             46G   23G   21G  52% /home
 /dev/sda17   /mnt/future                   216G   60M  205G   1% /mnt/spare/sda17
+
+(*) Ran blkid command (as root) and got the following UUID block ids for these partitions:
+   /dev/sda1: LABEL="Recovery" UUID="B8C0FF33C0FEF68A" TYPE="ntfs"
+   /dev/sda2: LABEL="System Reserved" UUID="E454CA8654CA5AC6" TYPE="ntfs"
+   /dev/sda3: UUID="2042E8A642E88240" TYPE="ntfs"
+I feel confident that these UUIDs will change when the partitions are reformatted, and
+moreover there is no reason to mount them in 14.04 at this time.
+However, we could certainly do that when we're done, i.e., mounting sda1 to /ubuntu-16.04/ and
+sda3 to /ubuntu-16.04/home , if we desire to do so.
 

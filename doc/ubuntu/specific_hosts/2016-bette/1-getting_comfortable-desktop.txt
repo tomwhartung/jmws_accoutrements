@@ -103,6 +103,26 @@ Desktop Necessities for Comfortableness
       apt install google-chrome-stable
     As tomh:
       google-chrome &  ## lock to launcher
+[ ] Install chromium-browser, start and lock to launcher
+    dpkg-query --list chromium-browser
+    apt-get install -y chromium-browser
+[ ] Install xeyes (part of x11-apps), and add to startup programs
+    As root:
+      dpkg-query --list xeyes
+      apt-get install xeyes
+      apt-get install x11-apps
+    As tomh:
+      which xeyes
+      gnome-session-properties
+[N] Get rid of annoying icons on desktop
+    Note: not seeing these with the new os on bette, maybe it was a 16.04.1 thing?
+    As tomh:
+      gsettings set org.gnome.desktop.background  show-desktop-icons false
+[ ] Lock disks [manager] to launcher
+[ ] Setup important /art links to external disk
+    As tomh:
+      cd /art; ln -s /media/ext4backupA/art/* .
+      cd ; ln -s /art/images ~/Pictures
 
 ------------------------------
 
@@ -116,25 +136,9 @@ Desktop Necessities for Comfortableness
     Click on "Change Password"
     Enter the old (login) password
     Leave new password blank
-[ ] Install chromium-browser, start and lock to launcher
-   dpkg-query --list chromium-browser
-   apt-get install -y chromium-browser
-[ ] Install xeyes (part of x11-apps), and add to startup programs
-    As root:
-      dpkg-query --list xeyes
-      apt-get install xeyes
-      apt-get install x11-apps
-    As tomh:
-      which xeyes
-      gnome-session-properties
-[ ] Get rid of annoying icons on desktop: (!!!)
-    As tomh:
-      gsettings set org.gnome.desktop.background  show-desktop-icons false
-[ ] Lock disks [manager] to launcher
-[ ] Setup important /art links to external disk
-    As tomh:
-      cd /art; ln -s /media/ext4backupA/art/* .
-      cd ; ln -s /art/images ~/Pictures
+
+-------------------------
+
 [ ] Set terminal double-click word boundary preferences
     Edit -> Profile Preferences -> General -> Copy Profile ID
     Plug the Profile ID into the following dconf command:

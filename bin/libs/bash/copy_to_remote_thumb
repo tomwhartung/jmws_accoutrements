@@ -1,0 +1,96 @@
+#!/bin/bash
+#
+# copy_to_remote_thumb: copy file to USB backup (thumb) drive on remote host
+# --------------------------------------------------------------------------
+#
+if [ $# -lt 2 ]; then
+	echo "Syntax: copy_to_remote_thumb source_file destination_file"
+	echo "  Please specify a source file name and destination file name."
+	exit 1
+fi
+
+source_file_name=$1
+destination_file_name=$2
+source_file_directory="/usr/local/tar"
+
+#
+#  Ensure drive is present and has a tar file directory on it
+#
+this_hostname=$(hostname)
+dest_hostname=ava
+backup_drive_name=usb0
+backup_directory_name=usr_local_tar
+backup_file_directory=/media/${backup_drive_name}/${backup_directory_name}/
+dest_sum_command="md5sum"
+
+if [ "$this_hostname" == "$dest_hostname" ]; then
+   cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
+   ret_val=$?
+   if [ $ret_val -ne 0 ]; then
+      echo "--------------------------------------------"
+      echo "WARNING: unable to copy file to thumb drive!"
+      echo "--------------------------------------------"
+   fi
+   exit $ret_val
+elif [ "$this_hostname" == "rita.local" ]; then
+   this_sum_command="md5 -q"
+else
+   this_sum_command="md5sum"
+fi
+
+ssh ${dest_hostname} ls -l ${backup_file_directory} > /tmp/ls.$$.txt 2>&1
+ret_val=$?
+
+set +x 
+
+if [ $ret_val -ne 0 ]; then
+	cat /tmp/ls.$$.txt 2>&1
+	echo 
+	echo "ERROR: Unable to copy backup file to backup_file_directory = \"${backup_file_directory}\""
+	echo "  -->  Plugin a thumb drive named \"${backup_drive_name}\" that contains a directory named \"${backup_directory_name}\""
+	echo 
+	cat /tmp/ls.$$.txt 2>&1
+	rm /tmp/ls.$$.txt 2>&1
+	exit $ret_val
+else
+	echo
+	echo "Listing backup directory ${backup_file_directory} before:"
+	echo "----------------------------------------------------------------"
+	ssh ${dest_hostname} df -h $backup_file_directory | grep '/media/'
+	cat /tmp/ls.$$.txt 2>&1
+	rm /tmp/ls.$$.txt 2>&1
+	echo
+	echo "Copying \"${source_file_directory}/${source_file_name}\" to \"${backup_file_directory}/${destination_file_name}\""
+	date +"%Y-%m-%d @ %H:%M:%S"
+	set -x
+	ssh ${dest_hostname} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
+	ret_val=$?
+	set +x
+	date +"%Y-%m-%d @ %H:%M:%S"
+	if [ $ret_val -ne 0 ]; then
+		echo
+		echo "Error: ssh cp command returned a non-zero value: $ret_val"
+		echo
+	fi
+	echo
+	echo "Listing backup directory ${backup_file_directory} after:"
+	echo "---------------------------------------------------------------"
+	ssh ${dest_hostname} df -h $backup_file_directory | grep '/media/'
+	ssh ${dest_hostname} ls -al $backup_file_directory
+fi
+
+echo
+
+if [ $# -gt 1 ]; then
+	echo "Check sums (all three files):"
+else
+	echo "Check sums:"
+fi
+
+set -x
+$this_sum_command ${source_file_directory}/${source_file_name}
+ssh ${dest_hostname} $dest_sum_command ${source_file_directory}/${source_file_name} \
+	${backup_file_directory}/${destination_file_name}
+set +x
+
+exit $ret_val

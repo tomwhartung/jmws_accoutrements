@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# get_logs: copy and unzip logs
+# -----------------------------
+#
+# LOGS_DIR: should be set in .bash_profile
+#
+if [ "$LOGS_DIR" != "" ]; then
+   logs_dir=$LOGS_DIR
+else
+   logs_dir=~/output/logs
+fi
+
+echo "---------------------"
+echo "Getting log files ..."
+echo "---------------------"
+
+cd $logs_dir
+RET_VAL=$?
+
+if [ $RET_VAL != 0 ]; then
+   echo "Unable to cd to $logs_dir "
+   exit 1
+fi
+
+rm messages* access_log* error_log* hosts_log* request_log* useragent_log*
+rm ssl_access_log* ssl_error_log* ssl_request_log*
+cp /var/log/messages* .
+cp /var/log/apache2/* .
+gunzip *.gz
+
+ls -al
+
+echo "Latest version of all log files copied to \"$logs_dir\" and unzipped"

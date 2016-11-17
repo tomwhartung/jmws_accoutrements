@@ -1,0 +1,42 @@
+#!/usr/bin/python
+#
+# up: find out what's up
+# ----------------------
+# Equivalent of
+#   ps -aef | grep <toMatch>
+# Except it is written in python2 and so also works on Yocto Linux
+#
+# Note:
+# -----
+# The initial version of this matches the one in /home/tomh/bin .
+# This is an important program and we want to have quick and easy access to it
+# when setting up new hosts.
+#
+import sys
+sys.path.append( '/var/www/jmws_accoutrements/bin/pythonLibs' )
+import tomsBinFunctions
+
+###################
+# Initialization
+#
+exitVal = 0
+
+if ( len(sys.argv) < 2 ) :
+	toMatch = ''
+else :
+	toMatch = sys.argv[1]
+
+###################
+#  Mainline code
+#
+## print( 'toMatch: "' + toMatch + '"' )
+#
+matchingLines = tomsBinFunctions.getMatchingProcesses( toMatch )
+
+if( len(matchingLines) > 0 ) :
+	for matchingLine in matchingLines :
+		print( matchingLine )
+else :
+	exitVal = 1
+
+exit( exitVal )

@@ -1,0 +1,103 @@
+#!/bin/bash
+#
+# tarHome: tar up home directory into /usr/local/tar and copy it to backup places
+# -------------------------------------------------------------------------------
+#
+PATH=/var/www/jmws_accoutrements/bin/libs/bash:${PATH}
+this_hostname=$(hostname)
+dest_file_directory="/usr/local/tar"
+
+mail_dirs=""
+more_dirs=""
+this_sum_command="md5sum"
+dest_sum_command="md5sum"
+
+if [ $this_hostname == "ava" ]; then
+   more_dirs=""
+   mail_dirs=""
+elif [ $this_hostname == "barbara" ]; then
+   more_dirs="Pictures technical"
+   mail_dirs=""
+elif [ $this_hostname == "bette" ]; then
+   more_dirs="Downloads jobsearch personal technical work"
+   mail_dirs=".thunderbird"
+elif [ $this_hostname == "humphrey" ]; then
+   more_dirs="iot"
+   mail_dirs=""
+elif [ $this_hostname == "jane" ]; then
+   more_dirs="Downloads jobsearch personal technical work"
+   mail_dirs=""
+elif [ $this_hostname == "lauren" ]; then
+   more_dirs="Downloads jobsearch personal technical work"
+   mail_dirs=""
+elif [ $this_hostname == "rita.local" ]; then
+   more_dirs="Documents Pictures jobsearch my_joomla personal technical work"
+   mail_dirs=""
+   this_sum_command="md5 -q"
+   dest_sum_command="md5sum"
+elif [ $this_hostname == "veronica" ]; then
+   more_dirs="personal technical"
+   mail_dirs=""
+else
+   echo "Oops we are not set up to backup home directories on $this_hostname, sorry!!"
+   exit 1
+fi
+
+## all_to_backup="."
+files_to_backup=".bash_profile .bashrc* .bash_aliases* .gitconfig r* .vimrc "
+dirs_to_backup=".ssh $mail_dirs backup bin $more_dirs RCS"
+all_to_backup="$files_to_backup $dirs_to_backup"
+
+echo "files_to_backup: \"$files_to_backup\""
+echo "dirs_to_backup: \"$dirs_to_backup\""
+echo
+echo "all_to_backup: \"$all_to_backup\""
+echo
+
+#
+#  Generate tar file name and create tar file:
+#
+user=$(whoami)
+date=$(date +'%Y_%m_%d')
+
+tar_file_dir="/usr/local/tar"
+tar_file_basename="${this_hostname}-home_${user}-${date}.tgz"
+tar_file_fullname="${tar_file_dir}/${tar_file_basename}"
+tar_file_name_no_date="${this_hostname}-home_${user}.tgz"
+
+
+echo "tar_file_dir: \"$tar_file_dir\""
+echo "tar_file_basename: \"$tar_file_basename\""
+echo "tar_file_fullname: \"$tar_file_fullname\""
+echo
+
+sleep 5
+
+cd
+set -x
+tar -cvzf $tar_file_fullname $all_to_backup 2> /tmp/tarHome-errors.$$
+ret_val=$?
+set +x
+
+copy_to_tar_file_host $tar_file_fullname
+copy_to_remote_thumb $tar_file_basename $tar_file_name_no_date
+
+#
+#  cat out the errors file and remove it
+#
+if [ ! -z /tmp/tarHome-errors.$$ ]; then
+   echo "The following errors occured:"
+   echo "============================="
+   cat /tmp/tarHome-errors.$$
+   echo "============================="
+elif [ $ret_val -ne 0 ]; then
+   echo "============================="
+   echo "Some unknown error occurred?"
+   echo "  ret_val = $ret_val"
+   echo "============================="
+fi
+
+rm /tmp/tarHome-errors.$$
+set -x
+df -h /usr/local/tar
+exit $ret_val

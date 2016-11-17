@@ -1,0 +1,73 @@
+#!/bin/bash
+#
+# check_for_directory: use ssh to check for specified dir on specified host
+# -------------------------------------------------------------------------
+#
+function syntax()
+{
+   echo "Syntax: check_for_directory dest_hostname directory_to_check"
+}
+
+dest_hostname=$1
+
+if [ -z "$dest_hostname" ]; then
+   syntax
+   echo "Please specify a destination host name and try again"
+   exit 3
+fi
+
+pwd=$(pwd)
+directory_to_check=$2
+
+if [ -z "$directory_to_check" ]; then
+   directory_to_check=$(pwd)
+fi
+
+this_hostname=$(hostname)
+
+## if [ "$this_hostname" == "bette" ]; then
+##    ping_command="ping -n 1"
+## else
+   ping_command="ping -c1"
+## fi
+
+${ping_command} $dest_hostname > /tmp/check_for_directory-ping_output.$$ 2>&1
+ping_ret_val=$?
+
+if [ $ping_ret_val -ne 0 ]; then
+   syntax
+   echo "Error: unable to ping dest host \"$dest_hostname\":"
+   cat /tmp/check_for_directory-ping_output.$$
+   echo "Check your spelling and try again."
+   rm /tmp/check_for_directory-ping_output.$$
+   exit 7
+fi
+
+rm /tmp/check_for_directory-ping_output.$$
+
+echo "Checking directory \"$directory_to_check\" on dest host \"$dest_hostname\""
+
+if [ $dest_hostname == 'humphrey' ]; then
+   dest_username='root@'
+else
+   dest_username=''
+fi
+
+ssh ${dest_username}${dest_hostname} \
+   "if [ -d ${directory_to_check} ]; then
+       exit 0
+    else
+       exit 99
+    fi"
+ssh_ret_val=$?
+## echo "ssh_ret_val: \"$ssh_ret_val\""
+
+if [ $ssh_ret_val == 0 ]; then
+   echo "Directory \"${directory_to_check}\" exists on \"$dest_hostname\"."
+   exit_ret_val=$ssh_ret_val
+else
+   echo "Directory \"${directory_to_check}\" does not exist on \"$dest_hostname\"."
+   exit_ret_val=$ssh_ret_val
+fi
+
+exit $exit_ret_val

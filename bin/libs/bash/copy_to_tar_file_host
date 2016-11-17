@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# copy_to_tar_file_host: copies files (i.e. .tgz files) to a tar file host
+# ------------------------------------------------------------------------
+#
+tar_file_names=$@
+this_hostname=$(hostname)
+dest_file_directory='/usr/local/tar'
+dest_hostname="ava"
+
+if [ "$this_hostname" == "$dest_hostname" ]; then
+   echo "---> Not copying tar file to $dest_hostname"
+   echo "---> (because we are running this script on ${dest_hostname})"
+   exit
+fi
+
+ping -c 1 -W 3 $dest_hostname > /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$ 2>&1
+ret_val=$?
+
+if [ $ret_val -ne 0 ]; then
+	echo "=================================="
+	echo "=-> unable to ping $dest_hostname <=-"
+	echo "=================================="
+	cat /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$
+	rm  /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$
+	echo "=================================="
+	exit $ret_val
+fi
+
+rm  /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$
+echo
+echo "Listing ${dest_hostname}:${dest_file_directory}/*.tgz before:"
+echo "-----------------------------------------"
+ssh $dest_hostname "ls -l ${dest_file_directory}/*.tgz"
+ret_val=$?
+
+if [ $ret_val -eq 0 ]; then
+	echo
+	echo "Copying $tar_file_names to $dest_file_directory on $dest_hostname"
+	date +"%Y-%m-%d @ %H:%M:%S"
+	scp $tar_file_names $dest_hostname:${dest_file_directory}
+	ret_val=$?
+	date +"%Y-%m-%d @ %H:%M:%S"
+	if [ $ret_val -eq 0 ]; then
+		echo
+		echo "Listing ${dest_hostname}:${dest_file_directory}/*.tgz after:"
+		echo "----------------------------------------"
+		ssh $dest_hostname ls -al "${dest_file_directory}/*.tgz"
+		echo
+	else
+		echo "--------------------------------------------------"
+		echo "Error: something went wrong; scp comand returned $ret_val"
+		echo "--------------------------------------------------"
+		exit $ret_val
+	fi
+else
+	echo "Unable to copy tar file to $dest_file_directory on $dest_hostname"
+	echo "Please mount filesystem for $dest_file_directory (on $dest_hostname)"
+fi
+
+exit $ret_val

@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# listAll: find files and dirs and generate a list of each
+# --------------------------------------------------------
+#
+tmp_dir=/tmp
+pwd=$(pwd)
+basename_pwd=$(basename $pwd)
+hostname=$(hostname)
+
+raw_file_filename=${tmp_dir}/${basename_pwd}-files-${hostname}-raw.txt
+raw_dir_filename=${tmp_dir}/${basename_pwd}-dirs-${hostname}-raw.txt
+sorted_file_filename=${tmp_dir}/${basename_pwd}-files-${hostname}-sorted.txt
+sorted_dir_filename=${tmp_dir}/${basename_pwd}-dirs-${hostname}-sorted.txt
+
+echo "raw_dir_filename     = $raw_dir_filename"
+echo "raw_file_filename    = $raw_file_filename"
+echo "sorted_dir_filename  = $sorted_dir_filename"
+echo "sorted_file_filename = $sorted_file_filename"
+
+find * */* -type d > $raw_dir_filename
+find * */* -type f > $raw_file_filename
+
+sort $raw_dir_filename > $sorted_dir_filename
+sort $raw_file_filename > $sorted_file_filename
+

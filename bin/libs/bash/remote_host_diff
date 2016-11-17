@@ -1,0 +1,160 @@
+#!/bin/bash
+#
+# diffAny: diff specified file with matching one on specified remote host
+# -----------------------------------------------------------------------
+#
+function syntax()
+{
+   echo "Syntax: diffAny [-r] dest_hostname [files]"
+   echo "    -r: diff files in all subdirectories"
+}
+
+#
+#  Process command-line arguments
+#  ------------------------------
+#
+pwd=$(pwd)
+
+if [ $# -lt 1 ]; then
+   syntax
+   echo "Please specify a destination host name and try again"
+   exit 3
+else
+   dest_hostname=$1
+   shift
+fi
+
+if [ "$1" == "-r" ]; then
+   shift
+   diff_subdirs="y"
+## echo "Recursive option set"
+else
+   diff_subdirs="n"
+fi
+
+if [ $# -eq 0 ]; then
+   files=$(ls)
+else
+   files=$@
+fi
+
+if [ -z "$files" ]; then
+   syntax
+   echo "No files to copy."
+   exit 4
+fi
+
+#
+#  Check destination host
+#  ----------------------
+#
+this_hostname=$(hostname)
+
+if [ "$this_hostname" == "$dest_hostname" ]; then
+   syntax
+   echo "Unable to diff files on \"$this_hostname\" with \"$dest_hostname\""
+   echo "(Apparently you are already on $dest_hostname!)"
+   exit 5
+fi
+
+ping -c1 $dest_hostname > /tmp/diffAny-ping_output.$$ 2>&1
+ping_ret_val=$?
+
+if [ $ping_ret_val -ne 0 ]; then
+   syntax
+   echo "Error: unable to ping dest host \"$dest_hostname\":"
+   cat /tmp/diffAny-ping_output.$$
+   echo "Check your spelling and try again."
+   rm /tmp/diffAny-ping_output.$$
+   exit 7
+fi
+
+rm /tmp/diffAny-ping_output.$$
+
+#
+#  Set destination directory, modifying it if necessary (/home vs. /Users)
+#  ----------------------------------------------------------------------
+#
+current_directory=$(pwd)
+
+if [ $this_hostname == "rita.local" ]; then
+   dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
+elif [ $dest_hostname == "rita" ]; then
+   dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
+else
+   dest_directory=$current_directory
+fi
+
+## #  Uncomment for debugging:
+## #
+## echo "Ready to diff file(s) \"$files\""
+## echo "   to versions in directory \"$dest_directory\""
+## echo "   on host \"$dest_hostname\""
+## exit
+
+exit_ret_val=0
+
+for local_file_name in $files
+do
+   if [ -f $local_file_name ]; then
+      remote_file_name=${dest_directory}/${local_file_name}
+      ssh $dest_hostname \
+         "if [ -f ${remote_file_name} ]; then
+             exit 0
+          else
+             exit 99
+          fi"
+      ssh_ret_val=$?
+      if [ $ssh_ret_val == 0 ]; then
+         ssh $dest_hostname \
+            "if [ -r ${remote_file_name} ]; then
+                exit 0
+             else
+                exit 99
+             fi"
+         ssh_ret_val=$?
+         if [ $ssh_ret_val == 0 ]; then
+            scp ${dest_hostname}:${remote_file_name} /tmp > /dev/null
+            diff -b /tmp/${local_file_name} ${local_file_name} > /tmp/diff-out.$$ 2>&1
+            diff_ret_val=$?
+            if [ $diff_ret_val -eq 0 ]; then
+               echo "$local_file_name matches version on $dest_hostname"
+            else
+               echo
+               echo "$local_file_name: \"< \": version on $dest_hostname; \"> \": local version"
+               cat /tmp/diff-out.$$
+               exit_ret_val=$diff_ret_val
+            fi
+         else
+            echo "$remote_file_name is not readable on $dest_hostname"
+            exit_ret_val=$ssh_ret_val
+         fi
+      else
+         echo "$remote_file_name does not exist on $dest_hostname"
+         exit_ret_val=$ssh_ret_val
+      fi
+      rm -f /tmp/${local_file_name} /tmp/diff-out.$$
+   elif [ -L $local_file_name ]; then
+      echo "skipping symbolic link $local_file_name"
+   elif [ -d $local_file_name ]; then
+      if [ "$diff_subdirs" == "y" ]; then
+         if [ "$local_file_name" == "RCS" ]; then
+            echo "skipping source control directory $local_file_name"
+         elif [ "$local_file_name" == "nbproject" ]; then
+            echo "skipping IDE directory $local_file_name"
+         else
+            cd $local_file_name
+            echo "processing directory $pwd"
+            diffAny $dest_hostname -r
+            cd ..
+         fi
+      else
+         echo "skipping directory $local_file_name"
+      fi
+   else
+      echo "$local_file_name does not exist on this host"
+      exit_ret_val=23
+   fi
+done
+
+exit $exit_ret_val

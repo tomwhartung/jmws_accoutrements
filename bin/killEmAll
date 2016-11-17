@@ -1,0 +1,83 @@
+#!/usr/bin/python
+#
+# killEmAll: kill processes matched by string
+# -------------------------------------------
+# Equivalent of
+#   ps -aef | grep <toMatch> | xargs kill -9
+# Except:
+#   also works on Yocto Linux
+#   asks for confirmation unless -y option is specified
+#
+# Note:
+# -----
+# The initial version of this matches the one in /home/tomh/bin .
+# This is an important program and we want to have quick and easy access to it
+# when setting up new hosts.
+#
+import argparse
+import string
+import sys
+
+sys.path.append( '/var/www/jmws_accoutrements/bin/pythonLibs' )
+import tomsBinFunctions     # custom functions in the pythonLibs subdir
+
+###################
+# Functions
+#
+
+##
+# Kill the processes in the list
+#
+def killTheProcesses( matchingLines ) :
+	for matchingLine in matchingLines :
+		## processInfo = string.split( matchingLine, '\w+' )
+		processInfo = matchingLine.split()
+		if( tomsBinFunctions.isYoctoLinux() ) :
+			pid = processInfo[0]
+			owner = processInfo[1]
+		else :
+			owner = processInfo[0]
+			pid = processInfo[1]
+		killCommand = 'kill -9 ' + pid
+		if( args.yes ) :
+			print( 'Killing process ' + pid + ' owned by ' + owner )
+			tomsBinFunctions.myCall( killCommand )
+		else :
+			yOrN = raw_input( 'Enter "y" to kill process ' + pid + ' owned by ' + owner + ': ' )
+			if( yOrN == 'y' or yOrN == 'Y' ) :
+				print( 'Killing process ' + pid + ' owned by ' + owner )
+				tomsBinFunctions.myCall( killCommand )
+			else :
+				print( 'NOT killing process ' + pid + ' owned by ' + owner )
+
+###################
+# Initialization
+#
+exitVal = 0
+
+argsParser = argparse.ArgumentParser( description='Kills all processes matching toMatch' )
+argsParser.add_argument("toMatch", help="string to match the processes we want to kill")
+argsParser.add_argument("-y", "--yes",
+		help="do not ask for confirmation before killing each matching process",
+		action="store_true")
+args = argsParser.parse_args()
+
+
+###################
+#  Mainline code
+#
+print( 'args.toMatch: "' + args.toMatch + '"' )
+print( 'args.yes: "' + str(args.yes) + '"' )
+#
+matchingLines = tomsBinFunctions.getMatchingProcesses( args.toMatch )
+
+if( len(matchingLines) > 0 ) :
+	print( 'Killing the following processes.  Use "up" to verify processes are gone.' )
+	for matchingLine in matchingLines :
+		print( matchingLine )
+	killTheProcesses( matchingLines )
+else :
+	print( 'No processes found to kill.  Use "up" to find processes.' )
+	exitVal = 1
+
+exit( exitVal )

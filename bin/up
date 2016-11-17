@@ -13,7 +13,7 @@
 # when setting up new hosts.
 #
 import sys
-sys.path.append( '/var/www/jmws_accoutrements/bin/pythonLibs' )
+sys.path.append( '/var/www/jmws_accoutrements/bin/libs/python' )
 import tomsBinFunctions
 
 ###################

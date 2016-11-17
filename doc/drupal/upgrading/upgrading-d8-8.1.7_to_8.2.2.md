@@ -74,6 +74,8 @@ For steps to install drush, see the most recent of the files with names matching
 
 #### Hybrid Drush/Manual Method
 
+**Note that we have a diffDrupal script that may help with this!!**
+
 **This just in!**
 
 * https://drupal.org/node/2700999

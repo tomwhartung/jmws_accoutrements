@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# lsMyhost: run ls -al command in corresponding dir on myhost
+# -----------------------------------------------------------
+#
+PATH=/var/www/jmws_accoutrements/bin/libs/bash:${PATH}
+remote_host_ls myhost $@
+exit_ret_val=$?
+
+exit $exit_ret_val

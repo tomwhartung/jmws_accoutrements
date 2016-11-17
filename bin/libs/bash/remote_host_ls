@@ -1,0 +1,73 @@
+#!/bin/bash
+#
+# lsAny: run ls -al command in same dir on specified host
+# -----------------------------------------------------------
+#
+function syntax()
+{
+   echo "Syntax:"
+   echo "   lsAny hostname"
+}
+
+if [ $# -lt 1 ]; then
+   syntax
+   exit 1
+fi
+
+ls_username=''
+
+if [ $1 == "ava" ]; then
+   ls_hostname="ava"
+elif [ $1 == "barbara" ]; then
+   ls_hostname="barbara"
+elif [ $1 == "bette" ]; then
+   ls_hostname="bette"
+elif [ $1 == "humphrey" ]; then
+   ls_username='root@'
+   ls_hostname="humphrey"
+elif [ $1 == "jane" ]; then
+   ls_hostname="jane"
+elif [[ $1 == "lauren" ]]; then
+   ls_hostname="lauren"
+elif [[ $1 == "rita" ]]; then
+   ls_hostname="rita"
+elif [ $1 == "veronica" ]; then
+   ls_hostname="veronica"
+else
+   syntax
+   echo "On which host are you trying to list files?"
+   echo "This script can only list files on ava, barbara, bette, humphrey, jane, lauren, rita, or veronica."
+   exit 22
+fi
+
+pwd=$(pwd)
+
+this_directory=$(pwd)
+ls_directory=$this_directory
+this_hostname=$(hostname)
+
+if [ "$this_hostname" == "rita.local" ]; then
+   ls_directory=$(echo $this_directory | perl -pe 's&^/Users/&/home/&;')
+fi
+
+if [ "$ls_hostname" == "rita" ]; then
+   ls_directory=$(echo $this_directory | perl -pe 's&^/home/&/Users/&;')
+fi
+
+## echo "this_directory = \"$this_directory\""
+## echo "this_hostname = \"$this_hostname \""
+## echo "ls_directory = \"$ls_directory\""
+## echo "ls_hostname = \"$ls_hostname \""
+
+exit_ret_val=0
+
+ssh ${ls_username}${ls_hostname} ls -al ${ls_directory}
+ssh_ret_val=$?
+
+if [ $ssh_ret_val != 0 ]; then
+   echo
+   echo "Error: ${ls_directory} apparently does not exist on $ls_hostname"
+   exit_ret_val=$ssh_ret_val
+fi
+
+exit $exit_ret_val

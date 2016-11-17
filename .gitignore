@@ -3,7 +3,12 @@
 #
 /nbproject/
 /.project
+
+#
+# For generated python files
+#
 __pycache__/
+*.pyc
 
 #
 # For vim temporary files

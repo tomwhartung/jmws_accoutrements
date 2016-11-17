@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# upapa: which apache (incl. httpd) processes are up?
+#
+echo
+up apache
+echo
+up http
+echo

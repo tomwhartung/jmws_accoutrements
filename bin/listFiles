@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# listFiles: find non-svn files in subdirectories of current dir, sort and list
+# -----------------------------------------------------------------------------
+# greps out .svn files
+# use -i to also grep out index.html files - good for using with joomla
+#
+if [ "$1" == "-i" ]; then
+   find * -type f | \
+      grep -v '\.git/'  | \
+      grep -v '\.pyc'  | \
+      grep -v nbproject | \
+      grep -v '__pycache__'  | \
+      grep -v svn | \
+      grep -v RCS | \
+      grep -v index.html | \
+      sort
+else
+   find * -type f | \
+      grep -v '\.git/'  | \
+      grep -v '\.pyc'  | \
+      grep -v '__pycache__'  | \
+      grep -v svn | \
+      grep -v RCS | \
+      sort
+fi

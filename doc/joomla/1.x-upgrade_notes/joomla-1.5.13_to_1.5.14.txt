@@ -1,0 +1,74 @@
+
+Commands run to upgrade joomla from 1.5.13 to 1.5.14:
+-----------------------------------------------------
+
+Update link_customizations.bash
+-------------------------------
+[ ] As tomh on gloria:
+    gob
+    vi link_customizations.bash   # edit destination_dir
+    rd link_customizations.bash 
+    ci -l link_customizations.bash 
+    toLizabeth link_customizations.bash 
+    ->  update production hosts when test hosts work OK
+    toMarilyn link_customizations.bash 
+    toIda link_customizations.bash 
+
+groja.com
+---------
+   [ ] lizabeth
+   [ ] marilyn
+   [ ] ida
+[ ] As root:
+    webapp-config -I --pretend -g apache -h groja.com -d joomla-1.5.14 joomla 1.5.14
+    webapp-config -I -g apache -h groja.com -d joomla-1.5.14 joomla 1.5.14
+[ ] As tomh on test hosts only:
+    ->  be sure to copy link_customizations.bash to production hosts!!
+    gogh    # cd /var/www/groja.com/htdocs
+    l
+    cd customizations/
+    cat list_of_repositories.txt
+    l
+[ ] As root:
+    gogh    # cd /var/www/tomhartung.com/htdocs
+    link_customizations.bash
+    cd joomla-1.5.14
+    l
+    mv installation/ ~/joomla/installation_dirs/installation-groja.com-1.5.14
+[ ] As tomh:
+    gogh    # cd /var/www/groja.com/htdocs
+    l
+    cp joomla/configuration.php joomla-1.5.14
+    rm joomla; ln -s joomla-1.5.14 joomla
+    l joomla*
+[ ] Test in browser.
+
+tomhartung.com
+--------------
+   [ ] lizabeth
+   [ ] marilyn
+   [ ] ida
+[ ] As root:
+    webapp-config -I --pretend -g apache -h tomhartung.com -d joomla-1.5.14 joomla 1.5.14
+    webapp-config -I -g apache -h tomhartung.com -d joomla-1.5.14 joomla 1.5.14
+[ ] As tomh on test hosts only:
+    ->  be sure to copy link_customizations.bash to production hosts!!
+    goth    # cd /var/www/tomhartung.com/htdocs
+    l
+    cd customizations/
+    cat list_of_repositories.txt
+    l
+[ ] As root:
+    goth    # cd /var/www/tomhartung.com/htdocs
+    link_customizations.bash
+    cd joomla-1.5.14
+    l
+    mv installation/ ~/joomla/installation_dirs/installation-tomhartung.com-1.5.14
+[ ] As tomh:
+    goth    # cd /var/www/tomhartung.com/htdocs
+    l
+    cp joomla/configuration.php joomla-1.5.14
+    rm joomla; ln -s joomla-1.5.14 joomla
+    l joomla*
+[ ] Test in browser.
+

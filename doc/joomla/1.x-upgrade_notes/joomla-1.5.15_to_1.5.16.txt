@@ -1,0 +1,149 @@
+
+Commands run to upgrade joomla from 1.5.15 to 1.5.16:
+-----------------------------------------------------
+
+Update link_customizations.bash
+-------------------------------
+[X] As tomh on gloria:
+    gob       # cd /usr/local/bin
+    vi link_customizations.bash   # edit destination_dir
+    rd link_customizations.bash 
+    ci -l link_customizations.bash 
+    toLauren link_customizations.bash 
+    toRita link_customizations.bash 
+    toServers link_customizations.bash 
+
+Update lauren (development, non-gentoo)
+---------------------------------------
+[X] download from http://www.joomla.org/download.html
+	-> to /usr/local/download/joomla
+[ ] Update groja.com on lauren - as tomh:
+	[X] unpack in new slot for groja.com
+		gogh    # cd /var/www/groja.com/htdocs
+		l
+		mkdir joomla-1.5.16
+		cd joomla-1.5.16
+		cp /usr/local/download/joomla/Joomla_1.5.16-Stable-Full_Package.zip .
+		unzip Joomla_1.5.16-Stable-Full_Package.zip 
+		cd ..
+	[X] optional check customizations:
+		->  be sure to to use updated copy of link_customizations.bash!!
+		l
+		cd customizations/
+		cat list_of_repositories.txt
+		l
+		link_customizations.bash
+	[X] Finalize install
+		cd joomla-1.5.16
+		l
+		mv installation/ ~/joomla/installation_dirs/installation-groja.com-1.5.16
+		gogh
+		cp joomla/configuration.php joomla-1.5.16
+		rm joomla; ln -s joomla-1.5.16 joomla; l
+		l joomla* | more
+		rm joomla/Joomla_1.5.16-Stable-Full_Package.zip
+	[X] Test in browser.
+[X] Update joomoowebsites.com seeourminds.com and tomhartung.com on lauren - as tomh:
+	[X] Update joomoowebsites.com seeourminds.com and tomhartung.com
+		gojmh # one window
+		gosh  # another
+		goth  # another
+		l
+		mkdir joomla-1.5.16
+		cd joomla-1.5.16
+		cp /usr/local/download/joomla/Joomla_1.5.16-Stable-Full_Package.zip .
+		unzip Joomla_1.5.16-Stable-Full_Package.zip 
+		cd ..
+	[X] optionally check customizations:
+		l
+		cd customizations/
+		cat list_of_repositories.txt
+		l
+	[X]	link_customizations.bash
+		->  be sure to to use updated copy of link_customizations.bash!!
+	[X] Finalize install
+		cd joomla-1.5.16
+		l
+		mv installation/ ~/joomla/installation_dirs/installation-seeourminds.com-1.5.16
+		mv installation/ ~/joomla/installation_dirs/installation-tomhartung.com-1.5.16
+		cd ..
+		cp joomla/configuration.php joomla-1.5.16
+		rm joomla; ln -s joomla-1.5.16 joomla; l
+		l joomla* | more
+		rm joomla/Joomla_1.5.16-Stable-Full_Package.zip
+[X] Test in browser.
+	[ ] Ensure it draws images in the front end
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+
+groja.com
+---------
+[X] lizabeth
+[X] marilyn
+[X] ida
+[X] Following steps replaced by new script: joomla-upgrade-site
+##	[ ] As root:
+##	    webapp-config -I --pretend -g apache -h groja.com -d joomla-1.5.16 joomla 1.5.16
+##	    webapp-config -I -g apache -h groja.com -d joomla-1.5.16 joomla 1.5.16
+##	    gogh    # cd /var/www/groja.com/htdocs
+##	    link_customizations.bash
+##	    cd joomla-1.5.16
+##	    l
+##	    mv installation/ ~/joomla/installation_dirs/installation-groja.com-1.5.16
+##	[ ] As tomh:
+##	    gogh    # cd /var/www/groja.com/htdocs
+##	    l
+##	    cp joomla/configuration.php joomla-1.5.16
+##	    rm joomla; ln -s joomla-1.5.16 joomla; l
+##	    l joomla* | more
+[X] Test in browser on each host.
+	[ ] Ensure it draws images in the front end
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+
+seeourminds.com
+--------------
+[X] lizabeth
+[X] marilyn
+[X] ida
+[ ] Following steps replaced by new script: joomla-upgrade-site
+##	[ ] As root:
+##	    webapp-config -I --pretend -g apache -h seeourminds.com -d joomla-1.5.16 joomla 1.5.16
+##	    webapp-config -I -g apache -h seeourminds.com -d joomla-1.5.16 joomla 1.5.16
+##	    gosh    # cd /var/www/seeourminds.com/htdocs
+##	    link_customizations.bash
+##	    cd joomla-1.5.16
+##	    l
+##	    mv installation/ ~/joomla/installation_dirs/installation-seeourminds.com-1.5.16
+##	[ ] As tomh:
+##	    gosh    # cd /var/www/seeourminds.com/htdocs
+##	    l
+##	    cp joomla/configuration.php joomla-1.5.16
+##	    rm joomla; ln -s joomla-1.5.16 joomla; l
+##	    l joomla* | more
+[ ] Test in browser on each host.
+	[ ] Ensure it draws images in the front end
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+
+tomhartung.com
+--------------
+[X] lizabeth
+[X] marilyn
+[X] ida
+[ ] Following steps replaced by new script: joomla-upgrade-site
+##	[ ] As root:
+##	    webapp-config -I --pretend -g apache -h tomhartung.com -d joomla-1.5.16 joomla 1.5.16
+##	    webapp-config -I -g apache -h tomhartung.com -d joomla-1.5.16 joomla 1.5.16
+##	    goth    # cd /var/www/tomhartung.com/htdocs
+##	    link_customizations.bash
+##	    cd joomla-1.5.16
+##	    l
+##	    mv installation/ ~/joomla/installation_dirs/installation-tomhartung.com-1.5.16
+##	[ ] As tomh:
+##	    goth    # cd /var/www/tomhartung.com/htdocs
+##	    l
+##	    cp joomla/configuration.php joomla-1.5.16
+##	    rm joomla; ln -s joomla-1.5.16 joomla; l
+##	    l joomla* | more
+[X] Test in browser on each host.
+	[ ] Ensure it draws images in the front end
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+

@@ -1,0 +1,186 @@
+
+Commands run to set up joomoowebsites.com on lauren and the gentoo hosts:
+
+1.  Create and populate db on development, test, backup, and production hosts:
+------------------------------------------------------------------------------
+create jumlah_joomoowebsites db on all four hosts
+	mysql -u root -p
+	create database jumlah_joomoowebsites;
+	grant all on jumlah_joomoowebsites.* to 'joomla'@'localhost';
+create handy little scripts for new database and copy to all four hosts
+As tomh on lauren:
+	cd ~/bin
+	cp msg msjm; vi msjm
+	cp bug bujm; vi bujm
+	cp rsg rsjm; vi rsjm
+	ci -l bujm msjm rsjm
+	toGloria bujm msjm rsjm
+	toServers bujm msjm rsjm
+	toRita bujm msjm rsjm
+
+2. Install joomla on development host and add row to index.html:
+----------------------------------------------------------------
+As tomh on lauren:
+	mkdir -p /var/www/joomoowebsites.com/htdocs/joomla
+	cd /var/www/joomoowebsites.com/htdocs/joomla
+	cp /usr/local/download/joomla/Joomla_1.5.16-Stable-Full_Package.zip .
+	unzip Joomla_1.5.16-Stable-Full_Package.zip
+	govw
+	vi index.html   # add table row with links to joomoowebsites on all servers
+As tomh on gloria:
+	vi index.html   # add table row with links to joomoowebsites on all servers
+As tomh on rita:
+	vi index.html   # add table row with links to joomoowebsites on all servers
+As root on all hosts:
+	Add entries for xxx.joomoowebsites.com  as appropiate to all /etc/hosts
+	[ ] lauren
+	[ ] gloria
+	[ ] rita
+	[ ] lizabeth
+	[ ] ida
+	[ ] marilyn
+In browser on lauren:
+	access http://lauren.joomoowebsites.com
+	run through install procedure
+	change username of super administrator
+
+3. Install joomla on servers:
+-----------------------------
+As tomh on lauren:
+	gobu
+	bujm
+	toServers joomoowebsites-2010_05_03-lauren.sql.gz
+	gojmj
+	cp configuration.php /tmp
+	cd /tmp
+	toServers configuration.php
+As tomh on lizabeth, marilyn, and ida:
+	gobu
+	rsjm joomoowebsites-2010_05_03-lauren.sql.gz
+As root on lizabeth, marilyn, and ida:
+	webapp-config --pretend -I -g apache -h joomoowebsites.com -d joomla-1.5.16 joomla 1.5.16
+	webapp-config -I -g apache -h joomoowebsites.com -d joomla-1.5.16 joomla 1.5.16
+	gojm
+	chown tomh:users . htdocs
+	gojmj
+	mv /tmp/configuration.php .
+	mv installation/ ~/joomla/installation_dirs/installation-joomoowebsites-1.5.15
+	chown apache:apache . configuration.php
+In browser:
+	confirm fresh install on lizabeth, marilyn, and ida
+	log into back end
+	set Global Configuration -> Site Settings -> Site Offline to Yes
+
+4. Install customizations on development host:
+----------------------------------------------
+As tomh on lauren:
+	mkdir ~/to_import
+	cd ~/to_import
+	mkdir customizations
+	cd customizations
+	cp /var/www/seeourminds.com/htdocs/customizations/configuration.php .
+	cp /var/www/seeourminds.com/htdocs/customizations/favicon.ico .
+	cp /var/www/seeourminds.com/htdocs/customizations/list_of_repositories.txt .
+	cp /var/www/seeourminds.com/htdocs/customizations/robots-to_add.txt .
+	vi list_of_repositories.txt # change certain instances of seeourminds.com to joomoowebsites.com
+	cd ..
+	svnadmin create /home/svn/repositories/joomoowebsites.com-customizations
+	svn import customizations file:///home/svn/repositories/joomoowebsites.com-customizations/
+	svnadmin create /home/svn/repositories/joomoowebsites.com-images
+	mkdir joomoowebsites.com-images
+	cd joomoowebsites.com-images
+	mkdir -p random_images/grojas/
+	cd random_images/grojas/
+	cp /var/www/seeourminds.com/htdocs/customizations/images/random_images/grojas/* .
+	cd ../../..
+	svn import joomoowebsites.com-images file:///home/svn/repositories/joomoowebsites.com-images/
+	cd
+	rm -fr ~/to_import
+	gojmc
+	svn co file:///home/svn/repositories/joomoowebsites.com-images images
+	gojmc
+	cat list_of_repositories.txt
+	# extract and check out repositories in list, as appropriate
+
+5. Install customizations on servers:
+-------------------------------------
+As tomh on lauren:
+	tarSvn
+Currently the tarSvn script copies the repository to lizabeth, so we don't need to do these steps:
+##		got
+##		toLizabeth lauren-svn-2009_11_18.tgz
+##	As tomh on lizabeth:
+##		cd /home/svn
+##		cp /usr/local/tar/lauren-svn-2009_11_18.tgz .
+##		tar -xvzf lauren-svn-2009_11_18.tgz 
+As tomh on lizabeth:
+	gojmh
+	svn export file:///home/svn/repositories/joomoowebsites.com-customizations/ customizations
+	cd customizations/
+	l
+	cat list_of_repositories.txt 
+	svn export file:///home/svn/repositories/google_adsense_script
+	svn export file:///home/svn/repositories/jmsitemap/
+	svn checkout file:///home/svn/repositories/joomoogallery/
+	cat list_of_repositories.txt
+	svn export file:///home/svn/repositories/joomoositestyle/
+	cd ..
+	tar -cvzf joomoowebsites.com-customizations-2010_05.tgz customizations/
+	toMarilyn joomoowebsites.com-customizations-2010_05.tgz
+	toIda joomoowebsites.com-customizations-2010_05.tgz
+
+As tomh on marilyn and ida:
+	gosh
+	tar -xvzf joomoowebsites.com-customizations-2010_05.tgz
+	link_customizations.bash
+
+6. Link customizations on development, test, backup, and production hosts:
+--------------------------------------------------------------------------
+As tomh on lauren:
+	gojmh
+	l           # check for link joomla -> joomla-1.5.16
+	l joomla/   # check for links to customizations
+	# link_customizations.bash   # actually already there from cp -r of ../../groja.com's copy of joomla
+As root on lizabeth:
+	gojmh
+	l           # check for link joomla -> joomla-1.5.16
+	l joomla/   # check for links to customizations
+As root on marilyn:
+	gojmh
+	l           # check for link joomla -> joomla-1.5.16
+	l joomla/   # check for links to customizations
+As root on ida:
+	gojmh
+	l           # check for link joomla -> joomla-1.5.16
+	l joomla/   # check for links to customizations
+	link_customizations.bash
+
+7. Update apache configuration files
+------------------------------------
+
+8. Install Tables
+-----------------
+gosajc
+l tables/
+cat tables/install.joomoocomments.sql 
+gosajr
+l tables/
+cat tables/install.joomoorating.sql 
+gosajs
+l tables/
+l tables/install.joomoositestyle.sql 
+cat tables/install.joomoositestyle.sql
+gosajg
+l tables/install.joomoogallery*
+cat tables/install.joomoogallery*
+
+
+------------
+ Estoy Aqui
+------------
+
+
+Add links to index.php files
+
+Test and get it to work!
+

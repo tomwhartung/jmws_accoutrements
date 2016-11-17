@@ -1,0 +1,74 @@
+
+Commands run to upgrade joomla from 1.5.8 to 1.5.9:
+---------------------------------------------------
+
+groja.com
+---------
+   [X] marilyn
+   [X] lizabeth
+   [X] ida
+[ ] As root:
+    webapp-config -I --pretend -g apache -h groja.com -d joomla-1.5.9 joomla 1.5.9
+    webapp-config -I -g apache -h groja.com -d joomla-1.5.9 joomla 1.5.9
+[ ] As tomh on test hosts only:
+    ->  be sure to copy link_customizations.bash to production hosts!!
+    gogh    # cd /var/www/groja.com/htdocs
+    l
+    find customizations/ -type d | sort
+    vi link_customizations.bash   # edit destination_dir
+    [ ] As tomh on gloria:
+        ->  update production host when test hosts work OK
+        fromMarilyn link_customizations.bash 
+        rd link_customizations.bash 
+        ci -l link_customizations.bash 
+        toLizabeth link_customizations.bash 
+        toIda link_customizations.bash 
+[ ] As root:
+    gogh    # cd /var/www/tomhartung.com/htdocs
+    link_customizations.bash
+    cd joomla-1.5.9
+    l
+    mv installation/ ~/joomla/installation_dirs/installation-groja.com-1.5.9
+[ ] As tomh:
+    gogh    # cd /var/www/groja.com/htdocs
+    l
+    cp joomla/configuration.php joomla-1.5.9
+    rm joomla; ln -s joomla-1.5.9 joomla
+    l joomla*
+[ ] Test in browser.
+
+tomhartung.com
+--------------
+   [X] marilyn
+   [X] lizabeth
+   [X] ida
+[ ] As root:
+    webapp-config -I --pretend -g apache -h tomhartung.com -d joomla-1.5.9 joomla 1.5.9
+    webapp-config -I -g apache -h tomhartung.com -d joomla-1.5.9 joomla 1.5.9
+[ ] As tomh on test hosts only:
+    ->  be sure to copy link_customizations.bash to production hosts!!
+    goth    # cd /var/www/tomhartung.com/htdocs
+    l
+    find customizations/ -type d | sort
+    vi link_customizations.bash   # edit destination_dir
+    [ ] As tomh on gloria:
+        ->  update production host when test hosts work OK
+        fromMarilyn link_customizations.bash 
+        rd link_customizations.bash 
+        ci -l link_customizations.bash 
+        toLizabeth link_customizations.bash 
+        toIda link_customizations.bash 
+[ ] As root:
+    goth    # cd /var/www/tomhartung.com/htdocs
+    link_customizations.bash
+    cd joomla-1.5.9
+    l
+    mv installation/ ~/joomla/installation_dirs/installation-tomhartung.com-1.5.9
+[ ] As tomh:
+    goth    # cd /var/www/tomhartung.com/htdocs
+    l
+    cp joomla/configuration.php joomla-1.5.9
+    rm joomla; ln -s joomla-1.5.9 joomla
+    l joomla*
+[ ] Test in browser.
+

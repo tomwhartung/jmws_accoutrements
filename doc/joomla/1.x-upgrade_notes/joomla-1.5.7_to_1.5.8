@@ -1,0 +1,199 @@
+
+Commands run to upgrade joomla from 1.5.7 to 1.5.8:
+---------------------------------------------------
+Overview of process:
+   First on lizabeth
+      Install into new slot in host directory
+      Link customizations
+      Link new slot
+      Copy configuration.php file and move installation directory
+      Test
+   Repeat on ida and marilyn
+   
+1. groja.com and tomhartung.com on lizabeth
+   As root on lizabeth
+      webapp-config -I --pretend -h groja.com -g root -d joomla-1.5.8 joomla 1.5.8
+      webapp-config -I -h groja.com -g root -d joomla-1.5.8 joomla 1.5.8
+
+      webapp-config -I --pretend -h tomhartung.com -g root -d joomla-1.5.8 joomla 1.5.8
+      webapp-config -I -h tomhartung.com -g root -d joomla-1.5.8 joomla 1.5.8
+
+   As tomh on lizabeth:
+      gogh    # cd /var/www/groja.com/htdocs
+      ls -al
+      cd /var/www/groja.com/htdocs
+      find customizations/ -type d | sort
+      vi link_customizations.bash           # change destination_dir
+
+      goth    # cd /var/www/tomhartung.com/htdocs
+      ls -al
+      cd /var/www/tomhartung.com/htdocs
+      find customizations/ -type d | sort
+      vi link_customizations.bash           # change destination_dir
+
+   As root on lizabeth:
+      gogh    # cd /var/www/groja.com/htdocs
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      link_customizations.bash
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      l
+      rm joomla; ln -s joomla-1.5.8 joomla
+      l
+      cd joomla
+      l
+      cp ../joomla-1.5.7/configuration.php .
+      mv installation/ ~/joomla/installation_dirs/groja.com-1.5.8
+      l
+
+      goth    # cd /var/www/tomhartung.com/htdocs
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      link_customizations.bash
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      l
+      rm joomla; ln -s joomla-1.5.8 joomla
+      l
+      cd joomla
+      l
+      cp ../joomla-1.5.7/configuration.php .
+      mv installation/ ~/joomla/installation_dirs/tomhartung.com-1.5.8
+      l
+
+   Test in browser.
+
+   As tomh on lizabeth (N/A for marilyn and ida):
+      gogh
+      rd link_customizations.bash 
+      ci -l link_customizations.bash 
+      toMarilyn link_customizations.bash 
+      toIda link_customizations.bash 
+
+      goth
+      rd link_customizations.bash 
+      ci -l link_customizations.bash 
+      toMarilyn link_customizations.bash 
+      toIda link_customizations.bash 
+
+   As root on ida/marilyn:
+      webapp-config -I --pretend -h groja.com -g root -d joomla-1.5.8 joomla 1.5.8
+      webapp-config -I -h groja.com -g root -d joomla-1.5.8 joomla 1.5.8
+      gogh    # cd /var/www/groja.com/htdocs
+      ls -al joomla-1.5.*/administrator/components/ joomla-1.5.*/components joomla-1.5.[78]/templates
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      link_customizations.bash
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      l
+      rm joomla; ln -s joomla-1.5.8 joomla
+      l
+      cd joomla
+      l
+      cp ../joomla-1.5.7/configuration.php .
+      mv installation/ ~/joomla/installation_dirs/groja.com-1.5.8
+      l
+
+      webapp-config -I --pretend -h tomhartung.com -g root -d joomla-1.5.8 joomla 1.5.8
+      webapp-config -I -h tomhartung.com -g root -d joomla-1.5.8 joomla 1.5.8
+      goth    # cd /var/www/tomhartung.com/htdocs
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      link_customizations.bash
+      ls -al joomla-1.5.[78]/administrator/components/ joomla-1.5.[78]/components joomla-1.5.[78]/templates
+      l
+      rm joomla; ln -s joomla-1.5.8 joomla
+      l
+      cd joomla
+      l
+      cp ../joomla-1.5.7/configuration.php .
+      mv installation/ ~/joomla/installation_dirs/tomhartung.com-1.5.8
+      l
+
+********************************************************************************
+**** FOLLOWING IS OLD AND FOR REFERENCE ONLY -- SEE REFINED PROCEDURE ABOVE ****
+********************************************************************************
+
+Commands run to upgrade joomla from 1.5.3 to 1.5.7:
+---------------------------------------------------
+
+3. tomhartung.com on marilyn: (done last but refining procedure somewhat)
+   As root on ida/marilyn:
+      webapp-config -I --pretend -h tomhartung.com -d joomla-1.5.7 joomla 1.5.7
+      webapp-config -I -h tomhartung.com -d joomla-1.5.7 joomla 1.5.7
+   As tomh on ida (N/A for marilyn):
+      goth    # cd /var/www/tomhartung.com/htdocs
+      ls -al
+      cd /var/www/tomhartung.com/htdocs
+      find customizations/ -type d | sort
+      vi link_customizations.bash
+   When updating ida (N/A for marilyn), as tomh on gloria:
+      fromIda link_customizations.bash 
+      rd link_customizations.bash 
+      ci -l link_customizations.bash 
+      toMarilyn link_customizations.bash 
+   As root on ida/marilyn:
+      goth    # cd /var/www/tomhartung.com/htdocs
+      link_customizations.bash
+   As tomh on ida/marilyn:
+      l
+      rm joomla; ln -s joomla-1.5.7 joomla
+      ls -al joomla*
+   As root on ida/marilyn:
+      cd joomla
+      l
+      mv installation/ ~/tmp/installation-th.c-1.5.7
+   As tomh on ida/marilyn:
+      cp joomla-1.5.3/configuration.php joomla
+      ls -al joomla*
+
+   Test in browser.
+
+********************************************************************************
+**** FOLLOWING IS OLD AND FOR REFERENCE ONLY -- SEE REFINED PROCEDURE ABOVE ****
+********************************************************************************
+
+1. tomhartung.com on ida:
+   As root:
+      webapp-config -I --pretend -h tomhartung.com -d joomla-1.5.7 joomla 1.5.7
+      webapp-config -I -h tomhartung.com -d joomla-1.5.7 joomla 1.5.7
+      cd /var/www/tomhartung.com/htdocs
+      ls -al
+      rcsdiff link_customizations.bash 
+      vi link_customizations.bash
+      rcsdiff link_customizations.bash 
+      link_customizations.bash
+      l
+      cd joomla
+      l
+      mv installation/ ~/tmp/
+   As tomh:
+      cd /var/www/tomhartung.com/htdocs
+      find customizations/ -type d | sort
+      l
+      rm joomla; ln -s joomla-1.5.7 joomla
+      ls -al joomla*
+      cp joomla-1.5.3/configuration.php joomla
+      ls -al joomla*
+
+2. groja.com on ida:
+   As root:
+      gogj
+      cd ..
+      l
+      webapp-config -I --pretend -h groja.com -d joomla-1.5.7 joomla 1.5.7
+      webapp-config -I -h groja.com -d joomla-1.5.7 joomla 1.5.7
+      l
+      rcsdiff link_customizations.bash 
+      vi link_customizations.bash
+      link_customizations.bash
+       cd joomla
+      l
+      mv installation/ ~/tmp
+   As tomh:
+      cd ../../groja.com/htdocs/
+      l
+      find customizations/ -type d | sort | more
+      ls -al customizations/
+      l joomla-1.5.7/
+      l joomla-1.5.7/administrator/components/
+      l joomla-1.5.7/components/
+      l
+      rm joomla; ln -s joomla-1.5.7 joomla
+      cp joomla-1.5.3/configuration.php joomla
+

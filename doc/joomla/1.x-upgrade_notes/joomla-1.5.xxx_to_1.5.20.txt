@@ -1,0 +1,154 @@
+
+ Commands run to upgrade joomla from 1.5.xxx to 1.5.19 and 1.5.20:
+===================================================================
+
+Update link_customizations.bash
+-------------------------------
+[ ] As tomh on gloria:
+    gob       # cd /usr/local/bin
+    vi link_customizations.bash   # edit destination_dir
+    rd link_customizations.bash 
+    ci -l link_customizations.bash 
+    toLauren link_customizations.bash 
+    toRita link_customizations.bash 
+    toServers link_customizations.bash 
+
+----------------------------------------
+ lauren updated to 1.5.20 on 2010/07/26
+----------------------------------------
+
+Update lauren (development, non-gentoo)
+---------------------------------------
+[ ] download from http://www.joomla.org/download.html
+	-> to /usr/local/download/joomla
+[ ] Update joomoowebsites.com lauren - as tomh:
+	[ ] unpack in new slot for joomoowebsites.com
+		gojmh    # cd /var/www/joomoowebsites.com/htdocs
+		l
+		mkdir joomla-1.5.20
+		cd joomla-1.5.20
+		cp /usr/local/download/joomla/Joomla_1.5.20-Stable-Full_Package.zip .
+		unzip Joomla_1.5.20-Stable-Full_Package.zip 
+		rm joomla/Joomla_1.5.20-Stable-Full_Package.zip
+		cd ..
+	[ ] optional check customizations:
+		->  be sure to to use updated copy of link_customizations.bash!!
+		l
+		cd customizations/
+		cat list_of_repositories.txt
+		l
+		cd ..
+		link_customizations.bash
+	[ ] Finalize install
+		cd joomla-1.5.20
+		l
+		mv installation/ ~/joomla/installation_dirs/installation-joomoowebsites.com-1.5.20
+		l
+		gojmh
+		cp joomla/configuration.php joomla-1.5.20
+		rm joomla; ln -s joomla-1.5.20 joomla; l
+		l joomla* | more
+	[ ] Test in browser.
+[ ] Update seeourminds.com groja.com and tomhartung.com on lauren - as tomh:
+	[ ] Update joomoowebsites.com seeourminds.com and tomhartung.com
+		gogh  # one window
+		gosh  # another
+		goth  # another
+		l
+		mkdir joomla-1.5.20
+		cd joomla-1.5.20
+		cp /usr/local/download/joomla/Joomla_1.5.20-Stable-Full_Package.zip .
+		unzip Joomla_1.5.20-Stable-Full_Package.zip 
+		rm Joomla_1.5.20-Stable-Full_Package.zip
+		cd ..
+	[ ] optionally check customizations:
+		l
+		cd customizations/
+		cat list_of_repositories.txt
+		l
+	[ ]	link_customizations.bash
+		->  be sure to to use updated copy of link_customizations.bash!!
+	[ ] Finalize install
+		cd joomla-1.5.20
+		l
+		rm -fr installation/
+		cd ..
+		cp joomla/configuration.php joomla-1.5.20
+		rm joomla; ln -s joomla-1.5.20 joomla; l
+		l joomla* | more
+[ ] Test in browser.
+	[ ] Ensure it draws images in the front end
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+
+------------------------------------------------
+ gentoo servers updated to 1.5.19 on 2010/07/26
+------------------------------------------------
+
+groja.com
+---------
+[X] lizabeth
+[X] marilyn
+[X] ida
+Note: Editing and running joomla-upgrade-site replaces all of the commented-out steps
+[ ] update joomla-upgrade-site
+	[ ] As tomh on gloria:
+		gob
+		vi joomla-upgrade-site   # change value of new_version
+		toServers joomla-upgrade-site
+[ ] upgrade the site
+	[ ] As root on one of the servers:
+		joomla-upgrade-site groja.com
+##	##	[ ] As root:
+##	##	    webapp-config -I --pretend -g apache -h groja.com -d joomla-1.5.17 joomla 1.5.17
+##	##	    webapp-config -I -g apache -h groja.com -d joomla-1.5.17 joomla 1.5.17
+##	##	    gogh    # cd /var/www/groja.com/htdocs
+##	##	    link_customizations.bash
+##	##	    cd joomla-1.5.17
+##	##	    l
+##	##	    mv installation/ ~/joomla/installation_dirs/installation-groja.com-1.5.17
+##	##	[ ] As tomh:
+##	##	    gogh    # cd /var/www/groja.com/htdocs
+##	##	    l
+##	##	    cp joomla/configuration.php joomla-1.5.17
+##	##	    rm joomla; ln -s joomla-1.5.17 joomla; l
+##	##	    l joomla* | more
+[ ] Test in browser on each host.
+	[ ] Ensure it draws images in the front end
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+
+joomoowebsites.com
+------------------
+[X] lizabeth
+[X] marilyn
+[X] ida
+[ ] upgrade the site
+	[ ] As root on one of the servers:
+		joomla-upgrade-site joomoowebsites.com
+[ ] Test in browser on each host.
+	[ ] Ensure you can change the template parameters
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+
+seeourminds.com
+--------------
+[X] lizabeth
+[X] marilyn
+[X] ida
+[ ] upgrade the site
+	[ ] As root on one of the servers:
+		joomla-upgrade-site seeourminds.com
+[ ] Test in browser on each host.
+	[ ] Ensure it draws images in the front end
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+
+tomhartung.com
+--------------
+[X] lizabeth
+[X] marilyn
+[X] ida
+[ ] upgrade the site
+	[ ] As root on one of the servers:
+		joomla-upgrade-site tomhartung.com
+[ ] Test in browser on each host.
+	[ ] Ensure you can change the template parameters
+	[ ] Ensure it shows new version in the back end (under Help -> System Info -> System Info)
+

@@ -1,0 +1,136 @@
+
+Commands run to upgrade joomla from 1.5.14 to 1.5.15:
+-----------------------------------------------------
+
+Update link_customizations.bash
+-------------------------------
+[ ] As tomh on gloria:
+    gob       # cd /usr/local/bin
+    vi link_customizations.bash   # edit destination_dir
+    rd link_customizations.bash 
+    ci -l link_customizations.bash 
+    toLauren link_customizations.bash 
+    toRita link_customizations.bash 
+    toServers link_customizations.bash 
+
+Update lauren (development, non-gentoo)
+---------------------------------------
+[ ] download from http://www.joomla.org/download.html
+	-> to /usr/local/download/joomla
+[ ] As tomh on lauren only:
+	[ ] unpack in new slot for groja.com
+		gogh    # cd /var/www/groja.com/htdocs
+		l
+		mkdir joomla-1.5.15
+		cd joomla-1.5.15
+		cp /usr/local/download/joomla/Joomla_1.5.15-Stable-Full_Package.zip .
+		unzip Joomla_1.5.15-Stable-Full_Package.zip 
+		cd ..
+	[ ] optional check customizations:
+		->  be sure to to use updated copy of link_customizations.bash!!
+		l
+		cd customizations/
+		cat list_of_repositories.txt
+		l
+		link_customizations.bash
+	[ ] Finalize install
+		cd joomla-1.5.15
+		l
+		mv installation/ ~/joomla/installation_dirs/installation-groja.com-1.5.15
+		gogh
+		cp joomla/configuration.php joomla-1.5.15
+		rm joomla; ln -s joomla-1.5.15 joomla; l
+		l joomla* | more
+		rm joomla/Joomla_1.5.15-Stable-Full_Package.zip
+[ ] Test in browser.
+	[ ] Update seeourminds.com and tomhartung.com
+		gosh # one window
+		goth # another
+		l
+		mkdir joomla-1.5.15
+		cd joomla-1.5.15
+		cp /usr/local/download/joomla/Joomla_1.5.15-Stable-Full_Package.zip .
+		unzip Joomla_1.5.15-Stable-Full_Package.zip 
+		cd ..
+	[ ] optionally check customizations:
+		l
+		cd customizations/
+		cat list_of_repositories.txt
+		l
+	[ ]	link_customizations.bash
+		->  be sure to to use updated copy of link_customizations.bash!!
+	[ ] Finalize install
+		cd joomla-1.5.15
+		l
+		mv installation/ ~/joomla/installation_dirs/installation-seeourminds.com-1.5.15
+		mv installation/ ~/joomla/installation_dirs/installation-tomhartung.com-1.5.15
+		cd ..
+		cp joomla/configuration.php joomla-1.5.15
+		rm joomla; ln -s joomla-1.5.15 joomla; l
+		l joomla* | more
+		rm joomla/Joomla_1.5.15-Stable-Full_Package.zip
+[ ] Test in browser.
+
+groja.com
+---------
+   [ ] lizabeth
+   [ ] marilyn
+   [ ] ida
+[ ] As root:
+    webapp-config -I --pretend -g apache -h groja.com -d joomla-1.5.15 joomla 1.5.15
+    webapp-config -I -g apache -h groja.com -d joomla-1.5.15 joomla 1.5.15
+    gogh    # cd /var/www/groja.com/htdocs
+    link_customizations.bash
+    cd joomla-1.5.15
+    l
+    mv installation/ ~/joomla/installation_dirs/installation-groja.com-1.5.15
+[ ] As tomh:
+    gogh    # cd /var/www/groja.com/htdocs
+    l
+    cp joomla/configuration.php joomla-1.5.15
+    rm joomla; ln -s joomla-1.5.15 joomla; l
+    l joomla* | more
+[ ] Test in browser.
+
+seeourminds.com
+--------------
+   [ ] lizabeth
+   [ ] marilyn
+   [ ] ida
+[ ] As root:
+    webapp-config -I --pretend -g apache -h seeourminds.com -d joomla-1.5.15 joomla 1.5.15
+    webapp-config -I -g apache -h seeourminds.com -d joomla-1.5.15 joomla 1.5.15
+    gosh    # cd /var/www/seeourminds.com/htdocs
+    link_customizations.bash
+    cd joomla-1.5.15
+    l
+    mv installation/ ~/joomla/installation_dirs/installation-seeourminds.com-1.5.15
+[ ] As tomh:
+    gosh    # cd /var/www/seeourminds.com/htdocs
+    l
+    cp joomla/configuration.php joomla-1.5.15
+    rm joomla; ln -s joomla-1.5.15 joomla; l
+    l joomla* | more
+[ ] Test in browser.
+
+tomhartung.com
+--------------
+   [ ] lizabeth
+   [ ] marilyn
+   [ ] ida
+[ ] As root:
+    webapp-config -I --pretend -g apache -h tomhartung.com -d joomla-1.5.15 joomla 1.5.15
+    webapp-config -I -g apache -h tomhartung.com -d joomla-1.5.15 joomla 1.5.15
+    goth    # cd /var/www/tomhartung.com/htdocs
+    link_customizations.bash
+    cd joomla-1.5.15
+    l
+    mv installation/ ~/joomla/installation_dirs/installation-tomhartung.com-1.5.15
+[ ] As tomh:
+    goth    # cd /var/www/tomhartung.com/htdocs
+    l
+    cp joomla/configuration.php joomla-1.5.15
+    rm joomla; ln -s joomla-1.5.15 joomla; l
+    l joomla* | more
+[ ] Test in browser.
+

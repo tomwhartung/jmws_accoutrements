@@ -1,0 +1,156 @@
+
+Commands run to set up seeourminds.com on gentoo hosts:
+
+1. Install joomla on servers:
+-----------------------------
+As root on lizabeth, marilyn, and ida:
+	webapp-config -I -g apache -h seeourminds.com -d joomla-1.5.14 joomla 1.5.14
+	gos
+	chown tomh:users . htdocs
+
+2. Install joomla on development host:
+--------------------------------------
+As tomh on lauren:
+	mkdir /var/www/seeourminds.com/htdocs
+	cd /var/www
+	cp -rp ../../groja.com/htdocs/joomla-1.5.14 .
+	ln -s joomla-1.5.14 joomla
+
+3. Install customizations on development host:
+----------------------------------------------
+As tomh on lauren:
+	mkdir ~/to_import
+	cd ~/to_import
+	mkdir customizations
+	cd customizations
+	cp /var/www/groja.com/htdocs/customizations/configuration.php .
+	cp /var/www/groja.com/htdocs/customizations/favicon.ico .
+	cp /var/www/groja.com/htdocs/customizations/list_of_repositories.txt .
+	cp /var/www/groja.com/htdocs/customizations/robots-to_add.txt .
+	vi list_of_repositories.txt # change certain instances of groja.com to seeourminds.com
+	svnadmin create /home/svn/repositories/seeourminds.com-customizations
+	svn import customizations file:///home/svn/repositories/seeourminds.com-customizations/
+	cd
+	rm -fr ~/to_import
+	gosh
+	svn co file:///home/svn/repositories/seeourminds.com-customizations customizations
+	gosc
+	cat list_of_repositories.txt
+	# extract and check out repositories in list, as appropriate
+
+4. Install customizations on servers:
+-------------------------------------
+As tomh on lauren:
+	tarSvn
+	got
+	toLizabeth lauren-svn-2009_11_18.tgz
+As tomh on lizabeth:
+	cd /home/svn
+	cp /usr/local/tar/lauren-svn-2009_11_18.tgz .
+	tar -xvzf lauren-svn-2009_11_18.tgz 
+
+As tomh on lizabeth:
+	gosh
+	svn export file:///home/svn/repositories/seeourminds.com-customizations/ customizations
+	cd customizations/
+	l
+	cat list_of_repositories.txt 
+	svn export file:///home/svn/repositories/google_adsense_script
+	svn export file:///home/svn/repositories/jmsitemap/
+	svn export file:///home/svn/repositories/joomoogallery/
+	svn export file:///home/svn/repositories/groja
+	svn export file:///home/svn/repositories/groja-joomla/
+	cat list_of_repositories.txt 
+	svn export file:///home/svn/repositories/templateparameters/
+	cd ..
+	tar -cvzf seeourminds.com-customizations-2009_11_19.tgz customizations/
+	toMarilyn seeourminds.com-customizations-2009_11_19.tgz
+	toIda seeourminds.com-customizations-2009_11_19.tgz
+
+As tomh on marilyn and ida:
+	gosh
+	tar -xvzf seeourminds.com-customizations-2009_11_19.tgz
+
+5. Update /etc/hosts files
+--------------------------
+As root on all hosts:
+	Add entries for xxx.seeourminds.com  as appropiate to all /etc/hosts
+	[X] lauren
+	[X] gloria
+	[X] rita
+	[X] lizabeth
+	[X] ida
+	[X] marilyn
+	reboot
+	[ ] lauren
+	[ ] gloria
+	[ ] rita
+	[ ] lizabeth
+	[ ] ida
+	[ ] marilyn
+
+6.  Create and populate db on development, test, backup, and production hosts:
+------------------------------------------------------------------------------
+backup groja.com db on ida
+	bug
+create jumlah_seeourminds db on all four hosts
+	mysql -u root -p
+	create database jumlah_seeourminds;
+	grant all on jumlah_seeourminds.* to 'joomla'@'localhost';
+create handy little scripts for new database and copy to all four hosts
+As tomh on gloria:
+	cd ~/bin
+	cp msg mss; vi mss
+	cp bug bus; vi bus
+	cp rsg rss; vi rss
+	ci -l bus mss rss
+	toLauren bus mss rss
+	toLizabeth bus mss rss
+	toMarilyn bus mss rss
+	toRita bus mss rss
+
+------------
+ Estoy Aqui
+------------
+
+populate db with data from groja.com db on ida
+As tomh on gloria:
+	gobu
+	cp groja.com-2009_12_01-ida.sql.gz seeourminds.com-2009_12_01-ida.sql.gz
+	to[Lauren|Lizabeth|Marilyn|Ida] seeourminds.com-2009_12_01-ida.sql.gz
+	rss seeourminds.com-2009_12_01-ida.sql.gz
+	
+
+Fix seeourminds version of configuration.php to point at new db
+
+??	link_customizations.bash
+
+7. Link customizations on development, test, backup, and production hosts:
+--------------------------------------------------------------------------
+As tomh on lauren:
+	gosh
+	l           # check for link joomla -> joomla-1.5.14
+	l joomla/   # check for links to customizations
+	# link_customizations.bash   # actually already there from cp -r of ../../groja.com's copy of joomla
+As root on lizabeth:
+	gosh
+	l           # check for link joomla -> joomla-1.5.14
+	l joomla/   # check for links to customizations
+As root on marilyn:
+	gosh
+	l           # check for link joomla -> joomla-1.5.14
+	l joomla/   # check for links to customizations
+As root on ida:
+	gosh
+	l           # check for link joomla -> joomla-1.5.14
+	l joomla/   # check for links to customizations
+	link_customizations.bash
+
+8. Update apache configuration files
+------------------------------------
+
+
+Add links to index.php files
+
+Test and get it to work!
+

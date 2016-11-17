@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# diffMyhost: diff specified file with corresponding version on myhost
+# --------------------------------------------------------------------
+#
+PATH=/var/www/jmws_accoutrements/bin/libs/bash:${PATH}
+remote_host_diff myhost $@
+exit_ret_val=$?
+
+exit $exit_ret_val

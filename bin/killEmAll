@@ -18,7 +18,7 @@ import argparse
 import string
 import sys
 
-sys.path.append( '/var/www/jmws_accoutrements/bin/pythonLibs' )
+sys.path.append( '/var/www/jmws_accoutrements/bin/libs/python' )
 import tomsBinFunctions     # custom functions in the pythonLibs subdir
 
 ###################

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# gredt: grep for a string in files in current directory tree
+# -----------------------------------------------------------
+#
+pwd=$(pwd)
+echo "Searching for \"$@\" in files under \"$pwd\""
+echo
+
+find * -type f | \
+	grep -v '\.git/' | \
+	grep -v '/with\ space/' | \
+	grep -v 'nbproject/' | \
+	grep -v '__pyc' | \
+	grep -v '\.pycache__/' | \
+	grep -v '\.project' | \
+	grep -v 'RCS/' | \
+	grep -v '\.svn/' | \
+	grep -v 'tmp/' | \
+	grep -v '\.css\.map$' | \
+	grep -v '\.min\.' | \
+	grep -v '\.swp$' | sort | xargs grep -n $@

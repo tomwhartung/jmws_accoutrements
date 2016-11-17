@@ -1,0 +1,120 @@
+#!/bin/bash
+#
+# fromAny: scp specified file FROM same dir on specified host
+# -----------------------------------------------------------
+#
+function syntax()
+{
+   echo "Syntax:"
+   echo "   fromAny hostname file_to_get-1 [file_to_get-2 ...]"
+}
+
+if [ $# -lt 1 ]; then
+   syntax
+   exit 1
+fi
+
+if [[ $1 == "ava" ]]; then
+   from_hostname="ava"
+elif [[ $1 == "barbara" ]]; then
+   from_hostname="barbara"
+elif [[ $1 == "bette" ]]; then
+   from_hostname="bette"
+elif [ $1 == "humphrey" ]; then
+   from_hostname="humphrey"
+elif [[ $1 == "jane" ]]; then
+   from_hostname="jane"
+elif [[ $1 == "lauren" ]]; then
+   from_hostname="lauren"
+elif [[ $1 == "rita" ]]; then
+    from_hostname="rita"
+elif [ $1 == "veronica" ]; then
+   from_hostname="veronica"
+else
+   syntax
+   echo "Which host are you copying from?"
+   echo "This script can only copy from bette, jane, lauren, rita, or veronica."
+   exit 22
+fi
+
+if [ $# -lt 2 ]; then
+   syntax
+   echo "Error: Please specify the name of at least one file to copy."
+   exit 2
+else
+   shift
+fi
+
+pwd=$(pwd)
+
+remote_files=$@
+
+if [ -z "$remote_files" ]; then
+   echo "Please specify one or more file names"
+   exit 11
+fi
+
+dest_directory=$(pwd)
+this_hostname=$(hostname)
+
+## echo "from_hostname = \"$from_hostname \""
+## echo "remote_files = \"$remote_files\""
+## exit
+
+if [ "$from_hostname" == "rita" ]; then
+   from_sum_command="md5 -q"
+else
+   from_sum_command="md5sum"
+fi
+
+if [ "$this_hostname" == "rita.local" ]; then
+   this_sum_command="md5 -q"
+else
+   this_sum_command="md5sum"
+fi
+
+exit_ret_val=0
+seconds_before_overwriting=5
+
+for file_to_get in $remote_files
+do
+   ssh $from_hostname \
+      "if [ -f ${dest_directory}/${file_to_get} ]; then
+          exit 0
+       else
+          exit 33
+       fi"
+   ssh_ret_val=$?
+   if [ $ssh_ret_val == 0 ]; then
+      echo -n "Copying ${file_to_get} from ${dest_directory} on $from_hostname ... "
+      if [ -f $file_to_get ]; then
+         echo
+         echo " ---> Warning: Overwriting ${file_to_get} in $seconds_before_overwriting seconds!"
+         echo -n " ---> "
+         for (( seconds_remaining=$seconds_before_overwriting ; 
+               0 < $seconds_remaining ;
+               seconds_remaining-- ))
+         do
+            echo -n "$seconds_remaining "
+            sleep 1
+         done
+      fi
+      scp -p $from_hostname:${dest_directory}/${file_to_get} . > /tmp/ssh_out.$$ 2>&1
+      scp_ret_val=$?
+      echo " ... done!"
+      if [ $scp_ret_val == 0 ]; then
+         ssh $from_hostname $from_sum_command ${dest_directory}/${file_to_get}
+         $this_sum_command ${file_to_get}
+      else
+         echo "Error: unable to scp $file_to_get from ${dest_directory} on $from_hostname:"
+         cat /tmp/ssh_out.$$
+      fi
+      rm /tmp/ssh_out.$$
+   else
+      echo
+      echo "Error: ${dest_directory}/${file_to_get} does not exist on $from_hostname"
+      exit_ret_val=$ssh_ret_val
+   fi
+done
+
+exit $exit_ret_val

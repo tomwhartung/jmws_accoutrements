@@ -1,0 +1,211 @@
+#!/bin/bash
+#
+# toAny: scp specified file(s) to appropriate dir on specified host
+# -----------------------------------------------------------------
+#
+function syntax()
+{
+   echo "Syntax: toAny [-f|-y] dest_hostname [files]"
+   echo "  -f: force - chmod destination files so they are writable"
+   echo "  -y: create destination directory if it is missing"
+   echo "  -f and -y are mutually exclusive"
+}
+
+#
+#  Process command-line arguments
+#  ------------------------------
+#
+pwd=$(pwd)
+dest_hostname=$1
+shift
+
+if [ -z "$dest_hostname" ]; then
+   syntax
+   echo "Please specify a destination host name and try again"
+   exit 3
+fi
+
+if [ "$1" == "-f" ]; then
+   chmod_destination_files="y"
+   create_missing_directory="n"
+   shift
+elif [ "$1" == "-y" ]; then
+   chmod_destination_files="n"
+   create_missing_directory="y"
+   shift
+else
+   chmod_destination_files="n"
+   create_missing_directory="n"
+fi
+
+## echo "first arg: \"$1\""
+## echo "dollar-hash: \"$#\""
+## echo "create_missing_directory: \"$create_missing_directory\""
+
+if [ $# -eq 0 ]; then
+   files=$(ls)
+else
+   files=$@
+fi
+
+if [ -z "$files" ]; then
+   syntax
+   echo "No files to copy."
+   exit 4
+fi
+
+#
+#  Check destination host
+#  ----------------------
+#
+this_hostname=$(hostname)
+
+if [ "$this_hostname" == "$dest_hostname" ]; then
+   syntax
+   echo "Unable to copy files from \"$this_hostname\" to \"$dest_hostname\""
+   echo "(Apparently you are already on $dest_hostname!)"
+   exit 5
+fi
+
+## if [ "$this_hostname" == "bette" ]; then
+##    ping_command='ping -n 1'
+## else
+   ping_command='ping -c1'
+## fi
+
+${ping_command} $dest_hostname > /tmp/toAny-ping_output.$$ 2>&1
+ping_ret_val=$?
+
+if [ $ping_ret_val -ne 0 ]; then
+   syntax
+   echo "Error: unable to ping dest host \"$dest_hostname\":"
+   cat /tmp/toAny-ping_output.$$
+   echo "Check your spelling and try again."
+   rm /tmp/toAny-ping_output.$$
+   exit 7
+fi
+
+rm /tmp/toAny-ping_output.$$
+
+#
+#  Modify if necessary (/home vs. /Users) and check destination directory
+#  ----------------------------------------------------------------------
+#  Don't think this is working right now...
+#
+current_directory=$(pwd)
+
+if [ $this_hostname == "rita.local" ]; then
+   dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
+elif [ $dest_hostname == "rita" ]; then
+   dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
+elif [ $dest_hostname == 'shell.dim.com' ]; then
+   if [ $current_directory == '/usr/local/tar' ]; then
+      dest_directory=/vortex/home/t/tomh/tar
+   else
+      echo 'Warning: copying file to ~/tmp directory on shell.dim.com!'
+      dest_directory=/vortex/home/t/tomh/tmp
+   fi
+else
+   dest_directory=$current_directory
+fi
+
+if [ $dest_hostname == 'humphrey' ]; then
+## dest_username='root@'
+   dest_username='tomh@'
+else
+   dest_username=''
+fi
+
+check_for_directory $dest_hostname $dest_directory > /dev/null
+check_ret_val=$?
+
+if [ $check_ret_val -ne 0 ]; then
+   if [ "$create_missing_directory" == "n" ]; then
+      echo "directory \"$dest_directory\" does not exist on host \"$dest_hostname\""
+      echo -n "Enter \"y\" to create it, any other key to quit: "
+      read answer
+      if [ "$answer" == "y" -o "$answer" == "Y" ]; then
+         ssh ${dest_username}${dest_hostname} mkdir -p $dest_directory
+      else
+         exit 11
+      fi
+   else
+      echo 
+      echo "Creating directory \"$dest_directory\" on host \"$dest_hostname\""
+      ssh ${dest_username}${dest_hostname} mkdir -p $dest_directory
+   fi
+fi
+
+## #  Uncomment for debugging:
+## #
+## echo "Ready to copy file(s) \"$files\""
+## echo "   to directory \"$dest_directory\""
+## echo "   on host \"$dest_hostname\""
+## exit
+
+#
+#  Set the sum command:
+#  --------------------
+#
+if [ "$this_hostname" == "rita.local" ]; then
+   this_sum_command="md5 -q"
+else
+   this_sum_command="md5sum"
+fi
+
+if [ "$dest_hostname" == "rita" ]; then
+   dest_sum_command="md5 -q"
+else
+   dest_sum_command="md5sum"
+fi
+
+#
+#  Main loop to process the files:
+#  ===============================
+#
+for local_file_name in $files
+do
+   if [ -d $local_file_name ]; then
+      echo "Skipping directory $local_file_name"
+   else
+      ssh ${dest_username}${dest_hostname} \
+         "if [ -f ${dest_directory}/${local_file_name} ]; then
+             if [ -w ${dest_directory}/${local_file_name} ]; then
+                exit 0
+             else
+                exit 99
+             fi
+          fi"
+      ssh_ret_val=$?
+      if [ $ssh_ret_val == 99 ]; then
+         if [ "${chmod_destination_files}" == "y" ]; then
+            set -x
+            ssh ${dest_username}${dest_hostname} chmod +w ${dest_directory}/${local_file_name}
+            set +x
+            ssh_ret_val=0
+         fi
+      fi
+      if [ $ssh_ret_val == 0 ]; then
+         echo "Copying ${local_file_name} to ${dest_directory} on $dest_hostname:"
+         scp -p ${local_file_name} ${dest_username}${dest_hostname}:${dest_directory} > /tmp/ssh_out.$$ 2>&1
+         scp_ret_val=$?
+         if [ $scp_ret_val == 0 ]; then
+            $this_sum_command ${local_file_name}
+            ssh ${dest_username}${dest_hostname} $dest_sum_command ${dest_directory}/${local_file_name}
+         else
+            echo "Error: unable to scp $local_file_name:"
+            cat /tmp/ssh_out.$$
+         fi
+         rm /tmp/ssh_out.$$
+         exit_ret_val=$scp_ret_val
+      else
+         echo
+         echo "Error: ${dest_directory}/${local_file_name} is not writable on $dest_hostname"
+         echo "Run this command to chmod it:"
+         echo "   ssh ${dest_username}${dest_hostname} chmod +w ${dest_directory}/${local_file_name}"
+         exit_ret_val=$ssh_ret_val
+      fi
+   fi
+done
+
+exit ${exit_ret_val}

@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# diffDrupal look for what may have changed between versions
+# ----------------------------------------------------------
+#
+if [ $# -ne 2 ]; then
+	echo "Syntax:"
+	echo "  diffDrupal version1 version2"
+	echo "E.g.:"
+	echo "  diffDrupal 7.33 7.34"
+	exit 1;
+fi
+
+version1=$1
+version2=$2
+echo "diffing versions $version1 and $version2:"
+cd /var/www/tomhartung.com
+set -x
+diff drupal-${version1}/sites/all/modules/README.txt drupal-7.${version2}/sites/all/modules/README.txt
+diff drupal-${version1}/sites/all/themes/README.txt drupal-7.${version2}/sites/all/themes/README.txt 
+diff drupal-${version1}/sites/default/default.settings.php drupal-7.${version2}/sites/default/default.settings.php
+diff drupal-${version1}/sites/example.sites.php drupal-7.${version2}/sites/example.sites.php
+diff drupal-${version1}/sites/README.txt drupal-7.${version2}/sites/README.txt
+set +x
+

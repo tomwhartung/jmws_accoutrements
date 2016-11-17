@@ -1,0 +1,72 @@
+#!/bin/bash
+#
+# grep_logs: cat log files into chronological order then grep
+# -----------------------------------------------------------
+#
+# LOGS_DIR: should be set in .bash_profile
+#
+if [ "$LOGS_DIR" == "" ]; then
+   logs_dir=$LOGS_DIR
+else
+   logs_dir=~/output/logs
+fi
+
+cd $logs_dir
+/usr/local/bin/get_logs
+
+echo > /tmp/grep_output-access_logs.$$
+echo "grepping for \"$@\" in access logs:" >> /tmp/grep_output-access_logs.$$
+echo "---------------------------------"   >> /tmp/grep_output-access_logs.$$
+cat access_log.? access_log | \
+   grep -v '10\.0\.0\.' |
+   grep "$@" >> /tmp/grep_output-access_logs.$$
+cat /tmp/grep_output-access_logs.$$ > /tmp/grep_output-all_logs.$$
+rm  /tmp/grep_output-access_logs.$$
+
+echo > /tmp/grep_output-error_logs.$$
+echo "grepping for \"$@\" in error logs:" >> /tmp/grep_output-error_logs.$$
+echo "--------------------------------"   >> /tmp/grep_output-error_logs.$$
+cat error_log.? error_log | \
+   grep -v '10\.0\.0\.' |
+   grep "$@" >> /tmp/grep_output-error_logs.$$
+cat /tmp/grep_output-error_logs.$$ >> /tmp/grep_output-all_logs.$$
+rm  /tmp/grep_output-error_logs.$$
+
+echo > /tmp/grep_output-hosts_logs.$$
+echo "grepping for \"$@\" in hosts logs:" >> /tmp/grep_output-hosts_logs.$$
+echo "--------------------------------"   >> /tmp/grep_output-hosts_logs.$$
+cat hosts_log.? hosts_log | \
+   grep -v '10\.0\.0\.' |
+   grep "$@" >> /tmp/grep_output-hosts_logs.$$
+cat /tmp/grep_output-hosts_logs.$$ >> /tmp/grep_output-all_logs.$$
+rm  /tmp/grep_output-hosts_logs.$$
+
+echo > /tmp/grep_output-request_logs.$$
+echo "grepping for \"$@\" in request logs:" >> /tmp/grep_output-request_logs.$$
+echo "--------------------------------"   >> /tmp/grep_output-request_logs.$$
+cat request_log.? request_log | \
+   grep -v '10\.0\.0\.' |
+   grep "$@" >> /tmp/grep_output-request_logs.$$
+cat /tmp/grep_output-request_logs.$$ >> /tmp/grep_output-all_logs.$$
+rm  /tmp/grep_output-request_logs.$$
+
+echo > /tmp/grep_output-useragent_logs.$$
+echo "grepping for \"$@\" in useragent logs:" >> /tmp/grep_output-useragent_logs.$$
+echo "--------------------------------"   >> /tmp/grep_output-useragent_logs.$$
+cat useragent_log.? useragent_log | \
+   grep -v '10\.0\.0\.' |
+   grep "$@" >> /tmp/grep_output-useragent_logs.$$
+cat /tmp/grep_output-useragent_logs.$$ >> /tmp/grep_output-all_logs.$$
+rm  /tmp/grep_output-useragent_logs.$$
+
+echo > /tmp/grep_output-messages.$$
+echo "grepping for \"$@\" in messages:" >> /tmp/grep_output-messages.$$
+echo "------------------------------"   >> /tmp/grep_output-messages.$$
+cat messages.? messages | \
+   grep -v '10\.0\.0\.' |
+   grep "$@" >> /tmp/grep_output-messages.$$
+cat /tmp/grep_output-messages.$$ >> /tmp/grep_output-all_logs.$$
+rm  /tmp/grep_output-messages.$$
+
+more /tmp/grep_output-all_logs.$$
+rm   /tmp/grep_output-all_logs.$$

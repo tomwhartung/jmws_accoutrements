@@ -48,7 +48,8 @@ rm /tmp/check_for_directory-ping_output.$$
 echo "Checking directory \"$directory_to_check\" on dest host \"$dest_hostname\""
 
 if [ $dest_hostname == 'humphrey' ]; then
-   dest_username='root@'
+## dest_username='root@'
+   dest_username='tomh@'
 else
    dest_username=''
 fi

@@ -28,7 +28,7 @@ elif [ $this_hostname == "jane" ]; then
    more_dirs="Downloads jobsearch personal technical work"
    mail_dirs=""
 elif [ $this_hostname == "lauren" ]; then
-   more_dirs="Downloads jobsearch personal technical work"
+   more_dirs="Downloads personal technical"
    mail_dirs=""
 elif [ $this_hostname == "rita.local" ]; then
    more_dirs="Documents Pictures jobsearch my_joomla personal technical work"

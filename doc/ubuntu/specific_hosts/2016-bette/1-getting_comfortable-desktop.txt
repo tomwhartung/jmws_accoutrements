@@ -163,27 +163,3 @@ Desktop Necessities for Comfortableness
     Window Management -> Resize Window -> General tab ->
       Uncheck "Maximize Vertically if screen edge hit."
 
-************************
-***** You Are Here *****
-************************
-
-/usr/local/bin and ~/bin Setup
-------------------------------
-[ ] Setup pythonLibs in ~ (/home/tomh) and /usr/local/bin
-    This is now needed for scripts like up, killEmAll, and upapa
-    ** The whole /usr/local/bin setup needs to be re-examined **
-    ** npm likes to put stuff there too! **
-    We don't need all of these, but it's nice to have a local copy of them anyway
-    As tomh:
-      cd
-      mkdir -p iot/customizations
-      cd iot/customizations
-      git clone https://github.com/tomwhartung/edison_python.git
-      git clone https://github.com/tomwhartung/edison_node.git
-      git clone https://github.com/tomwhartung/edison_config_tools.git
-      git clone https://github.com/tomwhartung/edison_arduino.git
-      git clone https://github.com/tomwhartung/edison_usr_local_bin.git
-      cd /usr/local/bin
-      ln -s /home/tomh/iot/customizations/edison_usr_local_bin/bin/pythonLibs .
-
-

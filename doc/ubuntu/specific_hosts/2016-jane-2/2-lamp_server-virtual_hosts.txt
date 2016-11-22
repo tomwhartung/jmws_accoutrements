@@ -370,8 +370,6 @@ Set up Alias to Run Correct Version of Drush
       drush --version   ## Drush Version   :  8.1.7
 [ ] Stay tuned for more updates
 
-
-
 Ensure All CMS Sites Are Running the Latest Version
 ---------------------------------------------------
 Find detailed instructions for these processes in files in the following directories in this repo:
@@ -379,17 +377,8 @@ Find detailed instructions for these processes in files in the following directo
    doc/joomla/upgrading
    doc/wordpress/upgrading
 
-
-********************
-*** YOU ARE HERE ***
-********************
-
-
-Final Steps
------------
 [ ] Review security checklists as appropriate
     --> This is especially important when deploying a new server!!
-[ ] Configure automatic wordpress updates
 
 Checking the Sites:
 -------------------
@@ -410,7 +399,28 @@ Back It All Up
 [ ] Set up (semi-)automatic backups as appropriate
 
 [ ] Disk Space Spotcheck:
-    /:     
-    /home: 
-    /var/www: X.XG/XXG (XX%)
+    /:        7.0G/23G (32%)
+    /home:    1.6G/23G (8%
+    /var/www: 8.1G/19G (47%)
+
+Final Steps
+-----------
+[ ] Update apache logs config so we can tell which site each message applies to
+    Update all files in /etc/apache2/sites-available
+    Change:
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+    to
+      CustomLog ${APACHE_LOG_DIR}/access.log vhost_combined
+    and restart apache2:
+      sudo service apache2 restart
+
+[ ] Use logrotate to rotate apache logs weekly
+    Ensure logrotate is installed:
+      sudo dpkg-query --list '*rotate*'
+
+********************
+*** YOU ARE HERE ***
+********************
+
+[ ] Configure automatic wordpress updates
 

@@ -140,16 +140,6 @@ For details about steps taken on jane, and why I suspect those steps failed, see
       -> Hope that because we keep the source on github, we will not need to use it on barbara and ava
     Stay tuned for more updates
 
-
-********************
-*** YOU ARE HERE ***
-********************
-
-
-Final Steps
------------
-[ ] Configure automatic wordpress updates
-
 Checking the Sites:
 -------------------
 Checking all sites, in conjunction with getting them to work on jane and ava:
@@ -169,7 +159,16 @@ Back It All Up
 [ ] Set up (semi-)automatic backups as appropriate
 
 [ ] Disk Space Spotcheck:
-    /:     
-    /home: 
-    /var/www: X.XG/XXG (XX%)
+    /:        4.6G/13G (40%)
+    /home:    1.3G/9.1G (15%)
+    /var/www: 6.2G/10G (66%)
+
+
+********************
+*** YOU ARE HERE ***
+********************
+
+Final Steps
+-----------
+[ ] Configure automatic wordpress updates
 

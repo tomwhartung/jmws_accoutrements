@@ -263,16 +263,6 @@ For details about steps taken on jane, see ../2016-jane-2/2-lamp_server-virtual_
       -> Hope that because we keep the source on github, we will not need to use it on barbara and ava
     Stay tuned for more updates
 
-    
-********************
-*** YOU ARE HERE ***
-********************
-
-
-Final Steps
------------
-[ ] Configure automatic wordpress updates
-
 Checking the Sites:
 -------------------
 Checking all sites, in conjunction with getting them to work on jane and barbara:
@@ -292,7 +282,15 @@ Back It All Up
 [ ] Set up (semi-)automatic backups as appropriate
 
 [ ] Disk Space Spotcheck:
-    /:     
-    /home: 
-    /var/www: X.XG/XXG (XX%)
+    /:        2.1G/22G (10%)
+    /home:    0.2G/4.5G (4%)
+    /var/www: 5.5G/13G (30%)
+
+********************
+*** YOU ARE HERE ***
+********************
+
+Final Steps
+-----------
+[ ] Configure automatic wordpress updates
 

@@ -406,6 +406,8 @@ Back It All Up
 Final Steps
 -----------
 [ ] Update apache logs config so we can tell which site each message applies to
+    Reference:
+      https://www.digitalocean.com/community/tutorials/how-to-configure-logging-and-log-rotation-in-apache-on-an-ubuntu-vps
     Update all files in /etc/apache2/sites-available
     Change:
       CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -413,10 +415,24 @@ Final Steps
       CustomLog ${APACHE_LOG_DIR}/access.log vhost_combined
     and restart apache2:
       sudo service apache2 restart
-
 [ ] Use logrotate to rotate apache logs weekly
+    Reference:
+      https://serversforhackers.com/managing-logs-with-logrotate
     Ensure logrotate is installed:
       sudo dpkg-query --list '*rotate*'
+    Check installed version of the logrotate conf file for apache into RCS
+    As root:
+      cd /etc/logrotate.d
+      mkdir RCS
+      ci -l apache2    ## "Installed version"
+    Edit the config file as desired
+      sudo vi /etc/logrotate.d/apache2
+    This time we are changing it to rotate them weekly and keep a year's worth:
+      "daily" -> "weekly"
+      "rotate 14" -> "rotate 52"
+    and adding these lines to use dates for the log file name extensions (instead of .1, .2, etc.):
+      dateext
+      dateformat -%Y-%m-%d-%s
 
 ********************
 *** YOU ARE HERE ***

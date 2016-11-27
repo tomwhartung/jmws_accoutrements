@@ -130,288 +130,23 @@ gotht
 drush sset system.maintenance_mode 1
 ```
 
-### 3.0 Try Using Drush Next Time
+### 3.1 Use Drush
 
-This is where we can supposedly update the site using drush.
-After the drush install failed to go as hoped
-(for details, see doc/ubuntu/specific_hosts/2016-jane-2/2-lamp_server-virtual_hosts.txt in this repo),
-I am mildly suspicious as to whether this will work.
+This is a minor upgrade, with no changes to any of the settings files, so it's a good chance to try this process.
 
-Presumably we can do all this with one command:
+Run these commands:
 
 ```
+gotht
 composer update
 drush pm-update drupal
 ```
 
-Maybe next time re-check out drush docs, find out what they or I or both of us did wrong.
-(At this time I am in no mood to be trying to fix others' docs or code or both.)
+I think you are supposed to run the `composer update` command first, but I ran `drush pm-update drupal` and
+fortunately it seemed to work ok.
 
-**I would definitely feel more comfortable with trying that if we were updating to each new release one at a time,
-instead of upgrading through several, as we have been doing.**
 
-### 3.1 Update Drupal Core
-
-Grab fresh clone of site, and replace the core and vendor directories.
-
-#### 3.1.1 Delete the Old Files
-
-```
-gothh
-cd tmp
-git clone git@github.com:tomwhartung/tomhartung.com-d8.git
-mv tomhartung.com-d8 tomhartung.com-d8.2.2
-mv tomhartung.com-d8.2.2 ..
-cd ../tomhartung.com-d8.2.2
-rm -fr core vendor
-## rm autoload.php composer.* example.gitignore index.php LICENSE.txt
-## rm README.txt robots.txt update.php web.config
-## rm .csslintrc .editorconfig .eslint* .gitattributes  .htaccess
-mv autoload.php composer.* example.gitignore index.php LICENSE.txt ../tmp
-mv README.txt robots.txt update.php web.config ../tmp
-mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tmp
-```
-
-#### 3.1.2 Add in the New Files
-
-Replace deleted files with the corresponding files from the new release.
-
-Be careful to not overwrite any customizations made to any of the following files!
-
-* `.htaccess`
-* `composer.json`
-* `robots.txt`
-* (etc.)
-
-If desired, you can run git log on these to ensure they have not been changed.
-If they have changed, migrate the changes I have made from old to new, or
-migrate the changes they made from new to old to make newer.
-
-```
-gothh
-cp ../downloads/drupal-8.2.2.tar.gz .
-tar -xvzf drupal-8.2.2.tar.gz
-rm drupal-8.2.2.tar.gz
-cd drupal-8.2.2
-mv core vendor ../tomhartung.com-d8.2.2
-mv autoload.php composer.* example.gitignore index.php LICENSE.txt ../tomhartung.com-d8.2.2
-mv README.txt robots.txt update.php web.config ../tomhartung.com-d8.2.2
-mv .csslintrc .editorconfig .eslint* .gitattributes  .htaccess ../tomhartung.com-d8.2.2
-```
-
-#### 3.1.3 Cleanup
-
-Clean up the new code source directory to enable easy file name completion in the shell"
-
-```
-gothh
-cd drupal-8.2.2
-ls -al
-ls -al modules/
-rm modules/README.txt
-rmdir modules/
-ls -al profiles/
-rm profiles/README.txt
-rmdir profiles/
-ls -al themes/
-rm themes/README.txt
-rmdir themes/
-ls -al
-```
-
-The only thing remaining should be the sites directory.
-
-### 3.2 Migrate any changes made to the `sites/*` and `sites/default/*` files
-
-At this point in time this part of the process is a bit difficult to codify into specific steps.
-It boils down to seeing what, if anything, has changed in the `sites/development.services.yml` and `sites/default/*settings*` files.
-
-**It is hoped that we will begin to update this code more regularly, so we are more familiar and comfortable with all this,
-we feel it is safe to use drush, have more confidence in and knowledge about the process, etc.**
-
-#### 3.2.1 Migrate any changes made to the `sites/development.services.yml` file
-
-Most of these files should be kept locally only (i.e., not in git), in the gitignored directory (and versioned in RCS).
-
-Run `ls` and `diff` commands to compare:
-
-* the current production version of `sites/development.services.yml` (linked to the `gitignored` directory) to the
-* the newly released version in `drupal-8.2.2/sites`
-
-```
-gothh
-ls -al gitignored/sites drupal-8.2.2/sites
-ls -al gitignored/sites/development.services.yml drupal-8.2.2/sites/development.services.yml
-diff gitignored/sites/development.services.yml drupal-8.2.2/sites/development.services.yml
-```
-
-##### 3.2.1.1 Updating the "sites/development.services.yml" file
-
-Output from the `diff` commands reveals we have made changes to this file, and it did not change in the current release, so
-we need to do the following:
-
-- [X] Use the gitignored version of `sites/development.services.yml`
-
-In other words, no changes are needed for this file.
-
-##### 3.2.1.2 Link `gitignored/sites/development.services.yml` into the updated site code
-
-Link our updated `development.services.yml` file into the new `tomhartung.com-d8.2.2/sites` directory tree.
-
-```
-gothh
-cd tomhartung.com-d8.2.2/sites
-ln -s ../../gitignored/sites/development.services.yml .
-```
-
-#### 3.2.2 Migrate any changes made to the `sites/default/default.services.yml` file to `services.yml`
-
-These files should **definitely** be kept locally only, in the gitignored directory (versioned in RCS).
-
-Run `ls` and `diff` commands to compare:
-
-* the current production version of `sites/default/default.services.yml` (linked to the `gitignored` directory) to the
-* the newly released version, `drupal-8.2.2/sites/default/default.services.yml`
-
-```
-gothh
-ls -al gitignored/sites/default drupal-8.2.2/sites/default
-ls -al gitignored/sites/default/default.services.yml drupal-8.2.2/sites/default/default.services.yml
-diff   gitignored/sites/default/default.services.yml drupal-8.2.2/sites/default/default.services.yml
-```
-
-##### 3.2.2.1 Updating the `sites/default/default.services.yml` and `services.yml` files
-
-Output from the `diff` commands reveals that changes have been made in the new release to `sites/default/default.services.yml` , so
-we need to do the following:
-
-- [X] Merge the differences between `gitignored/sites/default/default.services.yml` and `drupal-8.2.2/sites/default/default.services.yml`
-into **`services.yml`**
-- [X] Copy the new version of `default.services.yml` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.services.yml`
-
-```
-ls -al gitignored/sites/default drupal-8.2.2/sites/default
-cd gitignored/sites/default/
-rd services.yml
-vi services.yml
-diff default.services.yml services.yml
-cp ../../../drupal-8.2.2/sites/default/default.services.yml .
-diff default.services.yml services.yml
-rd services.yml default.services.yml
-ci -l  services.yml default.services.yml     ## "Updated for drupal 8.2.2"
-```
-
-
-##### 3.2.2.2 Checking the `sites/default/default.services.yml` and `services.yml` files
-
-Ensure that these files match, except for the changes ("CusTOMizations") we have made to them:
-
-```
-gothh
-diff gitignored/sites/default/default.services.yml gitignored/sites/default/services.yml
-```
-
-##### 3.2.2.3 Link `gitignored/sites/default/services.yml` into the updated site code
-
-Link our updated `services.yml` file into the new `tomhartung.com-d8.2.2/sites` directory tree.
-
-```
-gothh
-cd tomhartung.com-d8.2.2/sites
-mkdir default
-cd default
-ln -s ../../../gitignored/sites/default/services.yml .
-```
-
-#### 3.2.3 Migrate any changes made to the `sites/default/default.settings.php` file to `settings.php`
-
-These files should **definitely** be kept locally only, in the gitignored directory (versioned in RCS).
-
-Run `ls` and `diff` commands to compare:
-
-* the production version of `sites/default/default.settings.php` (linked to the `gitignored` directory) to the
-* the newly released version, `drupal-8.2.2/sites/default/default.settings.php`
-
-```
-gothh
-ls -al gitignored/sites/default/default.settings.php drupal-8.2.2/sites/default/default.settings.php
-diff   gitignored/sites/default/default.settings.php drupal-8.2.2/sites/default/default.settings.php
-```
-
-##### 3.2.3.1 Updating the `sites/default/*settings.php` files
-
-Output from the `diff` commands reveals that changes have been made in the new release to `sites/default/default.settings.php`, so
-we need to do the following:
-
-- [X] Merge the differences between `gitignored/sites/default/default.settings.php` and `drupal-8.2.2/sites/default/default.settings.php`
-into **`settings.php`**
-- [X] Copy the new version of `default.settings.php` from `drupal-8.2.2/sites/default` to `gitignored/sites/default/default.settings.php`
-
-```
-cd gitignored/sites/default/
-vi settings.php
-cp ../../../drupal-8.2.2/sites/default/default.settings.php .
-rd default.settings.php
-diff default.settings.php settings.php
-rd default.settings.php settings.php
-ci -l default.settings.php settings.php
-```
-
-##### 3.2.3.2 Check the `sites/default/default.settings.php` and `settings.php` files
-
-Ensure that these files match, except for the changes we have made to them:
-
-```
-gothh
-diff gitignored/sites/default/default.settings.php gitignored/sites/default/settings.php
-```
-
-##### 3.2.3.3 Link `gitignored/sites/default/settings.php` into the updated site code
-
-Link our updated `settings.php` file into the new `tomhartung.com-d8.2.2/sites` directory tree.
-
-```
-gothh
-cd tomhartung.com-d8.2.2/sites/default  ## Directory was created in the last step!
-ln -s ../../../gitignored/sites/default/settings.php .
-```
-
-#### 3.2.4 Link `settings.local*` files and the `files` directory into the updated site code
-
-Link in the other files and the `files` directory, that we keep on the localhost.
-
-```
-gothh
-cd tomhartung.com-d8.2.2/sites/default
-ln -s ../../../gitignored/sites/default/settings.local* .
-ln -s ../../../gitignored/sites/default/files .
-ls -al
-```
-
-#### 3.2.5 Migrate any changes made to "sites/example.*" files (???)
-
-I am not sure whether we need to be concerned about changes to these files, but
-I feel it's worth taking a moment to look for changes anyway.
-
-Run `ls` and `diff` commands to compare:
-
-* the old versions of files matching the pattern `tomhartung.com/sites/example.*` to
-* the newly released versions in `drupal-8.2.2/sites`
-
-```
-gothh
-ls -al gitignored/sites drupal-8.2.2/sites
-ls -al tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php
-diff tomhartung.com/sites/example.settings.local.php drupal-8.2.2/sites/example.settings.local.php
-ls -al tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.php
-diff tomhartung.com/sites/example.sites.php  drupal-8.2.2/sites/example.sites.php
-```
-
-##### 3.2.5.1 Updating the "sites/example.*" files
-
-No changes need to be made to these files in this release.
-
-### 3.2.6 Summary:
+### 3.2 Check:
 
 Following is a list of important files to note:
 
@@ -424,62 +159,19 @@ sites/example.settings.php         ## Unsure of this file's importance, best to 
 sites/example.sites.php            ## Unsure of this file's importance, best to play it safe
 ```
 
-#### 3.2.6.1 Changes made to `settings.php`
-
-Following is a list of the changes that need to be ported into the new settings.php :
-
-- hash_salt - supply value
-- uncomment code to include settings.local.php
-- cusTOMizations comment
-- settings for trusted host patterns
-- ye olde database config settings
-- install_profile and config_directories settings
-
-**Can we not migrate these changes to `settings.local.php` , and forget about them?
-
-#### 3.2.6.2 A Final Word of Caution:
-
-The name of the `settings.local.php` file may be changing (in 8.2 - NOT!!!) to `local.settings.php` .
-References (bug/feature reports):
-
-* https://www.drupal.org/node/2419213
-* https://www.drupal.org/node/1118520
-
-I am not sure whether we need to worry about this, but maybe this is checked for elsewhere in the code?!?
-
-### 3.3 Link in the customizations
-
-Link in the customizations that we worked so hard on earlier this year.
+Based on the release notes, none of these has changed, but it's easy enough to verify that:
 
 ```
-gothh
-cd tomhartung.com-d8.2.2
-cd modules/
-mkdir jmws
-cd jmws/
-l ../../../customizations/*/modules/jmws
-ln -s ../../../customizations/jmws_idMyGadget_for_drupal-d8/modules/jmws/idmygadget .
-cd ../../themes/
-mkdir jmws
-cd -
-l ../../customizations/*/modules/jmws  # these are the customized modules that are available
-cd -
-l ../../customizations/*/themes/jmws   # these are the customized themes that are available
-cd jmws/
-l ../../../customizations/*/themes/jmws
-ln -s ../../../customizations/jmws_drupal_idMyGadget_stark-d8/themes/jmws/idmygadget_stark .
-ln -s ../../../customizations/jmws_drupal_idMyGadget_bartik-d8/themes/jmws/idmygadget_bartik .
+gotht
+cd ../gitignored/
+cd sites/
+l
+rd development.services.yml
+cd default/
+l
+rd *.*
 ```
 
-### 3.3.1 Check the links
-
-Compare to the links in the current directory tree, to make sure we didn't miss anything.
-
-```
-gothh
-l tomhartung.com/modules/jmws/ tomhartung.com/themes/jmws/
-l tomhartung.com-d8.2.2/modules/jmws/ tomhartung.com-d8.2.2/themes/jmws/
-```
 
 ### 3.4 Optional: Clear caches and backup DB for safety
 

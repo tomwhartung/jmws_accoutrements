@@ -1,67 +1,33 @@
 
-# Upgrading Drupal 8.1.7 to 8.2.2
+# Upgrading Drupal 8.2.2 to 8.2.3
 
 ## Purpose
 
-The purpose of this document is to detail a process we can use without doing a lot of preparatory research.
-
-## Lessons Learned
-
-Observations and lessons learned from previous experience with upgrading drupal:
-
-* Use drush, it makes the process much quicker
-
-* Be sure to reference documentation for version 8 of Drupal, NOT version 7
-
-* The standard procedure is to follow the instructions in the copy of UPGRADE.TXT that comes with the source
-
-We are going to start using drush to do this!
+Use drush to upgrade a single minor release.
 
 ## References
 
-**Reviewing all of these references is NOT necessary.**
-
-### The Original Reference
-
-This one has links to other references:
-
-* https://www.drupal.org/node/1494290
+**For complete instructions on how to upgrade over several releases, see upgrading-d8-8.1.7_to_8.2.2.md**
 
 Drupal 8 Reference:
 
 * https://www.drupal.org/docs/8/update/update-procedure-in-drupal-8
 
-### List of All Releases
+Looks identical to:
+
+* https://www.drupal.org/node/2700999
 
 **Absolutely always check this out!**
 
-* **https://www.drupal.org/project/drupal/releases
-
-I actually found out **on this page** they had just released 8.2.2 while I was in the process of upgrading to 8.2.1,
-so be sure to check it!
-
-### Release Notes
+* **https://www.drupal.org/project/drupal/releases**
 
 Release notes for each release:
 
 * **https://www.drupal.org/project/drupal**
 
-**Check the release notes for every version missed, as well as for the current, latest version.**
-
 **Search the page for `'settings'` to see whether there are changes required to settings.php .**
 
-Following is an example of a release notes page that mentions updates to .htaccess, web.config, and settings files:
-
-* https://www.drupal.org/project/drupal/releases/8.1.7
-
-Note that they make it very obvious.
-
-### More References
-
-To use drush or to not use drush?
-The answer looks rather obvious to me right now....
-
-#### Using Drush
+### Using Drush
 
 In addition to allowing us to do it on the command line, using drush to update the core looks like it is very easy.
 
@@ -72,56 +38,7 @@ In addition to allowing us to do it on the command line, using drush to update t
 For steps to install drush, see the most recent of the files with names matching the pattern
 `doc/ubuntu/specific_hosts/2016-*/2-lamp_server-virtual_hosts.txt` in this repo.
 
-#### Hybrid Drush/Manual Method
-
-**Note that we have a diffDrupal script that may help with this!!**
-
-**This just in!**
-
-* https://drupal.org/node/2700999
-
-It is concise, covers both how to do it manually and use drush, and was literally just updated this week!
-
-#### Manual methods:
-
-Of course previous versions of this file in this directory contain many details about previous efforts - hence our interest in drush!
-
-##### UPGRADING.txt
-
-For safety, review the UPGRADING.txt file that comes with the distribution as it may contain last-minute information.
-
-* https://api.drupal.org/api/drupal/core!UPGRADE.txt/8.0.x - UPGRADE.TXT
-
-This looks to be mostly boilerplate, though.
-
-##### Very Manual Method:
-
-This looks very much like what we have been doing:
-
-* https://www.drupal.org/node/570162
-
-##### The D7 Manual Method - With Links
-
-Another, similar (but less complicated - and perhaps less safe) process:
-
-* https://www.drupal.org/node/1494290
-
-Note though that it has links to:
-
-* The D8 method mentioned above at https://www.drupal.org/node/2700999 - updated just this week!
-
-* How to use drush at https://www.drupal.org/node/2550801 - let's give that a try!
-
-* How to update using a patch file at https://www.drupal.org/node/359234 - save that for later!
-
-See what I mean about there being a lot of references?!?
-I find confidence in their similarities, though, and want to distill an efficient drush/command-line version from all of these.
-
-## Preparation
-
-There are so many references!  Let's try to focus here people!
-
-### Review Release Notes
+## Step (0) - Review Release Notes and Process(es)
 
 When we have missed one or more upgrades, we need to review the release notes for each missed release.
 
@@ -136,7 +53,7 @@ We are working on simplifying the process used.
 * D8 Hybrid Process: https://www.drupal.org/node/2700999
 * Using drush: https://www.drupal.org/node/2550801
 
-Specifically we are very interested in using drush.
+For upgrading a single minor release we should be able to use drush.
 
 ### Check Drush Version Compatibility
 
@@ -144,6 +61,13 @@ For drupal 8 we need version 8 or higher of drush.
 
 For jane, we have set up an alias; for more information see the file (in this repo) named
 `doc/ubuntu/specific_hosts/2016-jane-2/2-lamp_server-virtual_hosts.txt` .
+
+```
+which drush               ## /usr/bin/drush
+/usr/bin/drush --version  ## drush version 5.10.0
+alias drush               ## alias drush='~/.config/composer/vendor/drush/drush/drush'
+drush --version           ## Drush Version   :  8.1.7
+```
 
 ## Step (1) Backup the Old
 

@@ -89,12 +89,11 @@ Reconcile any differences as appropriate.
 
 Clear the caches and backup the database on all hosts:
 
-```
-drush cr    # or Admin -> Configuration -> Development -> Performance -> Clear All Caches
-bu th 01-before_upgrading_8_1_7_to_8_2_2
-```
+* Admin -> Configuration -> Development -> Performance -> Clear All Caches
 
-If unable to use drush, use Admin -> Configuration -> Development -> Performance -> Clear All Caches .
+```
+bu th 01-before_upgrading_8_2_2_to_8_2_3
+```
 
 ## Step (2) Download, Unpack, and Review the New
 
@@ -113,41 +112,14 @@ Download (or copy) the file(s) into `/var/www/tomhartung.com/downloads` and unpa
 ```
 cd /var/www/tomhartung.com/downloads
 mkdir ../unpack
-cp  drupal-8.2.2.tar.gz ../unpack
+cp  drupal-8.2.3.tar.gz ../unpack
 cd ../unpack
-tar -xvzf drupal-8.2.2.tar.gz
-rm drupal-8.2.2.tar.gz
-cd ../drupal-8.2.2/
+tar -xvzf drupal-8.2.3.tar.gz
+rm drupal-8.2.3.tar.gz
+cd ../drupal-8.2.3/
+more core/CHANGELOG.txt
+less core/UPDATE.txt
 ```
-
-### **THE CURRENT QUESTION WE WANT TO ANSWER**
-
-Following is a list of all pertinent releases since 8.1.7:
-
-* 8.1.8 - https://www.drupal.org/project/drupal/releases/8.1.8
-* 8.1.9 - https://www.drupal.org/project/drupal/releases/8.1.9
-* 8.1.10 - https://www.drupal.org/project/drupal/releases/8.1.10
-* 8.2.0 - https://www.drupal.org/project/drupal/releases/8.2.0
-* 8.2.1 - https://www.drupal.org/project/drupal/releases/8.2.1
-* 8.2.2 - https://www.drupal.org/project/drupal/releases/8.2.2
-
-The admin panel lists two releases, 8.1.10 and 8.2.2.
-
-* See Reports -> Available Updates
-
-#### THE QUESTION
-
-**Do I need to process both, or can I just process the one for 8.2.2 ??**
-
-I believe we can skip to 8.2.2 .
-
-I also believe it is important to check all the release notes for updates to files like `settings.php` , etc.
-
-### Results of reviewing all the release notes:
-
-Not seeing anything about updates to the DB or settings.
-
-I want to try skipping going straight to 8.2.2.
 
 ## Step (3) Update the Development Host (jane)
 

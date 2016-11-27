@@ -172,116 +172,30 @@ l
 rd *.*
 ```
 
+### 3.3 Put site back online:
 
-### 3.4 Optional: Clear caches and backup DB for safety
-
-Ok this is the paranoia will destroy ya part!
-
-But seriously, I have had issues with trying to restore backups and clear caches etc., so
-I am thinking it is better to have too many of these backups than not enough.
+Using drush:
 
 ```
-bu th 02-before_updating_8_1_7_to_8_2_2
-# Admin -> Configuration -> (Development section) Performance -> Clear All Caches
-bu th 03-before_updating-caches_cleared_in_backend
-gothh
-cd gitignored/sites/default/
-tar -cvzf files-03-before_updating-caches_cleared_in_backend.tgz files/
 gotht
-drush cr
-bu th 04-before_updating-all_caches_cleared
-gothh
-cd gitignored/sites/default/
-tar -cvzf files-04-before_updating-all_caches_cleared.tgz files/
+drush sset system.maintenance_mode 0 drush cr
 ```
 
-This step is optional but if you skip it you might jinx it!!  ;-)
+### 3.4 Test, and backup and commit code if ok
 
-### 3.5 Switch the link and run lnSubsites.py
-
-Time to give it a try!
+If able to access site and it looks ok, backup the db:
 
 ```
-gothh
-rm tomhartung.com
-ln -s tomhartung.com-d8.2.2 tomhartung.com
-ls -al            # check link to main site
-lnSubsites.py
-ls -al tomhartung.com/               # check links
-ls -al tomhartung.com/modules/jmws   # check links
-ls -al tomhartung.com/themes/jmws    # check links
+bu th 02-after_updating_8_2_2_to_8_2_3
 ```
 
-### 3.6 Run `update.php`
-
-Access the following link to update the db as necessary:
-
-* http://jane.tomhartung.com/update.php
-
-Ran 11 updates and returned the following message:
-
-* **comment module**
-* - Update #8200
-* - entity displays updated: node.article.default, node.article.default, node.page.default.
-
-#### 3.6.1 Review log
-
-Access the following link to check for db update errors:
-
-* http://jane.tomhartung.com/admin/reports/dblog
-
-#### 3.6.2 Take site out of maintenance mode
-
-Run this command:
-
-```
-drush sset system.maintenance_mode 0
-```
-
-Or use the admin option Configuration -> Development -> Performance -> Maintenance Mode
-
-#### 3.6.3 Check the site
-
-If able to access site, backup immediately!  Paranoia will destroy ya!
-
-```
-bu th 05-after_updating_8_1_7_to_8_2_2
-gothh
-cd gitignored/sites/default/
-tar -cvzf files-05-after_updating_8_1_7_to_8_2_2.tgz files/
-```
-
-#### 3.6.4 Optional: take more backups
-
-We really do not need all of these backups...!
-(What we need is more confidence in the process.)
-
-```
-# Admin -> Configuration -> (Development section) Performance -> Clear All Caches
-bu th 06-after_updating-caches_cleared_in_backend
-gothh
-cd gitignored/sites/default/
-tar -cvzf files-06-after_updating-caches_cleared_in_backend.tgz files/
-gotht
-drush cr
-bu th 07-after_updating-all_caches_cleared
-gothh
-cd gitignored/sites/default/
-tar -cvzf files-07-after_updating-all_caches_cleared.tgz files/
-tarHome
-```
-
-Paranoia will destroy ya!
-
-#### 3.6.5 Test, and commit and backup
-
-If the site looks OK, commit code and backup db:
+and commit the code:
 
 ```
 gothd
 git status
 git add --all
-git commit -m 'Upgraded to the new release, 8.2.2 .' ; gpom
+git commit -m 'Upgraded to the new release, 8.2.3 .' ; gpom
 git status
 ```
 

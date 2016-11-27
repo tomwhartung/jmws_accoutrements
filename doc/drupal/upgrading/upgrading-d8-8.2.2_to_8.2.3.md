@@ -249,40 +249,31 @@ Restore jane's db **on barbara**:
 
 ```
 rs -h jane th 03-cleared_cache_for_barbara
+```
+
+### 4.4 Pull the code
+
+```
 gotht
 git pull
 ```
 
+### 4.5 Test and if it looks good, clear caches and backup the db
 
+Check that the site loads and shows we are running the new version:
 
+* Admin -> Reports -> Available Updates
 
-### 4.4 Run `update.php`
+If it looks ok, clear all caches in admin panel and backup db:
 
-Access the following link to update the db:
-
-* http://barbara.tomhartung.com/update.php
-
-Applied 11 pending updates, and got the message same as we got on jane.
-
-### 4.5 Test and if it looks good, back up the db
-
-Check that the site loads and that Admin -> Reports -> Available Updates shows we are running the new version.
+* Admin -> Configuration -> Development -> Clear All Caches
 
 ```
-bu th 03-upgraded_8_1_7_to_8_2_2
+bu th 04-upgraded_8_2_2_to_8_2_3
 ```
 
-### 4.6 Clear caches and backup again, just in case
 
-Clear all caches in admin panel, then run these commands:
 
-```
-bu th 04-upgraded_8_1_7_to_8_2_2-cleared_caches
-gothh
-cd gitignored/sites/default
-tar -cvzf files-04-upgraded_8_1_7_to_8_2_2-cleared_caches.tgz files/
-tarHome
-```
 
 ## Step (5) Update the Production Host (ava)
 

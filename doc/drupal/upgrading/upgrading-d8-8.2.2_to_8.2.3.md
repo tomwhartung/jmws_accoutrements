@@ -318,29 +318,18 @@ gotht
 git pull
 ```
 
-
-
 ### 5.5 Test and if it looks good, clear caches and backup the db
 
-Check that the site loads and that Admin -> Reports -> Available Updates shows we are running the new version.
+Check that the site loads and that we are running the new version.
+
+* Admin -> Reports -> Available Updates
+
+Clear caches and backup db:
+
+* Admin -> Configuration -> (Development) Performance -> Clear Caches
 
 ```
-bu th 03-upgraded_8_1_7_to_8_2_2
-gothh
-cd gitignored/sites/default
-tar -cvzf files-03-upgraded_8_1_7_to_8_2_2.tgz files/
-tarHome
-```
-
-### 5.6 Clear caches and backup again, just in case
-
-Clear all caches in admin panel, then run these commands:
-
-```
-bu th 04-upgraded_8_1_7_to_8_2_2-cleared_caches
-gothh
-cd gitignored/sites/default
-tar -cvzf files-04-upgraded_8_1_7_to_8_2_2-cleared_caches.tgz files/
+bu th 03-upgraded_8_2_2_to_8_2_3
 tarHome
 ```
 

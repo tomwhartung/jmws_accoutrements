@@ -231,11 +231,11 @@ Use these admin options to clear the cache:
 
 * Admin -> Configuration -> Development -> Clear All Caches
 
+Run this command **on barbara** to backup the database:
+
 ```
 bu th 02-before_restoring_from_jane
 ```
-
-Run these commands **on barbara** to backup the database and pull the new code base:
 
 ### 4.3 Restore jane's db on barbara and pull new code
 
@@ -272,64 +272,55 @@ If it looks ok, clear all caches in admin panel and backup db:
 bu th 04-upgraded_8_2_2_to_8_2_3
 ```
 
-
-
-
 ## Step (5) Update the Production Host (ava)
 
 [ ] ava
 
-### 5.1 Process
+### 5.0 Process
 
 Follow same process as we did for barbara, except that on ava:
 
 * **Be sure to put the site in maintenance mode first!!**
 * We are now pushing files from barbara to ava (instead of from jane to barbara)
 
-### 5.2 Backup db and pull new code
+### 5.1 Copy db from jane to ava
 
-Clear all caches in admin panel, then run these commands:
+Copy db **from jane** to ava:
 
 ```
-bu th 02-before_updating_8_1_7_to_8_2_2
-gothh
-cd gitignored/sites/default
-tar -cvzf files-02-before_updating-caches_cleared_in_backend.tgz files/
+gobu
+toAva tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara.sql.gz
+```
+
+### 5.2 Put in maintenance mode, clear caches, and backup db
+
+Put in maintenance mode and clear caches:
+
+* Admin -> Configuration -> (Development) Maintenance Mode -> Check the box
+* Admin -> Configuration -> (Development) Performance -> Clear Caches
+
+Backup db:
+
+```
+bu th 02-maintenance_mode_8_1_7
+```
+
+Restore jane's db **on ava**:
+
+```
+rs -h jane -d 2016_11_26 th 03-cleared_cache_for_barbara
+```
+
+### 5.4 Pull the code
+
+```
 gotht
 git pull
 ```
 
-Note that we should already have a backup from Step (1) above, so this one's kind of redundant, "just in case."
 
-### 5.3. Copy updated gitignored files from barbara to ava
 
-Run these commands **on barbara** to copy the new files over to ava.
-
-```
-gothh      ## ON BARBARA!!
-cd gitignored/sites/
-diffAva development.services.yml   ## no changes
-cd default/
-diffAva default.se*                ## should see the changes made upgrading to new release
-toAva default.se*
-diffAva services.yml               ## should see the changes we made above
-toAva services.yml
-diffAva settings.php               ## should see the changes we made above
-toAva settings.php
-diffAva settings.local.php*        ## no changes
-```
-
-We run diff commands to be sure we don't accidentally overwrite any local changes we have made.
-
-### 5.4 Run `update.php`
-
-Access the following link to update the db:
-
-* http://ava.tomhartung.com/update.php
-
-Applied 11 pending updates, and got the message same as we got on jane.
-
-### 5.5 Test and if it looks good, back up the db
+### 5.5 Test and if it looks good, clear caches and backup the db
 
 Check that the site loads and that Admin -> Reports -> Available Updates shows we are running the new version.
 

@@ -203,57 +203,58 @@ git status
 
 [X] barbara
 
-Formerly we would update the development host the copy the code and db to the other hosts, as we like to do with joomla.
-This is a good technique to use if we get hacked and want to start fresh with a "new" db.
+Update the development host and copy the code and db to the other hosts (as we like to do with joomla).
 
-This time let's update the code on barbara and run update.php to update the db, as we like to do with wordpress.
+### 4.0 Overview of process:
 
-### 4.1 Overview of process:
-
-1. Clear cache and backup db on barbara
-2. git pull updated code base and customizations (checked in from jane)
-3. Copy updated gitignored files from jane
-4. Run update.php to update the db on barbara
+1. Clear cache and backup db on jane
+2. Clear cache and backup db on barbara
+3. Copy db from jane to barbara, and restore it on barbara
+4. Pull updated code base (checked in from jane)
 5. Test
 
-### 4.2 Backup db and pull new code
+### 4.1 Backup db on jane
+
+Clear the cache on jane:
+
+* Admin -> Configuration -> Development -> Clear All Caches
+
+Backup the database on jane:
+
+```
+bu th 03-cleared_cache_for_barbara
+```
+
+### 4.2 Backup db on barbara
 
 Use these admin options to clear the cache:
 
 * Admin -> Configuration -> Development -> Clear All Caches
 
+```
+bu th 02-before_restoring_from_jane
+```
+
 Run these commands **on barbara** to backup the database and pull the new code base:
 
+### 4.3 Restore jane's db on barbara and pull new code
+
+Copy db **from jane** to barbara:
+
 ```
-bu th 02-before_updating_8_1_7_to_8_2_2
-gothh
-cd gitignored/sites/default
-tar -cvzf files-02-before_updating-caches_cleared_in_backend.tgz files/
+toBarbara tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara.sql.gz
+```
+
+Restore jane's db **on barbara**:
+
+```
+rs -h jane th 03-cleared_cache_for_barbara
 gotht
 git pull
 ```
 
-Note that we should already have a backup from Step (1) above, so this one's kind of redundant, "just in case."
 
-### 4.3. Copy updated gitignored files from jane
 
-Run these commands **on jane** to copy the new files over to barbara.
-
-```
-gothh      ## ON JANE!!
-cd gitignored/sites/
-diffBarbara development.services.yml   ## should see only changes we want only on dev host (e.g., for debugging)
-cd default/
-diffBarbara default.se*                ## should see the changes made upgrading to new release
-toBarbara default.se*
-diffBarbara services.yml               ## should see the changes we made above
-toBarbara services.yml
-diffBarbara settings.php               ## should see the changes we made above
-toBarbara settings.php
-diffBarbara settings.local.php*        ## no changes
-```
-
-We run diff commands to be sure we don't accidentally overwrite any local changes we have made.
 
 ### 4.4 Run `update.php`
 

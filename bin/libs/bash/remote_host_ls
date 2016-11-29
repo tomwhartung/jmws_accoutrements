@@ -23,7 +23,7 @@ elif [ $1 == "barbara" ]; then
 elif [ $1 == "bette" ]; then
    ls_hostname="bette"
 elif [ $1 == "humphrey" ]; then
-   ls_username='root@'
+   ## ls_username='root@'
    ls_hostname="humphrey"
 elif [ $1 == "jane" ]; then
    ls_hostname="jane"

@@ -7,7 +7,7 @@ And I need at least three, and maybe as many as five of these!
 
 Hopefully having a process will help.
 
-# References:
+## References:
 
 The best URL:
 
@@ -19,38 +19,68 @@ The best book:
 
 And still I have the writer's block!
 
-# Process
+## Process
 
 Start with the first three sites:
 
-[ ] tomwhartung.com
+- [ ] tomwhartung.com
 
-[ ] joomoowebsites.com
+- [ ] joomoowebsites.com
 
-[ ] groja.com
+- [ ] groja.com
 
 Do these later - or sooner if inspiration hits (in the form of overflow from the others, etc.).
 
-- [ ] (??) seeourminds.com (??)
+- [ ] seeourminds.com (??)
 
-- [ ] (??) tomhartung.com (??)
+- [ ] tomhartung.com (??)
 
-## Step (0) Review the References
+### Step (0) Review the References
 
 For the "ideal layout," see "the best URL."
 Adapt it as necessary to my content.
 
-It's ok to leave each site's headers and navigation as-is.
+It's ok to leave each site's headers and navigation as-is (for now, anyway).
 
-## Step (1) Identify the CTA
+### Step (1) Identify the CTA
 
 For now, the call to Action on all sites is:
 
 * The Contact Me page on tomwhartung.com
 
-## Step (2) Gather the Essentials
+We will want to update that page **before** updating the landing pages.
 
-2.1 Identify an image or video
+### Step (2) Identify supporting pages
+
+In a few cases, it may be best to write some supporting pages and articles before creating the landing page.
+
+#### 2.1 Contact Me page on tomwhartung.com
+
+Re-do the Contact Me page on tomwhartung.com:
+
+* Social media icons and links
+* Google form
+* Phone number
+* P.O. Box
+
+#### 2.2 About page on tomwhartung.com
+
+Re-do the About page on tomwhartung.com:
+
+Make it a story - but not too long!
+
+* Why I am switching to consulting
+* How I made the four lists
+* Why it is difficult for me (not a sales guy - mention the book!)
+* Why it is necessary (specialized services, changing tech, etc.)
+* Why I have low expectations starting out
+* Hopes for going forward
+
+End on a hopeful note, e.g., "It's All Good!"
+
+### Step (3) Gather the Essentials
+
+#### 3.1 Identify an image or video
 
 - [ ] tomwhartung.com
   - **Make a short video!?!**
@@ -61,7 +91,7 @@ For now, the call to Action on all sites is:
 - [x] groja.com
   -   My Spiritual Portrait (Tom H. 1987)
 
-2.2 Identify the services
+#### 3.2 Identify the services
 
 Answer the questions:
 
@@ -86,7 +116,7 @@ These answers feed into the pitches.
 [ ] groja.com
     Spiritual Portraits
 
-2.3 Write the pitches
+#### 3.3 Write the pitches
 
 Follow the how-tos in the Pitch chapter of *To Sell Is Human.*
 
@@ -97,35 +127,7 @@ Follow the how-tos in the Pitch chapter of *To Sell Is Human.*
 
 Pick the ones that best fit the service being sold.
 
-## Step (3) Identify supporting pages
-
-In a few cases, it may be best to write some supporting pages and articles before creating the landing page.
-
-3.1 Contact Me page on tomwhartung.com
-
-Re-do the Contact Me page on tomwhartung.com:
-
-* Social media icons and links
-* Google form
-* Phone number
-* P.O. Box
-
-3.2 About page on tomwhartung.com
-
-Re-do the About page on tomwhartung.com:
-
-Make it a story - but not too long!
-
-* Why I am switching to consulting
-* How I made the four lists
-* Why it is difficult for me (not a sales guy - mention the book!)
-* Why it is necessary (specialized services, changing tech, etc.)
-* Why I have low expectations starting out
-* Hopes for going forward
-
-End on a hopeful note, e.g., "It's All Good!"
-
-## Step (4) Profit!
+### Step (4) Profit!
 
 Still hoping to see some of this soon!
 

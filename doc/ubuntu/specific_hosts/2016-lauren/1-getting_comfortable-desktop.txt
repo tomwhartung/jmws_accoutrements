@@ -171,6 +171,17 @@ Desktop Necessities for Comfortableness
     Window Management -> Resize Window -> General tab ->
       Uncheck "Maximize Vertically if screen edge hit."
 
+[ ] Install opera browser
+    Reference:
+       http://askubuntu.com/questions/765483/how-can-i-install-the-opera-browser-from-the-terminal
+    As tomh:
+      wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+      sudo sh -c 'echo "deb http://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera.list
+      sudo dpkg -i opera-stable_41.0.2353.56_i386.deb
+      sudo apt-get update
+      sudo apt-get install opera
+
+
 ***************************************************
 *** Not planning to do this on lauren right now ***
 ***************************************************

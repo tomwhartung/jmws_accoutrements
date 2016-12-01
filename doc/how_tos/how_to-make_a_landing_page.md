@@ -24,13 +24,16 @@ And still I have the writer's block!
 Start with the first three sites:
 
 [ ] tomwhartung.com
+
 [ ] joomoowebsites.com
+
 [ ] groja.com
 
 Do these later - or sooner if inspiration hits (in the form of overflow from the others, etc.).
 
-[ ] (??) seeourminds.com (??)
-[ ] (??) tomhartung.com (??)
+- [ ] (??) seeourminds.com (??)
+
+- [ ] (??) tomhartung.com (??)
 
 ## Step (0) Review the References
 
@@ -49,15 +52,14 @@ For now, the call to Action on all sites is:
 
 2.1 Identify an image or video
 
-[ ] tomwhartung.com
-??? My picture from ...???
---> Short video!
+- [ ] tomwhartung.com
+  - **Make a short video!?!**
 
-[x] joomoowebsites.com
-    My portrait from the meetup
+- [x] joomoowebsites.com
+  -   My portrait from the meetup
 
-[x] groja.com
-    My Spiritual Portrait (Tom H. 1987)
+- [x] groja.com
+  -   My Spiritual Portrait (Tom H. 1987)
 
 2.2 Identify the services
 

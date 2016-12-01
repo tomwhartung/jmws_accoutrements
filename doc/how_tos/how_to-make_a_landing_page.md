@@ -60,6 +60,8 @@ Re-do the Contact Me page on tomwhartung.com:
 * Phone number
 * P.O. Box
 
+"Use whichever means of contact works best for you."
+
 #### 2.2 About page on tomwhartung.com
 
 Re-do the About page on tomwhartung.com:
@@ -90,12 +92,11 @@ End on a hopeful note, e.g., "It's All Good!"
 
 #### 3.2 Identify the services
 
-Answer the questions:
+Answer these questions briefly but thoroughly.
 
 * What am I selling?
 * Why should customers contact me?
 
-briefly but thoroughly.
 These answers feed into the pitches.
 
 - [ ] tomwhartung.com
@@ -113,16 +114,26 @@ These answers feed into the pitches.
 - [ ] groja.com
   - Spiritual Portraits
 
+**Review the book for tips on buoyancy, wording, etc.**
+
+It's ok to use pen and paper for this step.
+Maybe even get out of the house and try to get a fresh perspective that way.
+
 #### 3.3 Write the pitches
 
 Follow the how-tos in the Pitch chapter of *To Sell Is Human.*
 
 - [ ] 3-6 pitches for each service
   - Pixar pitch
+  - Question pitch
+  - Email subject-line pitch
+  - Rhyming pitch
   - Twitter pitch
   - One-word pitch
 
-Pick the ones that best fit the service being sold.
+It's ok to use pen and paper for this part.
+
+Use the ones that best fit the service being sold.
 
 ### Step (4) Profit!
 

@@ -24,15 +24,12 @@ And still I have the writer's block!
 Start with the first three sites:
 
 - [ ] tomwhartung.com
-
 - [ ] joomoowebsites.com
-
 - [ ] groja.com
 
 Do these later - or sooner if inspiration hits (in the form of overflow from the others, etc.).
 
 - [ ] seeourminds.com (??)
-
 - [ ] tomhartung.com (??)
 
 ### Step (0) Review the References
@@ -86,10 +83,10 @@ End on a hopeful note, e.g., "It's All Good!"
   - **Make a short video!?!**
 
 - [x] joomoowebsites.com
-  -   My portrait from the meetup
+  - My portrait from the meetup
 
 - [x] groja.com
-  -   My Spiritual Portrait (Tom H. 1987)
+  - My Spiritual Portrait (Tom H. 1987)
 
 #### 3.2 Identify the services
 
@@ -101,29 +98,29 @@ Answer the questions:
 briefly but thoroughly.
 These answers feed into the pitches.
 
-[ ] tomwhartung.com
-    Full SDLC Consultant
-      I have many years of experience both working for others and running websites out of my home
-    Specialties:
-      Device Detection in LAMP CMSes - brief description and link to joomoowebsites.com
-      Spiritual Portraits - brief description and link to groja.com
-    "It's All Good"
-      Just starting out and - currently and temporarily - open to most anything that will get me out there
+- [ ] tomwhartung.com
+  - Full SDLC Consultant
+    * I have many years of experience both working for others and running websites out of my home
+  - Specialties:
+    * Device Detection in LAMP CMSes - brief description and link to joomoowebsites.com
+    * Spiritual Portraits - brief description and link to groja.com
+  - "It's All Good"
+    * Just starting out and - currently and temporarily - open to most anything that will get me out there
 
-[ ] joomoowebsites.com
-    "Device Detection in LAMP CMSes is our specialty"
+- [ ] joomoowebsites.com
+  - "Device Detection in LAMP CMSes is our specialty"
 
-[ ] groja.com
-    Spiritual Portraits
+- [ ] groja.com
+  - Spiritual Portraits
 
 #### 3.3 Write the pitches
 
 Follow the how-tos in the Pitch chapter of *To Sell Is Human.*
 
-[ ] 3-6 pitches for each service
-    Pixar pitch
-    Twitter pitch
-    One-word pitch
+- [ ] 3-6 pitches for each service
+  - Pixar pitch
+  - Twitter pitch
+  - One-word pitch
 
 Pick the ones that best fit the service being sold.
 

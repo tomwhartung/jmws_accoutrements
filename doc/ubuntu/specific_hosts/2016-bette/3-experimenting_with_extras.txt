@@ -9,14 +9,14 @@ Running these commands on bette.
 --------------------------------
 We should be able to run these on other hosts.
 
-Sublime
--------
+Install the Sublime text editor
+-------------------------------
 I am happy with vi, and it is pretty much always there, but I want to install
 sublime because:
 
-o it was definitely ok when I used it before (but I like vi, so...)
+o It was definitely ok when I used it before (but I like vi, so...)
 o I would think it has matured and gotten better since the last time I tried it
-o this real python class recommends it, and they might know more about it than I do
+o This real python class recommends it, and they might know more about it than I do
 
 The process is pretty easy - only one reference needed!
 
@@ -36,4 +36,9 @@ Reference:
 [ ] Install it for realsies:
     As tomh:
       sudo apt-get install ./sublime-text_build-3126_amd64.deb
-      which subl
+[ ] Note:
+      The command to run sublime is not "sublime" or "sublime-text" , it's "subl"
+[ ] Make sure it's in our path, and make sure we can run it:
+    As tomh:
+      which subl   ## /usr/bin/subl
+      subl

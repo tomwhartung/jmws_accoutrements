@@ -1,0 +1,45 @@
+
+ Experimenting With Extras
+===========================
+Making notes on how to install "extra" packages we want to experiment with
+so that if we like them we have the instructions readily available for
+next time.
+
+Running these commands on jane
+------------------------------
+We should be able to run these on other hosts.
+
+Install the Sublime text editor
+-------------------------------
+I am happy with vi, and it is pretty much always there, but I want to install
+sublime because:
+
+o It was definitely ok when I used it before (but I like vi, so...)
+o I would think it has matured and gotten better since the last time I tried it
+o This real python class recommends it, and they might know more about it than I do
+
+The process is pretty easy - only one reference needed!
+
+Reference:
+    http://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt
+
+[ ] Download the latest .deb file from:
+      http://www.sublimetext.com/
+[ ] Move the .deb file to the apt archives dir:
+    As tomh:
+      cd /var/cache/apt/archives
+      sudo mv ~/Downloads/sublime-text_build-3126_amd64.deb .
+      l sublime-text_build-3126_amd64.deb 
+[ ] Simulate installing it:
+    As tomh:
+      sudo apt-get -s install ./sublime-text_build-3126_amd64.deb
+[ ] Install it for realsies:
+    As tomh:
+      sudo apt-get install ./sublime-text_build-3126_amd64.deb
+[ ] Note:
+      The command to run sublime is not "sublime" or "sublime-text" , it's "subl"
+[ ] Make sure it's in our path, and make sure we can run it:
+    As tomh:
+      which subl   ## /usr/bin/subl
+      subl
+

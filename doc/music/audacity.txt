@@ -1,0 +1,27 @@
+
+ Using Audacity to Rip Vinyl to Mp3s
+=====================================
+The process is simple enough, but can be a little tricky 
+when we haven't done it in awhile.
+
+References:
+-----------
+
+
+Overview
+--------
+1. File -> Save As in /art/music/analog_projects/Audacity/<Artist>/YYYY-<Album>
+2. Record - do not pause when flipping, use that dead space for noise removal
+3. Noise Removal:
+   Click and drag to select dead space between sides
+   Effect -> Noise Removal - take sample
+   Cmd-A (select all)
+   Effect -> Noise Removal - remove noise
+4. Optional: Find Silence
+   Cmd-A (select all)
+   Analyze -> Silence Finder
+5. Split into Tracks
+   Use tracks found in step 4. or use Cmd-B to insert them individually
+6. File -> Edit Metadata
+7. File -> Export Multiple Tracks
+

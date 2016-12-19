@@ -6,11 +6,18 @@ when we haven't done it in awhile.
 
 References:
 -----------
+Noise Removal:
+  http://www.podfeet.com/blog/recording/how-to-remove-noise-with-audacity/
+Splitting Into Tracks:
+  http://manual.audacityteam.org/man/splitting_a_recording_into_separate_tracks.html
+Click Removal (done in the past but not this time - call them "quaint"):
+  http://manual.audacityteam.org/man/click_removal.html
+  http://manual.audacityteam.org/man/tutorial_click_and_pop_removal_techniques.html
 
-
-Overview
+Process
 --------
-1. File -> Save As in /art/music/analog_projects/Audacity/<Artist>/YYYY-<Album>
+1. File -> Save As into directory:
+     /art/music/analog_projects/Audacity/<Artist>/YYYY-<Album>
 2. Record - do not pause when flipping, use that dead space for noise removal
 3. Noise Removal:
    Click and drag to select dead space between sides
@@ -24,4 +31,21 @@ Overview
    Use tracks found in step 4. or use Cmd-B to insert them individually
 6. File -> Edit Metadata
 7. File -> Export Multiple Tracks
+   Export into:
+     /art/music/mp3-new/<Artist>/YYYY-<Album>
+   Check the metadata for each track
+8. Tar and copy to a linux host, e.g., bette
+     tar -cvzf YYYY-<Album>.tgz YYYY-<Album>
+     toBette YYYY-<Album>.tgz
+9  Fix file names (remove spaces and special characters) by running:
+     fixMusicFileNames
+10. Use Easytag to add album artwork and check mp3 ID data
+
+Tips
+----
+ALWAYS clean the record first - it can't hurt!
+
+Splitting into tracks:
+o Silence finder doesn't work very well on live recordings
+o It's much easier to use Cmd-B to add track labels
 

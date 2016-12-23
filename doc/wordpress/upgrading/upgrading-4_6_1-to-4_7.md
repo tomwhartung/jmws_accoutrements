@@ -14,8 +14,9 @@ The Latest References (from upgrade to 4.3.1):
 ## Log
 
 - [ ] 2016-
-- [ ] 2016-xx-xx: 4.6   to 4.x.x
-- [ ] 2016-11-01: 4.6   to 4.6.1
+- [ ] 2016-XX-XX: 4.7.0 to 4.X.X
+- [X] 2016-12-22: 4.6.1 to 4.7.0
+- [X] 2016-11-01: 4.6.0 to 4.6.1
 - [X] 2016-09-02: 4.4.2 to 4.6
 - [X] 2016-02-11: 4.4.1 to 4.4.2
 - [X] 2016-01-15: 4.3.1 to 4.4.1
@@ -31,7 +32,7 @@ Backup db on all hosts and ensure code matches what is in github:
 Run these commands on each host listed above:
 
 ```
-bu tw 01-before_upgrade_4_6_to_4_6_1
+bu tw 01-before_upgrading_4_6_1_to_4_7_0
 gotwt
 git pull
 git status
@@ -43,7 +44,7 @@ To enable using the back end to update the code rather than downloading it, foll
 
 We need to do this for **only one host:**
 
-* jane on 2016-11-01
+* jane on 2016-12-22
 
 ### 1.1. Ensure the following line has been added to wp-config.php :
 
@@ -107,7 +108,7 @@ Run commands:
 gotwt
 git status
 git add --all .
-git commit -m 'Upgrading from 4.6 to 4.6.1 .' ; git push origin master
+git commit -m 'Upgrading from 4.6.1 to 4.7.0 .' ; git push origin master
 ```
 
 ### 2.5. Backup db on this host, and backup the backup:
@@ -115,7 +116,7 @@ git commit -m 'Upgrading from 4.6 to 4.6.1 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 02-after_upgrade_4_6_to_4_6_1
+bu tw 02-after_upgrade_4_6_1_to_4_7_0
 tarHome
 ```
 

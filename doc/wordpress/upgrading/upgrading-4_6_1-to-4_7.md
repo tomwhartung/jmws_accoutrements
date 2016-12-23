@@ -116,13 +116,13 @@ git commit -m 'Upgrading from 4.6.1 to 4.7.0 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 02-after_upgrade_4_6_1_to_4_7_0
+bu tw 02-after_upgrading_4_6_1_to_4_7_0
 tarHome
 ```
 
 ## Step (3) Updating Plugins
 
-Doing this on **jane**.
+All plugins are up to date, so NOT doing this on **jane**.
 
 We are able to update plugins using the admin back end, as long as we
 change the owner of the files in the WP installation directory tree.
@@ -163,21 +163,72 @@ git commit -m 'Upgraded akismet to version 3.2 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrade_4_6_to_4_6_1
+bu tw 03-after_upgrading_plugins_4_6_1_to_4_7_0
 tarHome
 ```
 
 (Actually I am unsure whether this step is necessary.)
 
-## Step (4) Updating wp core and plugins on barbara and ava:
+## Step (4) Updating Templates
 
-### 4.1. Make sure database is backed up (in previous section "All Hosts: above)
+Doing this on **jane**.
+
+We are able to update templates using the admin back end, as long as we
+change the owner of the files in the WP installation directory tree.
+
+Run commands:
+
+```
+gotwt
+sudo chown -R www-data:tomh *
+```
+
+### 4.1. Update in admin back end
+
+* Admin -> Dashboard -> Updates
+* Click on a single theme or "Select All"
+* Click on "Update Themes" Button
+
+### 4.2. Change perms back to the way they were:
+
+Run commands:
+
+```
+gotwt
+sudo chown -R tomh:www-data *
+```
+
+### 4.3. Commit files to git
+
+Run commands:
+
+```
+gotwt
+git status
+git add wp-content/
+git commit -m 'Upgraded themes to version 4.7.0 .' ; git push origin master
+```
+
+### 4.4 Backup the db and backup the backup
+
+Run commands:
+
+```
+bu tw 03-after_upgrading_themes_4_6_1_to_4_7_0
+tarHome
+```
+
+(Actually I am unsure whether this step is necessary.)
+
+## Step (5) Updating wp core and plugins on barbara and ava:
+
+### 5.1. Make sure database is backed up (in previous section "All Hosts: above)
 
 Run commands:
 
 ```
 # This should have already been done!
-bu tw 01-before_upgrade_4_6_to_4_6_1
+bu tw 01-before_upgrading_4_6_to_4_6_1
 ```
 
 ### 4.2. Open browser window to admin page on barbara:
@@ -230,7 +281,7 @@ Access the site, perform a "Smoke Test."
 Run commands:
 
 ```
-bu tw 02-after_upgrade_4_6_to_6_6_1
+bu tw 02-after_upgrading_4_6_to_6_6_1
 tarHome
 ```
 
@@ -247,5 +298,5 @@ tarHome
 
 5. Verify updated versions in admin panel
 
-6. Backup db `bu tw 02-after_upgrade_4_6_to_6_6_1`
+6. Backup db `bu tw 02-after_upgrading_4_6_to_6_6_1`
 

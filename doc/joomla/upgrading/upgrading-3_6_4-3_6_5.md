@@ -16,6 +16,7 @@ Sometimes special instructions apply.
 
 ## Log
 
+2016-12-22: Upgrading from 3.6.4 to 3.6.5 .
 2016-10-31: Upgrading from 3.6.2 to 3.6.4 .
 
 ## Before You Start
@@ -23,14 +24,14 @@ Sometimes special instructions apply.
 Always backup db and ensure code is up-to-date and checked in.
 
 1. On ALL hosts: backup DB and ensure code matches what is in github
-   bu jm 01-before_upgrading_3.6.2_to_3.6.4
+   bu jm 01-before_upgrading_3_6_4_to_3_6_5
    gojmj
    git status
    git pull
 2. Decide which host to do most of the work on:
    jane - our development server, with a new disk and plenty of memory, should do well
 
-## 2016-10-31: Notes on Upgrading From 3.6.2 to 3.6.4
+## 2016-12-22: Notes on Upgrading From 3.6.4 to 3.6.5
 
 The Release News page links to this process:
 
@@ -283,7 +284,7 @@ Click on "Fix" button at top of page
 
 Run command:
 ```
-rs -d 2016_10_31 jm 01-before_upgrading_3.6.2_to_3.6.4
+rs -d 2016_10_31 jm 01-before_upgrading_3_6_4_to_3_6_5
 ```
 ###### 6.4.2 Restore code:
 
@@ -348,7 +349,7 @@ git add --all
 git status
 git commit -m 'Upgraded to 3.6.4.'
 git push origin master
-bu jm 02-after_upgrading_3.6.2_to_3.6.4
+bu jm 02-after_upgrading_3_6_4_to_3_6_5
 tarHome
 diff configuration.php ../gitignored/configuration.php
 rm configuration.php ; ln -s ../gitignored/configuration.php .
@@ -363,8 +364,8 @@ New backup host is barbara.
 Backup current DB and restore final copy of DB from jane:
 
 ```
-bu jm  01-before_upgrading_3.6.2_to_3.6.4          # IF NOT DONE ALREADY, DO IT NOW
-rs -h jane -d 2016_11_01 jm 02-after_upgrading_3.6.2_to_3.6.4
+bu jm  01-before_upgrading_3_6_4_to_3_6_5          # IF NOT DONE ALREADY, DO IT NOW
+rs -h jane -d 2016_11_01 jm 02-after_upgrading_3_6_4_to_3_6_5
 ```
 
 #### 7.2. Pull the code and fix the permissions
@@ -398,7 +399,7 @@ Test back end in browser
 Run commands:
 
 ```
-bu jm  02-after_upgrading_3.6.2_to_3.6.4
+bu jm  02-after_upgrading_3_6_4_to_3_6_5
 tarHome
 ```
 

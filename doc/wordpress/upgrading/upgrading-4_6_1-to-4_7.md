@@ -14,8 +14,9 @@ The Latest References (from upgrade to 4.3.1):
 ## Log
 
 - [ ] 2016-
-- [ ] 2016-xx-xx: 4.6   to 4.x.x
-- [ ] 2016-11-01: 4.6   to 4.6.1
+- [ ] 2016-XX-XX: 4.7.0 to 4.X.X
+- [X] 2016-12-22: 4.6.1 to 4.7.0
+- [X] 2016-11-01: 4.6.0 to 4.6.1
 - [X] 2016-09-02: 4.4.2 to 4.6
 - [X] 2016-02-11: 4.4.1 to 4.4.2
 - [X] 2016-01-15: 4.3.1 to 4.4.1
@@ -31,7 +32,7 @@ Backup db on all hosts and ensure code matches what is in github:
 Run these commands on each host listed above:
 
 ```
-bu tw 01-before_upgrade_4_6_to_4_6_1
+bu tw 01-before_upgrading_4_6_1_to_4_7_0
 gotwt
 git pull
 git status
@@ -43,7 +44,7 @@ To enable using the back end to update the code rather than downloading it, foll
 
 We need to do this for **only one host:**
 
-* jane on 2016-11-01
+* jane on 2016-12-22
 
 ### 1.1. Ensure the following line has been added to wp-config.php :
 
@@ -107,7 +108,7 @@ Run commands:
 gotwt
 git status
 git add --all .
-git commit -m 'Upgrading from 4.6 to 4.6.1 .' ; git push origin master
+git commit -m 'Upgrading from 4.6.1 to 4.7.0 .' ; git push origin master
 ```
 
 ### 2.5. Backup db on this host, and backup the backup:
@@ -115,13 +116,13 @@ git commit -m 'Upgrading from 4.6 to 4.6.1 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 02-after_upgrade_4_6_to_4_6_1
+bu tw 02-after_upgrading_4_6_1_to_4_7_0
 tarHome
 ```
 
 ## Step (3) Updating Plugins
 
-Doing this on **jane**.
+All plugins are up to date, so NOT doing this on **jane**.
 
 We are able to update plugins using the admin back end, as long as we
 change the owner of the files in the WP installation directory tree.
@@ -162,38 +163,94 @@ git commit -m 'Upgraded akismet to version 3.2 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrade_4_6_to_4_6_1
+bu tw 03-after_upgrading_plugins_4_6_1_to_4_7_0
 tarHome
 ```
 
 (Actually I am unsure whether this step is necessary.)
 
-## Step (4) Updating wp core and plugins on barbara and ava:
+## Step (4) Updating Templates
 
-### 4.1. Make sure database is backed up (in previous section "All Hosts: above)
+Doing this on **jane**.
+
+We are able to update templates using the admin back end, as long as we
+change the owner of the files in the WP installation directory tree.
+
+Run commands:
+
+```
+gotwt
+sudo chown -R www-data:tomh *
+```
+
+### 4.1. Update in admin back end
+
+* Admin -> Dashboard -> Updates
+* Click on a single theme or "Select All"
+* Click on "Update Themes" Button
+
+### 4.2. Change perms back to the way they were:
+
+Run commands:
+
+```
+gotwt
+sudo chown -R tomh:www-data *
+```
+
+### 4.3. Commit files to git
+
+Run commands:
+
+```
+gotwt
+git status
+git add wp-content/
+git commit -m 'Upgraded themes to version 4.7.0 .' ; git push origin master
+```
+
+### 4.4 Backup the db and backup the backup
+
+Run commands:
+
+```
+bu tw 03-after_upgrading_themes_4_6_1_to_4_7_0
+tarHome
+```
+
+(Actually I am unsure whether this step is necessary.)
+
+## Step (5) Updating wp core and plugins on barbara:
+
+### 5.1. Make sure database is backed up (in previous section "All Hosts: above)
 
 Run commands:
 
 ```
 # This should have already been done!
-bu tw 01-before_upgrade_4_6_to_4_6_1
+bu tw 01-before_upgrading_4_6_to_4_6_1
 ```
 
-### 4.2. Open browser window to admin page on barbara:
+### 5.2. Open browser window to admin page on barbara:
 
 * Admin panel -> Dashboard -> Updates
 
+#### Note!
+
+Rather than copy the database from one host to another, we upgrade the code and let WP update the DB.
+
 #### Warning!
 
-**Copying the database and wp-config.php from host to host, sometimes WP redirects!**
+If you decide to copy the DB from one host to another, sometimes there are issues.
 
+* **Copying the database (and wp-config.php) from host to host, sometimes WP redirects!**
 * When it happens, this can be extremely confusing
-
 * Keep an eye on the URL in the browser's address bar!
+* You may have to edit wp-config.php to ensure you are on barbara!
 
-You may have to edit wp-config.php to ensure you are on barbara!
+**This is why it's easier to pull the new code from github and let WP update the DB.**
 
-### 4.3. Update core code on barbara using git pull:
+### 5.3. Update core code on barbara using git pull:
 
 Run commands:
 
@@ -204,7 +261,7 @@ git pull
 
 Should see it pull down all those changes.
 
-### 4.4. Access in Browser and Update DB
+### 5.4. Access in Browser and Update DB
 
 Access admin panel in browser.
 
@@ -214,26 +271,28 @@ If there are db updates will see: "Database update required."
 
 * Click "Continue" button
 
-**Did not see any updates to db this time.**
+**There were definitely some updates to db this time.**
 
-### 4.5. Verify Updated Versions
+### 5.5. Verify Updated Versions
 
 * Admin panel -> Dashboard -> Updates
 
-Ensure it is running the new versions of core and akismet
+Ensure it is running the new versions of core and the themes.
 
 Access the site, perform a "Smoke Test."
 
-### 4.6. Backup new copy of db, and backup the backup
+### 5.6. Backup new copy of db, and backup the backup
 
 Run commands:
 
 ```
-bu tw 02-after_upgrade_4_6_to_6_6_1
+bu tw 02-after_upgrading_4_6_1_to_4_7_0
 tarHome
 ```
 
-### 4.7. Repeat process on ava.
+## Step (6) Updating wp core and plugins on ava:
+
+Repeat process used for barabara on ava.
 
 1. Backup: should be done
 
@@ -246,5 +305,5 @@ tarHome
 
 5. Verify updated versions in admin panel
 
-6. Backup db `bu tw 02-after_upgrade_4_6_to_6_6_1`
+6. Backup db `bu tw 02-after_upgrading_4_6_1_to_4_7_0`
 

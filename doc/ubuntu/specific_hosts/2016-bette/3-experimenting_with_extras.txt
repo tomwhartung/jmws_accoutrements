@@ -42,3 +42,10 @@ Reference:
     As tomh:
       which subl   ## /usr/bin/subl
       subl
+
+Install Apps for Working With Media
+-----------------------------------
+[ ] Install SoundConverter (useful for converting wma files to mp3)
+    Search for it in the Ubuntu Software app
+    Install and lock to launcher
+

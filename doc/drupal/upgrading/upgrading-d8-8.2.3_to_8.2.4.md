@@ -1,5 +1,5 @@
 
-# Upgrading Drupal 8.2.2 to 8.2.3
+# Upgrading Drupal 8.2.3 to 8.2.4
 
 ## Purpose
 
@@ -112,11 +112,11 @@ Download (or copy) the file(s) into `/var/www/tomhartung.com/downloads` and unpa
 ```
 cd /var/www/tomhartung.com/downloads
 mkdir ../unpack
-cp  drupal-8.2.3.tar.gz ../unpack
+cp  drupal-8.2.4.tar.gz ../unpack
 cd ../unpack
-tar -xvzf drupal-8.2.3.tar.gz
-rm drupal-8.2.3.tar.gz
-cd ../drupal-8.2.3/
+tar -xvzf drupal-8.2.4.tar.gz
+rm drupal-8.2.4.tar.gz
+cd ../drupal-8.2.4/
 more core/CHANGELOG.txt
 less core/UPDATE.txt
 ```
@@ -195,7 +195,7 @@ and commit the code:
 gothd
 git status
 git add --all
-git commit -m 'Upgraded to the new release, 8.2.3 .' ; gpom
+git commit -m 'Upgraded to the new release, 8.2.4 .' ; gpom
 git status
 ```
 

@@ -33,51 +33,14 @@ Always backup db and ensure code is up-to-date and checked in.
 
 ## 2016-12-22: Notes on Upgrading From 3.6.4 to 3.6.5
 
+### Deciding on a Process
+
 The Release News page links to this process:
 
 * https://docs.joomla.org/J3.x:Updating_from_an_existing_version
 
 Reviewing past attempts (../upgrading_in_backend_never_works.txt),
 I feel like Charley Brown here, and joomla.org is Lucy holding the football.
-
-### Not cool
-
-1. In ../upgrading_in_backend_never_works.txt it says to access: Adminitrator -> Extensions -< Manage -> Install
-
-2. That page says:
-"**Warning:** No installation plugin has been enabled.
-At least one must be enabled to be able to use the installer.
-Go to the Plugin Manager to enable the plugins."
-
-3. Going to the Plugin Manager confirms that four installation plugins are installed and enabled.
-
-4. Returning to the Adminitrator -> Extensions -< Manage -> Install page, it still displays that warning.  Sheesh fml.
-
-### Observations
-
-Aha! Checking the permissions in Step (1) it says plugins/installer is unwritable - added that to fix_permissions.sh ....
-
-Still seeing the warning message.
-
-Trying to edit the plugins listed (by clicking on their names), three of the four give me an error:
-
-1. Installer - Install from Web: able to open it up, not many options to edit though
-
-2. Installer - Install from Upload: "Error The file packageinstaller.xml could not be found."
-
-3. Installer - Install from Folder: "Error The file folderinstaller.xml could not be found."
-
-4. Installer - Install from URL: "Error The file folderinstaller.xml could not be found."
-
-### The Fix!?!
-
-Downloaded Joomla_3.6.4-Stable-Full_Package.zip and found code in the following directories:
-
-* plugins/installer/folderinstaller/
-* plugins/installer/packageinstaller/
-* plugins/installer/urlinstaller/
-
-Coped this code into the site directory tree and it fixed the errors!
 
 ### Step (1) Standard Preparatory Steps
 
@@ -88,17 +51,25 @@ We have fallen for that crap before.
 If we are going that route, let's at least perform these preparatory steps.
 
 #### 1.1. Check and fix file permissions
-   System Information -> Folder Permissions
-   If one or more of these is Unwritable, run these commands and recheck:
+
+Access System Information -> Folder Permissions
+
+If one or more of these is Unwritable, run the following commands and recheck:
+
 ```
 gojmj
 ./fix_permissions.sh   # will ask for password to run sudo commands
 ```
 
-To get configuration.php to show up as writable, may need to:
+To get configuration.php to show up as writable, try these commands:
 
-* **TEMPORARILY** break the link and
-* **TEMPORARILY** copy the file from ../gitignored
+```
+cd ../gitignored
+sudo chgrp www-data configuration.php
+chmod 664 configuration.php
+```
+
+If that doesn't work, we may need to **TEMPORARILY** break the link and **TEMPORARILY** copy the file from ../gitignored :
 
 ```
 rm configuration.php
@@ -106,9 +77,14 @@ cp ../gitignored/configuration.php .
 sudo chgrp www-data configuration.php
 chmod 775 configuration.php
 ```
+
 Recheck in back end:
 
 * System Information -> Folder Permissions
+
+**** ***** ******
+*** YOU ARE HERE
+**** ***** ******
 
 ### Steps (2) through (5) Get Frustrated With Joomla Update
 

@@ -82,13 +82,36 @@ Recheck in back end:
 
 * System Information -> Folder Permissions
 
+### Step (2) Get Frustrated With Joomla Update
+
+Try the Joomla Update component
+
+#### 2.1 First try:
+
+* Components -> Joomla Update -> Live Update tab
+* Write files directly (drop-down)
+* Install the Update (button)
+
+**GOT ERROR:**
+
+* **Error - Download of update package failed.**
+
+NOT going to try to fix such a VAGUE AND UNINFORMATIVE error message (been there done that!).
+
+Update package URL: clicked to download Joomla_3.6.5-Stable-Update_Package.zip .
+
+#### 2.2 Second try:
+
+* Components -> Joomla Update -> Upload & Update tab
+* Browse for file Joomla_3.6.5-Stable-Update_Package.zip (downloaded just now on the Live Update tab)
+* Write files directly (drop-down)
+* Upload and Install (button)
+
+**NO ERROR BUT RETURNED TO CONTROL PANEL AND THE RED UPDATE MESSAGE!**
+
 **** ***** ******
 *** YOU ARE HERE
 **** ***** ******
-
-### Steps (2) through (5) Get Frustrated With Joomla Update
-
-#### Step (2) Fixing warnings in Components -> Joomla Update
 
 Components -> Joomla Update -> Upload & Update tab has two warnings
 

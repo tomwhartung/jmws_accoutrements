@@ -238,11 +238,20 @@ New backup host is barbara.
 
 #### 4.1. Backup and restore
 
-Backup current DB and restore final copy of DB from jane:
+Copy current DB from jane to barbara and ava, by running these commands **on jane:**
+
+```
+gobu
+ls -altr
+toBarbara joomoowebsites.com-2017_01_02-jane-02-after_upgrading_3_6_4_to_3_6_5.sql.gz
+toAva joomoowebsites.com-2017_01_02-jane-02-after_upgrading_3_6_4_to_3_6_5.sql.gz
+```
+
+Restore copy of current DB from jane on barbara, by running these commands **on barbara:**
 
 ```
 bu jm  01-before_upgrading_3_6_4_to_3_6_5          # IF NOT DONE ALREADY, DO IT NOW
-rs -h jane -d 2016_11_01 jm 02-after_upgrading_3_6_4_to_3_6_5
+rs -h jane -d 2017_01_02 jm 02-after_upgrading_3_6_4_to_3_6_5
 ```
 
 #### 4.2. Pull the code and fix the permissions

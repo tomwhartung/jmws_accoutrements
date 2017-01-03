@@ -107,111 +107,7 @@ Update package URL: clicked to download Joomla_3.6.5-Stable-Update_Package.zip .
 * Write files directly (drop-down)
 * Upload and Install (button)
 
-**NO ERROR BUT RETURNED TO CONTROL PANEL AND THE RED UPDATE MESSAGE!**
-
-**** ***** ******
-*** YOU ARE HERE
-**** ***** ******
-
-Components -> Joomla Update -> Upload & Update tab has two warnings
-
-##### 2.1. "the php temporary folder is not set"
-
-Fixed by setting the following values in /etc/php/7.0/apache2/php.ini
-
-* sys_temp_dir = "/tmp"     ;; first try, did not fix warning, but shouldn't hurt
-* upload_tmp_dir = "/tmp"   ;; second try, see reference, fixed warning
-
-Restart apache!
-
-Reference: https://forum.joomla.org/viewtopic.php?t=933658
-
-##### 2.2. "Maximum PHP file upload size is too small: ... both upload_max_filesize and post_max_size settings of ... php.ini"
-
-Fixed by setting the following value in /etc/php/7.0/apache2/php.ini
-
-* upload_max_filesize = 8M
-
-Restart apache!
-
-#### Step (3) Clear all caches and check for db schema changes
-
-* Click on System -> Clear Cache
-* Click on System -> Clear Expired Cache
-      -> Clear Expired Cache (Icon/Button just below heading)
-* Check DB Schema: Extensions -> Manage -> Database
-
-#### Step (4) Trying Components -> Joomla Update -> Upload & Update tab
-
-Because jane is behind two firewalls, download the file in advance, and put it in:
-
-* /var/www/joomoowebsites.com/downloads/Joomla_3.6.4-Stable-Update_Package.zip
-
-Choosing: "Write files directly" in drop-down
-
-* Click: Upload & Install
-
-Doesn't do anything.
-
-#### Step (5) Trying Components -> Joomla Update -> Live Update tab (default)
-
-Choosing: "Write files directly" in drop-down ....
-
-**OMFG! It tried to do something!**
-
-**Bzzt!  "Message: Download of update package failed."**
-
-##### 5.1 Trying more stuff
-
-Handy tip: sometimes you need to check for upgrades to the upgrade component
-
-* Reference: https://www.joomla-monster.com/blog/joomla-templates/5-issues-that-may-appear-while-updating-to-joomla-3-6-1-or-later
-
-* Admin -> Extensions -> Manage -> Update -> Clear Cache
-
-* Admin -> Extensions -> Manage -> Update -> Find Updates
-
-##### 5.2 Found a couple more patch files ...
-
-... at:
-
-* https://downloads.joomla.org/cms/joomla3/3-6-4
-
-(1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
-
-(2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip
-
-Try using backend one more time with these guys....
-
-* Admin -> Components -> Joomla Update -> Upload & Update (tab)
-
-###### 5.2.1 Using (1):
-
-This time, an "Are you sure you want to update!" dialog with login box appears!
-
-1. Filled in credentials
-
-2. Got "ERROR: invalid login" error (again)
-
-3. Tried retyping password from scratch, and got it twice
-
-4. Tried in chrome, same result
-
-###### 5.2.2 Using (2):
-
-Again, an "Are you sure you want to update!" dialog with login box appears
-
-1. Got "ERROR: invalid login" error (again)
-
-2. Tried in chrome, same result
-
-3. Tried uploading from /var/.../joomoowebsites.com/tmp , same result
-
-##### 5.3 Posted in the forums about all this:
-
-* https://forum.joomla.org/viewtopic.php?f=710&t=929038&p=3439721#p3439721
-
-Ahem.
+**NO ERROR BUT NO JOY EITHER - returned to control panel and the red update message!**
 
 ```
 ----------------------------------
@@ -222,42 +118,65 @@ Ahem.
 
 Even though they advise against it...
 
-#### Step (6) Fall back to manual procedure (as usual)
 
-Starting with this page:
+### Step (3) Fall back to manual procedure (as usual)
 
-* https://docs.joomla.org/J3.x:Updating_from_an_existing_version
-
-Also we have this one, but is it applicable to 3.6.x???
+Starting with this page, it looks familiar and we have had success with it before:
 
 * https://docs.joomla.org/J3.x:Upgrading_from_Joomla_3.4.x_to_3.5
 
-Not seeing any caveats in that regard.
 As long as everything is backed up, there should be No Fear Here.
 
-##### 6.1 Overview of preparatory steps (Steps 1-3 above, before Joomla Update frustration set in)
+#### 3.1 Overview of preparatory steps (Step (2) above, before Joomla Update frustration set in)
 
 1. Fixed permissions
-2. Fixed warnings on joomla update page
-3. Check DB Schema: Extensions -> Manage -> Database
-4. Downloaded a few files:
+2. Check DB Schema: Extensions -> Database
+3. Download one or more files - see the downloads page: https://downloads.joomla.org/
 
-* (0) Joomla_3.6.0-Stable-Update_Package.zip - referenced on update page
+* (0) Joomla_3.6.5-Stable-Update_Package.zip - downloaded in Step (2) (referenced on update page)
+* (1) Joomla_3.6.x_to_3.6.5-Stable-Patch_Package.tar.gz - found on https://downloads.joomla.org/cms/joomla3/3-6-5
 
-* (1) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz - found on downloads page
+##### An interesting aside:
 
-* (2) Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.zip - found on downloads page
+Just for grins, tried using the Joomla Update component (see Step (2)) to Upload and Install the:
 
--> I am thinking (1) is our best bet for this
+* Joomla_3.6.x_to_3.6.5-Stable-Patch_Package.tar.gz file
 
-##### 6.2 A process similar to this has worked before:
+This actually got me a little further: had to re-enter my admin credentials, then got our old friend "Invalid Login."
+
+##### 3.2 Identify what worked before:
+
+Login to admin panel:
+
+*  System -> System Information -> File permissions
+
+Verify all are writable.
 
 Run commands:
 
 ```
 gojmj
-cp ../../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz .
-tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
+cp ../../downloads/Joomla_3.6.x_to_3.6.5-Stable-Patch_Package.tar.gz .
+tar -xvzf Joomla_3.6.x_to_3.6.5-Stable-Patch_Package.tar.gz
+```
+
+**Forgetting to fix permissions BEFORE updating the DB can cause an issue.**
+
+###### 3.2.1 IMPORTANT: Fix permissions and verify they are ok
+
+Run commands:
+
+```
+gojmj
+fix_permissions.sh
+```
+
+Access admin panel in browser:
+
+*  System -> System Information -> File permissions
+
+Verify all are writable
+
 rm Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
 ```
 
@@ -316,6 +235,12 @@ Relogin to admin panel:
 *  System -> System Information -> File permissions
 
 Verify all are writable
+
+
+**** ***** ******
+*** YOU ARE HERE
+**** ***** ******
+
 
 ###### 6.4.4 Check for changes needed for database:
 

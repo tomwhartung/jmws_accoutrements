@@ -130,7 +130,7 @@ As long as everything is backed up, there should be No Fear Here.
 #### 3.1 Overview of preparatory steps (Step (2) above, before Joomla Update frustration set in)
 
 1. Fixed permissions
-2. Check DB Schema: Extensions -> Database
+2. Check DB Schema: Extensions -> Manage -> Database
 3. Download one or more files - see the downloads page: https://downloads.joomla.org/
 
 * (0) Joomla_3.6.5-Stable-Update_Package.zip - downloaded in Step (2) (referenced on update page)
@@ -158,6 +158,7 @@ Run commands:
 gojmj
 cp ../../downloads/Joomla_3.6.x_to_3.6.5-Stable-Patch_Package.tar.gz .
 tar -xvzf Joomla_3.6.x_to_3.6.5-Stable-Patch_Package.tar.gz
+rm Joomla_3.6.x_to_3.6.5-Stable-Patch_Package.tar.gz
 ```
 
 **Forgetting to fix permissions BEFORE updating the DB can cause an issue.**
@@ -177,16 +178,7 @@ Access admin panel in browser:
 
 Verify all are writable
 
-rm Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
-```
-
-This did not work, rats.
-
-* Oops, should have run fix_permissions.sh here
-* See ammended procedure - 6.4 Try again - below
-* (Update: fix_permissions didn't help, oh well)
-
-##### 6.3 Check for changes needed for database:
+##### 3.2.2 Check for changes needed for database:
 
 Extensions -> Manage -> Database
 
@@ -195,71 +187,26 @@ Extensions -> Manage -> Database
 Click on "Fix" button at top of page
 
 * -> Got a bunch of warnings, "Failed deleting xxx.xx"
+* Guess we will have to live with the cruft!?!?!?
 
-##### 6.4 Try again, this time be sure to fix permissions
+To see the warnings we got, see ../details/2017_01_02-upgrading-3_6_4-3_6_5.txt (in this repo).
 
-###### 6.4.1 Restore db:
+**We have tried to fix those warnings before (e.g. by running fix_permissions.sh) and I think it is OK to ignore them.**
 
-Run command:
-```
-rs -d 2016_10_31 jm 01-before_upgrading_3_6_4_to_3_6_5
-```
-###### 6.4.2 Restore code:
+##### 3.2.3 These are the EXACT same warnings!
 
-Run commands:
-
-```
-cd ..
-l
-mv joomoowebsites.com joomoowebsites.com-manual_upgrade_gave_warnings
-git clone git@github.com:tomwhartung/joomoowebsites.com.git
-lnJoomlaCustomizations
-lnSubSites
-cp gitignored/configuration.php joomoowebsites.com
-cp ../downloads/Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz joomoowebsites.com
-cd joomoowebsites.com
-tar -xvzf Joomla_3.6.x_to_3.6.4-Stable-Patch_Package.tar.gz
-```
-
-###### 6.4.3 Fix permissions and verify they are ok
-
-Run command:
-
-```
-gojmj
-fix_permissions.sh
-```
-
-Relogin to admin panel:
-
-*  System -> System Information -> File permissions
-
-Verify all are writable
-
+Note that the warnings we got this time, saved in ../details/2017_01_02-upgrading-3_6_4-3_6_5.txt (in this repo)
+match the warnings we got last time, saved in ../details/2016_11_01-upgrading-3_6_2-3_6_4.txt (in this repo).
+Moving on!
 
 **** ***** ******
 *** YOU ARE HERE
 **** ***** ******
 
 
-###### 6.4.4 Check for changes needed for database:
+###### 3.3 Verify we are done
 
-Admin panel:
-
-* Extensions -> Manage -> Database
-* "Warning: Database is not up to date!"
-
-Click on "Fix" button at top of page
-
-* STILL got a bunch of "Failed deleting" warnings
-* Guess we will have to live with the cruft!?!?!?
-
-To see the warnings we got, see ../details/2016_11_01-upgrading-3_6_2-3_6_4.txt .
-Moving on!
-
-###### 6.4.5 Verify we are done
-
-System -> System Information -> Joomla Version: 3.6.4
+System -> System Information -> Joomla Version: 3.6.5
 
 -> Still a whole lot easier and quicker ( < 1 hr.!) than trying to use Joomla Update in the back end!!!
 

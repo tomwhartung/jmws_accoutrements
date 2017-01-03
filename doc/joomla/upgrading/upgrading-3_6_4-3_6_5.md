@@ -197,20 +197,16 @@ To see the warnings we got, see ../details/2017_01_02-upgrading-3_6_4-3_6_5.txt 
 
 Note that the warnings we got this time, saved in ../details/2017_01_02-upgrading-3_6_4-3_6_5.txt (in this repo)
 match the warnings we got last time, saved in ../details/2016_11_01-upgrading-3_6_2-3_6_4.txt (in this repo).
+
 Moving on!
 
-**** ***** ******
-*** YOU ARE HERE
-**** ***** ******
-
-
-###### 3.3 Verify we are done
+#### 3.3 Verify we are done
 
 System -> System Information -> Joomla Version: 3.6.5
 
 -> Still a whole lot easier and quicker ( < 1 hr.!) than trying to use Joomla Update in the back end!!!
 
-##### 6.6 Commit the code, backup the database, backup the backup, and fix the link
+#### 3.5 Commit the code, backup the database, backup the backup, and fix the link (if necessary)
 
 Run commands:
 
@@ -218,19 +214,29 @@ Run commands:
 gojmj
 git add --all
 git status
-git commit -m 'Upgraded to 3.6.4.'
+git commit -m 'Upgraded to 3.6.5.'
 git push origin master
 bu jm 02-after_upgrading_3_6_4_to_3_6_5
-tarHome
+tarHome   # Backing up the backup
+```
+
+Fix the link to configuration.php (if necessary):
+
+```
 diff configuration.php ../gitignored/configuration.php
 rm configuration.php ; ln -s ../gitignored/configuration.php .
 ```
 
-### Step (7) Upgrading backup host:
+**** ***** ******
+*** YOU ARE HERE
+**** ***** ******
+
+
+### Step (4) Upgrading backup host:
 
 New backup host is barbara.
 
-#### 7.1. Backup and restore
+#### 4.1. Backup and restore
 
 Backup current DB and restore final copy of DB from jane:
 
@@ -239,7 +245,7 @@ bu jm  01-before_upgrading_3_6_4_to_3_6_5          # IF NOT DONE ALREADY, DO IT 
 rs -h jane -d 2016_11_01 jm 02-after_upgrading_3_6_4_to_3_6_5
 ```
 
-#### 7.2. Pull the code and fix the permissions
+#### 4.2. Pull the code and fix the permissions
 
 Run commands:
 
@@ -249,7 +255,7 @@ git pull
 fix_permissions.sh  # Does checking this file in pose a security risk?  I don't see how, but...
 ```
 
-#### 7.3. Test in broswer
+#### 4.3. Test in broswer
 
 Test front end in browser
 
@@ -265,7 +271,7 @@ Test back end in browser
 
 * Extensions -> Manage -> Database (check schema version)
 
-#### 7.4. Backup DB and backup the backup
+#### 4.4. Backup DB and backup the backup
 
 Run commands:
 

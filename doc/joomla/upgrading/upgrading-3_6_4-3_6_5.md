@@ -144,7 +144,7 @@ Just for grins, tried using the Joomla Update component (see Step (2)) to Upload
 
 This actually got me a little further: had to re-enter my admin credentials, then got our old friend "Invalid Login."
 
-##### 3.2 Identify what worked before:
+#### 3.2 Identify what worked before:
 
 Login to admin panel:
 
@@ -226,11 +226,6 @@ Fix the link to configuration.php (if necessary):
 diff configuration.php ../gitignored/configuration.php
 rm configuration.php ; ln -s ../gitignored/configuration.php .
 ```
-
-**** ***** ******
-*** YOU ARE HERE
-**** ***** ******
-
 
 ### Step (4) Upgrading backup host:
 

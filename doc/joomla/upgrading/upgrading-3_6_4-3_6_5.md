@@ -289,7 +289,7 @@ bu jm  02-after_upgrading_3_6_4_to_3_6_5
 tarHome
 ```
 
-### Step (8) Upgrading production host:
+### Step (5) Upgrading production host:
 
 New production host (server) is ava.
 
@@ -301,5 +301,5 @@ Follow the same process we did on barbara:
 
 3. Test in browser.
 
-4. Backup DB and we are done!
+4. Backup DB and backup the backup, and we are done!
 

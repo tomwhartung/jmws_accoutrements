@@ -48,4 +48,21 @@ Install Apps for Working With Media
 [ ] Install SoundConverter (useful for converting wma files to mp3)
     Search for it in the Ubuntu Software app
     Install and lock to launcher
+[ ] Install Kdenlive...
 
+Install KVM for Working With VMs
+--------------------------------
+References:
+  Looks to be a bit old but ok nonetheless:
+    https://help.ubuntu.com/community/KVM/Installation
+  For 16.04 and includes steps to set up bridged networking
+    https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+[ ] Ensure the hardware supports virtualization:
+    As tomh:
+      egrep -c '(vmx|svm)' /proc/cpuinfo
+    Output must be > 0
+      (else use virtualbox or VMware)
+[ ] Check for 64-bit OS
+      uname -m
+    Output should be 'x86_64'
+    ('x86_64 is synonymous with amd64.')

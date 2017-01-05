@@ -29,7 +29,7 @@ Reference:
     As tomh:
       cd /var/cache/apt/archives
       sudo mv ~/Downloads/sublime-text_build-3126_amd64.deb .
-      l sublime-text_build-3126_amd64.deb 
+      l sublime-text_build-3126_amd64.deb
 [ ] Simulate installing it:
     As tomh:
       sudo apt-get -s install ./sublime-text_build-3126_amd64.deb
@@ -53,10 +53,12 @@ Install Apps for Working With Media
 Install KVM for Working With VMs
 --------------------------------
 References:
-  Looks to be a bit old but ok nonetheless:
+  Looks to be a bit old but should be ok nonetheless:
     https://help.ubuntu.com/community/KVM/Installation
-  For 16.04 and includes steps to set up bridged networking
+  More recent (for 16.04) and includes steps to set up bridged networking:
     https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+  More recent:
+    https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
 [ ] Ensure the hardware supports virtualization:
     As tomh:
       egrep -c '(vmx|svm)' /proc/cpuinfo
@@ -66,3 +68,28 @@ References:
       uname -m
     Output should be 'x86_64'
     ('x86_64 is synonymous with amd64.')
+[ ] Set up bridged networking
+    Search apps (first icon in tool bar) for Network
+    Open Network Connections app
+    See list of networks (Wired connection 1, etc.)
+    Add -> Connection Type: Virtual -> Bridge -> Dialog
+    Must be checked:
+      General tab -> Automatically connect to this network when it is available
+      General tab -> All users may connect to this network
+      Bridge tab -> Add -> Connection Type: Ethernet -> Create...
+        Editing bridge0 slave 1 Dialog:
+          Ethernet tab -> Device: (select) enp19s0
+            This is the Wired Connection we have set up for general use
+          General tab -> Automatically connect to this network when it is available
+          General tab -> All users may connect to this network
+          Save
+    All others: accept defaults (for now):
+      Bridge tab -> name: bridge0
+      IPv4 Settings tab -> Method: DHCP
+      Save
+    Run command:
+      sudo systemctl restart networking
+    *** TODO, per https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+    *** "Delete the existing connection that was added to the bridge."
+    *** (Leaving that alone for now...)
+

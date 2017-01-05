@@ -53,12 +53,12 @@ Install Apps for Working With Media
 Install KVM for Working With VMs
 --------------------------------
 References:
-  Looks to be a bit old but should be ok nonetheless:
-    https://help.ubuntu.com/community/KVM/Installation
-  More recent (for 16.04) and includes steps to set up bridged networking:
-    https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
-  More recent:
-    https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
+  (1) Looks to be a bit old but should be ok nonetheless:
+      https://help.ubuntu.com/community/KVM/Installation
+  (2) More recent (for 16.04) and includes steps to set up bridged networking:
+      https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+  (3) More recent:
+      https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
 [ ] Ensure the hardware supports virtualization:
     As tomh:
       egrep -c '(vmx|svm)' /proc/cpuinfo
@@ -92,4 +92,10 @@ References:
     *** TODO, per https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
     *** "Delete the existing connection that was added to the bridge."
     *** (Leaving that alone for now...)
+[ ] Install
+    Run commands (each reference was different!):
+      Reference (1): sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+      Reference (2): sudo apt-get install qemu-kvm libvirt-bin virt-manager
+      Reference (3): sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
+
 

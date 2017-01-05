@@ -68,7 +68,7 @@ References:
       uname -m
     Output should be 'x86_64'
     ('x86_64 is synonymous with amd64.')
-[ ] Set up bridged networking
+[ ] Set up bridged networking:
     Search apps (first icon in tool bar) for Network
     Open Network Connections app
     See list of networks (Wired connection 1, etc.)
@@ -92,10 +92,24 @@ References:
     *** TODO, per https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
     *** "Delete the existing connection that was added to the bridge."
     *** (Leaving that alone for now...)
-[ ] Install
-    Run commands (each reference was different!):
+[ ] Install kvm and dependencies, etc.:
+    Run standard commands to update system:
+      sudo apt-get update
+      sudo apt-get upgrade
+    Run commands to install kvm and dependencies (each reference is a little different):
       Reference (1): sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
       Reference (2): sudo apt-get install qemu-kvm libvirt-bin virt-manager
       Reference (3): sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
-
-
+    This time (experimenting for the first time) we are going with door number (3):
+      sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
+    Add tomh to the libvirtd group:
+      sudo gpasswd -a tomh libvirtd
+    Note: must re-login for this to take effect
+[ ] Check installation:
+    Run command:
+      virsh list --all
+    If it doesn't work, you probably need to log out, for the gpasswd command to take effect, then log back in
+[ ] Start the Virtual Machine Manager
+    Click on the Ubuntu "Search your computer" icon and search for "Virtual Machine Manager"
+[ ] Create VMs
+    --> See VM-specific instructions, in this repo, under doc/ubuntu/vms

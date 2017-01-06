@@ -62,13 +62,7 @@ On Linux System, Before Installing a New VM:
     -> LAMP server
     -> standard system utilities (already checked)
     -> OpenSSH server
+    Install GRUB -> Yes
+    Installation complete -> Continue
 
-    Windows detected, grub installed, but dual boot not working
-[ ] Fix dual boot:
-    Reference:
-      http://askubuntu.com/questions/142750/after-installing-ubuntu-from-usb-grub2-cant-be-installed/142751#142751
-    As tomh:
-      sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
-      sudo apt-get install -y boot-repair
-    Running it gave an error, but after rebooting, Windows 7 showed up as an option, and it works.
 

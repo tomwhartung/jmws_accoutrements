@@ -64,7 +64,32 @@ Server Necessities for Comfortableness
       mv id_rsa.pub-bette pubs
     As tomh on bette (test!):
       ssh groja1   ## this should work, if not, figure out what went wrong!
-[ ] 
+[ ] Create and test the standard ssh wrapper scripts:
+    o ~/bin/lsGroja1
+    o ~/bin/toGroja1
+    o ~/bin/diffGroja1
+    o ~/bin/fromGroja1
+    As tomh on bette:
+      cd /var/www/jmws_accoutrements
+      cd bin/libs/bash
+      vi remote_host_ls    # enable using script with groja1
+      vi remote_host_from  # optional: enable using script with groja1
+      ## Commit these remote_host_* scripts to github when they are working ok
+      cd ~/bin
+      cp lsRita lsGroja1
+      cp fromRita fromGroja1
+      cp toRita toGroja1
+      cp diffRita diffGroja1
+      vi *Groja1
+      cd ~/tmp
+      lsGroja1
+      toGroja1 hello.txt
+      fromGroja1 hello.txt
+      diffGroja1 hello.txt
+      cd ~/bin
+      ci -l *Groja1
+      toEmAll *Groja1   # for consistency...
+
 
 [ ] Home Directory - should be minimal for servers
     Copy selected files and directories from home directory on another host

@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# diffAny: diff specified file with matching one on specified remote host
-# -----------------------------------------------------------------------
+# remote_host_diff: diff specified file with matching one on specified remote host
+# --------------------------------------------------------------------------------
 #
 function syntax()
 {
-   echo "Syntax: diffAny [-r] dest_hostname [files]"
+   echo "Syntax: remote_host_diff [-r] dest_hostname [files]"
    echo "    -r: diff files in all subdirectories"
 }
 
@@ -57,19 +57,19 @@ if [ "$this_hostname" == "$dest_hostname" ]; then
    exit 5
 fi
 
-ping -c1 $dest_hostname > /tmp/diffAny-ping_output.$$ 2>&1
+ping -c1 $dest_hostname > /tmp/remote_host_diff-ping_output.$$ 2>&1
 ping_ret_val=$?
 
 if [ $ping_ret_val -ne 0 ]; then
    syntax
    echo "Error: unable to ping dest host \"$dest_hostname\":"
-   cat /tmp/diffAny-ping_output.$$
+   cat /tmp/remote_host_diff-ping_output.$$
    echo "Check your spelling and try again."
-   rm /tmp/diffAny-ping_output.$$
+   rm /tmp/remote_host_diff-ping_output.$$
    exit 7
 fi
 
-rm /tmp/diffAny-ping_output.$$
+rm /tmp/remote_host_diff-ping_output.$$
 
 #
 #  Set destination directory, modifying it if necessary (/home vs. /Users)
@@ -145,7 +145,7 @@ do
          else
             cd $local_file_name
             echo "processing directory $pwd"
-            diffAny $dest_hostname -r
+            remote_host_diff $dest_hostname -r
             cd ..
          fi
       else

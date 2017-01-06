@@ -92,6 +92,14 @@ References:
     *** TODO, per https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
     *** "Delete the existing connection that was added to the bridge."
     *** (Leaving that alone for now...)
+    ************
+    *** UPDATE 2017-01-05:
+    *** -> Yikes now my other hosts can't access bette!  Undoubtedly because of this step!
+    *** -> Running "Network Connections" (now locked to launcher)
+    *** -> Deleting the "bridge0 slave 1" connection under the "Ethernet" section
+    *** -> This leaves the "Bridge" section with two entries ("Bridge connection 1" and "virbr0")
+    *** -> This fixes access to bette from my other hosts!  Whew!
+    ************
 [ ] Install kvm and dependencies, etc.:
     Run standard commands to update system:
       sudo apt-get update

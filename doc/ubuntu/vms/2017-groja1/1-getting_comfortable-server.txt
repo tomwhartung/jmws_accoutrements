@@ -1,0 +1,74 @@
+
+ Getting Comfortable
+=====================
+Install the basic stuff we need to get around and do the other stuff.
+
+This is the process we are running to set up ava.
+-------------------------------------------------
+Most or at least parts of this process should be usable when setting up other servers.
+
+Server Necessities for Comfortableness
+--------------------------------------
+[ ] Home Directory - should be minimal for servers
+    Copy selected files and directories from home directory on another host
+      .bashrc, .bash_aliases*, .gitconfig, .vimrc, backup, bin, r*
+[ ] Install any new updates
+    sudo apt-get update
+    sudo apt-get upgrade
+[ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
+    -> Note: many packages already installed
+       See ./0-windows_install.txt, under Questions and Answers -> Packages to install
+    sudo apt-get install rcs vim subversion
+    sudo apt-get install openssh-server
+    sudo apt-get install git git-svn
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+    Must mount thumb drives manually in the server distro
+    As root:
+      cd /mnt
+      mkdir usb
+      mount /dev/sdb1 /mnt/usb
+    Copy files to ~tomh and ~root as appropriate
+    As root:
+      ln -s ~tomh/.bash_aliases .
+      ln -s ~tomh/.bash_aliases-ava  .
+      ln -s ~tomh/bin  .
+      ln -s ~tomh/.vimrc   .
+      vi .bashrc    ## Add cusTOMizations
+      which ci
+      mkdir RCS
+      ci -l .bashrc
+[ ] Setup static IP
+    References:
+      http://askubuntu.com/questions/766131/set-static-ip-ubuntu-16-04
+      https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
+    As root:
+      cd /etc/network
+      mkdir RCS
+      ci -l interfaces
+      vi interfaces
+      -> Update as indicated in References above
+[ ] Update /etc/hosts and verify ssh is working
+    Installing openssh-server seems to be enough to get it going
+    Combine public keys from other hosts into authorized_keys
+    As tomh:
+      ssh-keygen
+      cd ~/.ssh
+      cat pubs/* >> ~/.ssh/authorized_keys
+      Push over a copy of /etc/hosts
+    As root:
+      cd /etc
+      mkdir RCS
+      ci -l hosts fstab
+      cat hosts
+      more ~tomh/tmp/hosts
+      mv ~tomh/tmp/hosts .
+      vi hosts
+      ci -l hosts
+    Test using ssh to get from host to host.
+[ ] To support automounting of usb thumb drives
+    References:
+      https://help.ubuntu.com/community/Mount/USB
+      https://usbmount.alioth.debian.org/
+    As tomh:
+      sudo apt-get -y install usbmount
+

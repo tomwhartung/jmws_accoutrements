@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# toAny: scp specified file(s) to appropriate dir on specified host
-# -----------------------------------------------------------------
+# remote_host_to: scp specified file(s) to appropriate dir on specified host
+# --------------------------------------------------------------------------
 #
 function syntax()
 {
-   echo "Syntax: toAny [-f|-y] dest_hostname [files]"
+   echo "Syntax: remote_host_to [-f|-y] dest_hostname [files]"
    echo "  -f: force - chmod destination files so they are writable"
    echo "  -y: create destination directory if it is missing"
    echo "  -f and -y are mutually exclusive"
@@ -73,19 +73,19 @@ fi
    ping_command='ping -c1'
 ## fi
 
-${ping_command} $dest_hostname > /tmp/toAny-ping_output.$$ 2>&1
+${ping_command} $dest_hostname > /tmp/remote_host_to-ping_output.$$ 2>&1
 ping_ret_val=$?
 
 if [ $ping_ret_val -ne 0 ]; then
    syntax
    echo "Error: unable to ping dest host \"$dest_hostname\":"
-   cat /tmp/toAny-ping_output.$$
+   cat /tmp/remote_host_to-ping_output.$$
    echo "Check your spelling and try again."
-   rm /tmp/toAny-ping_output.$$
+   rm /tmp/remote_host_to-ping_output.$$
    exit 7
 fi
 
-rm /tmp/toAny-ping_output.$$
+rm /tmp/remote_host_to-ping_output.$$
 
 #
 #  Modify if necessary (/home vs. /Users) and check destination directory

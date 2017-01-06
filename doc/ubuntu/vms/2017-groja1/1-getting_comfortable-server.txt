@@ -3,15 +3,15 @@
 =====================
 Install the basic stuff we need to get around and do the other stuff.
 
-This is the process we are running to set up ava.
--------------------------------------------------
-Most or at least parts of this process should be usable when setting up other servers.
+This is the process we are running to set up the vm groja1.
+-----------------------------------------------------------
+The goal is to:
+
+1. Downgrade to php5 and
+2. Get the joomla 1.x version of groja.com/seeourminds.com working
 
 Server Necessities for Comfortableness
 --------------------------------------
-[ ] Home Directory - should be minimal for servers
-    Copy selected files and directories from home directory on another host
-      .bashrc, .bash_aliases*, .gitconfig, .vimrc, backup, bin, r*
 [ ] Install any new updates
     sudo apt-get update
     sudo apt-get upgrade
@@ -21,6 +21,28 @@ Server Necessities for Comfortableness
     sudo apt-get install rcs vim subversion
     sudo apt-get install openssh-server
     sudo apt-get install git git-svn
+[ ] Setup static IP
+    References:
+      http://askubuntu.com/questions/766131/set-static-ip-ubuntu-16-04
+      https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
+    As root:
+      cd /etc/network
+      mkdir RCS
+      ci -l interfaces
+      vi interfaces
+      -> Update as indicated in References above
+      address 192.168.122.50
+        netmask 255.255.255.0
+        gateway 10.0.0.1
+      dns-nameservers 192.168.30.2 192.168.31.2
+    NOTE:
+      Restarting the network service (/etc/init.d/networking stop|start|restart) had no effect!
+      Had to reboot for it to work!
+
+[ ] Home Directory - should be minimal for servers
+    Copy selected files and directories from home directory on another host
+      .bashrc, .bash_aliases*, .gitconfig, .vimrc, backup, bin, r*
+
 [ ] Set up root account: .bashrc, links to .bash_aliases*
     Must mount thumb drives manually in the server distro
     As root:
@@ -37,16 +59,7 @@ Server Necessities for Comfortableness
       which ci
       mkdir RCS
       ci -l .bashrc
-[ ] Setup static IP
-    References:
-      http://askubuntu.com/questions/766131/set-static-ip-ubuntu-16-04
-      https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
-    As root:
-      cd /etc/network
-      mkdir RCS
-      ci -l interfaces
-      vi interfaces
-      -> Update as indicated in References above
+
 [ ] Update /etc/hosts and verify ssh is working
     Installing openssh-server seems to be enough to get it going
     Combine public keys from other hosts into authorized_keys
@@ -65,6 +78,7 @@ Server Necessities for Comfortableness
       vi hosts
       ci -l hosts
     Test using ssh to get from host to host.
+
 [ ] To support automounting of usb thumb drives
     References:
       https://help.ubuntu.com/community/Mount/USB

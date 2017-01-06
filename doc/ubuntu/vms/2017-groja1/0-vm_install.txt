@@ -5,9 +5,19 @@ Download correct iso file, verify md5sum, and burn to CD
 
 Plan:
 -----
-1. Install Ubuntu 16.04 LAMP Server:
+1. Install Ubuntu 16.04 LAMP Server from CDROM
 2. Downgrade to PHP 5
 3. Get joomla 1.x version of groja.com/seeourminds.com to run in VM
+
+References:
+-----------
+KVM Home page:
+    https://help.ubuntu.com/community/KVM
+More recent (for 16.04) and includes steps to set up bridged networking:
+    https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+Also more recent:
+    https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
+These are similar to the ones we used in 3-experimenting_with_extras.txt .
 
 On Linux System, Before Installing a New VM:
 --------------------------------------------
@@ -15,65 +25,44 @@ On Linux System, Before Installing a New VM:
 [ ] Install KVM and dependencies
     See doc/ubuntu/specific_hosts/2016-bette/3-experimenting_with_extras.txt
 
-References:
------------
-(1) Looks to be a bit old but should be ok nonetheless:
-    https://help.ubuntu.com/community/KVM/Installation
-(2) More recent (for 16.04) and includes steps to set up bridged networking:
-    https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
-(3) More recent:
-    https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
-These are the same ones we used in 3-experimenting_with_extras.txt .
-
 1. Install Ubuntu 16.04 LAMP Server:
 ------------------------------------
-
-[ ] Boot options: check disk for defects - why not?
-[ ] Configuring install as usual, then get this about message UEFI
-    - Installer started in UEFI mode
-    - Continuing may make it difficult to reboot into "any BIOS-mode OSes later."
-    - Asking whether I want to force UEFI mode?
-    - Forcing may make it difficult to boot into windows later
-    -> "Force UEFI installation"
-       Selecting "No"
-[ ] Fresh disk partitions:
-    229.4G available
-    -  Modeled after actual use on lauren and allowing for growth
-    -  Allowing for installing a new OS at some point
-    -  Allowing spares
-    Partitions specific to a version of the OS
-      2 X 24G /       (/mnt/future/)
-      2 X  1G /boot   (/mnt/future-boot/)
-      2 X  5G /home   (/mnt/future-home/)
-      2 X 30G = 60G Total
-    Partitions that can be shared with other versions of the OS
-      1 X 21G /var/www
-      1 X  1G /usr/local/bin
-      1 X  8G swap
-      1 X 30G = 30G Total
-    Partitions for file systems that can cause trouble (by filling up, etc.)
-      These should NOT be shared, but we are creating only one of each
-      -> See how it goes with these, and if they prove useful,
-         create new ones when installing the next "future" OS.
-      1 X  5G /usr/src
-      1 X  5G /lib/modules
-      1 X  5G /var/cache
-      1 X  5G /var/log
-      1 X 20G = 20G Total
-    Grand total:
-      60G + 30G + 20G = 110G
-    Left Over:
-      229.4G - 110G = 119.4G
-      1 X 20.0G /mnt/spare/sda?
-      1 X 99.4G /usr/local/tar - Use remainder of disk
-[ ] Installing: Questions and Answers
+[ ] Start the Virtual Machine Manager
+    Use the "Search your computer" Ubuntu icon to find it
+[ ] Create a new VM
+    Click on first icon (screen + flashlight)
+    Local install media (CDROM) -> Forward
+    Use CDROM or DVD -> Forward
+    Memory: 1024M (*); CPUs (Up to 4 available): 1 -> Forward
+      These are the default values
+      (*) Using less than 1G on ava
+    Enable storage - Create a disk image: 20G -> Forward
+      20G is the default value
+      209G available in the default location (/var/lib/libvirt/images/)
+    Name: groja1 -> Finish
+      The linuxconfig reference says the last screen has an option to select bridged networking
+        It says it should be selected by default
+      I did not notice this but a screenshot in the linuxbabe.com reference shows a
+        dropdown widget allowing us to set "Advanced options"
+    --> Next time, open this up to see what options are there.
+    Creating the image...
+[ ] Configuring install as usual
+    Ctrl+Alt+L to release mouse from inside vm
+    Language and Keyboard selection...
+    Configure the network - hostname: groja1:
+    Tom H./tomh
+[ ] Disk partitions:
+    Using default selection:
+      Guided - use entire disk and set up LVM
+[ ] Installing: More Questions and Answers
     Automatic updates?
     -> Install security updates automatically
     Packages to install?
+    -> Manual package selection (not selected on ava)
     -> LAMP server
     -> standard system utilities (already checked)
-    -> Virtual Machine host (!!)
     -> OpenSSH server
+
     Windows detected, grub installed, but dual boot not working
 [ ] Fix dual boot:
     Reference:

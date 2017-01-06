@@ -98,8 +98,11 @@ References:
       sudo apt-get upgrade
     Run commands to install kvm and dependencies (each reference is a little different):
       Reference (1): sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+        No virt-manager (the graphical user interface)
       Reference (2): sudo apt-get install qemu-kvm libvirt-bin virt-manager
+        No bridge-utils (which we will probably want)
       Reference (3): sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
+        Most complete of the lists (and safest)
     This time (experimenting for the first time) we are going with door number (3):
       sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
     Add tomh to the libvirtd group:

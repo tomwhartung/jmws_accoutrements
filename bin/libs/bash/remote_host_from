@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# fromAny: scp specified file FROM same dir on specified host
-# -----------------------------------------------------------
+# remote_host_from: scp specified file from same dir on specified host
+# --------------------------------------------------------------------
 #
 function syntax()
 {
    echo "Syntax:"
-   echo "   fromAny hostname file_to_get-1 [file_to_get-2 ...]"
+   echo "   remote_host_from hostname file_to_get-1 [file_to_get-2 ...]"
 }
 
 if [ $# -lt 1 ]; then
@@ -20,6 +20,8 @@ elif [[ $1 == "barbara" ]]; then
    from_hostname="barbara"
 elif [[ $1 == "bette" ]]; then
    from_hostname="bette"
+elif [[ $1 == "groja1" ]]; then
+   from_hostname="groja1"
 elif [ $1 == "humphrey" ]; then
    from_hostname="humphrey"
 elif [[ $1 == "jane" ]]; then

@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# lsAny: run ls -al command in same dir on specified host
-# -----------------------------------------------------------
+# remote_host_ls: run ls -al command in same dir on specified host
+# ----------------------------------------------------------------
 #
 function syntax()
 {
    echo "Syntax:"
-   echo "   lsAny hostname"
+   echo "   remote_host_ls hostname"
 }
 
 if [ $# -lt 1 ]; then
@@ -25,6 +25,8 @@ elif [ $1 == "bette" ]; then
 elif [ $1 == "humphrey" ]; then
    ## ls_username='root@'
    ls_hostname="humphrey"
+elif [ $1 == "groja1" ]; then
+   ls_hostname="groja1"
 elif [ $1 == "jane" ]; then
    ls_hostname="jane"
 elif [[ $1 == "lauren" ]]; then

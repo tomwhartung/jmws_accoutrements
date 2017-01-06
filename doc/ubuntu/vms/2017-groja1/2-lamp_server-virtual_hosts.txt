@@ -1,0 +1,327 @@
+
+ Get LAMP Sites Running
+========================
+LAMP as in LAM-PHP.  We do Python separately.
+
+Ensure Required LAMP Packages Are Installed
+-------------------------------------------
+Many if not most or all of these LAMP packages have been already installed
+[ ] Install as necessary, and ensure the installed versions of these packages match on:
+    [ ] ava
+    [ ] barbara
+    [ ] jane
+    Commands (as root):
+      dpkg-query -l 'package_name_or_regex'   ## if it's not found, it needs to be installed
+      apt-get install -s package_name         ## Simulate installation
+      apt-get install -y package_name         ## Do it without requesting confirmation
+    Install apache2, apache2-utils, apache2-dev (needed for wsgi)
+    Install libapache2-mod-php7.0
+    Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
+    Install mysql-server
+
+Populate /var/www
+-----------------
+[ ] Get all websites' source files in /var/www
+    artsyvisions.com:
+      best to use a tar file
+    github_pages:
+      As tomh:
+        mkdir -p github_pages/customizations
+        cd github_pages/customizations
+        git clone git@github.com:JoomooWebsites/joomoowebsites.github.io.git
+        git clone git@github.com:tomwhartung/tomwhartung.github.io.git
+        cd -
+    groja.com:
+      As tomh:
+        mkdir -p groja.com/htdocs
+        cd groja.com/htdocs
+        git clone git@github.com:tomwhartung/groja.com.git
+        cd -
+    jmws_accoutrements:
+      As tomh:
+        git clone git@github.com:tomwhartung/jmws_accoutrements.git
+    joomoowebsites.com:
+      best to use a tar file (copy from barbara; bette has more files e.g., downloads dir.)
+    seeourminds.com:
+      NOTE: this is now a python site and will not work until we get WSGI going
+        For more information see: 4-setup_wsgi_for_hosting_python.txt
+      As tomh:
+        mkdir -p seeourminds.com/htdocs/
+        cd seeourminds.com/htdocs/
+        git clone git@github.com:tomwhartung/seeourminds.com.git
+        cd -
+    subsites:
+      As tomh:
+        mkdir subsites
+        cd subsites
+        git clone git@github.com:tomwhartung/resume.git
+        git clone git@github.com:tomwhartung/idMyGadget.git
+        cd -
+    tomhartung.com:
+      -> Try using version from bette
+      Clear caches, create tar file of tomhartung.com/htdocs/ , copy to barbara, jane, and ava
+      Browser:
+        ava.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
+      As tomh on bette:
+        bu th 01-goes_with_tar_file
+        cd /var/www
+        tar -cvzf tomhartung.com_htdocs-bette-2016_10_27.tgz tomhartung.com/htdocs/
+    tomh.info
+      best to use a tar file
+    tomwhartung.com:
+      -> Copy only essential code from barbara to ava and jane
+      Create a tar file of the tomwhartung.com/htdocs directory on barbara and
+        copy it to jane and ava
+      As tomh on barbara:
+        cd /var/www
+        tar -cvzf tomwhartung.com_htdocs-barbara-2016_10_25.tgz tomhartung.com/htdocs/
+        bu tw 01-baseline
+
+
+Disk Space Spotcheck
+--------------------
+[ ] Disk Space Spotcheck:
+    /:        1.8G/22G (9%)
+    /home:    257M/4.5G (6%)
+    /var/www: 8.1G/20G (45%)
+NOTE: if we need space in /var/www, we can delete files in:
+    /var/www/zzz-tar_files-old
+
+Configure Apache
+----------------
+[ ] Add and update config files in /etc/apache2/sites-available as appropriate
+    As root:
+      cd /etc/apache2/sites-available
+      mkdir RCS
+      ci -l *.conf   ## "Installed version"
+    For best results, copy conf files from another host and check in to RCS
+    Fix ServerAlias specifications in apache2/sites-available/*.conf files
+    As root:
+      ci -l *.conf   ## "Copied from host xxxxx and updated for this host"
+[ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
+    As root:
+      cd /etc/apache2
+      ls -al mods-*/rewrite*
+      ls -al mods-*/php7.0*
+      ls -al mods-*/mpm*
+    If not enabled (or disabled, as in the case of mpm_event),
+      run one or more of these commands as appropriate:
+    As root:
+      a2enmod rewrite
+      a2enmod php7.0
+      a2dismod mpm_event
+      a2enmod mpm_prefork
+[ ] Check that we have not yet enabled any sites:
+    As root:
+      cd /etc/apache2
+      ls -al l sites*/*.conf
+    Only the sites-available/000-default.conf file should be linked to
+      the sites-enabled directory
+[ ] Put a minimal index.html file in /var/www
+    As tomh:
+      vi /var/www/index.html
+[ ] Restart apache and test in browser, to ensure we are good to go.
+    As root:
+      service apache2 stop
+      service apache2 start
+    Access in browser:
+      http://ava
+    Should see the minimal index.html file put in /var/www
+
+Ensure Static Sites Work
+------------------------
+[ ] artsyvisions.com
+    As root:
+      a2ensite 010-artsyvisions.com.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/010-artsyvisions.com.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://ava.artsyvisions.com
+[ ] groja.com
+    As root:
+      a2ensite 020-groja.com.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/020-groja.com.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://ava.groja.com
+[ ] tomh.info
+    As root:
+      a2ensite 070-tomh.info.conf
+      service apache2 stop
+      service apache2 start
+      l sites*/*.conf
+    Should see the sites-available/070-tomh.info.conf file linked to
+      the sites-enabled directory
+    Access in browser:
+      http://jane.tomh.info
+So far so good, I hope.  And this is where the fun starts!
+
+Finding the Right Copy of the Database
+--------------------------------------
+[ ] Databases used on barbara:
+    NOTE: this is FOR REFERENCE ONLY - i.e., it is what we did LAST TIME
+    groja.com & seeourminds.com:
+      try using current db from lauren:
+        seeourminds.com-2016_07_16-lauren.sql.gz
+      try using current db from bette:
+        seeourminds.com-2016_07_16-bette.sql.gz
+    joomoowebsites.com: using db from bette (version 3.5.1)
+        joomoowebsites.com-2016_07_16-bette-02-mobile_detect.sql.gz
+    tomhartung.com: using db from bette
+        tomwhartung.com-2016_07_16-bette.sql.gz
+
+Overview of Process for CMS Sites
+---------------------------------
+1. Ensure it is working on barbara (or bette or lauren)
+2. Copy code and db to jane
+3. Ensure it works on jane
+4. Cleanup: delete as many files as possible (downloads, old releases, tmp dirs., etc.)
+5. Ensure it still works on jane
+6. Copy code and db to ava
+7. Ensure it works on ava
+8. Consider cleaning up downloads, etc. on barbara as well
+
+Ensure WordPress Site Works
+---------------------------
+Site: tomwhartung.com
+[ ] Create and restore database
+    See ~/technical/cmses/wordpress
+[ ] Enable site and restart apache
+    As root:
+      a2ensite 080-tomwhartung.com.conf
+      service apache2 stop
+      service apache2 start
+[ ] Edit wp-config.php and update Settings -> URLs in back end
+    Chrome browser redirect issue:
+      Menu -> More Tools -> Clear Browsing Data
+[ ] Configure wordpress updates
+    See ~/technical/cmses/wordpress/README.txt
+
+Ensure Joomla Site Works
+-------------------------
+Site: joomoowebsites.com
+
+[ ] Create and restore database
+    See ~/technical/cmses/joomla
+[ ] Enable site and restart apache
+    As root:
+      a2ensite 040-joomoowebsites.com.conf
+      service apache2 stop
+      service apache2 start
+[ ] For joomla on a fresh install of 16.04, install simplexml:
+    Check for it in phpinfo.php - it has its own section
+    If it is not installed:
+    As root:
+       apt-get install php7.0-simplexml
+       service apache2 restart
+    Reference: http://forum.joomla.org/viewtopic.php?t=916040
+[ ] To fix "The file Cache Storage is not supported on this platform." error:
+    As root:
+      cd /var/www/joomoowebsites.com/htdocs/joomoowebsites.com
+      chgrp www-data cache/ administrator/cache/ tmp
+
+Ensure Drupal Site Works
+------------------------
+Site: tomhartung.com
+[ ] Create and restore database
+    -> using version from bette
+    See ~/technical/cmses/drupal
+[ ] Set ownership of cache files
+    As root:
+      cd sites/default
+      chown -R www-data:www-data files
+[ ] Enable site and restart apache
+    As root:
+      a2ensite 060-tomhartung.com.conf
+      service apache2 stop
+      service apache2 start
+      cd /etc/apache2
+      l sites-*/*.conf
+[ ] Log into back end and clear cache
+    Browser:
+      ava.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
+
+Install Drush Using apt-get
++---------------------------
+Tried installing this a couple of ways on jane, using composer, based on up-to-date info on docs.drush.org
+Unfortunately that process did not work.
+For details about steps taken on jane, see ../2016-jane-2/2-lamp_server-virtual_hosts.txt
+[ ] Using apt-get:
+    As tomh:
+      sudo apt-get install drush
+      which drush      ## /usr/bin/drush
+      drush --version  ## drush version 5.10.0
+[ ] Update: This version of drush does not work with Drupal 8
+    For now:
+      -> Use the version we installed on jane
+      -> Hope that because we keep the source on github, we will not need to use it on barbara and ava
+    Stay tuned for more updates
+
+Checking the Sites:
+-------------------
+Checking all sites, in conjunction with getting them to work on jane and barbara:
+[ ] Checking the static sites:
+    [ ] artsyvisions.com
+    [ ] tomh.info
+[ ] Checking the WordPress site:
+    [ ] tomwhartung.com
+[ ] Checking the Joomla site:
+    [ ] joomoowebsites.com
+[ ] Checking the Drupal site:
+    [ ] tomhartung.com
+
+Back It All Up
+--------------
+[ ] Ensure we have backups of everything, including a copy for off-site
+[ ] Set up (semi-)automatic backups as appropriate
+
+[ ] Disk Space Spotcheck:
+    /:        2.1G/22G (10%)
+    /home:    0.2G/4.5G (4%)
+    /var/www: 5.5G/13G (30%)
+
+Final Steps
+-----------
+[ ] Update apache logs config so we can tell which site each message applies to
+    Reference:
+      https://www.digitalocean.com/community/tutorials/how-to-configure-logging-and-log-rotation-in-apache-on-an-ubuntu-vps
+    Update all files in /etc/apache2/sites-available
+    Change:
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+    to
+      CustomLog ${APACHE_LOG_DIR}/access.log vhost_combined
+    and restart apache2:
+      sudo service apache2 restart
+[ ] Use logrotate to rotate apache logs weekly
+    Reference:
+      https://serversforhackers.com/managing-logs-with-logrotate
+    Ensure logrotate is installed:
+      sudo dpkg-query --list '*rotate*'
+    Check installed version of the logrotate conf file for apache into RCS
+    As root:
+      cd /etc/logrotate.d
+      mkdir RCS
+      ci -l apache2    ## "Installed version"
+    Edit the config file as desired
+      sudo vi /etc/logrotate.d/apache2
+    This time we are changing it to rotate them weekly and keep a year's worth:
+      "daily" -> "weekly"
+      "rotate 14" -> "rotate 52"
+    and adding these lines to use dates for the log file name extensions (instead of .1, .2, etc.):
+      dateext
+      dateformat -%Y-%m-%d-%s
+
+********************
+*** YOU ARE HERE ***
+********************
+
+Final Steps
+-----------
+[ ] Configure automatic wordpress updates
+

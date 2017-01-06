@@ -1,0 +1,85 @@
+
+ Fresh Install of Ubuntu in a New VM
+=====================================
+Download correct iso file, verify md5sum, and burn to CD
+
+Plan:
+-----
+1. Install Ubuntu 16.04 LAMP Server:
+2. Downgrade to PHP 5
+3. Get joomla 1.x version of groja.com/seeourminds.com to run in VM
+
+On Linux System, Before Installing a New VM:
+--------------------------------------------
+[ ] Set up bridged networking
+[ ] Install KVM and dependencies
+    See doc/ubuntu/specific_hosts/2016-bette/3-experimenting_with_extras.txt
+
+References:
+-----------
+(1) Looks to be a bit old but should be ok nonetheless:
+    https://help.ubuntu.com/community/KVM/Installation
+(2) More recent (for 16.04) and includes steps to set up bridged networking:
+    https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+(3) More recent:
+    https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
+These are the same ones we used in 3-experimenting_with_extras.txt .
+
+1. Install Ubuntu 16.04 LAMP Server:
+------------------------------------
+
+[ ] Boot options: check disk for defects - why not?
+[ ] Configuring install as usual, then get this about message UEFI
+    - Installer started in UEFI mode
+    - Continuing may make it difficult to reboot into "any BIOS-mode OSes later."
+    - Asking whether I want to force UEFI mode?
+    - Forcing may make it difficult to boot into windows later
+    -> "Force UEFI installation"
+       Selecting "No"
+[ ] Fresh disk partitions:
+    229.4G available
+    -  Modeled after actual use on lauren and allowing for growth
+    -  Allowing for installing a new OS at some point
+    -  Allowing spares
+    Partitions specific to a version of the OS
+      2 X 24G /       (/mnt/future/)
+      2 X  1G /boot   (/mnt/future-boot/)
+      2 X  5G /home   (/mnt/future-home/)
+      2 X 30G = 60G Total
+    Partitions that can be shared with other versions of the OS
+      1 X 21G /var/www
+      1 X  1G /usr/local/bin
+      1 X  8G swap
+      1 X 30G = 30G Total
+    Partitions for file systems that can cause trouble (by filling up, etc.)
+      These should NOT be shared, but we are creating only one of each
+      -> See how it goes with these, and if they prove useful,
+         create new ones when installing the next "future" OS.
+      1 X  5G /usr/src
+      1 X  5G /lib/modules
+      1 X  5G /var/cache
+      1 X  5G /var/log
+      1 X 20G = 20G Total
+    Grand total:
+      60G + 30G + 20G = 110G
+    Left Over:
+      229.4G - 110G = 119.4G
+      1 X 20.0G /mnt/spare/sda?
+      1 X 99.4G /usr/local/tar - Use remainder of disk
+[ ] Installing: Questions and Answers
+    Automatic updates?
+    -> Install security updates automatically
+    Packages to install?
+    -> LAMP server
+    -> standard system utilities (already checked)
+    -> Virtual Machine host (!!)
+    -> OpenSSH server
+    Windows detected, grub installed, but dual boot not working
+[ ] Fix dual boot:
+    Reference:
+      http://askubuntu.com/questions/142750/after-installing-ubuntu-from-usb-grub2-cant-be-installed/142751#142751
+    As tomh:
+      sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
+      sudo apt-get install -y boot-repair
+    Running it gave an error, but after rebooting, Windows 7 showed up as an option, and it works.
+

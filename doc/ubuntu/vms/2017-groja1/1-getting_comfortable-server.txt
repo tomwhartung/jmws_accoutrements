@@ -38,6 +38,33 @@ Server Necessities for Comfortableness
     NOTE:
       Restarting the network service (/etc/init.d/networking stop|start|restart) had no effect!
       Had to reboot for it to work!
+[ ] Setup ssh
+    As tomh in the VM (groja1):
+      ssh-keygen
+      cd .ssh
+      mkdir ../tmp
+      cp id_rsa.pub ../tmp
+      mv id_rsa.pub id_rsa.pub-groja1
+    As root on bette:
+      cd /etc
+      vi hosts    # add line with "192.168.122.50 groja1"
+    As tomh on bette:
+      cd
+      cp .ssh/id_rsa.pub tmp/id_rsa.pub-bette
+      cd tmp
+      scp id_rsa.pub-bette groja1:/home/tomh/tmp
+      scp groja1:/home/tomh/tmp/id_rsa.pub-groja1 .
+      cat id_rsa.pub-groja1 ../.ssh/authorized_keys
+      mv id_rsa.pub-groja1 ../.ssh/pubs
+    As tomh in the VM (groja1):
+      cd ~/.ssh
+      mv ../tmp/id_rsa.pub-bette .
+      cp id_rsa.pub-bette authorized_keys
+      mkdir pubs
+      mv id_rsa.pub-bette pubs
+    As tomh on bette (test!):
+      ssh groja1   ## this should work, if not, figure out what went wrong!
+[ ] 
 
 [ ] Home Directory - should be minimal for servers
     Copy selected files and directories from home directory on another host

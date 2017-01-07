@@ -1,23 +1,44 @@
 
  Get LAMP Sites Running
 ========================
-LAMP as in LAM-PHP.  We do Python separately.
+LAMP as in LAM-PHP.  We do Python separately, and will not be doing it on this VM.
 
 Ensure Required LAMP Packages Are Installed
 -------------------------------------------
 Many if not most or all of these LAMP packages have been already installed
-[ ] Install as necessary, and ensure the installed versions of these packages match on:
-    [ ] ava
-    [ ] barbara
-    [ ] jane
+[ ] Install any of the following packages that are missing:
     Commands (as root):
       dpkg-query -l 'package_name_or_regex'   ## if it's not found, it needs to be installed
       apt-get install -s package_name         ## Simulate installation
       apt-get install -y package_name         ## Do it without requesting confirmation
-    Install apache2, apache2-utils, apache2-dev (needed for wsgi)
-    Install libapache2-mod-php7.0
-    Install php7.0, php7.0-gd, php7.0-mysql, php7.0-mcrypt
-    Install mysql-server
+    Required packages:
+      apache2
+      apache2-utils
+      mysql-server
+[ ] Install php5 and any required accoutrements:
+    References:
+      http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04
+      http://askubuntu.com/questions/109404/how-do-i-install-different-upgrade-or-downgrade-php-version-in-still-supported
+      https://lornajane.net/posts/2016/php-7-0-and-5-6-on-ubuntu
+    All references agree that we need to add a ppa to do this
+    As root:
+      add-apt-repository ppa:ondrej/php
+      apt-get install -y php5.6
+    (Try to) install these packages, an edited version of the list of packages from the first reference:
+      (http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04)
+      apt-get install php5.6-mysql           # Installed OK
+      apt-get install php-gettext            # Installed OK
+      apt-get install php5.6-mbstring        # Installed OK
+      apt-get install php-xdebug             # Installed OK
+      apt-get install libapache2-mod-php5.6  # Already installed
+      apt-get install php5.6-curl            # Installed OK
+      apt-get install php5.6-gd              # Installed OK
+      apt-get install php5.6-mcrypt          # Installed OK
+      apt-get install php5.6-xml             # Installed OK
+      apt-get install php5.6-xmlrpc          # Installed OK
+
+[ ] Set php5.6 as the default for both apache and cli:
+
 
 Populate /var/www
 -----------------

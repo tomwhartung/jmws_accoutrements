@@ -9,6 +9,7 @@ Many if not most or all of these LAMP packages have been already installed
 [ ] Install any of the following packages that are missing:
     Commands (as root):
       dpkg-query -l 'package_name_or_regex'   ## if it's not found, it needs to be installed
+                                              ## if nothing displays, it is not installed
       apt-get install -s package_name         ## Simulate installation
       apt-get install -y package_name         ## Do it without requesting confirmation
     Required packages:
@@ -26,6 +27,7 @@ Many if not most or all of these LAMP packages have been already installed
       apt-get install -y php5.6
     (Try to) install these packages, an edited version of the list of packages from the first reference:
       (http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04)
+    As root:
       apt-get install php5.6-mysql           # Installed OK
       apt-get install php-gettext            # Installed OK
       apt-get install php5.6-mbstring        # Installed OK
@@ -36,8 +38,44 @@ Many if not most or all of these LAMP packages have been already installed
       apt-get install php5.6-mcrypt          # Installed OK
       apt-get install php5.6-xml             # Installed OK
       apt-get install php5.6-xmlrpc          # Installed OK
-
+[ ] Check php version currently being run on the command line on groja1:
+      php -v   # PHP 7.0.8-0ubuntu0.16.04.3 (cli) ( NTS )
+[ ] Check php version currently being used by apache on groja1:
+    As tomh on groja1:
+      # Put a copy phpinfo.php in /var/www/html/
+    Access in browser:
+      http://groja1/phpinfo.php
+    Find the php version being used in the page
+      PHP Version 7.0.8-0ubuntu0.16.04.3
 [ ] Set php5.6 as the default for both apache and cli:
+    As root:
+      # For php in web apps
+      a2dismod php7.0
+      a2enmod php5.6
+      service apache2 restart
+      # For php-cli in the command line
+      sudo ln -sfn /usr/bin/php5.6 /etc/alternatives/php
+[ ] Re-check php version currently being run on the command line on groja1:
+      php -v  # PHP 5.6.29-1+deb.sury.org~xenial+1 (cli)
+[ ] Re-check php version currently being used by apache on groja1:
+    As tomh on groja1:
+      # Put a copy phpinfo.php in /var/www/html/
+    Access in browser:
+      http://groja1/phpinfo.php
+    Find the php version being used in the page:
+      PHP Version 5.6.29-1+deb.sury.org~xenial+1
+[ ] Optional: to set php7.0 as the default for both apache and cli:
+    As root:
+      # For php in web apps
+      a2dismod php5.6
+      a2enmod php7.0
+      service apache2 restart
+      # For php-cli in the command line
+      sudo ln -sfn /usr/bin/php5.6 /etc/alternatives/php
+    *** If you do this be sure to
+    *** set the default versions
+    *** back to 5.6
+
 
 
 Populate /var/www

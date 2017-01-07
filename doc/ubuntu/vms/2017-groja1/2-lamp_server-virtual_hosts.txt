@@ -76,75 +76,18 @@ Many if not most or all of these LAMP packages have been already installed
     *** set the default versions
     *** back to 5.6
 
-
-
 Populate /var/www
 -----------------
-[ ] Get all websites' source files in /var/www
-    artsyvisions.com:
-      best to use a tar file
-    github_pages:
-      As tomh:
-        mkdir -p github_pages/customizations
-        cd github_pages/customizations
-        git clone git@github.com:JoomooWebsites/joomoowebsites.github.io.git
-        git clone git@github.com:tomwhartung/tomwhartung.github.io.git
-        cd -
-    groja.com:
-      As tomh:
-        mkdir -p groja.com/htdocs
-        cd groja.com/htdocs
-        git clone git@github.com:tomwhartung/groja.com.git
-        cd -
-    jmws_accoutrements:
-      As tomh:
-        git clone git@github.com:tomwhartung/jmws_accoutrements.git
-    joomoowebsites.com:
-      best to use a tar file (copy from barbara; bette has more files e.g., downloads dir.)
+[ ] Get the seeourminds.com websites' source files in /var/www
     seeourminds.com:
-      NOTE: this is now a python site and will not work until we get WSGI going
-        For more information see: 4-setup_wsgi_for_hosting_python.txt
       As tomh:
-        mkdir -p seeourminds.com/htdocs/
-        cd seeourminds.com/htdocs/
-        git clone git@github.com:tomwhartung/seeourminds.com.git
-        cd -
-    subsites:
-      As tomh:
-        mkdir subsites
-        cd subsites
-        git clone git@github.com:tomwhartung/resume.git
-        git clone git@github.com:tomwhartung/idMyGadget.git
-        cd -
-    tomhartung.com:
-      -> Try using version from bette
-      Clear caches, create tar file of tomhartung.com/htdocs/ , copy to barbara, jane, and ava
-      Browser:
-        ava.tomhartung.com/admin -> Configuration -> Development -> Performance -> Clear all caches
-      As tomh on bette:
-        bu th 01-goes_with_tar_file
-        cd /var/www
-        tar -cvzf tomhartung.com_htdocs-bette-2016_10_27.tgz tomhartung.com/htdocs/
-    tomh.info
-      best to use a tar file
-    tomwhartung.com:
-      -> Copy only essential code from barbara to ava and jane
-      Create a tar file of the tomwhartung.com/htdocs directory on barbara and
-        copy it to jane and ava
-      As tomh on barbara:
-        cd /var/www
-        tar -cvzf tomwhartung.com_htdocs-barbara-2016_10_25.tgz tomhartung.com/htdocs/
-        bu tw 01-baseline
-
+        Copy tar file(s) to groja1
+        Unpack the one we want to use into seeourminds.com/htdocs/
 
 Disk Space Spotcheck
 --------------------
 [ ] Disk Space Spotcheck:
-    /:        1.8G/22G (9%)
-    /home:    257M/4.5G (6%)
-    /var/www: 8.1G/20G (45%)
-NOTE: if we need space in /var/www, we can delete files in:
-    /var/www/zzz-tar_files-old
+    /: 2.5G/19G (15%)
 
 Configure Apache
 ----------------

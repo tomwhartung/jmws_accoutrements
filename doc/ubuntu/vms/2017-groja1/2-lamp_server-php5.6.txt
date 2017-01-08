@@ -157,24 +157,30 @@ Checking the Site:
 [ ] Disk Space Spotcheck:
     /:        2.5G/19G (15%)
 
-Copy/Back Up the VM - NOT!!
----------------------------
+Copy/Back Up the VM - First Tries
+---------------------------------
 Our goal is to copy this VM to jane.
-[X] Reference (1):
+[ ] Reference (1):
     http://askubuntu.com/questions/88962/backing-up-a-vm-server-to-an-external-usb-drive
 The answer in Reference (1) describes how to backup a VM at regular intervals.
 The question in Reference (1) describes how to copy the directory containing a VM to
 a thumb drive - whis is what we want to do.
-[X] Check feasibility:
-    Running:
+[ ] Check feasibility:
+    Run as tomh:
       du -sh /var/lib/libvirt
-    Shows it is usingonly 32K - so copying it is obviously not going to get me the whole thing!
-[X] Copy the /var/lib/libvirt directory to an ext4 thumb drive:
-[X] Tar the /var/lib/libvirt directory and copy the tar file to a FAT thumb drive:
+    Shows it is using only 32K - so copying as tomh it is obviously not going to get me the whole thing!
+[ ] Check feasibility - as root, copying after Saving:
+    In the virtual machine window - "groja1 on QEMU/KVM:"
+      Virtual Machine -> Shutdown -> Save
+    Run as root:
+      du -sh /var/lib/libvirt
+    As root after Saving - shows it is using 4.4G - so copying as root is worth trying!
+[ ] Copy the /var/lib/libvirt directory to an ext4 thumb drive:
+[ ] Tar the /var/lib/libvirt directory and copy the tar file to a FAT thumb drive:
 
 Copy/Back Up the VM - Second Try
 --------------------------------
-Our goal is to copy this VM to jane.
+Our goal is to copy this VM to jane....
 
 Final Steps
 -----------

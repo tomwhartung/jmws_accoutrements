@@ -99,19 +99,16 @@ Configure Apache
     Fix ServerAlias specifications in apache2/sites-available/*.conf files
     As root:
       ci -l *.conf   ## "Copied from host xxxxx and updated for this host"
-
-
 [ ] Enable mod_rewrite and php7.0, and start apache2 (as root):
     As root:
       cd /etc/apache2
       ls -al mods-*/rewrite*
-      ls -al mods-*/php7.0*
+      ls -al mods-*/php*
       ls -al mods-*/mpm*
     If not enabled (or disabled, as in the case of mpm_event),
       run one or more of these commands as appropriate:
     As root:
       a2enmod rewrite
-      a2enmod php7.0
       a2dismod mpm_event
       a2enmod mpm_prefork
 [ ] Check that we have not yet enabled any sites:
@@ -128,10 +125,24 @@ Configure Apache
       service apache2 stop
       service apache2 start
     Access in browser:
-      http://ava
+      http://groja1
     Should see the minimal index.html file put in /var/www
 
-[ ] groja.com
+Finding the Right Copy of the Database
+--------------------------------------
+[ ] Databases used on bette:
+    seeourminds.com:
+      Try using current db from bette:
+        seeourminds.com-2016_07_16-bette.sql.gz
+      If that doesn't work, try using current db from lauren:
+        seeourminds.com-2016_07_16-lauren.sql.gz
+[ ] Create user and db:
+    See ~/technical/cmses/joomla/sql/create_user_dbs-seeourminds.sql
+[ ] Restore db:
+    rs -h bette -d 2016_07_16 sm
+    rs -h lauren -d 2016_07_16 sm  ## if that doesn't work
+
+[ ] seeourminds.com
     As root:
       a2ensite 020-groja.com.conf
       service apache2 stop
@@ -140,18 +151,8 @@ Configure Apache
     Should see the sites-available/020-groja.com.conf file linked to
       the sites-enabled directory
     Access in browser:
-      http://ava.groja.com
+      http://groja1.seeourminds.com
 
-
-Finding the Right Copy of the Database
---------------------------------------
-[ ] Databases used on barbara:
-    NOTE: this is FOR REFERENCE ONLY - i.e., it is what we did LAST TIME
-    groja.com & seeourminds.com:
-      try using current db from lauren:
-        seeourminds.com-2016_07_16-lauren.sql.gz
-      try using current db from bette:
-        seeourminds.com-2016_07_16-bette.sql.gz
 
 
 

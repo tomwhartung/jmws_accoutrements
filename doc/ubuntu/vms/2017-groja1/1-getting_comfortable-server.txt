@@ -18,9 +18,10 @@ Server Necessities for Comfortableness
 [ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
     -> Note: many packages already installed
        See ./0-windows_install.txt, under Questions and Answers -> Packages to install
-    sudo apt-get install rcs vim subversion
-    sudo apt-get install openssh-server
-    sudo apt-get install git git-svn
+    sudo apt-get -y install rcs vim subversion
+    sudo apt-get -y install openssh-server
+    sudo apt-get -y install git git-svn
+    sudo apt-get -y install python        # aka python2 - was not part of the installation??
 [ ] Setup static IP
     References:
       http://askubuntu.com/questions/766131/set-static-ip-ubuntu-16-04
@@ -47,7 +48,7 @@ Server Necessities for Comfortableness
       mv id_rsa.pub id_rsa.pub-groja1
     As root on bette:
       cd /etc
-      vi hosts    # add line with "192.168.122.50 groja1"
+      vi hosts    # add "192.168.122.50 groja1 groja1.seeourminds.com"
     As tomh on bette:
       cd
       cp .ssh/id_rsa.pub tmp/id_rsa.pub-bette
@@ -90,13 +91,21 @@ Server Necessities for Comfortableness
       ci -l *Groja1
       toEmAll *Groja1   # for consistency...
 [ ] Home Directory - should be minimal for servers
-    Copy selected files and directories from home directory on another host
-      .bashrc, .bash_aliases*, .gitconfig, .vimrc, backup, bin, r*
+    Copy required files from home directory on any other host
+    As tomh on bette:
+      toGroja1 .bashrc .bash_aliases* .gitconfig .vimrc r*
+    Copy required directories from home directory on any other host
+      cd ~/backup/db
+      toGroja1 -y
+      cd ~/bin
+      toGroja1 -y
+      cd ~/bin/libs/python
+      toGroja1 -y
 [ ] Set up root account: .bashrc, links to .bash_aliases*
     Copy and link files to ~tomh and ~root as appropriate
     As root:
       ln -s ~tomh/.bash_aliases .
-      ln -s ~tomh/.bash_aliases-ava  .
+      ln -s ~tomh/.bash_aliases-groja1  .
       ln -s ~tomh/bin  .
       ln -s ~tomh/.vimrc   .
       vi .bashrc    ## Add cusTOMizations

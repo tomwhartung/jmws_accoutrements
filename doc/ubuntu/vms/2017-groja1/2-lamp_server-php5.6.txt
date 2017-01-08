@@ -141,56 +141,43 @@ Finding the Right Copy of the Database
 [ ] Restore db:
     rs -h bette -d 2016_07_16 sm
     rs -h lauren -d 2016_07_16 sm  ## if that doesn't work
-
 [ ] seeourminds.com
     As root:
-      a2ensite 020-groja.com.conf
+      a2ensite 050-seeourminds.com.conf
       service apache2 stop
       service apache2 start
       l sites*/*.conf
     Should see the sites-available/020-groja.com.conf file linked to
       the sites-enabled directory
-    Access in browser:
+
+Checking the Site:
+------------------
+[ ] Access in browser:
       http://groja1.seeourminds.com
-
-
-
-
-Checking the Sites:
--------------------
-Checking all sites, in conjunction with getting them to work on jane and barbara:
-[ ] Checking the static sites:
-    [ ] artsyvisions.com
-    [ ] tomh.info
-[ ] Checking the WordPress site:
-    [ ] tomwhartung.com
-[ ] Checking the Joomla site:
-    [ ] joomoowebsites.com
-[ ] Checking the Drupal site:
-    [ ] tomhartung.com
-
-Back It All Up
---------------
-[ ] Ensure we have backups of everything, including a copy for off-site
-[ ] Set up (semi-)automatic backups as appropriate
-
 [ ] Disk Space Spotcheck:
-    /:        2.1G/22G (10%)
-    /home:    0.2G/4.5G (4%)
-    /var/www: 5.5G/13G (30%)
+    /:        2.5G/19G (15%)
+
+Copy/Back Up the VM - NOT!!
+---------------------------
+Our goal is to copy this VM to jane.
+[X] Reference (1):
+    http://askubuntu.com/questions/88962/backing-up-a-vm-server-to-an-external-usb-drive
+The answer in Reference (1) describes how to backup a VM at regular intervals.
+The question in Reference (1) describes how to copy the directory containing a VM to
+a thumb drive - whis is what we want to do.
+[X] Check feasibility:
+    Running:
+      du -sh /var/lib/libvirt
+    Shows it is usingonly 32K - so copying it is obviously not going to get me the whole thing!
+[X] Copy the /var/lib/libvirt directory to an ext4 thumb drive:
+[X] Tar the /var/lib/libvirt directory and copy the tar file to a FAT thumb drive:
+
+Copy/Back Up the VM - Second Try
+--------------------------------
+Our goal is to copy this VM to jane.
 
 Final Steps
 -----------
-[ ] Update apache logs config so we can tell which site each message applies to
-    Reference:
-      https://www.digitalocean.com/community/tutorials/how-to-configure-logging-and-log-rotation-in-apache-on-an-ubuntu-vps
-    Update all files in /etc/apache2/sites-available
-    Change:
-      CustomLog ${APACHE_LOG_DIR}/access.log combined
-    to
-      CustomLog ${APACHE_LOG_DIR}/access.log vhost_combined
-    and restart apache2:
-      sudo service apache2 restart
 [ ] Use logrotate to rotate apache logs weekly
     Reference:
       https://serversforhackers.com/managing-logs-with-logrotate
@@ -208,13 +195,5 @@ Final Steps
       "rotate 14" -> "rotate 52"
     and adding these lines to use dates for the log file name extensions (instead of .1, .2, etc.):
       dateext
-      dateformat -%Y-%m-%d-%s
-
-********************
-*** YOU ARE HERE ***
-********************
-
-Final Steps
------------
-[ ] Configure automatic wordpress updates
+      dateformat -%Y-%m-%d
 

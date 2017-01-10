@@ -86,20 +86,15 @@ References:
       sudo systemctl restart networking
     Delete the "bridge0 slave 1" connection under the "Ethernet" section
       This should prevent issues accessing jane from my other hosts
+    Network Connections app -> Find icon in launcher -> Lock to Launcher
     Network Connections app window -> Close
 [ ] Install kvm and dependencies, etc.:
     Run standard commands to update system:
       sudo apt-get update
       sudo apt-get upgrade
     Run commands to install kvm and dependencies (each reference is a little different):
-      Reference (1): sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
-        No virt-manager (the graphical user interface)
-      Reference (2): sudo apt-get install qemu-kvm libvirt-bin virt-manager
-        No bridge-utils (which we will probably want)
-      Reference (3): sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
-        Most complete of the lists (and safest)
-    This time (experimenting for the first time) we are going with door number (3):
-      sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
+      Using list from Reference (3), because it worked fine on bette:
+        sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
     Add tomh to the libvirtd group:
       sudo gpasswd -a tomh libvirtd
     Note: must re-login for this to take effect
@@ -109,5 +104,6 @@ References:
     If it doesn't work, you probably need to log out, for the gpasswd command to take effect, then log back in
 [ ] Start the Virtual Machine Manager
     Click on the Ubuntu "Search your computer" icon and search for "Virtual Machine Manager"
+    Virtual Machine Manager -> Find icon in launcher -> Lock to Launcher
 [ ] Create VMs
     --> See VM-specific instructions, in this repo, under doc/ubuntu/vms

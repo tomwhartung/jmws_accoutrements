@@ -43,3 +43,71 @@ Reference:
       which subl   ## /usr/bin/subl
       subl
 
+Install KVM for Working With VMs
+--------------------------------
+References:
+  (1) Looks to be a bit old but should be ok nonetheless:
+      https://help.ubuntu.com/community/KVM/Installation
+  (2) More recent (for 16.04) and includes steps to set up bridged networking:
+      https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+  (3) More recent:
+      https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
+[ ] Ensure the hardware supports virtualization:
+    As tomh:
+      egrep -c '(vmx|svm)' /proc/cpuinfo
+    Output must be > 0
+      (else use virtualbox or VMware)
+[ ] Check for 64-bit OS
+      uname -m
+    Output should be 'x86_64'
+    ('x86_64 is synonymous with amd64.')
+[ ] Set up bridged networking:
+    See reference (2):
+      https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
+    Search apps (first icon in tool bar) for Network
+    Open Network Connections app
+    See list of networks (Wired connection 1, etc.)
+    Add -> Connection Type: Virtual -> Bridge -> Dialog
+    Must be checked:
+      General tab -> Automatically connect to this network when it is available
+      General tab -> All users may connect to this network
+      Bridge tab -> Add -> Connection Type: Ethernet -> Create...
+        Editing bridge0 slave 1 Dialog:
+          Ethernet tab -> Device: (select) enp2s0f0 (B8:88:E3:48:23:77)
+            This is the Wired Connection we have set up for general use
+          General tab -> Automatically connect to this network when it is available
+          General tab -> All users may connect to this network
+          Save
+    All others: accept defaults (for now):
+      Bridge tab -> name: bridge0
+      IPv4 Settings tab -> Method: DHCP
+      Save
+    Run command:
+      sudo systemctl restart networking
+    Delete the "bridge0 slave 1" connection under the "Ethernet" section
+      This should prevent issues accessing jane from my other hosts
+    Network Connections app window -> Close
+[ ] Install kvm and dependencies, etc.:
+    Run standard commands to update system:
+      sudo apt-get update
+      sudo apt-get upgrade
+    Run commands to install kvm and dependencies (each reference is a little different):
+      Reference (1): sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+        No virt-manager (the graphical user interface)
+      Reference (2): sudo apt-get install qemu-kvm libvirt-bin virt-manager
+        No bridge-utils (which we will probably want)
+      Reference (3): sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
+        Most complete of the lists (and safest)
+    This time (experimenting for the first time) we are going with door number (3):
+      sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager virtinst virt-viewer
+    Add tomh to the libvirtd group:
+      sudo gpasswd -a tomh libvirtd
+    Note: must re-login for this to take effect
+[ ] Check installation:
+    Run command:
+      virsh list --all
+    If it doesn't work, you probably need to log out, for the gpasswd command to take effect, then log back in
+[ ] Start the Virtual Machine Manager
+    Click on the Ubuntu "Search your computer" icon and search for "Virtual Machine Manager"
+[ ] Create VMs
+    --> See VM-specific instructions, in this repo, under doc/ubuntu/vms

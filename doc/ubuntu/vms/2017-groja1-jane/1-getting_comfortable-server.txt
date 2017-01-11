@@ -1,0 +1,115 @@
+
+ Getting Comfortable
+=====================
+Install the basic stuff we need to get around and do the other stuff.
+
+This is the process we are running to set up the vm groja1.
+-----------------------------------------------------------
+The goal is to:
+
+1. Downgrade to php5 and
+2. Get the joomla 1.x version of groja.com/seeourminds.com working
+
+Server Necessities for Comfortableness
+--------------------------------------
+[ ] Install any new updates
+    sudo apt-get update
+    sudo apt-get upgrade
+[ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
+    -> Note: many packages already installed
+       See ./0-windows_install.txt, under Questions and Answers -> Packages to install
+    sudo apt-get -y install rcs vim subversion
+    sudo apt-get -y install openssh-server
+    sudo apt-get -y install git git-svn
+    sudo apt-get -y install python        # aka python2 - was not part of the installation??
+[ ] Setup static IP
+    References:
+      http://askubuntu.com/questions/766131/set-static-ip-ubuntu-16-04
+      https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
+    As root:
+      cd /etc/network
+      mkdir RCS
+      ci -l interfaces
+      vi interfaces
+      -> Update as indicated in References above
+      address 192.168.122.50
+        netmask 255.255.255.0
+        gateway 10.0.0.1
+      dns-nameservers 192.168.30.2 192.168.31.2
+    NOTE:
+      Restarting the network service (/etc/init.d/networking stop|start|restart) had no effect!
+      Had to reboot for it to work!
+[ ] Setup ssh
+    As tomh in the VM (groja1):
+      ssh-keygen
+      cd .ssh
+      mkdir ../tmp
+      cp id_rsa.pub ../tmp
+      mv id_rsa.pub id_rsa.pub-groja1
+    As root on bette:
+      cd /etc
+      vi hosts    # add "192.168.122.50 groja1 groja1.seeourminds.com"
+    As tomh on bette:
+      cd
+      cp .ssh/id_rsa.pub tmp/id_rsa.pub-bette
+      cd tmp
+      scp id_rsa.pub-bette groja1:/home/tomh/tmp
+      scp groja1:/home/tomh/tmp/id_rsa.pub-groja1 .
+      cat id_rsa.pub-groja1 ../.ssh/authorized_keys
+      mv id_rsa.pub-groja1 ../.ssh/pubs
+    As tomh in the VM (groja1):
+      cd ~/.ssh
+      mv ../tmp/id_rsa.pub-bette .
+      cp id_rsa.pub-bette authorized_keys
+      mkdir pubs
+      mv id_rsa.pub-bette pubs
+    As tomh on bette (test!):
+      ssh groja1   ## this should work, if not, figure out what went wrong!
+[ ] Create and test the standard ssh wrapper scripts:
+    o ~/bin/lsGroja1
+    o ~/bin/toGroja1
+    o ~/bin/diffGroja1
+    o ~/bin/fromGroja1
+    As tomh on bette:
+      cd /var/www/jmws_accoutrements
+      cd bin/libs/bash
+      vi remote_host_ls    # enable using script with groja1
+      vi remote_host_from  # optional: enable using script with groja1
+      ## Commit these remote_host_* scripts to github when they are working ok
+      cd ~/bin
+      cp lsRita lsGroja1
+      cp fromRita fromGroja1
+      cp toRita toGroja1
+      cp diffRita diffGroja1
+      vi *Groja1
+      cd ~/tmp
+      lsGroja1
+      toGroja1 hello.txt
+      fromGroja1 hello.txt
+      diffGroja1 hello.txt
+      cd ~/bin
+      ci -l *Groja1
+      toEmAll *Groja1   # for consistency...
+[ ] Home Directory - should be minimal for servers
+    Copy required files from home directory on any other host
+    As tomh on bette:
+      toGroja1 .bashrc .bash_aliases* .gitconfig .vimrc r*
+    Copy required directories from home directory on any other host
+      cd ~/backup/db
+      toGroja1 -y
+      cd ~/bin
+      toGroja1 -y
+      cd ~/bin/libs/python
+      toGroja1 -y
+[ ] Set up root account: .bashrc, links to .bash_aliases*
+    Copy and link files to ~tomh and ~root as appropriate
+    As root:
+      ln -s ~tomh/.bash_aliases .
+      ln -s ~tomh/.bash_aliases-groja1  .
+      ln -s ~tomh/bin  .
+      ln -s ~tomh/.vimrc   .
+      vi .bashrc    ## Add cusTOMizations
+      which ci
+      mkdir RCS
+      ci -l .bashrc
+

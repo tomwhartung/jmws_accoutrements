@@ -1,23 +1,12 @@
 
- Fresh Install of Ubuntu in a New VM
-=====================================
-Download correct iso file, verify md5sum, and burn to CD
-
-Plan:
------
-1. Install Ubuntu 16.04 LAMP Server from CDROM
-2. Downgrade to PHP 5
-3. Get joomla 1.x version of groja.com/seeourminds.com to run in VM
+ Installing Groja VM on Jane
+=============================
+Prerequisite: Thumb drive with copy of VM built on bette.
 
 References:
 -----------
-KVM Home page:
-    https://help.ubuntu.com/community/KVM
-More recent (for 16.04) and includes steps to set up bridged networking:
-    https://linuxconfig.org/simple-virtualization-with-ubuntu-16-04-and-kvm
-Also more recent:
-    https://www.linuxbabe.com/desktop-linux/how-to-install-kvm-and-create-virtual-machines-on-ubuntu-desktop
-These are similar to the ones we used in 3-experimenting_with_extras.txt .
+See ../2017-groja1-bette/0-vm_install.txt
+Because we have already created the VM, this process is considerably easier.
 
 On Linux System, Before Installing a New VM:
 --------------------------------------------
@@ -25,44 +14,39 @@ On Linux System, Before Installing a New VM:
 [ ] Install KVM and dependencies
     See doc/ubuntu/specific_hosts/2016-bette/3-experimenting_with_extras.txt
 
-1. Install Ubuntu 16.04 LAMP Server:
-------------------------------------
-[ ] Start the Virtual Machine Manager
-    Use the "Search your computer" Ubuntu icon to find it
-[ ] Create a new VM
-    Click on first icon (screen + flashlight)
-    Local install media (CDROM) -> Forward
-    Use CDROM or DVD -> Forward
-    Memory: 1024M (*); CPUs (Up to 4 available): 1 -> Forward
-      These are the default values
-      (*) Using less than 1G on ava
-    Enable storage - Create a disk image: 20G -> Forward
-      20G is the default value
-      209G available in the default location (/var/lib/libvirt/images/)
-    Name: groja1 -> Finish
-      The linuxconfig reference says the last screen has an option to select bridged networking
-        It says it should be selected by default
-      I did not notice this but a screenshot in the linuxbabe.com reference shows a
-        dropdown widget allowing us to set "Advanced options"
-    --> Next time, open this up to see what options are there.
-    Creating the image...
-[ ] Configuring install as usual
-    Ctrl+Alt+L to release mouse from inside vm
-    Language and Keyboard selection...
-    Configure the network - hostname: groja1:
-    Tom H./tomh
-[ ] Disk partitions:
-    Using default selection:
-      Guided - use entire disk and set up LVM
-[ ] Installing: More Questions and Answers
-    Automatic updates?
-    -> Install security updates automatically
-    Packages to install?
-    -> Manual package selection (not selected on ava)
-    -> LAMP server
-    -> standard system utilities (already checked)
-    -> OpenSSH server
-    Install GRUB -> Yes
-    Installation complete -> Continue
+Unpack tar file and use it to create a new VM
+---------------------------------------------
+[ ] Find a file system with at least 22G of disk, needed to unpack the tar file (!!!)
+    As root:
+      mkdir /usr/local/tar/zzz-unpack_vm
+      cd /usr/local/tar/zzz-unpack_vm
+      cp /media/tomh/FATTHUMB4-1/var_lib_libvirt-groja1.tgz .
+      tar -xvzf var_lib_libvirt-groja1.tgz
+      chown -R tomh libvirt
+    Must run chown to avoid permissions issues later
+    Warning: this takes up a lot (22G) of disk!
+[ ] Run KVM Virtual Machine Manager and create a new VM
+    Use icon locked to launcher or use Search your computer icon to start the
+      KVM Virtual Machine Manager
+    File -> New VM: New VM dialog
+      Import existing disk image -> Forward
+      Provide the existing storage path:
+        Browse (local) to: /usr/local/tar/zzz-unpack_vm/images
+        Select file: groja1.qcow2 -> Forward
+      Choose Memory and CPU settings (accept defaults)
+        Memory (RAM): 1024 MiB
+        CPUs: 1 (Up to 2 available) -> Forward
+      Create a new virtual machine
+        Name: groja1 -> Finish
+    ***
+    *** Did not specify an operating system (if there are issues we may want to try again)
+    *** Did not expand Network selection widget dropdown (if there are issues we may want to try again)
+    ***
+[ ] Cleanup
+    As root:
+      cd /usr/local/tar/zzz-unpack_vm
+      rm -fr *
+      cd ..
+      rmdir zzz-unpack_vm
 
 

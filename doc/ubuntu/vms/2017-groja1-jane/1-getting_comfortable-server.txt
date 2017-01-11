@@ -3,68 +3,33 @@
 =====================
 Install the basic stuff we need to get around and do the other stuff.
 
-This is the process we are running to set up the vm groja1.
------------------------------------------------------------
-The goal is to:
-
-1. Downgrade to php5 and
-2. Get the joomla 1.x version of groja.com/seeourminds.com working
+This is the process we are running to set up the vm groja1 on jane.
+-------------------------------------------------------------------
+Most of this has already been done on bette.
+For details, see ../2017-groja1-bette/1-getting_comfortable-server.txt .
 
 Server Necessities for Comfortableness
 --------------------------------------
-[ ] Install any new updates
-    sudo apt-get update
-    sudo apt-get upgrade
-[ ] Install rcs, vim, subversion, openssh-server, git, git-svn, (??git-stuff, git-magic??)
-    -> Note: many packages already installed
-       See ./0-windows_install.txt, under Questions and Answers -> Packages to install
-    sudo apt-get -y install rcs vim subversion
-    sudo apt-get -y install openssh-server
-    sudo apt-get -y install git git-svn
-    sudo apt-get -y install python        # aka python2 - was not part of the installation??
-[ ] Setup static IP
-    References:
-      http://askubuntu.com/questions/766131/set-static-ip-ubuntu-16-04
-      https://michael.mckinnon.id.au/2016/05/05/configuring-ubuntu-16-04-static-ip-address/
-    As root:
-      cd /etc/network
-      mkdir RCS
-      ci -l interfaces
-      vi interfaces
-      -> Update as indicated in References above
-      address 192.168.122.50
-        netmask 255.255.255.0
-        gateway 10.0.0.1
-      dns-nameservers 192.168.30.2 192.168.31.2
-    NOTE:
-      Restarting the network service (/etc/init.d/networking stop|start|restart) had no effect!
-      Had to reboot for it to work!
-[ ] Setup ssh
-    As tomh in the VM (groja1):
-      ssh-keygen
-      cd .ssh
-      mkdir ../tmp
-      cp id_rsa.pub ../tmp
-      mv id_rsa.pub id_rsa.pub-groja1
-    As root on bette:
+[ ] Setup ssh from jane to groja1
+    As root on jane:
       cd /etc
       vi hosts    # add "192.168.122.50 groja1 groja1.seeourminds.com"
-    As tomh on bette:
+    As tomh on jane:
       cd
-      cp .ssh/id_rsa.pub tmp/id_rsa.pub-bette
+      cp .ssh/id_rsa.pub tmp/id_rsa.pub-jane
       cd tmp
       scp id_rsa.pub-bette groja1:/home/tomh/tmp
-      scp groja1:/home/tomh/tmp/id_rsa.pub-groja1 .
-      cat id_rsa.pub-groja1 ../.ssh/authorized_keys
-      mv id_rsa.pub-groja1 ../.ssh/pubs
+      cd ../.ssh/pubs
+      fromBette id_rsa.pub-groja1
+      cat id_rsa.pub-groja1 >> ../authorized_keys
     As tomh in the VM (groja1):
       cd ~/.ssh
-      mv ../tmp/id_rsa.pub-bette .
-      cp id_rsa.pub-bette authorized_keys
-      mkdir pubs
-      mv id_rsa.pub-bette pubs
-    As tomh on bette (test!):
+      mv ../tmp/id_rsa.pub-jane .
+      cat id_rsa.pub-jane >> authorized_keys
+      mv id_rsa.pub-jane pubs
+    As tomh on jane (test!):
       ssh groja1   ## this should work, if not, figure out what went wrong!
+
 [ ] Create and test the standard ssh wrapper scripts:
     o ~/bin/lsGroja1
     o ~/bin/toGroja1

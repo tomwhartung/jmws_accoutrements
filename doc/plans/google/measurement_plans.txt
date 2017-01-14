@@ -1,19 +1,40 @@
 
- Business Objectives
-=====================
+ Business Objectives and Measureable Outcomes
+==============================================
+
+
+Business Objectives
+-------------------
+Now that we have these, we can redesign all these sites from scratch.
 
 Site                 Business Objective
 ------------------------------------------------------------------------
 groja.com            Lead Generation - for personal spiritual portraits
 seeourminds.com      Content - display ads and drive visits to groja.com
 joomoowebsites.com   Branding or Lead Generation - device detection
-tomwhartung.com      Lead Generation - for freelancing
+tomwhartung.com      Lead Generation - for freelance consulting
 tomhartung.com       Possible Branding or future E-Commerce site?
 
-Site   Objective
+Monetization
+------------
+How I can profit from each of these sites.
+
+Site                 Income Source
 -----------------------------------------------------
-groja.com
-seeourminds.com
-joomoowebsites.com
-tomwhartung.com
-tomhartung.com
+groja.com            Sell spiritual portraits to individuals
+seeourminds.com      Display AdWords
+joomoowebsites.com   Device Detection (etc.?) and LAMP CMSes
+tomwhartung.com      Freelance consulting KISS: start with the basics
+tomhartung.com       Future: e-commerce: sell albums
+
+Measureable Outcomes
+--------------------
+Google Analytics and Google Tag Manager make it possible to measure what users do at these sites.
+
+Site                 Measureable Outcomes
+-----------------------------------------------------
+groja.com            
+seeourminds.com      
+joomoowebsites.com   
+tomwhartung.com      
+tomhartung.com         

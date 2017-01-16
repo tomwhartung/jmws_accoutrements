@@ -1,40 +1,78 @@
 
- Conversions and Measureable Outcomes
-======================================
-Conversions are measurable, but we need to define precisely what they are
-so that we can create the marketing tags needed to measure them.
+ Messaging
+===========
+This work is inspired by some Digital Marketing Workshops (meetups)
+I have been going to, put on by Dan Stratford of Stratex Digital Marketing.
 
-Micro and Macro Conversions
----------------------------
-Calls to Action and Conversions are key to making money on the web.
+References
+----------
+See documents in ~/marketing/advice/Stratex/ , especially
+Stratex-5-Messaging-Platform.docx .
+Of particular interest, when we get to segments, could be the first two
+of those documents, that concern personas.
 
-Macro Conversions:
-CM-B Contact me to buy something
-CM-G Contact me for a personalized Spiritual Portrait
-CM-J Contact me for Device Detection & LAMP CMSes work
-CM-T Contact me for Freelance Consulting work
+Message Types
+-------------
+(1) Engagement Message
+- What issue will get their attention?
+- What problem of theirs can you solve?
 
-Micro Conversions:
-NL-B Sign up for new products newsletter
-NL-J Sign up for joomoowebsites.com newsletter
-NL-S Sign up for seeourminds.com newsletter
+(2) Solution Message
+- What are the criteria that must be met to best address the persona's problem?
 
-                      Conversions
-Site                 Macro   Micro
-----------------------------------
-groja.com            CM-G    NL-S
-seeourminds.com      CM-G    NL-S
-joomoowebsites.com   CM-J    NL-J
-tomwhartung.com      CM-T    NL-J
-tomhartung.com       CM-B    NL-B
+(3) Reinforcement Message
+- Describe your solution and how and why it is the best option for addressing
+  the solution criteria
+- Highlight the key points of differentiation (as it relates to the nearest
+  competitive alternatives)
 
-Measureable Outcomes
---------------------
-Google Analytics and Google Tag Manager make it possible to measure
-what users do at these sites, but we must define precisely what user
-actions we want to measure.
+(4) Value Message
+- As a result of implementing your offering, how will their life be better than before?
+- What metrics can the customer use to prove the value of your offering?
 
-Site                 Measureable Outcomes
+
+Engagement Message
+------------------
+Get their attention by offering to solve one or more of their problems
+
+Site                 Engagement Message
+-----------------------------------------------------
+groja.com            
+seeourminds.com      
+joomoowebsites.com   
+tomwhartung.com      
+tomhartung.com         
+
+Solution Message
+----------------
+Describe the solution offered to address the problem.
+
+Site                 Solution Message
+-----------------------------------------------------
+groja.com            
+seeourminds.com      
+joomoowebsites.com   
+tomwhartung.com      
+tomhartung.com         
+
+Reinforcement Message
+---------------------
+Clearly describe the solution, and how it is different from
+the alternatives.
+
+Site                 Reinforcement Message
+-----------------------------------------------------
+groja.com            
+seeourminds.com      
+joomoowebsites.com   
+tomwhartung.com      
+tomhartung.com         
+
+Value Message
+-------------
+Describe the value of my offering.
+
+Site                 Value Message
 -----------------------------------------------------
 groja.com            
 seeourminds.com      

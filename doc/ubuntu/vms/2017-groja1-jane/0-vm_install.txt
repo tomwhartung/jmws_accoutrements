@@ -16,6 +16,13 @@ On Linux System, Before Installing a New VM:
 
 Unpack tar file and use it to create a new VM
 ---------------------------------------------
+***
+*** THIS DID NOT WORK
+*** WHEN I TRIED TO ACCESS THE VM, IT SAID IT COULD NOT FIND THE FILE /usr/local/tar/zzz-unpack_vm
+*** THIS IS OBVIOUSLY BECAUSE WE DELETED IT
+*** KEEPING THESE STEPS FOR FUTURE REFERENCE
+*** SEE BELOW FOR DETAILS ON OUR NEXT ATTEMPT
+***
 [ ] Find a file system with at least 22G of disk, needed to unpack the tar file (!!!)
     As root:
       mkdir /usr/local/tar/zzz-unpack_vm
@@ -49,4 +56,10 @@ Unpack tar file and use it to create a new VM
       cd ..
       rmdir zzz-unpack_vm
 
+***
+*** Trying the process again, this time:
+*** -> Create new filesystem for working with VMs
+*** -> Mount this new filesystem on /var/lib/libvirt
+*** -> Copy only the images/groja1.qcow2 file into the new partition (e.g., into a from_bette directory)
+***
 

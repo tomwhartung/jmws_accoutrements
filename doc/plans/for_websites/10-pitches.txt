@@ -2,12 +2,14 @@
  Pitches
 =========
 These are based on the six types covered in Daniel H. Pink's book
-To Sell Is Human.  I won't be completing all of these right away, but
-want to have a place to put ideas as they come to me.
+To Sell Is Human.  Quotes come from his book.
+
+I won't be completing all of these right away, but want to have a
+place to put ideas as they come to me.
 
 (1) One-word Pitches
 --------------------
-For today's short attention spans.
+The shortest pitches possible, for today's short attention spans.
 
 Site                 One-word Pitch
 -----------------------------------------------------
@@ -17,9 +19,10 @@ joomoowebsites.com   RESS
 tomwhartung.com      Polyglot
 tomhartung.com       Collector
 
-(2) One-word Pitches
+(2) Question Pitches
 --------------------
-For today's short attention spans.
+"When I make a statement, you can receive it passively.  When I
+ask a question, you are compelled to respond."
 
 Site                 One-word Pitch
 -----------------------------------------------------
@@ -29,11 +32,12 @@ joomoowebsites.com
 tomwhartung.com      
 tomhartung.com       
 
-(3) One-word Pitches
---------------------
-For today's short attention spans.
+(3) Rhyming Pitches
+-------------------
+"Rhymes boost what linguists and cognitive scientists call
+`processing fluency.`"
 
-Site                 One-word Pitch
+Site                 Rhyming Pitch
 -----------------------------------------------------
 groja.com            
 seeourminds.com      
@@ -41,11 +45,17 @@ joomoowebsites.com
 tomwhartung.com      
 tomhartung.com       
 
-(4) One-word Pitches
---------------------
-For today's short attention spans.
+(4) Email Subject Line Pitches
+------------------------------
+You have 60 characters max, to get them to read the email.
 
-Site                 One-word Pitch
+Research has shown that these techniques work best:
+-> Utility - show how the site is useful.
+-> Curiosity - make people want to learn more.
+"[Y]our email subject line should be either obviously useful or
+mysteriously intriguing, but probably not both."
+
+Site                 Email Subject Line Pitch
 -----------------------------------------------------
 groja.com            
 seeourminds.com      
@@ -53,26 +63,60 @@ joomoowebsites.com
 tomwhartung.com      
 tomhartung.com       
 
-(5) One-word Pitches
---------------------
-For today's short attention spans.
+(5) Twitter Pitches
+-------------------
+Engage the reader and make them want to take the conversation further,
+usign a maximum of 140 characters.  I personally insist that these be
+100% grammatically correct!
+Questions work well, as do freshness, newness, and clarity.
 
-Site                 One-word Pitch
+Site                 Twitter Pitch
 -----------------------------------------------------
+                              1         2         3         4         5         6         7
+                     ....5....0....5....0....5....0....5....0....5....0....5....0....5....0
 groja.com            
+                   ->
 seeourminds.com      
+                   ->
 joomoowebsites.com   
+                   ->
 tomwhartung.com      
+                   ->
 tomhartung.com       
 
-(6) One-word Pitches
---------------------
-For today's short attention spans.
 
-Site                 One-word Pitch
------------------------------------------------------
-groja.com            
-seeourminds.com      
-joomoowebsites.com   
-tomwhartung.com      
-tomhartung.com       
+(6) Pixar Pitches
+-----------------
+Use this formula for telling the story behind the site.
+
+[ ] Pixar Pitch for groja.com:
+Once upon a time, ______.
+Every day, ______.
+On day, ______.
+Because of that, ______.
+Until finally, ______.
+
+[ ] Pixar Pitch for seeourminds.com:
+Once upon a time, ______.
+Every day, ______.
+On day, ______.
+Because of that, ______.
+Until finally, ______.
+
+[ ] Pixar Pitch for joomoowebsites.com:
+Once upon a time, ______.
+Every day, ______.
+On day, ______.
+Because of that, ______.
+Until finally, ______.
+
+[X] Pixar Pitch for tomwhartung.com:
+See http://tomwhartung.com/about
+
+[ ] Pixar Pitch for tomhartung.com:
+Once upon a time, ______.
+Every day, ______.
+On day, ______.
+Because of that, ______.
+Until finally, ______.
+

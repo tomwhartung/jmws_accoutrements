@@ -1,11 +1,18 @@
 
- Business Objectives and Measureable Outcomes
-==============================================
+ Business Objectives
+=====================
+As of 2017, the core reasons for working on these sites has changed:
 
+o from demonstrating that I am capable of using this technology
+o to actually making money directly from this work.
+
+Thus, we pretty much need to rework them from scratch, and this is
+where we start.
 
 Business Objectives
 -------------------
-Now that we have these, we can redesign all these sites from scratch.
+These are based on some of what I learned taking the Google Analytics
+classes at analyticsacademy.withgoogle.com over the weekend.
 
 Site                 Business Objective
 ------------------------------------------------------------------------
@@ -17,7 +24,8 @@ tomhartung.com       E-commerce - sell albums and display AdWords ads
 
 Monetization
 ------------
-How I can profit from each of these sites.
+How I can profit from each of these sites, without having to rely on recruiters
+or friends to find me work.
 
 Site                 Income Source
 ----------------------------------------------------------------
@@ -40,38 +48,3 @@ joomoowebsites.com   to sell Device Detection and LAMP CMSes
 tomwhartung.com      to sell my general freelance consulting services
 tomhartung.com       to sell my music (albums and CDs)
 
-Micro and Macro Conversions
----------------------------
-Calls to Action and Conversions are key to making money on the web.
-
-Macro Conversions:
-CM-B Contact me to buy something
-CM-G Contact me for a personalized Spiritual Portrait
-CM-J Contact me for Device Detection & LAMP CMSes work
-CM-T Contact me for Freelance Consulting work
-
-Micro Conversions:
-NL-B Sign up for new products newsletter
-NL-J Sign up for joomoowebsites.com newsletter
-NL-S Sign up for seeourminds.com newsletter
-
-                      Conversions
-Site                 Macro   Micro
-----------------------------------
-groja.com            CM-G    NL-S
-seeourminds.com      CM-G    NL-S
-joomoowebsites.com   CM-J    NL-J
-tomwhartung.com      CM-T    NL-J
-tomhartung.com       CM-B    NL-B
-
-Measureable Outcomes
---------------------
-Google Analytics and Google Tag Manager make it possible to measure what users do at these sites.
-
-Site                 Measureable Outcomes
------------------------------------------------------
-groja.com            
-seeourminds.com      
-joomoowebsites.com   
-tomwhartung.com      
-tomhartung.com         

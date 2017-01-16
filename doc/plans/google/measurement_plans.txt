@@ -10,22 +10,22 @@ Now that we have these, we can redesign all these sites from scratch.
 Site                 Business Objective
 ------------------------------------------------------------------------
 groja.com            Lead Generation - for personal spiritual portraits
-seeourminds.com      Content - display ads and drive visits to groja.com
-joomoowebsites.com   Branding or Lead Generation - device detection
+seeourminds.com      Content - drive visits to groja.com and display AdWords ads
+joomoowebsites.com   Branding or Lead Generation - device detection in LAMP CMSes
 tomwhartung.com      Lead Generation - for freelance consulting
-tomhartung.com       Possible Branding or future E-Commerce site?
+tomhartung.com       E-commerce - sell albums and display AdWords ads
 
 Monetization
 ------------
 How I can profit from each of these sites.
 
 Site                 Income Source
------------------------------------------------------
+----------------------------------------------------------------
 groja.com            Sell spiritual portraits to individuals
-seeourminds.com      Display AdWords
+seeourminds.com      Display AdWords ads
 joomoowebsites.com   Device Detection (etc.?) and LAMP CMSes
 tomwhartung.com      Freelance consulting KISS: start with the basics
-tomhartung.com       Future: e-commerce: sell albums
+tomhartung.com       Sell batches of albums and CDs and display AdWords ads
 
 Mission Statements
 ------------------

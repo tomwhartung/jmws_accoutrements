@@ -19,13 +19,13 @@ elif [ $this_hostname == "barbara" ]; then
    more_dirs="Pictures technical"
    mail_dirs=""
 elif [ $this_hostname == "bette" ]; then
-   more_dirs="Downloads jobsearch personal technical work"
+   more_dirs="Downloads jobsearch marketing personal technical work"
    mail_dirs=".thunderbird"
 elif [ $this_hostname == "humphrey" ]; then
    more_dirs="iot"
    mail_dirs=""
 elif [ $this_hostname == "jane" ]; then
-   more_dirs="Downloads jobsearch personal technical work"
+   more_dirs="Downloads jobsearch marketing personal technical work"
    mail_dirs=""
 elif [ $this_hostname == "lauren" ]; then
    more_dirs="Downloads personal technical"

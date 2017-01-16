@@ -63,3 +63,35 @@ Unpack tar file and use it to create a new VM
 *** -> Copy only the images/groja1.qcow2 file into the new partition (e.g., into a from_bette directory)
 ***
 
+Create new filesystem for working with VMS
+------------------------------------------
+[ ] Insert the Ubuntu installation disk and boot into Ubuntu 16.04 (may take awhile)
+    Select Try Ubuntu (may take awhile)
+[ ] Use the "Disks" application to create a new 50G partition for VMs
+    Use the Ubuntu home icon to find the "Disks" app and open it
+    Select the last (spare) partition
+    Delete it
+    Select the new unused space and create a 50G partition
+    -> When I did this, all my partitions disappeared!
+    -> Omfg I thought I would have a holy heart attack!
+    -> Turns out they were still there, this app must have a bug!
+[ ] Reboot (removing the installation CD)
+[ ] Update /etc/fstab to:
+    - mount the new partition (sda13) on /var/lib/libvirt
+    - mount the new spare partition (sda14) on /mnt/spare/sda14
+    As root:
+      blkid /dev/sda13
+      blkid /dev/sda14
+      cd /etc
+      vi fstab
+[ ] Mount the new partition on /var/lib/libvirt-new
+    As root:
+      cd /var/lib
+      mkdir libvirt-new
+      mount /dev/sda13 libvirt-new
+[ ] Copy the current libvirt/* files to the new partition
+    As root:
+      cd /var/lib
+      cp -rp libvirt/* libvirt-new
+      mv libvirt libvirt-current ; mkdir libvirt
+

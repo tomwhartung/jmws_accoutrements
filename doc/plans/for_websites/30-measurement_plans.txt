@@ -1,44 +1,8 @@
 
- Business Objectives and Measureable Outcomes
-==============================================
-
-
-Business Objectives
--------------------
-Now that we have these, we can redesign all these sites from scratch.
-
-Site                 Business Objective
-------------------------------------------------------------------------
-groja.com            Lead Generation - for personal spiritual portraits
-seeourminds.com      Content - drive visits to groja.com and display AdWords ads
-joomoowebsites.com   Branding or Lead Generation - device detection in LAMP CMSes
-tomwhartung.com      Lead Generation - for freelance consulting
-tomhartung.com       E-commerce - sell albums and display AdWords ads
-
-Monetization
-------------
-How I can profit from each of these sites.
-
-Site                 Income Source
-----------------------------------------------------------------
-groja.com            Sell spiritual portraits to individuals
-seeourminds.com      Display AdWords ads
-joomoowebsites.com   Device Detection (etc.?) and LAMP CMSes
-tomwhartung.com      Freelance consulting KISS: start with the basics
-tomhartung.com       Sell batches of albums and CDs and display AdWords ads
-
-Mission Statements
-------------------
-I probably should have actually written these down before even buying the
-domain names.  Better late than never, I guess!
-
-Site                 Mission Statement
----------------------------------------------------------------------
-groja.com            to sell personalized Spiritual Portraits
-seeourminds.com      to show visitors how to visualize personalities
-joomoowebsites.com   to sell Device Detection and LAMP CMSes
-tomwhartung.com      to sell my general freelance consulting services
-tomhartung.com       to sell my music (albums and CDs)
+ Conversions and Measureable Outcomes
+======================================
+Conversions are measurable, but we need to define precisely what they are
+so that we can create the marketing tags needed to measure them.
 
 Micro and Macro Conversions
 ---------------------------
@@ -66,7 +30,9 @@ tomhartung.com       CM-B    NL-B
 
 Measureable Outcomes
 --------------------
-Google Analytics and Google Tag Manager make it possible to measure what users do at these sites.
+Google Analytics and Google Tag Manager make it possible to measure
+what users do at these sites, but we must define precisely what user
+actions we want to measure.
 
 Site                 Measureable Outcomes
 -----------------------------------------------------

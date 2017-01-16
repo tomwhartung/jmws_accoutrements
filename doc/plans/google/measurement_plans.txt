@@ -27,15 +27,30 @@ joomoowebsites.com   Device Detection (etc.?) and LAMP CMSes
 tomwhartung.com      Freelance consulting KISS: start with the basics
 tomhartung.com       Future: e-commerce: sell albums
 
+Mission Statements
+------------------
+I probably should have actually written these down before even buying the
+domain names.  Better late than never, I guess!
+
+Site                 Mission Statement
+---------------------------------------------------------------------
+groja.com            to sell personalized Spiritual Portraits
+seeourminds.com      to show visitors how to visualize personalities
+joomoowebsites.com   to sell Device Detection and LAMP CMSes
+tomwhartung.com      to sell my general freelance consulting services
+tomhartung.com       to sell my music (albums and CDs)
+
 Micro and Macro Conversions
 ---------------------------
-Macro:
+Calls to Action and Conversions are key to making money on the web.
+
+Macro Conversions:
 CM-B Contact me to buy something
 CM-G Contact me for a personalized Spiritual Portrait
 CM-J Contact me for Device Detection & LAMP CMSes work
 CM-T Contact me for Freelance Consulting work
 
-Micro:
+Micro Conversions:
 NL-B Sign up for new products newsletter
 NL-J Sign up for joomoowebsites.com newsletter
 NL-S Sign up for seeourminds.com newsletter

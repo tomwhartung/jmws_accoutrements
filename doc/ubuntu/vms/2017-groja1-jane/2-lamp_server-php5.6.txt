@@ -27,61 +27,21 @@ Disk Space Spotcheck on jane
 So, we have room for 10 more in our new partition, nice!
 
 
-Copy/Back Up the VM - First Tries
----------------------------------
-Our goal is to copy this VM to jane.  Once it is set up there,
-all we need to do is sync the db.
-[ ] Reference (1):
-    http://askubuntu.com/questions/88962/backing-up-a-vm-server-to-an-external-usb-drive
-The answer in Reference (1) describes how to backup a VM at regular intervals.
-The question in Reference (1) describes how to copy the directory containing a VM to
-a thumb drive - whis is what we want to do.
-[ ] Check feasibility:
-    Run as tomh:
-      du -sh /var/lib/libvirt
-    Shows it is using only 32K - so copying as tomh it is obviously not going to get me the whole thing!
-    Run as tomh:
-      sudo du -sh libvirt/
-    Shows it is using 4.4G - but running as root anyway
-[ ] Check feasibility - as root, copying after Saving:
-    In the virtual machine window - "groja1 on QEMU/KVM:"
-      Virtual Machine -> Shutdown -> Save
-    Run as root:
-      du -sh /var/lib/libvirt
-    As root after Saving - shows it is using 4.4G - so copying as root is worth trying!
-[ ] Copy the /var/lib/libvirt directory to an ext4 thumb drive:
-    Run as root:
-      cp -rp libvirt /media/tomh/ext4Thumb/var_lib/
-    To check progress, run as tomh:
-      sudo du -sh /media/tomh/ext4Thumb/var_lib/
-[ ] Tar the /var/lib/libvirt directory and copy the tar file to a FAT thumb drive:
-    Run as root:
-      cd /var/lib
-      tar -cvzf var_lib_libvirt-groja1.tgz libvirt/
-      mv var_lib_libvirt-groja1.tgz /media/tomh/
+Copy/Back Up the VM - Notes
+---------------------------
+Because we were able to quickly recreate the VM on jane using just the
+groja1.qcow2 file, we know that it is what we need to back up.
 
-Copy/Back Up the VM - Second Try
---------------------------------
-Our goal is to copy this VM to jane....
+There's really no reason to back up the one on bette, because ultimately
+we had to do very little to get it going.
+
+-> If we are backing up to an ext4 file system,
+     we just need the /var/lib/libvirt/images/groja1.qcow2 file
+-> If we are backing up to a FAT32 file system,
+     we need a tar file containing just the /var/lib/libvirt/images/groja1.qcow2 file
 
 Final Steps
 -----------
 [ ] Use logrotate to rotate apache logs weekly
-    Reference:
-      https://serversforhackers.com/managing-logs-with-logrotate
-    Ensure logrotate is installed:
-      sudo dpkg-query --list '*rotate*'
-    Check installed version of the logrotate conf file for apache into RCS
-    As root:
-      cd /etc/logrotate.d
-      mkdir RCS
-      ci -l apache2    ## "Installed version"
-    Edit the config file as desired
-      sudo vi /etc/logrotate.d/apache2
-    This time we are changing it to rotate them weekly and keep a year's worth:
-      "daily" -> "weekly"
-      "rotate 14" -> "rotate 52"
-    and adding these lines to use dates for the log file name extensions (instead of .1, .2, etc.):
-      dateext
-      dateformat -%Y-%m-%d
+    Already set up when we created this VM on bette!
 

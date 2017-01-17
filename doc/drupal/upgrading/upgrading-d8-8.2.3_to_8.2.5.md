@@ -1,5 +1,5 @@
 
-# Upgrading Drupal 8.2.3 to 8.2.4
+# Upgrading Drupal 8.2.3 to 8.2.5
 
 ## Purpose
 
@@ -92,7 +92,7 @@ Clear the caches and backup the database on all hosts:
 * Admin -> Configuration -> Development -> Performance -> Clear All Caches
 
 ```
-bu th 01-before_upgrading_8_2_2_to_8_2_3
+bu th 01-before_upgrading_8_2_3_to_8_2_5
 ```
 
 ## Step (2) Download, Unpack, and Review the New
@@ -112,11 +112,11 @@ Download (or copy) the file(s) into `/var/www/tomhartung.com/downloads` and unpa
 ```
 cd /var/www/tomhartung.com/downloads
 mkdir ../unpack
-cp  drupal-8.2.4.tar.gz ../unpack
+cp  drupal-8.2.5.tar.gz ../unpack
 cd ../unpack
-tar -xvzf drupal-8.2.4.tar.gz
-rm drupal-8.2.4.tar.gz
-cd ../drupal-8.2.4/
+tar -xvzf drupal-8.2.5.tar.gz
+rm drupal-8.2.5.tar.gz
+cd ../drupal-8.2.5/
 more core/CHANGELOG.txt
 less core/UPDATE.txt
 ```
@@ -186,7 +186,7 @@ drush sset system.maintenance_mode 0 drush cr
 If able to access site and it looks ok, backup the db:
 
 ```
-bu th 02-after_updating_8_2_2_to_8_2_3
+bu th 02-after_updating_8_2_3_to_8_2_5
 ```
 
 and commit the code:
@@ -195,7 +195,7 @@ and commit the code:
 gothd
 git status
 git add --all
-git commit -m 'Upgraded to the new release, 8.2.4 .' ; gpom
+git commit -m 'Upgraded to the new release, 8.2.5 .' ; gpom
 git status
 ```
 
@@ -269,7 +269,7 @@ If it looks ok, clear all caches in admin panel and backup db:
 * Admin -> Configuration -> Development -> Clear All Caches
 
 ```
-bu th 04-upgraded_8_2_2_to_8_2_3
+bu th 04-upgraded_8_2_3_to_8_2_5
 ```
 
 ## Step (5) Update the Production Host (ava)
@@ -329,7 +329,7 @@ Clear caches and backup db:
 * Admin -> Configuration -> (Development) Performance -> Clear Caches
 
 ```
-bu th 03-upgraded_8_2_2_to_8_2_3
+bu th 03-upgraded_8_2_3_to_8_2_5
 tarHome
 ```
 

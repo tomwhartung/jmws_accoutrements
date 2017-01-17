@@ -125,12 +125,15 @@ Use the groja1.qcow2 file from the thumb drive to create a new VM
         -> Forward
       Create a new virtual machine
         Name: groja1
-        Expand Network selection widget
-          Select -> "Host device enp2s0f0 macvtap"
-          Source mode: Bridge
-          ***
-          *** It is saying: "In most configurations, macvtap does not work for host to guest network communication"
-          *** So this might be the wrong choice
-          ***
+        ***
+        *** Tried this and it broke networking, falling back to using the default values
+        *** Expand Network selection widget
+        ***    Select -> "Host device enp2s0f0 macvtap"
+        ***    Source mode: Bridge
+        ***
+        *** It is saying: "In most configurations, macvtap does not work for host to guest network communication"
+        *** So this might be the wrong choice
+        ***
+        Keep default values for networking (do NOT expand the Network selection widget)
         -> Finish
 

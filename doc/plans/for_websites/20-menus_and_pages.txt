@@ -1,40 +1,30 @@
 
- Conversions and Measureable Outcomes
-======================================
-Conversions are measurable, but we need to define precisely what they are
-so that we can create the marketing tags needed to measure them.
+ Menus and CTA Pages
+=====================
+Some of the things we want to measure are dependent on site structure.
 
-Micro and Macro Conversions
----------------------------
-Calls to Action and Conversions are key to making money on the web.
+Some sites already have a fairly solid menu structure, other "new" sites
+need to be redone completely.
 
-Macro Conversions:
-CM-B Contact me to buy something
-CM-G Contact me for a personalized Spiritual Portrait
-CM-J Contact me for Device Detection & LAMP CMSes work
-CM-T Contact me for Freelance Consulting work
+This text file focuses on the changes that need to be made, and how the
+"new" sites will be structured.
 
-Micro Conversions:
-NL-B Sign up for new products newsletter
-NL-J Sign up for joomoowebsites.com newsletter
-NL-S Sign up for seeourminds.com newsletter
+Existing Menus
+--------------
+All existing pages will need the GA All Pages tag.
 
-                      Conversions
-Site                 Macro   Micro
-----------------------------------
-groja.com            CM-G    NL-S
-seeourminds.com      CM-G    NL-S
-joomoowebsites.com   CM-J    NL-J
-tomwhartung.com      CM-T    NL-J
-tomhartung.com       CM-B    NL-B
+New Menus
+---------
+We are re-doing the following sites from scratch:
 
-Measureable Outcomes
---------------------
-Google Analytics and Google Tag Manager make it possible to measure
-what users do at these sites, but we must define precisely what user
-actions we want to measure.
+groja.com: 
 
-Site                 Measureable Outcomes
+seeourminds.com:
+
+CTA Pages
+---------
+
+Site                 CTA Pages
 -----------------------------------------------------
 groja.com            
 seeourminds.com      

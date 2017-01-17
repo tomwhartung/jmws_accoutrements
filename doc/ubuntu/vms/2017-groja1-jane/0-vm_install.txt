@@ -95,3 +95,42 @@ Create new filesystem for working with VMS
       cp -rp libvirt/* libvirt-new
       mv libvirt libvirt-current ; mkdir libvirt
 
+Use the groja1.qcow2 file from the thumb drive to create a new VM
+-----------------------------------------------------------------
+[ ] Copy the groja1.qcow2 file from the thumb drive to the new partition
+    As root:
+      cd /var/lib
+      mkdir libvirt/from_bette
+      cd libvirt/from_bette
+      cp /media/tomh/ext4Thumb/var_lib/libvirt/images/groja1.qcow2 .
+      cd ..
+      chown -R tomh .
+    Must run chown to avoid permissions issues in create VM dialog
+[ ] Run KVM Virtual Machine Manager and create a new VM
+    Use icon locked to launcher (or use Search your computer icon) to start the
+      KVM Virtual Machine Manager
+    File -> New Virtual Machine -> New VM dialog
+      Import existing disk image
+      -> Forward
+      Provide the existing storage path:
+        Browse -> Browse local to: /var/lib/libvirt/from_bette
+        Select file: groja1.qcow2
+      Choose an operating system type and version
+        OS type (dropdown) -> Linux
+        Version (dropdown) -> Ubuntu 14.04
+        -> Forward
+      Choose Memory and CPU settings (accept defaults)
+        Memory (RAM): 1024 MiB
+        CPUs: 1 (Up to 2 available)
+        -> Forward
+      Create a new virtual machine
+        Name: groja1
+        Expand Network selection widget
+          Select -> "Host device enp2s0f0 macvtap"
+          Source mode: Bridge
+          ***
+          *** It is saying: "In most configurations, macvtap does not work for host to guest network communication"
+          *** So this might be the wrong choice
+          ***
+        -> Finish
+

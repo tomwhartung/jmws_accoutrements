@@ -224,6 +224,12 @@ git commit -m 'Upgraded to the new release, 8.2.5 .' ; gpom
 git status
 ```
 
+### 3.5 Backup the backups of the db (and everything else in /home/tomh)
+
+```
+tarHome
+```
+
 ## Step (4) Update the Backup Host (barbara)
 
 [X] barbara
@@ -247,7 +253,7 @@ Clear the cache on jane:
 Backup the database on jane:
 
 ```
-bu th 03-cleared_cache_for_barbara
+bu th 03-cleared_cache_for_barbara_and_ava
 ```
 
 ### 4.2 Backup db on barbara
@@ -267,13 +273,13 @@ bu th 02-before_restoring_from_jane
 Copy db **from jane** to barbara:
 
 ```
-toBarbara tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara.sql.gz
+toBarbara tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara_and_ava.sql.gz
 ```
 
 Restore jane's db **on barbara**:
 
 ```
-rs -h jane th 03-cleared_cache_for_barbara
+rs -h jane th 03-cleared_cache_for_barbara_and_ava
 ```
 
 ### 4.4 Pull the code
@@ -283,7 +289,7 @@ gotht
 git pull
 ```
 
-### 4.5 Test and if it looks good, clear caches and backup the db
+### 4.5 Test and if it looks good, clear caches, backup the db, and backup the backup
 
 Check that the site loads and shows we are running the new version:
 
@@ -295,6 +301,7 @@ If it looks ok, clear all caches in admin panel and backup db:
 
 ```
 bu th 04-upgraded_8_2_3_to_8_2_5
+tarHome
 ```
 
 ## Step (5) Update the Production Host (ava)
@@ -306,7 +313,6 @@ bu th 04-upgraded_8_2_3_to_8_2_5
 Follow same process as we did for barbara, except that on ava:
 
 * **Be sure to put the site in maintenance mode first!!**
-* We are now pushing files from barbara to ava (instead of from jane to barbara)
 
 ### 5.1 Copy db from jane to ava
 
@@ -314,7 +320,7 @@ Copy db **from jane** to ava:
 
 ```
 gobu
-toAva tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara.sql.gz
+toAva tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara_and_ava.sql.gz
 ```
 
 ### 5.2 Put in maintenance mode, clear caches, and backup db
@@ -333,7 +339,7 @@ bu th 02-maintenance_mode_before_upgrade
 Restore jane's db **on ava**:
 
 ```
-rs -h jane -d 2016_11_26 th 03-cleared_cache_for_barbara
+rs -h jane th 03-cleared_cache_for_barbara_and_ava
 ```
 
 ### 5.4 Pull the code
@@ -343,7 +349,7 @@ gotht
 git pull
 ```
 
-### 5.5 Test and if it looks good, clear caches and backup the db
+### 5.5 Test and if it looks good, clear caches, backup the db, and backup the backup
 
 Check that the site loads and that we are running the new version.
 

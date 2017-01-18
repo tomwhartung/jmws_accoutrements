@@ -3,7 +3,7 @@
 
 ## Purpose
 
-Use drush to upgrade a single minor release.
+Use drush to upgrade the site two minor releases.
 
 ## References
 
@@ -31,7 +31,7 @@ Release notes for each release:
 
 In addition to allowing us to do it on the command line, using drush to update the core looks like it is very easy.
 
-* https://www.drupal.org/node/2550801 - Update using drush
+* https://www.drupal.org/node/2550801 - Update using drush, covers both Drupal 7 and Drupal 8
 
 * http://www.drush.org/en/master/ - drush docs
 
@@ -101,6 +101,12 @@ Do this on the development host only:
 
 - [x] jane
 
+### Note!  We may be able to skip this step!
+
+**If we are using drush to update the site, we can skip this step!  Skip to Step (3)!**
+
+### NOT using drush? Then Download and Review
+
 Use the links on the admin panel or find the file(s) on drupal.org .
 
 * Admin -> Reports -> Available Updates
@@ -132,7 +138,8 @@ drush sset system.maintenance_mode 1
 
 ### 3.1 Use Drush
 
-This is a minor upgrade, with no changes to any of the settings files, so it's a good chance to try this process.
+This is a minor upgrade, and as far as I can tell, there are no changes to any of the settings files,
+so it's a good chance to try this process.
 
 Run these commands:
 
@@ -142,9 +149,24 @@ composer update
 drush pm-update drupal
 ```
 
-I think you are supposed to run the `composer update` command first, but I ran `drush pm-update drupal` and
-fortunately it seemed to work ok.
+Output received this time:
 
+```
+Project drupal was updated successfully. Installed version is now 8.2.5.
+Backups were saved into the directory /home/tomh/drush-backups/drpal8_tomhartung/20170120022730/drupal.                         [ok]
+No database updates required                                                                                                    [success]
+```
+
+Interesting:
+
+```
+ $ gs | wc -l
+355             ## After running "composer update"
+ $ gs | wc -l
+2409            ## After running "drush pm-update drupal"
+```
+
+Interesting!
 
 ### 3.2 Check:
 
@@ -172,14 +194,17 @@ l
 rd *.*
 ```
 
-### 3.3 Put site back online:
+### 3.3 Put site back online and rebuild cache:
 
 Using drush:
 
 ```
 gotht
-drush sset system.maintenance_mode 0 drush cr
+drush sset system.maintenance_mode 0
+drush cr   ## Was unable to get this to work this time ...
 ```
+
+... if the `drush cr` command doesn't work, try clearing the cache from within the admin panel.
 
 ### 3.4 Test, and backup and commit code if ok
 
@@ -302,7 +327,7 @@ Put in maintenance mode and clear caches:
 Backup db:
 
 ```
-bu th 02-maintenance_mode_8_1_7
+bu th 02-maintenance_mode_before_upgrade
 ```
 
 Restore jane's db **on ava**:

@@ -124,3 +124,30 @@ References:
     Click on the Ubuntu "Search your computer" icon and search for "Virtual Machine Manager"
 [ ] Create VMs
     --> See VM-specific instructions, in this repo, under doc/ubuntu/vms
+
+Install Packages for Real Python Class
+--------------------------------------
+[ ] Upgrade python 3.5 to 3.6
+    References:
+      http://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get
+      http://www.ubuntumaniac.com/2016/12/python-360-is-released-install-on.html
+    As root:
+      add-apt-repository ppa:jonathonf/python-3.6
+      apt-get update
+      apt-get install python3.6
+[ ] Install npm to see the slides
+    References:
+      https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+      ** Note:
+      ** Using the first process on this page, To Install the Distro-Stable Version for Ubuntu
+      ** If at some point we want a newer version,
+      **    this page, and those following, offer steps on how to install the latest from a ppa
+      http://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/#
+      - Featured snippets in search: https://support.google.com/webmasters/answer/6229325?hl=en
+      https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+      - I would tend to trust a process from nodejs.org (why is it not the featured snippet?)
+    As root:
+      apt-get update
+      apt-get install -y nodejs
+      apt-get install -y npm
+

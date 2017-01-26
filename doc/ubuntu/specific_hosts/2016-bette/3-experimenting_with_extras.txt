@@ -151,3 +151,15 @@ Install Packages for Real Python Class
       apt-get install -y nodejs
       apt-get install -y npm
 
+Install the Atom text editor
+----------------------------
+Let's take it for a test drive.
+References:
+    http://tipsonubuntu.com/2016/08/05/install-atom-text-editor-ubuntu-16-04/
+    https://medium.com/how-to-install/how-to-install-atom-editor-in-ubuntu-14-04-1c761af5e2ba#.qxsakukw5
+Both references agree on the same fairly simple steps (saved for future reference only).
+[ ] Add ppa, update, and install
+    sudo add-apt-repository ppa:webupd8team/atom
+    sudo apt-get update
+    sudo apt install atom
+

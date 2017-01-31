@@ -9,6 +9,7 @@ echo
 
 find * -type f | \
 	grep -v '\.git/' | \
+	grep -v 'djangostable/' | \
 	grep -v '/with\ space/' | \
 	grep -v 'nbproject/' | \
 	grep -v '__pyc' | \

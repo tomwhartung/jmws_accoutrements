@@ -17,8 +17,12 @@ source_file_directory="/usr/local/tar"
 #  Ensure drive is present and has a tar file directory on it
 #
 this_hostname=$(hostname)
-dest_hostname=ava
-backup_drive_name=usb0
+
+## dest_hostname=ava
+## backup_drive_name=usb0
+dest_hostname=barbara
+backup_drive_name=tomh/ext4Thumb
+
 backup_directory_name=usr_local_tar
 backup_file_directory=/media/${backup_drive_name}/${backup_directory_name}/
 dest_sum_command="md5sum"

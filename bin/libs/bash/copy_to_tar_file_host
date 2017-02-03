@@ -6,7 +6,7 @@
 tar_file_names=$@
 this_hostname=$(hostname)
 dest_file_directory='/usr/local/tar'
-dest_hostname="ava"
+dest_hostname="barbara"
 
 if [ "$this_hostname" == "$dest_hostname" ]; then
    echo "---> Not copying tar file to $dest_hostname"

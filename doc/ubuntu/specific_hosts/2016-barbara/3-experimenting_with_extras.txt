@@ -42,3 +42,11 @@ Reference:
     As tomh:
       which subl   ## /usr/bin/subl
       subl
+
+Install VLC Media Player
+------------------------
+This is a backup machine but we can install something fun if we want, just keep it minimal.
+
+However, it turns out that sound is not working but it works fine on the Windows side,
+so we should probably delete VLC Media Player at some point.
+

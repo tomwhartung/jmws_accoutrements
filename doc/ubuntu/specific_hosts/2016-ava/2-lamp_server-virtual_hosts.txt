@@ -289,6 +289,9 @@ As tomh:
 
 Double-check to ensure only the live sites are enabled!
 
+Ensure this link takes visitors to someplace harmless (e.g. artsyvisions):
+- http://ava:80
+
 Back It All Up
 --------------
 [ ] Ensure we have backups of everything, including a copy for off-site

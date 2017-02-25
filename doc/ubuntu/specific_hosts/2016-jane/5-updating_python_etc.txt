@@ -5,12 +5,25 @@ We are playing around with some python on bette, and want to have
 our process down for when it comes time to upgrade the installations
 on jane, barbara, and ava.
 
-Running these commands on bette.
+Running these commands on jane.
 --------------------------------
-We should be able to run these on other hosts.
+NOTE:
+It appears we need version 0.12 of flask for the test_insert_functions function
+in db_access.py to work.
 
-Install Packages for Real Python Class
---------------------------------------
+NOTE:
+We will want to upgrade these packages on barbara and ava when deploying!
+
+NOTE:
+We need to be very cognizant of what versions of python, flask, and django we are
+running on the servers!
+
+NOTE:
+We may want to consider using virtual environments on the servers at some point.
+However, I would like to avoid doing that, in the interest of keeping it simple.
+
+Upgrade Python
+--------------
 [ ] Upgrade python 3.5 to 3.6
     References:
       http://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get
@@ -19,19 +32,13 @@ Install Packages for Real Python Class
       add-apt-repository ppa:jonathonf/python-3.6
       apt-get update
       apt-get install python3.6
-[ ] Install npm to see the slides
-    References:
-      https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
-      ** Note:
-      ** Using the first process on this page, To Install the Distro-Stable Version for Ubuntu
-      ** If at some point we want a newer version,
-      **    this page, and those following, offer steps on how to install the latest from a ppa
-      http://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/#
-      - Featured snippets in search: https://support.google.com/webmasters/answer/6229325?hl=en
-      https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
-      - I would tend to trust a process from nodejs.org (why is it not the featured snippet?)
+
+Upgrade Flask
+-------------
+[ ] Upgrade flask to version 0.12
+    (This is a little trick I learned in the real python class.)
     As root:
-      apt-get update
-      apt-get install -y nodejs
-      apt-get install -y npm
+      pip3 uninstall flask
+      pip3 install flask==0.12
+
 

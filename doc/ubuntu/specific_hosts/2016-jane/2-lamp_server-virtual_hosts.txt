@@ -393,6 +393,20 @@ Checking all sites, in conjunction with getting them to work on barbara and ava:
 [ ] Checking the Drupal site:
     [ ] tomhartung.com
 
+Ensure Default Site Is Disabled
+-------------------------------
+Remove the link to sites-available/000-default.conf in the sites-enabled directory
+
+As tomh:
+  cd /etc/apache2
+  l sites-available
+  l sites-enabled
+  sudo rm sites-enabled/000-default.conf
+  l sites-enabled
+  sudo service apache2 restart
+
+Double-check to ensure only the live sites are enabled!
+
 Back It All Up
 --------------
 [ ] Ensure we have backups of everything, including a copy for off-site

@@ -35,3 +35,14 @@ Install Packages for Real Python Class
       apt-get install -y nodejs
       apt-get install -y npm
 
+Install sendmail for always_learning_python Project
+---------------------------------------------------
+We need sendmail so we can test using python to send emails:
+Note that this fixes the following error:
+    ConnectionRefusedError: [Errno 111] Connection refused
+[ ] Install sendmail
+    As root:
+      apt-get update
+      apt-get upgrade -y
+      apt-get -y install sendmail
+

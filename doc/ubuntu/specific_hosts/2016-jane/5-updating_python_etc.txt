@@ -41,4 +41,14 @@ Upgrade Flask
       pip3 uninstall flask
       pip3 install flask==0.12
 
+Install sendmail for groja.com
+------------------------------
+We need sendmail on all servers so we can use python to send emails:
+Note that this fixes the following error:
+    ConnectionRefusedError: [Errno 111] Connection refused
+[ ] Install sendmail
+    As root:
+      apt-get update
+      apt-get upgrade -y
+      apt-get -y install sendmail
 

@@ -51,4 +51,10 @@ Note that this fixes the following error:
       apt-get update
       apt-get upgrade -y
       apt-get -y install sendmail
+NOTE: Got the following warning when installing sendmail on jane
+      (and all the others too, btw):
+   "Warning: 3 database(s) sources
+      were not found, (but were created)
+      please investigate."
+Tried googling this but did not see anything about how to fix it.
 

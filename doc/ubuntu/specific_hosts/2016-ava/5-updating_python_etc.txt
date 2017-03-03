@@ -1,0 +1,53 @@
+
+ Updating Python Etc.
+======================
+We are playing around with some python on bette, and want to have
+our process down for when it comes time to upgrade the installations
+on jane, barbara, and ava.
+
+Running these commands on ava
+-----------------------------
+NOTE:
+We need version 0.12 of flask for the test_insert_functions function
+in db_access.py to work.
+So we need to upgrade these packages on barbara and ava when deploying!
+
+NOTE:
+We need to be very cognizant of what versions of python, flask, and django we are
+running on the servers!
+
+NOTE:
+We may want to consider using virtual environments on the servers at some point.
+However, I would like to avoid doing that, in the interest of keeping it simple,
+which means keeping installed software and versions to the bare minimum.
+
+Upgrade Python
+--------------
+[ ] Upgrade python 3.5 to 3.6
+    References:
+      http://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get
+      http://www.ubuntumaniac.com/2016/12/python-360-is-released-install-on.html
+    As root:
+      add-apt-repository ppa:jonathonf/python-3.6
+      apt-get update
+      apt-get install python3.6
+
+Upgrade Flask
+-------------
+[ ] Upgrade flask to version 0.12
+    (This is a little trick I learned in the real python class.)
+    As root:
+      pip3 uninstall flask
+      pip3 install flask==0.12
+
+Install sendmail for groja.com
+------------------------------
+We need sendmail on all servers so we can use python to send emails:
+Note that this fixes the following error:
+    ConnectionRefusedError: [Errno 111] Connection refused
+[ ] Install sendmail
+    As root:
+      apt-get update
+      apt-get upgrade -y
+      apt-get -y install sendmail
+

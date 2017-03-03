@@ -39,6 +39,8 @@ Upgrade Flask
     As root:
       pip3 uninstall flask
       pip3 install flask==0.12
+NOTE:
+  This was already the current version on ava (!)
 
 Install sendmail for groja.com
 ------------------------------

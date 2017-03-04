@@ -245,3 +245,31 @@ Process: - Install and configure apache mod_wsgi for serving django sites
     /home:    1.1G/23G (6%)
     /var/www: 7.7G/19G (45%)
 
+3. Flask and Groja.com
+----------------------
+Groja.com requires the following:
+[ ] Install sendmail:
+    For details, see 5-updating_python_etc.txt in this directory
+[ ] Install the following modules:
+    As root:
+      pip3 install flask
+      pip3 install flask_wtf
+      pip3 install flask_bootstrap
+[ ] Update apache envvars with the environment variables needed for emails:
+    As root:
+      cd /etc/apache2
+      mkdir RCS
+      ci -l envvars
+      vi envvars
+      ## Add values for GROJA_MAIL_FROM and GROJA_MAIL_TO
+[ ] Ensure DB is created and ownerships and permissions allow the server to update it
+    For jane, we want to allow both tomh and www-data to write to the db
+    - permissions on the db and its directory should be 775
+    - user:group ownership of both the db and its directory should be www-data:tomh
+    As tomh:
+      gogg        # /var/www/groja.com/htdocs/groja.com
+      ls -al db
+      cd db
+      chmod 775 ...                 # as appropriate
+      sudo chown www-data:tomh ...  # as appropriate
+

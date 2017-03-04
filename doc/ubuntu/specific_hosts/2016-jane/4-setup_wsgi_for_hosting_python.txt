@@ -253,8 +253,8 @@ Groja.com requires the following:
 [ ] Install the following modules:
     As root:
       pip3 install flask
-      pip3 install flask_wtf
       pip3 install flask_bootstrap
+      pip3 install flask_wtf
 [ ] Update apache envvars with the environment variables needed for emails:
     As root:
       cd /etc/apache2
@@ -264,12 +264,14 @@ Groja.com requires the following:
       ## Add values for GROJA_MAIL_FROM and GROJA_MAIL_TO
 [ ] Ensure DB is created and ownerships and permissions allow the server to update it
     For jane, we want to allow both tomh and www-data to write to the db
-    - permissions on the db and its directory should be 775
+    - permissions on the db should be 664
+    - permissions on the db's directory should be 775
     - user:group ownership of both the db and its directory should be www-data:tomh
     As tomh:
       gogg        # /var/www/groja.com/htdocs/groja.com
       ls -al db
       cd db
-      chmod 775 ...                 # as appropriate
+      chmod 775 .
+      chmod 664 ...
       sudo chown www-data:tomh ...  # as appropriate
 

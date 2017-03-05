@@ -144,3 +144,6 @@ Both references agree on the same fairly simple steps (saved for future referenc
     sudo apt-get update
     sudo apt install atom
 
+Install Sqlite Database Browser
+-------------------------------
+Open the orange Ubuntu Software app and search for and install the Sqlite Database Browser app

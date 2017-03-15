@@ -123,7 +123,7 @@ tarHome
 
 ## Step (3) Updating Plugins
 
-All plugins are up to date, so NOT doing this on **jane**.
+Updating akismet (even though we don't use it), on **jane**.
 
 We are able to update plugins using the admin back end, as long as we
 change the owner of the files in the WP installation directory tree.
@@ -156,7 +156,7 @@ Run commands:
 gotwt
 git status
 git add wp-content/
-git commit -m 'Upgraded akismet to version 3.2 .' ; git push origin master
+git commit -m 'Upgraded akismet to version 3.3 .' ; git push origin master
 ```
 
 ### 3.4 Backup the db and backup the backup
@@ -172,7 +172,7 @@ tarHome
 
 ## Step (4) Updating Templates
 
-Doing this on **jane**.
+All templates are up to date, so NOT doing this on **jane**.
 
 We are able to update templates using the admin back end, as long as we
 change the owner of the files in the WP installation directory tree.

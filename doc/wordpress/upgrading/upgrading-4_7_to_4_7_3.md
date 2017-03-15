@@ -4,7 +4,7 @@
 The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
 Plus we don't run it often enough to be really confident about it or good at it etc.
 
-## TomWHartung.com - WP Upgrading Notes for 2016
+## TomWHartung.com - WP Upgrading Notes for 2017
 
 The Latest References (from upgrade to 4.3.1):
 
@@ -13,8 +13,9 @@ The Latest References (from upgrade to 4.3.1):
 
 ## Log
 
-- [ ] 2016-
-- [ ] 2016-XX-XX: 4.7.0 to 4.X.X
+- [ ] 2017-
+- [ ] 2017-XX-XX: 4.7.3 to 4.X.X
+- [X] 2017-03-17: 4.7.0 to 4.7.3
 - [X] 2016-12-22: 4.6.1 to 4.7.0
 - [X] 2016-11-01: 4.6.0 to 4.6.1
 - [X] 2016-09-02: 4.4.2 to 4.6
@@ -32,7 +33,7 @@ Backup db on all hosts and ensure code matches what is in github:
 Run these commands on each host listed above:
 
 ```
-bu tw 01-before_upgrading_4_6_1_to_4_7_0
+bu tw 01-before_upgrading_4_7_to_4_7_3
 gotwt
 git pull
 git status
@@ -44,7 +45,7 @@ To enable using the back end to update the code rather than downloading it, foll
 
 We need to do this for **only one host:**
 
-* jane on 2016-12-22
+* jane on 2017-03-17
 
 ### 1.1. Ensure the following line has been added to wp-config.php :
 
@@ -108,7 +109,7 @@ Run commands:
 gotwt
 git status
 git add --all .
-git commit -m 'Upgrading from 4.6.1 to 4.7.0 .' ; git push origin master
+git commit -m 'Upgrading from 4.7.0 to 4.7.3 .' ; git push origin master
 ```
 
 ### 2.5. Backup db on this host, and backup the backup:
@@ -116,7 +117,7 @@ git commit -m 'Upgrading from 4.6.1 to 4.7.0 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 02-after_upgrading_4_6_1_to_4_7_0
+bu tw 02-after_upgrading_4_7_0_to_4_7_3
 tarHome
 ```
 
@@ -163,7 +164,7 @@ git commit -m 'Upgraded akismet to version 3.2 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrading_plugins_4_6_1_to_4_7_0
+bu tw 03-after_upgrading_plugins_4_7_0_to_4_7_3
 tarHome
 ```
 
@@ -214,7 +215,7 @@ git commit -m 'Upgraded themes to version 4.7.0 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrading_themes_4_6_1_to_4_7_0
+bu tw 03-after_upgrading_themes_4_7_0_to_4_7_3
 tarHome
 ```
 
@@ -228,7 +229,7 @@ Run commands:
 
 ```
 # This should have already been done!
-bu tw 01-before_upgrading_4_6_to_4_6_1
+bu tw 01-before_upgrading_4_7_to_4_7_3
 ```
 
 ### 5.2. Open browser window to admin page on barbara:
@@ -286,7 +287,7 @@ Access the site, perform a "Smoke Test."
 Run commands:
 
 ```
-bu tw 02-after_upgrading_4_6_1_to_4_7_0
+bu tw 02-after_upgrading_4_7_0_to_4_7_3
 tarHome
 ```
 
@@ -305,5 +306,5 @@ Repeat process used for barabara on ava.
 
 5. Verify updated versions in admin panel
 
-6. Backup db `bu tw 02-after_upgrading_4_6_1_to_4_7_0`
+6. Backup db `bu tw 02-after_upgrading_4_7_0_to_4_7_3`
 

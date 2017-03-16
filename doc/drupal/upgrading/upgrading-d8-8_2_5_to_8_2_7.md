@@ -311,8 +311,8 @@ drush cr   ## Was unable to get this to work this time ...
 
 Check the version and clear the cache (again - to be safe!) in the admin panel:
 
-- Admin -> Reports -> Available updates
-- Admin -> Configuration -> Performance -> Clear all caches
+* Admin -> Reports -> Available updates
+* Admin -> Configuration -> Performance -> Clear all caches
 
 If it's running the new version, and we are able to access site, and everything looks ok, backup the db:
 
@@ -463,7 +463,13 @@ gotht
 git pull
 ```
 
-### 5.5 Test and if it looks good, clear caches, backup the db, and backup the backup
+### 5.5 Test and if it looks good ...
+
+1. put in maintenance mode
+2. clear all caches
+3. backup the db
+4. take out of maintenance mode and
+5. backup the backup
 
 Check that the site loads and that we are running the new version.
 
@@ -471,10 +477,14 @@ Check that the site loads and that we are running the new version.
 
 Clear caches and backup db:
 
+* Admin -> Configuration -> (Development) Maintenance Mode -> Check the box
 * Admin -> Configuration -> (Development) Performance -> Clear Caches
+* Backup DB (see below)
+* Admin -> Configuration -> (Development) Maintenance Mode -> UNcheck the box
+* Backup the backup (see below)
 
 ```
-bu th 03-upgraded_8_2_5_to_8_2_7
+bu th 03-maint_mode-upgraded_8_2_5_to_8_2_7
 tarHome
 ```
 

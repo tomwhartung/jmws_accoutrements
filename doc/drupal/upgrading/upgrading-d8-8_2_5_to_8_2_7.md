@@ -261,7 +261,7 @@ Cache rebuild complete.                                                         
 Finished performing updates.                                                                             [ok]
 ```
 
-Note that this time the files-changed count went down after the second command, from 1088 to 955.
+Note that this time the files-changed count output by `gs | wc -l` went down after the second command, from 1088 to 925.
 "Interesting!"
 
 ### 3.3 Check:
@@ -309,7 +309,11 @@ drush cr   ## Was unable to get this to work this time ...
 
 ### 3.5 Test, and backup and commit code if ok
 
-If able to access site and it looks ok, backup the db:
+Check the version in the admin panel:
+
+- Admin -> Reports -> Available updates
+
+If it's running the new version, and we are able to access site, and everything looks ok, backup the db:
 
 ```
 bu th 02-after_updating_8_2_5_to_8_2_7

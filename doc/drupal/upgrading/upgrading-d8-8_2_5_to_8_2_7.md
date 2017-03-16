@@ -38,6 +38,7 @@ In addition to allowing us to do it on the command line, using drush to update t
 For steps to install drush, see the most recent of the files with names matching the pattern
 `doc/ubuntu/specific_hosts/2016-*/2-lamp_server-virtual_hosts.txt` in this repo.
 
+
 ## Step (0) - Review Release Notes and Process(es)
 
 When we have missed one or more upgrades, we need to review the release notes for each missed release.
@@ -68,6 +69,30 @@ which drush               ## /usr/bin/drush
 alias drush               ## alias drush='~/.config/composer/vendor/drush/drush/drush'
 drush --version           ## Drush Version   :  8.1.7
 ```
+
+On 2017-03-18 we got the following warning:
+
+```
+drush --version
+## Directory /home/tomh/.drush/cache/default exists, but is not writable. Please check directory permissions.   [error]
+##  Drush Version   :  8.1.7
+```
+
+and ran the following commands to correct this situation:
+
+```
+cd
+l .drush/cache/default/
+ll .drush/cache/default/
+sudo chmod 777 .drush/cache/default/
+sudo chmod 777 .drush/cache/default/5.10.0-commandfiles-0-c1a656412ed37d74bebf6ae174b009d8.cache
+ll .drush/cache/default/
+ll .drush/cache/
+sudo chmod 777 .drush/cache/
+ll .drush/cache/
+```
+
+Just hoping that works out ok!
 
 ## Step (1) Backup the Old
 

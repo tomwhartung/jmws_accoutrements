@@ -309,9 +309,10 @@ drush cr   ## Was unable to get this to work this time ...
 
 ### 3.5 Test, and backup and commit code if ok
 
-Check the version in the admin panel:
+Check the version and clear the cache (again - to be safe!) in the admin panel:
 
 - Admin -> Reports -> Available updates
+- Admin -> Configuration -> Performance -> Clear all caches
 
 If it's running the new version, and we are able to access site, and everything looks ok, backup the db:
 
@@ -358,6 +359,8 @@ Clear the cache on jane:
 Backup the database on jane:
 
 ```
+gotht
+drush cr   ## I love to be safe!
 bu th 03-cleared_cache_for_barbara_and_ava
 ```
 
@@ -366,6 +369,8 @@ bu th 03-cleared_cache_for_barbara_and_ava
 Use these admin options to clear the cache:
 
 * Admin -> Configuration -> Development -> Clear All Caches
+
+**There is no drush on barbara and ava!**
 
 Run this command **on barbara** to backup the database:
 
@@ -378,16 +383,20 @@ bu th 02-before_restoring_from_jane
 Copy db **from jane** to barbara:
 
 ```
-toBarbara tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara_and_ava.sql.gz
+toBarbara tomhartung.d8-2017_03_16-jane-03-cleared_cache_for_barbara_and_ava
 ```
 
 Restore jane's db **on barbara**:
 
 ```
-rs -h jane th 03-cleared_cache_for_barbara_and_ava
+rs -h jane -d 2017_03_16 th 03-cleared_cache_for_barbara_and_ava
 ```
 
 ### 4.4 Pull the code
+
+Want to do this "more or less simultaneously," but ...
+
+**DO NOT PULL CODE UNTIL THE COMMAND TO RESTORE THE DB FROM JANE RUNS SUCCESSFULLY!!**
 
 ```
 gotht
@@ -400,7 +409,7 @@ Check that the site loads and shows we are running the new version:
 
 * Admin -> Reports -> Available Updates
 
-If it looks ok, clear all caches in admin panel and backup db:
+If it looks ok, clear all caches in admin panel, backup db, and backup the backup:
 
 * Admin -> Configuration -> Development -> Clear All Caches
 
@@ -425,7 +434,7 @@ Copy db **from jane** to ava:
 
 ```
 gobu
-toAva tomhartung.d8-2016_11_26-jane-03-cleared_cache_for_barbara_and_ava.sql.gz
+toAva tomhartung.d8-2017_03_16-jane-03-cleared_cache_for_barbara_and_ava
 ```
 
 ### 5.2 Put in maintenance mode, clear caches, and backup db
@@ -444,7 +453,7 @@ bu th 02-maintenance_mode_before_upgrade
 Restore jane's db **on ava**:
 
 ```
-rs -h jane th 03-cleared_cache_for_barbara_and_ava
+rs -h jane -d 2017_03_16 th 03-cleared_cache_for_barbara_and_ava
 ```
 
 ### 5.4 Pull the code

@@ -177,6 +177,8 @@ From the release notes ( https://www.drupal.org/project/drupal/releases/8.2.7 ):
 > "No changes have been made to the .htaccess, web.config, robots.txt or default settings.php files in this release,
 >  so upgrading custom versions of those files is not necessary."
 
+#### 3.2.1 `composer update`
+
 Getting a count of the number of files changed after each of these commands can be "interesting."
 
 As tomh:
@@ -184,13 +186,49 @@ As tomh:
 ```
 gotht
 composer update
-gs | wc -l       ## 355
+gs | wc -l       ## 1088
 ```
 
 Output received this time:
 
-> 
->
+```
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Removing zendframework/zend-hydrator (1.0.0)
+  - Removing composer/installers (v1.0.21)
+  - Installing composer/installers (v1.2.0)
+    Downloading: 100%         
+
+> Drupal\Core\Composer\Composer::vendorTestCodeCleanup
+  - Removing wikimedia/composer-merge-plugin (v1.3.1)
+  - Installing wikimedia/composer-merge-plugin (v1.4.0)
+    Downloading: 100%         
+. . .
+. . .   ## everything looks good...
+. . .
+> Drupal\Core\Composer\Composer::vendorTestCodeCleanup
+  - Installing phpunit/phpunit (4.8.35)
+    Downloading: 100%         
+
+> Drupal\Core\Composer\Composer::vendorTestCodeCleanup
+behat/mink suggests installing behat/mink-selenium2-driver (slow, but JS-enabled driver for any app (requires Selenium2))
+behat/mink suggests installing behat/mink-zombie-driver (fast and JS-enabled headless driver for any app (requires node.js))
+sebastian/global-state suggests installing ext-uopz (*)
+phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+Writing lock file
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+> Drupal\Core\Composer\Composer::ensureHtaccess
+```
+
+
+#### 3.2.2 `drush pm-update drupal`
+
+Getting a count of the number of files changed after each of these commands can be "interesting."
+
+As tomh:
 
 ```
 drush pm-update drupal
@@ -199,7 +237,8 @@ gs | wc -l       ##
 
 Output received this time:
 
-> 
+```
+```
 
 "Interesting!"
 

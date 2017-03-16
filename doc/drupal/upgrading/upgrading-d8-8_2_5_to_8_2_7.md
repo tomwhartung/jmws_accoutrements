@@ -1,5 +1,5 @@
 
-# Upgrading Drupal 8.2.3 to 8.2.5
+# Upgrading Drupal 8.2.5 to 8.2.7
 
 ## Purpose
 
@@ -92,7 +92,7 @@ Clear the caches and backup the database on all hosts:
 * Admin -> Configuration -> Development -> Performance -> Clear All Caches
 
 ```
-bu th 01-before_upgrading_8_2_3_to_8_2_5
+bu th 01-before_upgrading_8_2_5_to_8_2_7
 ```
 
 ## Step (2) Download, Unpack, and Review the New
@@ -118,11 +118,11 @@ Download (or copy) the file(s) into `/var/www/tomhartung.com/downloads` and unpa
 ```
 cd /var/www/tomhartung.com/downloads
 mkdir ../unpack
-cp  drupal-8.2.5.tar.gz ../unpack
+cp  drupal-8.2.7.tar.gz ../unpack
 cd ../unpack
-tar -xvzf drupal-8.2.5.tar.gz
-rm drupal-8.2.5.tar.gz
-cd ../drupal-8.2.5/
+tar -xvzf drupal-8_2.7.tar.gz
+rm drupal-8_2.7.tar.gz
+cd ../drupal-8.2.7/
 more core/CHANGELOG.txt
 less core/UPDATE.txt
 ```
@@ -152,7 +152,7 @@ drush pm-update drupal
 Output received this time:
 
 ```
-Project drupal was updated successfully. Installed version is now 8.2.5.
+Project drupal was updated successfully. Installed version is now 8.2.7.
 Backups were saved into the directory /home/tomh/drush-backups/drpal8_tomhartung/20170120022730/drupal.                         [ok]
 No database updates required                                                                                                    [success]
 ```
@@ -211,7 +211,7 @@ drush cr   ## Was unable to get this to work this time ...
 If able to access site and it looks ok, backup the db:
 
 ```
-bu th 02-after_updating_8_2_3_to_8_2_5
+bu th 02-after_updating_8_2_5_to_8_2_7
 ```
 
 and commit the code:
@@ -220,7 +220,7 @@ and commit the code:
 gothd
 git status
 git add --all
-git commit -m 'Upgraded to the new release, 8.2.5 .' ; gpom
+git commit -m 'Upgraded to the new release, 8_2_7 .' ; gpom
 git status
 ```
 
@@ -300,7 +300,7 @@ If it looks ok, clear all caches in admin panel and backup db:
 * Admin -> Configuration -> Development -> Clear All Caches
 
 ```
-bu th 04-upgraded_8_2_3_to_8_2_5
+bu th 04-upgraded_8_2_5_to_8_2_7
 tarHome
 ```
 
@@ -360,7 +360,7 @@ Clear caches and backup db:
 * Admin -> Configuration -> (Development) Performance -> Clear Caches
 
 ```
-bu th 03-upgraded_8_2_3_to_8_2_5
+bu th 03-upgraded_8_2_5_to_8_2_7
 tarHome
 ```
 

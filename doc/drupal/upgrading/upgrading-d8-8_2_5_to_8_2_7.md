@@ -186,7 +186,7 @@ As tomh:
 ```
 gotht
 composer update
-gs | wc -l       ## 1088
+gs | wc -l       ## **1088**
 ```
 
 Output received this time:
@@ -197,18 +197,18 @@ Updating dependencies (including require-dev)
   - Removing zendframework/zend-hydrator (1.0.0)
   - Removing composer/installers (v1.0.21)
   - Installing composer/installers (v1.2.0)
-    Downloading: 100%         
+    Downloading: 100%
 
 > Drupal\Core\Composer\Composer::vendorTestCodeCleanup
   - Removing wikimedia/composer-merge-plugin (v1.3.1)
   - Installing wikimedia/composer-merge-plugin (v1.4.0)
-    Downloading: 100%         
+    Downloading: 100%
 . . .
 . . .   ## everything looks good...
 . . .
 > Drupal\Core\Composer\Composer::vendorTestCodeCleanup
   - Installing phpunit/phpunit (4.8.35)
-    Downloading: 100%         
+    Downloading: 100%
 
 > Drupal\Core\Composer\Composer::vendorTestCodeCleanup
 behat/mink suggests installing behat/mink-selenium2-driver (slow, but JS-enabled driver for any app (requires Selenium2))
@@ -232,14 +232,36 @@ As tomh:
 
 ```
 drush pm-update drupal
-gs | wc -l       ## 
+gs | wc -l       ## **925**
 ```
 
 Output received this time:
 
 ```
+Update information last refreshed: Thu, 03/16/2017 - 12:19
+ Name    Installed Version  Proposed version  Message
+ Drupal  8.2.5              8.2.7             SECURITY UPDATE available
+
+
+Code updates will be made to drupal core.
+WARNING:  Updating core will discard any modifications made to Drupal core files, most noteworthy among these are .htaccess and robots.txt.  If you have made any modifications to these files, please back them up before updating so that you can re-create your modifications in the updated version of the file.
+Note: Updating core can potentially break your site. It is NOT recommended to update production sites without prior testing.
+
+Do you really want to continue? (y/n): y
+Project drupal was updated successfully. Installed version is now 8.2.7.
+Backups were saved into the directory /home/tomh/drush-backups/drpal8_tomhartung/20170316181941/drupal.  [ok]
+The following updates are pending:
+
+views module :
+  8201 -   Rebuild cache to refresh the views config schema.
+
+Do you wish to run all pending updates? (y/n): y
+Performing views_update_8201                                                                             [ok]
+Cache rebuild complete.                                                                                  [ok]
+Finished performing updates.                                                                             [ok]
 ```
 
+Note that this time the files-changed count went down after the second command, from 1088 to 955.
 "Interesting!"
 
 ### 3.3 Check:
@@ -270,6 +292,11 @@ rd *.*
 
 ### 3.4 Put site back online and rebuild cache:
 
+**Oops!  Forgot to put the site in maintenance mode this time!!**
+**Good thing no one is able to access this host while I do stuff on it!!**
+
+Hoping it will be ok.  ;-)
+
 Using drush:
 
 ```
@@ -278,7 +305,7 @@ drush sset system.maintenance_mode 0
 drush cr   ## Was unable to get this to work this time ...
 ```
 
-... if the `drush cr` command doesn't work, try clearing the cache from within the admin panel.
+**If the `drush cr` command doesn't work, try clearing the cache from within the admin panel.**
 
 ### 3.5 Test, and backup and commit code if ok
 

@@ -126,9 +126,9 @@ Do this on the development host only:
 
 - [x] jane
 
-### Note!  We may be able to skip this step!
+### Note!  Skipping this step!
 
-**If we are using drush to update the site, we can skip this step!  Skip to Step (3)!**
+**We are going to try using drush to update the site, so we are skipping to Step (3)!**
 
 ### NOT using drush? Then Download and Review
 
@@ -154,6 +154,12 @@ less core/UPDATE.txt
 
 ## Step (3) Update the Development Host (jane)
 
+Reference for possible future reference - fairly extensive look at using drupal and composer:
+
+- https://www.drupal.org/node/2718229
+
+### 3.1 Put site in maintenance mode
+
 Use drush or the **Configuration -> (Development section) Maintenance mode** admin option to put the site into maintenance mode:
 
 ```
@@ -161,39 +167,43 @@ gotht
 drush sset system.maintenance_mode 1
 ```
 
-### 3.1 Use Drush
+### 3.2 Use Drush
 
 This is a minor upgrade, and as far as I can tell, there are no changes to any of the settings files,
-so it's a good chance to try this process.
+so we should be safe running this process.
 
-Run these commands:
+From the release notes ( https://www.drupal.org/project/drupal/releases/8.2.7 ):
+
+> "No changes have been made to the .htaccess, web.config, robots.txt or default settings.php files in this release,
+>  so upgrading custom versions of those files is not necessary."
+
+Getting a count of the number of files changed after each of these commands can be "interesting."
+
+As tomh:
 
 ```
 gotht
 composer update
-drush pm-update drupal
+gs | wc -l       ## 355
 ```
 
 Output received this time:
 
-```
-Project drupal was updated successfully. Installed version is now 8.2.7.
-Backups were saved into the directory /home/tomh/drush-backups/drpal8_tomhartung/20170120022730/drupal.                         [ok]
-No database updates required                                                                                                    [success]
-```
-
-Interesting:
+> 
+>
 
 ```
- $ gs | wc -l
-355             ## After running "composer update"
- $ gs | wc -l
-2409            ## After running "drush pm-update drupal"
+drush pm-update drupal
+gs | wc -l       ## 
 ```
 
-Interesting!
+Output received this time:
 
-### 3.2 Check:
+> 
+
+"Interesting!"
+
+### 3.3 Check:
 
 Following is a list of important files to note:
 
@@ -219,7 +229,7 @@ l
 rd *.*
 ```
 
-### 3.3 Put site back online and rebuild cache:
+### 3.4 Put site back online and rebuild cache:
 
 Using drush:
 
@@ -231,7 +241,7 @@ drush cr   ## Was unable to get this to work this time ...
 
 ... if the `drush cr` command doesn't work, try clearing the cache from within the admin panel.
 
-### 3.4 Test, and backup and commit code if ok
+### 3.5 Test, and backup and commit code if ok
 
 If able to access site and it looks ok, backup the db:
 
@@ -249,7 +259,7 @@ git commit -m 'Upgraded to the new release, 8_2_7 .' ; gpom
 git status
 ```
 
-### 3.5 Backup the backups of the db (and everything else in /home/tomh)
+### 3.6 Backup the backups of the db (and everything else in /home/tomh)
 
 ```
 tarHome

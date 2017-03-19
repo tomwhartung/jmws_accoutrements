@@ -13,6 +13,7 @@ find * -type f | \
 	grep -v '/with\ space/' | \
 	grep -v 'nbproject/' | \
 	grep -v '__pyc' | \
+	grep -v '.pyc$' | \
 	grep -v '\.pycache__/' | \
 	grep -v '\.project' | \
 	grep -v 'RCS/' | \

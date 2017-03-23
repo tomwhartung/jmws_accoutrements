@@ -147,3 +147,84 @@ Both references agree on the same fairly simple steps (saved for future referenc
 Install Sqlite Database Browser
 -------------------------------
 Open the orange Ubuntu Software app and search for and install the Sqlite Database Browser app
+
+Update vim for Python PEP 8
+===========================
+Wow it turns out this PEP 8 is a huge thing!
+
+Reference:
+* https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+
+There's a lot on this page, and we want to keep track of changes so we can undo them or make them on other hosts, as appropriate.
+I am only doing a fraction of it now, but if these changes work out well, we may want to return and try more of the suggestions.
+
+Vundle - vim plugin manager
+---------------------------
+Reference:
+* https://github.com/VundleVim/Vundle.vim
+
+Check the version:
+   vim --version
+
+Install Vundle:
+   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+No need to mkdir .vim/bundle, git clone will make it for us.
+
+Add support for vundle to .vimrc:
+   vi .vimrc
+
+Install the plugin:
+-------------------
+I think we need to run this on each host:
+   vi tmp/xyz.py
+   :PluginInstall
+
+I also think we need to run it only once (on each host).
+
+Also adding ...
+---------------
+Also adding (see first (realpython) reference):
+
+o Python Indentation:
+  - PEP 8
+  - Full Stack (js, css, html)
+o Flagging unnecessary whitespace
+o UTF-8 (tried once before...)
+
+The "Full Stack" changes do not seem to be working very well....
+** Note that the comments contain some corrections! **
+
+Some new commands to try:
+-------------------------
+o :sp <filename.py>   # split screen
+  Maybe add to .vimrc:
+    set splitbelow
+    set splitright
+  More .vimrc-maybes:
+    move between the splits without using the mouse:
+      "split navigations
+      nnoremap <C-J> <C-W><C-J>
+      nnoremap <C-K> <C-W><C-K>
+      nnoremap <C-L> <C-W><C-L>
+      nnoremap <C-H> <C-W><C-H>
+o System clipboard:
+    set clipboard=unnamed
+  ** Could this help fix my Ctrl-C/Shift-Ctrl-C issues somehow? **
+
+Consider adding ...
+-------------------
+We may want to consider adding code to vimrc to support:
+
+o Code folding
+o Auto-completion (Youcompleteme)
+o Virtualenv support
+o File browsing
+o Powerline (files open, virtualenv, etc.)
+
+Trying out vim support on the command line:
+-------------------------------------------
+From near the end:
+   vi .inputrc    # add code from comment in next line:
+   cat .inputrc   # file contains: "set editing-mode vi"
+

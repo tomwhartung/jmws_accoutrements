@@ -160,8 +160,12 @@ I am only doing a fraction of it now, but if these changes work out well, we may
 
 Vundle - vim plugin manager
 ---------------------------
-Reference:
+This in itself is a huge rabbit hole!  Let's try just a little at a time!
+
+References:
 * https://github.com/VundleVim/Vundle.vim
+* https://github.com/axiaoxin/vim-settings (bookmarked for later)
+* https://github.com/adilansari/dot_files/blob/master/vim/.vimrc (bookmarked for later)
 
 Check the version:
    vim --version

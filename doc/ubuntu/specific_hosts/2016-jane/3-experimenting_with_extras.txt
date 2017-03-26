@@ -142,7 +142,7 @@ References:
 Check the version:
    vim --version
 
-Install Vundle:
+Install Vundle - as both tomh and root:
    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 No need to mkdir .vim/bundle, git clone will make it for us.

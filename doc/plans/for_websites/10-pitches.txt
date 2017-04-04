@@ -24,13 +24,13 @@ tomhartung.com       Collector
 "When I make a statement, you can receive it passively.  When I
 ask a question, you are compelled to respond."
 
-Site                 One-word Pitch
+Site                 Question Pitch
 -----------------------------------------------------
-groja.com            
-seeourminds.com      
-joomoowebsites.com   
-tomwhartung.com      
-tomhartung.com       
+groja.com            ?
+seeourminds.com      See the site's landing page!
+joomoowebsites.com   ?
+tomwhartung.com      ?
+tomhartung.com       ?
 
 (3) Rhyming Pitches
 -------------------
@@ -39,11 +39,11 @@ tomhartung.com
 
 Site                 Rhyming Pitch
 -----------------------------------------------------
-groja.com            
-seeourminds.com      
-joomoowebsites.com   
-tomwhartung.com      
-tomhartung.com       
+groja.com            tbd/we shall see/now won't we
+seeourminds.com      tbd/we shall see/now won't we
+joomoowebsites.com   tbd/we shall see/now won't we
+tomwhartung.com      tbd/we shall see/now won't we
+tomhartung.com       tbd/we shall see/now won't we
 
 (4) Email Subject Line Pitches
 ------------------------------
@@ -57,11 +57,11 @@ mysteriously intriguing, but probably not both."
 
 Site                 Email Subject Line Pitch
 -----------------------------------------------------
-groja.com            
-seeourminds.com      
-joomoowebsites.com   
-tomwhartung.com      
-tomhartung.com       
+groja.com            RE:
+seeourminds.com      RE:
+joomoowebsites.com   RE:
+tomwhartung.com      RE:
+tomhartung.com       RE:
 
 (5) Twitter Pitches
 -------------------
@@ -74,15 +74,15 @@ Site                 Twitter Pitch
 -----------------------------------------------------
                               1         2         3         4         5         6         7
                      ....5....0....5....0....5....0....5....0....5....0....5....0....5....0
-groja.com            
+groja.com            #
                    ->
-seeourminds.com      
+seeourminds.com      #
                    ->
-joomoowebsites.com   
+joomoowebsites.com   #
                    ->
-tomwhartung.com      
+tomwhartung.com      #
                    ->
-tomhartung.com       
+tomhartung.com       #
 
 
 (6) Pixar Pitches
@@ -120,8 +120,23 @@ On day, ______.
 Because of that, ______.
 Until finally, ______.
 
+
 (7) Site Tagline
 ----------------
+All sites now have taglines, some may have more than one.
+This section is for tagline ideas we are not currently using, but
+may want to use some day, perhaps in another capacity.
+** Because it can be hard to come up with these, and **
+** once we think of them, we don't want to lose them! **
+Site                 Tagline
+-----------------------------------------------------
+groja.com            Yadda yadda yadda
+seeourminds.com      Revealing the light that shines in all of us
+joomoowebsites.com   Yadda yadda yadda
+tomwhartung.com      Yadda yadda yadda
+tomhartung.com       Yadda yadda yadda
+
+
 
 (8) Haiku Pitches
 -----------------

@@ -88,6 +88,55 @@ References:
       >>> import psycopg2
       >>> psycopg2.__version__        ## '2.7.1 (dt dec pq3 ext lo64)'
 
+Install PhpPgAdmin
+------------------
+References:
+* https://www.howtoforge.com/tutorial/ubuntu-postgresql-installation/
+* https://tecadmin.net/install-phppgadmin-in-ubuntu/
+
+We are following the instructions in the first reference.
+The second reference supports slightly stronger security measures.
+
+** DO NOT FOLLOW THIS PROCEDURE ON PRODUCTION HOSTS **
+
+[ ] Use psql to set a password for the postgres user:
+    As root:
+      su - postgres
+      psql          ## 'psql (9.5.6)' and 'Type "help" for help.'
+    At the 'postgres=#' prompt:
+      postgres=# \password
+      Enter new password:
+      Enter it again:
+[ ] Install phppgadmin in ubuntu:
+    As root:
+      apt-get update
+      apt-get install -y phppgadmin
+[ ] Configure apache:
+    As root:
+      cd /etc/apache2/conf-available/
+      mkdir RCS
+      ci -l phppgadmin.conf    ## 'Installed version.'
+      vi phppgadmin.conf
+    Make these edits (so that you can access from your browser):
+    o Comment out the line `#Require local` (line 11)
+    o Add the line `Allow From all` below that (line 12)
+[ ] Configure phpPgAdmin:
+    As root:
+      cd /etc/phppgadmin/
+      mkdir RCS
+      ci -l config.inc.php     ## 'Installed version.'
+      vi config.inc.php
+    Make this edit (so you can login to phpPgAdmin with user postgres):
+    o Find the line $conf['extra_login_security'] = true; and change the value to false
+[ ] Restart apache and postgres:
+    As root:
+      systemctl restart postgresql
+      systemctl restart apache2
+[ ] Access in browser:
+      http://127.0.0.1/phppgadmin/
+      http://localhost/phppgadmin/
+    Log in as 'postgres' , using password set above
+
 Updating the Django Settings File:
 ----------------------------------
 [ ] Summary of commands to run to enter the postgres shell:

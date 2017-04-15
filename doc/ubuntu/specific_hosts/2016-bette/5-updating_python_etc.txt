@@ -59,7 +59,7 @@ References:
 * https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/
 * https://wiki.postgresql.org/wiki/Detailed_installation_guides#General_Linux
 
-[ ] Install postgres:
+[ ] Install postgres in ubuntu:
     As root:
       apt-get update
       dpkg-query --list python3-pip  # ii  python3-pip ...
@@ -71,13 +71,45 @@ References:
       su - postgres
       psql        # prompt changes
 [ ] Use the postgres shell to create the user and database:
+    In the postgres shell:
       CREATE USER seeourminds WITH PASSWORD 'abc123';            ## CREATE ROLE
       CREATE DATABASE django_test owner seeourminds;             ## CREATE DATABASE
       ALTER ROLE seeourminds SET client_encoding TO 'utf8';      ## ALTER ROLE
-      ALTER ROLE seeourminds SET default_transaction_isolation TO 'read committed';      ## ALTER ROLE
+      ALTER ROLE seeourminds SET default_transaction_isolation TO 'read committed';
       ALTER ROLE seeourminds SET timezone TO 'UTC';              ## ALTER ROLE
       \q      ## log out
+[ ] Install python postgres "psycopg2" package globally:
+    As root:
+       pip3 install psycopg2
+[ ] Verify installation of python postgres "psycopg2" package:
+    As tomh:
+      python3 -c "import psycopg2"    ## no errors means it worked
+      python3
+      >>> import psycopg2
+      >>> psycopg2.__version__        ## '2.7.1 (dt dec pq3 ext lo64)'
 
-
+Updating the Django Settings File:
+----------------------------------
+[ ] Summary of commands to run to enter the postgres shell:
+    As root:
+      su - postgres
+      psql
+[ ] Summary of test db credentials:
+    User/pwd: seeourminds/abc123
+    DB: django_test
+[ ] Update the settings.py file to use these values:
+    Note: the two references use slightly different engins
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  ## digital ocean
+        'ENGINE': 'django.db.backends.postgresql',           ## djangogirls
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'django_test',
+            'USER': 'seeourminds',
+            'PASSWORD': 'abc123',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 

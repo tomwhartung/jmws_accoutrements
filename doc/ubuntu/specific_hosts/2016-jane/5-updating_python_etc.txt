@@ -58,8 +58,8 @@ NOTE: Got the following warning when installing sendmail on jane
       please investigate."
 Tried googling this but did not see anything about how to fix it.
 
-Install Postgres Database for Storing SeeOurMinds.com Quiz Results
-------------------------------------------------------------------
+Install PostgreSQL Database for Storing SeeOurMinds.com Quiz Results
+--------------------------------------------------------------------
 References:
 * https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04
 * https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/
@@ -78,11 +78,11 @@ References:
       psql        # prompt changes
 [ ] Use the postgres shell to create the user and database:
     In the postgres shell:
-      CREATE USER seeourminds WITH PASSWORD 'abc123';            ## CREATE ROLE
-      CREATE DATABASE django_test owner seeourminds;             ## CREATE DATABASE
-      ALTER ROLE seeourminds SET client_encoding TO 'utf8';      ## ALTER ROLE
-      ALTER ROLE seeourminds SET default_transaction_isolation TO 'read committed';
-      ALTER ROLE seeourminds SET timezone TO 'UTC';              ## ALTER ROLE
+      CREATE USER som_user WITH PASSWORD 'abc123';
+      CREATE DATABASE som_db owner som_user;
+      ALTER ROLE som_user SET client_encoding TO 'utf8';
+      ALTER ROLE som_user SET default_transaction_isolation TO 'read committed';
+      ALTER ROLE som_user SET timezone TO 'MST';
       \q      ## log out
 [ ] Install python postgres "psycopg2" package globally:
     As root:

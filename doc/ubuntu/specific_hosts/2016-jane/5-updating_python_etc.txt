@@ -143,3 +143,30 @@ The second reference supports slightly stronger security measures.
       http://localhost/phppgadmin/
     Log in as 'postgres' , using password set above
 
+Updating the Django Settings File:
+----------------------------------
+References:
+* https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04
+* https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/
+
+[ ] Summary of commands to run to enter the postgres shell:
+    As root:
+      su - postgres
+      psql
+[ ] Summary of test db credentials:
+    User/pwd: som_user/abc123
+    DB: som_db
+[ ] Update the settings.py file to use these values:
+    Note: the two references use slightly different engins
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  ## digital ocean
+        'ENGINE': 'django.db.backends.postgresql',           ## djangogirls
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'django_test',
+            'USER': 'seeourminds',
+            'PASSWORD': 'abc123',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }

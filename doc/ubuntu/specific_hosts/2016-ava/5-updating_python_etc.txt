@@ -95,3 +95,7 @@ References:
       >>> import psycopg2
       >>> psycopg2.__version__        ## '2.7.1 (dt dec pq3 ext lo64)'
 
+Install PhpPgAdmin
+------------------
+** DO NOT DO THIS ON PRODUCTION HOSTS!!!  DUH!!! **
+

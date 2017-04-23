@@ -139,6 +139,10 @@ The second reference supports slightly stronger security measures.
 
 Updating the Django Settings File:
 ----------------------------------
+References:
+* https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04
+* https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/
+
 [ ] Summary of commands to run to enter the postgres shell:
     As root:
       su - postgres

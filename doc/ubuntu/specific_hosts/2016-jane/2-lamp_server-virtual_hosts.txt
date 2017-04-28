@@ -393,6 +393,32 @@ Checking all sites, in conjunction with getting them to work on barbara and ava:
 [ ] Checking the Drupal site:
     [ ] tomhartung.com
 
+Ensure Resume is Online
+-----------------------
+**************************************************
+*** We forgot this last time, and that is BAD. ***
+******************************************************
+*** My resume references this site so it NEEDS TO WORK! ***
+***********************************************************
+
+[ ] Install Mobile-Detect
+As tomh:
+  gor                    # /var/www/subsites/resume
+  cd ../idMyGadget/gadget_detectors/mobile_detect/
+  git clone git@github.com:serbanghita/Mobile-Detect.git
+
+
+[ ] Create links needed to enable resume
+As tomh:
+  gor                    # /var/www/subsites/resume
+  ln -s ../idMyGadget .
+  cd js
+  ln -s ProfessionalExperience-tomwhartung.js ProfessionalExperience.js
+  ln -s Resume-tomwhartung.js Resume.js
+
+Test in browser:
+  http://jane.tomwhartung.com/resume/
+
 Ensure Default Site Is Disabled
 -------------------------------
 Remove the link to sites-available/000-default.conf in the sites-enabled directory

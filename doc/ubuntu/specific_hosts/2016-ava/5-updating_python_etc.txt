@@ -169,8 +169,6 @@ file in the 23-som_postgresql_exp project in the always_learning_python repo.
     As tomh *on* *barbara*:
       goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
       cd gitignored/Site/Site
-      ## TODO: Ensure we set DEBUG in the environment and get it from there
-      ##       so it is NEVER set on the production hosts!
       toAva settings.py   # Have the next steps ready to go before running this!
 [ ] Pull code, run migrations and update the static files on ava:
     -> We will *always* want to run these steps

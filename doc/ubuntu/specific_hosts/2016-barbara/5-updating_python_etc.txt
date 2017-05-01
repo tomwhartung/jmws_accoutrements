@@ -180,9 +180,6 @@ file in the 23-som_postgresql_exp project in the always_learning_python repo.
     As tomh *on* *jane*:
       goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
       cd gitignored/Site/Site
-      vi settings.py          # TURN OFF DEBUG SWITCH (set to False)
-      ## TODO: Ensure we set DEBUG in the environment and get it from there
-      ##       so it is NEVER set on the production hosts!
       toBarbara settings.py   # Have the next steps ready to go before running this!
 [ ] Pull code, run migrations and update the static files on barbara:
     -> We will *always* want to run these steps

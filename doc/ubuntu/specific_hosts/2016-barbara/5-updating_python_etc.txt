@@ -124,6 +124,7 @@ References:
             'PORT': '',
         }
     }
+
 First Deploy: Create Fresh Postgres Database for Django Site
 ------------------------------------------------------------
 Reference:
@@ -169,8 +170,13 @@ file in the 23-som_postgresql_exp project in the always_learning_python repo.
           goshs
           gpom                       # git push origin master, yo!
     ** If the latest code isn't in github, results will be unpredictable! **
+[ ] Stop apache while we do this:
+    ** This and the next three steps should be done as quickly as possible **
+    It's just the back up host, so no one should be hitting it, but
+      it's good practice for doing the real thing on ava
+    As root *on* *barbara*:
+      service apache2 stop
 [ ] Push new settings to barbara:
-    ** This and the next two steps must be done in rapid succession **
     As tomh *on* *jane*:
       goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
       cd gitignored/Site/Site
@@ -189,7 +195,6 @@ file in the 23-som_postgresql_exp project in the always_learning_python repo.
       ./collectstatic.sh
 [ ] Restart apache and test:
     As root *on* *barbara*:
-      service apache2 stop
       service apache2 start
     Access in browser:
       http://barbara.seeourminds.com/

@@ -124,3 +124,87 @@ References:
             'PORT': '',
         }
     }
+First Deploy: Create Fresh Postgres Database for Django Site
+------------------------------------------------------------
+Reference:
+* https://github.com/tomwhartung/always_learning_python/tree/master/23-som_postgresql_exp
+For extremely detailed notes about how we learned to do this, see the README.md
+file in the 23-som_postgresql_exp project in the always_learning_python repo.
+
+[ ] Backup and restore functionality is TBD
+    -> For subsequent deployments, we will need to use backup and restore functionality
+    TODO: Research this and write no-brainer scripts similar to what we have for mysql
+[ ] Pre-requisite: create postgres user and database
+    This is covered above, see the section entitled:
+    -> "Use the postgres shell to create the user and database"
+    This *must* be done before running the following commands!
+[ ] Optional: starting fresh:
+    Because this is the first deployment, we are starting fresh.
+    -> For subsequent deployments, we will want to backup and run migrations
+    See the Reference given above for details (we did this like a thousand times!)
+    [ ] Kill app: if it's running, exit the app.
+    [ ] Use the postgres shell to drop and re-create the database:
+        -> This assumes the som_user has already been created, as described above
+        As root:
+          su - postgres
+          psql        # prompt changes
+          DROP DATABASE som_db;
+          CREATE DATABASE som_db owner som_user;
+          ALTER ROLE som_user SET client_encoding TO 'utf8';
+          ALTER ROLE som_user SET default_transaction_isolation TO 'read committed';
+          ALTER ROLE som_user SET timezone TO 'MST';
+          \q
+[ ] Commit the migrations on jane and ensure all code is pushed to github
+    Because we want the db on barbara to exactly match the db on jane,
+    -> this process is very different from what we did on jane!
+    [ ] Ensure latest copy of the migrations file (only one at this time)
+        is up-to-date in git.
+        As tomh *on* *jane*:
+          goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+          cd Site/content/migrations
+          ga 000*                    # git add file if necessary
+          gc 'Latest migrations!'    # git commit if necessary
+    [ ] Ensure latest code is pushed to github
+        As tomh *on* *jane*:
+          goshs
+          gpom                       # git push origin master, yo!
+    ** If the latest code isn't in github, results will be unpredictable! **
+[ ] Push new settings to barbara:
+    ** This and the next two steps must be done in rapid succession **
+    As tomh *on* *jane*:
+      goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+      cd gitignored/Site/Site
+      vi settings.py          # TURN OFF DEBUG SWITCH (set to False)
+      ## TODO: Ensure we set DEBUG in the environment and get it from there
+      ##       so it is NEVER set on the production hosts!
+      toBarbara settings.py   # Have the next steps ready to go before running this!
+[ ] Pull code, run migrations and update the static files on barbara:
+    -> We will *always* want to run these steps
+    As tomh *on* *barbara*:
+      goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+      cd Site/bin
+      gp                    # git pull the latest code
+      ./catmigrations.sh    # Run a final check!
+      ./migrate.sh          # Need the new settings.py file for this to run!
+      ./collectstatic.sh
+[ ] Restart apache and test:
+    As root *on* *barbara*:
+      service apache2 stop
+      service apache2 start
+    Access in browser:
+      http://barbara.seeourminds.com/
+[ ] If there are problems, even if they are cosmetic
+    [ ] Try clearing the browser cache, using a different browser, or
+          if issues are cosmetic, try browsing privately/going incognito
+    [ ] Try running it locally:
+    As tomh:
+      goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+      cd Site/bin
+      ./collectstatic.sh
+      ./run.sh
+    Access in browser:
+      http://127.0.0.1:8000/
+[ ] Use the app to check the db.
+    -> We do not have phppgadmin on barbara!
+    To test: create a couple of quizzes and reload them
+

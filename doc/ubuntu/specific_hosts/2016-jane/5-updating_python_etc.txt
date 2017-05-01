@@ -170,3 +170,83 @@ References:
             'PORT': '',
         }
     }
+
+First Deploy: Create Fresh Postgres Database for Django Site
+------------------------------------------------------------
+Reference:
+* https://github.com/tomwhartung/always_learning_python/tree/master/23-som_postgresql_exp
+For extremely detailed notes about how we learned to do this, see the README.md
+file in the 23-som_postgresql_exp project in the always_learning_python repo.
+
+[ ] Backup and restore functionality is TBD
+    -> For subsequent deployments, we will need to use backup and restore functionality
+    TODO: Research this and write no-brainer scripts similar to what we have for mysql
+[ ] Pre-requisite: create postgres user and database
+    This is covered above, see the section entitled:
+    -> "Use the postgres shell to create the user and database"
+    This *must* be done before running the following commands!
+[ ] Optional: starting fresh:
+    Because this is the first deployment, we are starting fresh.
+    -> For subsequent deployments, we will want to backup and run migrations
+    See the Reference given above for details (we did this like a thousand times!)
+    [ ] Kill app: if it's running, exit the app.
+    [ ] Use the postgres shell to drop and re-create the database:
+        -> This assumes the som_user has already been created, as described above
+        As root:
+          su - postgres
+          psql        # prompt changes
+          DROP DATABASE som_db;
+          CREATE DATABASE som_db owner som_user;
+          ALTER ROLE som_user SET client_encoding TO 'utf8';
+          ALTER ROLE som_user SET default_transaction_isolation TO 'read committed';
+          ALTER ROLE som_user SET timezone TO 'MST';
+          \q
+[ ] Make and run the migrations
+    [ ] Optional: delete old files
+        This time we are deleting the old migrations files, because
+        it is our first deployment, so we are starting fresh!
+        As tomh:
+          goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+          cd Site/content/migrations
+          rm 000*
+    [ ] Create and run migrations (create new file)
+        -> We will want to run these steps on subsequent deploys as well!
+        As tomh:
+          goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+          cd Site/bin
+          ./makemigrations.sh
+          ./catmigrations.sh
+          ./migrate.sh
+[X] Create django superuser?
+    -> NOT doing this right now!
+    This is listed in the processes we have found (see reference above!)
+    but I have found that I never use it and it is apparently unnecessary.
+    (Another good reason for playing around in a separate repo instead of
+    off in a branch of this one, if you ask me!)
+[ ] Update the static files:
+    As tomh:
+      goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+      cd Site/bin
+      ./collectstatic.sh
+[ ] Restart apache and test:
+    As root:
+      service apache2 stop
+      service apache2 start
+    Access in browser:
+      http://jane.seeourminds.com/
+[ ] If there are problems, even if they are cosmetic
+    [ ] Try clearing the browser cache, using a different browser, or
+        browsing privately/going incognito
+    [ ] Try running it locally:
+    As tomh:
+      goshs   # /var/www/seeourminds.com/htdocs/seeourminds.com
+      cd Site/bin
+      ./collectstatic.sh
+      ./run.sh
+    Access in browser:
+      http://127.0.0.1:8000/
+[ ] Use phppgadmin to check the db.
+    We do not have this tool on the other hosts, but
+    we can use it on jane to make sure everything's working ok so far.
+
+

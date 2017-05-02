@@ -11,9 +11,9 @@ Please follow these rules, so that code is consistent and easy to maintain!
 
 #### Rule (1): `base.html` defines all ad blocks
 
-##### Rule (1.1): Each ad has its own block in `base.html` .
+* 1.1: Each ad has its own block in `base.html` .
 
-##### Rule (1.2): Each ad's block contains only the source code markup for that ad, and nothing else.
+* 1.2: Each ad's block contains only the source code markup for that ad, and nothing else.
 
 #### Rule (2): If a page wants an ad ...
 
@@ -21,9 +21,9 @@ If a page wants to include the ad in a *_ad block, it needs to include that bloc
 
 #### Rule (3): All ad source code is in `Site/content/adsense.py` .
 
-##### Rule (3.1): Define a `*_IFRAME` variable for when we are RUNNING_LOCALLY
+* 3.1: Define a `*_IFRAME` variable for when we are `RUNNING_LOCALLY`
 
-##### Rule (3.2): Define a `*_AD` variable for use on the life site
+* 3.2: Define a `*_AD` variable for use on the life site
 
 # Process
 
@@ -88,6 +88,10 @@ Add the following code to the appropriate location in `galleries.html` :
 
 Google prefers the Responsive ads, so use that size if possible.
 
+We are also using Horizontal ads, Large Leaderboard and Billboard.
+
+Fill in the form:
+
 - The standard for the name is: "[Block Name in Words] - [Ad size]"
 - See the others ads and make sure it is consistent!
 - Name: This time we are naming it: "Top Left Ad - Responsive"
@@ -114,12 +118,12 @@ Paste the code provided by google into `Site/content/adsense.py` ,
 being sure to:
 
 * Follow the naming conventions established previously
-* Provide a definition for a corresponding "*_IFRAME" tag for display when RUNNING_LOCALLY
+* Provide a definition for a corresponding `*_IFRAME` tag for display when `RUNNING_LOCALLY`
 * Be mindful about formatting, being sure to leave spaces between double and single quotes, etc.!
 
 For this example, we create two new constants:
 
-* `TOP_LEFT_RESPONSIVE_IFRAME` - for when we are RUNNING_LOCALLY
+* `TOP_LEFT_RESPONSIVE_IFRAME` - for when we are `RUNNING_LOCALLY`
 * `TOP_LEFT_RESPONSIVE_AD` - for use on the life site
 
 These of course all look very similar except for minor differences in the
@@ -130,12 +134,12 @@ code supplied by google.
 Update the `adsense_ads` dictionary that appears at the end of `adsense.py` with:
 
 * key: `'top_left_ad'`
-* value: `TOP_LEFT_RESPONSIVE_IFRAME` when RUNNING_LOCALLY
-* value: `TOP_LEFT_RESPONSIVE_AD` when NOT RUNNING_LOCALLY
+* value: `TOP_LEFT_RESPONSIVE_IFRAME` when `RUNNING_LOCALLY`
+* value: `TOP_LEFT_RESPONSIVE_AD` when NOT `RUNNING_LOCALLY`
 
 ## Step (5) Test
 
-#### 5.1 Test RUNNING_LOCALLY
+#### 5.1 Test `RUNNING_LOCALLY`
 
 Start the development server and access this URL:
 
@@ -143,7 +147,7 @@ Start the development server and access this URL:
 
 If that looks ok, i.e., there is a grey box where we want the ad to be ....
 
-#### 5.2 Test NOT RUNNING_LOCALLY
+#### 5.2 Test NOT `RUNNING_LOCALLY`
 
 Restart apache:
 
@@ -154,7 +158,8 @@ sudo service apache2 restart
 And access this URL:
 
 * http://jane.seeourminds.com/
-* Note that it may take awhile to see an actual ad in this location.
+
+Note that it may take awhile to see an actual ad in this location.
 
 And if that looks ok, i.e., there is an open area where we want the ad to be ....
 

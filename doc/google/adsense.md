@@ -9,19 +9,21 @@ five years or whatever from now.
 
 Please follow these rules, so that code is consistent and easy to maintain!
 
-### Rule (1): All ad source code is in `Site/content/adsense.py` .
+#### Rule (1): `base.html` defines all ad blocks
 
-### Rule (1): All ads are served in `Site/content/templates/content/base.html` .
+##### Rule (1.1): Each ad has its own block in `base.html` .
 
-### Rule (1): Each ad has its own block in `base.html` .
+##### Rule (1.2): Each ad's block contains only the source code markup for that ad, and nothing else.
 
-### Rule (1): Each ad's block contains only the source code markup for that ad, and nothing else.
+#### Rule (2): If a page wants an ad ...
 
-### Rule (1): If a page wants to include the ad in a `*_ad` block...
+If a page wants to include the ad in a *_ad block, it needs to include that block and call block.super().
 
-If a page wants to include the ad in a `*_ad` block, it needs to:
-(1) include that block in its template and
-(2) call block.super().
+#### Rule (3): All ad source code is in `Site/content/adsense.py` .
+
+##### Rule (3.1): Define a `*_IFRAME` variable for when we are RUNNING_LOCALLY
+
+##### Rule (3.2): Define a `*_AD` variable for use on the life site
 
 # Process
 
@@ -33,7 +35,9 @@ to the Galleries page, i.e., the `Site/content/templates/content/galleries.html`
 
 ## Step (1): Update `base.html`
 
-#### Rule: All ads are served in `base.html` .
+All ads are served from `Site/content/templates/content/base.html` .
+
+#### Rule (1): `base.html` defines all ad blocks
 
 Add the following code to the appropriate location in `base.html` :
 
@@ -45,13 +49,21 @@ Add the following code to the appropriate location in `base.html` :
 
 ## Step (2): Update `galleries.html`
 
-#### Rule: If a page wants ads in a *_ad block, it needs to include that block and call block.super().
+#### Rule (2): If a page wants an ad ...
+
+If a page wants to include the ad in a `*_ad` block, it needs to:
+
+1. include that block in its template and
+
+2. call `block.super()` .
 
 Add the following code to the appropriate location in `galleries.html` :
 
 ```
 {% block top_left_ad %}
-  {{ block.super }}
+  <div class="col-md-4">
+    {{ block.super }}
+  </div><!-- col-md-4 -->
 {% endblock %}
 ```
 
@@ -65,28 +77,36 @@ Add the following code to the appropriate location in `galleries.html` :
 
 #### 3.2 Log in if necessary and access "My ads"
 
-* "My ads" is an option in the hamburger menu up in the left-hand corner.
+"My ads" is an option in the hamburger menu up in the left-hand corner.
 
 #### 3.3 Create a new Ad unit
 
 * Click on (My Ads) -> Content -> Ad Units
 * Click on "+ New ad unit"
-* Fill in the form
-** Google prefers the Responsive ads, so use that if possible.
-** The standard for the name is: "[Block Name in Words] - [Ad size]"
-** See the others ads and make sure it is consistent!
-** Name: This time we are naming it: "Top Left Ad - Responsive"
-** Ad size: Responsive (make sure it matches the name!)
-** Ad type: Text & display (preferred - can change later)
-** Text ad style: Default
-** Custom channels: if this is new block, create one using the block name,
-** I.e., Create custom channel -> Name: top_left_ad -> Save button
-** Note that the new custom channel is selected, cool
-** Backup ads -> Fill space with a solid color -> #CCCCCC
-** Click on "Save"
-* Select and copy all of the ad code into the mouse buffer.
+
+#### 3.4 Fill in the form
+
+Google prefers the Responsive ads, so use that size if possible.
+
+- The standard for the name is: "[Block Name in Words] - [Ad size]"
+- See the others ads and make sure it is consistent!
+- Name: This time we are naming it: "Top Left Ad - Responsive"
+- Ad size: Responsive (make sure it matches the name!)
+- Ad type: Text & display (preferred - can change later)
+- Text ad style: Default
+- Custom channels: if this is new block, create one using the block name,
+- I.e., Create custom channel -> Name: top_left_ad -> Save button
+- Note that the new custom channel is selected, cool
+- Backup ads -> Fill space with a solid color -> #CCCCCC
+- Click on "Save"
+
+Select and copy all of the ad code into the mouse buffer.
 
 ## Step (4): Update `adsense.py`
+
+#### Rule (3): All ad source code is in `Site/content/adsense.py` .
+
+Prerequisite: all of the ad code from Step (3) is in the mouse buffer.
 
 #### 4.1 Paste code
 
@@ -95,7 +115,7 @@ being sure to:
 
 * Follow the naming conventions established previously
 * Provide a definition for a corresponding "*_IFRAME" tag for display when RUNNING_LOCALLY
-* Be mindful about formatting, being sure to leave spaces when necessary, etc.!
+* Be mindful about formatting, being sure to leave spaces between double and single quotes, etc.!
 
 For this example, we create two new constants:
 
@@ -113,5 +133,34 @@ Update the `adsense_ads` dictionary that appears at the end of `adsense.py` with
 * value: `TOP_LEFT_RESPONSIVE_IFRAME` when RUNNING_LOCALLY
 * value: `TOP_LEFT_RESPONSIVE_AD` when NOT RUNNING_LOCALLY
 
+## Step (5) Test
 
+#### 5.1 Test RUNNING_LOCALLY
+
+Start the development server and access this URL:
+
+* http://127.0.0.1:8000/galleries
+
+If that looks ok, i.e., there is a grey box where we want the ad to be ....
+
+#### 5.2 Test NOT RUNNING_LOCALLY
+
+Restart apache:
+
+```
+sudo service apache2 restart
+```
+
+And access this URL:
+
+* http://jane.seeourminds.com/
+* Note that it may take awhile to see an actual ad in this location.
+
+And if that looks ok, i.e., there is an open area where we want the ad to be ....
+
+## Step (6) Commit, push, and deploy
+
+Commit and push the changes to github.
+
+Log on the backup and production hosts, and pull the new code.
 

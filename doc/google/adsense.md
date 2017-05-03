@@ -26,9 +26,9 @@ To include the ad in a *_ad block, a page needs to:
 * 3.1: Define a `*_IFRAME` variable for when we are `RUNNING_LOCALLY`
 * 3.2: Define a `*_AD` variable for use on the life site
 
-#### Rule (4): Each location maps to a single block and one channel
+#### Rule (4): Each **location** maps to a single block and one channel
 
-#### Rule (5): Each ad unit maps to a single block and one channel
+#### Rule (5): Each **ad unit** maps to a single block and one channel
 
 * 5.1 Most locations display only one size ad (Example A)
 * 5.2 Some locations display more than one size of ad (Example B)
@@ -46,8 +46,8 @@ We cover two examples:
 All ads are served from `Site/content/templates/content/base.html` .
 
 #### Rule (1): `base.html` defines all ad blocks
-#### Rule (4): Each location maps to a single block and one channel
-#### Rule (5): Each ad unit maps to a single block and one channel
+#### Rule (4): Each **location** maps to a single block and one channel
+#### Rule (5): Each **ad unit** maps to a single block and one channel
 
 #### Example A:
 
@@ -151,8 +151,8 @@ We are showing the *content* of the `top_row_large_leaderboard_ad` block in the
 
 Following is the process for creating and obtaining the ad code from google:
 
-#### Rule (4): Each location maps to a single block and one channel
-#### Rule (5): Each ad unit maps to a single block and one channel
+#### Rule (4): Each **location** maps to a single block and one channel
+#### Rule (5): Each **ad unit** maps to a single block and one channel
 
 ### 3.1 Access the google adsense site in the browser:
 
@@ -186,13 +186,13 @@ We are also using Horizontal ads, Large Leaderboard and Billboard.
 For the gallery pages:
 
 * Name: Top Row Ad - Large Billboard
-* Size: Large Billboard
+* Size: Large Billboard (click on "Recommended" and pick "Horizontal banner")
 * Channel: top_row_ad - same as for the quiz pages
 
 For the quiz pages:
 
 * Name: Top Row Ad - Large Leaderboard
-* Size: Large Leaderboard
+* Size: Large Leaderboard (click on "Recommended" and pick "Horizontal banner")
 * Channel: top_row_ad - same as for the gallery pages
 
 ### 3.5 Fill in the form

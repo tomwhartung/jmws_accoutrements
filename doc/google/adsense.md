@@ -12,7 +12,6 @@ Please follow these rules, so that code is consistent and easy to maintain!
 #### Rule (1): `base.html` defines all ad blocks
 
 * 1.1: Each ad has its own block in `base.html` .
-
 * 1.2: Each ad's block contains only the source code markup for that ad, and nothing else.
 
 #### Rule (2): If a page wants an ad ...
@@ -22,7 +21,6 @@ If a page wants to include the ad in a *_ad block, it needs to include that bloc
 #### Rule (3): All ad source code is in `Site/content/adsense.py` .
 
 * 3.1: Define a `*_IFRAME` variable for when we are `RUNNING_LOCALLY`
-
 * 3.2: Define a `*_AD` variable for use on the life site
 
 #### Rule (4): Each location maps to a single block and one channel
@@ -30,7 +28,6 @@ If a page wants to include the ad in a *_ad block, it needs to include that bloc
 #### Rule (5): Each ad unit maps to a single block and one channel
 
 * 5.1 Most locations display only one size ad (Example A)
-
 * 5.2 Some locations display more than one size of ad (Example B)
 
 # Process
@@ -39,7 +36,7 @@ This is the process for adding new ad blocks.
 We cover two examples:
 
 * Example A: add `top_left_ad` to the Galleries page
-* Example B: add two different size `top_row_ad` blocks to the Galleries and Quiz pages
+* Example B: add two differently sized `top_row_ad` blocks to the Galleries and Quiz pages
 
 ## Step (1): Update `base.html`
 
@@ -84,9 +81,9 @@ Add the following code to the appropriate location (near the top) in
 
 Note that there are three new blocks:
 
-* top_row_ad - corresponds to the channel
-* top_row_large_billboard_ad - serves larger ads in this block
-* top_row_large_leaderboard_ad - serves smaller ads in this block
+* `top_row_ad` - corresponds to the channel
+* `top_row_large_billboard_ad` - serves larger ads in this block
+* `top_row_large_leaderboard_ad` - serves smaller ads in this block
 
 ## Step (2): Update page templates
 
@@ -146,31 +143,58 @@ We are showing the *content* of the `top_row_large_leaderboard_ad` block in the
 
 ## Step (3): Create ad and get code
 
-### Process:
+Following is the process for creating and obtaining the ad code from google:
 
-#### 3.1 Access the google adsense site in the browser:
+### 3.1 Access the google adsense site in the browser:
 
 * https://google.com/adsense
 
-#### 3.2 Log in if necessary and access "My ads"
+### 3.2 Log in if necessary and access "My ads"
 
 "My ads" is an option in the hamburger menu up in the left-hand corner.
 
-#### 3.3 Create a new Ad unit
+### 3.3 Create a new Ad unit
 
 * Click on (My Ads) -> Content -> Ad Units
 * Click on "+ New ad unit"
 
-#### 3.4 Fill in the form
+### 3.4 Ad sizes
 
 Google prefers the Responsive ads, so use that size if possible.
 
 We are also using Horizontal ads, Large Leaderboard and Billboard.
 
-#### Example A:
-#### Example B:
+#### 3.4.1 Name, size, and channel used by Example A:
 
-Fill in the form:
+* Name: Top Left Ad - Responsive
+* Size: Responsive
+* Channel: top_left_ad
+
+#### 3.4.2 Names, sizes, and channel used by Example B:
+
+For the gallery pages:
+
+* Name: Top Row Ad - Large Billboard
+* Size: Large Billboard
+* Channel: top_row_ad - same as for the quiz pages
+
+For the quiz pages:
+
+* Name: Top Row Ad - Large Leaderboard
+* Size: Large Leaderboard
+* Channel: top_row_ad - same as for the gallery pages
+
+### 3.5 Fill in the form
+
+This process is the same for all ads, except for the:
+
+* names
+* ad sizes
+* custom channel
+
+For details, see the previous section.
+
+#### 3.5.1 Filling in the form:
 
 - The standard for the name is: "[Block Name in Words] - [Ad size]"
 - See the others ads and make sure it is consistent!

@@ -7,7 +7,7 @@ five years or whatever from now.
 
 # Rules
 
-Please follow these rules, so that code is consistent and easy to maintain!
+We *must* follow these rules, so that code is consistent and easy to maintain!
 
 #### Rule (1): `base.html` defines all ad blocks
 
@@ -16,7 +16,10 @@ Please follow these rules, so that code is consistent and easy to maintain!
 
 #### Rule (2): If a page wants an ad ...
 
-If a page wants to include the ad in a *_ad block, it needs to include that block and call block.super().
+To include the ad in a *_ad block, a page needs to:
+
+* include that block in its source and
+* call block.super() inside the block, to get the ad code
 
 #### Rule (3): All ad source code is in `Site/content/adsense.py` .
 
@@ -82,8 +85,8 @@ Add the following code to the appropriate location (near the top) in
 Note that there are three new blocks:
 
 * `top_row_ad` - corresponds to the channel
-* `top_row_large_billboard_ad` - serves larger ads in this block
-* `top_row_large_leaderboard_ad` - serves smaller ads in this block
+* `top_row_large_billboard_ad` - serves larger (billboard) ads in this block
+* `top_row_large_leaderboard_ad` - serves smaller (leaderboard) ads in this block
 
 ## Step (2): Update page templates
 
@@ -109,12 +112,15 @@ Add the following code to the appropriate location (near the top) in
 {% endblock %}
 ```
 
-#### Example B: Update `galleries.html` and `quiz_base.html`
+#### Example B: Update the templates
 
-##### 2.B.1 Updating `galleries.html`
+We now add these blocks to `galleries.html`, `gallery.html`, and `quiz_base.html`
+
+##### 2.B.1 Updating `galleries.html` and `gallery.html`
 
 Add the following code to the appropriate location (near the top) in
-`Site/content/templates/content/galleries.html` :
+`Site/content/templates/content/galleries.html` and
+`Site/content/templates/content/gallery.html` :
 
 ```
 {% block top_row_ad %}
@@ -145,6 +151,9 @@ We are showing the *content* of the `top_row_large_leaderboard_ad` block in the
 
 Following is the process for creating and obtaining the ad code from google:
 
+#### Rule (4): Each location maps to a single block and one channel
+#### Rule (5): Each ad unit maps to a single block and one channel
+
 ### 3.1 Access the google adsense site in the browser:
 
 * https://google.com/adsense
@@ -158,9 +167,11 @@ Following is the process for creating and obtaining the ad code from google:
 * Click on (My Ads) -> Content -> Ad Units
 * Click on "+ New ad unit"
 
-### 3.4 Ad sizes
+### 3.4 Ad names, sizes, and channels
 
 Google prefers the Responsive ads, so use that size if possible.
+
+- The standard for the name is: "[Block Name in Words] - [Ad size]"
 
 We are also using Horizontal ads, Large Leaderboard and Billboard.
 
@@ -214,9 +225,9 @@ Select and copy all of the ad code into the mouse buffer.
 
 #### Rule (3): All ad source code is in `Site/content/adsense.py` .
 
-Prerequisite: all of the ad code from Step (3) is in the mouse buffer.
+Prerequisite: all of the code for the ads created in Step (3) is available
 
-#### 4.1 Paste code
+#### 4.1 Copy and paste ad code
 
 Paste the code provided by google into `Site/content/adsense.py` ,
 being sure to:
@@ -224,34 +235,67 @@ being sure to:
 * Follow the naming conventions established previously
 * Provide a definition for a corresponding `*_IFRAME` tag for display when `RUNNING_LOCALLY`
 * Be mindful about formatting, being sure to leave spaces between double and single quotes, etc.!
-
+* Be mindful about formatting - PEP-8!!
 
 #### Example A:
-#### Example B:
 
 For this example, we create two new constants:
 
 * `TOP_LEFT_RESPONSIVE_IFRAME` - for when we are `RUNNING_LOCALLY`
 * `TOP_LEFT_RESPONSIVE_AD` - for use on the life site
 
-These of course all look very similar except for minor differences in the
-code supplied by google.
+These of course are all going to look very similar except for:
+
+* the width, height, and id attributes in the `*_IFRAME` code
+* minor differences in the `*_AD` code supplied by google
+
+Still it must be **absolutely perfect,** so be careful and double- and triple-check for typoes!
+
+#### Example B:
+
+For this example, we create four new constants:
+
+* `TOP_ROW_LARGE_BILLBOARD_IFRAME` - for when we are `RUNNING_LOCALLY`
+* `TOP_ROW_LARGE_LEADERBOARD_IFRAME` - for when we are `RUNNING_LOCALLY`
+* `TOP_ROW_LARGE_BILLBOARD_AD` - for use on the life site
+* `TOP_ROW_LARGE_LEADERBOARD_AD` - for use on the life site
+
+These of course are all going to look very similar except for:
+
+* the width, height, and id attributes in the `*_IFRAME` code
+* minor differences in the `*_AD` code supplied by google
+
+Still it must be **absolutely perfect,** so be careful and double- and triple-check for typoes!
 
 #### 4.2 Update `adsense_ads` dictionary
 
-Update the `adsense_ads` dictionary that appears at the end of `adsense.py` with:
+Update the `adsense_ads` dictionary that appears at the very end of `Site/content/adsense.py` as follows.
+
+##### 4.2.A Example A:
+
+For example A, add the following entries to the dictionary:
 
 * key: `'top_left_ad'`
 * value: `TOP_LEFT_RESPONSIVE_IFRAME` when `RUNNING_LOCALLY`
-* value: `TOP_LEFT_RESPONSIVE_AD` when NOT `RUNNING_LOCALLY`
+* value: `TOP_LEFT_RESPONSIVE_AD` when **NOT** `RUNNING_LOCALLY`
+
+##### 4.2.B Example B:
+
+For example B, add the following entries to the dictionary:
+
+* key: `"top_row_large_billboard_ad"`:
+* value: `TOP_ROW_LARGE_BILLBOARD_IFRAME` when `RUNNING_LOCALLY`
+* value: `TOP_ROW_LARGE_BILLBOARD_AD` when **NOT** `RUNNING_LOCALLY`
+
+and
+
+* key: `"top_row_large_leaderboard_ad"'`
+* value: `TOP_ROW_LARGE_LEADERBOARD_IFRAME` when `RUNNING_LOCALLY`
+* value: `TOP_ROW_LARGE_LEADERBOARD_AD` when **NOT** `RUNNING_LOCALLY`
 
 ## Step (5) Test
 
 #### 5.1 Test `RUNNING_LOCALLY`
-
-
-#### Example A:
-#### Example B:
 
 Start the development server and access this URL:
 
@@ -259,7 +303,7 @@ Start the development server and access this URL:
 
 If that looks ok, i.e., there is a grey box where we want the ad to be ....
 
-#### 5.2 Test NOT `RUNNING_LOCALLY`
+#### 5.2 Test **NOT** `RUNNING_LOCALLY`
 
 Restart apache:
 

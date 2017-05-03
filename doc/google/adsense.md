@@ -25,21 +25,34 @@ If a page wants to include the ad in a *_ad block, it needs to include that bloc
 
 * 3.2: Define a `*_AD` variable for use on the life site
 
+#### Rule (4): Each location maps to a single block and one channel
+
+#### Rule (5): Each ad unit maps to a single block and one channel
+
+* 5.1 Most locations display only one size ad (Example A)
+
+* 5.2 Some locations display more than one size of ad (Example B)
+
 # Process
 
-This is the process for adding a new ad block:
+This is the process for adding new ad blocks.
+We cover two examples:
 
-* `top_left_ad`
-
-to the Galleries page, i.e., the `Site/content/templates/content/galleries.html` template.
+* Example A: add `top_left_ad` to the Galleries page
+* Example B: add two different size `top_row_ad` blocks to the Galleries and Quiz pages
 
 ## Step (1): Update `base.html`
 
 All ads are served from `Site/content/templates/content/base.html` .
 
 #### Rule (1): `base.html` defines all ad blocks
+#### Rule (4): Each location maps to a single block and one channel
+#### Rule (5): Each ad unit maps to a single block and one channel
 
-Add the following code to the appropriate location in `base.html` :
+#### Example A:
+
+Add the following code to the appropriate location (near the top) in
+`Site/content/templates/content/base.html` :
 
 ```
 {% block top_left_ad %}
@@ -47,17 +60,49 @@ Add the following code to the appropriate location in `base.html` :
 {% endblock %}
 ```
 
-## Step (2): Update `galleries.html`
+#### Example B:
+
+Add the following code to the appropriate location (near the top) in
+`Site/content/templates/content/base.html` :
+
+```
+{% block top_row_ad %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+        {% block top_row_large_billboard_ad %}
+          {{ adsense_ads.top_row_large_billboard_ad | safe }}
+        {% endblock %}
+        {% block top_row_large_leaderboard_ad %}
+          {{ adsense_ads.top_row_large_leaderboard_ad | safe }}
+        {% endblock %}
+      </div><!-- .text-center -->
+    </div><!-- col-md-12 -->
+  </div><!-- .row -->
+{% endblock %}
+```
+
+Note that there are three new blocks:
+
+* top_row_ad - corresponds to the channel
+* top_row_large_billboard_ad - serves larger ads in this block
+* top_row_large_leaderboard_ad - serves smaller ads in this block
+
+## Step (2): Update page templates
 
 #### Rule (2): If a page wants an ad ...
 
 If a page wants to include the ad in a `*_ad` block, it needs to:
 
 1. include that block in its template and
-
 2. call `block.super()` .
 
-Add the following code to the appropriate location in `galleries.html` :
+#### Example A: Update `galleries.html`
+
+##### 2.A.1 Updating `galleries.html`
+
+Add the following code to the appropriate location (near the top) in
+`Site/content/templates/content/galleries.html` :
 
 ```
 {% block top_left_ad %}
@@ -66,6 +111,38 @@ Add the following code to the appropriate location in `galleries.html` :
   </div><!-- col-md-4 -->
 {% endblock %}
 ```
+
+#### Example B: Update `galleries.html` and `quiz_base.html`
+
+##### 2.B.1 Updating `galleries.html`
+
+Add the following code to the appropriate location (near the top) in
+`Site/content/templates/content/galleries.html` :
+
+```
+{% block top_row_ad %}
+  {% block top_row_large_billboard_ad %}{{ block.super }}{% endblock %}
+  {% block top_row_large_leaderboard_ad %}{% endblock %}
+{% endblock %}
+```
+
+We are showing the *content* of the `top_row_large_billboard_ad` block in the
+`top_row_ad` *channel* block.
+
+##### 2.B.2 Updating `quiz_base.html`
+
+Add the following code to the appropriate location (near the top) in
+`Site/content/templates/content/quiz_base.html` :
+
+```
+{% block top_row_ad %}
+  {% block top_row_large_billboard_ad %}{% endblock %}
+  {% block top_row_large_leaderboard_ad %}{{ block.super }}{% endblock %}
+{% endblock %}
+```
+
+We are showing the *content* of the `top_row_large_leaderboard_ad` block in the
+`top_row_ad` *channel* block.
 
 ## Step (3): Create ad and get code
 
@@ -89,6 +166,9 @@ Add the following code to the appropriate location in `galleries.html` :
 Google prefers the Responsive ads, so use that size if possible.
 
 We are also using Horizontal ads, Large Leaderboard and Billboard.
+
+#### Example A:
+#### Example B:
 
 Fill in the form:
 
@@ -121,6 +201,10 @@ being sure to:
 * Provide a definition for a corresponding `*_IFRAME` tag for display when `RUNNING_LOCALLY`
 * Be mindful about formatting, being sure to leave spaces between double and single quotes, etc.!
 
+
+#### Example A:
+#### Example B:
+
 For this example, we create two new constants:
 
 * `TOP_LEFT_RESPONSIVE_IFRAME` - for when we are `RUNNING_LOCALLY`
@@ -140,6 +224,10 @@ Update the `adsense_ads` dictionary that appears at the end of `adsense.py` with
 ## Step (5) Test
 
 #### 5.1 Test `RUNNING_LOCALLY`
+
+
+#### Example A:
+#### Example B:
 
 Start the development server and access this URL:
 

@@ -33,6 +33,13 @@ To include the ad in a *_ad block, a page needs to:
 * 5.1 Most locations display only one size ad (Example A)
 * 5.2 Some locations display more than one size of ad (Example B)
 
+#### Rule (6): Make it easy to see which blocks are being used
+
+* We want to be able to easily determine which ads are displayed on which pages
+* We can do this using our mega-grep script, e.g., `gredt middle_right_ad | grep super`
+* Try to put the calls to `super` that get the ads on the same line as the block definition
+* This is not always possible!  For details, see Step (2), where we update the templates.
+
 # Process
 
 This is the process for adding new ad blocks.
@@ -97,6 +104,8 @@ If a page wants to include the ad in a `*_ad` block, it needs to:
 1. include that block in its template and
 2. call `block.super()` .
 
+#### Rule (6): Make it easy to see which blocks are being used
+
 #### Example A: Update `galleries.html`
 
 ##### 2.A.1 Updating `galleries.html`
@@ -105,12 +114,12 @@ Add the following code to the appropriate location (near the top) in
 `Site/content/templates/content/galleries.html` :
 
 ```
-{% block top_left_ad %}
-  <div class="col-md-4">
-    {{ block.super }}
-  </div><!-- col-md-4 -->
-{% endblock %}
+{% block top_left_ad %}{{ block.super }}{% endblock %}
 ```
+
+It is important to have the block tag and call to super on the same line,
+so that we can easily see (from the command line, using `gredt`)
+which pages are including the ad (see Rule (6)).
 
 #### Example B: Update the templates
 
@@ -131,6 +140,10 @@ Add the following code to the appropriate location (near the top) in
 
 We are showing the *content* of the `top_row_large_billboard_ad` block in the
 `top_row_ad` *channel* block.
+
+It is important to have the block tag and call to super on the same line,
+so that we can easily see (from the command line, using `gredt`)
+which pages are including the ad (see Rule (6)).
 
 ##### 2.B.2 Updating `quiz_base.html`
 
@@ -169,11 +182,13 @@ Following is the process for creating and obtaining the ad code from google:
 
 ### 3.4 Ad names, sizes, and channels
 
+**The naming convention is: "[Block Name in Words] - [Ad size]"**
+
 Google prefers the Responsive ads, so use that size if possible.
+These do seem to adapt to the space they're given!
 
-- The standard for the name is: "[Block Name in Words] - [Ad size]"
-
-We are also using Horizontal ads, Large Leaderboard and Billboard.
+* We are also using Horizontal ads, Large Leaderboard and Billboard.
+* We are also experimenting with and may be using Rectangular ads, Large, Medium, and Square.
 
 #### 3.4.1 Name, size, and channel used by Example A:
 

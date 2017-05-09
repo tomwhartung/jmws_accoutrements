@@ -105,8 +105,49 @@ Wow they are all different!  Hmmm!!
 
 #### Step 1.2.2: Running the command:
 
+We have a winner! The digitalocean one looks best!
+
+That page also has a good explantion of each parameter.
+
 As root:
 ```
+l ssl/certs/apa* ssl/private/apa*   # No such file or directory - just checking!
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+```
+
+Output (and answers given to prompts).
+
+** NOTE: they want the Fully Qualified Domain Name (FQDN) or
+IP Address in the Common Name field!**
+
+```
+crtGenerating a 2048 bit RSA private key
+........+++
+.................+++
+writing new private key to '/etc/ssl/private/apache-selfsigned.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:Colorado
+Locality Name (eg, city) []:Denver
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:JooMoo WebSites LLC
+Organizational Unit Name (eg, section) []:HQ
+Common Name (e.g. server FQDN or YOUR name) []:10.0.0.113
+Email Address []:mark_as_spam@tomhartung.com
+```
+
+And:
+
+```
+$ l ssl/certs/apa* ssl/private/apa*
+-rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/apache-selfsigned.crt
+-rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/apache-selfsigned.key
 ```
 
 

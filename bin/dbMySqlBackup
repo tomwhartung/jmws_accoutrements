@@ -3,7 +3,7 @@
 # dbMySqlBackup: backs up a mysql database
 # ----------------------------------------
 # The tricky part is to allow storing the credentials in a confidential manner. 
-# For more information, see the comments in dbCredentialsFileExample.py .
+# For more information, see the comments in dbMySqlCredentialsEg.py .
 #
 import os       # for getting values for environment vars
 import sys      # for accessing command line arguments
@@ -13,22 +13,22 @@ from subprocess import call  # for running commands
 #  Import the functions that we share with dbMySqlRestore
 #  Process the command line arguments
 #
-import dbFunctions
-arguments = dbFunctions.processArguments( 'backup' )
+import dbMySqlFunctions
+arguments = dbMySqlFunctions.processArguments( 'backup' )
 siteArg = arguments[0]
 suffixArg = arguments[1]
 
 #
 #  Run the Top Secret Db Credentials File to get the values we need to
 #    set the credential-containing globals dbNames, dbUsers, dbPasswords.
-#  For more information, see the comments in dbCredentialsFileExample.py
+#  For more information, see the comments in dbMySqlCredentialsEg.py
 #
 dbNames = {}
 dbUsers = {}
 dbPasswords = {}
 siteName = siteArg
 
-dbCredentialsFile = dbFunctions.getDbCredentialsFile()
+dbCredentialsFile = dbMySqlFunctions.getDbCredentialsFile()
 exec( compile(open(dbCredentialsFile,"rb").read(), dbCredentialsFile, 'exec'), globals(), locals() )
 
 dbName = dbNames[siteName]
@@ -38,11 +38,11 @@ dbPassword = dbPasswords[siteName]
 #
 #  Use functions to refine and get the remaining values we need
 #
-dbPasswordArg = dbFunctions.getDbPasswordArg( dbPassword )
-dbUserArg = dbFunctions.getDbUserArg( dbUser )
+dbPasswordArg = dbMySqlFunctions.getDbPasswordArg( dbPassword )
+dbUserArg = dbMySqlFunctions.getDbUserArg( dbUser )
 
-dbBackupDirectory = dbFunctions.getDbBackupDirectory()
-dbBackupFileBaseName = dbFunctions.getDbBackupFileBaseName( siteName, suffixArg )
+dbBackupDirectory = dbMySqlFunctions.getDbBackupDirectory()
+dbBackupFileBaseName = dbMySqlFunctions.getDbBackupFileBaseName( siteName, suffixArg )
 dbBackupFileFullName = dbBackupDirectory + '/' + dbBackupFileBaseName
 
 #

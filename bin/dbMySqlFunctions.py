@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #
-# dbFunctions.py: define syntax, get args, db credentials, etc.
-# -------------------------------------------------------------
+# dbMySqlFunctions.py: define syntax, get args, db credentials, etc.
+# ------------------------------------------------------------------
 # Any code that both dbMySqlBackup and dbMySqlRestore can use should be in a function in this file
 #
 import os       # for getting values for environment vars
@@ -129,7 +129,7 @@ def getDbBackupFileBaseName( siteName, suffixArg, dateOverride='', hostNameOverr
 #  "point" to the example file which contains information about all this
 #
 def getDbCredentialsFile() :
-	dbCredentialsFileDefault = 'dbCredentialsFileExample.py'
+	dbCredentialsFileDefault = 'dbMySqlCredentialsEg.py'
 	dbCredentialsFileEnviron = ''
 	try :
 		dbCredentialsFileEnviron = os.environ['DB_CREDENTIALS_FILE']

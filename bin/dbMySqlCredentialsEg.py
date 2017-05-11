@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #
-# dbDataExample.py: define arrays of site names, corresponding databases, etc.
-# ----------------------------------------------------------------------------
+# dbMySqlCredentialsEg.py: define arrays of site names, corresponding databases, etc.
+# -----------------------------------------------------------------------------------
 # Example of how to set the values of the db credentials (dbName, dbUser, and dbPass) used by the
 #   dbMySqlBackup, dbMySqlRestore, and dbMySqlCommand scripts in this directory
 # Note:

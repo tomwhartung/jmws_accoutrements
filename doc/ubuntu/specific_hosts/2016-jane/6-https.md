@@ -82,28 +82,43 @@ Seeing some different examples in the various references.
 
 ##### Step 1.2.1: Comparing the references
 
-Let's compare the references:
+Compare the information in the various references:
 
-(1) digitalocean.com:
-`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`
+###### (1) digitalocean.com:
 
-(2) liquidweb.com:
-`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt`
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+```
 
-(3) liberiangeek.net:
-`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt`
+###### (2) liquidweb.com:
 
-(4) linuxacademy.com:
-`openssl req -new > my.cert.csr` - generates the "Certificate Request" file.
-`openssl rsa -in privkey.pem -out my.new.key`
-`openssl x509 -in my.cert.csr -out my.new.cert -req -signkey my.new.key -days 3650`
-`cp my.new.cert /etc/ssl/certs/server.crt`
-`cp my.new.key /etc/ssl/private/server.key`
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+```
 
-(5) techrepublic.com:
-`openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt`
-`cp server.crt /etc/apache2/ssl/server.crt`
-`cp server.key /etc/apache2/ssl/server.key`
+###### (3) liberiangeek.net:
+
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt
+```
+
+###### (4) linuxacademy.com:
+
+```
+openssl req -new > my.cert.csr   # generates the "Certificate Request" file.
+openssl rsa -in privkey.pem -out my.new.key
+openssl x509 -in my.cert.csr -out my.new.cert -req -signkey my.new.key -days 3650
+cp my.new.cert /etc/ssl/certs/server.crt
+cp my.new.key /etc/ssl/private/server.key
+```
+
+###### (5) techrepublic.com:
+
+```
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+cp server.crt /etc/apache2/ssl/server.crt
+cp server.key /etc/apache2/ssl/server.key
+```
 
 Wow they are all different!  Hmmm!!
 
@@ -166,6 +181,28 @@ NOTE: due to permissions, we can see the private only when logged in as root
 ##### Step 1.3.1: Comparing the references
 
 Let's compare the references:
+
+###### (1) digitalocean.com:
+
+Contains a lot of configuration that the others do not have,
+that should help make it more secure.
+
+Includes links to where they got the additional configuration, in case
+we want to do more research.
+
+###### (2) liquidweb.com:
+
+
+###### (3) liberiangeek.net:
+
+Mentions adding this line, which I think we need:
+
+```
+```
+
+###### (4) linuxacademy.com:
+
+###### (5) techrepublic.com:
 
 #### Step 1.3.2: Editing the file
 

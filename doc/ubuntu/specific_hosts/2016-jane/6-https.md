@@ -86,16 +86,20 @@ Let's compare the references:
 
 (1) digitalocean.com:
 `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`
+
 (2) liquidweb.com:
 `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt`
+
 (3) liberiangeek.net:
 `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt`
+
 (4) linuxacademy.com:
 `openssl req -new > my.cert.csr` - generates the "Certificate Request" file.
 `openssl rsa -in privkey.pem -out my.new.key`
 `openssl x509 -in my.cert.csr -out my.new.cert -req -signkey my.new.key -days 3650`
 `cp my.new.cert /etc/ssl/certs/server.crt`
 `cp my.new.key /etc/ssl/private/server.key`
+
 (5) techrepublic.com:
 `openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt`
 `cp server.crt /etc/apache2/ssl/server.crt`
@@ -157,6 +161,7 @@ NOTE: due to permissions, we can see the private only when logged in as root
 (we are unable to see it using sudo!).
 
 #### Step 1.3: Configuration
+
 
 ##### Step 1.3.1: Comparing the references
 

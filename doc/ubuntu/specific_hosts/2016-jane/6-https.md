@@ -82,7 +82,8 @@ Seeing some different examples in the various references.
 
 ##### Step 1.2.1: Comparing the references
 
-Compare the information in the various references:
+First we do our due diligence and compare the information in the
+various references:
 
 ###### (1) digitalocean.com:
 
@@ -172,19 +173,23 @@ $ l /etc/ssl/*/apa*
 -rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/apache-selfsigned.key
 ```
 
-NOTE: due to permissions, we can see the private only when logged in as root
-(we are unable to see it using sudo!).
+**NOTE: due to permissions, we can see the private only when logged in as root
+(we are unable to see it using sudo!).**
 
 #### Step 1.3: Configuration
 
+Now we need to tell apache to use the certificate files we generated.
 
 ##### Step 1.3.1: Comparing the references
 
-Let's compare the references:
+First, let's do our due diligence and compare the references:
 
 ###### (1) digitalocean.com:
 
-Contains a lot of configuration that the others do not have,
+Mentions changing the parameters mentioned below under "Essential Config"
+and adding a `ServerName` .
+
+Also contains a lot of configuration that the others do not have,
 that should help make it more secure.
 
 Includes links to where they got the additional configuration, in case
@@ -192,20 +197,80 @@ we want to do more research.
 
 ###### (2) liquidweb.com:
 
+Mentions updating the "Essential config" mentioned below and also mentions
+adding this line, which I think we need:
+
+```
+ServerName kb.thebestfakedomainnameintheworld.com:443
+```
+
+Our version for this host:
+
+```
+ServerName jane.seeourminds.com:443
+```
 
 ###### (3) liberiangeek.net:
 
-Mentions adding this line, which I think we need:
+Also mentions updating the "Essential config" mentioned below, as well as
+adding the ServerName line, but no other additional config.
 
 ```
+ServerName kb.thebestfakedomainnameintheworld.com:443
 ```
 
 ###### (4) linuxacademy.com:
 
+Mentions updating the "Essential config" mentioned below **only.**
+
 ###### (5) techrepublic.com:
 
-#### Step 1.3.2: Editing the file
+Like the Linuxacademy.com article, mentions updating the "Essential config"
+mentioned below **only.**
 
+Since they all mention these changes, we are calling those changes "Essential."
+
+##### Step 1.3.2: Editing the file
+
+Edit the config file:
+
+```
+cd /etc/apache2/sites-available
+ci -l default-ssl.conf    # check in to RCS before changing anything!
+vi default-ssl.conf
+```
+
+###### Essential Config:
+
+We always need to:
+
+* Ensure `SSLEngine on` is set
+* Update the `SSLCertificateFile` and `SSLCertificateKeyFile`
+parameters (set them to the files we generated in the previous step).
+
+###### Additional config:
+
+We may want to research and test some of the config mentioned in the
+digitalocean article.
+
+See the comments in the file to learn exactly how we edited it, and
+run `rcsdiff` to see prior versions.
+
+##### Step 1.3.3: Enabling the configuration:
+
+As root:
+
+```
+a2ensite default-ssl.conf
+```
+
+##### Step 1.3.4: Restart apache
+
+As root:
+
+```
+service apache2 restart
+```
 
 
 

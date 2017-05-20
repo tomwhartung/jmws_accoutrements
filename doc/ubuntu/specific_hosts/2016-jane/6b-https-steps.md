@@ -116,87 +116,42 @@ $ l /etc/ssl/*/seeourminds*
 **NOTE: due to permissions, we can see the private only when logged in as root
 (we are unable to see it using sudo!).**
 
-#### Step 1.3: Configuration
+### Step 1.3: Apache Configuration
 
 Now we need to tell apache to use the certificate files we generated.
 
-##### Step 1.3.1: Comparing the references
+#### Step 1.3.1 Try with and without port number
 
-First, let's do our due diligence and compare the references:
+The digitalocean.com reference mentions updating a line with the `ServerName`
+**without** the port number.
 
-###### (1) digitalocean.com:
+The liberiangeek.net reference mentions updating a line with the `ServerName`
+**with** the port number.
 
-Mentions changing the parameters mentioned below under "Essential Config"
-and adding a `ServerName` .
+**Try both ways until we get one to work!**
 
-Also contains a lot of configuration that the others do not have,
-that should help make it more secure.
+#### Step 1.3.2: Editing the file
 
-Includes links to where they got the additional configuration, in case
-we want to do more research.
-
-###### (2) liquidweb.com:
-
-Mentions updating the "Essential config" mentioned below and also mentions
-adding this line, which I think we need:
-
-```
-ServerName kb.thebestfakedomainnameintheworld.com:443
-```
-
-Our version for this host:
-
-```
-ServerName jane.seeourminds.com:443
-```
-
-###### (3) liberiangeek.net:
-
-Also mentions updating the "Essential config" mentioned below, as well as
-adding the ServerName line, but no other additional config.
-
-```
-ServerName kb.thebestfakedomainnameintheworld.com:443
-```
-
-###### (4) linuxacademy.com:
-
-Mentions updating the "Essential config" mentioned below **only.**
-
-###### (5) techrepublic.com:
-
-Like the Linuxacademy.com article, mentions updating the "Essential config"
-mentioned below **only.**
-
-Since they all mention these changes, we are calling those changes "Essential."
-
-##### Step 1.3.2: Editing the file
-
-Edit the config file:
+[ ] Edit the config file:
 
 ```
 cd /etc/apache2/sites-available
-ci -l default-ssl.conf    # check in to RCS before changing anything!
-vi default-ssl.conf
+cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
+ci -l 051-seeourminds.com-ssl.conf
+vi 051-seeourminds.com-ssl.conf
 ```
 
-###### Essential Config:
-
-We always need to:
+[ ] Make the following changes:
 
 * Ensure `SSLEngine on` is set
 * Update the `SSLCertificateFile` and `SSLCertificateKeyFile`
 parameters (set them to the files we generated in the previous step).
+* Ensure `SSLEngine on` is set
 
-###### Additional config:
+See the `default-ssl.conf` file that we were messing with before for
+examples of how to edit the new file.
 
-We may want to research and test some of the config mentioned in the
-digitalocean article.
-
-See the comments in the file to learn exactly how we edited it, and
-run `rcsdiff` to see prior versions.
-
-##### Step 1.3.3: Enable the config and restart apache:
+#### Step 1.3.3: Enable the config and restart apache:
 
 As root:
 
@@ -205,9 +160,12 @@ a2ensite default-ssl.conf
 service apache2 reload
 ```
 
+### Step 1.4 Set up Redirection
 
+Edit the `050-seeourminds.com.conf` config file to redirect to the new
+`051-seeourminds.com-ssl.conf` file.
 
-
+The digitalocean reference describes how to do this.
 
 
 

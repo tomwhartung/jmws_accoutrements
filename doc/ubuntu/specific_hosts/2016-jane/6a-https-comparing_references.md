@@ -182,6 +182,12 @@ First, let's do our due diligence and compare the references:
 Mentions changing the parameters mentioned below under "Essential Config"
 and adding a `ServerName` .
 
+```
+ServerName server_domain_or_IP
+```
+
+**NOTE: this example does NOT add the port number!**
+
 Also contains a lot of configuration that the others do not have,
 that should help make it more secure.
 
@@ -196,6 +202,8 @@ adding this line, which I think we need:
 ```
 ServerName kb.thebestfakedomainnameintheworld.com:443
 ```
+
+**NOTE: this example adds the port number!**
 
 Our version for this host:
 

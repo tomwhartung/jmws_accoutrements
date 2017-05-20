@@ -22,155 +22,95 @@ we may want to go with Self-Signed, or maybe even just http.
 
 ## References
 
-### Configuration (1) Self-signed
+We found a lot of references to help with this process.
+For a list of these, an analysis of each of them, and
+details on what steps we got from which ones,
+see the `6a-https-comparing_references.md` file in this directory:
 
-- (1) https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
-  - contains steps we don't need
-- (2) https://www.liquidweb.com/kb/how-to-create-a-self-signed-ssl-certificate-on-ubuntu/
-  - looks good
-- (3) https://www.liberiangeek.net/2014/10/enable-self-signed-ssl-certificates-apache2-ubuntu-14-04/
-  - also looks good, starting to see a pattern here
-- (4) https://linuxacademy.com/blog/linux/ubuntu-linux-apache-and-self-signed-certificates/
-  - also looks good...
-- (5) http://www.techrepublic.com/article/how-to-create-a-self-signed-certificate-to-be-used-for-apache2/
-  - we should have more than enough "good" ones by now
-- (6) https://www.maketecheasier.com/apache-server-ssl-support/
-  - very minimal and not used
-- (7) https://www.linode.com/docs/security/ssl/create-a-self-signed-certificate-on-debian-and-ubuntu
-  - very very minimal and essentially useless
-
-### Configuration (2) Let's encrypt
-
-- (1) https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/#-enable-the-ssl-website-in-apache
-- (2) https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
-- (3) https://help.ubuntu.com/lts/serverguide/httpd.html#https-configuration
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-comparing_references.md
 
 ## Process
 
-### Configuration (1) Self-Signed on jane
+These are the steps we are following to get the Self-Signed SSL Certificate
+configuration working on jane.
 
-#### Step 1.1: Setup
+All commands must be run as root.
 
-##### Step 1.1.1: Apache Module Setup
+### Step 1.1: Installation and Setup
 
-As root:
+[ ] Ensure ssl is installed and enabled.
 ```
 apache2ctl -M | grep ssl
 ```
 
-If the module is not already enabled, enable it and restart apache:
-
-As root:
+[ ] If the module is not already enabled, enable it and restart apache:
 ```
 a2enmod ssl
 apache2ctl -M | grep ssl
 service apache2 restart
 ```
 
-##### Step 1.1.2: Install `openssl` if needed
-
-As root:
+[ ] Install `openssl` if needed
 ```
 dpkg-query --list '*openssl*'
 ```
 
 We have it so no worries.
 
-#### Step 1.2: Generate Certificate
+### Step 1.2: Generate Certificate
 
-Seeing some different examples in the various references.
+One reason we are starting over is, none of the references really address
+doing this in an environment that uses virtual hosts the way we do
+(over six of them).
 
-##### Step 1.2.1: Comparing the references
+**It's clear we need to generate a separate certificate for each site.**
 
-First we do our due diligence and compare the information in the
-various references:
+This process focuses on generating a certificate and setting it up for use
+on the **seeourminds.com** site.
 
-###### (1) digitalocean.com:
+#### Step 1.2.1: The Command to Run
 
+As root (all on one line!):
 ```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
-```
-
-###### (2) liquidweb.com:
-
-```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
-```
-
-###### (3) liberiangeek.net:
-
-```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt
+l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or directory - just checking!
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /etc/ssl/private/seeourminds-selfsigned.key \
+    -out /etc/ssl/certs/seeourminds-selfsigned.crt
 ```
 
-###### (4) linuxacademy.com:
+#### Step 1.2.2: Prompts and Answers
 
-```
-openssl req -new > my.cert.csr   # generates the "Certificate Request" file.
-openssl rsa -in privkey.pem -out my.new.key
-openssl x509 -in my.cert.csr -out my.new.cert -req -signkey my.new.key -days 3650
-cp my.new.cert /etc/ssl/certs/server.crt
-cp my.new.key /etc/ssl/private/server.key
-```
-
-###### (5) techrepublic.com:
-
-```
-openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
-cp server.crt /etc/apache2/ssl/server.crt
-cp server.key /etc/apache2/ssl/server.key
-```
-
-Wow they are all different!  Hmmm!!
-
-##### Step 1.2.2: Running the command:
-
-We have a winner! The digitalocean one looks best!
-
-That page also has a good explantion of each parameter.
-
-As root:
-```
-l ssl/certs/apa* ssl/private/apa*   # No such file or directory - just checking!
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
-```
-
-Output (and answers given to prompts).
+Following are the answers given to the prompts:
 
 **NOTE: they want the Fully Qualified Domain Name (FQDN) or
-IP Address in the Common Name field!**
+IP Address in the `Common Name` field!**
+
+Last time we used `10.0.0.113` and it didn't work, so this time we're using the FQDN.
+
+**Getting that right may well be an important key to getting this to work properly.**
 
 ```
-crtGenerating a 2048 bit RSA private key
-........+++
-.................+++
-writing new private key to '/etc/ssl/private/apache-selfsigned.key'
------
-You are about to be asked to enter information that will be incorporated
-into your certificate request.
-What you are about to enter is what is called a Distinguished Name or a DN.
-There are quite a few fields but you can leave some blank
-For some fields there will be a default value,
-If you enter '.', the field will be left blank.
+. . .
 -----
 Country Name (2 letter code) [AU]:US
 State or Province Name (full name) [Some-State]:Colorado
 Locality Name (eg, city) []:Denver
 Organization Name (eg, company) [Internet Widgits Pty Ltd]:JooMoo WebSites LLC
 Organizational Unit Name (eg, section) []:HQ
-Common Name (e.g. server FQDN or YOUR name) []:10.0.0.113
+Common Name (e.g. server FQDN or YOUR name) []:jane.seeourminds.com
 Email Address []:mark_as_spam@tomhartung.com
 ```
 
-And:
+#### Step 1.2.3: Check for the Files
 
+As root:
 ```
-$ l /etc/ssl/certs/apa* /etc/ssl/private/apa*
--rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/apache-selfsigned.crt
--rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/apache-selfsigned.key
-$ l /etc/ssl/*/apa*
--rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/apache-selfsigned.crt
--rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/apache-selfsigned.key
+$ l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*
+-rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/seeourminds-selfsigned.crt
+-rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
+$ l /etc/ssl/*/seeourminds*
+-rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/seeourminds-selfsigned.crt
+-rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
 ```
 
 **NOTE: due to permissions, we can see the private only when logged in as root

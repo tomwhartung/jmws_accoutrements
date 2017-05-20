@@ -1,7 +1,10 @@
 
-# 6-https
+# 6a-https-comparing_references
 
-It's time to get https going on seeourminds.com , and maybe others.
+Having never done this before, it's important we do it right.
+
+Having found several references, we want to compare them and try to
+develop a process that combines the best ideas from all of them.
 
 ## Options
 
@@ -9,16 +12,6 @@ Note that there are two options:
 
 1) Self-Signed
 2) Let's Encrypt
-
-## Goals
-
-1) Set up the Self-Signed option on jane.
-
-2) Set up the Let's Encrypt option on barbara and ava.
-
-3) We would prefer to use the Let's Encrypt option on jane, but
-if that is a hassle or not feasible for some reason,
-we may want to go with Self-Signed, or maybe even just http.
 
 ## References
 
@@ -265,20 +258,28 @@ a2ensite default-ssl.conf
 service apache2 reload
 ```
 
+##### Step 1.3.4: Test
+
+We tried a few different configurations and could not get it to work properly.
+
+At this point we decided to put the reference comparisons in a separate
+file (this one) and update the original file with only the essential
+commands and tasks we learned while going through this process the first time.
 
 
+### Configuration (2) Let's Encrypt - TBD
 
+SSL configuration using Let's Encrypt is pending getting the
+self-signed certificate to work on jane.
 
-
-
-
-
-### Configuration (2) Let's encrypt
+#### Step 2.1: Comparing the references
 
 References (1) and (2) do not agree, and reference (3) is very minimal.
 
 - (1) -last updated 3/29/2017
 - (2) -posted 4/21/2016
+
+#### Step 2.2: This is TBD!!
 
 Do configuration (1) first then come back to this.
 

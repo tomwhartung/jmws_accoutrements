@@ -35,9 +35,9 @@ we may want to go with Self-Signed, or maybe even just http.
 - (5) http://www.techrepublic.com/article/how-to-create-a-self-signed-certificate-to-be-used-for-apache2/
   - we should have more than enough "good" ones by now
 - (6) https://www.maketecheasier.com/apache-server-ssl-support/
-  - very minimal
+  - very minimal and not used
 - (7) https://www.linode.com/docs/security/ssl/create-a-self-signed-certificate-on-debian-and-ubuntu
-  - very very minimal
+  - very very minimal and essentially useless
 
 ### Configuration (2) Let's encrypt
 
@@ -256,20 +256,13 @@ digitalocean article.
 See the comments in the file to learn exactly how we edited it, and
 run `rcsdiff` to see prior versions.
 
-##### Step 1.3.3: Enabling the configuration:
+##### Step 1.3.3: Enable the config and restart apache:
 
 As root:
 
 ```
 a2ensite default-ssl.conf
-```
-
-##### Step 1.3.4: Restart apache
-
-As root:
-
-```
-service apache2 restart
+service apache2 reload
 ```
 
 

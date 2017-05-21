@@ -1,5 +1,5 @@
 
-# 6-https
+# 6a-https-steps
 
 It's time to get https going on seeourminds.com , and maybe others.
 
@@ -201,6 +201,14 @@ Going to Settings -> Advanced -> HTTPS shows a list of certificates, but I do
 not see the one we created above.
 
 Another place to look is in the Developer tools under Security, but again....
+
+
+
+#### TODO:
+
+**Try creating another certificate using `localhost` instead of `seeourminds`.**
+
+
 
 ### Configuration (2) Let's encrypt
 

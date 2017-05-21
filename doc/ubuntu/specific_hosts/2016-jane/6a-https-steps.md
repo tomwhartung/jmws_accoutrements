@@ -38,19 +38,19 @@ All commands must be run as root.
 
 ### Step 1.1: Installation and Setup
 
-[ ] Ensure ssl is installed and enabled.
+[] Ensure ssl is installed and enabled.
 ```
 apache2ctl -M | grep ssl
 ```
 
-[ ] If the module is not already enabled, enable it and restart apache:
+[] If the module is not already enabled, enable it and restart apache:
 ```
 a2enmod ssl
 apache2ctl -M | grep ssl
 service apache2 restart
 ```
 
-[ ] Install `openssl` if needed
+[] Install `openssl` if needed
 ```
 dpkg-query --list '*openssl*'
 ```
@@ -92,13 +92,13 @@ Last time we used `10.0.0.113` and it didn't work, so this time we're using the 
 ```
 . . .
 -----
-Country Name (2 letter code) [AU]:US
-State or Province Name (full name) [Some-State]:Colorado
-Locality Name (eg, city) []:Denver
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:JooMoo WebSites LLC
-Organizational Unit Name (eg, section) []:HQ
-Common Name (e.g. server FQDN or YOUR name) []:jane.seeourminds.com
-Email Address []:mark_as_spam@tomhartung.com
+Country Name (2 letter code) [AU]: US
+State or Province Name (full name) [Some-State]: Colorado
+Locality Name (eg, city) []: Denver
+Organization Name (eg, company) [Internet Widgits Pty Ltd]: JooMoo WebSites LLC
+Organizational Unit Name (eg, section) []: HQ
+Common Name (e.g. server FQDN or YOUR name) []: jane.seeourminds.com
+Email Address []: mark_as_spam@tomhartung.com
 ```
 
 #### Step 1.2.3: Check for the Files
@@ -132,7 +132,7 @@ The liberiangeek.net reference mentions updating a line with the `ServerName`
 
 #### Step 1.3.2: Editing the file
 
-[ ] Edit the config file:
+[] Edit the config file:
 
 ```
 cd /etc/apache2/sites-available
@@ -141,7 +141,7 @@ ci -l 051-seeourminds.com-ssl.conf
 vi 051-seeourminds.com-ssl.conf
 ```
 
-[ ] Make the following changes:
+[] Make the following changes:
 
 * Ensure `SSLEngine on` is set
 * Update the `SSLCertificateFile` and `SSLCertificateKeyFile`
@@ -163,13 +163,44 @@ service apache2 reload
 ### Step 1.4 Set up Redirection
 
 Edit the `050-seeourminds.com.conf` config file to redirect to the new
-`051-seeourminds.com-ssl.conf` file.
+`051-seeourminds.com-ssl.conf` file, by adding this line:
 
-The digitalocean reference describes how to do this.
+```
+Redirect "/" "https://jane.seeourminds.com/"
+```
 
+Add it after the line that sets the `DocumentRoot`.
 
+### Step 1.5 Dealing With Invalid Certificate Warnings
 
+Spent a bit of time looking into how to:
 
+1. Avoid the initial warning page
+2. Trying to fix the red "Not Secure" warning that appears instead
+of the green "Lock" icon I want to see.
+
+This is a bit problematic because:
+
+* Different browsers behave somewhat differently as well.
+* We can always set up the apache config to use http on jane and https on ava and barbara
+* To get the green icon, we need to get the certificate from let's encrypt (or the like)
+* To use the let's encrypt option, the host needs to be accessible via DNS (and not just locally)
+  * This last idea is ok on ava, and maybe on barbara, but not on jane
+
+#### Chrome in particular looks bad
+
+Here is one thing we tried that we may want to undo:
+
+* Paste into Chrome: chrome://flags/#allow-insecure-localhost
+* Reference: http://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate
+
+Clicking on the red "Not secure" brings up some information, but
+I could not see anything that would make it go away.
+
+Going to Settings -> Advanced -> HTTPS shows a list of certificates, but I do
+not see the one we created above.
+
+Another place to look is in the Developer tools under Security, but again....
 
 ### Configuration (2) Let's encrypt
 

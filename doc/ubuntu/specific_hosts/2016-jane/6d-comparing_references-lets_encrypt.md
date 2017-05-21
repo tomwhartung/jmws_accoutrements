@@ -4,37 +4,80 @@
 This file covers the references we have found for using a certificate from
 Let's Encrypt to set up ssl on apache.
 
-## References
+## Goal
 
-### Configuration (2) Let's encrypt
+We can set up Let's Encrypt only on a live server, so ideally I want to
+find and use a process that is referenced on multiple sites.
 
-These are listed in more-or-less the same order as they appeared in my google search results.
+We need to be able to:
+
+1. Run through it relatively quickly
+2. Be able to find quickly solutions in the event there's a problem
+3. Be able to back out of changes if there's a serious problem
+4. Keep track of what we did so we can quickly do it again
+
+## List of References
+
+These references for setting up the Let's encrypt configuration
+are listed in more-or-less the same order as they appeared in my google search results.
 
 - (1) https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
   - Dated 4/21/2016
-  - Uses `certbot` (and digitalocean.com has cred points for being the best reference for the self-signed option)
-  - The digitalocean.com reference was the best one for Configuration (1).
 - (2) https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/#-enable-the-ssl-website-in-apache
   - Dated 3/29/2017
-  - Uses `python-letsencrypt-apache`
 - (3) https://www.vultr.com/docs/setup-lets-encrypt-with-apache-on-ubuntu-16-04
   - Dated 8/24/2016
-  - Uses letsencrypt repo on github (https://github.com/letsencrypt/letsencrypt)
-  - Accessing this repo redirects to certbot repo (https://github.com/certbot/certbot)
 - (4) https://certbot.eff.org/all-instructions/#ubuntu-16-04-xenial-apache
-  - EFF certbot page
 - (5) http://dev-notes.eu/2017/02/letsencrypt-ubuntu-xenial/
   - Dated 2/25/2017
-  - Also references certbot
 - (6) https://community.letsencrypt.org/t/help-with-ubuntu-16-04-apache-and-letsencrypt-set-up/17889
   - Dated July, 2016
-  - Forum post in which an expert walks a complete novice through the process
 - (7) https://certbot.eff.org/#ubuntuxenial-apache
-  - Another EFF certbot page, NOTE: contains two "tabs," Automated and Advanced
 - (8) https://help.ubuntu.com/lts/serverguide/httpd.html#https-configuration
-  - So minimal that it's worthless
 
 ## Comparing the references
+
+### (1) digitalocean.com
+
+- https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
+  - Uses `certbot` (and digitalocean.com has cred points for being the best reference for the self-signed option)
+  - The digitalocean.com reference was the best one for Configuration (1).
+
+### (2) howtoforge.com
+
+- https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/#-enable-the-ssl-website-in-apache
+  - Uses `python-letsencrypt-apache`
+
+### (3) vultr.com
+
+- https://www.vultr.com/docs/setup-lets-encrypt-with-apache-on-ubuntu-16-04
+  - Uses letsencrypt repo on github (https://github.com/letsencrypt/letsencrypt)
+  - Accessing this repo redirects to certbot repo (https://github.com/certbot/certbot)
+
+### (4) certbot.eff.org - 1
+
+- https://certbot.eff.org/all-instructions/#ubuntu-16-04-xenial-apache
+  - EFF certbot page
+
+### (5) dev-notes.eu
+
+- http://dev-notes.eu/2017/02/letsencrypt-ubuntu-xenial/
+  - Also references certbot
+
+### (6) community.letsencrypt.org
+
+- https://community.letsencrypt.org/t/help-with-ubuntu-16-04-apache-and-letsencrypt-set-up/17889
+  - Forum post in which an expert walks a complete novice through the process
+
+### (7) certbot.eff.org - 2
+
+- https://certbot.eff.org/#ubuntuxenial-apache
+  - Another EFF certbot page, NOTE: contains two "tabs," Automated and Advanced
+
+### (8) help.ubuntu.com
+
+- https://help.ubuntu.com/lts/serverguide/httpd.html#https-configuration
+  - So minimal that it's worthless
 
 ## Results
 
@@ -46,6 +89,7 @@ From their github page:
 > is EFF's tool to obtain certs from Let's Encrypt, and
 > (optionally) auto-enable HTTPS on your server
 
+## Best Process
 
 
 

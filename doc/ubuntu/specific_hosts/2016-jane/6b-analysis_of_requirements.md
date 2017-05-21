@@ -22,14 +22,23 @@ Look at our reasons for doing this.
 
 We first started this so we could play around with Progressive Web Apps (PWAs).
 
-1. For PWA development, we do not need https on the local host.
-2. If at some point it turns out that we do need https on the local host, we can
+* For PWA development, we do not need https on the local host.
+* If at some point it turns out that we do need https on the local host, we can
 just learn to live with the ugly red "Not secure" message.
 
 ### Forms and Search
 
-This really looks like a good idea if we are going to host forms and rely
-on google search results to bring visitors to the site.
+As time has progressed, this is inreasingly looking like a great idea:
+
+* If we are going to host forms, we should be using https.
+* If we want google search results to bring visitors to the site.
+* If we want to sell **anything** online with total transparency, https is the way to go!
+
+### Https Is a Must-Have!
+
+Wordpress (and others?) are starting to display a notice when accessing the admin panel via http.
+
+Once we get one site going, switching the others over should be a cinch.
 
 # Re-considering the Goals
 

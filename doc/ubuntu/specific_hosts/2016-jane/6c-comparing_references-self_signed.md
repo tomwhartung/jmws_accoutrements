@@ -1,10 +1,34 @@
 
-# 6b-https-comparing_references
+# 6c-comparing_references-self_signed
 
 Having never done this before, it's important we do it right.
 
 Having found several references, we want to compare them and try to
 develop a process that combines the best ideas from all of them.
+
+## Results
+
+### Best Reference
+
+By far, the best reference is the first one (digitalocean.com).
+
+### Best Process (Overview)
+
+The best process is:
+
+1. Copy current apache config file, eg.
+
+```
+cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
+```
+
+2. Add the lines mentioned above to that file.
+
+3. Update the original file (`050-seeourminds.com.conf`) to redirect to https.
+
+See `6a-https-steps.md` for details.
+
+**The rest of this information is pretty much summarized in `6a-https-steps.md` .**
 
 ## Options
 
@@ -34,9 +58,7 @@ Note that there are two options:
 
 ### Configuration (2) Let's encrypt
 
-- (1) https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
-- (2) https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/#-enable-the-ssl-website-in-apache
-- (3) https://help.ubuntu.com/lts/serverguide/httpd.html#https-configuration
+See `6d-comparing_references-lets_encrypt.md` in this directory.
 
 ## Configuration (1) Self-Signed on jane
 
@@ -234,38 +256,4 @@ digitalocean article.
 
 See the comments in the file to learn exactly how we edited it, and
 run `rcsdiff` to see prior versions.
-
-### Update - the Best Way to Do This
-
-The best process is:
-
-1. Copy current apache config file, eg.
-
-```
-cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
-```
-
-2. Add the lines mentioned above to that file.
-
-3. Update the original file (`050-seeourminds.com.conf`) to redirect to https.
-
-See `6a-https-steps.md` for details.
-
-## Configuration (2) Let's Encrypt - TBD
-
-SSL configuration using Let's Encrypt is pending getting the
-self-signed certificate to work on jane.
-
-#### Comparing the references
-
-References (1) and (2) do not agree, and reference (3) is very minimal.
-
-- (1) digitalocean.com - posted 4/21/2016
-- (2) howtoforge.com - last updated 3/29/2017
-
-The digitalocean.com reference was the best one for Configuration (1).
-
-
-#### This is TBD!!
-
 

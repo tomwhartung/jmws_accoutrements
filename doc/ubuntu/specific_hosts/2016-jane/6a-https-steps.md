@@ -1,7 +1,8 @@
 
 # 6a-https-steps
 
-It's time to get https going on seeourminds.com , and maybe others.
+It's time to get https going on [seeourminds.com](http://seeourminds.com),
+and probably all of the other CMS sites.
 
 ## Options
 
@@ -25,7 +26,7 @@ we may want to go with Self-Signed, or maybe even just http.
 We found a lot of references to help with this process.
 For a list of these, an analysis of each of them, and
 details on what steps we got from which ones,
-see the `6a-https-comparing_references.md` file in this directory:
+see the `6c-comparing_references-self_signed.md` file in this directory:
 
 - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-comparing_references.md
 

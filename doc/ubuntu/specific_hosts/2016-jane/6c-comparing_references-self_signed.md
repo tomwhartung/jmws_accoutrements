@@ -14,21 +14,31 @@ By far, the best reference is the first one (digitalocean.com).
 
 ### Best Process (Overview)
 
+This high-level process can work for both self-signed certificates and
+for those from Let's Encrypt.
+
 The best process is:
 
-1. Copy current apache config file, eg.
+1. Generate the certificate.
+
+2. Copy current apache config file, eg.
 
 ```
 cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
 ```
 
-2. Add the lines mentioned above to that file.
+3. Add the lines mentioned below to that file.
 
-3. Update the original file (`050-seeourminds.com.conf`) to redirect to https.
+4. Update the original file (e.g., `050-seeourminds.com.conf`) to redirect to https.
 
 See `6a-https-steps.md` for details.
 
+## About the Rest of This File
+
 **The rest of this information is pretty much summarized in `6a-https-steps.md` .**
+
+So there's no pressing need to read the rest of this,
+we are just saving it for possible future reference....
 
 ## Options
 
@@ -37,9 +47,17 @@ Note that there are two options:
 1) Self-Signed
 2) Let's Encrypt
 
-## References
+### Configuration (2) Let's encrypt
 
-### Configuration (1) Self-signed
+See `6d-comparing_references-lets_encrypt.md` in this directory.
+
+At this time we are probably NOT going to set up Let's Encrypt on jane, however
+this directory still contains information about how we have researched that process.
+
+## List of References
+
+These references for setting up the Self-signed configuration are listed in
+more-or-less the same order as they appeared in my google search results.
 
 - (1) https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
   - contains steps we don't need
@@ -55,10 +73,6 @@ Note that there are two options:
   - very minimal and not used
 - (7) https://www.linode.com/docs/security/ssl/create-a-self-signed-certificate-on-debian-and-ubuntu
   - very very minimal and essentially useless
-
-### Configuration (2) Let's encrypt
-
-See `6d-comparing_references-lets_encrypt.md` in this directory.
 
 ## Configuration (1) Self-Signed on jane
 

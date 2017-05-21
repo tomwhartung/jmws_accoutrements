@@ -1,221 +1,65 @@
 
-# 6a-https-steps
+# 6c-analysis_of_requirements
 
-It's time to get https going on seeourminds.com , and maybe others.
+Identify what the real goals are and the easiest way to acheive them.
 
-## Options
+# Self-Signed vs. Let's Encrypt
 
-Note that there are two options:
+## Lessons Learned
 
-1) Self-Signed
-2) Let's Encrypt
+I thought the Self-Signed certs would be good for use on the local host.
 
-## Goals
+* This works, but we get an ugly red "Not secure" icon instead of the green lock that we want.
+* There's really very little advantage to this, that I can see.
 
-1) Set up the Self-Signed option on jane.
+**I see nothing wrong with using http on jane, and https on barbara and ava.**
 
-2) Set up the Let's Encrypt option on barbara and ava.
+## Why Do This in the First Place?
 
-3) We would prefer to use the Let's Encrypt option on jane, but
-if that is a hassle or not feasible for some reason,
-we may want to go with Self-Signed, or maybe even just http.
+Look at our reasons for doing this.
 
-## References
+### PWAs
 
-We found a lot of references to help with this process.
-For a list of these, an analysis of each of them, and
-details on what steps we got from which ones,
-see the `6a-https-comparing_references.md` file in this directory:
+We first started this so we could play around with Progressive Web Apps (PWAs).
 
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-comparing_references.md
+1. For PWA development, we do not need https on the local host.
+2. If at some point it turns out that we do need https on the local host, we can
+just learn to live with the ugly red "Not secure" message.
 
-## Process
+### Forms and Search
 
-These are the steps we are following to get the Self-Signed SSL Certificate
-configuration working on jane.
+This really looks like a good idea if we are going to host forms and rely
+on google search results to bring visitors to the site.
 
-All commands must be run as root.
+# Re-considering the Goals
 
-### Step 1.1: Installation and Setup
+## Essential Goals
 
-[] Ensure ssl is installed and enabled.
-```
-apache2ctl -M | grep ssl
-```
+It's clear that we will need to use certificates from Let's Encrypt on the
+production and backup hosts.
 
-[] If the module is not already enabled, enable it and restart apache:
-```
-a2enmod ssl
-apache2ctl -M | grep ssl
-service apache2 restart
-```
+## Nice-to-Have Goals
 
-[] Install `openssl` if needed
-```
-dpkg-query --list '*openssl*'
-```
+It would be nice to have the development host match the production and backup
+hosts, but in this case, that is really more of a nice-to-have goal than an
+essential goal.
 
-We have it so no worries.
+# Questions
 
-### Step 1.2: Generate Certificate
+## A Big Question
 
-One reason we are starting over is, none of the references really address
-doing this in an environment that uses virtual hosts the way we do
-(over six of them).
+Is it possible to use the Let's Encrypt option on jane, even though it is not
+accessible publicly?
 
-**It's clear we need to generate a separate certificate for each site.**
+**Try to figure out the answer to this question while setting up Let's Encrypt on ava and barbara.**
 
-This process focuses on generating a certificate and setting it up for use
-on the **seeourminds.com** site.
+## A Smaller Question
 
-#### Step 1.2.1: The Command to Run
+Do we really need to use the Self-Signed option on jane?
 
-As root (all on one line!):
-```
-l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or directory - just checking!
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-    -keyout /etc/ssl/private/seeourminds-selfsigned.key \
-    -out /etc/ssl/certs/seeourminds-selfsigned.crt
-```
+It's looking like the answer is "No," and that we can revert back to http
+on the development host.
 
-#### Step 1.2.2: Prompts and Answers
-
-Following are the answers given to the prompts:
-
-**NOTE: they want the Fully Qualified Domain Name (FQDN) or
-IP Address in the `Common Name` field!**
-
-Last time we used `10.0.0.113` and it didn't work, so this time we're using the FQDN.
-
-**Getting that right may well be an important key to getting this to work properly.**
-
-```
-. . .
------
-Country Name (2 letter code) [AU]: US
-State or Province Name (full name) [Some-State]: Colorado
-Locality Name (eg, city) []: Denver
-Organization Name (eg, company) [Internet Widgits Pty Ltd]: JooMoo WebSites LLC
-Organizational Unit Name (eg, section) []: HQ
-Common Name (e.g. server FQDN or YOUR name) []: jane.seeourminds.com
-Email Address []: mark_as_spam@tomhartung.com
-```
-
-#### Step 1.2.3: Check for the Files
-
-As root:
-```
-$ l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*
--rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/seeourminds-selfsigned.crt
--rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
-$ l /etc/ssl/*/seeourminds*
--rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/seeourminds-selfsigned.crt
--rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
-```
-
-**NOTE: due to permissions, we can see the private only when logged in as root
-(we are unable to see it using sudo!).**
-
-### Step 1.3: Apache Configuration
-
-Now we need to tell apache to use the certificate files we generated.
-
-#### Step 1.3.1 Try with and without port number
-
-The digitalocean.com reference mentions updating a line with the `ServerName`
-**without** the port number.
-
-The liberiangeek.net reference mentions updating a line with the `ServerName`
-**with** the port number.
-
-**Try both ways until we get one to work!**
-
-#### Step 1.3.2: Editing the file
-
-[] Edit the config file:
-
-```
-cd /etc/apache2/sites-available
-cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
-ci -l 051-seeourminds.com-ssl.conf
-vi 051-seeourminds.com-ssl.conf
-```
-
-[] Make the following changes:
-
-* Ensure `SSLEngine on` is set
-* Update the `SSLCertificateFile` and `SSLCertificateKeyFile`
-parameters (set them to the files we generated in the previous step).
-* Ensure `SSLEngine on` is set
-
-See the `default-ssl.conf` file that we were messing with before for
-examples of how to edit the new file.
-
-#### Step 1.3.3: Enable the config and restart apache:
-
-As root:
-
-```
-a2ensite default-ssl.conf
-service apache2 reload
-```
-
-### Step 1.4 Set up Redirection
-
-Edit the `050-seeourminds.com.conf` config file to redirect to the new
-`051-seeourminds.com-ssl.conf` file, by adding this line:
-
-```
-Redirect "/" "https://jane.seeourminds.com/"
-```
-
-Add it after the line that sets the `DocumentRoot`.
-
-### Step 1.5 Dealing With Invalid Certificate Warnings
-
-Spent a bit of time looking into how to:
-
-1. Avoid the initial warning page
-2. Trying to fix the red "Not Secure" warning that appears instead
-of the green "Lock" icon I want to see.
-
-This is a bit problematic because:
-
-* Different browsers behave somewhat differently as well.
-* We can always set up the apache config to use http on jane and https on ava and barbara
-* To get the green icon, we need to get the certificate from let's encrypt (or the like)
-* To use the let's encrypt option, the host needs to be accessible via DNS (and not just locally)
-  * This last idea is ok on ava, and maybe on barbara, but not on jane
-
-#### Chrome in particular looks bad
-
-Here is one thing we tried that we may want to undo:
-
-* Paste into Chrome: chrome://flags/#allow-insecure-localhost
-* Reference: http://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate
-
-Clicking on the red "Not secure" brings up some information, but
-I could not see anything that would make it go away.
-
-Going to Settings -> Advanced -> HTTPS shows a list of certificates, but I do
-not see the one we created above.
-
-Another place to look is in the Developer tools under Security, but again....
-
-
-
-#### TODO:
-
-**Try creating another certificate using `localhost` instead of `seeourminds`.**
-
-
-
-### Configuration (2) Let's encrypt
-
-References (1) and (2) do not agree, and reference (3) is very minimal.
-
-- (1) -last updated 3/29/2017
-- (2) -posted 4/21/2016
-
-Do configuration (1) first then come back to this.
+We wasted a bit of time getting that all set up, but we can use what we've
+learned to get the Let's Encrypt option going on ava and barbara.
 

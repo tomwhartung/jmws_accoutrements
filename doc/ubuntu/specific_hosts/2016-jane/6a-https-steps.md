@@ -38,19 +38,19 @@ All commands must be run as root.
 
 ### Step 1.1: Installation and Setup
 
-[] Ensure ssl is installed and enabled.
+- [ ] Ensure ssl is installed and enabled.
 ```
 apache2ctl -M | grep ssl
 ```
 
-[] If the module is not already enabled, enable it and restart apache:
+- [ ] If the module is not already enabled, enable it and restart apache:
 ```
 a2enmod ssl
 apache2ctl -M | grep ssl
 service apache2 restart
 ```
 
-[] Install `openssl` if needed
+- [ ] Install `openssl` if needed
 ```
 dpkg-query --list '*openssl*'
 ```
@@ -132,7 +132,7 @@ The liberiangeek.net reference mentions updating a line with the `ServerName`
 
 #### Step 1.3.2: Editing the file
 
-[] Edit the config file:
+- [ ] Edit the config file:
 
 ```
 cd /etc/apache2/sites-available
@@ -141,7 +141,7 @@ ci -l 051-seeourminds.com-ssl.conf
 vi 051-seeourminds.com-ssl.conf
 ```
 
-[] Make the following changes:
+- [ ] Make the following changes:
 
 * Ensure `SSLEngine on` is set
 * Update the `SSLCertificateFile` and `SSLCertificateKeyFile`

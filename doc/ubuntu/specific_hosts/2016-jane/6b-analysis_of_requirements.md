@@ -1,5 +1,5 @@
 
-# 6c-analysis_of_requirements
+# 6b-analysis_of_requirements
 
 Identify what the real goals are and the easiest way to acheive them.
 

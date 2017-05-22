@@ -2,7 +2,7 @@
 # 6-https_via_lets_encrypt
 
 After having limited success using a self-signed certificate on jane,
-we are going for setting up https using Let's Encrypt on ava.
+we are going for setting up https using Let's Encrypt on barbara.
 Jumping straight to production!  I know!!
 
 # Research
@@ -17,7 +17,7 @@ For details on how we came up with this process, see the `6*.md` files in
 
 # Goal
 
-Set up https using Let's Encrypt option on ava.
+Set up https using Let's Encrypt option on barbara.
 
 # Results
 
@@ -27,13 +27,23 @@ TBD.
 
 These are the steps we are following:
 
-All commands must be run as root.
+**All commands must be run as root.**
 
-### Step (1): Installation and Setup
+## Step (0): Check apache conf files
 
-- [ ] Ensure ssl is installed and enabled.
+- [ ] Ensure the current versions of all apache conf files are checked into RCS:
 ```
-apache2ctl -M | grep ssl
+cd /etc/apache2/sites-available
+rcsdiff *.conf
+```
+- [ ] Check in any files that are not already checked in.
+
+## Step (1): Installation and Setup
+
+- [ ] Ensure everything is up-to-date
+```
+apt-get update
+apt-get upgrade
 ```
 
 - [ ] If the module is not already enabled, enable it and restart apache:
@@ -52,26 +62,18 @@ We have it so no worries.
 
 ### Step (2): Generate Certificate
 
-One reason we are starting over is, none of the references really address
-doing this in an environment that uses virtual hosts the way we do
-(over six of them).
-
-**It's clear we need to generate a separate certificate for each site.**
-
-I have seen references that suggest using a wildcard, but I'd rather not
-do that, because my sites are all a little different.
+I think it's best to generate a separate certificate for each site.
 
 This process focuses on generating a certificate and setting it up for use
-on the **seeourminds.com** site on **jane**.
+on the **seeourminds.com** site on **barbara**.
 
 #### Step (2.1): The Command to Run
 
 As root (all on one line!):
 ```
 l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or directory - just checking!
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-    -keyout /etc/ssl/private/seeourminds-selfsigned.key \
-    -out /etc/ssl/certs/seeourminds-selfsigned.crt
+l /etc/ssl/*/seeourminds*                                     # Double checking!
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/seeourminds-selfsigned.key -out /etc/ssl/certs/seeourminds-selfsigned.crt
 ```
 
 #### Step (2.2): Prompts and Answers

@@ -1,50 +1,50 @@
 
-# 6a-https-steps
+# 6-https_via_lets_encrypt
 
-It's time to get https going on [seeourminds.com](http://seeourminds.com),
-and probably all of the other CMS sites.
+After having limited success using a self-signed certificate on jane,
+we are going for setting up https using Let's Encrypt on ava.
+Jumping straight to production!  I know!!
 
-## Options
+# Research
 
-Note that there are two options:
+For details on how we came up with this process, see the `6*.md` files in
+`../2016-jane` , specifically:
 
-1) Self-Signed
-2) Let's Encrypt
+```
+../2016-jane/6b-analysis_of_requirements.md
+../2016-jane/6d-comparing_references-lets_encrypt.md
+```
 
-## Goals
+# Goal
 
-These are the initial goals we were trying to acheive:
+Set up https using Let's Encrypt option on ava.
 
-1) Set up the Self-Signed option on jane.
+# Results
 
-2) Set up the Let's Encrypt option on barbara and ava.
+TBD.
 
-3) We would prefer to use the Let's Encrypt option on jane, but
-if that is a hassle or not feasible for some reason,
-we may want to go with Self-Signed, or maybe even just http.
+# Process
 
-## Results
+These are the steps we are following:
 
-For a thorough analysis of the motivations, goals, and results of this effort,
-see the file `6b-analysis_of_requirements.md` in this directory.'
+**All commands must be run as root.**
 
-## References
+## Step (0): Check apache conf files
 
-We found a lot of references to help with this process.
-For a list of these, an analysis of each of them, and
-details on what steps we got from which ones,
-see the `6c-comparing_references-self_signed.md` file in this directory:
-
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-comparing_references.md
-
-## Process
-
-These are the steps we are following to get the Self-Signed SSL Certificate
-configuration working on jane.
-
-All commands must be run as root.
+- [ ] Ensure the current versions of all apache conf files are checked into RCS:
+```
+cd /etc/apache2/sites-available
+rcsdiff *.conf
+```
+- [ ] Check in any files that are not already checked in.
 
 ### Step (1): Installation and Setup
+
+- [ ] Ensure everything is up-to-date
+```
+apt-get update
+apt-get upgrade
+```
 
 - [ ] Ensure ssl is installed and enabled.
 ```
@@ -67,23 +67,17 @@ We have it so no worries.
 
 ### Step (2): Generate Certificate
 
-One reason we are starting over is, none of the references really address
-doing this in an environment that uses virtual hosts the way we do
-(over six of them).
-
-**It's clear we need to generate a separate certificate for each site.**
-
-I have seen references that suggest using a wildcard, but I'd rather not
-do that, because my sites are all a little different.
+I think it's best to generate a separate certificate for each site.
 
 This process focuses on generating a certificate and setting it up for use
-on the **seeourminds.com** site on **jane**.
+on the **seeourminds.com** site on **ava**.
 
 #### Step (2.1): The Command to Run
 
 As root (all on one line!):
 ```
 l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or directory - just checking!
+l /etc/ssl/*/seeourminds*                                     # Double checking!
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -keyout /etc/ssl/private/seeourminds-selfsigned.key \
     -out /etc/ssl/certs/seeourminds-selfsigned.crt

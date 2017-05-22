@@ -13,6 +13,8 @@ Note that there are two options:
 
 ## Goals
 
+These are the initial goals we were trying to acheive:
+
 1) Set up the Self-Signed option on jane.
 
 2) Set up the Let's Encrypt option on barbara and ava.
@@ -20,6 +22,11 @@ Note that there are two options:
 3) We would prefer to use the Let's Encrypt option on jane, but
 if that is a hassle or not feasible for some reason,
 we may want to go with Self-Signed, or maybe even just http.
+
+## Results
+
+For a thorough analysis of the motivations, goals, and results of this effort,
+see the file `6b-analysis_of_requirements.md` in this directory.'
 
 ## References
 
@@ -37,7 +44,7 @@ configuration working on jane.
 
 All commands must be run as root.
 
-### Step 1.1: Installation and Setup
+### Step (1): Installation and Setup
 
 - [ ] Ensure ssl is installed and enabled.
 ```
@@ -58,7 +65,7 @@ dpkg-query --list '*openssl*'
 
 We have it so no worries.
 
-### Step 1.2: Generate Certificate
+### Step (2): Generate Certificate
 
 One reason we are starting over is, none of the references really address
 doing this in an environment that uses virtual hosts the way we do
@@ -66,10 +73,13 @@ doing this in an environment that uses virtual hosts the way we do
 
 **It's clear we need to generate a separate certificate for each site.**
 
-This process focuses on generating a certificate and setting it up for use
-on the **seeourminds.com** site.
+I have seen references that suggest using a wildcard, but I'd rather not
+do that, because my sites are all a little different.
 
-#### Step 1.2.1: The Command to Run
+This process focuses on generating a certificate and setting it up for use
+on the **seeourminds.com** site on **jane**.
+
+#### Step (2.1): The Command to Run
 
 As root (all on one line!):
 ```
@@ -79,7 +89,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -out /etc/ssl/certs/seeourminds-selfsigned.crt
 ```
 
-#### Step 1.2.2: Prompts and Answers
+#### Step (2.2): Prompts and Answers
 
 Following are the answers given to the prompts:
 
@@ -102,7 +112,7 @@ Common Name (e.g. server FQDN or YOUR name) []: jane.seeourminds.com
 Email Address []: mark_as_spam@tomhartung.com
 ```
 
-#### Step 1.2.3: Check for the Files
+#### Step (2.3): Check for the Files
 
 As root:
 ```
@@ -117,11 +127,11 @@ $ l /etc/ssl/*/seeourminds*
 **NOTE: due to permissions, we can see the private only when logged in as root
 (we are unable to see it using sudo!).**
 
-### Step 1.3: Apache Configuration
+### Step (3): Apache Configuration
 
 Now we need to tell apache to use the certificate files we generated.
 
-#### Step 1.3.1 Try with and without port number
+#### Step (3.1) Try with and without port number
 
 The digitalocean.com reference mentions updating a line with the `ServerName`
 **without** the port number.
@@ -131,7 +141,7 @@ The liberiangeek.net reference mentions updating a line with the `ServerName`
 
 **Try both ways until we get one to work!**
 
-#### Step 1.3.2: Editing the file
+#### Step (3.2): Editing the file
 
 - [ ] Edit the config file:
 
@@ -152,7 +162,7 @@ parameters (set them to the files we generated in the previous step).
 See the `default-ssl.conf` file that we were messing with before for
 examples of how to edit the new file.
 
-#### Step 1.3.3: Enable the config and restart apache:
+#### Step (3.3): Enable the config and restart apache:
 
 As root:
 
@@ -161,7 +171,7 @@ a2ensite default-ssl.conf
 service apache2 reload
 ```
 
-### Step 1.4 Set up Redirection
+### Step (4): Set up Redirection
 
 Edit the `050-seeourminds.com.conf` config file to redirect to the new
 `051-seeourminds.com-ssl.conf` file, by adding this line:
@@ -172,7 +182,7 @@ Redirect "/" "https://jane.seeourminds.com/"
 
 Add it after the line that sets the `DocumentRoot`.
 
-### Step 1.5 Dealing With Invalid Certificate Warnings
+### Step (5): Dealing With Invalid Certificate Warnings
 
 Spent a bit of time looking into how to:
 
@@ -202,21 +212,4 @@ Going to Settings -> Advanced -> HTTPS shows a list of certificates, but I do
 not see the one we created above.
 
 Another place to look is in the Developer tools under Security, but again....
-
-
-
-#### TODO:
-
-**Try creating another certificate using `localhost` instead of `seeourminds`.**
-
-
-
-### Configuration (2) Let's encrypt
-
-References (1) and (2) do not agree, and reference (3) is very minimal.
-
-- (1) -last updated 3/29/2017
-- (2) -posted 4/21/2016
-
-Do configuration (1) first then come back to this.
 

@@ -126,6 +126,9 @@ IMPORTANT NOTES:
 #### Step (4.2): Check for the Files
 
 
+#### Step (4.3): Backup the Files
+
+
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
@@ -139,10 +142,27 @@ $ l /etc/ssl/*/seeourminds*
 -rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
 ```
 
+### Step (5): Apache Configuration
 
+Consider following this apache config file naming standard,
+using seeourminds.com as an example:
+```
+050-seeourminds.com.conf
+052-seeourminds.com-redirect.conf
+054-seeourminds.com-ssl.conf
+```
+With the purpose and contents of each being as follows:
 
+* `050-seeourminds.com.conf` - processes http requests on port 80
+  * leave current files as-is
+* `052-seeourminds.com-redirect.conf` - redirects http on port 80 to https on port 443
+  * For an example, see current the version of `050-seeourminds.com.conf` on jane
+* `054-seeourminds.com-ssl.conf` - configured to handle https/443/ssl requests
+  * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
 
-### Step (3): Apache Configuration
+**Consider doing this for all sites.**
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 Now we need to tell apache to use the certificate files we generated.
 

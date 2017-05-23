@@ -97,6 +97,9 @@ Enter email address (...) (Enter 'c' to cancel): lets_encrypt@tomhartung.com
 ...
 Which names would you like to activate HTTPS for?
 ```
+
+### Step (4.2): Get This Error:
+
 Trying to do just seeourminds.com resulted in an error:
 ```
 Failed authorization procedure. seeourminds.com (tls-sni-01): urn:acme:error:connection :: The server could not connect to the client to verify the domain :: Failed to connect to 206.124.10.54:443 for tls-sni-01 challenge
@@ -123,7 +126,7 @@ IMPORTANT NOTES:
    making regular backups of this folder is ideal.
 ```
 
-### Step (4.2): Move barbara Into Production
+### Step (4.4): Move barbara Into Production
 
 Modems and routers must be configured to accept https requests on port 443 and
 pass them through to barbara.
@@ -134,7 +137,7 @@ Specific steps for this process are beyond the scope of this document.
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-#### Step (2.3): Check for the Files
+#### Step (4.3): Check for the Files
 
 As root:
 ```

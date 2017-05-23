@@ -15,6 +15,12 @@ For details on how we came up with this process, see the `6*.md` files in
 ../2016-jane/6d-comparing_references-lets_encrypt.md
 ```
 
+## "Reference-1"
+
+The term "reference-1" refers to our #1 main reference:
+
+- https://certbot.eff.org/#ubuntuxenial-apache
+
 # Goal
 
 Set up https using Let's Encrypt option on barbara.
@@ -29,7 +35,7 @@ These are the steps we are following:
 
 **All commands must be run as root.**
 
-## Step (0): Check apache conf files
+## Step (1): Check apache conf files
 
 - [ ] Ensure the current versions of all apache conf files are checked into RCS:
 ```
@@ -38,66 +44,95 @@ rcsdiff *.conf
 ```
 - [ ] Check in any files that are not already checked in.
 
-## Step (1): Installation and Setup
+--> FYI: noticing that the ssl module is not enabled (yet).
 
-- [ ] Ensure everything is up-to-date
+## Step (2): Installation
+
+- [ ] Ensure everything is up-to-date:
 ```
 apt-get update
 apt-get upgrade
 ```
 
-- [ ] If the module is not already enabled, enable it and restart apache:
+- [ ] Add the certbot ppa and install the program (see reference 1):
 ```
-a2enmod ssl
-apache2ctl -M | grep ssl
-service apache2 restart
-```
-
-- [ ] Install `openssl` if needed
-```
-dpkg-query --list '*openssl*'
+apt-get install software-properties-common
+apt autoremove     # suggested by output of previous command
+add-apt-repository ppa:certbot/certbot
+apt-get update
+apt-get install python-certbot-apache
 ```
 
-We have it so no worries.
+## Step (3): Configure Modems and Routers
 
-### Step (2): Generate Certificate
+Modems and routers must be configured to accept https requests on port 443 and
+pass them through to the appropriate host(s).
 
-I think it's best to generate a separate certificate for each site.
+Specific steps for this process are beyond the scope of this document.
+
+## Step (4): Generate a Certificate
+
+The `certbot` command supports generating a certificate (or certificateS?)
+for multiple sites.
 
 This process focuses on generating a certificate and setting it up for use
 on the **seeourminds.com** site on **barbara**.
 
-#### Step (2.1): The Command to Run
+### Step (4.1): Try the All-in-One Command
 
-As root (all on one line!):
+- [ ] Run the all-in-one command from reference 1:
 ```
-l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or directory - just checking!
-l /etc/ssl/*/seeourminds*                                     # Double checking!
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/seeourminds-selfsigned.key -out /etc/ssl/certs/seeourminds-selfsigned.crt
+certbot --apache
+```
+- [ ] Read the terms of service at:
+  https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf
+- [ ] Answer the questions (there are far fewer questions than there were for self-signed)
+```
+...
+Enter email address (...) (Enter 'c' to cancel): lets_encrypt@tomhartung.com
+...
+(A)gree/(C)ancel: A
+...
+(Y)es/(N)o: Y
+...
+Which names would you like to activate HTTPS for?
+```
+Trying to do just seeourminds.com resulted in an error:
+```
+Failed authorization procedure. seeourminds.com (tls-sni-01): urn:acme:error:connection :: The server could not connect to the client to verify the domain :: Failed to connect to 206.124.10.54:443 for tls-sni-01 challenge
+
+IMPORTANT NOTES:
+ - The following errors were reported by the server:
+
+   Domain: seeourminds.com
+   Type:   connection
+   Detail: Failed to connect to 206.124.10.54:443 for tls-sni-01
+   challenge
+
+   To fix these errors, please make sure that your domain name was
+   entered correctly and the DNS A record(s) for that domain
+   contain(s) the right IP address. Additionally, please check that
+   your computer has a publicly routable IP address and that no
+   firewalls are preventing the server from communicating with the
+   client. If you're using the webroot plugin, you should also verify
+   that you are serving files from the webroot path you provided.
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
 ```
 
-#### Step (2.2): Prompts and Answers
+### Step (4.2): Move barbara Into Production
 
-Following are the answers given to the prompts:
+Modems and routers must be configured to accept https requests on port 443 and
+pass them through to barbara.
 
-**NOTE: they want the Fully Qualified Domain Name (FQDN) or
-IP Address in the `Common Name` field!**
+Specific steps for this process are beyond the scope of this document.
 
-Last time we used `10.0.0.113` and it didn't work, so this time we're using the FQDN.
+**We cannot make further progress on barbara until we connect it to the internet.**
 
-**Getting that right may well be an important key to getting this to work properly.**
-
-```
-. . .
------
-Country Name (2 letter code) [AU]: US
-State or Province Name (full name) [Some-State]: Colorado
-Locality Name (eg, city) []: Denver
-Organization Name (eg, company) [Internet Widgits Pty Ltd]: JooMoo WebSites LLC
-Organizational Unit Name (eg, section) []: HQ
-Common Name (e.g. server FQDN or YOUR name) []: jane.seeourminds.com
-Email Address []: mark_as_spam@tomhartung.com
-```
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 #### Step (2.3): Check for the Files
 

@@ -15,6 +15,12 @@ For details on how we came up with this process, see the `6*.md` files in
 ../2016-jane/6d-comparing_references-lets_encrypt.md
 ```
 
+## "Reference-1"
+
+The term "reference-1" refers to our #1 main reference:
+
+- https://certbot.eff.org/#ubuntuxenial-apache
+
 # Goal
 
 Set up https using Let's Encrypt option on ava.
@@ -29,7 +35,7 @@ These are the steps we are following:
 
 **All commands must be run as root.**
 
-## Step (0): Check apache conf files
+## Step (1): Check apache conf files
 
 - [ ] Ensure the current versions of all apache conf files are checked into RCS:
 ```
@@ -38,75 +44,90 @@ rcsdiff *.conf
 ```
 - [ ] Check in any files that are not already checked in.
 
-### Step (1): Installation and Setup
+-> FYI: noticing that the ssl module is not enabled (yet).
 
-- [ ] Ensure everything is up-to-date
+### Step (2): Installation
+
+- [ ] Ensure everything else is up-to-date
 ```
 apt-get update
 apt-get upgrade
 ```
 
-- [ ] Ensure ssl is installed and enabled.
+- [ ] Add the certbot ppa and install the program (see reference 1):
 ```
-apache2ctl -M | grep ssl
-```
-
-- [ ] If the module is not already enabled, enable it and restart apache:
-```
-a2enmod ssl
-apache2ctl -M | grep ssl
-service apache2 restart
+apt-get install software-properties-common
+apt autoremove     # suggested by output of previous command
+add-apt-repository ppa:certbot/certbot
+apt-get update
+apt-get install python-certbot-apache
 ```
 
-- [ ] Install `openssl` if needed
-```
-dpkg-query --list '*openssl*'
-```
+### Step (3): Configure Modems and Routers
 
-We have it so no worries.
+Modems and routers must be configured to accept https requests on port 443 and
+pass them through to the appropriate host(s).
 
-### Step (2): Generate Certificate
+Specific steps for this process are beyond the scope of this document.
 
-I think it's best to generate a separate certificate for each site.
+### Step (4): Generate a Certificate
+
+The `certbot` command supports generating a certificate (or certificateS?)
+for multiple sites.
 
 This process focuses on generating a certificate and setting it up for use
 on the **seeourminds.com** site on **ava**.
 
-#### Step (2.1): The Command to Run
+#### Step (4.1): Try the All-in-One Command
 
-As root (all on one line!):
+- [ ] Run the all-in-one command from reference 1:
 ```
-l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or directory - just checking!
-l /etc/ssl/*/seeourminds*                                     # Double checking!
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-    -keyout /etc/ssl/private/seeourminds-selfsigned.key \
-    -out /etc/ssl/certs/seeourminds-selfsigned.crt
+certbot --apache
 ```
-
-#### Step (2.2): Prompts and Answers
-
-Following are the answers given to the prompts:
-
-**NOTE: they want the Fully Qualified Domain Name (FQDN) or
-IP Address in the `Common Name` field!**
-
-Last time we used `10.0.0.113` and it didn't work, so this time we're using the FQDN.
-
-**Getting that right may well be an important key to getting this to work properly.**
-
+- [ ] Read the terms of service at:
+  https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf
+- [ ] Answer the questions (there are far fewer questions than there were for self-signed)
 ```
-. . .
------
-Country Name (2 letter code) [AU]: US
-State or Province Name (full name) [Some-State]: Colorado
-Locality Name (eg, city) []: Denver
-Organization Name (eg, company) [Internet Widgits Pty Ltd]: JooMoo WebSites LLC
-Organizational Unit Name (eg, section) []: HQ
-Common Name (e.g. server FQDN or YOUR name) []: jane.seeourminds.com
-Email Address []: mark_as_spam@tomhartung.com
+Enter email address (...) (Enter 'c' to cancel): lets_encrypt@tomhartung.com
+(A)gree/(C)ancel: A
+(Y)es/(N)o: Y
+Which names would you like to activate HTTPS for?
 ```
 
-#### Step (2.3): Check for the Files
+Trying to do just seeourminds.com resulted in an error:
+```
+Error while running apache2ctl configtest.
+Action 'configtest' failed.
+The Apache error log may have more information.
+
+AH00526: Syntax error on line 33 of /etc/apache2/sites-enabled/050-seeourminds.com.conf:
+Name duplicates previous WSGI daemon definition.
+
+Rolling back to previous server configuration...
+Error while running apache2ctl configtest.
+Action 'configtest' failed.
+The Apache error log may have more information.
+
+AH00526: Syntax error on line 33 of /etc/apache2/sites-enabled/050-seeourminds.com.conf:
+Name duplicates previous WSGI daemon definition.
+
+
+IMPORTANT NOTES:
+ - We were unable to install your certificate, however, we
+   successfully restored your server to its prior configuration.
+ - Congratulations! Your certificate and chain have been saved at
+   /etc/letsencrypt/live/www.seeourminds.com/fullchain.pem. Your cert
+   will expire on 2017-08-20. To obtain a new or tweaked version of
+   this certificate in the future, simply run certbot again with the
+   "certonly" option. To non-interactively renew *all* of your
+   certificates, run "certbot renew"
+```
+
+#### Step (4.2): Check for the Files
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 
 As root:
 ```
@@ -118,8 +139,8 @@ $ l /etc/ssl/*/seeourminds*
 -rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
 ```
 
-**NOTE: due to permissions, we can see the private only when logged in as root
-(we are unable to see it using sudo!).**
+
+
 
 ### Step (3): Apache Configuration
 

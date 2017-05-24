@@ -76,7 +76,7 @@ This process shows how to generate two certificates and set them up for use on
 
 #### Step (2.1): Commands to Run - seeourminds.com
 
-As root (all on one line!):
+All on one line!
 ```
 l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or directory - just checking!
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
@@ -107,7 +107,7 @@ we have so many virtual hosts (so don't waste time trying those again).
 
 #### Step (2.2): Commands to Run - groja.com
 
-As root (all on one line!):
+All on one line!
 ```
 l /etc/ssl/certs/groja* /etc/ssl/private/groja*   # No such file or directory - just checking!
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
@@ -146,45 +146,68 @@ $ l /etc/ssl/*/groj*
 
 Now we need to tell apache to use the certificate files we generated.
 
-#### Step (3.1) Try with and without port number
+### Apache Config File Naming Standard
 
-The digitalocean.com reference mentions updating a line with the `ServerName`
-**without** the port number.
+We follow this apache config file naming standard,
+using `groja.com` and `seeourminds.com` as examples:
+```
+020-groja.com.conf
+022-groja.com-redirect.conf
+024-groja.com-ssl.conf
+050-seeourminds.com.conf
+052-seeourminds.com-redirect.conf
+054-seeourminds.com-ssl.conf
+```
+With the purpose and contents of each being as follows:
 
-The liberiangeek.net reference mentions updating a line with the `ServerName`
-**with** the port number.
+* `0?0-[domain_name].conf` - processes http requests on port 80
+  * leave current files as-is
+* `0?2-[domain_name]-redirect.conf` - redirects http on port 80 to https on port 443
+  * For an example, see current the version of `050-seeourminds.com.conf` on jane
+* `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
+  * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
 
-**Try both ways until we get one to work!**
+**The plan is to do this for most sites, if not all of them.**
 
-#### Step (3.2): Editing the file
+#### Step (3.1): The New https Config Files
 
-- [ ] Edit the config file:
-
+- [ ] Create New Files From Existing Files
 ```
 cd /etc/apache2/sites-available
-cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
-ci -l 051-seeourminds.com-ssl.conf
-vi 051-seeourminds.com-ssl.conf
+cp 020-groja.com.conf 024-groja.com-ssl.conf
+ci -l 024-groja.com-ssl.conf
+cp 050-seeourminds.com.conf 054-seeourminds.com-ssl.conf
+ci -l 054-seeourminds.com-ssl.conf
 ```
 
-- [ ] Make the following changes:
+#### Step (3.2): Making the changes
 
-* Ensure `SSLEngine on` is set
-* Update the `SSLCertificateFile` and `SSLCertificateKeyFile`
-parameters (set them to the files we generated in the previous step).
-* Ensure `SSLEngine on` is set
+- [ ] Edit the config files:
+```
+vi 024-groja.com-ssl.conf
+vi 054-seeourminds.com-ssl.conf
+```
 
-See the `default-ssl.conf` file that we were messing with before for
-examples of how to edit the new file.
+Use the `/etc/apache2/sites-available/default-ssl.conf` file as a guide for
+making these changes.
+
+- [ ] Change the settings as follows:
+  - [ ] Ensure `SSLEngine on` is set
+  - [ ] Update the values for `SSLCertificateFile` and `SSLCertificateKeyFile`
+
+Set `SSLCertificateFile` and `SSLCertificateKeyFile` to
+point to the files we generated in the previous step.
 
 #### Step (3.3): Enable the config and restart apache:
 
-As root:
-
+- [ ] Enable the changes and restart
 ```
-a2ensite default-ssl.conf
+a2ensite 024-groja.com-ssl.conf
+a2ensite 054-seeourminds.com-ssl.conf
 service apache2 reload
 ```
+- [ ] Test in the browser
+Don't worry about the red lock etc., we just need the page to load....
 
 ### Step (4): Set up Redirection
 

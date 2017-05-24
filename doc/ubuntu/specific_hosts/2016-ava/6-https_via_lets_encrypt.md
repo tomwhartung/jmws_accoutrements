@@ -46,7 +46,7 @@ rcsdiff *.conf
 
 -> FYI: noticing that the ssl module is not enabled (yet).
 
-### Step (2): Installation
+## Step (2): Installation
 
 - [ ] Ensure everything else is up-to-date
 ```
@@ -63,26 +63,29 @@ apt-get update
 apt-get install python-certbot-apache
 ```
 
-### Step (3): Configure Modems and Routers
+## Step (3): Configure Modems and Routers
 
 Modems and routers must be configured to accept https requests on port 443 and
 pass them through to the appropriate host(s).
 
 Specific steps for this process are beyond the scope of this document.
 
-### Step (4): Generate a Certificate
+## Step (4): Generate Certificates
 
-The `certbot` command supports generating a certificate (or certificateS?)
-for multiple sites.
+The `certbot` command supports generating certificates for multiple sites.
 
-This process focuses on generating a certificate and setting it up for use
-on the **seeourminds.com** site on **ava**.
+This process focuses on generating a certificate and setting it up for use on:
 
-#### Step (4.1): Try the All-in-One Command
+* groja.com and www.groja.com on **ava**
+* seeourminds.com and www.seeourminds.com on **ava**
 
-- [ ] Run the all-in-one command from reference 1:
+It seems prudent to generate a separate certificate for each site.
+
+### Step (4.1): Generate Certificate for seeourminds.com
+
+- [ ] Run this command:
 ```
-certbot --apache
+certbot --apache certonly
 ```
 - [ ] Read the terms of service at:
   https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf
@@ -93,71 +96,70 @@ Enter email address (...) (Enter 'c' to cancel): lets_encrypt@tomhartung.com
 (Y)es/(N)o: Y
 Which names would you like to activate HTTPS for?
 ```
+Select the numbers corresponding to `seeourminds.com` and `www.seeourminds.com` .
 
-Trying to do just seeourminds.com resulted in an error:
+### Step (4.2): Generate Certificate for groja.com
+
+Once we have generated one certificate, it remembers the values entered and
+does not ask for those again.
+
+- [ ] Run this command:
 ```
-Error while running apache2ctl configtest.
-Action 'configtest' failed.
-The Apache error log may have more information.
-
-AH00526: Syntax error on line 33 of /etc/apache2/sites-enabled/050-seeourminds.com.conf:
-Name duplicates previous WSGI daemon definition.
-
-Rolling back to previous server configuration...
-Error while running apache2ctl configtest.
-Action 'configtest' failed.
-The Apache error log may have more information.
-
-AH00526: Syntax error on line 33 of /etc/apache2/sites-enabled/050-seeourminds.com.conf:
-Name duplicates previous WSGI daemon definition.
-
-
-IMPORTANT NOTES:
- - We were unable to install your certificate, however, we
-   successfully restored your server to its prior configuration.
- - Congratulations! Your certificate and chain have been saved at
-   /etc/letsencrypt/live/www.seeourminds.com/fullchain.pem. Your cert
-   will expire on 2017-08-20. To obtain a new or tweaked version of
-   this certificate in the future, simply run certbot again with the
-   "certonly" option. To non-interactively renew *all* of your
-   certificates, run "certbot renew"
+certbot --apache certonly
+Which names would you like to activate HTTPS for?
 ```
+Select the numbers corresponding to `groja.com` and `www.groja.com` .
 
-#### Step (4.2): Check for the Files
+### Step (4.3): Check for the Files
 
-
-#### Step (4.3): Backup the Files
-
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-
-As root:
+- [ ] Run these commands:
 ```
-$ l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*
--rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/seeourminds-selfsigned.crt
--rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
-$ l /etc/ssl/*/seeourminds*
--rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/seeourminds-selfsigned.crt
--rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
+l /etc/letsencrypt/live/*
+more /etc/letsencrypt/live/*/README
 ```
+If they are there, cool!  If not, look at the output of the commands to
+see where they are, or fix any error(s) we got, as necessary.
 
-### Step (5): Apache Configuration
+### Step (4.4): Backup the Files
 
-Consider following this apache config file naming standard,
-using seeourminds.com as an example:
+- [ ] Run these commands:
 ```
+cd /etc
+l letsencrypt/
+tar -cvzf letsencrypt-ava-2017_05_24.tgz letsencrypt/
+chown tomh:tomh letsencrypt-ava-2017_05_24.tgz
+mv letsencrypt-ava-2017_05_24.tgz /usr/local/tar
+ls -altr /usr/local/tar
+```
+I do not see any benefit in writ a script to do this at this time, because
+these files should change only maybe once a year.
+(Also they are quite easy to generate, assuming it will
+let me do that again if need be.)
+
+**Save a copy of this file on a thumb drive,
+e.g., `/media/tomh/ext4Thumb/usr_local_tar/` on `barbara` .**
+
+## Step (5): Apache Configuration
+
+### Apache Config File Naming Standard
+
+We follow this apache config file naming standard,
+using `groja.com` and `seeourminds.com` as examples:
+```
+020-groja.com.conf
+022-groja.com-redirect.conf
+024-groja.com-ssl.conf
 050-seeourminds.com.conf
 052-seeourminds.com-redirect.conf
 054-seeourminds.com-ssl.conf
 ```
 With the purpose and contents of each being as follows:
 
-* `050-seeourminds.com.conf` - processes http requests on port 80
+* `0?0-[domain_name].conf` - processes http requests on port 80
   * leave current files as-is
-* `052-seeourminds.com-redirect.conf` - redirects http on port 80 to https on port 443
+* `0?2-[domain_name]-redirect.conf` - redirects http on port 80 to https on port 443
   * For an example, see current the version of `050-seeourminds.com.conf` on jane
-* `054-seeourminds.com-ssl.conf` - configured to handle https/443/ssl requests
+* `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
   * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
 
 **Consider doing this for all sites.**

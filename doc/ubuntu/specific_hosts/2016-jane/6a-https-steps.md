@@ -26,7 +26,7 @@ we may want to go with Self-Signed, or maybe even just http.
 ## Results
 
 For a thorough analysis of the motivations, goals, and results of this effort,
-see the file `6b-analysis_of_requirements.md` in this directory.'
+see the file `6b-analysis_of_requirements.md` in this directory.
 
 ## References
 
@@ -67,19 +67,14 @@ We have it so no worries.
 
 ### Step (2): Generate Certificate
 
-One reason we are starting over is, none of the references really address
-doing this in an environment that uses virtual hosts the way we do
-(over six of them).
+It seems prudent to generate a separate certificate for each site.
 
-**It's clear we need to generate a separate certificate for each site.**
+This process shows how to generate two certificates and set them up for use on
 
-I have seen references that suggest using a wildcard, but I'd rather not
-do that, because my sites are all a little different.
+* `seeourminds.com` on `jane`
+* `groja.com` on `jane`
 
-This process focuses on generating a certificate and setting it up for use
-on the **seeourminds.com** site on **jane**.
-
-#### Step (2.1): The Command to Run
+#### Step (2.1): Commands to Run - seeourminds.com
 
 As root (all on one line!):
 ```
@@ -87,18 +82,10 @@ l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # No such file or 
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -keyout /etc/ssl/private/seeourminds-selfsigned.key \
     -out /etc/ssl/certs/seeourminds-selfsigned.crt
+l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*   # They are there now!
 ```
 
-#### Step (2.2): Prompts and Answers
-
 Following are the answers given to the prompts:
-
-**NOTE: they want the Fully Qualified Domain Name (FQDN) or
-IP Address in the `Common Name` field!**
-
-Last time we used `10.0.0.113` and it didn't work, so this time we're using the FQDN.
-
-**Getting that right may well be an important key to getting this to work properly.**
 
 ```
 . . .
@@ -112,6 +99,31 @@ Common Name (e.g. server FQDN or YOUR name) []: jane.seeourminds.com
 Email Address []: mark_as_spam@tomhartung.com
 ```
 
+**One trick seems to be to enter the Fully Qualified Domain Name (FQDN) in
+the `Common Name` field!**
+
+We have tried `10.0.0.113` and `localhost` and those don't work, because
+we have so many virtual hosts (so don't waste time trying those again).
+
+#### Step (2.2): Commands to Run - groja.com
+
+As root (all on one line!):
+```
+l /etc/ssl/certs/groja* /etc/ssl/private/groja*   # No such file or directory - just checking!
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /etc/ssl/private/groja-selfsigned.key \
+    -out /etc/ssl/certs/groja-selfsigned.crt
+l /etc/ssl/certs/groja* /etc/ssl/private/groja*   # They are there now!
+```
+
+Gave it the same answers as those given above for seeourminds.com **EXCEPT** for:
+```
+the Common Name (e.g. server FQDN or YOUR name) []: jane.groja.com
+```
+
+**One trick seems to be to enter the Fully Qualified Domain Name (FQDN) in
+the `Common Name` field!**
+
 #### Step (2.3): Check for the Files
 
 As root:
@@ -122,6 +134,9 @@ $ l /etc/ssl/certs/seeourminds* /etc/ssl/private/seeourminds*
 $ l /etc/ssl/*/seeourminds*
 -rw-r--r-- 1 root root 1480 May  8 19:48 ssl/certs/seeourminds-selfsigned.crt
 -rw-r--r-- 1 root root 1704 May  8 19:48 ssl/private/seeourminds-selfsigned.key
+$ l /etc/ssl/*/groj*
+-rw-r--r-- 1 root root 1480 May 24 16:33 /etc/ssl/certs/groja-selfsigned.crt
+-rw-r--r-- 1 root root 1704 May 24 16:33 /etc/ssl/private/groja-selfsigned.key
 ```
 
 **NOTE: due to permissions, we can see the private only when logged in as root

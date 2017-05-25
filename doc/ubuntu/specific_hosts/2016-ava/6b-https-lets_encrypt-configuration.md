@@ -1,11 +1,25 @@
 
-# 6-https_via_lets_encrypt
+# 6b-https-lets_encrypt-configuration.md
 
-After having limited success using a self-signed certificate on jane,
-we are going for setting up https using Let's Encrypt on ava.
-Jumping straight to production!  I know!!
+This file contains details on how to:
 
-# Research
+* Create Let's Encrypt certificates
+* Configure apache to use the certificates
+
+# Goal
+
+Create the certificates and update the apache config files to implement
+https support using Let's Encrypt option on ava for these two static sites:
+
+* artsyvisions.com (static)
+* tomh.info (static)
+
+And these two python (wsgi) sites:
+
+* groja.com (wsgi - flask)
+* seeourminds.com (wsgi - django)
+
+# Background
 
 For details on how we came up with this process, see the `6*.md` files in
 `../2016-jane` , specifically:
@@ -15,62 +29,15 @@ For details on how we came up with this process, see the `6*.md` files in
 ../2016-jane/6d-comparing_references-lets_encrypt.md
 ```
 
-## "Reference-1"
+For details on how we installed the required software, see the `6a-https-lets_encrypt-activation.md` file in this directory.
 
-The term "reference-1" refers to our #1 main reference:
-
-- https://certbot.eff.org/#ubuntuxenial-apache
-
-# Goal
-
-Set up https using Let's Encrypt option on ava.
-
-# Results
-
-TBD.
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6a-https-lets_encrypt-activation.md
 
 # Process
 
-These are the steps we are following:
-
 **All commands must be run as root.**
 
-## Step (1): Check apache conf files
-
-- [ ] Ensure the current versions of all apache conf files are checked into RCS:
-```
-cd /etc/apache2/sites-available
-rcsdiff *.conf
-```
-- [ ] Check in any files that are not already checked in.
-
--> FYI: noticing that the ssl module is not enabled (yet).
-
-## Step (2): Installation
-
-- [ ] Ensure everything else is up-to-date
-```
-apt-get update
-apt-get upgrade
-```
-
-- [ ] Add the certbot ppa and install the program (see reference 1):
-```
-apt-get install software-properties-common
-apt autoremove     # suggested by output of previous command
-add-apt-repository ppa:certbot/certbot
-apt-get update
-apt-get install python-certbot-apache
-```
-
-## Step (3): Configure Modems and Routers
-
-Modems and routers must be configured to accept https requests on port 443 and
-pass them through to the appropriate host(s).
-
-Specific steps for this process are beyond the scope of this document.
-
-## Step (4): Generate Certificates
+## Step (1): Generate Certificates
 
 The `certbot` command supports generating certificates for multiple sites.
 

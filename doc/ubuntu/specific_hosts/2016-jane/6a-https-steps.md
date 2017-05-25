@@ -65,7 +65,7 @@ dpkg-query --list '*openssl*'
 
 We have it so no worries.
 
-## Step (2): Generate Certificate
+## Step (2): Generate Certificates
 
 It seems prudent to generate a separate certificate for each site.
 
@@ -142,7 +142,7 @@ $ l /etc/ssl/*/groj*
 **NOTE: due to permissions, we can see the private only when logged in as root
 (we are unable to see it using sudo!).**
 
-## Step (3): Apache Configuration
+## Step (3): Update the Apache Configuration
 
 Now we need to tell apache to use the certificate files we generated.
 
@@ -163,9 +163,9 @@ With the purpose and contents of each being as follows:
 * `0?0-[domain_name].conf` - processes http requests on port 80
   * leave current files as-is
 * `0?2-[domain_name]-redirect.conf` - redirects http on port 80 to https on port 443
-  * For an example, see current the version of `050-seeourminds.com.conf` on jane
+  * For an example, see current the version of `052-seeourminds.com-redirect.conf` on jane
 * `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
-  * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
+  * For an example, see current the version of `default-ssl.conf` on jane
 
 **The plan is to do this for most sites, if not all of them.**
 
@@ -174,16 +174,16 @@ With the purpose and contents of each being as follows:
 - [ ] Replace all tab characters with **eight** (8) spaces.
 ```
 vi 020-groja.com.conf
-  :%s&	&    &g
+  :%s&	&        &g
   :wq
 vi 050-seeourminds.com.conf
-  :%s&	&    &g
+  :%s&	&        &g
   :wq
 ```
 
 ### Step (3.1): The New https Config Files
 
-- [ ] Create New Files From Existing Files
+- [ ] Create New Files From Existing Files and check into RCS
 ```
 cd /etc/apache2/sites-available
 cp 020-groja.com.conf 024-groja.com-ssl.conf
@@ -266,52 +266,55 @@ Set them to point to the self-signed certificate files we generated previously.
 ###
 ### Updating these values to point to the self-signed certificates we have now
 ### Reference:
-###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https.md
+###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
 ###
 ### SSLCertificateFile	/etc/ssl/certs/ssl-cert-snakeoil.pem
 ### SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
 SSLCertificateFile	/etc/ssl/certs/[domain_name]-selfsigned.crt
 SSLCertificateKeyFile /etc/ssl/private/[domain_name]-selfsigned.key
 ```
-Be sure to replace `[domain_name]` with `groja.com` or `seeourminds.com` ,
-and indent the lines by **eight** (8) spaces, as appropriate.
+Be sure to replace `[domain_name]` with `groja` (**no** `.com`) or
+`seeourminds` (**without** `.com`) , and
+indent the lines by **eight** (8) spaces, as appropriate.
 
 Note that there are additional configuration parameters documented in
 `/etc/apache2/sites-available/default-ssl.conf` that we may want to use at some point.
 
 ## Step (3.3): Set up Redirection
 
-Edit the `050-seeourminds.com.conf` config file to redirect to the new
-`051-seeourminds.com-ssl.conf` file, by adding this line:
+The `052-seeourminds.com-redirect.conf` config file currently redirects to the
+new `054-seeourminds.com-ssl.conf` file.
 
+- [ ] Create `022-groja.com-redirect.conf` and update it as appropriate
 ```
-Redirect "/" "https://jane.seeourminds.com/"
+cp 052-seeourminds.com-redirect.conf 022-groja.com-redirect.conf
+vi 022-groja.com-redirect.conf
 ```
 
-Add it after the line that sets the `DocumentRoot`.
+## Step (4): Test the Apache Configuration
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+See if we made all those changes correctly!
 
-### Step (3.3): Disable the http config:
+### Step (4.1): Disable the old http config:
 
-- [ ] Disable the current http config
+- [ ] Disable the current http config files
 ```
-a2ensite 024-groja.com-ssl.conf
-a2ensite 054-seeourminds.com-ssl.conf
-service apache2 reload
+a2dissite 020-groja.com.conf
+a2dissite 050-seeourminds.com.conf
 ```
-- [ ] Test in the browser
-Don't worry about the red lock etc., we just need the page to load....
 
-### Step (3.3): Enable the config and restart apache:
+### Step (4.2): Enable the new config files and restart apache:
 
 - [ ] Enable the changes and restart
 ```
+a2ensite 022-groja.com-redirect.conf
+a2ensite 052-seeourminds.com-redirect.conf
 a2ensite 024-groja.com-ssl.conf
 a2ensite 054-seeourminds.com-ssl.conf
 service apache2 reload
 ```
 - [ ] Test in the browser
+Depending on the browser, you may have to click through a warning page or two.
 Don't worry about the red lock etc., we just need the page to load....
 
 ## Step (5): Dealing With Invalid Certificate Warnings

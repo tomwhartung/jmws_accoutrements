@@ -1,5 +1,5 @@
 
-# 6-https_via_lets_encrypt
+# 6a-https-lets_encrypt-activation
 
 After having limited success using a self-signed certificate on jane,
 we are going for setting up https using Let's Encrypt on ava.
@@ -72,76 +72,13 @@ Specific steps for this process are beyond the scope of this document.
 
 ## Step (4): Generate Certificates
 
-The `certbot` command supports generating certificates for multiple sites.
+Note that we want to have a separate certificate for each site.
 
-This process focuses on generating a certificate and setting it up for use on:
-
-* groja.com and www.groja.com on **ava**
-* seeourminds.com and www.seeourminds.com on **ava**
-
-It seems prudent to generate a separate certificate for each site.
-
-### Step (4.1): Generate Certificate for seeourminds.com
-
-- [ ] Run this command:
-```
-certbot --apache certonly
-```
-- [ ] Read the terms of service at:
-  https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf
-- [ ] Answer the questions (there are far fewer questions than there were for self-signed)
-```
-Enter email address (...) (Enter 'c' to cancel): lets_encrypt@tomhartung.com
-(A)gree/(C)ancel: A
-(Y)es/(N)o: Y
-Which names would you like to activate HTTPS for?
-```
-Select the numbers corresponding to `seeourminds.com` and `www.seeourminds.com` .
-
-### Step (4.2): Generate Certificate for groja.com
-
-Once we have generated one certificate, it remembers the values entered and
-does not ask for those again.
-
-- [ ] Run this command:
-```
-certbot --apache certonly
-Which names would you like to activate HTTPS for?
-```
-Select the numbers corresponding to `groja.com` and `www.groja.com` .
-
-### Step (4.3): Check for the Files
-
-- [ ] Run these commands:
-```
-l /etc/letsencrypt/live/*
-more /etc/letsencrypt/live/*/README
-```
-If they are there, cool!  If not, look at the output of the commands to
-see where they are, or fix any error(s) we got, as necessary.
-
-### Step (4.4): Backup the Files
-
-- [ ] Run these commands:
-```
-cd /etc
-l letsencrypt/
-tar -cvzf letsencrypt-ava-2017_05_24.tgz letsencrypt/
-chown tomh:tomh letsencrypt-ava-2017_05_24.tgz
-mv letsencrypt-ava-2017_05_24.tgz /usr/local/tar
-ls -altr /usr/local/tar
-```
-I do not see any benefit in writ a script to do this at this time, because
-these files should change only maybe once a year.
-(Also they are quite easy to generate, assuming it will
-let me do that again if need be.)
-
-**Save a copy of this file on a thumb drive,
-e.g., `/media/tomh/ext4Thumb/usr_local_tar/` on `barbara` .**
+- [ ] If we are setting up a new server, try to re-use the existing certificates.
+- [ ] If we are setting up a new site, see the details in `6b-https-lets_encrypt-configuration.md` in this directory:
+  - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6b-https-lets_encrypt-configuration.md
 
 ## Step (5): Update Apache Config
-
-Now we need to tell apache to use the certificate files we generated.
 
 ### Apache Config File Naming Standard
 
@@ -155,6 +92,7 @@ using `groja.com` and `seeourminds.com` as examples:
 052-seeourminds.com-redirect.conf
 054-seeourminds.com-ssl.conf
 ```
+
 With the purpose and contents of each being as follows:
 
 * `0?0-[domain_name].conf` - processes http requests on port 80
@@ -164,23 +102,13 @@ With the purpose and contents of each being as follows:
 * `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
   * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
 
-**The plan is to do this for most sites, if not all of them.**
+### For Details
 
-### Step (5.1): Updating the Files
+- [ ] If we are setting up a new server, try to re-use the existing config files.
+- [ ] If we are setting up a new site, see the details in `6b-https-lets_encrypt-configuration.md` in this directory:
+  - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6b-https-lets_encrypt-configuration.md
 
-Follow the process detailed in Step 3 of `../2016-jane/6a-https-steps.md` :
-
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
-
-There is no sense duplicating that process here, at this time.
-
-#### Process Overview:
-
-1. Replace tabs with spaces in the `0?0-[domain_name].conf` file
-2. Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
-3. Edit the `0?4-[domain_name]-ssl.conf` file
-
-### Step (5.2) Test in Browser
+## Step (6) Test in Browser
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

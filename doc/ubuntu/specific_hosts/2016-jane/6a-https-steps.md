@@ -4,14 +4,14 @@
 It's time to get https going on [seeourminds.com](http://seeourminds.com),
 and probably all of the other CMS sites.
 
-## Options
+# Options
 
 Note that there are two options:
 
 1) Self-Signed
 2) Let's Encrypt
 
-## Goals
+# Goals
 
 These are the initial goals we were trying to acheive:
 
@@ -23,12 +23,12 @@ These are the initial goals we were trying to acheive:
 if that is a hassle or not feasible for some reason,
 we may want to go with Self-Signed, or maybe even just http.
 
-## Results
+# Results
 
 For a thorough analysis of the motivations, goals, and results of this effort,
 see the file `6b-analysis_of_requirements.md` in this directory.
 
-## References
+# References
 
 We found a lot of references to help with this process.
 For a list of these, an analysis of each of them, and
@@ -37,14 +37,14 @@ see the `6c-comparing_references-self_signed.md` file in this directory:
 
 - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-comparing_references.md
 
-## Process
+# Process
 
 These are the steps we are following to get the Self-Signed SSL Certificate
 configuration working on jane.
 
 All commands must be run as root.
 
-### Step (1): Installation and Setup
+## Step (1): Installation and Setup
 
 - [ ] Ensure ssl is installed and enabled.
 ```
@@ -65,7 +65,7 @@ dpkg-query --list '*openssl*'
 
 We have it so no worries.
 
-### Step (2): Generate Certificate
+## Step (2): Generate Certificate
 
 It seems prudent to generate a separate certificate for each site.
 
@@ -74,7 +74,7 @@ This process shows how to generate two certificates and set them up for use on
 * `seeourminds.com` on `jane`
 * `groja.com` on `jane`
 
-#### Step (2.1): Commands to Run - seeourminds.com
+### Step (2.1): Commands to Run - seeourminds.com
 
 All on one line!
 ```
@@ -105,7 +105,7 @@ the `Common Name` field!**
 We have tried `10.0.0.113` and `localhost` and those don't work, because
 we have so many virtual hosts (so don't waste time trying those again).
 
-#### Step (2.2): Commands to Run - groja.com
+### Step (2.2): Commands to Run - groja.com
 
 All on one line!
 ```
@@ -124,7 +124,7 @@ the Common Name (e.g. server FQDN or YOUR name) []: jane.groja.com
 **One trick seems to be to enter the Fully Qualified Domain Name (FQDN) in
 the `Common Name` field!**
 
-#### Step (2.3): Check for the Files
+### Step (2.3): Check for the Files
 
 As root:
 ```
@@ -142,7 +142,7 @@ $ l /etc/ssl/*/groj*
 **NOTE: due to permissions, we can see the private only when logged in as root
 (we are unable to see it using sudo!).**
 
-### Step (3): Apache Configuration
+## Step (3): Apache Configuration
 
 Now we need to tell apache to use the certificate files we generated.
 
@@ -169,7 +169,19 @@ With the purpose and contents of each being as follows:
 
 **The plan is to do this for most sites, if not all of them.**
 
-#### Step (3.1): The New https Config Files
+### Step (3.0): Replace Tabs in Original Config Files
+
+- [ ] Replace all tab characters with **eight** (8) spaces.
+```
+vi 020-groja.com.conf
+  :%s&	&    &g
+  :wq
+vi 050-seeourminds.com.conf
+  :%s&	&    &g
+  :wq
+```
+
+### Step (3.1): The New https Config Files
 
 - [ ] Create New Files From Existing Files
 ```
@@ -180,7 +192,7 @@ cp 050-seeourminds.com.conf 054-seeourminds.com-ssl.conf
 ci -l 054-seeourminds.com-ssl.conf
 ```
 
-#### Step (3.2): Making the changes
+### Step (3.2): Making the changes
 
 - [ ] Edit the config files:
 ```
@@ -188,28 +200,86 @@ vi 024-groja.com-ssl.conf
 vi 054-seeourminds.com-ssl.conf
 ```
 
+Change the settings in the `0?4-[domain_name]-ssl.conf` files as described in
+the subsequent sections.
+
 Use the `/etc/apache2/sites-available/default-ssl.conf` file as a guide for
 making these changes.
 
-- [ ] Change the settings as follows:
-  - [ ] Ensure `SSLEngine on` is set
-  - [ ] Update the values for `SSLCertificateFile` and `SSLCertificateKeyFile`
+#### Step (3.2.1): Changes to the Start of the Files
 
-Set `SSLCertificateFile` and `SSLCertificateKeyFile` to
-point to the files we generated in the previous step.
-
-#### Step (3.3): Enable the config and restart apache:
-
-- [ ] Enable the changes and restart
+- [ ] Replace this line at beginning of the file:
 ```
-a2ensite 024-groja.com-ssl.conf
-a2ensite 054-seeourminds.com-ssl.conf
-service apache2 reload
+<VirtualHost *:80>
 ```
-- [ ] Test in the browser
-Don't worry about the red lock etc., we just need the page to load....
+- [ ] With these lines:
+```
+<IfModule mod_ssl.c>
+    ### <VirtualHost *:80>
+    <VirtualHost _default_:443>
+```
+Note that we are indenting these lines by **four** (4) spaces.
 
-### Step (4): Set up Redirection
+#### Step (3.2.2): Changes Near the End of the File
+
+- [ ] Replace this line near the end of the file:
+```
+</VirtualHost>
+```
+- [ ] With these lines:
+```
+    </VirtualHost>
+</IfModule>
+```
+Note that in addition to adding a line, we indented the `</VirtualHost>`
+line by **four** (4) spaces.
+
+#### Step (3.2.3): Turn on the SSLEngine
+
+- [ ] Find this line near the end of the file:
+```
+#Include conf-available/serve-cgi-bin.conf
+```
+- [ ] And add these lines after it:
+```
+
+#   SSL Engine Switch:
+#   Enable/Disable SSL for this virtual host.
+SSLEngine on
+```
+**All of these lines should be indented by **eight** (8) spaces!**
+
+And yes please add a blank line before the comments and the new setting! Tyvm!!
+
+#### Step (3.2.4): Set `SSLCertificateFile` and `SSLCertificateKeyFile`
+
+Add settings for the `SSLCertificateFile` and `SSLCertificateKeyFile` parameters.
+Set them to point to the self-signed certificate files we generated previously.
+
+- [ ] Add these lines after the `SSLEngine on` line just added:
+```
+#   A self-signed (snakeoil) certificate can be created by installing
+#   the ssl-cert package. See
+#   /usr/share/doc/apache2/README.Debian.gz for more info.
+#   If both key and certificate are stored in the same file, only the
+#   SSLCertificateFile directive is needed.
+###
+### Updating these values to point to the self-signed certificates we have now
+### Reference:
+###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https.md
+###
+### SSLCertificateFile	/etc/ssl/certs/ssl-cert-snakeoil.pem
+### SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+SSLCertificateFile	/etc/ssl/certs/[domain_name]-selfsigned.crt
+SSLCertificateKeyFile /etc/ssl/private/[domain_name]-selfsigned.key
+```
+Be sure to replace `[domain_name]` with `groja.com` or `seeourminds.com` ,
+and indent the lines by **eight** (8) spaces, as appropriate.
+
+Note that there are additional configuration parameters documented in
+`/etc/apache2/sites-available/default-ssl.conf` that we may want to use at some point.
+
+## Step (3.3): Set up Redirection
 
 Edit the `050-seeourminds.com.conf` config file to redirect to the new
 `051-seeourminds.com-ssl.conf` file, by adding this line:
@@ -220,7 +290,31 @@ Redirect "/" "https://jane.seeourminds.com/"
 
 Add it after the line that sets the `DocumentRoot`.
 
-### Step (5): Dealing With Invalid Certificate Warnings
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+### Step (3.3): Disable the http config:
+
+- [ ] Disable the current http config
+```
+a2ensite 024-groja.com-ssl.conf
+a2ensite 054-seeourminds.com-ssl.conf
+service apache2 reload
+```
+- [ ] Test in the browser
+Don't worry about the red lock etc., we just need the page to load....
+
+### Step (3.3): Enable the config and restart apache:
+
+- [ ] Enable the changes and restart
+```
+a2ensite 024-groja.com-ssl.conf
+a2ensite 054-seeourminds.com-ssl.conf
+service apache2 reload
+```
+- [ ] Test in the browser
+Don't worry about the red lock etc., we just need the page to load....
+
+## Step (5): Dealing With Invalid Certificate Warnings
 
 Spent a bit of time looking into how to:
 
@@ -236,7 +330,7 @@ This is a bit problematic because:
 * To use the let's encrypt option, the host needs to be accessible via DNS (and not just locally)
   * This last idea is ok on ava, and maybe on barbara, but not on jane
 
-#### Chrome in particular looks bad
+### Chrome in particular looks bad
 
 Here is one thing we tried that we may want to undo:
 

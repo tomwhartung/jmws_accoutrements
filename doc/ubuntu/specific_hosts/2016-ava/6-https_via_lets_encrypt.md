@@ -139,7 +139,9 @@ let me do that again if need be.)
 **Save a copy of this file on a thumb drive,
 e.g., `/media/tomh/ext4Thumb/usr_local_tar/` on `barbara` .**
 
-## Step (5): Apache Configuration
+## Step (5): Update Apache Config
+
+Now we need to tell apache to use the certificate files we generated.
 
 ### Apache Config File Naming Standard
 
@@ -162,44 +164,26 @@ With the purpose and contents of each being as follows:
 * `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
   * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
 
-**Consider doing this for all sites.**
+**The plan is to do this for most sites, if not all of them.**
+
+### Step (5.1): Updating the Files
+
+Follow the process detailed in Step 3 of `../2016-jane/6a-https-steps.md` :
+
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
+
+There is no sense duplicating that process here, at this time.
+
+#### Process Overview:
+
+1. Replace tabs with spaces in the `0?0-[domain_name].conf` file
+2. Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
+3. Edit the `0?4-[domain_name]-ssl.conf` file
+
+### Step (5.2) Test in Browser
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-Now we need to tell apache to use the certificate files we generated.
-
-#### Step (3.1) Try with and without port number
-
-The digitalocean.com reference mentions updating a line with the `ServerName`
-**without** the port number.
-
-The liberiangeek.net reference mentions updating a line with the `ServerName`
-**with** the port number.
-
-**Try both ways until we get one to work!**
-
-#### Step (3.2): Editing the file
-
-- [ ] Edit the config file:
-
-```
-cd /etc/apache2/sites-available
-cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
-ci -l 051-seeourminds.com-ssl.conf
-vi 051-seeourminds.com-ssl.conf
-```
-
-- [ ] Make the following changes:
-
-* Ensure `SSLEngine on` is set
-* Update the `SSLCertificateFile` and `SSLCertificateKeyFile`
-parameters (set them to the files we generated in the previous step).
-* Ensure `SSLEngine on` is set
-
-See the `default-ssl.conf` file that we were messing with before for
-examples of how to edit the new file.
-
-#### Step (3.3): Enable the config and restart apache:
 
 As root:
 

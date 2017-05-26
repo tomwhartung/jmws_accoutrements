@@ -21,13 +21,12 @@ And these two python (wsgi) sites:
 
 # Background
 
-For details on how we came up with this process, see the `6*.md` files in
-`../2016-jane` , specifically:
+For details on how we came up with this process,
+see `../2016-jane/6b-analysis_of_requirements.md'
+and `../2016-jane/6d-comparing_references-lets_encrypt.md' :
 
-```
-../2016-jane/6b-analysis_of_requirements.md
-../2016-jane/6d-comparing_references-lets_encrypt.md
-```
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6b-analysis_of_requirements.md
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6d-comparing_references-lets_encrypt.md
 
 For details on how we installed the required software, see the `6a-https-lets_encrypt-activation.md` file in this directory.
 
@@ -43,17 +42,31 @@ The `certbot` command supports generating certificates for multiple sites.
 
 This process focuses on generating a certificate and setting it up for use on:
 
+* artsyvisions.com and www.artsyvisions.com on **ava**
+* tomh.info and www.tomh.info on **ava**
 * groja.com and www.groja.com on **ava**
 * seeourminds.com and www.seeourminds.com on **ava**
 
 It seems prudent to generate a separate certificate for each site.
 
-### Step (4.1): Generate Certificate for seeourminds.com
+### Step (1.1): Run `certbot`
 
-- [ ] Run this command:
+When generating the first certificate, `certbot` asks several questions.
+It "remembers" certain answers and does not ask these again, so it's important
+to get them right.
+
+- [ ] For **static** sites, run this command:
+```
+certbot --apache
+```
+
+- [ ] For **python (wsgi)** sites, run this command:
 ```
 certbot --apache certonly
 ```
+
+### Step (1.2): Generate First Certificate
+
 - [ ] Read the terms of service at:
   https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf
 - [ ] Answer the questions (there are far fewer questions than there were for self-signed)
@@ -63,9 +76,47 @@ Enter email address (...) (Enter 'c' to cancel): lets_encrypt@tomhartung.com
 (Y)es/(N)o: Y
 Which names would you like to activate HTTPS for?
 ```
-Select the numbers corresponding to `seeourminds.com` and `www.seeourminds.com` .
 
+- [ ] Select the numbers corresponding to the `*.com` and `www.*.com` names for
+one of the static or python (wsgi) site listed above (depending on which command we ran).
+
+### Step (1.3): Python (Wsgi) Site Certificate
+
+When we run `certbot` with the `certonly` , it will exit after creating the certificate.
+- [ ] Fix any errors and re-run the `certbot` command
+
+If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
+it helps to do one of those first
+
+### Step (1.4): Static Site Certificate
+
+If we run `certbot` **without** the `certonly` option, it asks this question:
+```
+Please choose whether HTTPS access is required or optional.
+-------------------------------------------------------------------------------
+1: Easy - Allow both HTTP and HTTPS access to these sites
+2: Secure - Make all requests redirect to secure HTTPS access
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
+```
+
+If it's a static site, `certbot` does the following:
+1. Create a new apache configuration file, based on the exiting file, to handle https requests on port 443
+   - The name of this file is ``
+   - Run diff to see what we need to add to our configuration files when doing this manually (e.g., for python (wsgi) sites)
+2. Optionally try to update the current configuration to redirect to the new configuration
+   - Whether it does this second step depends on your answer to the question above
+3. Run the `a2ensite` command(s) needed to activate the new configuration file(s)
+
+Our goal is to:
+- Have the http requests redirect to https
+- Ensure our configuration files conform to our configuration file naming standard
+
+
+
+### Step (4.1): Generate Certificate for seeourminds.com
 ### Step (4.2): Generate Certificate for groja.com
+Select the numbers corresponding to `seeourminds.com` and `www.seeourminds.com` .
 
 Once we have generated one certificate, it remembers the values entered and
 does not ask for those again.

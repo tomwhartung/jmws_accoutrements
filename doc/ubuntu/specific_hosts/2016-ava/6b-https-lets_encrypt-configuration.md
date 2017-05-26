@@ -63,6 +63,18 @@ For details on how we installed the required software, see the `6a-https-lets_en
 
 **All commands must be run as root.**
 
+## Step (0): Ensure RCS Is Up-to-Date!
+
+We keep all apache configuration files under version control in RCS.
+
+- [ ] Run the following commands to ensure the latest versions are checked in to RCS:
+```
+cd /etc/apache2/sites-available
+rcsdiff *.conf
+```
+
+Check in any files that are out-of-sync in RCS.
+
 ## Step (1): Generate Certificates
 
 The `certbot` command supports generating certificates for multiple sites.
@@ -105,15 +117,19 @@ Which names would you like to activate HTTPS for?
 ```
 
 - [ ] Select the numbers corresponding to the `*.com` and `www.*.com` names for
-one of the static or python (wsgi) site listed above (depending on which command we ran).
+one of the static or python (wsgi) sites listed above (depending on which command was run).
 
 ### Step (1.3): Python (Wsgi) Site Certificate
+
+When I tried to get `certbot` to update the configuration for one of the python sites, I got an error.
+It's easy to update the configuration files manually, and we need to rename them anyway,
+so for python (wsgi) sites run `certbot` with the `certonly` option set.
 
 When we run `certbot` with the `certonly` , it will exit after creating the certificate.
 - [ ] Fix any errors and re-run the `certbot` command
 
 If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
-it helps to do one of those first
+it helps to do one of those first.
 
 ### Step (1.4): (Static) Site Configuration by `certbot`
 
@@ -141,7 +157,7 @@ Our goals are to:
   * Note that the names `certbot` uses for these files (e.g., `070-tomh.info-le-ssl.conf`) do not conform to our standard
 Subsequent steps show how to achieve these goals regardless of the choice made here, so, whatevs....
 
-### Step (1.5): Check for the Files
+### Step (1.5): Check for the Certificates
 
 - [ ] Run these commands:
 ```
@@ -151,7 +167,7 @@ more /etc/letsencrypt/live/*/README
 If the files are there, cool!  If not, look at the output of the commands to
 see where they are, or fix any error(s) we got, as necessary.
 
-### Step (1.6): Backup the Files
+### Step (1.6): Backup the Certificates
 
 - [ ] Run these commands:
 ```
@@ -162,21 +178,49 @@ chown tomh:tomh letsencrypt-ava-2017_05_24.tgz
 mv letsencrypt-ava-2017_05_24.tgz /usr/local/tar
 ls -altr /usr/local/tar
 ```
-I do not see any benefit in writ a script to do this at this time, because
-these files should change only maybe once a year.
-(Also they are quite easy to generate, assuming it will
-let me do that again if need be.)
+I do not see any benefit in writing a script to do this at this time, because
+these files should change only maybe once a year (when we renew them).
+Also they are quite easy to generate - assuming it will
+let me do that again if need be.
 
 **Save a copy of this `.tgz` file on a thumb drive,
 e.g., `/media/tomh/ext4Thumb/usr_local_tar/` on `barbara` .**
 
-## Step (5): Update Apache Config
+## Step (2): Update Apache Config
 
 Now we need to tell apache to use the certificate files we generated.
 
-**This process depends greatly on what choices were made above.**
+**Note that we keep all configuration files under version control (in RCS).**
 
-### Step (5.1): Updating the Files
+This process depends on what choices were made above.
+
+### Step (2.1): Renaming the Files
+
+If we were able to get `certbot` to successfully generate and update the
+apache configuration files (e.g., it's a static site), we only need to:
+
+* Rename the files to conform to our naming standard
+* Activate and test them
+* Check them in to RCS
+
+- [ ] Run the following commands, which perform this process for the `tomh.info` site, for the site being switched over to https:
+```
+mv 070-tomh.info.conf 072-tomh.info-redirect.conf
+co -l ./070-tomh.info.conf
+a2dissite  070-tomh.info-le-ssl.conf
+service apache2 reload
+mv 070-tomh.info-le-ssl.conf 074-tomh.info-le-ssl.conf
+a2dissite  070-tomh.info.conf
+a2ensite 072-tomh.info-redirect.conf
+a2ensite 074-tomh.info-le-ssl.conf
+service apache2 reload
+```
+
+Skip to Step (2.3) Test in Browser, below.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+### Step (2.2): Updating the Files Manually
 
 Follow the process detailed in Step 3 of `../2016-jane/6a-https-steps.md` :
 
@@ -190,8 +234,23 @@ There is no sense duplicating that process here, at this time.
 2. Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
 3. Edit the `0?4-[domain_name]-ssl.conf` file
 
-### Step (5.2) Test in Browser
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+### Step (2.3) Test in Browser
+
+This is where it would be nice to be able to test this on a non-production host, but
+we can implement Let's Encrypt only on hosts connected to the internet!
+
+### Step (2.4): Falling Back to Http
+
+Note that if something goes wrong with ssl on this site, we can switch it back to
+using the http only configuration with the following commands:
+```
+a2dissite 072-tomh.info-redirect.conf
+a2dissite 074-tomh.info-le-ssl.conf
+a2ensite 070-tomh.info.conf
+service apache2 reload
+```
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 

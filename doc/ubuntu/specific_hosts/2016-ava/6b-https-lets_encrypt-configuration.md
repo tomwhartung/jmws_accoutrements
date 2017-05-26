@@ -19,6 +19,33 @@ And these two python (wsgi) sites:
 * groja.com (wsgi - flask)
 * seeourminds.com (wsgi - django)
 
+# Apache Config File Naming Standard
+
+We follow this apache config file naming standard,
+using `artsyvisions.com` , `groja.com` , `seeourminds.com` , and `tomh.info` as examples:
+```
+010-artsyvisions.com.conf
+012-artsyvisions.com-redirect.conf
+014-artsyvisions.com-le-ssl.conf
+020-groja.com.conf
+022-groja.com-redirect.conf
+024-groja.com-le-ssl.conf
+050-seeourminds.com.conf
+052-seeourminds.com-redirect.conf
+054-seeourminds.com-le-ssl.conf
+070-tomh.info.conf
+072-tomh.info-redirect.conf
+074-tomh.info-le-ssl.conf
+```
+With the purpose and contents of each being as follows:
+
+* `0?0-[domain_name].conf` - processes http requests on port 80
+  * leave current files as-is
+* `0?2-[domain_name]-redirect.conf` - redirects http on port 80 to https on port 443
+  * For an example, see current the version of `050-seeourminds.com.conf` on jane
+* `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
+  * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
+
 # Background
 
 For details on how we came up with this process,
@@ -88,9 +115,17 @@ When we run `certbot` with the `certonly` , it will exit after creating the cert
 If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
 it helps to do one of those first
 
-### Step (1.4): Static Site Certificate
+### Step (1.4): (Static) Site Configuration by `certbot`
 
-If we run `certbot` **without** the `certonly` option, it asks this question:
+If we run `certbot` **without** the `certonly` option, it does the following:
+1. Create a new apache configuration file, based on the exiting file, to handle https requests on port 443
+   - The name of this file is `[old_file_basename]-le-ssl.conf` (e.g., `070-tomh.info-le-ssl.conf`)
+   - Run diff to see what we need to add to our configuration files when doing this manually (e.g., for python (wsgi) sites)
+2. Optionally try to update the current configuration to redirect to the new configuration
+   - Whether it does this second step depends on your answer to the question below
+3. Run the `a2ensite` command(s) needed to activate the new configuration file(s)
+
+As mentioned in the second task ("2." above), if we run `certbot` **without** the `certonly` option, it asks this question:
 ```
 Please choose whether HTTPS access is required or optional.
 -------------------------------------------------------------------------------
@@ -100,45 +135,23 @@ Please choose whether HTTPS access is required or optional.
 Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 ```
 
-If it's a static site, `certbot` does the following:
-1. Create a new apache configuration file, based on the exiting file, to handle https requests on port 443
-   - The name of this file is ``
-   - Run diff to see what we need to add to our configuration files when doing this manually (e.g., for python (wsgi) sites)
-2. Optionally try to update the current configuration to redirect to the new configuration
-   - Whether it does this second step depends on your answer to the question above
-3. Run the `a2ensite` command(s) needed to activate the new configuration file(s)
+Our goals are to:
+* Have the http requests redirect to https
+* Ensure our configuration files conform to our configuration file naming standard
+  * Note that the names `certbot` uses for these files (e.g., `070-tomh.info-le-ssl.conf`) do not conform to our standard
+Subsequent steps show how to achieve these goals regardless of the choice made here, so, whatevs....
 
-Our goal is to:
-- Have the http requests redirect to https
-- Ensure our configuration files conform to our configuration file naming standard
-
-
-
-### Step (4.1): Generate Certificate for seeourminds.com
-### Step (4.2): Generate Certificate for groja.com
-Select the numbers corresponding to `seeourminds.com` and `www.seeourminds.com` .
-
-Once we have generated one certificate, it remembers the values entered and
-does not ask for those again.
-
-- [ ] Run this command:
-```
-certbot --apache certonly
-Which names would you like to activate HTTPS for?
-```
-Select the numbers corresponding to `groja.com` and `www.groja.com` .
-
-### Step (4.3): Check for the Files
+### Step (1.5): Check for the Files
 
 - [ ] Run these commands:
 ```
 l /etc/letsencrypt/live/*
 more /etc/letsencrypt/live/*/README
 ```
-If they are there, cool!  If not, look at the output of the commands to
+If the files are there, cool!  If not, look at the output of the commands to
 see where they are, or fix any error(s) we got, as necessary.
 
-### Step (4.4): Backup the Files
+### Step (1.6): Backup the Files
 
 - [ ] Run these commands:
 ```
@@ -154,35 +167,14 @@ these files should change only maybe once a year.
 (Also they are quite easy to generate, assuming it will
 let me do that again if need be.)
 
-**Save a copy of this file on a thumb drive,
+**Save a copy of this `.tgz` file on a thumb drive,
 e.g., `/media/tomh/ext4Thumb/usr_local_tar/` on `barbara` .**
 
 ## Step (5): Update Apache Config
 
 Now we need to tell apache to use the certificate files we generated.
 
-### Apache Config File Naming Standard
-
-We follow this apache config file naming standard,
-using `groja.com` and `seeourminds.com` as examples:
-```
-020-groja.com.conf
-022-groja.com-redirect.conf
-024-groja.com-ssl.conf
-050-seeourminds.com.conf
-052-seeourminds.com-redirect.conf
-054-seeourminds.com-ssl.conf
-```
-With the purpose and contents of each being as follows:
-
-* `0?0-[domain_name].conf` - processes http requests on port 80
-  * leave current files as-is
-* `0?2-[domain_name]-redirect.conf` - redirects http on port 80 to https on port 443
-  * For an example, see current the version of `050-seeourminds.com.conf` on jane
-* `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
-  * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
-
-**The plan is to do this for most sites, if not all of them.**
+**This process depends greatly on what choices were made above.**
 
 ### Step (5.1): Updating the Files
 

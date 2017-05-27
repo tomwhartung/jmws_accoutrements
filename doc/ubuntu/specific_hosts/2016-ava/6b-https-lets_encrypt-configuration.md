@@ -330,7 +330,7 @@ Add the Let's Encrypt configuration to the new apache config file.
 ```
 #Include conf-available/serve-cgi-bin.conf
 ```
-- [ ] The following lines show how to do this for the `groja.com` site:
+- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
 ```
 
 ###
@@ -349,46 +349,51 @@ Include /etc/letsencrypt/options-ssl-apache.conf
 
 And yes please add a blank line before the comments and the new setting! Tyvm!!
 
-#### Step (3.2.4): Set `SSLCertificateFile` and `SSLCertificateKeyFile`
+#### Create and Edit New Redirection File for Http
 
-Add settings for the `SSLCertificateFile` and `SSLCertificateKeyFile` parameters.
-Set them to point to the self-signed certificate files we generated previously.
+Copy the existing http config file and edit the new file.
 
-- [ ] Add these lines after the `SSLEngine on` line just added:
+- [ ] The following commands show how to do this for the `groja.com` site:
 ```
-#   A self-signed (snakeoil) certificate can be created by installing
-#   the ssl-cert package. See
-#   /usr/share/doc/apache2/README.Debian.gz for more info.
-#   If both key and certificate are stored in the same file, only the
-#   SSLCertificateFile directive is needed.
-###
-### Updating these values to point to the self-signed certificates we have now
-### Reference:
-###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
-###
-### SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
-### SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
-SSLCertificateFile /etc/ssl/certs/[domain_name]-selfsigned.crt
-SSLCertificateKeyFile /etc/ssl/private/[domain_name]-selfsigned.key
+cp 020-groja.com.conf 022-groja.com-redirect.conf
+vi 022-groja.com-redirect.conf
 ```
-Be sure to replace `[domain_name]` with `groja` (**no** `.com`) or
-`seeourminds` (**without** `.com`) , and
-indent the lines by **eight** (8) spaces, as appropriate.
 
-Note that there are additional configuration parameters documented in
-`/etc/apache2/sites-available/default-ssl.conf` that we may want to use at some point.
+#### Add Redirection Config
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+- [ ] Add a line similar to the following, which show how to do this for the `groja.com` site:
+```
+Redirect "/" "https://www.groja.com/"
+```
+
+Add it after the line that sets the `DocumentRoot`.
+
+#### Switch to Use Redirect and Https Config
+
+Disable the old config file and enable the new ones.
+
+- [ ] The following commands show how to do this for the `seeourminds.com` site:
+```
+a2dissite 050-seeourminds.com.conf
+a2ensite 052-seeourminds.com-redirect.conf
+a2ensite 054-seeourminds.com-le-ssl.conf
+service apache2 reload
+```
 
 ## Step (3) Test in Browser
 
 This is where it would be nice to be able to test this on a non-production host, but
 we can implement Let's Encrypt only on hosts connected to the internet!
 
-### Step (3.1): Falling Back to Http
+## Step (4): Conclusion
+
+Having three config files for each site, with names that follow the standard,
+makes it super-easy to switch between http and https.
+
+### Step (4.1): Falling Back to Http Only
 
 Note that if something goes wrong with ssl on this site, we can quickly switch it back to
-process only http requests with the following commands:
+process only http requests with commands such as the following:
 ```
 a2dissite 072-tomh.info-redirect.conf
 a2dissite 074-tomh.info-le-ssl.conf
@@ -396,14 +401,18 @@ a2ensite 070-tomh.info.conf
 service apache2 reload
 ```
 
-### Step (4): Set up Redirection
+**TODO: try redirecting https to http, instead of leaving https requests with an error.**
 
-Edit the `050-seeourminds.com.conf` config file to redirect to the new
-`051-seeourminds.com-ssl.conf` file, by adding this line:
+### Step (4.2): Switching Back to Https and Redirection
 
+Once we have ssl working again on the site, we can quickly switch it back to
+process https requests and redirect http to https with commands such as the following:
 ```
-Redirect "/" "https://jane.seeourminds.com/"
+a2dissite 050-seeourminds.com.conf
+a2ensite 052-seeourminds.com-redirect.conf
+a2ensite 054-seeourminds.com-le-ssl.conf
+service apache2 reload
 ```
 
-Add it after the line that sets the `DocumentRoot`.
+See how that works for ya!
 

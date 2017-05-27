@@ -275,46 +275,124 @@ service apache2 reload
 
 **Skip to Step (3) Test in Browser, below.**
 
+### Step (2-C): Updating the Files Manually
+
+Do this step when running `certbot` with the `certonly` option set.
+
+This is how we are doiong our python (wsgi) sites.
+
+In this case, we need to:
+
+* Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
+* Edit the `0?4-[domain_name]-ssl.conf` file
+
+#### Copy Existing File and Edit the New File
+
+- [ ] The following commands show how to do this for the `groja.com` site:
+```
+cp 020-groja.com.conf 024-groja.com-le-ssl.conf
+vi 024-groja.com-le-ssl.conf
+```
+
+#### Changing the Start of the File
+
+- [ ] Replace this line at beginning of the file:
+```
+<VirtualHost *:80>
+```
+- [ ] With these lines:
+```
+<IfModule mod_ssl.c>
+    ### <VirtualHost *:80>
+    <VirtualHost _default_:443>
+```
+Note that we are indenting these lines by **four** (4) spaces.
+
+#### Changes Near the End of the File
+
+- [ ] Replace this line near the end of the file:
+```
+</VirtualHost>
+```
+- [ ] With these lines:
+```
+    </VirtualHost>
+</IfModule>
+```
+Note that in addition to adding a line, we indented the `</VirtualHost>`
+line by **four** (4) spaces.
+
+#### Adding the Let's Encrypt Configuration
+
+Add the Let's Encrypt configuration to the new apache config file.
+
+- [ ] Find this line near the end of the file:
+```
+#Include conf-available/serve-cgi-bin.conf
+```
+- [ ] The following lines show how to do this for the `groja.com` site:
+```
+
+###
+### Updating these values to point to the Lets Encrypt certificates we have now
+### Reference:
+###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
+###
+### SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
+### SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+SSLCertificateFile /etc/letsencrypt/live/groja.com/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/groja.com/privkey.pem
+Include /etc/letsencrypt/options-ssl-apache.conf
+
+```
+**All of these lines should be indented by **eight** (8) spaces!**
+
+And yes please add a blank line before the comments and the new setting! Tyvm!!
+
+#### Step (3.2.4): Set `SSLCertificateFile` and `SSLCertificateKeyFile`
+
+Add settings for the `SSLCertificateFile` and `SSLCertificateKeyFile` parameters.
+Set them to point to the self-signed certificate files we generated previously.
+
+- [ ] Add these lines after the `SSLEngine on` line just added:
+```
+#   A self-signed (snakeoil) certificate can be created by installing
+#   the ssl-cert package. See
+#   /usr/share/doc/apache2/README.Debian.gz for more info.
+#   If both key and certificate are stored in the same file, only the
+#   SSLCertificateFile directive is needed.
+###
+### Updating these values to point to the self-signed certificates we have now
+### Reference:
+###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
+###
+### SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
+### SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+SSLCertificateFile /etc/ssl/certs/[domain_name]-selfsigned.crt
+SSLCertificateKeyFile /etc/ssl/private/[domain_name]-selfsigned.key
+```
+Be sure to replace `[domain_name]` with `groja` (**no** `.com`) or
+`seeourminds` (**without** `.com`) , and
+indent the lines by **eight** (8) spaces, as appropriate.
+
+Note that there are additional configuration parameters documented in
+`/etc/apache2/sites-available/default-ssl.conf` that we may want to use at some point.
+
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-### Step (2.2): Updating the Files Manually
-
-Follow the process detailed in Step 3 of `../2016-jane/6a-https-steps.md` :
-
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
-
-There is no sense duplicating that process here, at this time.
-
-#### Process Overview:
-
-1. Replace tabs with spaces in the `0?0-[domain_name].conf` file
-2. Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
-3. Edit the `0?4-[domain_name]-ssl.conf` file
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-### Step (2.3) Test in Browser
+## Step (3) Test in Browser
 
 This is where it would be nice to be able to test this on a non-production host, but
 we can implement Let's Encrypt only on hosts connected to the internet!
 
-### Step (2.4): Falling Back to Http
+### Step (3.1): Falling Back to Http
 
-Note that if something goes wrong with ssl on this site, we can switch it back to
-using the http only configuration with the following commands:
+Note that if something goes wrong with ssl on this site, we can quickly switch it back to
+process only http requests with the following commands:
 ```
 a2dissite 072-tomh.info-redirect.conf
 a2dissite 074-tomh.info-le-ssl.conf
 a2ensite 070-tomh.info.conf
-service apache2 reload
-```
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-
-As root:
-
-```
-a2ensite default-ssl.conf
 service apache2 reload
 ```
 
@@ -328,35 +406,4 @@ Redirect "/" "https://jane.seeourminds.com/"
 ```
 
 Add it after the line that sets the `DocumentRoot`.
-
-### Step (5): Dealing With Invalid Certificate Warnings
-
-Spent a bit of time looking into how to:
-
-1. Avoid the initial warning page
-2. Trying to fix the red "Not Secure" warning that appears instead
-of the green "Lock" icon I want to see.
-
-This is a bit problematic because:
-
-* Different browsers behave somewhat differently as well.
-* We can always set up the apache config to use http on jane and https on ava and barbara
-* To get the green icon, we need to get the certificate from let's encrypt (or the like)
-* To use the let's encrypt option, the host needs to be accessible via DNS (and not just locally)
-  * This last idea is ok on ava, and maybe on barbara, but not on jane
-
-#### Chrome in particular looks bad
-
-Here is one thing we tried that we may want to undo:
-
-* Paste into Chrome: chrome://flags/#allow-insecure-localhost
-* Reference: http://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate
-
-Clicking on the red "Not secure" brings up some information, but
-I could not see anything that would make it go away.
-
-Going to Settings -> Advanced -> HTTPS shows a list of certificates, but I do
-not see the one we created above.
-
-Another place to look is in the Developer tools under Security, but again....
 

@@ -207,14 +207,14 @@ Do this step when `certbot`:
   * This corresponds to answering `2. Secure` to the Easy/Secure question
     (i.e., `Please choose whether HTTPS access is required or optional.`)
 
-#### Renaming the Files
-
 In this case, we only need to:
 
 * Rename the files to conform to our naming standard
 * Activate and test them
 
-- [ ] Run the following commands, which perform this process for the `tomh.info` site, for the site being switched over to https:
+#### Renaming the Files
+
+- [ ] The following commands show how to do this for the `tomh.info` site:
 ```
 mv 070-tomh.info.conf 072-tomh.info-redirect.conf
 co -l ./070-tomh.info.conf
@@ -227,7 +227,7 @@ a2ensite 074-tomh.info-le-ssl.conf
 service apache2 reload
 ```
 
-Skip to Step (3) Test in Browser, below.
+**Skip to Step (3) Test in Browser, below.**
 
 ### Step (2-B): Using Our Own Redirect Config
 
@@ -239,28 +239,41 @@ Do this step when `certbot`:
   * This corresponds to answering `1. Easy` to the Easy/Secure question
     (i.e., `Please choose whether HTTPS access is required or optional.`)
 
-#### Renaming the Files
-
-In this case, we need to rename the new file and create one to support the redirection.
-we only need to:
+In this case, we need to:
 
 * Rename the new file to conform to our naming standard
+* Create a new file to redirect http requests to https
 * Activate and test them
 
-- [ ] Run the following commands, which perform this process for the `tomh.info` site, for the site being switched over to https:
+#### Rename the New ssl/https File
+
+Rename the new file to conform to our naming standard.
+
+- [ ] The following commands show how to do this for the `artsyvisions.com` site:
 ```
-mv 070-tomh.info.conf 072-tomh.info-redirect.conf
-co -l ./070-tomh.info.conf
-a2dissite  070-tomh.info-le-ssl.conf
-service apache2 reload
-mv 070-tomh.info-le-ssl.conf 074-tomh.info-le-ssl.conf
-a2dissite  070-tomh.info.conf
-a2ensite 072-tomh.info-redirect.conf
-a2ensite 074-tomh.info-le-ssl.conf
+a2dissite 010-artsyvisions.com-le-ssl.conf
+mv 010-artsyvisions.com-le-ssl.conf 014-artsyvisions.com-le-ssl.conf
+a2ensite 014-artsyvisions.com-le-ssl.conf
 service apache2 reload
 ```
 
-Skip to Step (3) Test in Browser, below.
+At this point our server handles http requests without redirection.
+
+#### Create the New http->https Redirection File
+
+Copy an existing redirection config file to the new name, and edit it
+
+- [ ] The following commands show how to do this for the `artsyvisions.com` site:
+```
+cp 052-seeourminds.com-redirect.conf 012-artsyvisions.com-redirect.conf
+vi 012-artsyvisions.com-redirect.conf
+a2dissite 010-artsyvisions.com.conf
+a2ensite 012-artsyvisions.com-redirect.conf
+a2ensite 014-artsyvisions.com-le-ssl.conf   # (should already be enabled)
+service apache2 reload
+```
+
+**Skip to Step (3) Test in Browser, below.**
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

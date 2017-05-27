@@ -385,34 +385,23 @@ service apache2 reload
 This is where it would be nice to be able to test this on a non-production host, but
 we can implement Let's Encrypt only on hosts connected to the internet!
 
-## Step (4): Conclusion
+## Step (4): Check into RCS
+
+When all config files are working, check them into RCS!
+Quick before we mess something up!
+
+- [ ] Run the following commands to ensure the latest versions are checked in to RCS:
+```
+cd /etc/apache2/sites-available
+rcsdiff *.conf
+ci -l *.conf
+```
+
+## Step (5): Conclusion
 
 Having three config files for each site, with names that follow the standard,
 makes it super-easy to switch between http and https.
 
-### Step (4.1): Falling Back to Http Only
-
-Note that if something goes wrong with ssl on this site, we can quickly switch it back to
-process only http requests with commands such as the following:
-```
-a2dissite 072-tomh.info-redirect.conf
-a2dissite 074-tomh.info-le-ssl.conf
-a2ensite 070-tomh.info.conf
-service apache2 reload
-```
-
-**TODO: try redirecting https to http, instead of leaving https requests with an error.**
-
-### Step (4.2): Switching Back to Https and Redirection
-
-Once we have ssl working again on the site, we can quickly switch it back to
-process https requests and redirect http to https with commands such as the following:
-```
-a2dissite 050-seeourminds.com.conf
-a2ensite 052-seeourminds.com-redirect.conf
-a2ensite 054-seeourminds.com-le-ssl.conf
-service apache2 reload
-```
-
-See how that works for ya!
+For details, see `6a-https-lets_encrypt-activation.md` in this directory.
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6a-https-lets_encrypt-activation.md
 

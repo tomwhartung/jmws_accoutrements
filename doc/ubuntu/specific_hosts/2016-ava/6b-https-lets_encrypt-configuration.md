@@ -10,14 +10,17 @@ This file contains details on how to:
 
 Create the certificates and update the apache config files to implement
 https support using Let's Encrypt option on ava for these two static sites:
-
 * artsyvisions.com (static)
 * tomh.info (static)
 
-And these two python (wsgi) sites:
-
+These two python (wsgi) sites:
 * groja.com (wsgi - flask)
 * seeourminds.com (wsgi - django)
+
+And these three LAMP (php) sites:
+* joomoowebsites.com (Joomla)
+* tomhartung.com (Drupal)
+* tomwhartung.com (WordPress)
 
 # Apache Config File Naming Standard
 
@@ -89,10 +92,16 @@ The `certbot` command supports generating certificates for multiple sites.
 
 This process focuses on generating a certificate and setting it up for use on:
 
-* artsyvisions.com and www.artsyvisions.com on **ava**
-* tomh.info and www.tomh.info on **ava**
-* groja.com and www.groja.com on **ava**
-* seeourminds.com and www.seeourminds.com on **ava**
+* LAMP CMS sites:
+  * joomoowebsites.com and www.joomoowebsites.com (on ava)
+  * tomhartung.com and www.tomhartung.com (on ava)
+  * tomwhartung.com and www.tomwhartung.com (on ava)
+* Static sites:
+  * artsyvisions.com and www.artsyvisions.com (on ava)
+  * tomh.info and www.tomh.info (on ava)
+* Python (Wsgi) sites:
+  * groja.com and www.groja.com (on ava)
+  * seeourminds.com and www.seeourminds.com (on ava)
 
 It seems prudent to generate a separate certificate for each site.
 
@@ -103,6 +112,11 @@ It "remembers" certain answers and does not ask these again, so it's important
 to get them right.
 
 - [ ] For **static** sites, run this command:
+```
+certbot --apache
+```
+
+- [ ] For **LAMP CMS** sites, run this command:
 ```
 certbot --apache
 ```
@@ -160,7 +174,12 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 It doesn't really matter which option you pick here, we cover both when we
 configure apache in Step (2).
 
-### Step (1.5): Check for the Certificates
+### Step (1.5): (LAMP CMS) Site Configuration by `certbot`
+
+As we did for the static sites, we run `certbot` **without** the `certonly`
+option, and achieve the same results.
+
+### Step (1.6): Check for the Certificates
 
 - [ ] Run these commands:
 ```
@@ -170,7 +189,7 @@ more /etc/letsencrypt/live/*/README
 If the files are there, cool!  If not, look at the output of the commands to
 see where they are, or fix any error(s) we got, as necessary.
 
-### Step (1.6): Backup the Certificates
+### Step (1.7): Backup the Certificates
 
 - [ ] Run these commands:
 ```
@@ -334,12 +353,10 @@ Add the Let's Encrypt configuration to the new apache config file.
 ```
 
 ###
-### Updating these values to point to the Lets Encrypt certificates we have now
+### Adding config to use the Lets Encrypt certificates
 ### Reference:
 ###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
 ###
-### SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
-### SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
 SSLCertificateFile /etc/letsencrypt/live/groja.com/fullchain.pem
 SSLCertificateKeyFile /etc/letsencrypt/live/groja.com/privkey.pem
 Include /etc/letsencrypt/options-ssl-apache.conf
@@ -361,12 +378,19 @@ vi 022-groja.com-redirect.conf
 
 #### Add Redirection Config
 
-- [ ] Add a line similar to the following, which show how to do this for the `groja.com` site:
+- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
 ```
+
+###
+### Redirect http requests to https
+###
 Redirect "/" "https://www.groja.com/"
 ```
 
-Add it after the line that sets the `DocumentRoot`.
+Add it at the end, just before the line that closes the `VirtualHost` directive, i.e., just before this line:
+```
+</VirtualHost>
+```
 
 #### Switch to Use Redirect and Https Config
 

@@ -406,11 +406,31 @@ rcsdiff *.conf
 ci -l *.conf
 ```
 
-## Step (5): Conclusion
+## Step (5): Automatic Renewal
+
+**TODO: SET THIS UP**
+
+## Step (6): Conclusion
 
 Having three config files for each site, with names that follow the standard,
 makes it super-easy to switch between http and https.
 
 For details, see `6a-https-lets_encrypt-activation.md` in this directory.
 - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6a-https-lets_encrypt-activation.md
+
+### Testing
+
+When it runs successfully, `certbot`'s output includes a message such as the following:
+```
+Congratulations! You have successfully enabled https://tomhartung.com and
+https://www.tomhartung.com
+
+You should test your configuration at:
+https://www.ssllabs.com/ssltest/analyze.html?d=tomhartung.com
+https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
+```
+
+So we can test the sites with urls such as the following:
+
+- https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
 

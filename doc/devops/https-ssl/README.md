@@ -52,6 +52,43 @@ using `artsyvisions.com` , `groja.com` , `seeourminds.com` , and `tomh.info` as 
 076-tomh.info-le-ssl-redirect.conf
 ```
 
+## Enabling and Disabling Configuration Files
+
+It can be best to run `a2dissite` first, then run `a2ensite` , because
+apache gives an error if we have two active configuration files
+referring to code for the same site.
+
+This file naming standard makes it easy to:
+
+* Quickly enable and disable http or https for one or more sites
+* Use file name completion to save a ton of typing
+
+**These commands must be run as root, directly or via sudo.**
+
+### Disabling http and Enabling https
+
+**Run commands such as these on `barbara` or `ava` only.**
+
+To disable http and enable https for a single site (tomhartung.com):
+
+```
+a2dissite 060-tomhartung.com.conf 066-tomhartung.com-le-ssl-redirect.conf
+a2ensite 062-tomhartung.com-redirect.conf 064-tomhartung.com-le-ssl.conf
+service apache2 reload
+```
+
+### Disabling https and Enabling http
+
+**Run commands such as these on `jane` only.**
+
+To disable https and enable http for a single site ():
+
+```
+a2dissite 042-joomoowebsites.com-redirect.conf 044-joomoowebsites.com-le-ssl.conf
+a2ensite 040-joomoowebsites.com.conf 046-joomoowebsites.com-le-ssl-redirect.conf
+service apache2 reload
+```
+
 # Self-Signed vs. Let's Encrypt
 
 ## Self-Signed on `jane` - Unused

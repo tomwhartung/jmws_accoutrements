@@ -107,26 +107,27 @@ Which names would you like to activate HTTPS for?
 - [ ] Select the numbers corresponding to the `*.com` and `www.*.com` names for
 one of the static or python (wsgi) sites listed above (depending on which command was run).
 
-### Step (4): Generating Python (Wsgi) Site Certificates
+### Step (3): Generating Static and LAMP CMS Site Certificates
+ Site Configuration by `certbot`
 
-When we run `certbot` with the `certonly` , it will exit after creating the certificate.
-- [ ] Fix any errors and re-run the `certbot` command
+If we run `certbot` **without** the `certonly` option, it does the following in
+addition to generating the certificates:
 
-If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
-it helps to do one of those first.
-
-### Step (3): (Static) Site Configuration by `certbot`
-
-If we run `certbot` **without** the `certonly` option, it does the following:
-1. Create a new apache configuration file, based on the exiting file, to handle https requests on port 443
+1. Creates a new apache configuration file, based on the exiting file, to handle https requests on port 443
    - The name of this file is `[old_file_basename]-le-ssl.conf` (e.g., `070-tomh.info-le-ssl.conf`)
-   - Run diff to see what we need to add to our configuration files when doing this manually (e.g., for python (wsgi) sites)
-2. Optionally try to update the current configuration to redirect to the new configuration
-   - Whether it does this second step depends on your answer to the question below (see Step (1.4.1) immediately below)
-   - The bottom line is, it doesn't matter if we do it or certbot does it
-3. Run the `a2ensite` command(s) needed to activate the new configuration file(s)
+2. Optionally tries to update the current configuration to redirect to the new configuration
+   - Whether it does this second step depends on your answer to the question below (see Step (3.1) immediately below)
+   - Because we have a file naming standard, it's easier to create our own redirection config file
+3. Runs the `a2ensite` command(s) needed to activate the new configuration file(s)
 
-#### Step (1.4.1): (Static) Site Redirect Configuration
+This is fine for static and LAMP CMS sites, but note the following:
+
+* We undo any changes `certbot` makes to theconfiguration files generated
+* We rename any configuration files generated
+
+These additional steps are necessary to support the file naming standard.
+
+#### Step (3.1): Site Redirect Configuration
 
 If we run `certbot` **without** the `certonly` option, it asks this question:
 ```
@@ -144,7 +145,15 @@ Enter 1 here.  When we are ready, we will set up our own redirection.
 As we did for the static sites, we run `certbot` **without** the `certonly`
 option, and achieve the same results.
 
-### Step (1.6): Check for the Certificates
+### Step (4): Generating Python (Wsgi) Site Certificates
+
+When we run `certbot` with the `certonly` , it will exit after creating the certificate.
+- [ ] Fix any errors and re-run the `certbot` command
+
+If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
+it helps to do one of those first.
+
+### Step (5): Check for the Certificates
 
 - [ ] Run these commands:
 ```
@@ -154,7 +163,7 @@ more /etc/letsencrypt/live/*/README
 If the files are there, cool!  If not, look at the output of the commands to
 see where they are, or fix any error(s) we got, as necessary.
 
-### Step (1.7): Backup the Certificates
+### Step (6): Backup the Certificates
 
 - [ ] Run these commands:
 ```

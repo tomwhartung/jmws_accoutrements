@@ -1,5 +1,5 @@
 
-# 6b-https-lets_encrypt-configuration.md
+# 3-apache_configuration.md
 
 This file contains details on how to:
 

@@ -71,6 +71,9 @@ rcsdiff *.conf
 
 Check in any files that are out-of-sync in RCS.
 
+**This is extremely important when running `certbot` without the `certonly` option,
+because `certbot` updates the config files, and we will want to back out of those changes.**
+
 ## Step (1): Running `certbot` to Generate Certificates
 
 - [ ] For **static** sites, run this command:
@@ -88,7 +91,7 @@ certbot --apache certonly
 certbot --apache
 ```
 
-## Step (2): Generate First Certificate
+## Step (2): Generating the First Certificate
 
 When generating the first certificate, `certbot` asks several questions.
 It "remembers" certain answers and does not ask these again, so it's important
@@ -107,11 +110,14 @@ Which names would you like to activate HTTPS for?
 - [ ] Select the numbers corresponding to the `*.com` and `www.*.com` names for
 one of the static or python (wsgi) sites listed above (depending on which command was run).
 
-### Step (3): Generating Static and LAMP CMS Site Certificates
- Site Configuration by `certbot`
+## Step (3) Option (A): Not Specifying `certonly`
 
-If we run `certbot` **without** the `certonly` option, it does the following in
-addition to generating the certificates:
+Pick this option when generating certificates for Static and LAMP CMS sites.
+
+### Step (3.1): What it Does
+
+If we run `certbot` **without** the `certonly` option, in
+addition to generating the certificates, it does the following:
 
 1. Creates a new apache configuration file, based on the exiting file, to handle https requests on port 443
    - The name of this file is `[old_file_basename]-le-ssl.conf` (e.g., `070-tomh.info-le-ssl.conf`)
@@ -121,15 +127,14 @@ addition to generating the certificates:
 3. Runs the `a2ensite` command(s) needed to activate the new configuration file(s)
 
 This is fine for static and LAMP CMS sites, but note the following:
-
 * We undo any changes `certbot` makes to theconfiguration files generated
 * We rename any configuration files generated
 
 These additional steps are necessary to support the file naming standard.
 
-#### Step (3.1): Site Redirect Configuration
+### Step (3.2): Site Redirect Configuration
 
-If we run `certbot` **without** the `certonly` option, it asks this question:
+When we run `certbot` **without** the `certonly` option, it asks this question:
 ```
 Please choose whether HTTPS access is required or optional.
 -------------------------------------------------------------------------------
@@ -138,32 +143,34 @@ Please choose whether HTTPS access is required or optional.
 -------------------------------------------------------------------------------
 Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 ```
-Enter 1 here.  When we are ready, we will set up our own redirection.
+Enter 1 here.
+Steps to set up our own redirection are in the next file, `4-configure_apache.md`.
 
-### Step (1.5): (LAMP CMS) Site Configuration by `certbot`
+### Step (3) Option (B): Using `certonly`
 
-As we did for the static sites, we run `certbot` **without** the `certonly`
-option, and achieve the same results.
+Pick this option when generating certificates for Python (Wsgi) sites.
 
-### Step (4): Generating Python (Wsgi) Site Certificates
-
-When we run `certbot` with the `certonly` , it will exit after creating the certificate.
-- [ ] Fix any errors and re-run the `certbot` command
+When we run `certbot` **with** the `certonly` option set, it exits after creating the certificate.
+- [ ] If necessary, fix any errors and re-run the `certbot` command
 
 If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
 it helps to do one of those first.
 
-### Step (5): Check for the Certificates
+### Step (4): Check for the Certificates
+
+The certificates are really just special files.
 
 - [ ] Run these commands:
 ```
 l /etc/letsencrypt/live/*
 more /etc/letsencrypt/live/*/README
 ```
-If the files are there, cool!  If not, look at the output of the commands to
+If the files are there, great!
+
+If the files are **not** there, look at the output of the commands to
 see where they are, or fix any error(s) we got, as necessary.
 
-### Step (6): Backup the Certificates
+### Step (5): Backup the Certificates
 
 - [ ] Run these commands:
 ```
@@ -182,230 +189,7 @@ let me do that again if need be.
 **Save a copy of this `.tgz` file on a thumb drive,
 e.g., `/media/tomh/ext4Thumb/usr_local_tar/` on `barbara` .**
 
-## Step (2): Update Apache Config
+## Step (6): Update Apache Config
 
-Now we need to tell apache to use the certificate files we generated.
-
-**Note that we keep all configuration files under version control (in RCS).**
-
-This process depends on what choices were made in previous steps.
-
-### Step (2-A): Using Our Own Redirect Config
-
-Do this step when `certbot`:
-
-- [ ] Generates a new file for https/ssl (e.g., `070-tomh.info-le-ssl.conf`)
-  * This corresponds to running `certbot` **without** the `certonly` option
-- [ ] Does **not** update the existing config to redirect http requests to https
-  * This corresponds to answering `1. Easy` to the Easy/Secure question
-    (i.e., `Please choose whether HTTPS access is required or optional.`)
-
-This is how we are doing our Static and LAMP CMS sites.
-
-In this case, we need to:
-
-* Rename the new file to conform to our naming standard
-* Create a new file to redirect http requests to https
-* Activate and test them
-
-#### Rename the New ssl/https File
-
-Rename the new file to conform to our naming standard.
-
-- [ ] The following commands show how to do this for the `artsyvisions.com` site:
-```
-a2dissite 010-artsyvisions.com-le-ssl.conf
-mv 010-artsyvisions.com-le-ssl.conf 014-artsyvisions.com-le-ssl.conf
-a2ensite 014-artsyvisions.com-le-ssl.conf
-service apache2 reload
-```
-
-At this point our server handles both http and https requests without redirection.
-
-#### Create the New http->https Redirection File
-
-Copy the existing http config file to the new name, and edit it to add the redirection.
-
-- [ ] The following commands show how to do this for the `artsyvisions.com` site:
-```
-cp 010-artsyvisions.com.conf 012-artsyvisions.com-redirect.conf
-vi 012-artsyvisions.com-redirect.conf
-a2dissite 010-artsyvisions.com.conf
-a2ensite 012-artsyvisions.com-redirect.conf
-a2ensite 014-artsyvisions.com-le-ssl.conf   # (should already be enabled)
-service apache2 reload
-```
-
-#### Add Redirection Config
-
-- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
-```
-
-###
-### Redirect http requests to https
-###
-Redirect "/" "https://www.artsyvisions.com/"
-```
-
-Add it at the end, just before the line that closes the `VirtualHost` directive, i.e., just before this line:
-```
-</VirtualHost>
-```
-
-**Skip to Step (3) Test in Browser, below.**
-
-### Step (2-B): Updating the Files Manually
-
-Do this step when running `certbot` with the `certonly` option set.
-
-This is how we are doiong our python (wsgi) sites.
-
-In this case, we need to:
-
-* Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
-* Edit the `0?4-[domain_name]-ssl.conf` file
-
-#### Copy Existing File and Edit the New File
-
-- [ ] The following commands show how to do this for the `groja.com` site:
-```
-cp 020-groja.com.conf 024-groja.com-le-ssl.conf
-vi 024-groja.com-le-ssl.conf
-```
-
-#### Changing the Start of the File
-
-- [ ] Replace this line at beginning of the file:
-```
-<VirtualHost *:80>
-```
-- [ ] With these lines:
-```
-<IfModule mod_ssl.c>
-    ### <VirtualHost *:80>
-    <VirtualHost _default_:443>
-```
-Note that we are indenting these lines by **four** (4) spaces.
-
-#### Changes Near the End of the File
-
-- [ ] Replace this line near the end of the file:
-```
-</VirtualHost>
-```
-- [ ] With these lines:
-```
-    </VirtualHost>
-</IfModule>
-```
-Note that in addition to adding a line, we indented the `</VirtualHost>`
-line by **four** (4) spaces.
-
-#### Adding the Let's Encrypt Configuration
-
-Add the Let's Encrypt configuration to the new apache config file.
-
-- [ ] Find this line near the end of the file:
-```
-#Include conf-available/serve-cgi-bin.conf
-```
-- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
-```
-
-###
-### Adding config to use the Lets Encrypt certificates
-### Reference:
-###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
-###
-SSLCertificateFile /etc/letsencrypt/live/groja.com/fullchain.pem
-SSLCertificateKeyFile /etc/letsencrypt/live/groja.com/privkey.pem
-Include /etc/letsencrypt/options-ssl-apache.conf
-
-```
-**All of these lines should be indented by **eight** (8) spaces!**
-
-And yes please add a blank line before the comments and the new setting! Tyvm!!
-
-#### Create and Edit New Redirection File for Http
-
-Copy the existing http config file and edit the new file.
-
-- [ ] The following commands show how to do this for the `groja.com` site:
-```
-cp 020-groja.com.conf 022-groja.com-redirect.conf
-vi 022-groja.com-redirect.conf
-```
-
-#### Add Redirection Config
-
-- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
-```
-
-###
-### Redirect http requests to https
-###
-Redirect "/" "https://www.groja.com/"
-```
-
-Add it at the end, just before the line that closes the `VirtualHost` directive, i.e., just before this line:
-```
-</VirtualHost>
-```
-
-#### Switch to Use Redirect and Https Config
-
-Disable the old config file and enable the new ones.
-
-- [ ] The following commands show how to do this for the `seeourminds.com` site:
-```
-a2dissite 050-seeourminds.com.conf
-a2ensite 052-seeourminds.com-redirect.conf
-a2ensite 054-seeourminds.com-le-ssl.conf
-service apache2 reload
-```
-
-## Step (3) Test in Browser
-
-This is where it would be nice to be able to test this on a non-production host, but
-we can implement Let's Encrypt only on hosts connected to the internet!
-
-## Step (4): Check into RCS
-
-When all config files are working, check them into RCS!
-Quick before we mess something up!
-
-- [ ] Run the following commands to ensure the latest versions are checked in to RCS:
-```
-cd /etc/apache2/sites-available
-rcsdiff *.conf
-ci -l *.conf
-```
-
-## Step (5): Automatic Renewal
-
-**TODO: SET THIS UP**
-
-## Step (6): Conclusion
-
-Having three config files for each site, with names that follow the standard,
-makes it super-easy to switch between http and https.
-
-For details, see `6a-https-lets_encrypt-activation.md` in this directory.
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6a-https-lets_encrypt-activation.md
-
-### Testing
-
-When it runs successfully, `certbot`'s output includes a message such as the following:
-```
-Congratulations! You have successfully enabled https://tomhartung.com and
-https://www.tomhartung.com
-
-You should test your configuration at:
-https://www.ssllabs.com/ssltest/analyze.html?d=tomhartung.com
-https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
-```
-
-So we can test the sites with urls such as the following:
-
-- https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
+For steps on how to update the apache configuation, see the next file `4-configure_apache.md` (in this directory).
 

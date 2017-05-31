@@ -1,60 +1,15 @@
 
-# 6c-comparing_references-self_signed
-
-Having never done this before, it's important we do it right.
+# self_signed - 1-comparing_references.md
 
 Having found several references, we want to compare them and try to
 develop a process that combines the best ideas from all of them.
 
-## Results
+# Moot at This Time
 
-### Best Reference
+Having decided to not use self-signed certificates on `jane` or any other
+hosts, **this information is irrelevant at this time.**
 
-By far, the best reference is the first one (digitalocean.com).
-
-### Best Process (Overview)
-
-This high-level process can work for both self-signed certificates and
-for those from Let's Encrypt.
-
-The best process is:
-
-1. Generate the certificate.
-
-2. Copy current apache config file, eg.
-
-```
-cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
-```
-
-3. Add the lines mentioned below to that file.
-
-4. Update the original file (e.g., `050-seeourminds.com.conf`) to redirect to https.
-
-See `6a-https-steps.md` for details.
-
-## About the Rest of This File
-
-**The rest of this information is pretty much summarized in `6a-https-steps.md` .**
-
-So there's no pressing need to read the rest of this,
-we are just saving it for possible future reference....
-
-## Options
-
-Note that there are two options:
-
-1) Self-Signed
-2) Let's Encrypt
-
-### Configuration (2) Let's encrypt
-
-See `6d-comparing_references-lets_encrypt.md` in this directory.
-
-At this time we are probably NOT going to set up Let's Encrypt on jane, however
-this directory still contains information about how we have researched that process.
-
-## List of References
+# List of References
 
 These references for setting up the Self-signed configuration are listed in
 more-or-less the same order as they appeared in my google search results.
@@ -73,6 +28,40 @@ more-or-less the same order as they appeared in my google search results.
   - very minimal and not used
 - (7) https://www.linode.com/docs/security/ssl/create-a-self-signed-certificate-on-debian-and-ubuntu
   - very very minimal and essentially useless
+
+# Results
+
+## Best Reference
+
+By far, the best reference is the first one (digitalocean.com).
+
+## Best Process (Overview)
+
+This high-level process can work for both self-signed certificates and
+for those from Let's Encrypt.
+
+The best process is:
+
+1. Generate the certificate.
+
+2. Copy current apache config file, eg.
+
+```
+cp 050-seeourminds.com.conf 051-seeourminds.com-ssl.conf
+```
+
+3. Add the lines mentioned below to that file.
+
+4. Update the original file (e.g., `050-seeourminds.com.conf`) to redirect to https.
+
+For details, see the file `2-openssl.md` in this directory.
+
+# About the Rest of This File
+
+**The rest of this information is pretty much summarized in `2-openssl.md` .**
+
+So there's no pressing need to read the rest of this,
+we are just saving it for possible future reference....
 
 ## Configuration (1) Self-Signed on jane
 

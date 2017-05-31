@@ -1,33 +1,28 @@
 
-# 6a-https-lets_encrypt-activation
+# 2-certbot.md
 
-After having limited success using a self-signed certificate on jane,
 we are going for setting up https using Let's Encrypt on ava.
+
 Jumping straight to production!  I know!!
 
 # Research
 
-For details on how we came up with this process, see the `6*.md` files in
-`../2016-jane` , specifically:
+For details on how we came up with this process, see the following files:
 
-```
-../2016-jane/6b-analysis_of_requirements.md
-../2016-jane/6d-comparing_references-lets_encrypt.md
-```
+- `../README.md` ( https://github.com/tomwhartung/jmws_accoutrements/tree/master/doc/devops/https-ssl )
+- `1-comparing_references.md` (in this directory)
 
-## "Reference-1"
-
-The term "reference-1" refers to our #1 main reference:
+The best reference is:
 
 - https://certbot.eff.org/#ubuntuxenial-apache
 
 # Goal
 
-Set up https using Let's Encrypt option on ava.
+Set up https using Let's Encrypt option on `ava` and `barbara`.
 
 # Results
 
-TBD.
+Got it to work OK!  Certbot is cool!
 
 # Process
 
@@ -54,7 +49,7 @@ apt-get update
 apt-get upgrade
 ```
 
-- [ ] Add the certbot ppa and install the program (see reference 1):
+- [ ] Add the certbot ppa and install the program (see https://certbot.eff.org/#ubuntuxenial-apache ):
 ```
 apt-get install software-properties-common
 apt autoremove     # suggested by output of previous command
@@ -74,7 +69,7 @@ Specific steps for this process are beyond the scope of this document.
 
 Note that we want to have a separate certificate for each site.
 
-- [ ] If we are setting up a new server, try to re-use the existing certificates.
+- [ ] If we are setting up a new server, copy and re-use the existing certificates.
 - [ ] If we are setting up a new site, see the details in `6b-https-lets_encrypt-configuration.md` in this directory:
   - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6b-https-lets_encrypt-configuration.md
 

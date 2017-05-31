@@ -6,8 +6,15 @@ develop a process that combines the best ideas from all of them.
 
 # Moot at This Time
 
-Having decided to not use self-signed certificates on `jane` or any other
+Having decided to **not** use self-signed certificates on `jane` or any other
 hosts, **this information is irrelevant at this time.**
+
+## Why?
+
+For a look at why we decided to **not** use self-signed certificates,
+see the file `../README.md`:
+
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/README.md
 
 # List of References
 

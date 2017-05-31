@@ -10,13 +10,13 @@ This file contains details on how to:
 
 Verify we can use https to access all of these sites:
 
-* artsyvisions.com (static)
-* tomh.info (static)
-* groja.com (wsgi - flask)
-* seeourminds.com (wsgi - django)
-* joomoowebsites.com (Joomla)
-* tomhartung.com (Drupal)
-* tomwhartung.com (WordPress)
+* artsyvisions.com (Static)
+* tomh.info (Static)
+* groja.com (Python/Wsgi - Flask)
+* seeourminds.com (Python/Wsgi - Django)
+* joomoowebsites.com (LAMP CMS - Joomla)
+* tomhartung.com (LAMP CMS - Drupal)
+* tomwhartung.com (LAMP CMS - WordPress)
 
 # Background
 

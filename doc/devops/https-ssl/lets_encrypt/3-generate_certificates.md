@@ -10,15 +10,15 @@ This file contains details on how to:
 Create the certificates and update the apache config files to implement
 https support using Let's Encrypt option on ava for:
 
-These static sites:
-* artsyvisions.com (static)
-* tomh.info (static)
+These Static sites:
+* artsyvisions.com (Static)
+* tomh.info (Static)
 
-These python (wsgi) sites:
-* groja.com (wsgi - flask)
-* seeourminds.com (wsgi - django)
+These Python (Wsgi) sites:
+* groja.com (Flask)
+* seeourminds.com (Django)
 
-And these LAMP (php) sites:
+And these LAMP (php) CMS sites:
 * joomoowebsites.com (Joomla)
 * tomhartung.com (Drupal)
 * tomwhartung.com (WordPress)
@@ -71,8 +71,8 @@ rcsdiff *.conf
 
 Check in any files that are out-of-sync in RCS.
 
-**This is extremely important when running `certbot` without the `certonly` option,
-because `certbot` updates the config files, and we will want to back out of those changes.**
+**This is extremely important because when running `certbot` without the `certonly` option,
+`certbot` updates the config files, and we will want to back out of those changes.**
 
 ## Step (1): Running `certbot` to Generate Certificates
 
@@ -146,7 +146,7 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 Enter 1 here.
 Steps to set up our own redirection are in the next file, `4-configure_apache.md`.
 
-### Step (3) Option (B): Using `certonly`
+## Step (3) Option (B): Using `certonly`
 
 Pick this option when generating certificates for Python (Wsgi) sites.
 
@@ -156,7 +156,7 @@ When we run `certbot` **with** the `certonly` option set, it exits after creatin
 If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
 it helps to do one of those first.
 
-### Step (4): Check for the Certificates
+## Step (4): Check for the Certificates
 
 The certificates are really just special files.
 
@@ -170,7 +170,7 @@ If the files are there, great!
 If the files are **not** there, look at the output of the commands to
 see where they are, or fix any error(s) we got, as necessary.
 
-### Step (5): Backup the Certificates
+## Step (5): Backup the Certificates
 
 - [ ] Run these commands:
 ```

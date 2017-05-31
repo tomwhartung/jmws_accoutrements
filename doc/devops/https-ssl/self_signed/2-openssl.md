@@ -306,34 +306,10 @@ service apache2 reload
 Depending on the browser, you may have to click through a warning page or two.
 Don't worry about the red lock etc., we just need the page to load....
 
-## Step (5): Dealing With Invalid Certificate Warnings
+## Step (5): Abandoning This
 
-Spent a bit of time looking into how to:
+For a look at why we decided to **not** use self-signed certificates,
+see the Lessons Learned section at the end of the `../README.md` file:
 
-1. Avoid the initial warning page
-2. Trying to fix the red "Not Secure" warning that appears instead
-of the green "Lock" icon I want to see.
-
-This is a bit problematic because:
-
-* Different browsers behave somewhat differently as well.
-* We can always set up the apache config to use http on jane and https on ava and barbara
-* To get the green icon, we need to get the certificate from let's encrypt (or the like)
-* To use the let's encrypt option, the host needs to be accessible via DNS (and not just locally)
-  * This last idea is ok on ava, and maybe on barbara, but not on jane
-
-### Chrome in particular looks bad
-
-Here is one thing we tried that we may want to undo:
-
-* Paste into Chrome: chrome://flags/#allow-insecure-localhost
-* Reference: http://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate
-
-Clicking on the red "Not secure" brings up some information, but
-I could not see anything that would make it go away.
-
-Going to Settings -> Advanced -> HTTPS shows a list of certificates, but I do
-not see the one we created above.
-
-Another place to look is in the Developer tools under Security, but again....
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/README.md
 

@@ -1,66 +1,46 @@
 
-# 3-apache_configuration.md
+# 4-configure_apache.md
 
 This file contains details on how to:
 
-* Create Let's Encrypt certificates
-* Configure apache to use the certificates
+* Configure apache to use the Let's Encrypt certificates
 
 # Goal
 
-Create the certificates and update the apache config files to implement
-https support using Let's Encrypt option on ava for these two static sites:
+Update the apache config files to implement
+https support using Let's Encrypt option on ava for:
+
+These static sites:
 * artsyvisions.com (static)
 * tomh.info (static)
 
-These two python (wsgi) sites:
+These python (wsgi) sites:
 * groja.com (wsgi - flask)
 * seeourminds.com (wsgi - django)
 
-And these three LAMP (php) sites:
+And these LAMP (php) sites:
 * joomoowebsites.com (Joomla)
 * tomhartung.com (Drupal)
 * tomwhartung.com (WordPress)
 
-# Apache Config File Naming Standard
-
-We follow this apache config file naming standard,
-using `artsyvisions.com` , `groja.com` , `seeourminds.com` , and `tomh.info` as examples:
-```
-010-artsyvisions.com.conf
-012-artsyvisions.com-redirect.conf
-014-artsyvisions.com-le-ssl.conf
-020-groja.com.conf
-022-groja.com-redirect.conf
-024-groja.com-le-ssl.conf
-050-seeourminds.com.conf
-052-seeourminds.com-redirect.conf
-054-seeourminds.com-le-ssl.conf
-070-tomh.info.conf
-072-tomh.info-redirect.conf
-074-tomh.info-le-ssl.conf
-```
-With the purpose and contents of each being as follows:
-
-* `0?0-[domain_name].conf` - processes http requests on port 80
-  * leave current files as-is
-* `0?2-[domain_name]-redirect.conf` - redirects http on port 80 to https on port 443
-  * For an example, see current the version of `050-seeourminds.com.conf` on jane
-* `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
-  * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
-
 # Background
 
-For details on how we came up with this process,
-see `../2016-jane/6b-analysis_of_requirements.md'
-and `../2016-jane/6d-comparing_references-lets_encrypt.md' :
+## Apache Config File Naming Standard, Etc.
 
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6b-analysis_of_requirements.md
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6d-comparing_references-lets_encrypt.md
+For details on how we came up with this process, and specifics about
+the apache config file naming standard, see the `../README.md` file:
 
-For details on how we installed the required software, see the `6a-https-lets_encrypt-activation.md` file in this directory.
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/README.md
 
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6a-https-lets_encrypt-activation.md
+## Installation and Certificate Generation
+
+For details on how to install the required software, see `2-certbot_installation.md` (in this directory).
+
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/lets_encrypt/2-certbot_installation.md
+
+For details on how to install the required software, see `3-generate_certificates.md` (in this directory).
+
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/lets_encrypt/3-generate_certificates.md
 
 # Process
 

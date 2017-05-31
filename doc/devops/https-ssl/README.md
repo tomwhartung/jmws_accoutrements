@@ -9,7 +9,7 @@ apache on port 443 so we can serve pages using ssl.
 We are using http (i.e., port 80 without ssl) on `jane`, and
 using Let's Encrypt certificates on `barbara` and `ava`
 
-There is much more on this topic further down in this file.
+There is more about this further down in this file.
 
 # Apache Config File Naming Standard
 
@@ -74,7 +74,6 @@ This file naming standard makes it easy to:
 **Run commands such as these on `barbara` or `ava` only.**
 
 To disable http and enable https for a single site (tomhartung.com):
-
 ```
 a2dissite 060-tomhartung.com.conf 066-tomhartung.com-le-ssl-redirect.conf
 a2ensite 062-tomhartung.com-redirect.conf 064-tomhartung.com-le-ssl.conf
@@ -82,13 +81,11 @@ service apache2 reload
 ```
 
 To disable http and enable https for all sites:
-
 ```
 a2dissite 0?0* 0?6*
 a2ensite 0?2* 0?4*
 service apache2 reload
 ```
-
 See what we did there?
 
 ### Disabling https and Enabling http
@@ -96,7 +93,6 @@ See what we did there?
 **Run commands such as these on `jane` only.**
 
 To disable https and enable http for a single site (joomoowebsites.com):
-
 ```
 a2dissite 042-joomoowebsites.com-redirect.conf 044-joomoowebsites.com-le-ssl.conf
 a2ensite 040-joomoowebsites.com.conf 046-joomoowebsites.com-le-ssl-redirect.conf
@@ -104,13 +100,11 @@ service apache2 reload
 ```
 
 To disable https and enable http for all sites:
-
 ```
 a2dissite 0?2* 0?4*
 a2ensite 0?0* 0?6*
 service apache2 reload
 ```
-
 Is that cool or what?
 
 # Self-Signed vs. Let's Encrypt
@@ -119,6 +113,8 @@ Is that cool or what?
 
 We implemented self-signed certificates on the development host (jane), but
 it turns out that they do not work well, so we reverted back to using http.
+
+**Note that this means we installed some software on `jane` that we are not using!**
 
 ## Let's Encrypt on `barbara` and `ava`
 
@@ -171,4 +167,35 @@ It was weird working like this, but ya gotta do what ya gotta do!
 
 This allows access to the site, but the browser does not display the green icon,
 so there is little advantage to doing this.
+
+### So Sorry, No Green Icon for You!
+
+Spent a bit of time looking into how to:
+
+1. Avoid the initial warning page
+2. Trying to fix the red "Not Secure" warning that appears instead
+of the green "Lock" icon I want to see.
+
+This is a bit problematic because:
+
+* Different browsers behave somewhat differently as well.
+* We can always set up the apache config to use http on jane and https on ava and barbara
+* To get the green icon, we need to get the certificate from let's encrypt (or the like)
+* To use the let's encrypt option, the host needs to be accessible via DNS (and not just locally)
+  * This last idea is ok on ava, and maybe on barbara, but not on jane
+
+### Chrome in particular looks bad
+
+Here is one thing we tried that we may want to undo:
+
+* Paste into Chrome: chrome://flags/#allow-insecure-localhost
+* Reference: http://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate
+
+Clicking on the red "Not secure" brings up some information, but
+I could not see anything that would make it go away.
+
+Going to Settings -> Advanced -> HTTPS shows a list of certificates, but I do
+not see the one we created above.
+
+Another place to look is in the Developer tools under Security, but again....
 

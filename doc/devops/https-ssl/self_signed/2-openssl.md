@@ -1,41 +1,30 @@
 
-# 6a-https-steps
+# self_signed - 2-openssl.md
 
-It's time to get https going on [seeourminds.com](http://seeourminds.com),
-and probably all of the other CMS sites.
+These are the steps used to generate self signed certificates and use them to
+get https going on [seeourminds.com](http://seeourminds.com) on the
+development host `jane`.
 
-# Options
+# Moot at This Time
 
-Note that there are two options:
+Having decided to **not** use self-signed certificates on `jane` or any other
+hosts, **this information is irrelevant at this time.**
 
-1) Self-Signed
-2) Let's Encrypt
+## Why?
 
-# Goals
+For a look at why we decided to **not** use self-signed certificates,
+see the file `../README.md`:
 
-These are the initial goals we were trying to acheive:
-
-1) Set up the Self-Signed option on jane.
-
-2) Set up the Let's Encrypt option on barbara and ava.
-
-3) We would prefer to use the Let's Encrypt option on jane, but
-if that is a hassle or not feasible for some reason,
-we may want to go with Self-Signed, or maybe even just http.
-
-# Results
-
-For a thorough analysis of the motivations, goals, and results of this effort,
-see the file `6b-analysis_of_requirements.md` in this directory.
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/README.md
 
 # References
 
 We found a lot of references to help with this process.
 For a list of these, an analysis of each of them, and
 details on what steps we got from which ones,
-see the `6c-comparing_references-self_signed.md` file in this directory:
+see the `1-comparing_references.md` file in this directory:
 
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-comparing_references.md
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/self_signed/1-comparing_references.md
 
 # Process
 

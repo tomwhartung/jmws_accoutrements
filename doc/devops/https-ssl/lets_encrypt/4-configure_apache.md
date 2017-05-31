@@ -10,15 +10,15 @@ This file contains details on how to:
 Update the apache config files to implement
 https support using Let's Encrypt option on ava for:
 
-These static sites:
-* artsyvisions.com (static)
-* tomh.info (static)
+These Static sites:
+* artsyvisions.com (Static)
+* tomh.info (Static)
 
-These python (wsgi) sites:
-* groja.com (wsgi - flask)
-* seeourminds.com (wsgi - django)
+These Python (Wsgi) sites:
+* groja.com (Flask)
+* seeourminds.com (Django)
 
-And these LAMP (php) sites:
+And these LAMP CMS (php) sites:
 * joomoowebsites.com (Joomla)
 * tomhartung.com (Drupal)
 * tomwhartung.com (WordPress)
@@ -38,7 +38,7 @@ For details on how to install the required software, see `2-certbot_installation
 
 - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/lets_encrypt/2-certbot_installation.md
 
-For details on how to install the required software, see `3-generate_certificates.md` (in this directory).
+For details on how to generate the required certificates from Let's Encrypt, see `3-generate_certificates.md` (in this directory).
 
 - https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/lets_encrypt/3-generate_certificates.md
 
@@ -66,126 +66,9 @@ rcsdiff *.conf
 
 Check in any files that are out-of-sync in RCS.
 
-## Step (1): Generate Certificates
+**This is extremely important because we will be editing these files momentarily.**
 
-The `certbot` command supports generating certificates for multiple sites.
-
-This process focuses on generating a certificate and setting it up for use on:
-
-* LAMP CMS sites:
-  * joomoowebsites.com and www.joomoowebsites.com (on ava)
-  * tomhartung.com and www.tomhartung.com (on ava)
-  * tomwhartung.com and www.tomwhartung.com (on ava)
-* Static sites:
-  * artsyvisions.com and www.artsyvisions.com (on ava)
-  * tomh.info and www.tomh.info (on ava)
-* Python (Wsgi) sites:
-  * groja.com and www.groja.com (on ava)
-  * seeourminds.com and www.seeourminds.com (on ava)
-
-It seems prudent to generate a separate certificate for each site.
-
-### Step (1.1): Run `certbot`
-
-When generating the first certificate, `certbot` asks several questions.
-It "remembers" certain answers and does not ask these again, so it's important
-to get them right.
-
-- [ ] For **static** sites, run this command:
-```
-certbot --apache
-```
-
-- [ ] For **LAMP CMS** sites, run this command:
-```
-certbot --apache
-```
-
-- [ ] For **python (wsgi)** sites, run this command:
-```
-certbot --apache certonly
-```
-
-### Step (1.2): Generate First Certificate
-
-- [ ] Read the terms of service at:
-  https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf
-- [ ] Answer the questions (there are far fewer questions than there were for self-signed)
-```
-Enter email address (...) (Enter 'c' to cancel): lets_encrypt@tomhartung.com
-(A)gree/(C)ancel: A
-(Y)es/(N)o: Y
-Which names would you like to activate HTTPS for?
-```
-
-- [ ] Select the numbers corresponding to the `*.com` and `www.*.com` names for
-one of the static or python (wsgi) sites listed above (depending on which command was run).
-
-### Step (1.3): Python (Wsgi) Site Certificate
-
-When we run `certbot` with the `certonly` , it will exit after creating the certificate.
-- [ ] Fix any errors and re-run the `certbot` command
-
-If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
-it helps to do one of those first.
-
-### Step (1.4): (Static) Site Configuration by `certbot`
-
-If we run `certbot` **without** the `certonly` option, it does the following:
-1. Create a new apache configuration file, based on the exiting file, to handle https requests on port 443
-   - The name of this file is `[old_file_basename]-le-ssl.conf` (e.g., `070-tomh.info-le-ssl.conf`)
-   - Run diff to see what we need to add to our configuration files when doing this manually (e.g., for python (wsgi) sites)
-2. Optionally try to update the current configuration to redirect to the new configuration
-   - Whether it does this second step depends on your answer to the question below (see Step (1.4.1) immediately below)
-   - The bottom line is, it doesn't matter if we do it or certbot does it
-3. Run the `a2ensite` command(s) needed to activate the new configuration file(s)
-
-#### Step (1.4.1): (Static) Site Redirect Configuration
-
-If we run `certbot` **without** the `certonly` option, it asks this question:
-```
-Please choose whether HTTPS access is required or optional.
--------------------------------------------------------------------------------
-1: Easy - Allow both HTTP and HTTPS access to these sites
-2: Secure - Make all requests redirect to secure HTTPS access
--------------------------------------------------------------------------------
-Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
-```
-Enter 1 here.  When we are ready, we will set up our own redirection.
-
-### Step (1.5): (LAMP CMS) Site Configuration by `certbot`
-
-As we did for the static sites, we run `certbot` **without** the `certonly`
-option, and achieve the same results.
-
-### Step (1.6): Check for the Certificates
-
-- [ ] Run these commands:
-```
-l /etc/letsencrypt/live/*
-more /etc/letsencrypt/live/*/README
-```
-If the files are there, cool!  If not, look at the output of the commands to
-see where they are, or fix any error(s) we got, as necessary.
-
-### Step (1.7): Backup the Certificates
-
-- [ ] Run these commands:
-```
-cd /etc
-l letsencrypt/
-tar -cvzf letsencrypt-ava-2017_05_28.tgz letsencrypt/
-chown tomh:tomh letsencrypt-ava-2017_05_28.tgz
-mv letsencrypt-ava-2017_05_28.tgz /usr/local/tar
-ls -altr /usr/local/tar
-```
-I do not see any benefit in writing a script to do this at this time, because
-these files should change only maybe once a year (when we renew them).
-Also they are quite easy to generate - assuming it will
-let me do that again if need be.
-
-**Save a copy of this `.tgz` file on a thumb drive,
-e.g., `/media/tomh/ext4Thumb/usr_local_tar/` on `barbara` .**
+## Step (1):
 
 ## Step (2): Update Apache Config
 
@@ -371,46 +254,4 @@ service apache2 reload
 
 ## Step (3) Test in Browser
 
-This is where it would be nice to be able to test this on a non-production host, but
-we can implement Let's Encrypt only on hosts connected to the internet!
-
-## Step (4): Check into RCS
-
-When all config files are working, check them into RCS!
-Quick before we mess something up!
-
-- [ ] Run the following commands to ensure the latest versions are checked in to RCS:
-```
-cd /etc/apache2/sites-available
-rcsdiff *.conf
-ci -l *.conf
-```
-
-## Step (5): Automatic Renewal
-
-**TODO: SET THIS UP**
-
-## Step (6): Conclusion
-
-Having three config files for each site, with names that follow the standard,
-makes it super-easy to switch between http and https.
-
-For details, see `6a-https-lets_encrypt-activation.md` in this directory.
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6a-https-lets_encrypt-activation.md
-
-### Testing
-
-When it runs successfully, `certbot`'s output includes a message such as the following:
-```
-Congratulations! You have successfully enabled https://tomhartung.com and
-https://www.tomhartung.com
-
-You should test your configuration at:
-https://www.ssllabs.com/ssltest/analyze.html?d=tomhartung.com
-https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
-```
-
-So we can test the sites with urls such as the following:
-
-- https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
 

@@ -1,78 +1,63 @@
 
-# 3-apache_configuration.md
+# 3-generate_certificates.md
 
 This file contains details on how to:
 
-* Create Let's Encrypt certificates
-* Configure apache to use the certificates
+* Create Let's Encrypt certificates for use on `ava` and `barbara`
 
 # Goal
 
 Create the certificates and update the apache config files to implement
-https support using Let's Encrypt option on ava for these two static sites:
+https support using Let's Encrypt option on ava for:
+
+These static sites:
 * artsyvisions.com (static)
 * tomh.info (static)
 
-These two python (wsgi) sites:
+These python (wsgi) sites:
 * groja.com (wsgi - flask)
 * seeourminds.com (wsgi - django)
 
-And these three LAMP (php) sites:
+And these LAMP (php) sites:
 * joomoowebsites.com (Joomla)
 * tomhartung.com (Drupal)
 * tomwhartung.com (WordPress)
 
-# Apache Config File Naming Standard
-
-We follow this apache config file naming standard,
-using `artsyvisions.com` , `groja.com` , `seeourminds.com` , and `tomh.info` as examples:
-```
-010-artsyvisions.com.conf
-012-artsyvisions.com-redirect.conf
-014-artsyvisions.com-le-ssl.conf
-020-groja.com.conf
-022-groja.com-redirect.conf
-024-groja.com-le-ssl.conf
-050-seeourminds.com.conf
-052-seeourminds.com-redirect.conf
-054-seeourminds.com-le-ssl.conf
-070-tomh.info.conf
-072-tomh.info-redirect.conf
-074-tomh.info-le-ssl.conf
-```
-With the purpose and contents of each being as follows:
-
-* `0?0-[domain_name].conf` - processes http requests on port 80
-  * leave current files as-is
-* `0?2-[domain_name]-redirect.conf` - redirects http on port 80 to https on port 443
-  * For an example, see current the version of `050-seeourminds.com.conf` on jane
-* `0?4-[domain_name]-ssl.conf` - configured to handle https/443/ssl requests
-  * For an example, see current the version of `051-seeourminds.com-ssl.conf` on jane
-
 # Background
 
-For details on how we came up with this process,
-see `../2016-jane/6b-analysis_of_requirements.md'
-and `../2016-jane/6d-comparing_references-lets_encrypt.md' :
+## Apache Config File Naming Standard, Etc.
 
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6b-analysis_of_requirements.md
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6d-comparing_references-lets_encrypt.md
+For details on how we came up with this process, and specifics about
+the apache config file naming standard, see the `../README.md` file:
 
-For details on how we installed the required software, see the `6a-https-lets_encrypt-activation.md` file in this directory.
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/README.md
 
-- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-ava/6a-https-lets_encrypt-activation.md
+## `certbot` Installation
+
+For details on how to install the required software, see `2-certbot_installation.md` (in this directory).
+
+- https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/devops/https-ssl/lets_encrypt/2-certbot_installation.md
 
 # Process
 
+The `certbot` command supports generating certificates for multiple sites.
+
+This process focuses on generating a certificate and setting it up for use on:
+
+* Static sites:
+  * artsyvisions.com and www.artsyvisions.com (on ava)
+  * tomh.info and www.tomh.info (on ava)
+* Python (Wsgi) sites:
+  * groja.com and www.groja.com (on ava)
+  * seeourminds.com and www.seeourminds.com (on ava)
+* LAMP CMS sites:
+  * joomoowebsites.com and www.joomoowebsites.com (on ava)
+  * tomhartung.com and www.tomhartung.com (on ava)
+  * tomwhartung.com and www.tomwhartung.com (on ava)
+
+It seems prudent to generate a separate certificate for each site.
+
 **All commands must be run as root.**
-
-## Optional Preparation Step: Tab Removal
-
-Optionally replace all tab characters with four (4) spaces.
-```
-vi *.conf
-:%s&	&    &g
-```
 
 ## Step (0): Ensure RCS Is Up-to-Date!
 
@@ -86,37 +71,9 @@ rcsdiff *.conf
 
 Check in any files that are out-of-sync in RCS.
 
-## Step (1): Generate Certificates
-
-The `certbot` command supports generating certificates for multiple sites.
-
-This process focuses on generating a certificate and setting it up for use on:
-
-* LAMP CMS sites:
-  * joomoowebsites.com and www.joomoowebsites.com (on ava)
-  * tomhartung.com and www.tomhartung.com (on ava)
-  * tomwhartung.com and www.tomwhartung.com (on ava)
-* Static sites:
-  * artsyvisions.com and www.artsyvisions.com (on ava)
-  * tomh.info and www.tomh.info (on ava)
-* Python (Wsgi) sites:
-  * groja.com and www.groja.com (on ava)
-  * seeourminds.com and www.seeourminds.com (on ava)
-
-It seems prudent to generate a separate certificate for each site.
-
-### Step (1.1): Run `certbot`
-
-When generating the first certificate, `certbot` asks several questions.
-It "remembers" certain answers and does not ask these again, so it's important
-to get them right.
+## Step (1): Running `certbot` to Generate Certificates
 
 - [ ] For **static** sites, run this command:
-```
-certbot --apache
-```
-
-- [ ] For **LAMP CMS** sites, run this command:
 ```
 certbot --apache
 ```
@@ -126,7 +83,16 @@ certbot --apache
 certbot --apache certonly
 ```
 
-### Step (1.2): Generate First Certificate
+- [ ] For **LAMP CMS** sites, run this command:
+```
+certbot --apache
+```
+
+## Step (2): Generate First Certificate
+
+When generating the first certificate, `certbot` asks several questions.
+It "remembers" certain answers and does not ask these again, so it's important
+to get them right.
 
 - [ ] Read the terms of service at:
   https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf
@@ -141,7 +107,7 @@ Which names would you like to activate HTTPS for?
 - [ ] Select the numbers corresponding to the `*.com` and `www.*.com` names for
 one of the static or python (wsgi) sites listed above (depending on which command was run).
 
-### Step (1.3): Python (Wsgi) Site Certificate
+### Step (4): Generating Python (Wsgi) Site Certificates
 
 When we run `certbot` with the `certonly` , it will exit after creating the certificate.
 - [ ] Fix any errors and re-run the `certbot` command
@@ -149,7 +115,7 @@ When we run `certbot` with the `certonly` , it will exit after creating the cert
 If there is difficulty understanding or fixing the error or errors, and we have not yet done a static site,
 it helps to do one of those first.
 
-### Step (1.4): (Static) Site Configuration by `certbot`
+### Step (3): (Static) Site Configuration by `certbot`
 
 If we run `certbot` **without** the `certonly` option, it does the following:
 1. Create a new apache configuration file, based on the exiting file, to handle https requests on port 443

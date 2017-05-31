@@ -1,7 +1,7 @@
 
 # https-ssl/README.md
 
-This file and the other files it refers to describe how to implement https using
+This file and the other files in subdirectories of this directory describe how to implement https using
 apache on port 443 so we can serve pages using ssl.
 
 # Http on `jane`, Https on `barbara` and `ava`
@@ -31,8 +31,9 @@ each file is as follows:
 
 ## File Name Examples
 
-We follow this apache config file naming standard,
-using `artsyvisions.com` , `groja.com` , `seeourminds.com` , and `tomh.info` as examples:
+Following this apache config file naming standard, here are some examples of the
+apache config file names, using `artsyvisions.com` , `groja.com` ,
+`seeourminds.com` , and `tomh.info` as examples:
 ```
 010-artsyvisions.com.conf
 012-artsyvisions.com-redirect.conf
@@ -57,6 +58,9 @@ using `artsyvisions.com` , `groja.com` , `seeourminds.com` , and `tomh.info` as 
 It can be best to run `a2dissite` first, then run `a2ensite` , because
 apache gives an error if we have two active configuration files
 referring to code for the same site.
+However, the error occurs only when reloading apache, so it's no biggie.
+
+### Why the File Naming Standard is so Cool
 
 This file naming standard makes it easy to:
 
@@ -77,17 +81,37 @@ a2ensite 062-tomhartung.com-redirect.conf 064-tomhartung.com-le-ssl.conf
 service apache2 reload
 ```
 
+To disable http and enable https for all sites:
+
+```
+a2dissite 0?0* 0?6*
+a2ensite 0?2* 0?4*
+service apache2 reload
+```
+
+See what we did there?
+
 ### Disabling https and Enabling http
 
 **Run commands such as these on `jane` only.**
 
-To disable https and enable http for a single site ():
+To disable https and enable http for a single site (joomoowebsites.com):
 
 ```
 a2dissite 042-joomoowebsites.com-redirect.conf 044-joomoowebsites.com-le-ssl.conf
 a2ensite 040-joomoowebsites.com.conf 046-joomoowebsites.com-le-ssl-redirect.conf
 service apache2 reload
 ```
+
+To disable https and enable http for all sites:
+
+```
+a2dissite 0?2* 0?4*
+a2ensite 0?0* 0?6*
+service apache2 reload
+```
+
+Is that cool or what?
 
 # Self-Signed vs. Let's Encrypt
 
@@ -104,22 +128,28 @@ the following restrictions:
 * We must access these sites using one of the following urls (using tomh.info as an example):
   * https://www.groja.com
   * http://www.groja.com - redirects to https://www.groja.com
-  * https://groja.com - redirects to https://www.groja.com
+  * https://groja.com - changes url to https://www.groja.com
   * http://groja.com - redirects to https://www.groja.com
-* To access the sites on the backup host (`barbara`) we must either:
-  * Change the router configuration to send outside requests to `barbara` rather than `ava`, or
+* To access the sites on the backup host (`barbara`) from the internet we must:
+  * Change the router configuration to send outside requests to `barbara` rather than `ava`
+* To access the sites on the backup host (`barbara`) from our local host we must:
   * Change the /etc/hosts file to send local requests to `barbara` rather than `ava`
 
 # The Difficulties
 
-Or, why we are using http on jane, and https on barbara and ava.
+Or, why we are using http on `jane`, and https on `barbara` and `ava`.
 
 ## Self-Signed
 
 I thought the Self-Signed certs would be good for use on the local host.
 
 * This works, but we get an ugly red "Not secure" icon instead of the green lock that we want.
-* There's really very little advantage to this, that I can see.
+* Chrome in particular looks really bad
+
+The only advantage to this, that I can see, is that it enables changing any references
+(images, links, etc.) to resources from http to https while the site is offline.
+In practice, these oversights have been few in number and easy to quickly fix,
+so it is not worth the trouble.
 
 ## Let's Encrypt
 
@@ -127,13 +157,15 @@ We are unable to follow the normal development -> backup -> production workflow
 because the host must be accessible from the internet for
 Let's Encrypt to verify the certificates it creates.
 
+It was weird working like this, but ya gotta do what ya gotta do!
+
 # Lessons Learned
 
 ## Redirecting
 
 * Browsers will handle redirecting requests from Http -> Https without complaint
 * Browsers object to redirecting requests from Https -> Http, and block access to the site
-* Once you confirm the redirection from Https -> Http for the site with the browser, it remembers that
+* Once you confirm ("click through") the redirection from Https -> Http for the site with the browser, it remembers that and you don't have to do that again
 
 ## Using the Self-Signed option on `jane`
 

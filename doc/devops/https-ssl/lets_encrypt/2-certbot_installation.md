@@ -1,9 +1,10 @@
 
 # 2-certbot_installation.md
 
-we are going for setting up https using Let's Encrypt on ava.
+This file describes the process used to set up https using certificates from
+Let's Encrypt on `ava` and `barbara`.
 
-Jumping straight to production!  I know!!
+Jumping straight to production!  I know!!  We have no other choice!
 
 # Research
 
@@ -18,7 +19,7 @@ The best reference is:
 
 # Goal
 
-Set up https using Let's Encrypt option on `ava` and `barbara`.
+Define the process for setting up https using Let's Encrypt option on `ava` and `barbara`.
 
 # Results
 
@@ -48,9 +49,21 @@ rcsdiff *.conf
 ```
 - [ ] Check in any files that are not already checked in.
 
--> FYI: noticing that the ssl module is not enabled (yet).
+## Step (2): Enable Ssl
 
-## Step (2): Installation
+- [ ] Ensure ssl is installed and enabled.
+```
+apache2ctl -M | grep ssl
+```
+
+- [ ] If the module is not already enabled, enable it and restart apache:
+```
+a2enmod ssl
+apache2ctl -M | grep ssl
+service apache2 restart
+```
+
+## Step (3): Installation
 
 - [ ] Ensure everything else is up-to-date
 ```
@@ -67,7 +80,7 @@ apt-get update
 apt-get install python-certbot-apache
 ```
 
-## Step (3): Configure Modems and Routers
+## Step (4): Configure Modems and Routers
 
 Modems and routers must be configured to accept https requests on port 443 and
 pass them through to the appropriate host(s).

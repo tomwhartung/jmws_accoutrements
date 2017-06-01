@@ -9,9 +9,11 @@ Let's Encrypt to set up ssl on apache.
 We can set up Let's Encrypt only on a live server, so ideally I want to
 find and use a process that is referenced on multiple sites.
 
+## Requirements of the Process
+
 We need to be able to:
 
-1. Run through it relatively quickly
+1. Run through the process relatively quickly
 2. Be able to quickly find solutions when there's a problem
 3. Be able to back out of changes if there's a serious problem
 4. Keep track of what we did right for one site so we can quickly do it again for others

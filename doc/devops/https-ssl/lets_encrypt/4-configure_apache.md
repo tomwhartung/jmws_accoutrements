@@ -81,20 +81,109 @@ picked when the certificates were generated.
 
 ## Step (2): Configuration to Process Https Requests
 
-For Static and LAMP CMS Sites, for which the `certbot` command was
-run (i.e., **without** the `certonly` option), use
-**Step (2) Option (A): Using the Generated Https Config File.**
+Use **Step (2) Option (A): Using the Generated Https Config File** when:
 
-For Python (Wsgi) Sites, for which the `certbot certonly` command was
-run (i.e., **with** the `certonly` option), use
-**Step (2) Option (B): Creating a New Config File for Https**
+* The `certbot` command was run (i.e., **without** the `certonly` option)
+* This is the process we use for the Static and LAMP CMS Sites
+
+Use **Step (2) Option (B): Creating a New Config File for Https** when:
+
+* The `certbot certonly` command was run (i.e., **with** the `certonly` option),
+* This is the process we use for the Python (Wsgi) Sites
 
 ## Step (2) Option (A): Using the Generated Https Config File
 
+This is how we are processing our Static and LAMP CMS sites.
 
+In this case, we need to rename the new file to conform to our naming standard.
+
+### Step (2-A.1) Rename and Enable the New ssl/https File
+
+Disable the old file, rename the new file to conform to our naming standard, and enable it.
+
+- [ ] The following commands show how to do this for the `artsyvisions.com` site:
+```
+a2dissite 010-artsyvisions.com-le-ssl.conf
+mv 010-artsyvisions.com-le-ssl.conf 014-artsyvisions.com-le-ssl.conf
+a2ensite 014-artsyvisions.com-le-ssl.conf
+service apache2 reload
+```
+
+At this point our server handles both http and https requests without redirection.
+
+To set up redirection (**highly recommended**), skip to Step (3).
 
 ## Step (2) Option (B): Creating a New Config File for Https
 
+This is how we are processing our Python (Wsgi) sites.
+
+In this case, we need to:
+
+* Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
+* Edit the `0?4-[domain_name]-ssl.conf` file
+
+### Step (2-B.1) Copy the Existing File and Edit the New File
+
+- [ ] The following commands show how to do this for the `groja.com` site:
+```
+cp 020-groja.com.conf 024-groja.com-le-ssl.conf
+vi 024-groja.com-le-ssl.conf
+```
+
+### Step (2-B.2) Changing the Start of the File
+
+- [ ] Replace this line at beginning of the file:
+```
+<VirtualHost *:80>
+```
+- [ ] With these lines:
+```
+<IfModule mod_ssl.c>
+    ### <VirtualHost *:80>
+    <VirtualHost _default_:443>
+```
+Note that we are indenting these lines by **four** (4) spaces.
+
+### Step (2-B.3) Changes Near the End of the File
+
+- [ ] Replace this line near the end of the file:
+```
+</VirtualHost>
+```
+- [ ] With these lines:
+```
+    </VirtualHost>
+</IfModule>
+```
+Note that in addition to adding a line, we indented the `</VirtualHost>`
+line by **four** (4) spaces.
+
+### Step (2-B.4) Adding the Let's Encrypt Configuration
+
+Add the Let's Encrypt configuration to the new apache config file.
+
+- [ ] Find this line near the end of the file:
+```
+#Include conf-available/serve-cgi-bin.conf
+```
+- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
+```
+
+###
+### Adding config to use the Lets Encrypt certificates
+### Reference:
+###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
+###
+SSLCertificateFile /etc/letsencrypt/live/groja.com/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/groja.com/privkey.pem
+Include /etc/letsencrypt/options-ssl-apache.conf
+
+```
+**All of these lines should be indented by **eight** (8) spaces!**
+
+And yes please add a blank line before the comments and the new setting! Tyvm!!
+
+To set up redirection (**highly recommended**), proceed with Step (3).
 
 
 ## Step (3): Setting up Http -> Https Redirection
@@ -117,19 +206,6 @@ In this case, we need to:
 * Create a new file to redirect http requests to https
 * Activate and test them
 
-#### Rename the New ssl/https File
-
-Rename the new file to conform to our naming standard.
-
-- [ ] The following commands show how to do this for the `artsyvisions.com` site:
-```
-a2dissite 010-artsyvisions.com-le-ssl.conf
-mv 010-artsyvisions.com-le-ssl.conf 014-artsyvisions.com-le-ssl.conf
-a2ensite 014-artsyvisions.com-le-ssl.conf
-service apache2 reload
-```
-
-At this point our server handles both http and https requests without redirection.
 
 #### Create the New http->https Redirection File
 
@@ -167,73 +243,8 @@ Add it at the end, just before the line that closes the `VirtualHost` directive,
 
 Do this step when running `certbot` with the `certonly` option set.
 
-This is how we are doiong our python (wsgi) sites.
 
-In this case, we need to:
 
-* Copy the `0?0-[domain_name].conf` file to `0?4-[domain_name]-ssl.conf`
-* Edit the `0?4-[domain_name]-ssl.conf` file
-
-#### Copy Existing File and Edit the New File
-
-- [ ] The following commands show how to do this for the `groja.com` site:
-```
-cp 020-groja.com.conf 024-groja.com-le-ssl.conf
-vi 024-groja.com-le-ssl.conf
-```
-
-#### Changing the Start of the File
-
-- [ ] Replace this line at beginning of the file:
-```
-<VirtualHost *:80>
-```
-- [ ] With these lines:
-```
-<IfModule mod_ssl.c>
-    ### <VirtualHost *:80>
-    <VirtualHost _default_:443>
-```
-Note that we are indenting these lines by **four** (4) spaces.
-
-#### Changes Near the End of the File
-
-- [ ] Replace this line near the end of the file:
-```
-</VirtualHost>
-```
-- [ ] With these lines:
-```
-    </VirtualHost>
-</IfModule>
-```
-Note that in addition to adding a line, we indented the `</VirtualHost>`
-line by **four** (4) spaces.
-
-#### Adding the Let's Encrypt Configuration
-
-Add the Let's Encrypt configuration to the new apache config file.
-
-- [ ] Find this line near the end of the file:
-```
-#Include conf-available/serve-cgi-bin.conf
-```
-- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
-```
-
-###
-### Adding config to use the Lets Encrypt certificates
-### Reference:
-###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
-###
-SSLCertificateFile /etc/letsencrypt/live/groja.com/fullchain.pem
-SSLCertificateKeyFile /etc/letsencrypt/live/groja.com/privkey.pem
-Include /etc/letsencrypt/options-ssl-apache.conf
-
-```
-**All of these lines should be indented by **eight** (8) spaces!**
-
-And yes please add a blank line before the comments and the new setting! Tyvm!!
 
 #### Create and Edit New Redirection File for Http
 

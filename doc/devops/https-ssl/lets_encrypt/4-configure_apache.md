@@ -68,17 +68,38 @@ Check in any files that are out-of-sync in RCS.
 
 **This is extremely important because we will be editing these files momentarily.**
 
-## Step (1):
-
-## Step (2): Update Apache Config
+## Step (1): Update Apache Config Overview
 
 Now we need to tell apache to use the certificate files we generated.
+This entails:
 
-**Note that we keep all configuration files under version control (in RCS).**
+* Renaming a generated file or creating a new config file for processing https requests
+* Creating a new config file for redirecting http requests to https
 
-This process depends on what choices were made in previous steps.
+The specific steps to be used in this process depend on what options were
+picked when the certificates were generated.
 
-### Step (2-A): Using Our Own Redirect Config
+## Step (2): Configuration to Process Https Requests
+
+For Static and LAMP CMS Sites, for which the `certbot` command was
+run (i.e., **without** the `certonly` option), use
+**Step (2) Option (A): Using the Generated Https Config File.**
+
+For Python (Wsgi) Sites, for which the `certbot certonly` command was
+run (i.e., **with** the `certonly` option), use
+**Step (2) Option (B): Creating a New Config File for Https**
+
+## Step (2) Option (A): Using the Generated Https Config File
+
+
+
+## Step (2) Option (B): Creating a New Config File for Https
+
+
+
+## Step (3): Setting up Http -> Https Redirection
+
+### Step (3-A): Using Our Own Redirect Config
 
 Do this step when `certbot`:
 
@@ -251,7 +272,4 @@ a2ensite 052-seeourminds.com-redirect.conf
 a2ensite 054-seeourminds.com-le-ssl.conf
 service apache2 reload
 ```
-
-## Step (3) Test in Browser
-
 

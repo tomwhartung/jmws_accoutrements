@@ -44,16 +44,9 @@ The `certbot` command supports generating certificates for multiple sites.
 
 This process focuses on generating a certificate and setting it up for use on:
 
-* Static sites:
-  * artsyvisions.com and www.artsyvisions.com (on ava)
-  * tomh.info and www.tomh.info (on ava)
-* Python (Wsgi) sites:
-  * groja.com and www.groja.com (on ava)
-  * seeourminds.com and www.seeourminds.com (on ava)
-* LAMP CMS sites:
-  * joomoowebsites.com and www.joomoowebsites.com (on ava)
-  * tomhartung.com and www.tomhartung.com (on ava)
-  * tomwhartung.com and www.tomwhartung.com (on ava)
+* Static sites such as www.artsyvisions.com and www.tomh.info (on ava)
+* Python (Wsgi) sites such as www.groja.com and www.seeourminds.com (on ava)
+* LAMP CMS sites such as www.joomoowebsites.com, www.tomhartung.com, and www.tomwhartung.com (on ava)
 
 It seems prudent to generate a separate certificate for each site.
 
@@ -71,8 +64,8 @@ rcsdiff *.conf
 
 Check in any files that are out-of-sync in RCS.
 
-**This is extremely important because when running `certbot` without the `certonly` option,
-`certbot` updates the config files, and we will want to back out of those changes.**
+**This is extremely important when running `certbot` without the `certonly` option,**
+because `certbot` updates the config files, and we will want to back out of those changes.
 
 ## Step (1): Running `certbot` to Generate Certificates
 

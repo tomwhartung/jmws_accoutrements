@@ -224,25 +224,21 @@ these files.**
 
 Copy the existing http config file to the new name, and edit it to add the redirection.
 
-- [ ] The following commands show how to do this for the `artsyvisions.com` site:
+- [ ] The following commands show how to do this for the `tomwhartung.com` site:
 ```
-cp 010-artsyvisions.com.conf 012-artsyvisions.com-redirect.conf
-vi 012-artsyvisions.com-redirect.conf
-a2dissite 010-artsyvisions.com.conf
-a2ensite 012-artsyvisions.com-redirect.conf
-a2ensite 014-artsyvisions.com-le-ssl.conf   # (should already be enabled)
-service apache2 reload
+cp 080-tomwhartung.com.conf 082-tomwhartung.com-redirect.conf
+vi 082-tomwhartung.com-redirect.conf
 ```
 
-#### Add Redirection Config
+### Step (3.2) Add Redirection Config
 
-- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
+- [ ] Add lines similar to the following, which show how to do this for the `tomwhartung.com` site:
 ```
 
 ###
 ### Redirect http requests to https
 ###
-Redirect "/" "https://www.artsyvisions.com/"
+Redirect "/" "https://www.tomwhartung.com/"
 ```
 
 Add it at the end, just before the line that closes the `VirtualHost` directive, i.e., just before this line:
@@ -250,42 +246,7 @@ Add it at the end, just before the line that closes the `VirtualHost` directive,
 </VirtualHost>
 ```
 
-**Skip to Step (3) Test in Browser, below.**
-
-### Step (2-B): Updating the Files Manually
-
-Do this step when running `certbot` with the `certonly` option set.
-
-
-
-
-#### Create and Edit New Redirection File for Http
-
-Copy the existing http config file and edit the new file.
-
-- [ ] The following commands show how to do this for the `groja.com` site:
-```
-cp 020-groja.com.conf 022-groja.com-redirect.conf
-vi 022-groja.com-redirect.conf
-```
-
-#### Add Redirection Config
-
-- [ ] Add lines similar to the following, which show how to do this for the `groja.com` site:
-```
-
-###
-### Redirect http requests to https
-###
-Redirect "/" "https://www.groja.com/"
-```
-
-Add it at the end, just before the line that closes the `VirtualHost` directive, i.e., just before this line:
-```
-</VirtualHost>
-```
-
-#### Switch to Use Redirect and Https Config
+### Step (3.3) Switch to Use Redirect and Https Config
 
 Disable the old config file and enable the new ones.
 
@@ -296,4 +257,8 @@ a2ensite 052-seeourminds.com-redirect.conf
 a2ensite 054-seeourminds.com-le-ssl.conf
 service apache2 reload
 ```
+
+## Step (4): Test and Finish Up
+
+See the next file `5-test_and_finish_up.md` (in this directory).
 

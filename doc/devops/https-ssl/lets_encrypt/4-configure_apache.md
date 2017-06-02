@@ -46,6 +46,11 @@ For details on how to generate the required certificates from Let's Encrypt, see
 
 **All commands must be run as root.**
 
+## Do Only One Site at a Time
+
+**Perform this process for only one site at a time, to allow for quickly testing
+it, and possibly backing out of the changes, before moving on to other sites.**
+
 ## Optional Preparation Step: Tab Removal
 
 Optionally replace all tab characters with four (4) spaces.
@@ -53,6 +58,8 @@ Optionally replace all tab characters with four (4) spaces.
 vi *.conf
 :%s&	&    &g
 ```
+We will be copying these files so now is the perfect time to do this and clean
+up any stale comments, etc.
 
 ## Step (0): Ensure RCS Is Up-to-Date!
 
@@ -63,7 +70,6 @@ We keep all apache configuration files under version control in RCS.
 cd /etc/apache2/sites-available
 rcsdiff *.conf
 ```
-
 Check in any files that are out-of-sync in RCS.
 
 **This is extremely important because we will be editing these files momentarily.**
@@ -113,9 +119,11 @@ mv 010-artsyvisions.com-le-ssl.conf 014-artsyvisions.com-le-ssl.conf
 a2ensite 014-artsyvisions.com-le-ssl.conf
 service apache2 reload
 ```
-At this point our server handles both http and https requests without redirection.
+At this point the site **is capable of handling** both http and https
+requests (without redirection), but it will **not successfully handle** the
+https requests until we reload the server.
 
-To set up redirection (**highly recommended**), skip to Step (3).
+To reload apache and smoke test using https on the site, proceed with Step (3).
 
 ## Step (2) Option (B): Creating a New Config File for Https
 
@@ -189,16 +197,38 @@ And yes please add a blank line before the comments and the new setting! Tyvm!!
 
 ### Step (2-B.5) Enabling the New Configuration File
 
-Enable the old config file and reload apache.
+Enable the new config file.
 
-- [ ] The following commands show how to do this for the `seeourminds.com` site:
+- [ ] The following command shows how to do this for the `seeourminds.com` site:
 ```
 a2ensite 054-seeourminds.com-le-ssl.conf
+```
+At this point the site **is capable of handling** both http and https
+requests (without redirection), but it will **not successfully handle** the
+https requests until we reload the server.
+
+## Step (3): Reload Apache and Smoke Test
+
+### Step (3.1): Reload Apache and Smoke Test
+
+- [ ] Use the following command to reload apache to make the new config file live:
+```
 service apache2 reload
 ```
-At this point our server handles both http and https requests without redirection.
+At this point our server should be able to process both http and https
+requests (without redirection).
 
-## Step (3): Setting up Http -> Https Redirection
+### Step (3.2): Smoke Test the Site
+
+- [ ] Ensure the http configuration still works by accessing the home page (e.g., groja.com) in the browser.
+- http://groja.com
+
+- [ ] Smoke test the https configuration by accessing the home page (e.g., groja.com) in the browser.
+- https://groja.com
+
+**If the green icon does not appear, open the developer tools window and fix the issue(s).**
+
+## Step (4): Setting up Http -> Https Redirection
 
 We are doing this for all sites.
 
@@ -225,7 +255,7 @@ effectively redirects **all** requests to the www.* subdomain.
 Hence, if at some point we decide to use subdomains, we may need to update
 these redirection files.
 
-### Step (3.1): Creating the Redirect Config File
+### Step (4.1): Creating the Redirect Config File
 
 Copy the existing http config file to the new name, and edit it to add the redirection.
 
@@ -235,7 +265,7 @@ cp 080-tomwhartung.com.conf 082-tomwhartung.com-redirect.conf
 vi 082-tomwhartung.com-redirect.conf
 ```
 
-### Step (3.2) Special Instructions for Python Sites
+### Step (4.2) Special Instructions for Python Sites
 
 - [ ] Comment out all WSGI* directives in python config files, as in the following example for the `seeourminds.com` site:
 ```
@@ -256,7 +286,7 @@ As you can see, I like to make it obvious that these lines are commented out.
 
 **Forgetting this step causes an error when this and the https file are enabled when apache is reloaded.**
 
-### Step (3.3) Add Redirection Config
+### Step (4.3) Add Redirection Config
 
 - [ ] Add lines similar to the following, which show how to do this for the `tomwhartung.com` site:
 ```
@@ -272,7 +302,7 @@ Add it at the end, just before the line that closes the `VirtualHost` directive,
 </VirtualHost>
 ```
 
-### Step (3.4) Switch to Use Redirect and Https Config
+### Step (4.4) Switch to Use Redirect and Https Config
 
 Disable the old `0?0-*` config file and enable the new `0?2-*` and `0?4-*` files.
 
@@ -283,8 +313,13 @@ a2ensite 052-seeourminds.com-redirect.conf
 a2ensite 054-seeourminds.com-le-ssl.conf
 service apache2 reload
 ```
+**Enable and activate the new configuration for only one site at a time, to
+allow for quickly testing it, and backing out of the changes if necessary.**
 
-## Step (4): Test and Finish Up
+## Step (5): Test Thoroughly and Finish Up
+
+It is best to test the configuration thoroughly for each site as soon as
+its new configuration files are enabled and apache is reloaded
 
 See the next file `5-test_and_finish_up.md` (in this directory).
 

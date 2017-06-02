@@ -52,7 +52,46 @@ ci -l *.conf
 
 ## Step (3): Automatic Renewal
 
-**TODO: SET THIS UP**
+The Let's Encrypt certificates expire after 90 days.
+
+**It is possible, however, to set up a cronjob to renew them automatically.**
+
+### Reference
+
+We will want to refer to this after renewing them manually a few times:
+
+- https://certbot.eff.org/docs/using.html#renewal
+
+### Dry Run
+
+Enter the following command to test certificate renewal:
+
+```
+certbot renew --dry-run
+```
+
+**Note:** This command will run on `ava` but **not** the backup host `barbara`.
+
+### Renewal Command
+
+Enter the following command within 30 days of the certificates' expiration date:
+
+```
+certbot renew
+```
+
+**Note:** This command will run on `ava` but **not** the backup host `barbara`.
+
+### Cronjob Setup: TBD
+
+Let's renew them manually a few times before trying to automate this.
+
+**Note:** This cronjob will **not** run on the backup host barbara, because
+it is not accessible from the internet without changing the configuration of our modems and routers.
+
+The digitalocean article makes this look to be very easy, check it out:
+
+- https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04#step-3-—-set-up-auto-renewal
 
 ## Step (4): Conclusion
 

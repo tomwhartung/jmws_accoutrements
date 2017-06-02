@@ -88,7 +88,7 @@ Use **Step (2) Option (A): Using the Generated Https Config File** when:
 
 Use **Step (2) Option (B): Creating a New Config File for Https** when:
 
-* The `certbot certonly` command was run (i.e., **with** the `certonly` option),
+* The `certbot certonly` command was run (i.e., **with** the `certonly` option)
 * This is the process we use for the Python (Wsgi) Sites
 
 ## Step (2) Option (A): Using the Generated Https Config File
@@ -172,7 +172,7 @@ Add the Let's Encrypt configuration to the new apache config file.
 ###
 ### Adding config to use the Lets Encrypt certificates
 ### Reference:
-###   https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/specific_hosts/2016-jane/6a-https-steps.md
+###   https://github.com/tomwhartung/jmws_accoutrements/tree/master/doc/devops/https-ssl/lets_encrypt
 ###
 SSLCertificateFile /etc/letsencrypt/live/groja.com/fullchain.pem
 SSLCertificateKeyFile /etc/letsencrypt/live/groja.com/privkey.pem
@@ -187,6 +187,18 @@ To set up redirection (**highly recommended**), proceed with Step (3).
 
 
 ## Step (3): Setting up Http -> Https Redirection
+
+The `certbot` command can generate the http-to-https redirection file for us.
+I gave this a try, and decided that we should just geneate our own.
+
+Note that the http-to-https redirection file that the `certbot` command
+generates is a bit more flexible (and hence slightly more complicated, adding
+three lines rather than just the one) than the one we create.
+Specifically, it processes subdomains properly, while the one we create
+effectively redirects **all** requests to the www.* subdomain.
+
+**Hence, if at some point we decide to use subdomains, we will need to update
+these files.**
 
 ### Step (3-A): Using Our Own Redirect Config
 

@@ -209,7 +209,7 @@ Setting up http-to-https redirection is optional, but recommended.
 The `certbot` command can update the existing http config file to implement
 http-to-https redirection file for us.
 
-I gave this a try, and decided that we should just geneate our own.
+I gave this a try, and decided that we should just generate our own.
 
 Note that the http-to-https redirection file that the `certbot` command
 generates is a bit more flexible (and hence slightly more complicated, adding
@@ -217,8 +217,8 @@ three lines rather than just the one) than the one we create.
 Specifically, it processes subdomains properly, while the one we create
 effectively redirects **all** requests to the www.* subdomain.
 
-**Hence, if at some point we decide to use subdomains, we will need to update
-these files.**
+Hence, if at some point we decide to use subdomains, we may need to update
+these redirection files.
 
 ### Step (3.1): Creating the Redirect Config File
 
@@ -230,7 +230,28 @@ cp 080-tomwhartung.com.conf 082-tomwhartung.com-redirect.conf
 vi 082-tomwhartung.com-redirect.conf
 ```
 
-### Step (3.2) Add Redirection Config
+### Step (3.2) Special Instructions for Python Sites
+
+- [ ] Comment out all WSGI* directives in python config files, as in the following example for the `seeourminds.com` site:
+```
+###     #
+###     # These two lines cause it to run in daemon mode.  I am not seeing a huge benefit but think it's the way to go.
+###     # For more comments and a link, see the file 150-wsgi.test.conf in this directory.
+###     #
+###     WSGIDaemonProcess seeourminds.com processes=2 threads=15 python-path=/var/www/seeourminds.com/htdocs/seeourminds.com/Site
+###     WSGIProcessGroup seeourminds.com
+###
+###     #
+###     # This is the key to the whole thing:
+###     #
+###     WSGIScriptAlias / /var/www/seeourminds.com/htdocs/seeourminds.com/Site/Site/wsgi.py
+###     ## WSGIPythonPath /var/www/seeourminds.com/htdocs/seeourminds.com/Site
+```
+As you can see, I like to make it obvious that these lines are commented out.
+
+**Forgetting this step causes an error when this and the https file are enabled when apache is reloaded.**
+
+### Step (3.3) Add Redirection Config
 
 - [ ] Add lines similar to the following, which show how to do this for the `tomwhartung.com` site:
 ```
@@ -246,9 +267,9 @@ Add it at the end, just before the line that closes the `VirtualHost` directive,
 </VirtualHost>
 ```
 
-### Step (3.3) Switch to Use Redirect and Https Config
+### Step (3.4) Switch to Use Redirect and Https Config
 
-Disable the old config file and enable the new ones.
+Disable the old `0?0-*` config file and enable the new `0?2-*` and `0?4-*` files.
 
 - [ ] The following commands show how to do this for the `seeourminds.com` site:
 ```

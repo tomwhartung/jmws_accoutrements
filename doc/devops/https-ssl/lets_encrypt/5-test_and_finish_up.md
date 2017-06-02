@@ -38,10 +38,17 @@ For an overview of the goals and reasons for doing all this, see the `../README.
 This is where it would be nice to be able to test this on a non-production host, but
 we can implement Let's Encrypt only on hosts connected to the internet!
 
+- [ ] Test all four forms of the basic url.  For example if we are testing groja.com, test:
+  - http://groja.com
+  - http://www.groja.com
+  - https://groja.com
+  - https://www.groja.com
+- [ ] Ensure all four forms of the url redirect to https://www.groja.com
+- [ ] Ensure that they all have the green icon.
+
 ## Step (2): Check into RCS
 
-When all config files are working, check them into RCS!
-Quick before we mess something up!
+When all config files are working, check them into RCS - quickly, before we mess something up!
 
 - [ ] Run the following commands to ensure the latest versions are checked in to RCS:
 ```
@@ -54,44 +61,55 @@ ci -l *.conf
 
 The Let's Encrypt certificates expire after 90 days.
 
-**It is possible, however, to set up a cronjob to renew them automatically.**
+It is possible, however, to set up a cronjob to renew them automatically.
 
-### Reference
-
-We will want to refer to this after renewing them manually a few times:
+### References
 
 - https://certbot.eff.org/docs/using.html#renewal
+  - Complete reference for the certbot command
+- https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04#step-3-—-set-up-auto-renewal
+  - This article describes how to set use the `crontab` command to do this
 
-### Dry Run
+### Renewal Works on `ava` only
+
+**Note:** The renewal command does **not** run on the backup host `barbara` ,
+because it is not accessible from the internet without changing the
+configuration of our modems and routers.
+
+### Dry Run (`ava` only!)
 
 Enter the following command to test certificate renewal:
 
 ```
-certbot renew --dry-run
+sudo certbot renew --dry-run
 ```
 
-**Note:** This command will run on `ava` but **not** the backup host `barbara`.
+**Note:** This command will **not** run on the backup host `barbara`.
 
-### Renewal Command
+### Renewal Command (`ava` only!)
 
 Enter the following command within 30 days of the certificates' expiration date:
 
 ```
-certbot renew
+sudo certbot renew
 ```
 
-**Note:** This command will run on `ava` but **not** the backup host `barbara`.
+**Note:** This command will **not** run on the backup host `barbara`.
 
-### Cronjob Setup: TBD
+### Cronjob Setup
 
-Let's renew them manually a few times before trying to automate this.
+Run the following commands to create a cronjob that automatically renews the certificates:
 
-**Note:** This cronjob will **not** run on the backup host barbara, because
-it is not accessible from the internet without changing the configuration of our modems and routers.
-
-The digitalocean article makes this look to be very easy, check it out:
-
-- https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04#step-3-—-set-up-auto-renewal
+As root:
+```
+vi cronjob     # Enter text corresponding to the output of the crontab -l command below
+crontab cronjob
+crontab -l
+#
+# Check the Let's Encrypt certificates for expiration every day at 3:15 AM.
+#
+15 3 * * * /usr/bin/certbot renew --quiet
+```
 
 ## Step (4): Conclusion
 
@@ -113,7 +131,7 @@ https://www.ssllabs.com/ssltest/analyze.html?d=tomhartung.com
 https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
 ```
 
-So we can test the sites with urls such as the following:
+TO DO: test all of the sites with urls such as the following:
 
 - https://www.ssllabs.com/ssltest/analyze.html?d=www.tomhartung.com
 

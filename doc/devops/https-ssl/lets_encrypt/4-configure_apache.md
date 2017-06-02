@@ -108,7 +108,6 @@ mv 010-artsyvisions.com-le-ssl.conf 014-artsyvisions.com-le-ssl.conf
 a2ensite 014-artsyvisions.com-le-ssl.conf
 service apache2 reload
 ```
-
 At this point our server handles both http and https requests without redirection.
 
 To set up redirection (**highly recommended**), skip to Step (3).
@@ -183,12 +182,33 @@ Include /etc/letsencrypt/options-ssl-apache.conf
 
 And yes please add a blank line before the comments and the new setting! Tyvm!!
 
-To set up redirection (**highly recommended**), proceed with Step (3).
+### Step (2-B.5) Enabling the New Configuration File
 
+Enable the old config file and reload apache.
+
+- [ ] The following commands show how to do this for the `seeourminds.com` site:
+```
+a2ensite 054-seeourminds.com-le-ssl.conf
+service apache2 reload
+```
+At this point our server handles both http and https requests without redirection.
 
 ## Step (3): Setting up Http -> Https Redirection
 
-The `certbot` command can generate the http-to-https redirection file for us.
+We are doing this for all sites.
+
+In this case, we need to:
+
+* Create a new file to redirect http requests to https
+* De-activate the old, activate the new, and test them
+
+Setting up http-to-https redirection is optional, but recommended.
+
+### The `certbot` Alternative
+
+The `certbot` command can update the existing http config file to implement
+http-to-https redirection file for us.
+
 I gave this a try, and decided that we should just geneate our own.
 
 Note that the http-to-https redirection file that the `certbot` command
@@ -200,26 +220,7 @@ effectively redirects **all** requests to the www.* subdomain.
 **Hence, if at some point we decide to use subdomains, we will need to update
 these files.**
 
-### Step (3-A): Using Our Own Redirect Config
-
-Do this step when `certbot`:
-
-- [ ] Generates a new file for https/ssl (e.g., `070-tomh.info-le-ssl.conf`)
-  * This corresponds to running `certbot` **without** the `certonly` option
-- [ ] Does **not** update the existing config to redirect http requests to https
-  * This corresponds to answering `1. Easy` to the Easy/Secure question
-    (i.e., `Please choose whether HTTPS access is required or optional.`)
-
-This is how we are doing our Static and LAMP CMS sites.
-
-In this case, we need to:
-
-* Rename the new file to conform to our naming standard
-* Create a new file to redirect http requests to https
-* Activate and test them
-
-
-#### Create the New http->https Redirection File
+### Step (3.1): Creating the Redirect Config File
 
 Copy the existing http config file to the new name, and edit it to add the redirection.
 

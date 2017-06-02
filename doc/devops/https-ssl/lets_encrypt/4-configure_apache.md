@@ -97,7 +97,12 @@ This is how we are processing our Static and LAMP CMS sites.
 
 In this case, we need to rename the new file to conform to our naming standard.
 
-### Step (2-A.1) Rename and Enable the New ssl/https File
+### Step (2-A.1) Fix Indentation
+
+The `certbot` command does not indent the directives it adds to the config file,
+so it is advisable to do that manually before proceeding any further.
+
+### Step (2-A.2) Rename and Enable the New ssl/https File
 
 Disable the old file, rename the new file to conform to our naming standard, and enable it.
 

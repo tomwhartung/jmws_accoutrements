@@ -230,14 +230,15 @@ requests (without redirection).
 
 ## Step (4): Setting up Http -> Https Redirection
 
+Setting up http-to-https redirection is optional, but recommended.
 We are doing this for all sites.
+
+**Do not set up redirection until the site shows the green icon for all pages.**
 
 In this case, we need to:
 
 * Create a new file to redirect http requests to https
 * De-activate the old, activate the new, and test them
-
-Setting up http-to-https redirection is optional, but recommended.
 
 ### The `certbot` Alternative
 
@@ -318,8 +319,8 @@ allow for quickly testing it, and backing out of the changes if necessary.**
 
 ## Step (5): Test Thoroughly and Finish Up
 
-It is best to test the configuration thoroughly for each site as soon as
-its new configuration files are enabled and apache is reloaded
+**It is best to test the configuration thoroughly for each site as soon as
+its new configuration files are enabled and apache is reloaded.**
 
 See the next file `5-test_and_finish_up.md` (in this directory).
 

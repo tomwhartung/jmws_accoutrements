@@ -148,17 +148,27 @@ Finding the Right Copy of the Database
     Should see the sites-available/020-groja.com.conf file linked to
       the sites-enabled directory
 
+Update /etc/hosts
+-----------------
+[ ] As root:
+      cd /etc
+      vi hosts    # Add lauren.groja-joomla.com
+
 Checking the Site:
 ------------------
 [ ] Access in browser:
-      http://groja1.seeourminds.com
+      http://lauren.groja-joomla.com
 
 Copy/Back Up
 ------------
 This is why we quit using the VM: so we could use normal backup and restore scripts!
 
 --------------------------------
+--------------------------------
+--------------------------------
 *** We are here ***
+--------------------------------
+--------------------------------
 --------------------------------
 
 Final Steps

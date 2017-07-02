@@ -90,7 +90,7 @@ Populate /var/www
 Disk Space Spotcheck
 --------------------
 [ ] Disk Space Spotcheck:
-    /: 5.2G/82G (7%)
+    /: 15G/217G (7%)
 
 Configure Apache
 ----------------
@@ -122,10 +122,10 @@ Finding the Right Copy of the Database
 --------------------------------------
 [ ] Databases used on the VM:
     Use a backup of the seeourminds.com db:
-      Try using current db from lauren:
-        seeourminds.com-2016_09_27-lauren.sql.gz
-      If that doesn't work, try using current db from bette:
+      Try using current db from bette:
         seeourminds.com-2016_09_27-bette.sql.gz
+      If that doesn't work, try using current db from lauren:
+        seeourminds.com-2016_09_27-lauren.sql.gz
 [ ] Create user and db:
     See ~/technical/cmses/joomla/sql/create_user_dbs-seeourminds.sql
     As tomh:
@@ -161,10 +161,6 @@ Copy/Back Up
 ------------
 This is why we quit using the VM: so we could use normal backup and restore scripts!
 
---------------------------------
-*** We are here ***
---------------------------------
-
 Final Steps
 -----------
 [ ] Use logrotate to rotate apache logs weekly
@@ -182,7 +178,8 @@ Final Steps
     This time we are changing it to rotate them weekly and keep a year's worth:
       "daily" -> "weekly"
       "rotate 14" -> "rotate 52"
-    and adding these lines to use dates for the log file name extensions (instead of .1, .2, etc.):
+    and adding these lines after the "sharedscripts" line
       dateext
       dateformat -%Y-%m-%d
+    This causes logrotate to use dates for the log file name extensions (instead of .1, .2, etc.):
 

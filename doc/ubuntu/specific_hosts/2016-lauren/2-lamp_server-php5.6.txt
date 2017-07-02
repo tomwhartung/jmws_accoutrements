@@ -163,14 +163,6 @@ Copy/Back Up
 ------------
 This is why we quit using the VM: so we could use normal backup and restore scripts!
 
---------------------------------
---------------------------------
---------------------------------
-*** We are here ***
---------------------------------
---------------------------------
---------------------------------
-
 Final Steps
 -----------
 [ ] Use logrotate to rotate apache logs weekly
@@ -188,7 +180,8 @@ Final Steps
     This time we are changing it to rotate them weekly and keep a year's worth:
       "daily" -> "weekly"
       "rotate 14" -> "rotate 52"
-    and adding these lines to use dates for the log file name extensions (instead of .1, .2, etc.):
+    and adding these lines after the "sharedscripts" line
       dateext
       dateformat -%Y-%m-%d
+    This causes logrotate to use dates for the log file name extensions (instead of .1, .2, etc.):
 

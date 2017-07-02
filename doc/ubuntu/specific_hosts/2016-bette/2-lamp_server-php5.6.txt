@@ -40,41 +40,39 @@ None of these LAMP packages are already installed
       apt-get install php5.6-xml             # Installed OK
       apt-get install php5.6-xmlrpc          # Installed OK
 [ ] Check php version currently being run on the command line on groja1:
-      php -v   # PHP 7.0.8-0ubuntu0.16.04.3 (cli) ( NTS )
+      php -v   # PHP 7.0.18-0ubuntu0.16.04.1 (cli) ( NTS )
 [ ] Check php version currently being used by apache on groja1:
     As tomh on groja1:
       # Put a copy phpinfo.php in /var/www/html/
     Access in browser:
-      http://groja1/phpinfo.php
+      http://localhost/phpinfo.php
     Find the php version being used in the page
-      PHP Version 7.0.8-0ubuntu0.16.04.3
+      PHP Version 7.0.18-0ubuntu0.16.04.1
 [ ] Set php5.6 as the default for both apache and cli:
+    As root:
+      # For php-cli in the command line
+      ln -sfn /usr/bin/php5.6 /etc/alternatives/php
+      php -v       # PHP 5.6.30-12~ubuntu16.04.1+deb.sury.org+1 (cli)
     As root:
       # For php in web apps
       a2dismod php7.0
       a2enmod php5.6
       service apache2 restart
-      # For php-cli in the command line
-      sudo ln -sfn /usr/bin/php5.6 /etc/alternatives/php
 [ ] Re-check php version currently being run on the command line on groja1:
       php -v  # PHP 5.6.30-12~ubuntu16.04.1+deb.sury.org+1 (cli)
-[ ] Re-check php version currently being used by apache on groja1:
-    As tomh on groja1:
-      # Put a copy phpinfo.php in /var/www/html/
+[ ] Re-check php version currently being used by apache on bette:
     Access in browser:
-      http://lauren/phpinfo.php
+      http://bette/phpinfo.php
     Find the php version being used in the page:
-      PHP 5.6.30-12~ubuntu16.04.1+deb.sury.org+1
-[ ] Optional: to set php7.0 as the default for both apache and cli:
-    *** Not doing this ***
+      PHP Version 5.6.30-12~ubuntu16.04.1+deb.sury.org+1
 
 Populate /var/www
 -----------------
 [ ] Get the seeourminds.com websites' source files in /var/www
     As tomh:
       Create tar file on groja1
-      Copy to lauren
-   On lauren
+      Copy to bette
+   On bette
       cd /var/www
       mkdir unpack
       cp seeourminds.com-from_vms-2017_07_03.tgz unpack/
@@ -137,8 +135,8 @@ Finding the Right Copy of the Database
       grant all on ...
 [ ] Restore db:
     As tomh:
-      rs -h lauren -d 2016_07_16 sm
-      rs -h bette -d 2016_07_16 sm    ## if that doesn't work
+      rs -h bette -d 2016_07_16 sm
+      rs -h lauren -d 2016_07_16 sm    ## if that doesn't work
 [ ] seeourminds.com
     As root:
       a2ensite 050-seeourminds.com.conf
@@ -147,6 +145,12 @@ Finding the Right Copy of the Database
       l sites*/*.conf
     Should see the sites-available/020-groja.com.conf file linked to
       the sites-enabled directory
+
+Update /etc/hosts
+-----------------
+[ ] As root:
+      cd /etc
+      vi hosts    # Add bette.groja-joomla.com
 
 Checking the Site:
 ------------------

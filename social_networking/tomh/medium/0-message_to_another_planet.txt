@@ -1,29 +1,37 @@
 
- Message to the Wrong Planet
-=============================
-Message From Another Planet
-Message to Another Planet
-
+ Greetings From Planet INxx
+============================
 Sometimes I feel like I'm on the wrong planet.
 
 This article explains why.
 
 I'm weird and I know it:
 ------------------------
-Four-letter type intersectionality.
+Most people don't know what it's like to have a personality that's in the minority.
+Such is the nature of minorities.
 
-About 3 Extraverts for every Introvert: E E E I
-About 3 Sensing types for every iNtuitive type: S S S N
-Combine these:
- 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
-ES ES ES ES ES ES ES ES ES EN EN EN IS IS IS IN
-Out of 16 people:
-9 ES
-3 EN
-3 IS
-1 IN
+This is not to say I want some sort of special rights or anything.
+Just want to say "hi" from my world.
 
-Ratio of Feeling types to Thinking types is about one-to-one.
+References:
+  http://www.myersbriggs.org/my-mbti-personality-type/my-mbti-results/how-frequent-is-my-type.htm?bhcp=1
+  https://www.careerplanner.com/MB2/TypeInPopulation.cfm
+  https://www.careerplanner.com/MB2/TypeInPopulation-Males-Females.cfm
 
-Ratio of Judging types to Perceiving types is about one-to-one.
+Total:
+  E 49.3% / I 50.7% (!)
+  N 26.7% / S 73.3%
+  F 59.8% / T 40.2%
+  J 54.1% / p 45.9%
+Summary:
+  ESFJ: 12.3%
+  ESFP: 8.5%
+  ESTJ: 8.7%
+  ESTP: 4.3%
+  INFJ: 1.5%
+  INFP: 4.4%
+  INTJ: 2.1%
+  INTP: 3.3%
+
+-> Hmm.  Definitely in the minority but not as much as I thought.  Hmm.
 

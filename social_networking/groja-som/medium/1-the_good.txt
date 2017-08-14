@@ -1,32 +1,56 @@
 
-The Good: First of Three Articles
----------------------------------
+ The Good: First of Three Articles
+===================================
 For important background information, see 0-the_good-the_bad-and_the_ugly-overview.txt in this directory.
 
 Theme Song:
+-----------
 For Artists Only by Talking Heads
 
-Essential Content:
-I want to help people see past the surface.
-Ideally, a person's external qualities - their appearance, demographics, etc. - has little bearing on what they actually do.
-Certainly all religions can agree that our bodies are just temporary shells for what makes us us.
+The Good Content:
+-----------------
+I want to help people - myself included - see past the surface.
+
+The Good thing is, I have written a program to help me do this.
+In effect, it's rather like a simple language that reveals a lot about an individual in a single glance.
+
+Another Good thing is, it's a simple language: it uses primary colors to represent fundamental traits.
+
+And yet another Good thing is, most if not all religions can agree that our bodies are just temporary shells for what makes us us.
 Therefore I believe that our inner qualities are far more important.
-I love to draw personalities, and have written a program to help me do this.
-I love to learn and in addition to learning numerous computer languages I have studied music, drawing,
-painting, photography, film, and dance.  I took my first ballet class when I was in my 40s.
+
+A person's external qualities has little bearing on what they actually do.
+And it's what they do that really matters.
+
+I Call It "Art"
+---------------
+I have studied music, drawing, painting, photography, film, and dance.
 [Mention of Kandinsky's triangle here.  I am thinking that should be a whole separate article....]
+
 If anyone is qualified to say what art is and is not, it is me.
+
 And I call this "Art."  It expresses how I look at people; it's an expression of how I view our world.
 In this respect, I feel it's similar to what modern painters such as Picasso have done.
+
+Bottom Line:
+------------
+Calling it "art" gives me artistic license.
+Publishing more examples will help more people get it, but that takes time, a lot of time.
+
+Getting Bad and Ugly:
+---------------------
 Down-to-earth, pragmatic, closed-minded people may find this arrogant.
 Down-to-earth, pragmatic, closed-minded people thought the Beatles were arrogant, and burned their albums in the mid-1960s.
 And who got the last laugh there (hahaha-hehehe-hohoho [link to I Am the Walrus])?
-It's rather like a language I have created that communicates a lot about an individual in a single glance.
+
+Going off on Tangents:
+----------------------
 Some will pick up on the patterns more quickly than others.  Some will close themselves off to it completely right from the start.
 Such is the movement of The Triangle.
-Publishing more examples will help more people get it, but that takes time, a lot of time.
+
+I love to learn and in addition to learning numerous computer languages
+I took my first ballet class when I was in my 40s.
+
 I believe having enough examples will enable Artificially Intelligent programs to get it.
 If you want to stay ahead of the machines, I recommend you invest some time understanding the idea behind these images.
-It has taken me decades to create this site.
-If you don't appreciate this, please continue on to Part 2: The Bad.
 

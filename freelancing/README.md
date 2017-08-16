@@ -15,16 +15,16 @@ Mini-course on freelancing:
 
 Thinking I should follow this process when looking for and taking on freelancing gigs.
 
-### (1) `marketing`
+### `1-marketing`
 
 Track what I do to find gigs.
 
-### (2) `promises`
+### `5-in_progress`
 
-Keep track of any promises I make!
+Keep track of work in progress.
 
-### (3) `results`
+### `9-done`
 
-Track my results: figure out what works and what doesn't.
+Figure out what works and what doesn't.
 
 

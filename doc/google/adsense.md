@@ -5,6 +5,21 @@ so I don't have to figure it all out all over again next time,
 and they can be consistent, even if "next time" is a week or
 five years or whatever from now.
 
+# Signing On
+
+Use this URL
+- https://www.google.com/adsense
+
+## Problems
+
+Having difficulty signing in with Chrome on bette.
+
+- Looking for a solution, it says to disable ad blockers.  I am not using ad blockers!
+- Another possible solution is to clear cookies.  I am not willing to do that right now!
+- I did disable a few extensions that I am no longer using.  But that did not help!
+
+Managed to get signed in with Firefox on bette.
+
 # Rules
 
 We *must* follow these rules, so that code is consistent and easy to maintain!

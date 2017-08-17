@@ -1,0 +1,6 @@
+
+2017-08-10:
+Got the ok from Michael Hermann to write and send him an outline:
+- Comparing simple IoT programs written for the Edison in C/C++, JavaScript, and Python.
+
+

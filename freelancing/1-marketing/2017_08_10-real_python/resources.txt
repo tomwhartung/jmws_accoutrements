@@ -1,0 +1,20 @@
+
+Resources for the Real Python Blog Project
+------------------------------------------
+
+In This Repo:
+-------------
+Previously compiled for a possible presentation:
+- https://github.com/tomwhartung/jmws_accoutrements/tree/master/presentations/2016_06-Develop_Denver/2-iot_101
+
+Other Github Repos:
+-------------------
+Infrastructure:
+- https://github.com/tomwhartung/edison_config_tools
+- https://github.com/tomwhartung/edison_usr_local_bin
+
+Code:
+- https://github.com/tomwhartung/edison_arduino
+- https://github.com/tomwhartung/edison_node
+- https://github.com/tomwhartung/edison_python
+

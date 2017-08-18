@@ -6,19 +6,26 @@ References:
 -----------
 Found by searching:
 - https://www.safewise.com/home-security-faq/how-do-security-systems-work - good source of big picture info.
+- http://www.a-1security.com/commercial-denver-security-systems/management-tool/
+
+Residential only:
+- http://www.allied24.com/residential/
+- http://www.onduty.com/residential-services/houston-alarms-security-system/
+
+Fire only:
 - http://www.securityinfowatch.com/article/10541705/understanding-residential-fire-alarm-systems - big picture info.
-- http://www.securityfire.com/fire-alarms.php - of minimal value
+- http://www.redhawkus.com/solutions/
+- http://www.onduty.com/residential-services/residential-fire-alarms/
+
+Outline based on above resources looks pretty good.  It's certainly acceptable.
+
+However...:
+Recheck for more info.:
 - http://southshorealarms.com/services.html - big picture info.
 - http://southshorealarms.com/surveillance.html (list of packages available but no description)
 - http://southshorealarms.com/security.html (list of packages available but no description)
 - https://www.nedcc.org/free-resources/preservation-leaflets/3.-emergency-management/3.2-an-introduction-to-fire-detection,-alarm,-and-automatic-fire-sprinklers - very in-depth!
-
-Residential only:
-- http://www.allied24.com/residential/
-
-Fire only:
-- http://www.redhawkus.com/solutions/
-- http://www.onduty.com/residential-services/residential-fire-alarms/
+- http://www.securityfire.com/fire-alarms.php - of minimal value
 
 Wikipedia:
 - https://en.wikipedia.org/wiki/Security

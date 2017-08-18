@@ -1,0 +1,43 @@
+
+ Outline for Topic 18: Commercial Security and Fire Alarm Systems
+------------------------------------------------------------------
+
+1. Introduction
+This article contains an overview of commercial security and fire alarm systems.
+
+2. Commercial Security Systems
+There is a wide variety of commercial security systems
+2.1 Access control
+2.1.1 Keyed Locks: Doors and Windows
+2.1.2 Electronic Locks: Doors
+2.1.2.1 Card reader
+2.1.2.2 Fingerprint reader
+2.2 Alarms
+2.2.1 Door and window sensors
+2.2.2 Motion detectors: interior and exterior
+2.2.3 Local alarms (DIY): high-decibel, homeowner must call police
+2.2.4 Remote alarms: attempt to reach homeowner, call police if necessary
+2.2.4.1 Use phone lines, wireless
+2.2.4.2 VoIP or internet: may not work in a power outage
+2.2.5 Control panel
+2.2.5.1 Control and allow resetting of all sensors and detectors
+2.2.5.2 Communicate with remote office
+2.3 Surveillance cameras
+2.3.1 Wired
+2.3.2 Wireless
+2.4 Monitoring
+2.
+
+3. Fire Alarm Systems
+3.1 Alarms
+3.1.1 Smoke detectors
+3.1.2 Heat detectors
+3.1.3 Local alarms
+3.1.4 Remote alarms
+3.2 Sprinklers
+3.
+
+
+4. Other Systems
+4.1 Nurse call
+

@@ -14,8 +14,10 @@ Found by searching:
 - https://www.nedcc.org/free-resources/preservation-leaflets/3.-emergency-management/3.2-an-introduction-to-fire-detection,-alarm,-and-automatic-fire-sprinklers - very in-depth!
 
 Businesses only:
-https://www.adt.com/business
-https://www.adt.com/business/features - nice list!
+- https://www.adt.com/business
+- https://www.adt.com/business/features - nice list!
+- http://www.onduty.com/commercial/commercial-burglar-alarm-security-systems/
+- http://www.allied24.com/commercial_security/monitoring.php
 
 Wikipedia:
 - https://en.wikipedia.org/wiki/Security

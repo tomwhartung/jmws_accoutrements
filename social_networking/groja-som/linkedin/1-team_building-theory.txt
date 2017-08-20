@@ -1,0 +1,33 @@
+
+ Team Building: My Theories
+============================
+
+My Assumption
+-------------
+I believe diversity helps entities be more successful and resilient to change.
+This is certainly true when it comes to investing money.
+
+My theory is that diverse teams are more successful and resilient to change than teams that are not diverse.
+
+Types of Diverse Teams
+----------------------
+Demographic Diversity (External, Visible)
+Diversity that is based on demographics is certainly important.
+Not only does it intuitively seem more fair, if product is to appeal to a
+broad range of demographics, it should be built and sold by people who belong to a
+broad range of demographics.
+
+Psychological Diversity (External, Invisible)
+My theory is that even the smallest teams need to have members that can cover all
+four primary functions (i.e., all four colors) to some extent:
+- Blue (i"N"tuiting: learniing and working with ideas)
+- Green ("T"hinking: making logical decisions)
+- Red ("F"eeling: making emotional decision)
+- Yellow ("S"ensing: noticing and working with facts)
+Just as a demographically diverse team could more successfully build and sell products to a demographically diverse marketplace,
+I believe that a psychologically diverse team could more successfully build and sell products to a psychologically diverse marketplace.
+
+Tech Startups in Particular
+Everyone uses a computer.  Hence, the market for technical products is diverse.
+Having a well-rounded, diverse team is essential to developing a product that appeals to a diverse set of customers.
+

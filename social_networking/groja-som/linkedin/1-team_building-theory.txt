@@ -1,7 +1,10 @@
 
  Team Building: My Theories
 ============================
+We will probably want to do these in separate articles.
 
+1. Theory of Psychological Diversity
+------------------------------------
 My Assumption
 -------------
 I believe diversity helps entities be more successful and resilient to change.
@@ -13,9 +16,11 @@ Types of Diverse Teams
 ----------------------
 Demographic Diversity (External, Visible)
 Diversity that is based on demographics is certainly important.
-Not only does it intuitively seem more fair, if product is to appeal to a
-broad range of demographics, it should be built and sold by people who belong to a
-broad range of demographics.
+For one thing, it intuitively seems more fair.
+
+Theory of Demographic Diversity
+If product is to appeal to a broad range of demographics, it should be
+built and sold by people who belong to a broad range of demographics.
 
 Psychological Diversity (External, Invisible)
 My theory is that even the smallest teams need to have members that can cover all
@@ -24,10 +29,30 @@ four primary functions (i.e., all four colors) to some extent:
 - Green ("T"hinking: making logical decisions)
 - Red ("F"eeling: making emotional decision)
 - Yellow ("S"ensing: noticing and working with facts)
+
+Theory of Psychological Diversity
+---------------------------------
 Just as a demographically diverse team could more successfully build and sell products to a demographically diverse marketplace,
 I believe that a psychologically diverse team could more successfully build and sell products to a psychologically diverse marketplace.
 
 Tech Startups in Particular
 Everyone uses a computer.  Hence, the market for technical products is diverse.
 Having a well-rounded, diverse team is essential to developing a product that appeals to a diverse set of customers.
+
+2. Theory of Encouraging Introverts to Speak Up
+-----------------------------------------------
+My Assumptions
+--------------
+a) In meetings and public forums, a few people tend to dominate the conversation
+b) Close to half the population is Introverted(link to stats on mbti site)
+
+Employee Morale
+---------------
+If people don't feel like they have a voice, they will be grumpy.
+This sort of bad attitude can literally be contagious.
+When people are afraid to speak up about negative things, it becomes impossible to solve the underlying problems.
+
+Theory of Encouraging Introverts to Speak Up
+--------------------------------------------
+Encouraging Introverts to speak up can enable gaining insight into hidden problems and issues.
 

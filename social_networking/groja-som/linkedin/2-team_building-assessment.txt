@@ -1,0 +1,13 @@
+
+ Team Building With Groja.com
+==============================
+
+Step 1: Assessment
+------------------
+This step contains two sub-steps.
+
+(1) Each team member answers a questionnaire that yields a four-letter type score
+(2) I use the program to draw an image based on the score
+
+Each of these sub-steps takes about 15 minutes.
+

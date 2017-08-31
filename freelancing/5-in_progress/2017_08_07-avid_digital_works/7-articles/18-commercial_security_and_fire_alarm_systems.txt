@@ -1,14 +1,54 @@
 
- Blog Post:: Commercial Security and Fire Alarm Systems
---------------------------------------------------------
+ Blog Post:: Commercial Security Cameras
+-----------------------------------------
 
 Introduction
-The cost of Closed Circuit Television (CCTV) security cameras continues to decline,
-making them easy to afford.
+The cost of Closed Circuit Television (CCTV) security cameras continues to decline, making them easy to afford.
 
-This article contains an overview of commercial security and fire alarm systems.
+You can rely on the 2D Electronics Design and Consulting Services Division to design and install a security system that fits both your needs and your budget.
 
-2. Commercial Security Systems
+Commercial Security
+Business owners can implement measures such as the following to increase the security of their business:
+
+- Video Monitoring: surveillance cameras
+- Access Control: keyed and electronic locks
+- Alarms: door and window alarms, and motion detectors
+
+This article focuses on CCTV security cameras.
+
+Security Camera Options
+The wide variety of cameras available today gives business owners many options.
+
+- Systems may be wired or wireless
+- Cameras may be fixed or mobile, allowing an operator to tilt, pan, or zoom in
+- High resolution streams offer more detail but require more storage space
+- Low resolution streams offer less detail but also require less storage space
+- Systems can be designed to work at night or in other conditions where the lighting is low
+- Some applications may require systems to be covert or vandal resistant, or both
+- Some options support the ability to supplement the feed with high-resolution photographs
+- These high-resolution systems are capable of helping to identify culprits and can even read license plates
+- Modern options allow business owners to view one or more feeds live on phone
+
+Along with the cost associated with each of these options, each has its own set of advantages and disadvantages.
+
+The experts at 2D Electronics can help you design a system customized to your specific needs and budget.
+
+Modern CCTV Systems
+As technological developments continue to be made in the industry, new features continue to appear in these camera systems.
+
+Modern digital surveillance systems can "multiplex" the images from more than one source onto a single storage device.  This allows:
+
+- Storing more visual streams on less disk space
+- Accessing these streams simultaneously
+
+Motion-activated cameras are also available, allowing for the storage of more streams in less space.
+These cameras can be set up to trigger alarms and record at higher resolutions when monitoring movement.
+
+Leading-edge technology supports tracking movement with multiple cameras through Video Content Analysis (VCA)
+
+The latest technology also supports facial recognition.
+
+
 These are some currently-available commercial security systems
 2.1 Access control
 2.1.1 Keyed Locks: Doors and Windows
@@ -32,18 +72,6 @@ These are some currently-available commercial security systems
 2.2.6 Glass break detector
 2.2.7 Photo electric beams
 2.2.8 Hold-up panic switch
-
-2.3 Surveillance cameras
-2.3.1 Wired
-2.3.2 Wireless
-2.3.3 Features
-2.3.3.1 Fixed vs. mobile (tilt/pan/zoom)
-2.3.3.2 View live on phone
-2.3.3.3 Night vision/low light
-2.3.3.4 Vandal resistant
-2.3.3.5 Covert
-2.3.3.6 High resolution
-2.3.3.7 Ability to read license plates
 
 2.4 Monitoring
 2.4.1 Video monitoring

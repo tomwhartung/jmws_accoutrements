@@ -1,13 +1,16 @@
 
- References for Topic 17: Commercial Security and Fire Alarm Systems
+ References for Topic 18: Commercial Security and Fire Alarm Systems
 ======================================================================
 
 References:
 -----------
+Start here (general):
+- https://en.wikipedia.org/wiki/Closed-circuit_television
+- https://www.adt.com/business/features - nice list!
+- https://www.safewise.com/home-security-faq/how-do-security-systems-work - home security, but good source of big picture info.
+- http://southshorealarms.com/services.html - home security, but good source of big picture info.
+
 Found by searching:
-- https://www.safewise.com/home-security-faq/how-do-security-systems-work - good source of big picture info.
-- http://www.securityinfowatch.com/article/10541705/understanding-residential-fire-alarm-systems - big picture info.
-- http://www.securityfire.com/fire-alarms.php - of minimal value
 - http://southshorealarms.com/services.html - big picture info.
 - http://southshorealarms.com/surveillance.html (list of packages available but no description)
 - http://southshorealarms.com/security.html (list of packages available but no description)
@@ -15,9 +18,12 @@ Found by searching:
 
 Businesses only:
 - https://www.adt.com/business
-- https://www.adt.com/business/features - nice list!
 - http://www.onduty.com/commercial/commercial-burglar-alarm-security-systems/
 - http://www.allied24.com/commercial_security/monitoring.php
+
+Fire only:
+- http://www.securityinfowatch.com/article/10541705/understanding-residential-fire-alarm-systems - big picture info.
+- http://www.securityfire.com/fire-alarms.php - of minimal value
 
 Wikipedia:
 - https://en.wikipedia.org/wiki/Security

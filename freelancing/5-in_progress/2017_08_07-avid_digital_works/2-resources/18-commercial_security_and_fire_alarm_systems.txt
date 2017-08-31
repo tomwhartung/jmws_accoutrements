@@ -10,6 +10,9 @@ Start here (general):
 - https://www.safewise.com/home-security-faq/how-do-security-systems-work - home security, but good source of big picture info.
 - http://southshorealarms.com/services.html - home security, but good source of big picture info.
 
+Technological Developments (mentioned in article):
+- https://en.wikipedia.org/wiki/Closed-circuit_television#Technological_developments
+
 Found by searching:
 - http://southshorealarms.com/services.html - big picture info.
 - http://southshorealarms.com/surveillance.html (list of packages available but no description)

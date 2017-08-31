@@ -61,10 +61,15 @@ These are some currently-available commercial security systems
 3.1.2 Heat detectors
 3.1.3 Local alarms
 3.1.4 Remote alarms
+3.1.4.1 Wired
+3.1.4.2 Wireless
 3.2 Sprinklers
-3.
 
+4. Other Systems, etc.
+4.1 Home automation: lights, HVAC, locks, cameras, appliances, etc.
+4.2 Medical Alarms
+4.3 Carbon monoxide detection
+4.4 Signs for yard and windows
 
-4. Other Systems
-4.1 Nurse call
+5. Conclusion
 

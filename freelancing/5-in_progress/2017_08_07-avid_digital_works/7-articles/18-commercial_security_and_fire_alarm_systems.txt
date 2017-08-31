@@ -1,0 +1,78 @@
+
+ Blog Post:: Commercial Security and Fire Alarm Systems
+--------------------------------------------------------
+
+Introduction
+The cost of Closed Circuit Television (CCTV) security cameras continues to decline,
+making them easy to afford.
+
+This article contains an overview of commercial security and fire alarm systems.
+
+2. Commercial Security Systems
+These are some currently-available commercial security systems
+2.1 Access control
+2.1.1 Keyed Locks: Doors and Windows
+2.1.2 Electronic Locks: Doors
+2.1.2.1 Card reader (swipe or proximity)
+2.1.2.2 Biometric (e.g., fingerprint) reader
+2.1.2.3 Programmable
+2.1.2.4 Access schedule control
+2.1.2.5 Access reports
+
+2.2 Alarms
+2.2.1 Door and window sensors
+2.2.2 Motion detectors: interior and exterior
+2.2.3 Local alarms (DIY): high-decibel, homeowner must call police
+2.2.4 Remote alarms: attempt to reach homeowner, call police if necessary
+2.2.4.1 Use phone lines, wireless
+2.2.4.2 VoIP or internet: may not work in a power outage
+2.2.5 Control panel
+2.2.5.1 Control and allow resetting of all sensors and detectors
+2.2.5.2 Communicate with remote office
+2.2.6 Glass break detector
+2.2.7 Photo electric beams
+2.2.8 Hold-up panic switch
+
+2.3 Surveillance cameras
+2.3.1 Wired
+2.3.2 Wireless
+2.3.3 Features
+2.3.3.1 Fixed vs. mobile (tilt/pan/zoom)
+2.3.3.2 View live on phone
+2.3.3.3 Night vision/low light
+2.3.3.4 Vandal resistant
+2.3.3.5 Covert
+2.3.3.6 High resolution
+2.3.3.7 Ability to read license plates
+
+2.4 Monitoring
+2.4.1 Video monitoring
+2.4.1.1 Monitor transactions
+2.4.1.2 Monitor entrances
+2.4.2 Environment (e.g., temperature, humidity) monitoring
+2.4.3 Motion detectors
+2.4.4 Panic button
+2.4.5 Door and window access
+2.4.6 Communications
+2.4.6.1 Email or text (SMS)
+2.4.6.2 Smart phone app
+2.4.6.3 Both
+
+3. Fire Alarm Systems
+3.1 Alarms
+3.1.1 Smoke detectors
+3.1.2 Heat detectors
+3.1.3 Local alarms
+3.1.4 Remote alarms
+3.1.4.1 Wired
+3.1.4.2 Wireless
+3.2 Sprinklers
+
+4. Other Systems, etc.
+4.1 Home automation: lights, HVAC, locks, cameras, appliances, etc.
+4.2 Medical Alarms
+4.3 Carbon monoxide detection
+4.4 Signs for yard and windows
+
+5. Conclusion
+

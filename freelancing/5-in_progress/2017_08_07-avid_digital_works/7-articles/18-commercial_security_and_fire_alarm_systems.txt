@@ -44,10 +44,32 @@ Modern digital surveillance systems can "multiplex" the images from more than on
 Motion-activated cameras are also available, allowing for the storage of more streams in less space.
 These cameras can be set up to trigger alarms and record at higher resolutions when monitoring movement.
 
-Leading-edge technology supports tracking movement with multiple cameras through Video Content Analysis (VCA)
+2.4 Monitoring
+2.4.1 Video monitoring
+2.4.1.1 Monitor transactions
+2.4.1.2 Monitor entrances
+2.4.2 Environment (e.g., temperature, humidity) monitoring
+2.4.3 Motion detectors
+2.4.4 Panic button
+2.4.5 Door and window access
+2.4.6 Communications
+2.4.6.1 Email or text (SMS)
+2.4.6.2 Smart phone app
+2.4.6.3 Both
 
-The latest technology also supports facial recognition.
+Leading-edge technology supports facial recognition and can even track movement with multiple cameras through Video Content Analysis (VCA).
 
+Each business has different security needs.  The Computer Aided Design (CAD) experts at 2d Electronics can design a security camera system that's the right size for your specific situation.
+
+Integrated Systems
+A new security camera system will work best as part of a business-wide security solution that includes:
+
+- Access control
+- Burglary alarms
+- Fire alarms
+
+
+Weather you need 4 cameas or 54 cameras 2d electrincis has the experience and the service to create security and alarms systems customized for your unique applications. We garuntee that by choosing 2d electronics your security and alarm system will not only meet your security needs but exceed your expectations.
 
 These are some currently-available commercial security systems
 2.1 Access control
@@ -72,19 +94,6 @@ These are some currently-available commercial security systems
 2.2.6 Glass break detector
 2.2.7 Photo electric beams
 2.2.8 Hold-up panic switch
-
-2.4 Monitoring
-2.4.1 Video monitoring
-2.4.1.1 Monitor transactions
-2.4.1.2 Monitor entrances
-2.4.2 Environment (e.g., temperature, humidity) monitoring
-2.4.3 Motion detectors
-2.4.4 Panic button
-2.4.5 Door and window access
-2.4.6 Communications
-2.4.6.1 Email or text (SMS)
-2.4.6.2 Smart phone app
-2.4.6.3 Both
 
 3. Fire Alarm Systems
 3.1 Alarms

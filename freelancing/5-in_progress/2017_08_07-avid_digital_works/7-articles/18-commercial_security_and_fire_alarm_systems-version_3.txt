@@ -44,22 +44,20 @@ Modern digital surveillance systems can "multiplex" the images from more than on
 - Accessing these streams simultaneously
 
 Motion-activated cameras are also available, allowing for the storage of more streams in less space.
-These cameras can be set up to record at higher resolutions when monitoring movement.
-
-These cameras can also be set up to trigger alarms so that security personnel and business owners can see what is going on in real time.
+These cameras can be set up to trigger alarms so that security personnel and business owners 
+These cameras can also be set up to record at higher resolutions when monitoring movement.
 
 Monitoring
 All video cameras allow monitoring while recording.
 
-Business owners typically want to monitor all entrances to the building, and entrances to inner rooms where additional security is warranted.
-These systems should be set up to monitor both door and window access.
+Business owners typically want to monitor all entrances to the building, and entrances to inner rooms where additional security is warranted.  These systems should be set up to monitor both door and window access.
 
-In addition to monitoring access, 2d Electronics can design and install security systems to handle other applications.
+In addition to monitoring access,
 
 - Retail businesses typically want to monitor transactions
-- Businesses may want to make a panic button - and one or more associated cameras - available for people such as cashiers who handle money
+- Businesses may want to make a panic button - and one or more associated cameras - available to monitor people such as cashiers who handle money
 - Some businesses may want to monitor the building's environment (e.g., temperature, humidity)
-- Systems are also available to detect flooding
+- Systems are available to detect flooding
 
 Having video monitoring in addition to any of these types of more specialized monitoring equiment gives the business owner a more complete sense of what is going on and when.
 
@@ -71,64 +69,14 @@ This communication can take place using any of the following technoligies:
 - A smart phone application
 - Text (SMS) mesage
 - Email
-- Phone call from an authorized security person
+- Phone call from a real live person
 - Any combination of these
 
 The Latest Technology
 Leading-edge technology supports facial recognition and can even track movement with multiple cameras through Video Content Analysis (VCA).
-This equipment can be set up to work with motion detectors so the cameras are unobtrusive yet "come alive" only when an intruder is present.
+This equipment can be set up to work with motion detectors that are unobtrusive yet "come alive" only when an intruder is present.
 
-Each business has different security needs.  The Computer Aided Design (CAD) experts at 2d Electronics can design a security camera system that's the right size for your specific situation.
+Each business has different security needs.
+Whether you need a few cameras or hundreds of them, the Computer Aided Design (CAD) experts at 2d Electronics can design a security camera system that's the right size for your specific situation.
 
-Integrated Systems
-A new security camera system will work best as part of a business-wide security solution that includes:
-
-- Access control
-- Burglary alarms
-- Fire alarms
-
-
-Whether you need 4 or 54 cameras, 2d electrincis has the experience and the service to create security and alarms systems customized for your unique applications. We garuntee that by choosing 2d electronics your security and alarm system will not only meet your security needs but exceed your expectations.
-
-These are some currently-available commercial security systems
-2.1 Access control
-2.1.1 Keyed Locks: Doors and Windows
-2.1.2 Electronic Locks: Doors
-2.1.2.1 Card reader (swipe or proximity)
-2.1.2.2 Biometric (e.g., fingerprint) reader
-2.1.2.3 Programmable
-2.1.2.4 Access schedule control
-2.1.2.5 Access reports
-
-2.2 Alarms
-2.2.1 Door and window sensors
-2.2.2 Motion detectors: interior and exterior
-2.2.3 Local alarms (DIY): high-decibel, homeowner must call police
-2.2.4 Remote alarms: attempt to reach homeowner, call police if necessary
-2.2.4.1 Use phone lines, wireless
-2.2.4.2 VoIP or internet: may not work in a power outage
-2.2.5 Control panel
-2.2.5.1 Control and allow resetting of all sensors and detectors
-2.2.5.2 Communicate with remote office
-2.2.6 Glass break detector
-2.2.7 Photo electric beams
-2.2.8 Hold-up panic switch
-
-3. Fire Alarm Systems
-3.1 Alarms
-3.1.1 Smoke detectors
-3.1.2 Heat detectors
-3.1.3 Local alarms
-3.1.4 Remote alarms
-3.1.4.1 Wired
-3.1.4.2 Wireless
-3.2 Sprinklers
-
-4. Other Systems, etc.
-4.1 Home automation: lights, HVAC, locks, cameras, appliances, etc.
-4.2 Medical Alarms
-4.3 Carbon monoxide detection
-4.4 Signs for yard and windows
-
-5. Conclusion
-
+2d Electronics guarantees the system they design will meet your security needs and exceed your expectations.

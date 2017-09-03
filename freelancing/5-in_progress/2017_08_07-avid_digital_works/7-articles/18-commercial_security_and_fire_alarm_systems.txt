@@ -36,6 +36,7 @@ The experts at 2D Electronics can help you design a system customized to your sp
 Modern CCTV Systems
 As technological developments continue to be made in the industry, new features continue to appear in these camera systems.
 
+Recording
 Modern digital surveillance systems can "multiplex" the images from more than one source onto a single storage device.  This allows:
 
 - Storing more visual streams on less disk space
@@ -44,20 +45,34 @@ Modern digital surveillance systems can "multiplex" the images from more than on
 Motion-activated cameras are also available, allowing for the storage of more streams in less space.
 These cameras can be set up to trigger alarms and record at higher resolutions when monitoring movement.
 
-2.4 Monitoring
-2.4.1 Video monitoring
-2.4.1.1 Monitor transactions
-2.4.1.2 Monitor entrances
-2.4.2 Environment (e.g., temperature, humidity) monitoring
-2.4.3 Motion detectors
-2.4.4 Panic button
-2.4.5 Door and window access
-2.4.6 Communications
-2.4.6.1 Email or text (SMS)
-2.4.6.2 Smart phone app
-2.4.6.3 Both
+Monitoring
+All video cameras allow monitoring while recording.
 
+Business owners typically want to monitor all entrances to the building, and entrances to inner rooms where additional security is warranted.  These systems should be set up to monitor both door and window access.
+
+In addition to monitoring access,
+
+- Retail businesses typically want to monitor transactions
+- Businesses may want to make a panic button - and one or more associated cameras - available to monitor people such as cashiers who handle money
+- Some businesses may want to monitor the building's environment (e.g., temperature, humidity)
+- Systems are available to detect flooding
+
+Having video monitoring in addition to any of these types of more specialized monitoring equiment gives the business owner a more complete sense of what is going on and when.
+
+Communications
+If your place of business stands unoccupied at any time, then you will want to be notified immediately when something is wrong.
+
+This communication can take place using any of the following technoligies:
+
+- A smart phone application
+- Text (SMS) mesage
+- Email
+- Phone call from a real live person
+- Any combination of these
+
+The Latest Technology
 Leading-edge technology supports facial recognition and can even track movement with multiple cameras through Video Content Analysis (VCA).
+This equipment can be set up to work with motion detectors that are unobtrusive yet "come alive" only when an intruder is present.
 
 Each business has different security needs.  The Computer Aided Design (CAD) experts at 2d Electronics can design a security camera system that's the right size for your specific situation.
 

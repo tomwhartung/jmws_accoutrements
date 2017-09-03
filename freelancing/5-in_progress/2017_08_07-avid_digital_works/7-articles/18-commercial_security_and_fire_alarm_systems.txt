@@ -57,7 +57,7 @@ These systems should be set up to monitor both door and window access.
 In addition to monitoring access, 2d Electronics can design and install security systems to handle other applications.
 
 - Retail businesses typically want to monitor transactions
-- Businesses may want to make a panic button - and one or more associated cameras - available for people such as cashiers who handle money
+- Businesses may want to make a panic button available for people such as cashiers who handle money
 - Some businesses may want to monitor the building's environment (e.g., temperature, humidity)
 - Systems are also available to detect flooding
 
@@ -76,9 +76,16 @@ This communication can take place using any of the following technoligies:
 
 The Latest Technology
 Leading-edge technology supports facial recognition and can even track movement with multiple cameras through Video Content Analysis (VCA).
-This equipment can be set up to work with motion detectors so the cameras are unobtrusive yet "come alive" only when an intruder is present.
+This equipment can be set up to work with motion detectors so the cameras are unobtrusive and "come alive" only when an intruder is present.
 
-Each business has different security needs.  The Computer Aided Design (CAD) experts at 2d Electronics can design a security camera system that's the right size for your specific situation.
+The 2d Electronics Guarantee
+Each business has different security needs.
+Whether you need a few cameras or hundreds of them, the Computer Aided Design (CAD) experts at 2d Electronics can design a security camera system that's the right size for your specific situation.
+
+2d Electronics guarantees the system we design and install will satisfy your security needs.
+We are committed to not just meeting these needs, but to providing a service that exceeds all of your expectations.
+
+-----------------------
 
 Integrated Systems
 A new security camera system will work best as part of a business-wide security solution that includes:

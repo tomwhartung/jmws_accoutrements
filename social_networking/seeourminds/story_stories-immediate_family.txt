@@ -1,21 +1,36 @@
 
 Mom's Story
 -----------
-My Mom went to 
+My Mom went to
 <a href='https://wp.stolaf.edu/' title='' target='_blank'>
 St. Olaf College
 </a>
 
+She worked at
+<a href='https://bonsecours.com/richmond/find-a-facility/st-marys-hospital' title='' target='_blank'>
+St. Mary's Hospital
+</a>
+
+
 Dad's Story
 -----------
-My Dad went to 
+My Dad went to
 <a href='https://www.unc.edu/' title='' target='_blank'>
 </a>
 
+He worked at
+<a href='' title='' target='_blank'>
+</a>
+
+
 My Story
 --------
-I went to 
+I went to
 <a href='https://www.vcu.edu/' title='' target='_blank'>
+</a>
+
+I worked at
+<a href='' title='' target='_blank'>
 </a>
 
 

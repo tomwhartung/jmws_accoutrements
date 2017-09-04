@@ -1,0 +1,21 @@
+
+Mom's Story
+-----------
+My Mom went to 
+<a href='https://wp.stolaf.edu/' title='' target='_blank'>
+St. Olaf College
+</a>
+
+Dad's Story
+-----------
+My Dad went to 
+<a href='https://www.unc.edu/' title='' target='_blank'>
+</a>
+
+My Story
+--------
+I went to 
+<a href='https://www.vcu.edu/' title='' target='_blank'>
+</a>
+
+

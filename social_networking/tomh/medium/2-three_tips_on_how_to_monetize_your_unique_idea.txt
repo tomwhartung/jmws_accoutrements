@@ -4,9 +4,12 @@
 
 1. Read The Tipping Point by Malcolm Gladwell
 -  People will go for just about anything unique
+-  Is your idea "sticky?"
 
 2. Decide what type of website to build
 -  Table of website types and how to monetize each (from google).
+-  Take this opportunity to learn how to build websites
+-  Set up GA/GTM on the new site
 
 3. Read To Sell Is Human by Daniel Pink
 -  Learn how the internet has changed how products are sold

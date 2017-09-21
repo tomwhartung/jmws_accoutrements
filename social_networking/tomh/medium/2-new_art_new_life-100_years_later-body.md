@@ -20,6 +20,17 @@ equlibrium and desire for equivalent relationships.
 
 Or something like that.
 
+# My Take
+
+One can't create the same sort art that Mondrian created, for that would not be art.
+
+## Ideas I Like:
+
+- Equilibrium
+- Honesty
+- Learning about and revealing inner traits and energies
+
+
 # Body
 
 In 1911, the Dutch painter [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) (1876-1944) moved from The Netherlands to Paris.
@@ -67,6 +78,8 @@ Following is a quote from the book's Introduction, written by Mondrian in 1932:
 Are we here today any closer to the goal of living in universal equilibrium than Mondrian was 100 years ago?
 Join me in taking a look at some more quotes from this book and see if we can answer that question!
 
+*****************************
+
 # Quotes
 
 ## Introduction to The New Art - The New Life (1932)
@@ -84,7 +97,7 @@ Join me in taking a look at some more quotes from this book and see if we can an
 
 Written over a period of three years, based on ideas developed over the previous decade, but never published during his lifetime.
 
-*Emphasis in original.*
+*All emphasis is in the original.*
 
 > If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*
 > Just as with the plastic means in art, it is evident that for this life our mentality must become more ore less purified,
@@ -103,11 +116,12 @@ In reality, progress in this area has been made, but there is still a ways to go
 (p. 249)
 
 In this evolution of art and life it is sincerity, rather than conformity, that matters:
+
 > In life every sincere effort leads to human evolution, and it is the same in art.
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
 (p. 249)
 
-> However, even in the new aesthetic, the word equilibrium has caused many misunderstandings and repeated errors.
+> However, even in the new aesthetic, the word "equilibrium" has caused many misunderstandings and repeated errors.
 > The only way to correct them will be by attentive study of the plastic expression of the new art.
 > It will be seen that the equilibrium in the new art is not a static state without action, as is generally thought but,
 > on the contrary, *a continuous and mutually annihilating opposition of equivalent but unequal elements.*
@@ -123,7 +137,7 @@ In this evolution of art and life it is sincerity, rather than conformity, that 
 > the masculine and feminine, the collective and individual, etc.*
 > Just as the vertical line differes in character from the horizontal, so in life the two aspects have their inherent and opposed character.
 > But just as in art these lines have different dimensions, so individuals and their groups differ in strength or size.
-> *Art demonstrates that life, through equivalence of its opposed aspects - despite tehir different nature - can approach real equilibrium.*
+> *Art demonstrates that life, through equivalence of its opposed aspects - despite their different nature - can approach real equilibrium.*
 (p. 254)
 
 > Art demonstrates that the true realization of real life requires *individual liberty.*

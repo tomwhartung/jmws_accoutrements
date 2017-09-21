@@ -13,32 +13,50 @@ In 1911, the Dutch painter [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mo
 He soon began contributing to the
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style" - art movement.
 
+Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
+Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, Public Domain
+Link: https://commons.wikimedia.org/w/index.php?curid=37634078
+
 Mondrian started out painting representational, "particular" paintings of such things as trees and landscapes.
+His paintings gradually became more and more abstract until all representation was "annihilated."
 
-His paintings gradually became more and more abstract until all representation was "annihilated" and
-they contained only black perpendicular lines and rectangles painted in primary colors.
-He called this type of painting
-[Neo-Plasticism](https://en.wikipedia.org/wiki/De_Stijl).
+Reduced to only the essential elements, his later work consisted of images
+containing black perpendicular lines and rectangles painted in primary colors on a white background.
+He called this type of painting "Pure Neo-Plasticism" and the goal of his paintings was to
+compose these essential elements so that these opposites of color and form would exist in equilibrium.
 
-This evolution is fascinating, but his writings - which explain his perceptions and reasons for painting like this, are even more so.
+Image: images/Piet_Mondrian-1930-Mondrian_Composition_II_in_Red_Blue_and_Yellow.jpg
+Title and Attribution: Composition with Red, Blue, and Yellow - By Piet Mondrian, Public Domain
+Link: https://commons.wikimedia.org/w/index.php?curid=37642803
 
-completed his last book,
+It looks easy to create these compositions, but it is not!
+
+## The New Art - The New Life: A Culture of Pure Relationships
+
+The evolution in his paintings is interesting, but his writings - which explain his
+perceptions and reasons for painting like this, are fascinating.
+He claims that just as art has evolved into opposites in equilibrium, so will future society.
+
+He completed his book
 [The New Art - The New Life: A Culture of Pure Relationships](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
 in 1931, but by then had been working on it since at least 1921.
 That may not quite be 100 years ago, but it's close enough.
 
-
-# Quotes
-
-## Introduction to The New Art - The New Life (1932)
-
-This introduction was written after the book, but was meant as an introduction.
+Following is a quote from the book's introduction, written by Mondrian in 1932:
 
 > The culture of art demonstrates that only *man's development* in the distant future can create
 > universal equilibrium through the *establishment of equivalent relationships.*
 > These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the
 > beauty of equivalent relationships exclusively through pure line and color.
 > This art is an image of the ideal human goal toward which humanity is moving.
+
+
+# Quotes
+
+## Introduction to The New Art - The New Life (1932)
+
+> The culture of art demonstrates that ....
+> (Used this quote.)
 (p. 278)
 
 > Until now the search for universal equilibrium has been neglected in favor of individual interests.
@@ -46,8 +64,6 @@ This introduction was written after the book, but was meant as an introduction.
 > To achieve universal equilibrium, the new art had to sacrifice the beauty of limiting and particular form in order to
 > establish equivalent relationships through their universal aspect of color and line.
 (p. 280)
-
-This introduction ends with a paragraph that addresses people who are not ready for abstract art.
 
 ## The New Art - The New Life: The Culture of Pure Relationships (1931)
 

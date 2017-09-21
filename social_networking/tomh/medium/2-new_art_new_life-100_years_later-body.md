@@ -172,73 +172,73 @@ In this evolution of art and life it is sincerity, rather than conformity, that 
 > from universal life and all its beauties, which then remain concealed.
 (p. 261)
 
-The actions of creation and abolition will become increasingly united,
-so that more and more we will be able to create by abolishing.
-Gradually the long periods of abolition and of creation will diminish;
-gradually peace and war will become one and annihilate each other.
-As we appropach *equivalence of the two contrary aspects within us and outside us,*
-we will gradually be less "lived by" life and become more capable of "living."
+> The actions of creation and abolition will become increasingly united,
+> so that more and more we will be able to create by abolishing.
+> Gradually the long periods of abolition and of creation will diminish;
+> gradually peace and war will become one and annihilate each other.
+> As we appropach *equivalence of the two contrary aspects within us and outside us,*
+> we will gradually be less "lived by" life and become more capable of "living."
 (p. 261)
 
-The perfecting of science is one of the principal ways by which human progress leads to a more equilibrated state.
+> The perfecting of science is one of the principal ways by which human progress leads to a more equilibrated state.
 (p. 262)
 
-The machine can free man from his state of slavery.  This cannot happen in a single day.
-But in time the machine can restore man to himself.  For man *does not live in order to work; he works in order to "live."*
+> The machine can free man from his state of slavery.  This cannot happen in a single day.
+> But in time the machine can restore man to himself.  For man *does not live in order to work; he works in order to "live."*
 (p. 262)
 
 > *[C]oncrete life is our actual human life, and it is logical that we are constrained to givit first attention.*
 (p. 263)
 
-If life and art demostrate that evolution takes place through the action of creation and abolition,
-then all the miseries and all the advantages brought by the progresss of civilization *are so many necessities for man's evolution.*
-But we generally see only one or the other of these two actions: thus life is seen either as declining or as unchanging.
-Creation alone would mean no change, and abolition alone would mean ruin.
-But those who see both actions as reciprocal understand life as *eternal growth.*
+> If life and art demonstrate that evolution takes place through the action of creation and abolition,
+> then all the miseries and all the advantages brought by the progresss of civilization *are so many necessities for man's evolution.*
+> But we generally see only one or the other of these two actions: thus life is seen either as declining or as unchanging.
+> Creation alone would mean no change, and abolition alone would mean ruin.
+> But those who see both actions as reciprocal understand life as *eternal growth.*
 (p. 264)
 
 > If all men were just and honest, all would be well and universal equilibrium would be spontaneously established.
 (p. 265)
 
-In life as in art, we must reckon with reality.  Not all men are just.
-That is why those who are just must try *to elevate the true and the just in man,
-must strive to create situations favorable to this development, and must attempt to
-establish a mutual organization that prevents disequilibrium and constrains man to be just in his social relationships.*
+> In life as in art, we must reckon with reality.  Not all men are just.
+> That is why those who are just must try *to elevate the true and the just in man,
+> must strive to create situations favorable to this development, and must attempt to
+> establish a mutual organization that prevents disequilibrium and constrains man to be just in his social relationships.*
 (p. 265)
 
-There will be nothing despotic in this constraint.
-And in a probably distant future, order will be imposed only by *mutual necessity.*
+> There will be nothing despotic in this constraint.
+> And in a probably distant future, order will be imposed only by *mutual necessity.*
 (p. 265)
 
-The day will come when the individual will be capable of governing himself.  The new art demonstrates all this.
+> The day will come when the individual will be capable of governing himself.  The new art demonstrates all this.
 (p. 265)
 
-General concentration upon proper and mutual relationships is the way to solve all the problems of society.
+> General concentration upon proper and mutual relationships is the way to solve all the problems of society.
 (p. 266)
 
-Because of corrupt conditions, man is often pressed, if not forced, to be exclusively preoccupied with money.
-Money, that invaluable means of cifilization, should be only a "means of exchange" and not
-assume a *limiting form* that oppresses and debases other forms of life.
+> Because of corrupt conditions, man is often pressed, if not forced, to be exclusively preoccupied with money.
+> Money, that invaluable means of cifilization, should be only a "means of exchange" and not
+> assume a *limiting form* that oppresses and debases other forms of life.
 (p. 266)
 
 > Capitalism as cultivated until now is a limiting form that is abolishing itself and
 > will be abolished in the culture of equivalent relationships.
 > ....
-Although a more stable world equilibrium will follow, the new form will still be too dominated by money to allow it to
-spread equivalently through the world.
-For the future, Neo-Plastic demonstrates for every area *an organization of equivalent relationships and not a new form.*
+> Although a more stable world equilibrium will follow, the new form will still be too dominated by money to allow it to
+> spread equivalently through the world.
+> For the future, Neo-Plastic demonstrates for every area *an organization of equivalent relationships and not a new form.*
 (p. 266)
 
 ### Team and Relationship Building
 
-**Key quote for using spiritual portraits for transparency and better relationships.**
+**This is a good quote to support using spiritual portraits for transparency and better relationships.**
 
-Love and friendship play an important role in mutual nonequivalent exchange.
-The new art demonstrates that in order to achieve real equivalence the oppositions of a relationship must be pure.
-To become pure they must first be separated, that is, disengaged from whatever they are confounded with.
-When the two aspects of life are confounded, hypocrisy controls and betrays us.
-This is why it is enormously important for the new art to establish *purified forms and pure relationships:
-they do not conceal, they are real and show themselves for what they are.*
+> Love and friendship play an important role in mutual nonequivalent exchange.
+> The new art demonstrates that in order to achieve real equivalence the oppositions of a relationship must be pure.
+> To become pure they must first be separated, that is, disengaged from whatever they are confounded with.
+> When the two aspects of life are confounded, hypocrisy controls and betrays us.
+> This is why it is enormously important for the new art to establish *purified forms and pure relationships:
+> they do not conceal, they are real and show themselves for what they are.*
 (p. 267)
 
 > A just solution must be found, for all human beings are basically equal and all are entitled to an equivalent existence.
@@ -247,20 +247,20 @@ they do not conceal, they are real and show themselves for what they are.*
 > if disabled, he must be supported *in keeping with the value* that he is unable to realize; he is a communal responsibility.
 > This is important not only for those who are incapable of contributing equivalent values,
 > but also for the others who, being assured of a livelihood, will have the strength to cultivate themselves,
-> to live their own lives, that is, to give u p their dependence upon limiting forms.
+> to live their own lives, that is, to give up their dependence upon limiting forms.
 > The entire community would thus benefit.
 (p. 267)
 
-Why do we not outlaw all arms making and destroy all weapons now existing in our "civilized" society?
-With weapons outlawed, it would be far less easy for men to kill each other.
-But in our society so many make their fortunes or live by these barbaric instruments.
-Again it is *particular interest* tjat sustains war.
+> Why do we not outlaw all arms making and destroy all weapons now existing in our "civilized" society?
+> With weapons outlawed, it would be far less easy for men to kill each other.
+> But in our society so many make their fortunes or live by these barbaric instruments.
+> Again it is *particular interest* that sustains war.
 (p. 268)
 
-In politics it is not enough to work toward internally equivalent relationships, we must above all
-achieve equifalent relationships of international order.
-In art, Neo-Plastic demonstrates this necessity most exactly.
-Through intersecting lines, the mutual relationships destroy each plane's separateness so that all unite completely.
+> In politics it is not enough to work toward internally equivalent relationships, we must above all
+> achieve equivalent relationships of international order.
+> In art, Neo-Plastic demonstrates this necessity most exactly.
+> Through intersecting lines, the mutual relationships destroy each plane's separateness so that all unite completely.
 (p. 268)
 
 > Just as art itself has slowly created a new plastic expression of more real equilibrium,

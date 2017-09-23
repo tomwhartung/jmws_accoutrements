@@ -137,13 +137,14 @@ In this evolution of art and life it is sincerity, rather than conformity, that 
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
 (p. 249)
 
+A person's superficial qualities veils the content of their personality. Demographics in particular can lead to erroneous expectations. 
 > By using subject matter or even particular form alone, figurative art always shows a descriptive,
 > literary side that veils the purely plastic expression of line, color, and relationships.
 (p. 251)
 
 It is easier for me to define what equilibrium is *not* - for example, the images in my experimental "Mondrianesque"
 gallery - than to define what it *is:*
-
+The increasingly wide gap between rich and poor certainly belies a huge amount of disequilibrium.
 > However, even in the new aesthetic, the word "equilibrium" has caused many misunderstandings and repeated errors.
 > The only way to correct them will be by attentive study of the plastic expression of the new art.
 > It will be seen that the equilibrium in the new art is not a static state without action, as is generally thought but,
@@ -153,6 +154,7 @@ gallery - than to define what it *is:*
 > *The physical aspect of man, of life, diminishes in opposition to the spiritual aspect, which becomes stronger.*
 (p. 254)
 
+A team can approach equilibrium by having members whose personalities compliment one another. Having spiritual portraits of the team members makes it easy to see where their strengths lie and what type of person could help add diversity and achieve equilibrium. 
 > It is therefore of great importance for humanity that art manifest in an exact way the constant but varying
 > rhythm of opposition of the two principal aspects of all life.
 > The rhythm of the straight line in rectangular opposition indicates
@@ -165,7 +167,8 @@ gallery - than to define what it *is:*
 
 I can see how the internet allows for each of us to specialize and find our brand - allowing each of us to
 live "in *independent existence consistent with his own character.*"
-
+The global marketplace gives people and companies alike the opportunity to specialize in a niche, and thus do the type of work that they enjoy the most, or are the best at, etc. 
+For equilibrium to prevail, it is essential that these relationships be mutually beneficial.
 > Art demonstrates that the true realization of real life requires *individual liberty.*
 > The new life will attain this liberty materially and spiritually.
 > Although joined to others by mutual equivalent relationships, the individual will be no less free,
@@ -180,6 +183,7 @@ live "in *independent existence consistent with his own character.*"
 > This requires a stage of evolution in which man will no longer abuse his liberty.
 (p. 255)
 
+Other oppositions exist in daily life, e.g. those compromising f
 > By following the rhythm of the two contrary oppositions of the straight line, we can say
 > that the real life basic to man is simply the action of equilibrated opposition - for example,
 > the double movement of respiration, which is contrary and complementary.

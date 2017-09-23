@@ -41,6 +41,20 @@ One can't create the same sort art that Mondrian created, for that would not be 
 - Breaking things down into essential elements (N/S and F/T) so that we can see them
 - Removing distracting surface shit
 
+## Process Idea
+
+There is soooo much here, hundreds of lines of just quotes, before I add my comments and interpretations.
+
+There is obviously enough here to motivate writing multiple articles.
+
+Idea: try to categorize each quote into one or more of the following categories of relevance:
+
+**Team Building**
+**Death and Our Personalities**
+**High Morality**
+
+I am already committed to writing a series of articles about **Team Building,** so now is a good time to start finding supporting material.
+
 # Possible Ending
 
 This short book was not published during his lifetime.
@@ -137,24 +151,39 @@ In this evolution of art and life it is sincerity, rather than conformity, that 
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
 (p. 249)
 
-A person's superficial qualities veils the content of their personality. Demographics in particular can lead to erroneous expectations. 
+A person's superficial qualities veils the content of their personality.
+Demographics in particular can lead to erroneous expectations: assuming a person will like something or act a certain
+way because they are female, old, black or asian or jewish or whatever, can lead to mistakes.
+
 > By using subject matter or even particular form alone, figurative art always shows a descriptive,
 > literary side that veils the purely plastic expression of line, color, and relationships.
 (p. 251)
 
-It is easier for me to define what equilibrium is *not* - for example, the images in my experimental "Mondrianesque"
-gallery - than to define what it *is:*
+For me, it is easier for me to define what equilibrium is *not* - for example, the images in
+my experimental "Mondrianesque" gallery - than to define what it *is.*
 The increasingly wide gap between rich and poor certainly belies a huge amount of disequilibrium.
+Disequilibrium is likewise apparent in the entire range of abusive relationships, from mansplaining to spousal murder.
+I suppose it is a sad fact of either my pessimistic outlook on life - or simply life itself - that I cannot
+think of a good example of equilibrium outside of Mondrian's paintings, of course.
+
 > However, even in the new aesthetic, the word "equilibrium" has caused many misunderstandings and repeated errors.
 > The only way to correct them will be by attentive study of the plastic expression of the new art.
 > It will be seen that the equilibrium in the new art is not a static state without action, as is generally thought but,
 > on the contrary, *a continuous and mutually annihilating opposition of equivalent but unequal elements.*
 (p. 252)
 
+**Team Building**
+I believe that at minimum a team must have at least two people: at least one who is more pragmatic and comfortable with
+physical aspects (xSxx) and one who is more idealistic and comfortable with spiritual aspects (xNxx).
+
 > *The physical aspect of man, of life, diminishes in opposition to the spiritual aspect, which becomes stronger.*
 (p. 254)
 
-A team can approach equilibrium by having members whose personalities compliment one another. Having spiritual portraits of the team members makes it easy to see where their strengths lie and what type of person could help add diversity and achieve equilibrium. 
+**Team Building**
+A team can approach equilibrium by having members whose personalities compliment one another.
+Having spiritual portraits of the team members makes it easy to see where their strengths lie and
+what type of person could help add diversity and achieve equilibrium.
+
 > It is therefore of great importance for humanity that art manifest in an exact way the constant but varying
 > rhythm of opposition of the two principal aspects of all life.
 > The rhythm of the straight line in rectangular opposition indicates
@@ -165,10 +194,16 @@ A team can approach equilibrium by having members whose personalities compliment
 > *Art demonstrates that life, through equivalence of its opposed aspects - despite their different nature - can approach real equilibrium.*
 (p. 254)
 
+**Team Building**
+For equilibrium to prevail, it is essential that these relationships be mutually beneficial.
 I can see how the internet allows for each of us to specialize and find our brand - allowing each of us to
 live "in *independent existence consistent with his own character.*"
-The global marketplace gives people and companies alike the opportunity to specialize in a niche, and thus do the type of work that they enjoy the most, or are the best at, etc. 
-For equilibrium to prevail, it is essential that these relationships be mutually beneficial.
+Certainly the trend toward freelancing and the gig economy supports a trend toward mutual relationships.
+Unlike the full-time marketplace, temporary work supports quickly moving on from abusive managers
+without any risk of the stigma that can come from being a "job hopper."
+Additionally, the global marketplace gives people and companies alike the opportunity to specialize in a niche, and
+thus do the type of work that they enjoy the most, or are the best at, or that pays the most, etc.
+
 > Art demonstrates that the true realization of real life requires *individual liberty.*
 > The new life will attain this liberty materially and spiritually.
 > Although joined to others by mutual equivalent relationships, the individual will be no less free,
@@ -179,22 +214,38 @@ For equilibrium to prevail, it is essential that these relationships be mutually
 > Likewise, in future life society will allow each individual in *independent existence consistent with his own character.*
 (p. 255)
 
+If nothing else, the internet obviously offers all of us total freedom of expression.
+Likewise obviously, the ability to exercise this freedom without abusing it will require some work.
+
 > Art in its end shows that individual liberty - until now an "ideal" - will become reality in the distant future.
 > This requires a stage of evolution in which man will no longer abuse his liberty.
 (p. 255)
 
-Other oppositions exist in daily life, e.g. those compromising f
+Oppositions other than the actions of respiration exist in daily life.
+Significantly, the psychological oppositions of judging and perceiving, thinking and feeling, etc. that Jung identified
+in his General Description of the Types are prime examples!
+
 > By following the rhythm of the two contrary oppositions of the straight line, we can say
 > that the real life basic to man is simply the action of equilibrated opposition - for example,
 > the double movement of respiration, which is contrary and complementary.
 > It is a pure expression of vital rhythm....
 (p. 256)
 
+Too few people are aware of the true significance of Jung's pairs of psychological opposites.
+Is there anyone else on the planet who can see the value of working towards equivalence of these fundamental oppositions?
+**This is the core of what I am working to express in the SeeOurMinds.com site: the desire to live a "truly human life."**
+The internet should help me find them!
+
 > When we understand the equivalence of contrary oppositions of art's rhythm, we work more consciously to build truly human life.
 > For least attention is given to establishing equilibrium through *equivalence of the two fundamental oppositions.*
 (pp. 256-257)
 
-A modern man who does not seek equivalence does not have the new mentality:
+**Best**
+A modern man who does not seek equivalence does not have the new mentality - "not that there's anything wrong with that:"
+Links:
+- https://www.youtube.com/watch?v=Oj3VphK9AMk
+- http://tvtropes.org/pmwiki/pmwiki.php/Main/NotThatTheresAnythingWrongWithThat
+- And even: https://en.wikipedia.org/wiki/The_Outing_(Seinfeld)
 
 > With regard to limiting forms, it is not only conventional forms that constitute obstacles to the new life,
 > but so do most of the new forms arising in political, social, and economic areas.
@@ -204,11 +255,21 @@ A modern man who does not seek equivalence does not have the new mentality:
 > despite his spiritual improvement is not of really new mentality if he fails to seek equivalence.
 (p. 257)
 
+**High Morality**
+Liberals see conservatives as "evil" because - in general - conservatives are against the good that liberals perceive as
+being inherent in the creation of "new ways" of dealing with the changes we experience.
+Conservatives see liberals as "evil" because - in general - liberals are working to abolish the good that conservaties perceive as
+being inherent in the "old ways" that conservatives seek to maintain, because they have obviously worked in the past,
+else we wouldn't be here.
+
 > Whether we conceive life as joy or as suffering depends on which is most important to us: abolition or creation.
 >
 > The beauty and the misery of concrete life consists precisely in the fact that we can escape neither abolition nor creation,
 > thus neither joy nor suffering.
 (p. 259)
+
+**High Morality**
+You need to get to his discussion of high morality near the end before you can understand where he is going here.
 
 > If evil is synonymous with abolition and thus with suffering, and
 > good is synonymous with creation and thus with joy, then in real life good and evil destroy each other.
@@ -217,8 +278,10 @@ A modern man who does not seek equivalence does not have the new mentality:
 > And it is also a characteristic of life's beauty and misery that we can escape neither one.
 (p. 260)
 
+**Death and Our Personalities**
 I assert that spiritual portraits "show ourselves as we really are* more than meat portraits.
 When we die, what is gone?  What remains here on earth?  Who are we, really?
+
 > But the new art also reveals another thing of the greatest importance: *to show ourselves as we really are.*
 > It reveals that frankness and sincerity are the primordial conditions for the new life.
 (p. 260)

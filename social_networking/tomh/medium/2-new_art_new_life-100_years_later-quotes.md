@@ -1,7 +1,10 @@
 
 # 2-new_art_new_life-100_years_later-quotes.md
 
-For original source material see doc/mondrian-links_and_quotes.md in the seeourminds.com repo.
+Just the quotes from the book *The New Art - The New Life* within the book (of the same name, containing all of his writings),
+with comments on a very few of them.
+
+For original source material, and quotes from other works in the collection, see doc/mondrian-links_and_quotes.md in the seeourminds.com repo.
 
 # Quotes
 

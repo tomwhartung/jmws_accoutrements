@@ -329,22 +329,6 @@ The internet should help me find them!
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
 - **High Universal Morality**
-- **Purified Forms**
-- Liberals see conservatives as "evil" because - in general - conservatives are against the good that liberals perceive as
-being inherent in the creation of "new ways" of dealing with the changes we experience,
-because change is the only constant in life.
-Conservatives, on the other hand, see liberals as "evil" because - in general - liberals are working to abolish
-the good that conservaties perceive as being inherent in the "old ways" that conservatives seek to maintain,
-because they have obviously worked in the past, else we wouldn't be here.
-> Whether we conceive life as joy or as suffering depends on which is most important to us: abolition or creation.
->
-> The beauty and the misery of concrete life consists precisely in the fact that we can escape neither abolition nor creation,
-> thus neither joy nor suffering.
-(p. 259)
-
-- **General/Best**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
 - You need to get to his discussion of high morality near the end before you can understand where he is going here.
 > If evil is synonymous with abolition and thus with suffering, and
 > good is synonymous with creation and thus with joy, then in real life good and evil destroy each other.
@@ -352,90 +336,6 @@ because they have obviously worked in the past, else we wouldn't be here.
 > But in concrete life good and evil oppose each other.
 > And it is also a characteristic of life's beauty and misery that we can escape neither one.
 (p. 260)
-
-- **General/Best**
-- **Death and Our Personalities**
-- **Purified Forms**
-- I assert that spiritual portraits "show ourselves as we really are* more than meat portraits.
-When we die, what is gone?  What remains here on earth?  Who are we, really?
-> But the new art also reveals another thing of the greatest importance: *to show ourselves as we really are.*
-> It reveals that frankness and sincerity are the primordial conditions for the new life.
-(p. 260)
-
-- **General/Best**
-- **Liberty**
-- **Purified Forms**
-- We can see what we really are internally, only by stripping away the external.
-> Nothing is more unfortunate for life than the concealment of reality: truth.
-> Since life is truth, life is then concealed.
-(p. 260)
-
-- **Diversity**
-- **Liberty**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> By enclosing ourselves within the small circle of what is agreeable to us, we unjustly separate ourselves from others,
-> from universal life and all its beauties, which then remain concealed.
-(p. 261)
-
-- **General/Best**
-- **Progress**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-> The actions of creation and abolition will become increasingly united,
-> so that more and more we will be able to create by abolishing.
->
-> Gradually the long periods of abolition and of creation will diminish;
-> gradually peace and war will become one and annihilate each other.
-> As we appropach *equivalence of the two contrary aspects within us and outside us,*
-> we will gradually be less "lived by" life and become more capable of "living."
-(p. 261)
-
-- **Progress**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-> The culture of art clearly shows that life is *continual transformation* in the sense of growth from birth until death.
-> Nothing recurs in the same way, nor remains the same.  Thus *life itself is opposed to all conservatism.*
-> Only for a time do the new forms recur in a similar way.  Yet, are they actually similar?
-> The fact that they often seem identical sustains the conservative mentality, and causes error.
->
-> Certainly, conservative action is present in life but always opposed to creative action,
-> so that each annihilates the other, and progress - growth - continues.
-(p. 261)
-
-- **Progress**
-- **Opposites and the Importance of Equilibrium**
-> The perfecting of science is one of the principal ways by which human progress leads to a more equilibrated state.
-(p. 262)
-
-- **General/Best**
-- **Progress**
-- **Equivalent Mutual Relationships**
-> In all areas of life, social and economic, we must create new organizations - not in the old way,
-> dominated by other organizations - but as true socialism envisages, *self-governed organizations composed of
-> producers and consumers in equivalent mutual relationships.*
-(p. 262)
-
-- **General/Best**
-- **Progress**
-- **Liberty**
-> The creation of the machine itself proves that man has already lost much of his animal force and has therefore sought to replace it.
-> The machine can free man from his state of slavery.
->
-> This cannot happen in a single day.
-> But in time the machine can restore man to himself.
-> For man *does not live in order to work; he works in order to "live."*
-(p. 262)
-
-- **General/Best**
-- **Progress**
-> The content of Western culture is above all to make man conscious.
->
-> Man was not originally conscious of the life deep within him, which we have called "real life" (the essential in man).
-> He was more or less conscious of the concrete side of life - the physical, the sensual, the intellectual.
-> *Therefore, concrete life is our actual human life, and it is logical that we are constrained to give it first attention.*
-(p. 263)
 
 - **General/Best**
 - **Progress**
@@ -460,13 +360,6 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > not only remains intact but sheds its harmful disguises.
 (pp. 264-265)
 
-- **General/Best**
-- **Progress**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> If all men were just and honest, all would be well and universal equilibrium would be spontaneously established.
-> If kings were just, a republic would be no better than a monarchy.
-(p. 265)
 
 - **General/Best**
 - **Progress**
@@ -483,12 +376,6 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > And in a probably distant future, order will be imposed only by *mutual necessity.*
 (p. 265)
 
-- **General/Best**
-- **Progress**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> The day will come when the individual will be capable of governing himself.  The new art demonstrates all this.
-(p. 265)
 
 - **General/Best**
 - **Progress**
@@ -497,30 +384,6 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > General concentration upon proper and mutual relationships is the way to solve all the problems of society.
 (p. 266)
 
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> Concentration on the mutual relationships of social life will change our conception of life, and thus our efforts.
-> Instead of complaining, for instance, that men of our time are interested only in making money by any means,
-> we must try to create social and economic circumstances that not only prefent them from resorting to unjust means,
-> but will actually impose just means and make them possible.
-> Because of corrupt conditions, man is often pressed, if not forced, to be exclusively preoccupied with money.
-> Money, that invaluable means of civilization, should be only a "means of exchange" and not
-> assume a *limiting form* that oppresses and debases other forms of life.
-(p. 266)
-
-- **Progress**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> Capitalism as cultivated until now is a limiting form that is abolishing itself and
-> will be abolished in the culture of equivalent relationships.
-> Already, today's disequilibrated social and economic conditions show that this form has matured and is about to transform itself.
-> This form, instead of becoming open, so as to make possible an equivalent distribution of values,
-> will probably remain a "form" - as art clearly shows by its transformation of particular form into
-> purified form before its destruction of all limited form.
-> Although a more stable world equilibrium will follow, the new form will still be too dominated by money to allow it to
-> spread equivalently through the world.
-> For the future, Neo-Plastic demonstrates for every area *an organization of equivalent relationships and not a new form.*
-(p. 266)
 
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
@@ -536,30 +399,6 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > they do not conceal, they are real and show themselves for what they are.*
 (p. 267)
 
-- **Progress**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> In communal life the question will always arise whether all are capable of contributing equivalent value if they
-> lack the physical or mental power; physically, for example, old people, children, and especially the sick.
-> A just solution must be found, for all human beings are basically equal and all are entitled to an equivalent existence.
-> This is not achieved by charity or love or friendship, for these qualities cannot create pure relationships.
-> *The essential value of each individual entitles him to an existence equivalent to that of others;*
-> if disabled, he must be supported *in keeping with the value* that he is unable to realize; he is a communal responsibility.
-> This is important not only for those who are incapable of contributing equivalent values,
-> but also for the others who, being assured of a livelihood, will have the strength to cultivate themselves,
-> to live their own lives, that is, to give up their dependence upon limiting forms.
-> The entire community would thus benefit.
-(p. 267)
-
-- **General/Best**
-- **Progress**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> Why do we not outlaw all arms making and destroy all weapons now existing in our "civilized" society?
-> With weapons outlawed, it would be far less easy for men to kill each other.
-> But in our society so many make their fortunes or live by these barbaric instruments.
-> Again it is *particular interest* that sustains war.
-(p. 268)
 
 - **General/Best**
 - **Progress**
@@ -590,16 +429,6 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > and thus a *new organization* that already makes possible a freer and more really unified life.
 (p. 269)
 
-- **Liberty**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-- **Purified Forms**
-> Religion became a limiting form, as the church, but shows its true content as it progressively frees itself from
-> its trappings in the course of human culture.
-> If art demonstrates that the mutual separation of forms increases their intrinsic value and produces a more perfect union,
-> we can also note with satisfaction that the separation of church and state, the separation of religion from learning or philosophy.
-> Liberated and restored to independence, everything more easily achieves profundity.
-(p. 269)
 
 - **General/Best**
 - **Team Building**
@@ -610,30 +439,6 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > life itself will slowly create this equilibrium in a new social and economic organization.
 (p. 269)
 
-- **Progress**
-- **High Universal Morality**
-- **Purified Forms**
-> Conventional morality, however, is not the pure expression of high universal morality.
-> Just as in the figurative work of art, purely plastic expression is not only confused but distorted,
-> so in life conventional morality is confused and distored by enclosing itself within its various forms.
-(p. 270)
-
-- **Progress**
-- **High Universal Morality**
-> What high universal morality - which is an expression of human evolution - requires is
-> precisely *the same thing that life* - which is equally an expression of human evolution - demands.
-(p. 270)
-
-- **Progress**
-- **Liberty**
-- **High Universal Morality**
-> High universal morality missed its goal because of the limited understanding of men, whose very nature must oppose it.
-> This is very logical because high universal morality is not the essential expression of the culture of the past,
-> which is characterized as the culture of particular form.
-> Despite the fact that high universal morality could not be realized, men nevertheless sought to impose it in the
-> form of conventional morality.
-> Thus arose all the hypocritical and corrupt conditions for which life has been the scene.
-(p. 270)
 
 - **General/Best**
 - **Progress**
@@ -647,41 +452,6 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > become capable of realizing the content of high universal morality, which prescibes that we live for each and for all.
 (p. 270)
 
-- **Progress**
-- **High Universal Morality**
-> If the culture of particular form creates and cultivates this form and equally destroys it,
-> morality must accord with this double action.  *It must accept evil as well as good.*
->
-> But the distorted or confused morality of the past could not accept evil and considered it to be abnormal, a disease, a defect of life.
-(p. 271)
-
-- **Progress**
-- **High Universal Morality**
-- **Purified Forms**
-> Toward the end of the culture of particular forms, high universal morality - which basically contains
-> only good - appears to dictate that we must do evil to these forms.
-> But actually, it envisages only the establishment of pure and equivalent relationships, and therefore requires purified forms.
-(p. 271)
-
-- **Progress**
-- **High Universal Morality**
-- **Purified Forms**
-> The new morality therefore demands that we *accept the abolition of oppressive particular forms;*
-> in this sense it is for a time *a morality of evil.*
-> But it is against the mutual abolition of particular forms to the point of their total destruction,
-> because the new culture needs *what is essential in these forms* for its new creation.
->
-> The new morality therefore requires that we recognize evil as being basically good.
-> For high universal morality transcends the limitations of time.
-(p. 271)
-
-- **Progress**
-- **Liberty**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> Because of the need to secure his personal existence, man, egoist by nature, will remain so throughout his evolution.
-> But in the course of evolution, egoism at the expense of others is increasingly transformed into egoism directly benefiting all.
-(p. 273)
 
 - **General/Best**
 - **Progress**
@@ -698,18 +468,4 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > This is how life can realize the high ideals proclaimed so long ago.
 (p. 273)
 
-- **General/Best**
-- **Progress**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
-> As the new life approaches, a new morality is clearly being established, clearly founded on the new culture revealed by life and by art.
-> During the culture of equivalent relationships, it will be based on the apogee of this culture, that is,
-> on the realization of *equivalent mutual relationships* that the new life will attain.
->
-> The new morality is that of *social life* in contrast to the morality of the past,
-> which strove toward the same goal but in reality fostered only particular life, individual or collective.
-> While the morality of the past was sustained by church and state, the new morality is sustained by society.
-> Its content, conceived abstractly, is *universal international justice.*
-(p. 274)
 

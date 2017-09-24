@@ -375,6 +375,7 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 (p. 265)
 
 - **General/Best**
+- **Liberty**
 - **Progress**
 - **High Universal Morality**
 - **Equivalent Mutual Relationships**

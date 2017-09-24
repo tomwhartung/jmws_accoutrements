@@ -138,7 +138,7 @@ Join me in taking a look at some more quotes from this book and see if we can an
 
 ## Introduction to The New Art - The New Life (1932)
 
-- **Already used this quote.**
+- **Already using this quote!**
 > The culture of art demonstrates that only *man's development* in the distant future can create
 > universal equilibrium through the *establishment of equivalent relationships.*
 > These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the
@@ -146,18 +146,6 @@ Join me in taking a look at some more quotes from this book and see if we can an
 > This art is an image of the ideal human goal toward which humanity is moving.
 (p. 278)
 
-- **General/Best**
-- **Team Building**
-- **Diversity**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-- **Purified Forms**
-- **Equivalent Mutual Relationships**
-> Until now the search for universal equilibrium has been neglected in favor of individual interests.
-> Art demonstrates that, as long as these dominate, world equilibrium cannot exist.
-> To achieve universal equilibrium, the new art had to sacrifice the beauty of limiting and particular form in order to
-> establish equivalent relationships through their universal aspect of color and line.
-(p. 280)
 
 ## The New Art - The New Life: The Culture of Pure Relationships (1931)
 
@@ -165,6 +153,7 @@ Written over a period of three years, based on ideas developed over the previous
 
 *All emphasis is in the original.*
 
+**Definitely one of the Best**
 - **General/Best**
 - **Team Building**
 - **Progress**
@@ -180,16 +169,6 @@ Written over a period of three years, based on ideas developed over the previous
 > *through pure and equivalent relationships of increasingly free individuals.*
 (p. 248)
 
-- **Progress**
-- **Diversity**
-- **Purified Forms**
-- I see parallels between what he is saying in the next quote, about subject and particular form,
-in the (supposed) trend to ignoring demographics (race, gender, age, etc.) in hiring.
-In reality, progress in this area has been made, but there is still a ways to go.
-> Today we see subject and particular form, once of such great importance in the work,
-> rejected not only as being a primitive means of expression, but also as limiting expression.
-> Until now their use has been prolongd by tradition and necessity - equally by convention and inertia.
-(p. 249)
 
 - **General/Best**
 - **Progress**
@@ -198,14 +177,6 @@ In reality, progress in this area has been made, but there is still a ways to go
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
 (p. 249)
 
-- **Diversity**
-- **Purified Forms**
-- A person's superficial qualities veils the content of their personality.
-Demographics in particular can lead to erroneous expectations: assuming a person will like something or act a certain
-way because they are female, old, black or asian or jewish or whatever, can lead to mistakes.
-> By using subject matter or even particular form alone, figurative art always shows a descriptive,
-> literary side that veils the purely plastic expression of line, color, and relationships.
-(p. 251)
 
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
@@ -224,64 +195,6 @@ think of a good example of equilibrium outside of Mondrian's paintings, of cours
 > on the contrary, *a continuous and mutually annihilating opposition of equivalent but unequal elements.*
 (p. 252)
 
-- **Team Building**
-- **Purified Forms**
-- I believe that at minimum a team must have at least two people: at least one who is more pragmatic and comfortable with
-physical aspects (xSxx) and one who is more idealistic and comfortable with spiritual aspects (xNxx).
-> *The physical aspect of man, of life, diminishes in opposition to the spiritual aspect, which becomes stronger.*
-(p. 254)
-
-- **General/Best**
-- **Team Building**
-- **Progress**
-- **Opposites and the Importance of Equilibrium**
-- **Purified Forms**
-- **Equivalent Mutual Relationships**
-- A team can approach equilibrium by having members whose personalities compliment one another.
-Having spiritual portraits of the team members makes it easy to see where their strengths lie and
-what type of person could help add diversity and achieve equilibrium.
-> It is therefore of great importance for humanity that art manifest in an exact way the constant but varying
-> rhythm of opposition of the two principal aspects of all life.
-> The rhythm of the straight line in rectangular opposition indicates
-> *the need for equivalence* of these two aspects in life: *the equal value of the material and spiritual,
-> the masculine and feminine, the collective and individual, etc.*
-> Just as the vertical line differes in character from the horizontal, so in life the two aspects have their inherent and opposed character.
-> But just as in art these lines have different dimensions, so individuals and their groups differ in strength or size.
-> *Art demonstrates that life, through equivalence of its opposed aspects - despite their different nature - can approach real equilibrium.*
-(p. 254)
-
-- **General/Best**
-- **Team Building**
-- **Progress**
-- **Liberty**
-- **Purified Forms**
-- **Equivalent Mutual Relationships**
-- For equilibrium to prevail, it is essential that these relationships be mutually beneficial.
-I can see how the internet allows for each of us to specialize and find our brand - allowing each of us to
-live "in *independent existence consistent with his own character.*"
-Certainly the trend toward freelancing and the gig economy supports a trend toward mutual relationships.
-Unlike the full-time marketplace, temporary work supports quickly moving on from abusive managers
-without any risk of the stigma that can come from being a "job hopper."
-Additionally, the global marketplace gives people and companies alike the opportunity to specialize in a niche, and
-thus do the type of work that they enjoy the most, or are the best at, or that pays the most, etc.
-> Art demonstrates that the true realization of real life requires *individual liberty.*
-> The new life will attain this liberty materially and spiritually.
-> Although joined to others by mutual equivalent relationships, the individual will be no less free,
-> because of the equivalence of these relationships.
->
-> The new art gives *independent existence* to line and color in that they are *neither oppressed nor deformed by particular form,* but
-> establish their own limitations *appropriate to their nature.*
-> Likewise, in future life society will allow each individual in *independent existence consistent with his own character.*
-(p. 255)
-
-- **General/Best**
-- **Progress**
-- **Liberty**
-- If nothing else, the internet obviously offers all of us total freedom of expression.
-Also obviously, the ability to exercise this freedom without abusing it will require some work.
-> Art in its end shows that individual liberty - until now an "ideal" - will become reality in the distant future.
-> This requires a stage of evolution in which man will no longer abuse his liberty.
-(p. 255)
 
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
@@ -326,16 +239,6 @@ The internet should help me find them!
 > despite his spiritual improvement is not of really new mentality if he fails to seek equivalence.
 (p. 257)
 
-- **General/Best**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-- You need to get to his discussion of high morality near the end before you can understand where he is going here.
-> If evil is synonymous with abolition and thus with suffering, and
-> good is synonymous with creation and thus with joy, then in real life good and evil destroy each other.
->
-> But in concrete life good and evil oppose each other.
-> And it is also a characteristic of life's beauty and misery that we can escape neither one.
-(p. 260)
 
 - **General/Best**
 - **Progress**

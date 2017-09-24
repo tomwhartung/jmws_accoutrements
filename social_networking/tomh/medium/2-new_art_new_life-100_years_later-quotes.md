@@ -9,6 +9,11 @@ For original source material see doc/mondrian-links_and_quotes.md in the seeourm
 
 This introduction was written after the book, but was meant as an introduction.
 
+> The culture of art demonstrates that only *man's development* in the distant future can create
+> universal equilibrium through the *establishment of equivalent relationships.*
+> These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the
+> beauty of equivalent relationships exclusively through pure line and color.
+> This art is an image of the ideal human goal toward which humanity is moving.
 (p. 278)
 
 > Until now the search for universal equilibrium has been neglected in favor of individual interests.

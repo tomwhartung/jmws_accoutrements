@@ -63,6 +63,22 @@ These themes run through these quotes:
 For example, I am already committed to writing a series of articles about **Team Building,** so now is a good time to
 start identifying supporting material for that theme.
 
+# Choosing Quotes for This Article
+
+Want to use only the **best 3-4 quotes** for this article.
+
+Choose quotes that express the following core themes:
+
+- **General/Best**
+- **Progress**
+- **Opposites and the Importance of Equilibrium**
+- **Purified Forms**
+- **Equivalent Mutual Relationships**
+
+Save the others for subsequent articles, e.g., the Team Building articles for LinkedIn.
+
+- **Team Building** - Save for later!
+
 # Possible Ending
 
 This short book was not published during his lifetime.
@@ -122,7 +138,12 @@ Join me in taking a look at some more quotes from this book and see if we can an
 
 ## Introduction to The New Art - The New Life (1932)
 
-> The culture of art demonstrates that ....  (Used this quote.)
+- **Already used this quote.**
+> The culture of art demonstrates that only *man's development* in the distant future can create
+> universal equilibrium through the *establishment of equivalent relationships.*
+> These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the
+> beauty of equivalent relationships exclusively through pure line and color.
+> This art is an image of the ideal human goal toward which humanity is moving.
 (p. 278)
 
 - **General/Best**
@@ -159,28 +180,29 @@ Written over a period of three years, based on ideas developed over the previous
 > *through pure and equivalent relationships of increasingly free individuals.*
 (p. 248)
 
+- **Progress**
 - **Diversity**
 - **Purified Forms**
 - I see parallels between what he is saying in the next quote, about subject and particular form,
 in the (supposed) trend to ignoring demographics (race, gender, age, etc.) in hiring.
 In reality, progress in this area has been made, but there is still a ways to go.
-
 > Today we see subject and particular form, once of such great importance in the work,
 > rejected not only as being a primitive means of expression, but also as limiting expression.
 > Until now their use has been prolongd by tradition and necessity - equally by convention and inertia.
 (p. 249)
 
 - **General/Best**
+- **Progress**
 - In this evolution of art and life it is sincerity, rather than conformity, that matters:
 > In life every sincere effort leads to human evolution, and it is the same in art.
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
 (p. 249)
 
 - **Diversity**
+- **Purified Forms**
 - A person's superficial qualities veils the content of their personality.
 Demographics in particular can lead to erroneous expectations: assuming a person will like something or act a certain
 way because they are female, old, black or asian or jewish or whatever, can lead to mistakes.
-
 > By using subject matter or even particular form alone, figurative art always shows a descriptive,
 > literary side that veils the purely plastic expression of line, color, and relationships.
 (p. 251)
@@ -196,7 +218,6 @@ The increasingly wide gap between rich and poor certainly belies a huge amount o
 Disequilibrium is likewise apparent in the entire range of abusive relationships, from mansplaining to spousal murder.
 I suppose it is a sad fact of either my pessimistic outlook on life - or simply life itself - that I cannot
 think of a good example of equilibrium outside of Mondrian's paintings, of course.
-
 > However, even in the new aesthetic, the word "equilibrium" has caused many misunderstandings and repeated errors.
 > The only way to correct them will be by attentive study of the plastic expression of the new art.
 > It will be seen that the equilibrium in the new art is not a static state without action, as is generally thought but,
@@ -207,18 +228,18 @@ think of a good example of equilibrium outside of Mondrian's paintings, of cours
 - **Purified Forms**
 - I believe that at minimum a team must have at least two people: at least one who is more pragmatic and comfortable with
 physical aspects (xSxx) and one who is more idealistic and comfortable with spiritual aspects (xNxx).
-
 > *The physical aspect of man, of life, diminishes in opposition to the spiritual aspect, which becomes stronger.*
 (p. 254)
 
 - **General/Best**
 - **Team Building**
+- **Progress**
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
+- **Equivalent Mutual Relationships**
 - A team can approach equilibrium by having members whose personalities compliment one another.
 Having spiritual portraits of the team members makes it easy to see where their strengths lie and
 what type of person could help add diversity and achieve equilibrium.
-
 > It is therefore of great importance for humanity that art manifest in an exact way the constant but varying
 > rhythm of opposition of the two principal aspects of all life.
 > The rhythm of the straight line in rectangular opposition indicates
@@ -243,7 +264,6 @@ Unlike the full-time marketplace, temporary work supports quickly moving on from
 without any risk of the stigma that can come from being a "job hopper."
 Additionally, the global marketplace gives people and companies alike the opportunity to specialize in a niche, and
 thus do the type of work that they enjoy the most, or are the best at, or that pays the most, etc.
-
 > Art demonstrates that the true realization of real life requires *individual liberty.*
 > The new life will attain this liberty materially and spiritually.
 > Although joined to others by mutual equivalent relationships, the individual will be no less free,
@@ -541,14 +561,13 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > Again it is *particular interest* that sustains war.
 (p. 268)
 
-**General/Best**
-**Progress**
-**Opposites and the Importance of Equilibrium**
-**High Universal Morality**
-**Equivalent Mutual Relationships**
-
-The key to world peace - it's right here, people!
-
+- **General/Best**
+- **Progress**
+- **Opposites and the Importance of Equilibrium**
+- **High Universal Morality**
+- **Purified Forms**
+- **Equivalent Mutual Relationships**
+- The key to world peace - it's right here, people!
 > In politics it is not enough to work toward internally equivalent relationships, we must above all
 > achieve equivalent relationships of international order.
 >
@@ -560,21 +579,21 @@ The key to world peace - it's right here, people!
 > In Neo-Plastict there are, in fact, very definite boundaries.
 (p. 268-269)
 
-**Progress**
-**High Universal Morality**
-**Purified Forms**
-
+- **General/Best**
+- **Progress**
+- **High Universal Morality**
+- **Purified Forms**
+- **Equivalent Mutual Relationships**
 > Although Neo-Plastic establishes the goal of human culture, this goal points the way for tomorrow.
 > And if the mutual equality that Neo-Plastic manifests cannot be realized in life today,
 > the new art nevertheless shows that pure forms and relationships can be established,
 > and thus a *new organization* that already makes possible a freer and more really unified life.
 (p. 269)
 
-**Liberty**
-**Opposites and the Importance of Equilibrium**
-**High Universal Morality**
-**Purified Forms**
-
+- **Liberty**
+- **Opposites and the Importance of Equilibrium**
+- **High Universal Morality**
+- **Purified Forms**
 > Religion became a limiting form, as the church, but shows its true content as it progressively frees itself from
 > its trappings in the course of human culture.
 > If art demonstrates that the mutual separation of forms increases their intrinsic value and produces a more perfect union,
@@ -582,30 +601,32 @@ The key to world peace - it's right here, people!
 > Liberated and restored to independence, everything more easily achieves profundity.
 (p. 269)
 
-**General/Best**
-**Opposites and the Importance of Equilibrium**
-
+- **General/Best**
+- **Team Building**
+- **Progress**
+- **Opposites and the Importance of Equilibrium**
+- **Equivalent Mutual Relationships**
 > Just as art itself has slowly created a new plastic expression of more real equilibrium,
 > life itself will slowly create this equilibrium in a new social and economic organization.
 (p. 269)
 
-**High Universal Morality**
-**Purified Forms**
-
+- **Progress**
+- **High Universal Morality**
+- **Purified Forms**
 > Conventional morality, however, is not the pure expression of high universal morality.
 > Just as in the figurative work of art, purely plastic expression is not only confused but distorted,
 > so in life conventional morality is confused and distored by enclosing itself within its various forms.
 (p. 270)
 
-**Progress**
-**High Universal Morality**
-
-> What high universal morality - which is an expression of human eveolution - requires is
+- **Progress**
+- **High Universal Morality**
+> What high universal morality - which is an expression of human evolution - requires is
 > precisely *the same thing that life* - which is equally an expression of human evolution - demands.
 (p. 270)
 
-**High Universal Morality**
-
+- **Progress**
+- **Liberty**
+- **High Universal Morality**
 > High universal morality missed its goal because of the limited understanding of men, whose very nature must oppose it.
 > This is very logical because high universal morality is not the essential expression of the culture of the past,
 > which is characterized as the culture of particular form.
@@ -614,32 +635,37 @@ The key to world peace - it's right here, people!
 > Thus arose all the hypocritical and corrupt conditions for which life has been the scene.
 (p. 270)
 
-**High Universal Morality**
-
+- **General/Best**
+- **Progress**
+- **Liberty**
+- **High Universal Morality**
+- **Purified Forms**
+- **Equivalent Mutual Relationships**
 > High universal morality finds its expression in the apogee of the culture of equivalent relationships.
 > Art in its end demonstrates that only line and color free from all oppression of form can constitute equivalent relationships.
 > Thus in life only the free individual and groups of free individuals can form a mutually equivalent organization and
 > become capable of realizing the content of high universal morality, which prescibes that we live for each and for all.
 (p. 270)
 
-**High Universal Morality**
-
+- **Progress**
+- **High Universal Morality**
 > If the culture of particular form creates and cultivates this form and equally destroys it,
 > morality must accord with this double action.  *It must accept evil as well as good.*
 >
 > But the distorted or confused morality of the past could not accept evil and considered it to be abnormal, a disease, a defect of life.
 (p. 271)
 
-**High Universal Morality**
-**Purified Forms**
-
+- **Progress**
+- **High Universal Morality**
+- **Purified Forms**
 > Toward the end of the culture of particular forms, high universal morality - which basically contains
 > only good - appears to dictate that we must do evil to these forms.
 > But actually, it envisages only the establishment of pure and equivalent relationships, and therefore requires purified forms.
 (p. 271)
 
-**High Universal Morality**
-
+- **Progress**
+- **High Universal Morality**
+- **Purified Forms**
 > The new morality therefore demands that we *accept the abolition of oppressive particular forms;*
 > in this sense it is for a time *a morality of evil.*
 > But it is against the mutual abolition of particular forms to the point of their total destruction,
@@ -649,21 +675,20 @@ The key to world peace - it's right here, people!
 > For high universal morality transcends the limitations of time.
 (p. 271)
 
-**Progress**
-**Liberty**
-**High Universal Morality**
-
+- **Progress**
+- **Liberty**
+- **High Universal Morality**
+- **Equivalent Mutual Relationships**
 > Because of the need to secure his personal existence, man, egoist by nature, will remain so throughout his evolution.
 > But in the course of evolution, egoism at the expense of others is increasingly transformed into egoism directly benefiting all.
 (p. 273)
 
-**General/Best**
-**Progress**
-**Opposites and the Importance of Equilibrium**
-**High Universal Morality**
-**Equivalent Mutual Relationships**
-
-**This sums it up quite nicely:**
+- **General/Best**
+- **Progress**
+- **Opposites and the Importance of Equilibrium**
+- **High Universal Morality**
+- **Equivalent Mutual Relationships**
+- **This sums it up quite nicely:**
 > Every day we are astonished by the complete absence of true love, friendship, brotherhood, kindness.
 > Centuries and centuries ago the great message of universal love was proclaimed: although its influence is undeniable, man has not changed.
 >
@@ -673,12 +698,11 @@ The key to world peace - it's right here, people!
 > This is how life can realize the high ideals proclaimed so long ago.
 (p. 273)
 
-**General/Best**
-**Progress**
-**Opposites and the Importance of Equilibrium**
-**High Universal Morality**
-**Equivalent Mutual Relationships**
-
+- **General/Best**
+- **Progress**
+- **Opposites and the Importance of Equilibrium**
+- **High Universal Morality**
+- **Equivalent Mutual Relationships**
 > As the new life approaches, a new morality is clearly being established, clearly founded on the new culture revealed by life and by art.
 > During the culture of equivalent relationships, it will be based on the apogee of this culture, that is,
 > on the realization of *equivalent mutual relationships* that the new life will attain.

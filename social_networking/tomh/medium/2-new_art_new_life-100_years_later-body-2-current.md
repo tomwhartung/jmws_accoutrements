@@ -1,16 +1,18 @@
 
-# 2-new_art_new_life-100_years_later-body.md
+# 2-new_art_new_life-100_years_later-body2-current.md
 
-Publishing this at: https://medium.com/@tomwhartung
+I intend to eventually publish this at: https://medium.com/@tomwhartung .
+
+"Eventually."
 
 # Title
 
-The New Art - The New Life: 100 Years Later
+The Prophetic Vision of Piet Mondrian: The New Art - The New Life: A Culture of Pure Relationships
 
 # Goal - The Big Picture
 
-To be able to reference this article in a subsequent article about my vision, and
-to be able to reference the article about my vision in a subsequent article about the
+To be able to reference this article in a subsequent article about my vision, and then
+able to reference *that* article (about my vision) in a *subsequent* article about the
 goals and reasons for creating seeourminds.com .
 
 # Songs

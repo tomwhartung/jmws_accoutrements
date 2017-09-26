@@ -14,7 +14,8 @@ The Latest References (from upgrade to 4.3.1):
 ## Log
 
 - [ ] 2017-
-- [ ] 2017-XX-XX: 4.7.3 to 4.X.X
+- [ ] 2017-XX-XX: 4.8.2 to 4.X.X
+- [X] 2017-09-26: 4.7.3 to 4.8.2
 - [X] 2017-03-17: 4.7.0 to 4.7.3
 - [X] 2016-12-22: 4.6.1 to 4.7.0
 - [X] 2016-11-01: 4.6.0 to 4.6.1
@@ -24,11 +25,15 @@ The Latest References (from upgrade to 4.3.1):
 
 ## Step (0) Before Starting, on All Hosts
 
+### Task Description
+
 Backup db on all hosts and ensure code matches what is in github:
 
 - [X] jane
 - [X] barbara
 - [X] ava
+
+### Commands
 
 Run these commands on each host listed above:
 

@@ -17,6 +17,8 @@ goals and reasons for creating seeourminds.com .
 
 # Songs
 
+I sometimes like to put Easter-eggy-type links to songs in my articles.  It's a thing.
+
 - What's So Funny 'Bout Peace Love and Understanding
 - Love Is All You Need
 - Love Is All Is Alright (High Universal Morality)
@@ -30,18 +32,22 @@ Or something like that.
 
 # My Take
 
-One can't create the same sort art that Mondrian created, for that would not be art.
-
 ## Ideas I Like:
 
-- Equilibrium
-- Honesty
+- Equilibrium in general
+- Equivalent mutual relationships in particular
+- Purified forms - in art, people, and society
 - Learning about and revealing inner traits and energies
+- Honesty
 
 ## Parallels With Archetypes
 
 - Breaking things down into essential elements (N/S and F/T) so that we can see them
 - Removing distracting surface shit
+
+## Obvious but Important
+
+One can't create the same sort art that Mondrian created, for that would not be art.
 
 ## Themes
 

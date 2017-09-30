@@ -47,27 +47,7 @@ Or something like that.
 
 One can't create the same sort art that Mondrian created, for that would not be art.
 
-## Choosing Quotes for This Article
-
-Want to use only the **best 3-4 quotes** for this article.
-
-Choose quotes that express the following core themes:
-
-- **General/Best**
-- **Progress**
-- **Opposites and the Importance of Equilibrium**
-- **Purified Forms**
-- **Equivalent Mutual Relationships**
-
-Save the others for subsequent articles, e.g., the Team Building articles for LinkedIn.
-
-- **Team Building** - Save for later!
-
-## Possible Ending
-
-This short book was not published during his lifetime.
-I believe this is because he was so far ahead of his time.
-It is also so abstract that it is difficult to understand - even for me, and I love abstract stuff!
+*****************************
 
 # The Article
 
@@ -75,7 +55,36 @@ It is also so abstract that it is difficult to understand - even for me, and I l
 
 The Prophetic Vision of Piet Mondrian
 
-## Body
+## Body - New
+
+### ("Cold" Introduction)
+
+Piet Mondrian completed his final book,
+*The New Art - The New Life: A Culture of Pure Relationships,*
+in 1931, but by then had been working on it since at least 1921.
+It is short but profound and abstract - so much so that
+[The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
+published in 1987, bears the same title.
+
+Mondrian believed that art and life follow analogous paths:
+> In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
+
+And the path that art and life follow is that of purification and equilibrium of opposites:
+> If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*  Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified, not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.  Thus in the same way as art, life reaches a state of real equilibrium *through pure and equivalent relationships of increasingly free individuals.*
+
+How and why did Mondrian develop his distinctive style, and what are the implications of it for us today and in the future?
+This article seeks to answer those questions!
+
+
+### (Possible) Conclusion
+
+This short book was not published during his lifetime.
+I believe this is because he was so far ahead of his time.
+It is also so abstract that it is difficult to understand - even for me, and I love abstract stuff!
+
+*****************************
+
+## Body - Old (To Be Deleted)
 
 In 1911, the Dutch painter [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) (1876-1944) moved from The Netherlands to Paris.
 He soon began contributing to the
@@ -128,7 +137,8 @@ Join me in taking a look at some more quotes from this book and see if we can an
 
 ## Introduction to The New Art - The New Life (1932)
 
-- **Already using this quote!**
+- Was going to use this quote in the old version, but not sure whether we want to use it in the new.
+
 > The culture of art demonstrates that only *man's development* in the distant future can create
 > universal equilibrium through the *establishment of equivalent relationships.*
 > These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the
@@ -142,30 +152,6 @@ Join me in taking a look at some more quotes from this book and see if we can an
 Written over a period of three years, based on ideas developed over the previous decade, but never published during his lifetime.
 
 *All emphasis is in the original.*
-
-**Definitely one of the Best**
-- **General/Best**
-- **Team Building**
-- **Progress**
-- **Liberty**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-- **Purified Forms**
-- **Equivalent Mutual Relationships**
-> If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*
-> Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified,
-> not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.
-> Thus in the same way as art, life reaches a state of real equilibrium
-> *through pure and equivalent relationships of increasingly free individuals.*
-(p. 248)
-
-
-- **General/Best**
-- **Progress**
-- In this evolution of art and life it is sincerity, rather than conformity, that matters:
-> In life every sincere effort leads to human evolution, and it is the same in art.
-> Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
-(p. 249)
 
 
 - **Opposites and the Importance of Equilibrium**

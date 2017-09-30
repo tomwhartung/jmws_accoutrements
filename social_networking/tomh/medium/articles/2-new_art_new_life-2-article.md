@@ -66,6 +66,10 @@ It is short but profound and abstract - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
 published in 1987, bears the same title.
 
+Image: images/Piet_Mondrian-1921-Tableau_I.jpg
+Title and Attribution: By Piet Mondrian - Gemeentemuseum Den Haag, Public Domain
+Link: https://commons.wikimedia.org/w/index.php?curid=37668615
+
 Mondrian believed that art and life follow analogous paths:
 > In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
 
@@ -75,6 +79,33 @@ And the path that art and life follow is that of purification and equilibrium of
 How and why did Mondrian develop his distinctive style, and what are the implications of it for us today and in the future?
 This article seeks to answer those questions!
 
+### Introducing Piet Mondrian
+
+### The Power of Abstractions
+
+#### Abstractions in Math and Science
+
+Formulas - V = IR (Ohm's law) - describes the flow of electrons in everything electronic, from the 12 volts of direct current in cars, to
+the 220 volts of alternating current in heavy appliances like air conditioners, washers and driers, to the
+micro electronics in our smart phones and key fobs.
+
+#### Abstractions in Art
+
+Literature, poetry and music - anything with similies and metaphors - All Along the Watchtower ....
+Dance - ballet - story abstracted to its essential elements and retold using the movements permitted by the dance.
+
+[Business - organizational chart - (do I want this here, or in a separate section, or maybe just skip it?)]
+[Even terms like bread, man, woman, dog, cat are abstractions in that they are only concepts unless they are qualified (e.g., my cat).]
+
+### The Power of Intuition
+
+[Abstracting processes - ideas: installing software, vacuuming, ???]
+
+Subconscious processing - the "aha" we get when driving, mowing the lawn, washing dishes, taking a shower, etc.
+
+### The New Art - The New Life
+
+My main point and where we quote and explain only the best quotes....
 
 ### (Possible) Conclusion
 
@@ -90,7 +121,7 @@ In 1911, the Dutch painter [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mo
 He soon began contributing to the
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style" - art movement.
 
-Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
+Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers.jpg
 Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, Public Domain
 Link: https://commons.wikimedia.org/w/index.php?curid=37634078
 
@@ -102,7 +133,7 @@ containing black perpendicular lines and rectangles painted in primary colors on
 He called this type of painting "Pure Neo-Plasticism" and the goal of his paintings was to
 compose these essential elements so that these opposites of color and form would exist in equilibrium.
 
-Image: images/Piet_Mondrian-1930-Mondrian_Composition_II_in_Red_Blue_and_Yellow.jpg
+Image: images/Piet_Mondrian-1930-Composition_II_in_Red_Blue_and_Yellow.jpg
 Title and Attribution: Composition with Red, Blue, and Yellow - By Piet Mondrian, Public Domain
 Link: https://commons.wikimedia.org/w/index.php?curid=37642803
 

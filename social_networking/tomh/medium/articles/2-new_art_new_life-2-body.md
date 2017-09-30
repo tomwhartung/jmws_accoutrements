@@ -5,17 +5,15 @@ I intend to eventually publish this at: https://medium.com/@tomwhartung .
 
 "Eventually."
 
-# Title
-
-The Prophetic Vision of Piet Mondrian: The New Art - The New Life: A Culture of Pure Relationships
-
 # Goal - The Big Picture
 
 To be able to reference this article in a subsequent article about my vision, and then
 able to reference *that* article (about my vision) in a *subsequent* article about the
 goals and reasons for creating seeourminds.com .
 
-# Songs
+# Ideas
+
+## Songs
 
 I sometimes like to put Easter-eggy-type links to songs in my articles.  It's a thing.
 
@@ -23,16 +21,16 @@ I sometimes like to put Easter-eggy-type links to songs in my articles.  It's a 
 - Love Is All You Need
 - Love Is All Is Alright (High Universal Morality)
 
-# My Point
+## My Point
 
 I like Mondrian's idealism and want to contribute to the awareness of the need for more
 equlibrium and desire for equivalent relationships.
 
 Or something like that.
 
-# My Take
+## My Take
 
-## Ideas I Like:
+### Ideas I Like:
 
 - Equilibrium in general
 - Equivalent mutual relationships in particular
@@ -40,38 +38,16 @@ Or something like that.
 - Learning about and revealing inner traits and energies
 - Honesty
 
-## Parallels With Archetypes
+### Parallels With Archetypes
 
 - Breaking things down into essential elements (N/S and F/T) so that we can see them
 - Removing distracting surface shit
 
-## Obvious but Important
+### Obvious but Important
 
 One can't create the same sort art that Mondrian created, for that would not be art.
 
-## Themes
-
-There is soooo much here, hundreds of lines of just quotes, before I add my comments and interpretations.
-
-There is obviously enough here to motivate writing multiple articles.
-
-These themes run through these quotes:
-
-- **General/Best**
-- **Team Building**
-- **Progress**
-- **Diversity**
-- **Liberty**
-- **Opposites and the Importance of Equilibrium**
-- **Death and Our Personalities**
-- **High Universal Morality**
-- **Purified Forms**
-- **Equivalent Mutual Relationships**
-
-For example, I am already committed to writing a series of articles about **Team Building,** so now is a good time to
-start identifying supporting material for that theme.
-
-# Choosing Quotes for This Article
+## Choosing Quotes for This Article
 
 Want to use only the **best 3-4 quotes** for this article.
 
@@ -87,13 +63,19 @@ Save the others for subsequent articles, e.g., the Team Building articles for Li
 
 - **Team Building** - Save for later!
 
-# Possible Ending
+## Possible Ending
 
 This short book was not published during his lifetime.
 I believe this is because he was so far ahead of his time.
 It is also so abstract that it is difficult to understand - even for me, and I love abstract stuff!
 
-# Body
+# The Article
+
+## Title
+
+The Prophetic Vision of Piet Mondrian
+
+## Body
 
 In 1911, the Dutch painter [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) (1876-1944) moved from The Netherlands to Paris.
 He soon began contributing to the

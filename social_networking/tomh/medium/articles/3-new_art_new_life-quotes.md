@@ -1,5 +1,5 @@
 
-# 2-new_art_new_life-100_years_later-quotes.md
+# 3-new_art_new_life-quotes.md
 
 Just the quotes from the book *The New Art - The New Life* within the book (of the same name, containing all of his writings),
 with comments on a very few of them.

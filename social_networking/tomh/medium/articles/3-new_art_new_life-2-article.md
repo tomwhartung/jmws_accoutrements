@@ -1,5 +1,5 @@
 
-# 2-new_art_new_life-100_years_later-body2-current.md
+# 3-new_art_new_life-2-article.md
 
 I intend to eventually publish this at: https://medium.com/@tomwhartung .
 

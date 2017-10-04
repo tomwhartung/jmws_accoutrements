@@ -96,6 +96,15 @@ Dance - ballet - story abstracted to its essential elements and retold using the
 [Business - organizational chart - (do I want this here, or in a separate section, or maybe just skip it?)]
 [Even terms like bread, man, woman, dog, cat are abstractions in that they are only concepts unless they are qualified (e.g., my cat).]
 
+#### Abstractions in Politics
+
+- Countries: Declaration of Independence, 
+- Political Parties: Statement of Principles
+- Manifestos
+
+Assassinations can be "tricky," because they can turn popular leaders into martyrs.
+It's much more difficult to kill an idea - an abstraction - than it is to kill a person.
+
 #### Abstractions in Religion
 
 One might say that gods are the ultimate abstractions.

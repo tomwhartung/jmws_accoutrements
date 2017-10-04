@@ -78,6 +78,9 @@ They were students at RISD so were familiar with abstract art.
 
 #### Fear of Music
 
+- Maybe I Zimbra?
+  - an adaptation of Dadaist Hugo Ball's poem "Gadji beri bimba".
+  - https://en.wikipedia.org/wiki/I_Zimbra
 - Maybe Life During Wartime?
 
 #### Remain in Light

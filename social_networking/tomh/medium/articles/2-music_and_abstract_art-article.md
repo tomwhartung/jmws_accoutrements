@@ -1,37 +1,32 @@
 
-# 2-music_and_abstract_art-outline.md
+# 2-music_and_abstract_art-article.md
 
 # Title
 
-Having trouble deciding on a title.
+Music and Particular Forms
 
-- **Music and Particular Forms** - really leaning toward this one
+For other ideas, see the expanded outline.
 
-Other ideas:
+# Goal: Limit Use of First and Second Person
 
-- Abstract Music
-- Music and Abstract Art
-- Abstract Music and Abstract Art
--
-
-# Idea: Limit Use of First and Second Person
-
-Idea: **only the last paragraph of each section should contain first or second pronouns.**
+Goal: **only the last paragraph of each section should contain first or second pronouns.**
 
 This is where I sum things up for the reader by talking to them directly.
 
-# Outline With Comments and Links
+# Article
 
-## Introduction
+## [Cold intro - no heading]
 
-This article is for people who like music but do not like abstract art.
+This article is for people who like music but do not appreciate abstract art.
 In particular, if you think Piet Mondrian's paintings are "just a bunch of squares,"
-this article is for you.
+this article is for you!
 
 Using examples of popular songs, this article explains how artists
 add flexibility and hence new meanings to their work by substituting abstractions for particular forms.
-
 This article also teaches you how to add your own particular forms to abstract art when you hear and see it.
+
+When I first learned about abstract art, I was ready for it, because by then I had spent years listening to a variety of music.
+In this article I am sharing with you the awakening I experienced in this regard in the art classes I took at VCU in the mid-1980s.
 
 ### Please Omit?!?!
 

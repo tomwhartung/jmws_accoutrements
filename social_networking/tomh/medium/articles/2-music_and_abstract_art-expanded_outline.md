@@ -1,12 +1,6 @@
 
 # 2-music_and_abstract_art-outline.md
 
-# Idea: Limit Use of First and Second Person
-
-Idea: **only the last paragraph of each section should contain first or second pronouns.**
-
-This is where I sum things up for the reader by talking to them directly.
-
 # Title
 
 Having trouble deciding on a title.
@@ -20,18 +14,32 @@ Other ideas:
 - Abstract Music and Abstract Art
 -
 
+# Idea: Limit Use of First and Second Person
+
+Idea: **only the last paragraph of each section should contain first or second pronouns.**
+
+This is where I sum things up for the reader by talking to them directly.
+
 # Outline With Comments and Links
 
 ## Introduction
 
 This article is for people who like music but do not like abstract art.
-
 In particular, if you think Piet Mondrian's paintings are "just a bunch of squares,"
 this article is for you.
 
+Using examples of popular songs, this article explains how artists
+add flexibility and hence new meanings to their work by substituting abstractions for particular forms.
+
+This article also teaches you how to add your own particular forms to abstract art when you hear and see it.
+
+### Please Omit?!?!
+
+**[Maybe just leave this bit of negativity out of it:]**
 If you are a Nazi Racist Fuck (NRF), then you will not like this article.
 By all means, please feel free to consider it [degenerate](https://en.wikipedia.org/wiki/Degenerate_art) and
 go get on to your NRF-y life.
+[I feel it and enjoyed typing it but **do we really need it?  Probably not.**]
 
 ## Music and Particular Forms
 
@@ -58,6 +66,8 @@ The point is, All Along the Watchtower is highly abstract - or at the very least
 and yet also highly accessible.
 
 If you can accept this song - which requires a bit of filling in the blanks - you can begin to appreciate abstract art.
+
+#### Check Out Some Picasso!
 
 ### Jazz Is More Abstract
 
@@ -91,7 +101,11 @@ About the church that burned, killing four little girls.
 
 #### Miles Davis - Quote From His Autobiography
 
-Here is the whole thing, from pp. 285-286 of his Autobiography, written with Quincy Troupe and published in 1989.
+I first clued in to the significance of what Trane was about when I read the following passage
+in Miles Davis' autobiography.
+He states it quite beautifully; I really have nothing to add to this.
+
+[Here is the whole thing, from pp. 285-286 of his Autobiography, written with Quincy Troupe and published in 1989.]
 
 ```
 Trane's music and what he was playing during the last two or three years [1965-1967]
@@ -133,9 +147,16 @@ It seemed a lot of what he stood for musically died with him.
 Even though some of his disciples carried on his message, they carried it to smaller and smaller audiences.
 ```
 
-To really understand this music requires a knowledge of American History.
+#### Check Out Some MLK!
 
+To really understand this music requires a knowledge of American History.
 The web and your local library give you access to a lot of this information, totally for free.
+
+1. Listen to Alabama and A Love Supreme - right now!
+2. Find one or more videos of Martin Luther King's speeches and marches and watch them
+3. Listen to Alabama and A Love Supreme again, with these particular forms fresh in your memory
+
+I wager you will never be the same!
 
 ### First Four Talking Heads Albums
 

@@ -16,22 +16,25 @@ This is where I sum things up for the reader by talking to them directly.
 
 ## [Cold intro - no heading]
 
-This article is for people who like music but do not appreciate abstract art.
+This article is for people who love music but do not understand abstract art.
 
 Image: images/Wassily_Kandinsky-1914-Fugue.jpg
 Title and Attribution: Fugue - By Wassily Kandinsky, 1914.
 Link: http://www.wassilykandinsky.net/work-101.php
 
 Using popular songs as examples, this article explains how musicians and painters use abstractions to add value and meaning to their work.
-The key is that viewers only need to learn how to add their own meaning to the art they hear and see.
+Spoiler alert: the secret is, when the meaning is not obvious, listeners and viewers need only to
+learn how to add their own meaning to the art they hear and see.
 
-When I first learned about abstract art, I was ready for it, because by then I had spent years listening to a variety of music.
+When I first learned about abstract art, I was ready for it, because by then I had spent years listening to the
+rich variety of music available in the 1960s, 70s, and 80s.
 The purpose of this article is to share with you the awakening I experienced in this regard in the art classes
 I took at Virginia Commonwealth University [VCU](https://www.vcu.edu) in the mid-1980s.
 
-If you have difficulty understanding how this painting by Wassily Kandinsky could
-(sell for $20.9 million)[http://www.wassilykandinsky.net/work-101.php], and
-think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
+If you have difficulty understanding how this painting, [Fugue](https://curiator.com/art/wassily-kandinsky/fuga-fugue),
+created by Wassily Kandinsky in 1914 could
+[sell at Sotheby's in 1990 for $20.9 million](http://www.wassilykandinsky.net/work-101.php), or
+if you think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
 
 ## Music and Particular Forms
 
@@ -248,6 +251,9 @@ Link:
 (Closer with first or second pronouns, possibly both.)
 
 ## Conclusion
+
+Certainly the fact that Kandinsky's Fugue represents a type of music
+may have something to do with it selling in 1990 for $20,900,000.
 
 Links to additional information about the image in the introduction, for possible use in the conclusion.
 https://en.wikipedia.org/wiki/Fugue

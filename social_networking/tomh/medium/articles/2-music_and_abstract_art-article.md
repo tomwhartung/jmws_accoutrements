@@ -10,7 +10,6 @@ Music, Meaning, and Abstract Art
 # Important: Limit Use of First and Second Person
 
 Goal: **only the last paragraph of each section should contain first or second pronouns.**
-
 This is where I sum things up for the reader by talking to them directly.
 
 # Article
@@ -18,16 +17,21 @@ This is where I sum things up for the reader by talking to them directly.
 ## [Cold intro - no heading]
 
 This article is for people who like music but do not appreciate abstract art.
-In particular, if you think Piet Mondrian's paintings are "just a bunch of squares,"
-this article is for you!
 
-Using popular songs as examples, this article explains how musicians and painters
-use abstractions to add value and meaning to their work.
-This article also shows how to add your own meaning to art when you hear and see it.
+Image: images/Wassily_Kandinsky-1914-Fugue.jpg
+Title and Attribution: Fugue - By Wassily Kandinsky, 1914.
+Link: http://www.wassilykandinsky.net/work-101.php
+
+Using popular songs as examples, this article explains how musicians and painters use abstractions to add value and meaning to their work.
+The key is that viewers only need to learn how to add their own meaning to the art they hear and see.
 
 When I first learned about abstract art, I was ready for it, because by then I had spent years listening to a variety of music.
 The purpose of this article is to share with you the awakening I experienced in this regard in the art classes
 I took at Virginia Commonwealth University [VCU](https://www.vcu.edu) in the mid-1980s.
+
+If you have difficulty understanding how this painting by Wassily Kandinsky could
+(sell for $20.9 million)[http://www.wassilykandinsky.net/work-101.php], and
+think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
 
 ## Music and Particular Forms
 
@@ -58,7 +62,7 @@ If you can accept this song - which requires a bit of filling in the blanks - yo
 #### Check Out Some Picasso!
 
 Image: images/Pablo_Picasso-1937-Guernica.jpg
-Title and Attribution: Guernica - By Pablo Picasso, Museo Reina Sofia, Madrid, Fair Use
+Title and Attribution: Guernica - By Pablo Picasso, 1937.  Museo Reina Sofia, Madrid, Fair Use.
 Link: https://en.wikipedia.org/w/index.php?curid=1683114
 
 Link to larger image (for text): http://www.museoreinasofia.es/coleccion/obra/guernica
@@ -76,9 +80,17 @@ About the church that burned, killing four little girls.
 - https://en.wikipedia.org/wiki/Alabama_(John_Coltrane_song)
 - Without those clues, it could just as easily be similar in theme to Ray Charles' Georgia
 
+Image:
+Title and Attribution:
+Link:
+
 (Closer with first or second pronouns, possibly both.)
 
 #### John Coltrane - A Love Supreme
+
+Image:
+Title and Attribution:
+Link:
 
 - His magnum opus
 - http://www.wbur.org/artery/2014/10/10/coltrane-love-supreme-50
@@ -98,6 +110,10 @@ About the church that burned, killing four little girls.
 I first clued in to the significance of what Trane was about when I read the following passage
 in Miles Davis' autobiography.
 He states it quite beautifully; I really have nothing to add to this.
+
+Image:
+Title and Attribution:
+Link:
 
 [Here is the whole thing, from pp. 285-286 of his Autobiography, written with Quincy Troupe and published in 1989.]
 
@@ -143,6 +159,10 @@ Even though some of his disciples carried on his message, they carried it to sma
 
 #### Check Out Some MLK!
 
+Image:
+Title and Attribution:
+Link:
+
 To really understand this music requires a knowledge of American History.
 The web and your local library give you access to a lot of this information, totally for free.
 
@@ -165,6 +185,10 @@ figure this out for yourself by now.
 
 #### Talking Heads 77
 
+Image:
+Title and Attribution:
+Link:
+
 - Psycho Killer
   - Not about any specific person
   - Associated with Son of Sam because of timing of release
@@ -172,6 +196,10 @@ figure this out for yourself by now.
 - https://en.wikipedia.org/wiki/Psycho_Killer
 
 #### More Songs About Buildings and Food
+
+Image:
+Title and Attribution:
+Link:
 
 - For Artists Only
 
@@ -183,11 +211,19 @@ In fact, if there's an art form or just a genre that hasn't appeared yet, I am c
 
 #### Fear of Music
 
+Image:
+Title and Attribution:
+Link:
+
 - I Zimbra
   - an adaptation of Dadaist Hugo Ball's poem "Gadji beri bimba".
   - https://en.wikipedia.org/wiki/I_Zimbra
 
 #### Remain in Light
+
+Image:
+Title and Attribution:
+Link:
 
 An extremely colorful expansion on themes first explored in I Zimbra.
 
@@ -200,10 +236,21 @@ This whole album is so different from their first album, it's truly amazing to h
 This proves to me that understanding the abstract - freeing yourself from limiting particular forms -
 is extremely powerful and hugely beneficial.
 
-# Now Check out Some Mondrian!
+#### Now Check out Some Mondrian!
+
+Image:
+Title and Attribution:
+Link:
 
 - Quote about equilibrium and how it fits in this article
 - Quote about harmony and lack of symmetry and how it fits in this article
 
 (Closer with first or second pronouns, possibly both.)
+
+## Conclusion
+
+Links to additional information about the image in the introduction, for possible use in the conclusion.
+https://en.wikipedia.org/wiki/Fugue
+https://curiator.com/art/wassily-kandinsky/fuga-fugue
+http://www.myswitzerland.com/nl-nl/fuga-fugue.html
 

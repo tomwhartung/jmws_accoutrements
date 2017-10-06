@@ -66,7 +66,7 @@ It is short but profound and abstract - so much so that
 published in 1987, bears the same title.
 
 Image: images/Piet_Mondrian-1921-Tableau_I.jpg
-Title and Attribution: Tableau I - By Piet Mondrian, Gemeentemuseum Den Haag, Public Domain
+Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
 Mondrian believed that art and life follow similar paths:
@@ -138,7 +138,7 @@ He soon began contributing to the
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style" - art movement.
 
 Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers.jpg
-Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, Public Domain
+Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, 1909.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=37634078
 
 Mondrian started out painting representational, "particular" paintings of such things as trees and landscapes.
@@ -150,7 +150,7 @@ He called this type of painting "Pure Neo-Plasticism" and the goal of his painti
 compose these essential elements so that these opposites of color and form would exist in equilibrium.
 
 Image: images/Piet_Mondrian-1930-Composition_II_in_Red_Blue_and_Yellow.jpg
-Title and Attribution: Composition with Red, Blue, and Yellow - By Piet Mondrian, Public Domain
+Title and Attribution: Composition with Red, Blue, and Yellow - By Piet Mondrian, 1930.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=37642803
 
 It looks easy to create these compositions, but it is not!

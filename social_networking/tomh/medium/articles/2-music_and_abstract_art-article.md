@@ -3,11 +3,11 @@
 
 # Title
 
-Music and Particular Forms
+The latest ideas:
 
-For other ideas, see the expanded outline.
+Music, Meaning, and Abstract Art
 
-# Goal: Limit Use of First and Second Person
+# Important: Limit Use of First and Second Person
 
 Goal: **only the last paragraph of each section should contain first or second pronouns.**
 
@@ -21,20 +21,13 @@ This article is for people who like music but do not appreciate abstract art.
 In particular, if you think Piet Mondrian's paintings are "just a bunch of squares,"
 this article is for you!
 
-Using examples of popular songs, this article explains how artists
-add flexibility and hence new meanings to their work by substituting abstractions for particular forms.
-This article also teaches you how to add your own particular forms to abstract art when you hear and see it.
+Using popular songs as examples, this article explains how musicians and painters
+use abstractions to add value and meaning to their work.
+This article also shows how to add your own meaning to art when you hear and see it.
 
 When I first learned about abstract art, I was ready for it, because by then I had spent years listening to a variety of music.
-In this article I am sharing with you the awakening I experienced in this regard in the art classes I took at VCU in the mid-1980s.
-
-### Please Omit?!?!
-
-**[Maybe just leave this bit of negativity out of it:]**
-If you are a Nazi Racist Fuck (NRF), then you will not like this article.
-By all means, please feel free to consider it [degenerate](https://en.wikipedia.org/wiki/Degenerate_art) and
-go get on to your NRF-y life.
-[I feel it and enjoyed typing it but **do we really need it?  Probably not.**]
+The purpose of this article is to share with you the awakening I experienced in this regard in the art classes
+I took at Virginia Commonwealth University [VCU](https://www.vcu.edu) in the mid-1980s.
 
 ## Music and Particular Forms
 
@@ -63,6 +56,12 @@ and yet also highly accessible.
 If you can accept this song - which requires a bit of filling in the blanks - you can begin to appreciate abstract art.
 
 #### Check Out Some Picasso!
+
+Image: images/Pablo_Picasso-1937-Guernica.jpg
+Title and Attribution: Guernica - By Pablo Picasso, Museo Reina Sofia, Madrid, Fair Use
+Link: https://en.wikipedia.org/w/index.php?curid=1683114
+
+Link to larger image (for text): http://www.museoreinasofia.es/coleccion/obra/guernica
 
 ### Jazz Is More Abstract
 

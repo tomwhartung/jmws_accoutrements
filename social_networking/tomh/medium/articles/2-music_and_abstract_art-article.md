@@ -5,7 +5,7 @@
 
 The latest ideas:
 
-Music, Meaning, and Abstract Art
+Music, Meaning, and Modern Art
 
 # Important: Limit Use of First and Second Person
 
@@ -36,33 +36,107 @@ created by Wassily Kandinsky in 1914 could
 [sell at Sotheby's in 1990 for $20.9 million](http://www.wassilykandinsky.net/work-101.php), or
 if you think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
 
-## Music and Particular Forms
+## All Along the Watchtower
 
-Specific songs and albums:
+The song [All Along the Watchtower](https://en.wikipedia.org/wiki/All_Along_the_Watchtower)
+written by [Bob Dylan](https://en.wikipedia.org/wiki/Bob_Dylan) but
+covered most famously by [Jimi Hendrix](https://www.youtube.com/watch?v=TLV4_xaYynY),
+is a great example of a song with lyrics that are a bit vague.
 
-### All Along the Watchtower
+Image: images/Bob_Dylan-All_Along_the_Watchtower-single_cover.jpg
+Title and Attribution: All Along the Watchtower - cover of the single by Bob Dylan.  Fair use.
+Link: https://en.wikipedia.org/w/index.php?curid=26027910
 
-- Very vague, in a painterly sort of way
-  - Wtf is a "watchtower" anyway?
-  - It's totally dislocated in time
-  - And who is it about?  In one verse it's a joker and a thief, the next it's businessmen, then suddenly there are riders and princes
-- https://www.youtube.com/watch?v=TLV4_xaYynY
-- https://en.wikipedia.org/wiki/All_Along_the_Watchtower
-- Impending doom
-- But it is widely recognized as one of the best songs of all time.
+Surely all music lovers love this song!
 
-This is not a blues song, but it is only three chords.
-No matter your level of experience with playing music, you could learn to play it in minutes.
-It might take someone who is totally inept up to an hour.
+Based on the number of versions there are, it’s obvious that many musicians do!
+In addition to
+[Bob’s](https://www.youtube.com/watch?v=jd3iytj9SDQ), and
+Jimi’s versions - [in the studio](https://www.youtube.com/watch?v=TLV4_xaYynY] and
+[at Woodstock](https://www.youtube.com/watch?v=tvVz88IHK4o),
+there are versions by
+[Dave Matthews](https://www.youtube.com/watch?v=fOaMQ-R9YGM),
+[Neil Young](https://www.youtube.com/watch?v=1DBewzgXgYk),
+[Eddie Vedder](https://www.youtube.com/watch?v=NHBSvpzI7Tw),
+[John Mayer](https://www.youtube.com/watch?v=fJlkkRub6MU),
+[Pearl Jam and Neil Young](https://www.youtube.com/watch?v=ePvmDGlE8XA),
+[U2](https://www.youtube.com/watch?v=qx2re_YBki0),
+[Eric Clapton and Lenny Kravitz](https://www.youtube.com/watch?v=1fMvW_FtALU),
+[Dave Mason](https://www.youtube.com/watch?v=1n3f8NeUm-k),
+[Bruce Springsteen, Clarence Clemmons and Neil Young](https://www.youtube.com/watch?v=eCVjDFR5xtg),
+and even
+[Bryan Ferry])https://www.youtube.com/watch?v=Vqg4V4BmJj0)!
 
-Very painterly - but closer to impressionism or cubism than to Kandinsky's totally abstract paintings or Mondrian's Pure Neo-Plastic works
+[Link for lyrics: https://bobdylan.com/songs/all-along-watchtower/]
 
-The point is, All Along the Watchtower is highly abstract - or at the very least certainly free of consistent particular forms -
-and yet also highly accessible.
+```
+“There must be some way out of here,” said the joker to the thief
+“There’s too much confusion, I can’t get no relief
+Businessmen, they drink my wine, plowmen dig my earth
+None of them along the line know what any of it is worth”
+```
 
-If you can accept this song - which requires a bit of filling in the blanks - you can begin to appreciate abstract art.
+For one thing, there’s the music. There are only three chords so it’s easy to learn and jam to.
+That certainly contributes to its appeal to musicians.
 
-#### Check Out Some Picasso!
+Blues songs also have only three chords, but this is no easy-going blues song.
+The driving progression of the chords give those who hear a feeling of impending doom.
+
+And although they are a bit vague, the lyrics confirm that the shit is about to hit the fan!
+
+```
+“No reason to get excited,” the thief, he kindly spoke
+“There are many here among us who feel that life is but a joke
+But you and I, we’ve been through that, and this is not our fate
+So let us not talk falsely now, the hour is getting late”
+```
+
+Ostensibly a conversation between a joker and a thief, the first two verses remain confusing, even after decades of consideration.
+The only thing certain here is that the time stealing and kidding around is over.
+
+Surely the next verse will reveal a specific threat!
+
+```
+All along the watchtower, princes kept the view
+While all the women came and went, barefoot servants, too
+Outside in the distance a wildcat did growl
+Two riders were approaching, the wind began to howl
+```
+
+BOOM.  No more stealing, no more jokes.  No more joker, no more thief.
+And if anything, the vague threat is even more vague now.  Surely it is something far worse than a couple of riders.
+Oh-kay.
+
+The scene is a bit more complete, but precisely when this is happening remains unclear,
+as does how all these people are going to fit in a typical
+[watchtower](https://en.wikipedia.org/wiki/Watchtower).
+How can a story so vague - so abstract - and even contradictory also be so widely recognized as one of the best songs of all time?
+
+#### It's DIY Art!
+
+If you can love this song - which requires a bit of filling in the blanks - then you can begin to appreciate modern art.
+Because whether you realize it or not, when you listen to this song, you are supplying details from your own life.
+
+A big part of understanding modern art is realizing you have to do it yourself (DIY).
+Painters like Kandinsky and Mondrian - and there are many - did not set out to create works like
+[Rembrandt](https://en.wikipedia.org/wiki/Rembrandt) or
+[Claude Monet](https://en.wikipedia.org/wiki/Claude_Monet).
+Those works are beautiful, but they are specific, full of what Mondrian called "particular forms."
+
+Those incredibly beautiful works are, nevertheless, the ballads of art.
+[Me and My Uncle](https://www.youtube.com/watch?v=mAF0-EFCuG8)?
+Meh.  Nice, sure, but I will prefer a 30-minute-plus long version of
+[Dark Star](https://www.youtube.com/watch?v=qyBs48VjMho)
+any day!
+
+We can all love All Along the Watchtower - because of rather than desite its vagueness - because
+we have all been in a situation in which doom is impending!
+
+#### Check out Some Picasso!
+
+What happened after the impending doom came and the shit hit the fan for the people in Dylan's song?
+
+There
 
 Image: images/Pablo_Picasso-1937-Guernica.jpg
 Title and Attribution: Guernica - By Pablo Picasso, 1937.  Museo Reina Sofia, Madrid, Fair Use.
@@ -70,7 +144,7 @@ Link: https://en.wikipedia.org/w/index.php?curid=1683114
 
 Link to larger image (for text): http://www.museoreinasofia.es/coleccion/obra/guernica
 
-### Jazz Is More Abstract
+## Jazz Is More Abstract
 
 Especially if it doesn't have lyrics.
 
@@ -175,7 +249,7 @@ The web and your local library give you access to a lot of this information, tot
 
 I wager you will never be the same!
 
-### First Four Talking Heads Albums
+## First Four Talking Heads Albums
 
 They were students at RISD so were familiar with abstract art.
 
@@ -259,4 +333,8 @@ Links to additional information about the image in the introduction, for possibl
 https://en.wikipedia.org/wiki/Fugue
 https://curiator.com/art/wassily-kandinsky/fuga-fugue
 http://www.myswitzerland.com/nl-nl/fuga-fugue.html
+
+The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
+For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
+
 

@@ -195,48 +195,53 @@ today there is no way to tell that from the song itself.
 Indeed, today it is difficult to even imagine
 [people doing such a thing](https://www.youtube.com/watch?v=q-MuWDsv5pg).
 
-This act of white supremist terrorism killed four little girls.
-At the time, everyone knew this was Trane's motivation for writing the song.
+This act of white supremist terrorism killed four girls and injured twenty-two others.
 
-[Listening to it now](https://www.youtube.com/watch?v=saN1BwlxJxA), fifty years later,
-one might be fooled into thinking its theme is similar to
+At the time, everyone knew this was Trane's motivation for writing the song.
+[Listening to it now](https://www.youtube.com/watch?v=saN1BwlxJxA), however,
+you might think its theme is similar to that of the song
 [Georgia on My Mind](https://www.youtube.com/watch?v=glggureA_Kk)
 by Ray Charles.
 Nothing could be further from the truth!
 
+- Compare to Blackbird by The Beatles
+
 #### John Coltrane - A Love Supreme
 
-Trane's passion fully surfaces a couple of years later, in his magnum opus,
+The passion Trane felt for the
+[African-American civil rights movement](https://en.wikipedia.org/wiki/African-American_Civil_Rights_Movement_(1954%E2%80%931968))
+surfaces fully a couple of years later, in his magnum opus,
+[A Love Supreme](https://en.wikipedia.org/wiki/A_Love_Supreme).
 
+Image: images/John_Coltrane-A_Love_Supreme.jpg
+Title and Attribution: John Coltrane - cover of A Love Supreme.  Fair use.
+Link: https://en.wikipedia.org/w/index.php?curid=1274626
 
-Image:
-Title and Attribution:
-Link:
+The album is very spiritual and contains four songs or "parts:" 1. Acknowledgement, 2. Resolution, 3. Pursuance, and 4. Psalm.
+You can listen to
+[the whole thing on youtube.com](https://www.youtube.com/watch?v=ll3CMgiUPuU).
 
-- His magnum opus
-- http://www.wbur.org/artery/2014/10/10/coltrane-love-supreme-50
-- It is very spiritual
-- https://en.wikipedia.org/wiki/A_Love_Supreme
-- But not sure this is the song I'm thinking about
-  - I.e., not the expression of his thoughts on the civil rights movement
-- https://www.youtube.com/watch?v=ll3CMgiUPuU
-- Compare to Blackbird by The Beatles
-- NYTimes article (limited number of articles viewable per month!):
-  - http://www.nytimes.com/2001/09/23/arts/music-coltrane-at-75-the-man-and-the-myths.html
+Others have written about this masterpiece much more elegantly than I ever could.
+One
+[article at nytimes.com](http://www.nytimes.com/2001/09/23/arts/music-coltrane-at-75-the-man-and-the-myths.html)
+reviews it in the context of Trane's life and other works, and
+[another at wbur.org](http://www.wbur.org/artery/2014/10/10/coltrane-love-supreme-50)
+describes why it is still relevant after fifty years.
 
-(Closer with first or second pronouns, possibly both.)
+In my mind, Miles Davis provides the best perspective on Trane's magnum opus.
 
 #### Miles Davis - On Trane, A Love Supreme, and Civil Rights
 
 Quote From His Autobiography
 
-I first clued in to the significance of what Trane was about when I read the following passage
+I first learned of the significance of what Trane was about when I read the following passage
 in Miles Davis' autobiography.
-He states it quite beautifully; I really have nothing to add to this.
 
-Image:
-Title and Attribution:
-Link:
+Image: images/Miles-The_Autobiography.jpg
+Title and Attribution: Miles, The Autobiography - cover of the book written with Quincy Troupe.
+Link: https://www.amazon.com/Miles-Autobiography-Davis/dp/0671725823
+
+He states it quite beautifully; I really have nothing to add to this.
 
 [Here is the whole thing, from pp. 285-286 of his Autobiography, written with Quincy Troupe and published in 1989.]
 

@@ -135,6 +135,8 @@ any day!
 We can all love All Along the Watchtower - because of rather than despite its vagueness - because
 we have all been in a situation in which doom is impending!
 
+Now, what if I told you that Picasso painted the aftermath of this apocalypse, decades before Bob Dylan wrote the song?
+
 #### Picasso Painted the Aftermath!?
 
 What happened after the impending doom came and the shit hit the fan for the people in Dylan's song?
@@ -162,26 +164,50 @@ Chances are, you never gave it a moment's thought till now.
 Now you know how to see the beauty that modern art gives us.
 It turns out it was hiding inside you all this time!
 
-## Jazz Is More Abstract
+#### You Might...
 
-Especially if it doesn't have lyrics.
+You might think this is some heavy shit, or you might be all like,
+[so what](https://www.youtube.com/watch?v=zqNTltOGh5c)?
+[You might find yourself](https://www.youtube.com/watch?v=TGofoH9RDEA) ... oh, never mind.
+Whatever you might think, please keep reading, we're just getting started!
+
+## Jazz Can Be More Abstract
+
+Jazz, especially when it's instrumental and doesn't have lyrics, can be much more abstract than most folk, rock, and folk-rock.
+
+Take, for example, some of the music by John Coltrane.
 
 #### John Coltrane - Alabama
 
-About the church that burned, killing four little girls.
+John Coltrane - "Trane" - wrote the song
+[Alabama](https://en.wikipedia.org/wiki/Alabama_(John_Coltrane_song))
+in 1963.
 
-- https://www.youtube.com/watch?v=saN1BwlxJxA
-- Really no way to know this without the title and knowl
-- https://en.wikipedia.org/wiki/Alabama_(John_Coltrane_song)
-- Without those clues, it could just as easily be similar in theme to Ray Charles' Georgia
+Image: images/Ray_Charles_and_John_Coltrane.jpg
+Title and Attribution: Ray Charles and John Coltrane - were both born on September 23rd.
+Link: http://www.kzfr.org/broadcasts/322
 
-Image:
-Title and Attribution:
-Link:
+Although he wrote it in response to the
+[bombing of the 16th Street Baptist Church](https://en.wikipedia.org/wiki/16th_Street_Baptist_Church_bombing),
+in
+[Birmingham, Alabama](https://en.wikipedia.org/wiki/Birmingham,_Alabama),
+today there is no way to tell that from the song itself.
+Indeed, today it is difficult to even imagine
+[people doing such a thing](https://www.youtube.com/watch?v=q-MuWDsv5pg).
 
-(Closer with first or second pronouns, possibly both.)
+This act of white supremist terrorism killed four little girls.
+At the time, everyone knew this was Trane's motivation for writing the song.
+
+[Listening to it now](https://www.youtube.com/watch?v=saN1BwlxJxA), fifty years later,
+one might be fooled into thinking its theme is similar to
+[Georgia on My Mind](https://www.youtube.com/watch?v=glggureA_Kk)
+by Ray Charles.
+Nothing could be further from the truth!
 
 #### John Coltrane - A Love Supreme
+
+Trane's passion fully surfaces a couple of years later, in his magnum opus,
+
 
 Image:
 Title and Attribution:
@@ -200,7 +226,9 @@ Link:
 
 (Closer with first or second pronouns, possibly both.)
 
-#### Miles Davis - Quote From His Autobiography
+#### Miles Davis - On Trane, A Love Supreme, and Civil Rights
+
+Quote From His Autobiography
 
 I first clued in to the significance of what Trane was about when I read the following passage
 in Miles Davis' autobiography.

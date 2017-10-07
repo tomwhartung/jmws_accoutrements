@@ -121,12 +121,12 @@ feeling emotions felt only in - your own life.
 
 A big part of understanding modern art is realizing you have to do it yourself (DIY).
 
-Painters like Kandinsky and Mondrian - and there are many - did not set out to create works like
+Once they established their own style, painters like Kandinsky and Picasso - and there are many - did not set out to create works like
 [Rembrandt](https://en.wikipedia.org/wiki/Rembrandt) or
 [Claude Monet](https://en.wikipedia.org/wiki/Claude_Monet).
 Those works are beautiful, but they are specific, full of what Mondrian called "particular forms."
 
-Those incredibly beautiful works are, nevertheless, "just" the ballads of paintings.
+Rembrandt’s and Monet’s paintings are incredibly beautiful, but they are ultimately "just ballads."
 [Me and My Uncle](https://www.youtube.com/watch?v=mAF0-EFCuG8)?
 Nice, sure, but I'll take a 30-minute-plus long version of
 [Dark Star](https://www.youtube.com/watch?v=qyBs48VjMho)
@@ -234,8 +234,7 @@ In my mind, Miles Davis provides the best perspective on Trane's magnum opus.
 
 Quote From His Autobiography
 
-I first learned of the significance of what Trane was about when I read the following passage
-in Miles Davis' autobiography.
+I first learned the significance of what Trane was saying in A Love Supreme when I read about it in Miles Davis' autobiography.
 
 Image: images/Miles-The_Autobiography.jpg
 Title and Attribution: Miles, The Autobiography - cover of the book written with Quincy Troupe.
@@ -256,7 +255,7 @@ He played what they felt inside and were expressing through riots - "burn baby b
 were taking place everywhere in this country during the 1960s.
 It was all about revolution for a lot of young black people -
 Afro haircuts, dashikis, black power, fists raised in the air.
-Coltrane was their symbol, their pride - their beautiful, black, revoulutionary pride.
+Coltrane was their symbol, their pride - their beautiful, black, revolutionary pride.
 I had been it a few years back, now he was it, and that was cool with me.
 ```
 [Separate paragraph.]
@@ -264,14 +263,17 @@ I had been it a few years back, now he was it, and that was cool with me.
 It was this way for many intellectual and revolutionary whites and Asians as well.
 Even his change to a more spiritual music in the music on A Love Supreme - which was like a prayer - reached
 out and influenced those people who were into peace, hippies and people like that.
+```
+[Using only the above, but here is the rest of that paragraph, for possible future reference.]
+```
 I heard he played a lot of love-ins, which was becoming the rage all over California for a lot of whites.
-So he was reaching different groupsl of people, too.
+So he was reaching different groups of people, too.
 His music was embraced by a lot of different kinds of people, and that was beautiful and I was proud of him,
 even if I liked his earlier music more.
 He once told me that even he liked some of the music he did earlier better than what he was doing now.
 But Trane was on a search, and his course kept taking him farther and farther out; he couldn't turn back even though I think he wanted to.
 ```
-[Separate paragraph.]
+[Separate paragraph - unused - too sad!]
 ```
 His death created chaos in the "free thing" because he was its leader.
 He was like Bird to all those musicians who considered themselves "out" - you, know, "free," out in space:

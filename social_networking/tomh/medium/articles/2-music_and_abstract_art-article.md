@@ -232,15 +232,11 @@ In my mind, Miles Davis provides the best perspective on Trane's magnum opus.
 
 #### Miles Davis - On Trane, A Love Supreme, and Civil Rights
 
-Quote From His Autobiography
-
 I first learned the significance of what Trane was saying in A Love Supreme when I read about it in Miles Davis' autobiography.
 
 Image: images/Miles-The_Autobiography.jpg
 Title and Attribution: Miles, The Autobiography - cover of the book written with Quincy Troupe.
 Link: https://www.amazon.com/Miles-Autobiography-Davis/dp/0671725823
-
-He states it quite beautifully; I really have nothing to add to this.
 
 [Here is the whole thing, from pp. 285-286 of his Autobiography, written with Quincy Troupe and published in 1989.]
 
@@ -287,13 +283,15 @@ It seemed a lot of what he stood for musically died with him.
 Even though some of his disciples carried on his message, they carried it to smaller and smaller audiences.
 ```
 
-#### Check Out Some MLK!
+After reading this, I bought Trane’s album right away!
+
+#### Filling in the Blanks
 
 Image:
 Title and Attribution:
 Link:
 
-To really understand this music requires a knowledge of American History.
+To really understand this music requires a knowledge of some American History.
 The web and your local library give you access to a lot of this information, totally for free.
 
 1. Listen to Alabama and A Love Supreme - right now!
@@ -301,6 +299,12 @@ The web and your local library give you access to a lot of this information, tot
 3. Listen to Alabama and A Love Supreme again, with these particular forms fresh in your memory
 
 I wager you will never be the same!
+
+#### Filling in the Blanks
+
+Image: images/Piet_Mondrian-1939-1942-Composition_10.jpg
+Title and Attribution: Composition No. 10 - By Piet Mondrian, 1939-1942. Public Domain.
+Link: https://commons.wikimedia.org/w/index.php?curid=37643395
 
 ## First Four Talking Heads Albums
 

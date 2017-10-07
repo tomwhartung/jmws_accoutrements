@@ -285,26 +285,55 @@ Even though some of his disciples carried on his message, they carried it to sma
 
 After reading this, I bought Trane’s album right away!
 
-#### Filling in the Blanks
-
-Image:
-Title and Attribution:
-Link:
+#### Filling in Trane's Blanks
 
 To really understand this music requires a knowledge of some American History.
 The web and your local library give you access to a lot of this information, totally for free.
 
-1. Listen to Alabama and A Love Supreme - right now!
-2. Find one or more videos of Martin Luther King's speeches and marches and watch them
-3. Listen to Alabama and A Love Supreme again, with these particular forms fresh in your memory
+I recommend watching at least one civil rights documentary from the mid-1960s:
 
-I wager you will never be the same!
+-
+-
+-
 
-#### Filling in the Blanks
+And at least one speech by Martin Luther King from that period:
+
+-
+-
+-
+
+The more you learn about this period, the more you will be able to appreciate John Coltrane's music.
+
+#### Filling in Mondrian's Blanks
+
+What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?
 
 Image: images/Piet_Mondrian-1939-1942-Composition_10.jpg
 Title and Attribution: Composition No. 10 - By Piet Mondrian, 1939-1942. Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=37643395
+
+Because this painting is so abstract and pure, the meaning of its elements is completely open to interpretation.
+
+So, for example, the white areas could represent white people and the black areas could represent black people - or vice versa.
+Or, the white areas could represent women and the black areas could represent men - or vice versa.
+Or, the white areas could represent older people and the black areas could represent younger people - or vice versa.
+
+Similarly, for example, the vertical lines could represent white people and the horizontal lines could represent
+black people - or vice versa - and the white could just be the background.
+Or, the vertical lines could represent women and the horizontal lines could represent men - or vice versa - and
+the white could just be the background.
+Or, the vertical lines could represent older people and the horizontal lines could represent younger people - or vice versa - and
+the white could just be the background.
+
+Or, the vertical lines could represent ______ and the horizontal lines could represent ______!
+Fill in the blanks as you see fit - human life is full of opposites!
+
+The important thing to realize is that, no matter what identity we apply to the opposites in this painting,
+each pair opposites - black vs. white, horizontal vs. vertical, etc. - is in non-symetrical equilibrium.
+(If that doesn't make complete sense, no worries, give it some time.)
+
+Now you know the true nature of the power lying in Mondrian's Pure Neo-Plastic art!
+
 
 ## First Four Talking Heads Albums
 

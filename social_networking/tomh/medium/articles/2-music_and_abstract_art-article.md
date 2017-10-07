@@ -107,42 +107,60 @@ BOOM.  No more stealing, no more jokes.  No more joker, no more thief.
 And if anything, the vague threat is even more vague now.  Surely it is something far worse than a couple of riders.
 Oh-kay.
 
-The scene is a bit more complete, but precisely when this is happening remains unclear,
-as does how all these people are going to fit in a typical
+The scene is a bit more complete, but precisely when this is happening remains unclear.
+Also, how are all these people going to fit in a typical
 [watchtower](https://en.wikipedia.org/wiki/Watchtower).
-How can a story so vague - so abstract - and even contradictory also be so widely recognized as one of the best songs of all time?
+
+How can a story so vague - so abstract, and even contradictory - also be so widely recognized as one of the greatest songs of all time?
 
 #### It's DIY Art!
 
-If you can love this song - which requires a bit of filling in the blanks - then you can begin to appreciate modern art.
-Because whether you realize it or not, when you listen to this song, you are supplying details from your own life.
+If you can love this song - which requires a bit of filling in the blanks - then you can love modern art.
+Because whether you realize it or not, when you listen to this song, you are supplying details from - and
+feeling emotions felt only in - your own life.
 
 A big part of understanding modern art is realizing you have to do it yourself (DIY).
+
 Painters like Kandinsky and Mondrian - and there are many - did not set out to create works like
 [Rembrandt](https://en.wikipedia.org/wiki/Rembrandt) or
 [Claude Monet](https://en.wikipedia.org/wiki/Claude_Monet).
 Those works are beautiful, but they are specific, full of what Mondrian called "particular forms."
 
-Those incredibly beautiful works are, nevertheless, the ballads of art.
+Those incredibly beautiful works are, nevertheless, "just" the ballads of paintings.
 [Me and My Uncle](https://www.youtube.com/watch?v=mAF0-EFCuG8)?
-Meh.  Nice, sure, but I will prefer a 30-minute-plus long version of
+Nice, sure, but I'll take a 30-minute-plus long version of
 [Dark Star](https://www.youtube.com/watch?v=qyBs48VjMho)
 any day!
 
-We can all love All Along the Watchtower - because of rather than desite its vagueness - because
+We can all love All Along the Watchtower - because of rather than despite its vagueness - because
 we have all been in a situation in which doom is impending!
 
-#### Check out Some Picasso!
+#### Picasso Painted the Aftermath!?
 
 What happened after the impending doom came and the shit hit the fan for the people in Dylan's song?
-
-There
+The song doesn't yield any clue whatsoever.
 
 Image: images/Pablo_Picasso-1937-Guernica.jpg
 Title and Attribution: Guernica - By Pablo Picasso, 1937.  Museo Reina Sofia, Madrid, Fair Use.
 Link: https://en.wikipedia.org/w/index.php?curid=1683114
 
-Link to larger image (for text): http://www.museoreinasofia.es/coleccion/obra/guernica
+When I try to envision the aftermath of the coming of the doom described in All Along the Watchtower, I see the painting
+[Guernica](http://www.museoreinasofia.es/coleccion/obra/guernica)
+by
+[Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso).
+
+It’s similarly structured: a jumble of recognizable forms that make it obvious that the shit has hit the fan!
+No more jokers, thieves, princes, women, barefoot servants, or riders.
+Even the horses those riders were on are done for!
+
+There are easily several howling figures in this painting.
+They may not be wildcats, but the feeling is undeniably the same.
+
+Your vision of the aftermath of All Along the Watchtower might be the same, vaguely similar or it might be different.
+Chances are, you never gave it a moment's thought till now.
+
+Now you know how to see the beauty that modern art gives us.
+It turns out it was hiding inside you all this time!
 
 ## Jazz Is More Abstract
 

@@ -121,7 +121,8 @@ feeling emotions felt only in - your own life.
 
 **A big part of understanding modern art is realizing you have to bring your own meaning (BYOM).**
 
-Once they established their own style, painters like Kandinsky and Picasso - and there are many - did not set out to create works like
+Once they established their own style, painters like Kandinsky and Picasso - and there are many others - did
+not set out to create works like
 [Rembrandt](https://en.wikipedia.org/wiki/Rembrandt) or
 [Claude Monet](https://en.wikipedia.org/wiki/Claude_Monet).
 Those works are beautiful, but they are specific, full of what Mondrian called "particular forms."
@@ -184,7 +185,7 @@ John Coltrane - "Trane" - wrote the song
 in 1963.
 
 Image: images/Ray_Charles_and_John_Coltrane.jpg
-Title and Attribution: Ray Charles and John Coltrane - were both born on September 23rd.
+Title and Attribution: Ray Charles and John Coltrane - from www.kzfr.org .
 Link: http://www.kzfr.org/broadcasts/322
 
 Although he wrote it in response to the
@@ -285,7 +286,7 @@ Even though some of his disciples carried on his message, they carried it to sma
 
 After reading this, I bought Trane’s album right away!
 
-#### Filling in Coltrane's Blanks
+#### BYOM: Filling in Coltrane's Blanks
 
 To really understand this music requires a knowledge of some American History.
 The web and your local library give you access to a lot of this information, totally for free.
@@ -306,7 +307,7 @@ from that period:
 
 The more you learn about this period, the more you will be able to appreciate John Coltrane's music.
 
-#### Filling in Mondrian's Blanks
+#### BYOM: Filling in Mondrian's Blanks
 
 What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?
 
@@ -360,20 +361,26 @@ Plus, I have eyes, I can see what's going on - and
 
 ## First Four Talking Heads Albums
 
-They were students at RISD so were familiar with abstract art.
+The first four albums released by
+[Talking Heads](https://en.wikipedia.org/wiki/Talking_Heads)
+are full of wonderful music.
+All of their songs are very painterly and full of the vagueness and abstractions that allow us to fill in our own meanings.
 
-- All their songs are very painterly.
-- Maybe mention a song from each.
-
-Consider this homework.
-I will not go into great detail here - there's too much and you should be able to
-figure this out for yourself by now.
+Three of the four members were students at the
+[Rhode Island School of Design](https://en.wikipedia.org/wiki/Rhode_Island_School_of_Design)
+(RISD) so were presumably familiar with the tenets and techniques in modern art.
+Listening to their sound as it evolves over these four albums, and puzzling over their always inventive lyrics
+rewards fans with hours of entertainment and enlightenment.
 
 #### Talking Heads 77
 
-Image:
-Title and Attribution:
-Link:
+Their first album is
+[Talking Heads 77](https://en.wikipedia.org/wiki/Talking_Heads:_77),
+released in September of 1977.
+
+Image: images/Talking_Heads-Talking_Heads_77.jpg
+Title and Attribution: Talking Heads - cover of their album Talking Heads 77, by Sire Records.  Public Domain.
+Link: https://commons.wikimedia.org/w/index.php?curid=14296307
 
 - Psycho Killer
   - Not about any specific person
@@ -383,9 +390,13 @@ Link:
 
 #### More Songs About Buildings and Food
 
-Image:
-Title and Attribution:
-Link:
+Their second album is
+[More Songs About Buildings and Food](https://en.wikipedia.org/wiki/More_Songs_About_Buildings_and_Food),
+released in July of 1978.
+
+Image: images/Talking_Heads-More_Songs_About_Buildings_and_Food.jpg
+Title and Attribution: Talking Heads - cover of their album More Songs About Buildings and Food.  Fair use.
+Link: https://en.wikipedia.org/w/index.php?curid=14884863
 
 - For Artists Only
 
@@ -397,9 +408,13 @@ In fact, if there's an art form or just a genre that hasn't appeared yet, I am c
 
 #### Fear of Music
 
-Image:
-Title and Attribution:
-Link:
+Their third album is
+[Fear of Music](https://en.wikipedia.org/wiki/Fear_of_Music),
+released in August of 1979.
+
+Image: images/Talking_Heads-Fear_of_Music.jpg
+Title and Attribution: Talking Heads - cover of their album Fear of Music.  Fair use.
+Link: https://en.wikipedia.org/w/index.php?curid=1140591
 
 - I Zimbra
   - an adaptation of Dadaist Hugo Ball's poem "Gadji beri bimba".
@@ -407,9 +422,13 @@ Link:
 
 #### Remain in Light
 
-Image:
-Title and Attribution:
-Link:
+Their fourth album is
+[Remain in Light](https://en.wikipedia.org/wiki/Remain_in_Light),
+released in October of 1980.
+
+Image: images/Talking_Heads-Remain_in_Light.jpg
+Title and Attribution: Talking Heads - cover of their album Remain in Light.  Fair use.
+Link: https://en.wikipedia.org/w/index.php?curid=309798
 
 An extremely colorful expansion on themes first explored in I Zimbra.
 

@@ -285,22 +285,24 @@ Even though some of his disciples carried on his message, they carried it to sma
 
 After reading this, I bought Trane’s album right away!
 
-#### Filling in Trane's Blanks
+#### Filling in Coltrane's Blanks
 
 To really understand this music requires a knowledge of some American History.
 The web and your local library give you access to a lot of this information, totally for free.
 
-I recommend watching at least one civil rights documentary from the mid-1960s:
+I recommend watching at least one of these civil rights documentaries from the mid-1960s:
 
--
--
--
+- [History of the Civil Rights Movement](https://www.youtube.com/watch?v=URxwe6LPvkM) (5:52)
+- [Alabama City Remembered as Climactic Battle of Civil Rights Movement](https://www.youtube.com/watch?v=ggUt0gJh9U8) (4:27)
+- [Burmingham 1983](https://www.youtube.com/watch?v=-0lD37bq8YI) (4:22)
 
-And at least one speech by Martin Luther King from that period:
+And at least part of at least one of these speeches by
+[Martin Luther King Jr.](https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.)
+from that period:
 
--
--
--
+- [I Have a Dream - August 28, 1963](https://www.youtube.com/watch?v=1UV1fs8lAbg) (17:28)
+- [Nobel Peace Prize Acceptance Speech - December 19, 1964](https://www.youtube.com/watch?v=5r98tT0j1a0) (12:01)
+- [Beyond Vietnam: A Time to Break Silence - April 4, 1967](https://www.youtube.com/watch?v=3Qf6x9_MLD0) (53:46)
 
 The more you learn about this period, the more you will be able to appreciate John Coltrane's music.
 
@@ -312,6 +314,7 @@ Image: images/Piet_Mondrian-1939-1942-Composition_10.jpg
 Title and Attribution: Composition No. 10 - By Piet Mondrian, 1939-1942. Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=37643395
 
+Take his Composition 10, for example.
 Because this painting is so abstract and pure, the meaning of its elements is completely open to interpretation.
 
 So, for example, the white areas could represent white people and the black areas could represent black people - or vice versa.
@@ -325,15 +328,13 @@ the white could just be the background.
 Or, the vertical lines could represent older people and the horizontal lines could represent younger people - or vice versa - and
 the white could just be the background.
 
-Or, the vertical lines could represent ______ and the horizontal lines could represent ______!
-Fill in the blanks as you see fit - human life is full of opposites!
+Or, the vertical lines could represent ______ and the horizontal lines could represent ______, and
+the little colored boxes could represent ___ and ___ and ___!
+Fill in the blanks as you see fit - human life is full of pairs of opposites!
 
 The important thing to realize is that, no matter what identity we apply to the opposites in this painting,
 each pair opposites - black vs. white, horizontal vs. vertical, etc. - is in non-symetrical equilibrium.
-(If that doesn't make complete sense, no worries, give it some time.)
-
-Now you know the true nature of the power lying in Mondrian's Pure Neo-Plastic art!
-
+And now you know the true nature of the power lying in Mondrian's Pure Neo-Plastic art!
 
 ## First Four Talking Heads Albums
 

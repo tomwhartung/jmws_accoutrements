@@ -38,18 +38,18 @@ if you think Piet Mondrian's paintings are "just a bunch of squares," this artic
 
 ## All Along the Watchtower
 
-The song [All Along the Watchtower](https://en.wikipedia.org/wiki/All_Along_the_Watchtower)
-written by [Bob Dylan](https://en.wikipedia.org/wiki/Bob_Dylan) but
-covered most famously by [Jimi Hendrix](https://www.youtube.com/watch?v=TLV4_xaYynY),
-is a great example of a song with lyrics that are a bit vague.
-
 Image: images/Bob_Dylan-All_Along_the_Watchtower-single_cover.jpg
 Title and Attribution: All Along the Watchtower - cover of the single by Bob Dylan.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=26027910
 
+The song [All Along the Watchtower](https://en.wikipedia.org/wiki/All_Along_the_Watchtower)
+written by [Bob Dylan](https://en.wikipedia.org/wiki/Bob_Dylan) but
+covered most famously by [Jimi Hendrix](https://www.youtube.com/watch?v=TLV4_xaYynY),
+is a great example of a song with lyrics that are a bit vague.
 Surely all music lovers love this song!
 
-Based on the number of versions there are, it’s obvious that many musicians do!
+Based on the number of versions there are, it’s obvious that many musicians love it as well.
+
 In addition to
 [Bob’s](https://www.youtube.com/watch?v=jd3iytj9SDQ), and
 Jimi’s versions - [in the studio](https://www.youtube.com/watch?v=TLV4_xaYynY] and
@@ -209,7 +209,7 @@ Nothing could be further from the truth!
 
 #### John Coltrane - A Love Supreme
 
-The passion Trane felt for the
+The passion Coltrane felt for the
 [African-American civil rights movement](https://en.wikipedia.org/wiki/African-American_Civil_Rights_Movement_(1954%E2%80%931968))
 surfaces fully a couple of years later, in his magnum opus,
 [A Love Supreme](https://en.wikipedia.org/wiki/A_Love_Supreme).
@@ -364,7 +364,7 @@ Plus, I have eyes, I can see what's going on - and
 The first four albums released by
 [Talking Heads](https://en.wikipedia.org/wiki/Talking_Heads)
 are full of wonderful music.
-All of their songs are very painterly and full of the vagueness and abstractions that allow us to fill in our own meanings.
+All of their songs are very painterly and full of the vagueness and abstractions that allow listeners to fill in their own meanings.
 
 Three of the four members were students at the
 [Rhode Island School of Design](https://en.wikipedia.org/wiki/Rhode_Island_School_of_Design)
@@ -378,17 +378,24 @@ Their first album is
 [Talking Heads 77](https://en.wikipedia.org/wiki/Talking_Heads:_77),
 released in September of 1977.
 
-Image: images/Talking_Heads-Talking_Heads_77.jpg
+Image: images/Talking_Heads-Talking_Heads_77.png (Note: use the .png, not the jpg!)
 Title and Attribution: Talking Heads - cover of their album Talking Heads 77, by Sire Records.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=14296307
 
-- Psycho Killer
-  - Not about any specific person
-  - Associated with Son of Sam because of timing of release
-  - Actually written years before that
-- https://en.wikipedia.org/wiki/Psycho_Killer
+My number one pick from this album is the song
+[Psycho Killer] (https://en.wikipedia.org/wiki/Psycho_Killer).
 
-#### More Songs About Buildings and Food
+Note that part of the song is in French, and few people in America understand it.
+This may make that part of the song vague and abstract, but the sentiment expressed is undeniable.
+
+Because of the timing of of the song's release it was associated with the
+[Son of Sam](https://en.wikipedia.org/wiki/David_Berkowitz)
+murders it is not about him or any other specific person.
+The song was actually written years before the Son of Sam murders.
+
+Other favorite songs from this album are....
+
+#### More Songs About Buildings and Food (1978)
 
 Their second album is
 [More Songs About Buildings and Food](https://en.wikipedia.org/wiki/More_Songs_About_Buildings_and_Food),
@@ -398,15 +405,17 @@ Image: images/Talking_Heads-More_Songs_About_Buildings_and_Food.jpg
 Title and Attribution: Talking Heads - cover of their album More Songs About Buildings and Food.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=14884863
 
-- For Artists Only
-
-Favorite line: "You can't see it till it's finished!"
+My number one pick from this album is the song
+[For Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4),
+and my favorite line from the song is
+"You can't see it till it's finished!"
 
 Having dabbled in several art forms and can attest that this song is sufficiently abstract that it applies to all of them.
-
 In fact, if there's an art form or just a genre that hasn't appeared yet, I am confident the ideas in this song will still apply.
 
-#### Fear of Music
+Other favorite songs from this album are....
+
+#### Fear of Music (1979)
 
 Their third album is
 [Fear of Music](https://en.wikipedia.org/wiki/Fear_of_Music),
@@ -416,11 +425,19 @@ Image: images/Talking_Heads-Fear_of_Music.jpg
 Title and Attribution: Talking Heads - cover of their album Fear of Music.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=1140591
 
-- I Zimbra
-  - an adaptation of Dadaist Hugo Ball's poem "Gadji beri bimba".
-  - https://en.wikipedia.org/wiki/I_Zimbra
+My number one pick from this album is the song
+[I Zimbra](https://en.wikipedia.org/wiki/I_Zimbra).
+It is an adaptation of Dadaist
+[Hugo Ball's](https://en.wikipedia.org/wiki/Hugo_Ball)
+poem "Gadji beri bimba."
 
-#### Remain in Light
+[Dadaism](https://en.wikipedia.org/wiki/Dada)
+is an interesting art movement that rejects logic in favor of nonsense.
+If you are digging Talking Heads in general and like this song in particular, you should check it out!
+
+Other favorite songs from this album are....
+
+#### Remain in Light (1980)
 
 Their fourth album is
 [Remain in Light](https://en.wikipedia.org/wiki/Remain_in_Light),
@@ -430,16 +447,19 @@ Image: images/Talking_Heads-Remain_in_Light.jpg
 Title and Attribution: Talking Heads - cover of their album Remain in Light.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=309798
 
-An extremely colorful expansion on themes first explored in I Zimbra.
+This album is an extremely colorful expansion on the themes first explored in the song I Zimbra on Fear of Music.
+It is so different from their first album, it's truly amazing to hear the progression!
 
-- Once in a Lifetime
-- https://www.youtube.com/watch?v=I1wg1DNHbNU
-- Abstractions - the lack of particular forms - is one of the things that makes this song so great!
+My number one pick from this album is the song
+[Once in a Lifetime](https://en.wikipedia.org/wiki/Once_in_a_Lifetime_(Talking_Heads_song)).
+Surely you are familiar with this song!  If not, you can listen to
+[this version of it on youtube](https://www.youtube.com/watch?v=I1wg1DNHbNU).
 
-This whole album is so different from their first album, it's truly amazing to hear the progression!
+Note that their use of abstraction - the lack of particular forms - is one of the things that makes this song so great.
+It is difficult to imagine someone unable to relate to the sentiment, "And you might ask yourself: Well, how did I get here?"
 
-This proves to me that understanding the abstract - freeing yourself from limiting particular forms -
-is extremely powerful and hugely beneficial.
+A big reason it is so popular is because it is so vague and abstract that most everyone can relate to it.
+This proves that understanding the abstract and freeing oneself from limiting particular forms is extremely powerful and hugely beneficial.
 
 #### Now Check out Some Mondrian!
 

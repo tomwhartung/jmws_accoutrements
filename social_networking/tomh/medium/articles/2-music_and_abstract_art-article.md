@@ -113,13 +113,13 @@ Also, how are all these people going to fit in a typical
 
 How can a story so vague - so abstract, and even contradictory - also be so widely recognized as one of the greatest songs of all time?
 
-#### It's DIY Art!
+#### It's BYOM Art!
 
 If you can love this song - which requires a bit of filling in the blanks - then you can love modern art.
 Because whether you realize it or not, when you listen to this song, you are supplying details from - and
 feeling emotions felt only in - your own life.
 
-A big part of understanding modern art is realizing you have to do it yourself (DIY).
+**A big part of understanding modern art is realizing you have to bring your own meaning (BYOM).**
 
 Once they established their own style, painters like Kandinsky and Picasso - and there are many - did not set out to create works like
 [Rembrandt](https://en.wikipedia.org/wiki/Rembrandt) or
@@ -232,7 +232,7 @@ In my mind, Miles Davis provides the best perspective on Trane's magnum opus.
 
 #### Miles Davis - On Trane, A Love Supreme, and Civil Rights
 
-I first learned the significance of what Trane was saying in A Love Supreme when I read about it in Miles Davis' autobiography.
+I first learned the significance of what John Coltrane was saying in A Love Supreme when I read about it in Miles Davis' autobiography.
 
 Image: images/Miles-The_Autobiography.jpg
 Title and Attribution: Miles, The Autobiography - cover of the book written with Quincy Troupe.
@@ -353,17 +353,6 @@ Is finally, and permanently,
 Discredited, and abandoned,
 Everywhere is war
 Me say war.
-
-That until there no longer
-First class and second class citizens of any nation
-Until the colour of a man's skin
-Is of no more significance than the colour of his eyes
-Me say war.
-
-That until the basic human rights
-Are equally guaranteed to all,
-Without regard to race
-This is a war.
 ```
 
 Plus, I have eyes, I can see what's going on - and

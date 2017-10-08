@@ -332,9 +332,42 @@ Or, the vertical lines could represent ______ and the horizontal lines could rep
 the little colored boxes could represent ___ and ___ and ___!
 Fill in the blanks as you see fit - human life is full of pairs of opposites!
 
-The important thing to realize is that, no matter what identity we apply to the opposites in this painting,
-each pair opposites - black vs. white, horizontal vs. vertical, etc. - is in non-symetrical equilibrium.
 And now you know the true nature of the power lying in Mondrian's Pure Neo-Plastic art!
+
+#### I Want to Believe
+
+The important thing to realize is that, no matter what identity we assign to the opposites in this painting,
+each pair opposites - black vs. white, horizontal vs. vertical, etc. - is in non-symmetrical equilibrium.
+I want to believe this means that eventually things will work out, and people will be able to live in equilibrium.
+
+The song
+[War](https://www.youtube.com/watch?v=vPZydAotVOY)
+by
+[Bob Marley](https://en.wikipedia.org/wiki/Bob_Marley)
+confirms that this is how things will turn out - or else.
+
+```
+Until the philosophy which hold one race superior
+And another, inferior,
+Is finally, and permanently,
+Discredited, and abandoned,
+Everywhere is war
+Me say war.
+
+That until there no longer
+First class and second class citizens of any nation
+Until the colour of a man's skin
+Is of no more significance than the colour of his eyes
+Me say war.
+
+That until the basic human rights
+Are equally guaranteed to all,
+Without regard to race
+This is a war.
+```
+
+Plus, I have eyes, I can see what's going on - and
+[I want to believe](https://www.youtube.com/watch?v=rbBX6aEzEz8).
 
 ## First Four Talking Heads Albums
 

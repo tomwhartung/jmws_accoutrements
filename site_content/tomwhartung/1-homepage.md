@@ -1,9 +1,16 @@
 
 # 1-homepage.md
 
-# References
+# Idea
+
+- Use the Gimp to create a "Tom W Hartung.com" logo using a fancy font.
 
 # Content
+
+For resilient income in this rapidly-changing world,
+
+
+# Separate Article, or ...?
 
  Three Logs on the Fire
 ------------------------

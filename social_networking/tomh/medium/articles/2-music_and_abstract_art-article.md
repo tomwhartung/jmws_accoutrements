@@ -18,9 +18,9 @@ This is where I sum things up for the reader by talking to them directly.
 
 This article is for people who love music but do not understand abstract art.
 
-Image: images/Wassily_Kandinsky-1914-Fugue.jpg
-Title and Attribution: Fugue - By Wassily Kandinsky, 1914.
-Link: http://www.wassilykandinsky.net/work-101.php
+Image: images/Wassily_Kandinsky-1903-The_Blue_Rider-Der_Blaue_Reiter.jpg
+Title and Attribution: The Blue Rider (Der Blaue Reiter) - By Wassily Kandinski, 1903 - Artsy, Public Domain.
+Link: https://commons.wikimedia.org/w/index.php?curid=38528964
 
 Using popular songs as examples, this article explains how musicians and painters use abstractions to add value and meaning to their work.
 Spoiler alert: the secret is, when the meaning is not obvious, listeners and viewers need only to
@@ -461,18 +461,12 @@ It is difficult to imagine someone unable to relate to the sentiment, "And you m
 A big reason it is so popular is because it is so vague and abstract that most everyone can relate to it.
 This proves that understanding the abstract and freeing oneself from limiting particular forms is extremely powerful and hugely beneficial.
 
-#### Now Check out Some Mondrian!
-
-Image:
-Title and Attribution:
-Link:
-
-- Quote about equilibrium and how it fits in this article
-- Quote about harmony and lack of symmetry and how it fits in this article
-
-(Closer with first or second pronouns, possibly both.)
 
 ## Conclusion
+
+Image: images/Wassily_Kandinsky-1914-Fugue.jpg
+Title and Attribution: Fugue - By Wassily Kandinsky, 1914.
+Link: http://www.wassilykandinsky.net/work-101.php
 
 Certainly the fact that Kandinsky's Fugue represents a type of music
 may have something to do with it selling in 1990 for $20,900,000.
@@ -485,4 +479,5 @@ http://www.myswitzerland.com/nl-nl/fuga-fugue.html
 The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
 For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
 
+(Closer with first or second pronouns, possibly both.)
 

@@ -206,10 +206,22 @@ This whole album is so different from their first album, it's truly amazing to h
 This proves to me that understanding the abstract - freeing yourself from limiting particular forms -
 is extremely powerful and hugely beneficial.
 
-# Now Check out Some Mondrian!
+# Conclusion
+
+To be honest, when I first learned this I was a bit pissed off!
+Of course, punk rock was huge at the time so everyone listening to that was a bit pissed off about something!
+
+In this case, I was a bit pissed off that I hadn't learned this sooner.
+It all makes such total sense, in some ways it's like, "duh."
+
+But sometimes it's nice to have things spelled out in black and white.
+Hopefully this helps you better appreciate abstract art!
+
+## (?) Now Check out Some Mondrian! (?)
+
+(?) Not sure we want to use this....
+!!! Review goals and entire article before finalizing!
 
 - Quote about equilibrium and how it fits in this article
 - Quote about harmony and lack of symmetry and how it fits in this article
-
-(Closer with first or second pronouns, possibly both.)
 

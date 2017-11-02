@@ -479,5 +479,23 @@ http://www.myswitzerland.com/nl-nl/fuga-fugue.html
 The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
 For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
 
-(Closer with first or second pronouns, possibly both.)
+### In Conclusion
+
+To be honest, when I first learned this I was a bit pissed off!
+Of course, punk rock was huge at the time so everyone listening to that was a bit pissed off about something!
+
+In this case, I was a bit pissed off that I hadn't learned this sooner.
+- It all makes such total sense, in some ways it's like, "duh."
+- Too bad teachers think it's more important to teach us about wars and the like.
+
+But sometimes it's nice to have things spelled out in black and white.
+Hopefully this helps you better appreciate abstract art!
+
+## (?) Now Check out Some Mondrian! (?)
+
+(?) Not sure we want to use this....
+!!! Review goals and entire article before finalizing!
+
+- Quote about equilibrium and how it fits in this article
+- Quote about harmony and lack of symmetry and how it fits in this article
 

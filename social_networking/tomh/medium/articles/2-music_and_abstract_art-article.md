@@ -414,7 +414,7 @@ Other favorite songs from Talking Heads 77 are Tentative Decisions, Who Is It? (
 Their second album is
 [More Songs About Buildings and Food](https://en.wikipedia.org/wiki/More_Songs_About_Buildings_and_Food),
 released in July of 1978.
-[This album](https://www.youtube.com/watch?v=Jjwj25mI2zY) is my favorite Talking Heads album.
+[This album](https://www.youtube.com/watch?v=Jjwj25mI2zY) is my favorite one by Talking Heads.
 
 Image: images/Talking_Heads-More_Songs_About_Buildings_and_Food.jpg
 Title and Attribution: Talking Heads - cover of their album More Songs About Buildings and Food.  Fair use.
@@ -477,6 +477,8 @@ Although he never mentions that dreadful word, it's clear this party is anything
 Not using the word lends the song its abstract, painterly quality.
 It's like he's dancing around the issue rather than addressing it directly, forcing the listener to engage with the lyrics.
 
+I heard them do this song [live](https://www.youtube.com/watch?v=ICDJjTlBoMk) once, and it blew me away!
+
 Other favorite songs from Fear of Music are [Mind](https://www.youtube.com/watch?v=_Kf4p738j80)(★), Air, and Heaven(★).
 
 #### Remain in Light (1980)
@@ -493,21 +495,27 @@ Link: https://en.wikipedia.org/w/index.php?curid=309798
 This album is an extremely colorful expansion on the themes first explored in the song I Zimbra on Fear of Music.
 It is so different from their first album, it's truly amazing to hear the progression!
 
-The <b>singles</b> from this album were <q>[Once in a Lifetime](https://www.youtube.com/watch?v=hFLiKLoxWD8)</q> and
-<q>Houses in Motion.</q>
-Surely you have heard [Once in a Lifetime](https://www.youtube.com/watch?v=I1wg1DNHbNU).
-
-Note that their use of abstraction - the lack of particular forms - is one of the things that makes this song so great.
-It is difficult to imagine someone unable to relate to the sentiment, "And you might ask yourself: Well, how did I get here?"
+The singles from this album are [Once in a Lifetime](https://www.youtube.com/watch?v=hFLiKLoxWD8) and Houses in Motion.
+Surely you have heard the extremely popular [Once in a Lifetime](https://www.youtube.com/watch?v=I1wg1DNHbNU) at some point!
 
 A big reason it is so popular is because it is so vague and abstract that most everyone can relate to it.
-This proves that understanding the abstract and freeing oneself from limiting particular forms is extremely powerful and hugely beneficial.
+In fact, it is difficult to imagine anyone not being able to relate to the sentiment, "And you might ask yourself: Well, how did I get here?"
 
-The <b>most noteworthy song</b> on Remain in Light is <q>
-[]()
-.</q>
+The most noteworthy song on Remain in Light is
+[The Great Curve](https://www.youtube.com/watch?v=UW1IqW6kNdU).
 
-Other <b>favorite songs</b> from Remain in Light are
+With lines like "She loves the world, and all the people in it," the song is ostensibly about a specific woman.
+As the song progresses, we learn "She is only partly human being," then comes the clincher:
+
+"The world moves on a woman's hips
+The world moves and it swivels and bops
+The world moves on a woman's hips
+The world moves and it bounces and hops."
+
+Voila!  It turns out the song is an abstract portrait of all women.  I guess writing about just one would be too boring!
+
+Other favorite songs from Remain in Light are Born Under Punches (The Heat Goes On)(★), Crosseyed and Painless, and
+[Listening Wind](https://www.youtube.com/watch?v=HEluoeMLTCI)(★).
 
 
 ## Conclusion

@@ -374,7 +374,7 @@ All four of these albums are very highly rated on
 [allmusic.com](http://www.allmusic.com).
 All four have earned five of five stars in both critic and user reviews on the site, with the exception of
 [Fear of Music](https://www.allmusic.com/album/fear-of-music-mw0000196010),
-which has <q>only</q> 4.5 out of five stars in the critic's ratings.
+which has only 4.5 out of five stars in the critic's ratings.
 
 Listening to their sound as it evolves over these four albums, and puzzling over their always inventive lyrics
 rewards fans with hours of entertainment and enlightenment.
@@ -384,20 +384,24 @@ rewards fans with hours of entertainment and enlightenment.
 Their first album is
 [Talking Heads 77](https://en.wikipedia.org/wiki/Talking_Heads:_77),
 released in September of 1977.
-[This album](https://www.youtube.com/watch?v=j2y77QjFnuk) is their most original-sounding release.
+[This album](https://www.youtube.com/watch?v=j2y77QjFnuk) is their most raw, quirky, original-sounding release.
 
 Image: images/Talking_Heads-Talking_Heads_77.png (Note: use the .png, not the jpg!)
 Title and Attribution: Talking Heads - cover of their album Talking Heads 77, by Sire Records.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=14296307
 
-The <b>singles</b> from this album were <q>Uh-Oh, Love Comes to Town</q>,
-<q>[Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer),</q> and <q>Pulled Up.</q>
+The singles from this album were Uh-Oh, Love Comes to Town,
+[Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer), and Pulled Up.
+Many associated Psycho Killer with the [Son of Sam](https://en.wikipedia.org/wiki/David_Berkowitz)
+murders, but it is purposefully abstract and not about him or any other specific person.
+The song was actually written years before the Son of Sam murders!
 
-The <b>gem</b> on this album is <q> [No Compassion](https://www.youtube.com/watch?v=ndUVdzi-HqY).</q>
+The most noteworthy song on Talking Heads 77 is [No Compassion](https://www.youtube.com/watch?v=ndUVdzi-HqY).
+The theme of this song contrasts strongly with the message of Peace and Love present in much of the hippie music from the 1960s.
+Its message is that it can be overwhelming to try to help everyone, that some people are actually in love with their problems,
+and for some of us, it might be a good idea to Be a little more selfish, it might do you some good!
 
-Other <b>favorite songs</b> from this album are <q>Tentative Decisions,</q>
-<q>Who Is It?,</q> and
-<q>Don't Worry About the Government.</q>
+Other favorite songs from this album are Tentative Decisions, Who Is It? (&hearts;), and Don't Worry About the Government.
 
 #### More Songs About Buildings and Food (1978)
 
@@ -410,13 +414,13 @@ Image: images/Talking_Heads-More_Songs_About_Buildings_and_Food.jpg
 Title and Attribution: Talking Heads - cover of their album More Songs About Buildings and Food.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=14884863
 
-The <b>only single</b> from this album was a cover of the
+The only single from this album is a cover of the
 <a href='https://en.wikipedia.org/wiki/Al_Green' title='Wikipedia page for Al Green' target='_blank'>Al Green</a> song
 <q>Take Me to the River.</q>
 In 1979 it peaked at number 26 on the
 <a href='https://en.wikipedia.org/wiki/Billboard_Hot_100' title='Wikipedia page for the Billboard Hot 100' target='_blank'>Billboard Hot 100</a>.
 
-The <b>gem</b> on this album is <q>[The Good Thing](https://www.youtube.com/watch?v=kMCMudxTTQE).</q>
+The <b>most noteworthy song</b> on this album is <q>[The Good Thing](https://www.youtube.com/watch?v=kMCMudxTTQE).</q>
 
 Other <b>favorite songs</b> from this album are <q>
 <q>Warning Sign,</q> <q>Found a Job (&hearts;),</q>
@@ -443,12 +447,12 @@ The <b>singles</b> from this album were <q>Life During Wartime,</q>
 I Zimbra is an adaptation of Dadaist [Hugo Ball's](https://en.wikipedia.org/wiki/Hugo_Ball) poem "Gadji beri bimba."
 [Dadaism](https://en.wikipedia.org/wiki/Dada) is an interesting art movement that rejects logic in favor of nonsense.
 
-The <b>gems</b> on this album are
-<q>[Mind](https://www.youtube.com/watch?v=_Kf4p738j80)</q> and
+The <b>most noteworthy song</b> on this album is
 <q>[Memories Can't Wait](https://www.youtube.com/watch?v=VJu-IABeCws).</q>
 
-Other <b>favorite songs</b> from this album are <q>Air</q> and
-<q>Heaven.</q>
+Other <b>favorite songs</b> from this album are
+<q>[Mind](https://www.youtube.com/watch?v=_Kf4p738j80),</q>
+<q>Air,</q> and <q>Heaven.</q>
 
 #### Remain in Light (1980)
 
@@ -464,10 +468,9 @@ Link: https://en.wikipedia.org/w/index.php?curid=309798
 This album is an extremely colorful expansion on the themes first explored in the song I Zimbra on Fear of Music.
 It is so different from their first album, it's truly amazing to hear the progression!
 
-The <b>singles</b> from this album were <q></q>,
-
-[Once in a Lifetime](https://www.youtube.com/watch?v=I1wg1DNHbNU).
-Surely you are familiar with Once in a Lifetime.
+The <b>singles</b> from this album were <q>[Once in a Lifetime](https://www.youtube.com/watch?v=hFLiKLoxWD8)</q> and
+<q>Houses in Motion.</q>
+Surely you have heard [Once in a Lifetime](https://www.youtube.com/watch?v=I1wg1DNHbNU).
 
 Note that their use of abstraction - the lack of particular forms - is one of the things that makes this song so great.
 It is difficult to imagine someone unable to relate to the sentiment, "And you might ask yourself: Well, how did I get here?"
@@ -475,7 +478,7 @@ It is difficult to imagine someone unable to relate to the sentiment, "And you m
 A big reason it is so popular is because it is so vague and abstract that most everyone can relate to it.
 This proves that understanding the abstract and freeing oneself from limiting particular forms is extremely powerful and hugely beneficial.
 
-The <b>gem</b> on this album is <q>
+The <b>most noteworthy song</b> on this album is <q>
 []()
 .</q>
 

@@ -395,10 +395,9 @@ The <b>singles</b> from this album were <q>Uh-Oh, Love Comes to Town</q>,
 
 The <b>gem</b> on this album is <q> [No Compassion](https://www.youtube.com/watch?v=ndUVdzi-HqY).</q>
 
-Other <b>favorite songs</b> from this album are <q></q>,
-<q></q>,
-<q></q>,
-<q></q>,
+Other <b>favorite songs</b> from this album are <q>Tentative Decisions,</q>
+<q>Who Is It?,</q> and
+<q>Don't Worry About the Government.</q>
 
 #### More Songs About Buildings and Food (1978)
 
@@ -420,12 +419,10 @@ In 1979 it peaked at number 26 on the
 The <b>gem</b> on this album is <q>[The Good Thing](https://www.youtube.com/watch?v=kMCMudxTTQE).</q>
 
 Other <b>favorite songs</b> from this album are <q>
-[For Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4) (&hearts;&hearts;&hearts;),</q>
-<q>,</q>
-<q>,</q>
-<q>,</q>
-<q>,</q>
-<q>,</q>
+<q>Warning Sign,</q> <q>Found a Job (&hearts;),</q>
+<q>[Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4) (&hearts;&hearts;&hearts;),</q>
+<q>Stay Hungry (&hearts;),</q> and
+<q>[Big Country](https://www.youtube.com/watch?v=dErdvJrv8JE) (&hearts;&hearts;).</q>
 
 #### Fear of Music (1979)
 
@@ -439,23 +436,19 @@ Image: images/Talking_Heads-Fear_of_Music.jpg
 Title and Attribution: Talking Heads - cover of their album Fear of Music.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=1140591
 
-The <b>singles</b> from this album were <q></q>,
+The <b>singles</b> from this album were <q>Life During Wartime,</q>
+<q>[I Zimbra](https://en.wikipedia.org/wiki/I_Zimbra),</q> and
+<q>Cities (&hearts;&hearts;).</q>
 
-[I Zimbra](https://en.wikipedia.org/wiki/I_Zimbra).
-It is an adaptation of Dadaist
-[Hugo Ball's](https://en.wikipedia.org/wiki/Hugo_Ball)
-poem "Gadji beri bimba."
-[Dadaism](https://en.wikipedia.org/wiki/Dada)
-is an interesting art movement that rejects logic in favor of nonsense.
+I Zimbra is an adaptation of Dadaist [Hugo Ball's](https://en.wikipedia.org/wiki/Hugo_Ball) poem "Gadji beri bimba."
+[Dadaism](https://en.wikipedia.org/wiki/Dada) is an interesting art movement that rejects logic in favor of nonsense.
 
-The <b>gem</b> on this album is <q>
-[]()
-.</q>
+The <b>gems</b> on this album are
+<q>[Mind](https://www.youtube.com/watch?v=_Kf4p738j80)</q> and
+<q>[Memories Can't Wait](https://www.youtube.com/watch?v=VJu-IABeCws).</q>
 
-Other <b>favorite songs</b> from this album are <q></q>,
-<q></q>,
-<q></q>,
-<q></q>,
+Other <b>favorite songs</b> from this album are <q>Air</q> and
+<q>Heaven.</q>
 
 #### Remain in Light (1980)
 

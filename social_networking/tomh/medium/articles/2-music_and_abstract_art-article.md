@@ -26,15 +26,20 @@ Using popular songs as examples, this article explains how musicians and painter
 Spoiler alert: the secret is, when the meaning is not obvious, listeners and viewers need only to
 learn how to add their own meaning to the art they hear and see.
 
-When I first learned about abstract art, I was ready for it, because by then I had spent years listening to the
-rich variety of music available in the 1960s, 70s, and 80s.
-The purpose of this article is to share with you the awakening I experienced in this regard in the art classes
-I took at Virginia Commonwealth University [VCU](https://www.vcu.edu) in the mid-1980s.
+Sound complicated? It isn’t! All it takes is a little imagination.
 
-If you have difficulty understanding how this painting, [Fugue](https://curiator.com/art/wassily-kandinsky/fuga-fugue),
-created by Wassily Kandinsky in 1914 could
-[sell at Sotheby's in 1990 for $20.9 million](http://www.wassilykandinsky.net/work-101.php), or
-if you think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
+---
+
+## Exercising Your Imagination
+
+Look at Kandinsky’s painting of The Blue Rider above and imagine:
+
+1. A wildcat growling - in the distance
+2. Two riders - instead of just the one
+3. And they’re approaching - not riding off to the side
+4. The sound of the wind - beginning to howl
+
+Easy enough, right? Ok, now we’re ready!
 
 ## All Along the Watchtower
 
@@ -505,7 +510,9 @@ The most noteworthy song on Remain in Light is
 [The Great Curve](https://www.youtube.com/watch?v=UW1IqW6kNdU).
 
 With lines like "She loves the world, and all the people in it," the song is ostensibly about a specific woman.
-As the song progresses, we learn "She is only partly human being," then comes the clincher:
+As the song progresses, we learn "She is only partly human being."
+
+Then a bit later, we hear the clincher:
 
 "The world moves on a woman's hips
 The world moves and it swivels and bops
@@ -535,6 +542,8 @@ http://www.myswitzerland.com/nl-nl/fuga-fugue.html
 The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
 For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
 
+-------------------------------
+
 ### In Conclusion
 
 To be honest, when I first learned this I was a bit pissed off!
@@ -547,11 +556,29 @@ In this case, I was a bit pissed off that I hadn't learned this sooner.
 But sometimes it's nice to have things spelled out in black and white.
 Hopefully this helps you better appreciate abstract art!
 
-## (?) Now Check out Some Mondrian! (?)
+-------------------------------
+
+# (?) Now Check out Some Mondrian! (?)
 
 (?) Not sure we want to use this....
 !!! Review goals and entire article before finalizing!
 
 - Quote about equilibrium and how it fits in this article
 - Quote about harmony and lack of symmetry and how it fits in this article
+
+-------------------------------
+
+# Copied From the Beginning
+
+[Not sure whether we want to use this first-person stuff.]
+
+When I first learned about abstract art, I was ready for it, because by then I had spent years listening to the
+rich variety of music available in the 1960s, 70s, and 80s.
+The purpose of this article is to share with you the awakening I experienced in this regard in the art classes
+I took at Virginia Commonwealth University [VCU](https://www.vcu.edu) in the mid-1980s.
+
+If you have difficulty understanding how this painting, [Fugue](https://curiator.com/art/wassily-kandinsky/fuga-fugue),
+created by Wassily Kandinsky in 1914 could
+[sell at Sotheby's in 1990 for $20.9 million](http://www.wassilykandinsky.net/work-101.php), or
+if you think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
 

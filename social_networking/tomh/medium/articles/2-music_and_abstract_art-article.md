@@ -363,12 +363,19 @@ Plus, I have eyes, I can see what's going on - and
 
 The first four albums released by
 [Talking Heads](https://en.wikipedia.org/wiki/Talking_Heads)
-are full of wonderful music.
-All of their songs are very painterly and full of the vagueness and abstractions that allow listeners to fill in their own meanings.
+are full of wonderful music with very abstract lyrics.
 
+All of their songs are very painterly and full of the vagueness and abstractions that allow listeners to fill in their own meanings.
 Three of the four members were students at the
 [Rhode Island School of Design](https://en.wikipedia.org/wiki/Rhode_Island_School_of_Design)
 (RISD) so were presumably familiar with the tenets and techniques in modern art.
+
+All four of these albums are very highly rated on
+[allmusic.com](http://www.allmusic.com).
+All four have earned five of five stars in both critic and user reviews on the site, with the exception of
+[Fear of Music](https://www.allmusic.com/album/fear-of-music-mw0000196010),
+which has <q>only</q> 4.5 out of five stars in the critic's ratings.
+
 Listening to their sound as it evolves over these four albums, and puzzling over their always inventive lyrics
 rewards fans with hours of entertainment and enlightenment.
 
@@ -377,59 +384,85 @@ rewards fans with hours of entertainment and enlightenment.
 Their first album is
 [Talking Heads 77](https://en.wikipedia.org/wiki/Talking_Heads:_77),
 released in September of 1977.
+[This album](https://www.youtube.com/watch?v=j2y77QjFnuk) is their most original-sounding release.
 
 Image: images/Talking_Heads-Talking_Heads_77.png (Note: use the .png, not the jpg!)
 Title and Attribution: Talking Heads - cover of their album Talking Heads 77, by Sire Records.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=14296307
 
-The singles from this album were <q>Uh-Oh, Love Comes to Town</q>, <q>[Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer),
-</q> and <q>Pulled Up.</q>
+The <b>singles</b> from this album were <q>Uh-Oh, Love Comes to Town</q>,
+<q>[Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer),</q> and <q>Pulled Up.</q>
 
-Other favorite songs from this album are <q></q>,
+The <b>gem</b> on this album is <q> [No Compassion](https://www.youtube.com/watch?v=ndUVdzi-HqY).</q>
+
+Other <b>favorite songs</b> from this album are <q></q>,
+<q></q>,
+<q></q>,
+<q></q>,
 
 #### More Songs About Buildings and Food (1978)
 
 Their second album is
 [More Songs About Buildings and Food](https://en.wikipedia.org/wiki/More_Songs_About_Buildings_and_Food),
 released in July of 1978.
+[This album](https://www.youtube.com/watch?v=Jjwj25mI2zY) is my favorite Talking Heads album.
 
 Image: images/Talking_Heads-More_Songs_About_Buildings_and_Food.jpg
 Title and Attribution: Talking Heads - cover of their album More Songs About Buildings and Food.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=14884863
 
-The only singles from this album were <q></q>,
+The <b>only single</b> from this album was a cover of the
+<a href='https://en.wikipedia.org/wiki/Al_Green' title='Wikipedia page for Al Green' target='_blank'>Al Green</a> song
+<q>Take Me to the River.</q>
+In 1979 it peaked at number 26 on the
+<a href='https://en.wikipedia.org/wiki/Billboard_Hot_100' title='Wikipedia page for the Billboard Hot 100' target='_blank'>Billboard Hot 100</a>.
 
-Other favorite songs from this album are <q></q>,
-[For Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4),
+The <b>gem</b> on this album is <q>[The Good Thing](https://www.youtube.com/watch?v=kMCMudxTTQE).</q>
+
+Other <b>favorite songs</b> from this album are <q>
+[For Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4) (&hearts;&hearts;&hearts;),</q>
+<q>,</q>
+<q>,</q>
+<q>,</q>
+<q>,</q>
+<q>,</q>
 
 #### Fear of Music (1979)
 
 Their third album is
 [Fear of Music](https://en.wikipedia.org/wiki/Fear_of_Music),
 released in August of 1979.
+For some listeners,
+[this album](https://www.youtube.com/watch?v=Cb6izAqdTnc) may not be as <q>accessible</q> as the other three.
 
 Image: images/Talking_Heads-Fear_of_Music.jpg
 Title and Attribution: Talking Heads - cover of their album Fear of Music.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=1140591
 
-The singles from this album were <q></q>,
+The <b>singles</b> from this album were <q></q>,
 
 [I Zimbra](https://en.wikipedia.org/wiki/I_Zimbra).
 It is an adaptation of Dadaist
 [Hugo Ball's](https://en.wikipedia.org/wiki/Hugo_Ball)
 poem "Gadji beri bimba."
-
 [Dadaism](https://en.wikipedia.org/wiki/Dada)
 is an interesting art movement that rejects logic in favor of nonsense.
-If you are digging Talking Heads in general and like this song in particular, you should check it out!
 
-Other favorite songs from this album are <q></q>,
+The <b>gem</b> on this album is <q>
+[]()
+.</q>
+
+Other <b>favorite songs</b> from this album are <q></q>,
+<q></q>,
+<q></q>,
+<q></q>,
 
 #### Remain in Light (1980)
 
 Their fourth album is
 [Remain in Light](https://en.wikipedia.org/wiki/Remain_in_Light),
 released in October of 1980.
+[This album](https://www.youtube.com/watch?v=LVGnTE5N1U8) is the most highly acclaimed of their first four releases.
 
 Image: images/Talking_Heads-Remain_in_Light.jpg
 Title and Attribution: Talking Heads - cover of their album Remain in Light.  Fair use.
@@ -438,10 +471,10 @@ Link: https://en.wikipedia.org/w/index.php?curid=309798
 This album is an extremely colorful expansion on the themes first explored in the song I Zimbra on Fear of Music.
 It is so different from their first album, it's truly amazing to hear the progression!
 
-My number one pick from this album is the song
-[Once in a Lifetime](https://en.wikipedia.org/wiki/Once_in_a_Lifetime_(Talking_Heads_song)).
-Surely you are familiar with this song!  If not, you can listen to
-[this version of it on youtube](https://www.youtube.com/watch?v=I1wg1DNHbNU).
+The <b>singles</b> from this album were <q></q>,
+
+[Once in a Lifetime](https://www.youtube.com/watch?v=I1wg1DNHbNU).
+Surely you are familiar with Once in a Lifetime.
 
 Note that their use of abstraction - the lack of particular forms - is one of the things that makes this song so great.
 It is difficult to imagine someone unable to relate to the sentiment, "And you might ask yourself: Well, how did I get here?"
@@ -449,7 +482,14 @@ It is difficult to imagine someone unable to relate to the sentiment, "And you m
 A big reason it is so popular is because it is so vague and abstract that most everyone can relate to it.
 This proves that understanding the abstract and freeing oneself from limiting particular forms is extremely powerful and hugely beneficial.
 
-Other favorite songs from this album are <q></q>,
+The <b>gem</b> on this album is <q>
+[]()
+.</q>
+
+Other <b>favorite songs</b> from this album are <q></q>,
+<q></q>,
+<q></q>,
+<q></q>,
 
 
 ## Conclusion

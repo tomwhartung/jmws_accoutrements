@@ -161,50 +161,45 @@ I wager you will never be the same!
 ### First Four Talking Heads Albums
 
 They were students at RISD so were familiar with abstract art.
+All their songs are very "painterly."
 
-- All their songs are very painterly.
-- Maybe mention a song from each.
+Outline for each section:
 
-Consider this homework.
-I will not go into great detail here - there's too much and you should be able to
-figure this out for yourself by now.
+- Single(s):
+
+- The Gem:
+  - Explain how each "Gem" (song) uses abstractions - the lack of particular forms - to give it more universal appeal.
+  - Tell how the song deomonstrates that understanding abstractions frees the artist from limiting particular forms.
+  - This is extremely powerful and hugely beneficial.
+
+- Other Favorites:
 
 #### Talking Heads 77
 
-- Psycho Killer
-  - Not about any specific person
-  - Associated with Son of Sam because of timing of release
-  - Actually written years before that
-- https://en.wikipedia.org/wiki/Psycho_Killer
+- Single(s): (list)
+- The Gem:
+- Other Favorites: (list)
 
 #### More Songs About Buildings and Food
 
-- For Artists Only
-
-Favorite line: "You can't see it till it's finished!"
-
-Having dabbled in several art forms and can attest that this song is sufficiently abstract that it applies to all of them.
-
-In fact, if there's an art form or just a genre that hasn't appeared yet, I am confident the ideas in this song will still apply.
+- Single(s): (list)
+- The Gem:
+- Other Favorites: (list)
 
 #### Fear of Music
 
-- I Zimbra
-  - an adaptation of Dadaist Hugo Ball's poem "Gadji beri bimba".
-  - https://en.wikipedia.org/wiki/I_Zimbra
+- Single(s): (list)
+- The Gem:
+- Other Favorites: (list)
 
 #### Remain in Light
 
-An extremely colorful expansion on themes first explored in I Zimbra.
+- Single(s): (list)
+- The Gem:
+- Other Favorites: (list)
 
-- Once in a Lifetime
-- https://www.youtube.com/watch?v=I1wg1DNHbNU
-- Abstractions - the lack of particular forms - is one of the things that makes this song so great!
-
+An extremely colorful expansion on themes first explored in I Zimbra on Fear of Music.
 This whole album is so different from their first album, it's truly amazing to hear the progression!
-
-This proves to me that understanding the abstract - freeing yourself from limiting particular forms -
-is extremely powerful and hugely beneficial.
 
 # Conclusion
 

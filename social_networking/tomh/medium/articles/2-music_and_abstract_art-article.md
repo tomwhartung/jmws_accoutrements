@@ -370,14 +370,17 @@ Three of the four members were students at the
 [Rhode Island School of Design](https://en.wikipedia.org/wiki/Rhode_Island_School_of_Design)
 (RISD) so were presumably familiar with the tenets and techniques in modern art.
 
-All four of these albums are very highly rated on
-[allmusic.com](http://www.allmusic.com).
-All four have earned five of five stars in both critic and user reviews on the site, with the exception of
-[Fear of Music](https://www.allmusic.com/album/fear-of-music-mw0000196010),
-which has only 4.5 out of five stars in the critic's ratings.
+All four of these albums are very highly rated on [allmusic.com](http://www.allmusic.com).
+Specifically, three of the four have earned
+[5 of 5 stars](https://www.allmusic.com/artist/talking-heads-mn0000131650/discography) in both critic and user reviews on the site.
+The exception - [Fear of Music](https://www.allmusic.com/album/fear-of-music-mw0000196010) -
+has "only" 4.5 out of 5 stars in the critic's ratings.
 
-Listening to their sound as it evolves over these four albums, and puzzling over their always inventive lyrics
-rewards fans with hours of entertainment and enlightenment.
+Listening to their sound as it evolves over these four albums, and puzzling over their usually abstract but
+always inventive lyrics rewards listeners with hours of entertainment and enlightenment.
+
+In the following descriptions, a heart (♥) icon denotes the love songs, and a star (★) icon indicates songs
+that have made a strong and lasting impression on me.
 
 #### Talking Heads 77
 
@@ -390,10 +393,10 @@ Image: images/Talking_Heads-Talking_Heads_77.png (Note: use the .png, not the jp
 Title and Attribution: Talking Heads - cover of their album Talking Heads 77, by Sire Records.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=14296307
 
-The singles from this album were Uh-Oh, Love Comes to Town,
-[Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer), and Pulled Up.
-Many associated Psycho Killer with the [Son of Sam](https://en.wikipedia.org/wiki/David_Berkowitz)
-murders, but it is purposefully abstract and not about him or any other specific person.
+The singles from this album were Uh-Oh, Love Comes to Town(♥),
+[Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer)(★), and Pulled Up.
+At the time, many listeners associated Psycho Killer with the [Son of Sam](https://en.wikipedia.org/wiki/David_Berkowitz) murders.
+However, it is purposely abstract and not about him or any other specific person.
 The song was actually written years before the Son of Sam murders!
 
 The most noteworthy song on Talking Heads 77 is [No Compassion](https://www.youtube.com/watch?v=ndUVdzi-HqY).
@@ -401,7 +404,10 @@ The theme of this song contrasts strongly with the message of Peace and Love pre
 Its message is that it can be overwhelming to try to help everyone, that some people are actually in love with their problems,
 and for some of us, it might be a good idea to Be a little more selfish, it might do you some good!
 
-Other favorite songs from this album are Tentative Decisions, Who Is It? (&hearts;), and Don't Worry About the Government.
+At times, I’ve had to take this advice to heart, because I’ve learned the hard way it’s easy to care more for some
+people than they care for themselves. It’s sad, but true  — and such situations can be quite frustrating.
+
+Other favorite songs from this album are Tentative Decisions, Who Is It? (♥), and Don't Worry About the Government.
 
 #### More Songs About Buildings and Food (1978)
 
@@ -414,19 +420,29 @@ Image: images/Talking_Heads-More_Songs_About_Buildings_and_Food.jpg
 Title and Attribution: Talking Heads - cover of their album More Songs About Buildings and Food.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=14884863
 
-The only single from this album is a cover of the
-<a href='https://en.wikipedia.org/wiki/Al_Green' title='Wikipedia page for Al Green' target='_blank'>Al Green</a> song
-<q>Take Me to the River.</q>
-In 1979 it peaked at number 26 on the
-<a href='https://en.wikipedia.org/wiki/Billboard_Hot_100' title='Wikipedia page for the Billboard Hot 100' target='_blank'>Billboard Hot 100</a>.
+The only single from this album is a cover of the [Al Green](https://en.wikipedia.org/wiki/Al_Green) song
+[Take Me to the River](https://www.youtube.com/watch?v=vGD8aQ2GKr0).
+In 1979 the [version by Talking Heads](https://www.youtube.com/watch?v=6ar2VHW1i2w) was ubiquitous on the radio and
+it peaked at number 26 on the [Billboard Hot 100](https://en.wikipedia.org/wiki/Billboard_Hot_100).
 
-The <b>most noteworthy song</b> on this album is <q>[The Good Thing](https://www.youtube.com/watch?v=kMCMudxTTQE).</q>
+The most noteworthy song on this album is [The Good Thing](https://www.youtube.com/watch?v=kMCMudxTTQE).
+This song is also purposely abstract, and does not go into any sort of detail about exactly what "The Good Thing" is.
 
-Other <b>favorite songs</b> from this album are <q>
-<q>Warning Sign,</q> <q>Found a Job (&hearts;),</q>
-<q>[Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4) (&hearts;&hearts;&hearts;),</q>
-<q>Stay Hungry (&hearts;),</q> and
-<q>[Big Country](https://www.youtube.com/watch?v=dErdvJrv8JE) (&hearts;&hearts;).</q>
+It's a great song for helping one overcome "difficult situations" and
+assures the listener a "A straight line exists between [us] and the good thing."
+We are left to fill in the blanks with the specifics that apply to our own lives in the current moment.
+
+"I have adopted this and made it my own:
+Cut back the weakness, reinforce what is strong."
+
+The positivity in this song contrasts nicely with the negativity in the song No Compassion on their previous album.
+
+Other favorite songs from this album are Warning Sign(♥), Found a Job(♥),
+[Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4)(★),
+Stay Hungry(★), and [Big Country](https://www.youtube.com/watch?v=dErdvJrv8JE)(★).
+In particular, Artists Only and Stay Hungry show they have not forgotten their roots at RISD, and
+Found a Job and Big Country show they are quite capable of writing and performing ballads which are original,
+yet relatively free of abstractions.
 
 #### Fear of Music (1979)
 

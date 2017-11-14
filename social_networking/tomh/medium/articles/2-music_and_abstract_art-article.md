@@ -393,7 +393,7 @@ Image: images/Talking_Heads-Talking_Heads_77.png (Note: use the .png, not the jp
 Title and Attribution: Talking Heads - cover of their album Talking Heads 77, by Sire Records.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=14296307
 
-The singles from this album were Uh-Oh, Love Comes to Town(♥),
+The singles from this album are Uh-Oh, Love Comes to Town(♥),
 [Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer)(★), and Pulled Up.
 At the time, many listeners associated Psycho Killer with the [Son of Sam](https://en.wikipedia.org/wiki/David_Berkowitz) murders.
 However, it is purposely abstract and not about him or any other specific person.
@@ -404,10 +404,10 @@ The theme of this song contrasts strongly with the message of Peace and Love pre
 Its message is that it can be overwhelming to try to help everyone, that some people are actually in love with their problems,
 and for some of us, it might be a good idea to Be a little more selfish, it might do you some good!
 
-At times, I’ve had to take this advice to heart, because I’ve learned the hard way it’s easy to care more for some
-people than they care for themselves. It’s sad, but true  — and such situations can be quite frustrating.
+At times, I’ve had to take this advice to heart, having learned the hard way it’s easy to care more for some
+people than they care for themselves. It’s sad, but true - and such situations can be quite frustrating.
 
-Other favorite songs from this album are Tentative Decisions, Who Is It? (♥), and Don't Worry About the Government.
+Other favorite songs from Talking Heads 77 are Tentative Decisions, Who Is It? (♥), and Don't Worry About the Government.
 
 #### More Songs About Buildings and Food (1978)
 
@@ -437,38 +437,47 @@ Cut back the weakness, reinforce what is strong."
 
 The positivity in this song contrasts nicely with the negativity in the song No Compassion on their previous album.
 
-Other favorite songs from this album are Warning Sign(♥), Found a Job(♥),
+Other favorite songs from More Songs About Buildings and Food are Warning Sign(♥), Found a Job(♥),
 [Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4)(★),
 Stay Hungry(★), and [Big Country](https://www.youtube.com/watch?v=dErdvJrv8JE)(★).
 In particular, Artists Only and Stay Hungry show they have not forgotten their roots at RISD, and
-Found a Job and Big Country show they are quite capable of writing and performing ballads which are original,
-yet relatively free of abstractions.
+Found a Job and Big Country show they are quite capable of writing and performing [ballads](https://en.wikipedia.org/wiki/Ballad)
+which are original, yet tell a story that is relatively free of abstractions.
 
 #### Fear of Music (1979)
 
-Their third album is
-[Fear of Music](https://en.wikipedia.org/wiki/Fear_of_Music),
-released in August of 1979.
-For some listeners,
-[this album](https://www.youtube.com/watch?v=Cb6izAqdTnc) may not be as <q>accessible</q> as the other three.
+Their third album is [Fear of Music](https://en.wikipedia.org/wiki/Fear_of_Music), released in August of 1979.
+For some listeners, [this album](https://www.youtube.com/watch?v=Cb6izAqdTnc) may not be as accessible as the other three.
+And this relative incomprehensibility may be what cost it a half-a-star in the
+[critic's ratings](https://www.allmusic.com/album/fear-of-music-mw0000196010) on [allmusic.com](http://www.allmusic.com).
 
 Image: images/Talking_Heads-Fear_of_Music.jpg
 Title and Attribution: Talking Heads - cover of their album Fear of Music.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=1140591
 
-The <b>singles</b> from this album were <q>Life During Wartime,</q>
-<q>[I Zimbra](https://en.wikipedia.org/wiki/I_Zimbra),</q> and
-<q>Cities (&hearts;&hearts;).</q>
+The singles from this album are Life During Wartime, [I Zimbra](https://en.wikipedia.org/wiki/I_Zimbra), and Cities (★).
 
 I Zimbra is an adaptation of Dadaist [Hugo Ball's](https://en.wikipedia.org/wiki/Hugo_Ball) poem "Gadji beri bimba."
 [Dadaism](https://en.wikipedia.org/wiki/Dada) is an interesting art movement that rejects logic in favor of nonsense.
+However, the nonsensical lyrics take it beyond the abstractness of their other work and lend this song a certain incomprehensibility.
 
-The <b>most noteworthy song</b> on this album is
-<q>[Memories Can't Wait](https://www.youtube.com/watch?v=VJu-IABeCws).</q>
+The most noteworthy song on this album is [Memories Can't Wait](https://www.youtube.com/watch?v=VJu-IABeCws).
+It's interesting - to me, anyway - that this is the only song on the album that has a verb in its title.
 
-Other <b>favorite songs</b> from this album are
-<q>[Mind](https://www.youtube.com/watch?v=_Kf4p738j80),</q>
-<q>Air,</q> and <q>Heaven.</q>
+Memories Can't Wait starts out with the assertion that "There's a party in my mind, and I hope it never stops."
+This sounds like fun, but the slamming chord progression and overall hardness of the music belies that assumption.
+By the end of the song we realize this is not actually the case - that he does indeed wish it would stop.
+
+"Other people can go home, other people they will split.
+I'll be here all the time, no, I can never quit."
+
+By the end of the song we learn the truth: he's struggling with insomnia.
+Although he never mentions that dreadful word, it's clear this party is anything fun!
+
+Not using the word lends the song its abstract, painterly quality.
+It's like he's dancing around the issue rather than addressing it directly, forcing the listener to engage with the lyrics.
+
+Other favorite songs from Fear of Music are [Mind](https://www.youtube.com/watch?v=_Kf4p738j80)(★), Air, and Heaven(★).
 
 #### Remain in Light (1980)
 
@@ -494,14 +503,11 @@ It is difficult to imagine someone unable to relate to the sentiment, "And you m
 A big reason it is so popular is because it is so vague and abstract that most everyone can relate to it.
 This proves that understanding the abstract and freeing oneself from limiting particular forms is extremely powerful and hugely beneficial.
 
-The <b>most noteworthy song</b> on this album is <q>
+The <b>most noteworthy song</b> on Remain in Light is <q>
 []()
 .</q>
 
-Other <b>favorite songs</b> from this album are <q></q>,
-<q></q>,
-<q></q>,
-<q></q>,
+Other <b>favorite songs</b> from Remain in Light are
 
 
 ## Conclusion

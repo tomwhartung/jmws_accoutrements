@@ -382,18 +382,10 @@ Image: images/Talking_Heads-Talking_Heads_77.png (Note: use the .png, not the jp
 Title and Attribution: Talking Heads - cover of their album Talking Heads 77, by Sire Records.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=14296307
 
-My number one pick from this album is the song
-[Psycho Killer] (https://en.wikipedia.org/wiki/Psycho_Killer).
+The singles from this album were <q>Uh-Oh, Love Comes to Town</q>, <q>[Psycho Killer](https://en.wikipedia.org/wiki/Psycho_Killer),
+</q> and <q>Pulled Up.</q>
 
-Note that part of the song is in French, and few people in America understand it.
-This may make that part of the song vague and abstract, but the sentiment expressed is undeniable.
-
-Because of the timing of of the song's release it was associated with the
-[Son of Sam](https://en.wikipedia.org/wiki/David_Berkowitz)
-murders it is not about him or any other specific person.
-The song was actually written years before the Son of Sam murders.
-
-Other favorite songs from this album are....
+Other favorite songs from this album are <q></q>,
 
 #### More Songs About Buildings and Food (1978)
 
@@ -405,15 +397,10 @@ Image: images/Talking_Heads-More_Songs_About_Buildings_and_Food.jpg
 Title and Attribution: Talking Heads - cover of their album More Songs About Buildings and Food.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=14884863
 
-My number one pick from this album is the song
+The only singles from this album were <q></q>,
+
+Other favorite songs from this album are <q></q>,
 [For Artists Only](https://www.youtube.com/watch?v=xCR0YBLSQZ4),
-and my favorite line from the song is
-"You can't see it till it's finished!"
-
-Having dabbled in several art forms and can attest that this song is sufficiently abstract that it applies to all of them.
-In fact, if there's an art form or just a genre that hasn't appeared yet, I am confident the ideas in this song will still apply.
-
-Other favorite songs from this album are....
 
 #### Fear of Music (1979)
 
@@ -425,7 +412,8 @@ Image: images/Talking_Heads-Fear_of_Music.jpg
 Title and Attribution: Talking Heads - cover of their album Fear of Music.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=1140591
 
-My number one pick from this album is the song
+The singles from this album were <q></q>,
+
 [I Zimbra](https://en.wikipedia.org/wiki/I_Zimbra).
 It is an adaptation of Dadaist
 [Hugo Ball's](https://en.wikipedia.org/wiki/Hugo_Ball)
@@ -435,7 +423,7 @@ poem "Gadji beri bimba."
 is an interesting art movement that rejects logic in favor of nonsense.
 If you are digging Talking Heads in general and like this song in particular, you should check it out!
 
-Other favorite songs from this album are....
+Other favorite songs from this album are <q></q>,
 
 #### Remain in Light (1980)
 
@@ -460,6 +448,8 @@ It is difficult to imagine someone unable to relate to the sentiment, "And you m
 
 A big reason it is so popular is because it is so vague and abstract that most everyone can relate to it.
 This proves that understanding the abstract and freeing oneself from limiting particular forms is extremely powerful and hugely beneficial.
+
+Other favorite songs from this album are <q></q>,
 
 
 ## Conclusion

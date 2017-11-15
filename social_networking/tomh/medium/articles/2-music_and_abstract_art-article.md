@@ -118,13 +118,13 @@ Also, how are all these people going to fit in a typical
 
 How can a story so vague - so abstract, and even contradictory - also be so widely recognized as one of the greatest songs of all time?
 
-#### It's BYOM Art!
+#### It's BYO Meaning Art!
 
 If you can love this song - which requires a bit of filling in the blanks - then you can love modern art.
 Because whether you realize it or not, when you listen to this song, you are supplying details from - and
 feeling emotions felt only in - your own life.
 
-**A big part of understanding modern art is realizing you have to bring your own meaning (BYOM).**
+**A big part of understanding abstract art is realizing you have to bring your own meaning (BYOM).**
 
 Once they established their own style, painters like Kandinsky and Picasso - and there are many others - did
 not set out to create works like
@@ -310,59 +310,7 @@ from that period:
 - [Nobel Peace Prize Acceptance Speech - December 19, 1964](https://www.youtube.com/watch?v=5r98tT0j1a0) (12:01)
 - [Beyond Vietnam: A Time to Break Silence - April 4, 1967](https://www.youtube.com/watch?v=3Qf6x9_MLD0) (53:46)
 
-The more you learn about this period, the more you will be able to appreciate John Coltrane's music.
-
-#### BYOM: Filling in Mondrian's Blanks
-
-What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?
-
-Image: images/Piet_Mondrian-1939-1942-Composition_10.jpg
-Title and Attribution: Composition No. 10 - By Piet Mondrian, 1939-1942. Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=37643395
-
-Take his Composition 10, for example.
-Because this painting is so abstract and pure, the meaning of its elements is completely open to interpretation.
-
-So, for example, the white areas could represent white people and the black areas could represent black people - or vice versa.
-Or, the white areas could represent women and the black areas could represent men - or vice versa.
-Or, the white areas could represent older people and the black areas could represent younger people - or vice versa.
-
-Similarly, for example, the vertical lines could represent white people and the horizontal lines could represent
-black people - or vice versa - and the white could just be the background.
-Or, the vertical lines could represent women and the horizontal lines could represent men - or vice versa - and
-the white could just be the background.
-Or, the vertical lines could represent older people and the horizontal lines could represent younger people - or vice versa - and
-the white could just be the background.
-
-Or, the vertical lines could represent ______ and the horizontal lines could represent ______, and
-the little colored boxes could represent ___ and ___ and ___!
-Fill in the blanks as you see fit - human life is full of pairs of opposites!
-
-And now you know the true nature of the power lying in Mondrian's Pure Neo-Plastic art!
-
-#### I Want to Believe
-
-The important thing to realize is that, no matter what identity we assign to the opposites in this painting,
-each pair opposites - black vs. white, horizontal vs. vertical, etc. - is in non-symmetrical equilibrium.
-I want to believe this means that eventually things will work out, and people will be able to live in equilibrium.
-
-The song
-[War](https://www.youtube.com/watch?v=vPZydAotVOY)
-by
-[Bob Marley](https://en.wikipedia.org/wiki/Bob_Marley)
-confirms that this is how things will turn out - or else.
-
-```
-Until the philosophy which hold one race superior
-And another, inferior,
-Is finally, and permanently,
-Discredited, and abandoned,
-Everywhere is war
-Me say war.
-```
-
-Plus, I have eyes, I can see what's going on - and
-[I want to believe](https://www.youtube.com/watch?v=rbBX6aEzEz8).
+The more you learn about race relations in America during the early-to-mid-1960s, the more you will be able to appreciate John Coltrane’s music.
 
 ## First Four Talking Heads Albums
 
@@ -433,7 +381,7 @@ it peaked at number 26 on the [Billboard Hot 100](https://en.wikipedia.org/wiki/
 The most noteworthy song on this album is [The Good Thing](https://www.youtube.com/watch?v=kMCMudxTTQE).
 This song is also purposely abstract, and does not go into any sort of detail about exactly what "The Good Thing" is.
 
-It's a great song for helping one overcome "difficult situations" and
+It's a great song for helping to overcome "difficult situations" and
 assures the listener a "A straight line exists between [us] and the good thing."
 We are left to fill in the blanks with the specifics that apply to our own lives in the current moment.
 
@@ -519,11 +467,68 @@ The world moves and it swivels and bops
 The world moves on a woman's hips
 The world moves and it bounces and hops."
 
-Voila!  It turns out the song is an abstract portrait of all women.  I guess writing about just one would be too boring!
+Voila!  It turns out the song is an abstract portrait of all women.
+All of Talking Heads’ love (♥) songs are a bit quirky, but this one’s over the top!
 
 Other favorite songs from Remain in Light are Born Under Punches (The Heat Goes On)(★), Crosseyed and Painless, and
 [Listening Wind](https://www.youtube.com/watch?v=HEluoeMLTCI)(★).
 
+----------------
+
+#### BYOM: Filling in Mondrian's Blanks
+
+What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?
+
+Image: images/Piet_Mondrian-1939-1942-Composition_10.jpg
+Title and Attribution: Composition No. 10 - By Piet Mondrian, 1939-1942. Public Domain.
+Link: https://commons.wikimedia.org/w/index.php?curid=37643395
+
+Take his Composition 10, for example.
+Because this painting is so abstract and pure, the meaning of its elements is completely open to interpretation.
+
+So, for example, the white areas could represent white people and the black areas could represent black people - or vice versa.
+Or, the white areas could represent women and the black areas could represent men - or vice versa.
+Or, the white areas could represent older people and the black areas could represent younger people - or vice versa.
+
+Similarly, for example, the vertical lines could represent white people and the horizontal lines could represent
+black people - or vice versa - and the white could just be the background.
+Or, the vertical lines could represent women and the horizontal lines could represent men - or vice versa - and
+the white could just be the background.
+Or, the vertical lines could represent older people and the horizontal lines could represent younger people - or vice versa - and
+the white could just be the background.
+
+Or, the vertical lines could represent ______ and the horizontal lines could represent ______, and
+the little colored boxes could represent ___ and ___ and ___!
+Fill in the blanks as you see fit - human life is full of pairs of opposites!
+
+And now you know the true nature of the power lying in Mondrian's Pure Neo-Plastic art!
+
+#### I Want to Believe
+
+The important thing to realize is that, no matter what identity we assign to the opposites in this painting,
+each pair opposites - black vs. white, horizontal vs. vertical, etc. - is in non-symmetrical equilibrium.
+I want to believe this means that eventually things will work out, and people will be able to live in equilibrium.
+
+The song
+[War](https://www.youtube.com/watch?v=vPZydAotVOY)
+by
+[Bob Marley](https://en.wikipedia.org/wiki/Bob_Marley)
+confirms that this is how things will turn out - or else.
+
+```
+Until the philosophy which hold one race superior
+And another, inferior,
+Is finally, and permanently,
+Discredited, and abandoned,
+Everywhere is war
+Me say war.
+```
+
+Plus, I have eyes, I can see what's going on - and
+[I want to believe](https://www.youtube.com/watch?v=rbBX6aEzEz8).
+
+
+----------------
 
 ## Conclusion
 

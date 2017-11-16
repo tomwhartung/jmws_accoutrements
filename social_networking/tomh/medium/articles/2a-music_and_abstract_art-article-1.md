@@ -62,6 +62,10 @@ there are versions by
 and even
 [Bryan Ferry])https://www.youtube.com/watch?v=Vqg4V4BmJj0)!
 
+### The Joker and the Thief
+
+Why do so many love this song?
+
 [Link for lyrics: https://bobdylan.com/songs/all-along-watchtower/]
 
 ```
@@ -77,7 +81,9 @@ That certainly contributes to its appeal to musicians.
 Blues songs also have only three chords, but this is no easy-going blues song.
 The driving progression of the chords give those who hear a feeling of impending doom.
 
-And although they are a bit vague, the lyrics confirm that the shit is about to hit the fan!
+### Keep Calm and Trust Your Fate
+
+Although the lyrics are a bit vague, they confirm that the shit is about to hit the fan!
 
 ```
 “No reason to get excited,” the thief, he kindly spoke
@@ -89,7 +95,9 @@ So let us not talk falsely now, the hour is getting late”
 Ostensibly a conversation between a joker and a thief, the first two verses remain confusing, even after decades of consideration.
 The only thing certain here is that the time stealing and kidding around is over.
 
-Surely the next verse will reveal a specific threat!
+### The Threat
+
+The third and last verse finally reveal a specific threat!
 
 ```
 All along the watchtower, princes kept the view

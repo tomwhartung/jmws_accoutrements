@@ -1,30 +1,20 @@
 
-# 2-music_and_abstract_art-article.md
+# 2c-music_and_abstract_art-article-3.md
 
-# Title
+# Music, Meaning, and Modern Art: Part 3 of 3
 
-The latest ideas:
+This is part three of a three part series of articles written for people who love music but do not understand abstract art.
 
-Music, Meaning, and Modern Art
+Image: images/Wassily_Kandinsky-1914-Fugue.jpg
+Title and Attribution: Fugue - By Wassily Kandinsky, 1914 - Public Domain.
+Link: http://www.wassilykandinsky.net/work-101.php
 
-# Important: Limit Use of First and Second Person
+[Part one]() is about Bob Dylan's song All Along the Watchtower and [part two]() is about John Coltrane's album A Love Supreme.
 
-Goal: **only the last paragraph of each section should contain first or second pronouns.**
-This is where I sum things up for the reader by talking to them directly.
-
-# Article
-
-## [Cold intro - no heading]
-
-This article is for people who love music but do not understand abstract art.
-
-Image: images/Wassily_Kandinsky-1903-The_Blue_Rider-Der_Blaue_Reiter.jpg
-Title and Attribution: The Blue Rider (Der Blaue Reiter) - By Wassily Kandinski, 1903 - Artsy, Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=38528964
-
-Using popular songs as examples, this article explains how musicians and painters use abstractions to add value and meaning to their work.
-Spoiler alert: the secret is, when the meaning is not obvious, listeners and viewers need only to
-learn how to add their own meaning to the art they hear and see.
+All three articles use highly-acclaimed works that have stood the test of time to help explain how musicians and painters use
+abstractions to add value and meaning to their work.
+Spoiler alert: the secret is, when the meaning is not obvious, listeners and viewers need only to learn how to add their own
+meaning to the art they hear and see.
 
 Sound complicated? It isn’t! All it takes is a little imagination.
 

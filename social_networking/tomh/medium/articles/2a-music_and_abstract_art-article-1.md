@@ -172,6 +172,13 @@ It turns out it was hiding inside you all this time!
 ----------------
 ----------------
 
+Idea for conclusion:
+1. Compare and contrast Goya's Third of May, 1808 to Picasso's Guernica
+2. Post-aftermath: Mondrian's paintings showing equilibrium (maybe include an earlier, non-abstract work of his)
+
+----------------
+----------------
+
 #### BYOM: Filling in Mondrian's Blanks
 
 What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?

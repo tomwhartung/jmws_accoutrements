@@ -169,6 +169,13 @@ The more you learn about race relations in America during the early-to-mid-1960s
 ----------------
 ----------------
 
+Idea for conclusion:
+1. Compare and contrast cover of Robert Frank's book The Americans with Martha Graham's dance Heretic
+2. These show imbalance and disequilibrium, I find Mondrian's paintings to be much more calming (e.g., show a mostly black-and-white painting)
+
+----------------
+----------------
+
 #### BYOM: Filling in Mondrian's Blanks
 
 What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?

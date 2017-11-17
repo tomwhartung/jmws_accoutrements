@@ -169,9 +169,18 @@ The more you learn about race relations in America during the early-to-mid-1960s
 ----------------
 ----------------
 
-Idea for conclusion:
+Outline for conclusion:
 1. Compare and contrast cover of Robert Frank's book The Americans with Martha Graham's dance Heretic
-2. These show imbalance and disequilibrium, I find Mondrian's paintings to be much more calming (e.g., show a mostly black-and-white painting)
+-  For both: give background, context, and links to more information
+-  Which one is more beautiful?
+-  Which one is more informative?
+-  Which one is more abstract?
+-  Which one is more meaningful?
+-  Which one is more accessible?
+-  Which one do you prefer?
+2. "Both of these are extremely powerful works of art that kind of say the same thing:"
+- Treating people unfairly because they look a little different and hence belong to a minority is hurtful
+3. These show disequilibrium, I find Mondrian's paintings to be much more positive (e.g., show a mostly black-and-white painting)
 
 ----------------
 ----------------

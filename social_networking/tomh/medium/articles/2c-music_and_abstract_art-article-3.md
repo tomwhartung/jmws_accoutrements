@@ -194,9 +194,19 @@ Other favorite songs from Remain in Light are Born Under Punches (The Heat Goes 
 ----------------
 ----------------
 
-Idea for conclusion:
+Outline for conclusion:
 1. Compare and contrast Malevich's Black Square to Pollack's No. 5
-2. Happy Medium: Mondrian's paintings (maybe pick the simple one and link to my failed experiments based on it on seeourminds.com)
+-  For both: give background, context, and links to more information
+-  Which one is more beautiful?
+-  Which one is more informative?
+-  Which one is more abstract?
+-  Which one is more meaningful?
+-  Which one is more accessible?
+-  Which one do you prefer?
+2. "Both of these are extremely powerful works of art that kind of say the same thing:"
+-  Abstractions may be simple or complex, but
+-  Ultimately the interpretation of a specific work is more dependent on the individual than it is on the artist or the final product
+3. Happy Medium: Mondrian's paintings (maybe pick the simple one and link to my failed experiments based on it on seeourminds.com)
 
 ----------------
 ----------------

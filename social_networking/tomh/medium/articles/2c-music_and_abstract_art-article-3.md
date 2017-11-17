@@ -194,6 +194,13 @@ Other favorite songs from Remain in Light are Born Under Punches (The Heat Goes 
 ----------------
 ----------------
 
+Idea for conclusion:
+1. Compare and contrast Malevich's Black Square to Pollack's No. 5
+2. Happy Medium: Mondrian's paintings (maybe pick the simple one and link to my failed experiments based on it on seeourminds.com)
+
+----------------
+----------------
+
 #### BYOM: Filling in Mondrian's Blanks
 
 What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?

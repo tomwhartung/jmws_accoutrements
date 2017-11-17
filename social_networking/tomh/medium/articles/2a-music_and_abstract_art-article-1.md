@@ -172,9 +172,18 @@ It turns out it was hiding inside you all this time!
 ----------------
 ----------------
 
-Idea for conclusion:
+Outline for conclusion:
 1. Compare and contrast Goya's Third of May, 1808 to Picasso's Guernica
-2. Post-aftermath: Mondrian's paintings showing equilibrium (maybe include an earlier, non-abstract work of his)
+-  For both: give background, context, and links to more information
+-  Which one is more beautiful?
+-  Which one is more informative?
+-  Which one is more abstract?
+-  Which one is more meaningful?
+-  Which one is more accessible?
+-  Which one do you prefer?
+2. "Both of these are extremely powerful works of art that kind of say the same thing:"
+- violence against people is horrifying
+3. Post-aftermath: Mondrian's paintings showing equilibrium (maybe include an earlier, non-abstract work of his, e.g., pastoral scene)
 
 ----------------
 ----------------

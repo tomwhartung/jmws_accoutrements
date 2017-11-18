@@ -9,12 +9,16 @@ Image: images/Wassily_Kandinsky-1903-The_Blue_Rider-Der_Blaue_Reiter.jpg
 Title and Attribution: The Blue Rider (Der Blaue Reiter) - By Wassily Kandinski, 1903 - Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=38528964
 
-[Part two]() is about John Coltrane's album A Love Supreme and [part three]() is about the Talking Heads' first four albums.
+[Part two]() is about John Coltrane's [magnum opus](https://en.wikipedia.org/wiki/Masterpiece) A Love Supreme and
+[part three]() is about the Talking Heads' first four albums.
 
-All three articles use highly-acclaimed works that have stood the test of time to help explain how musicians and painters use
-abstractions to add value and meaning to their work.
-Spoiler alert: the secret is, when the meaning is not obvious, listeners and viewers need only to learn how to add their own
-meaning to the art they hear and see.
+All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.
+The articles use these well-known works to help explain how musicians and painters use abstractions to add value and meaning to their work.
+
+Depending on your interest level, you can read one, two, or all three of these articles.
+All of them are about essentially the same thing, but each can stand on its own, so you can read them in any sequence you desire.
+
+Spoiler alert: the secret is, when the meaning in a work of art is not immediately obvious, we are free to add our own meaning to it.
 
 Sound complicated? It isn’t! All it takes is a little imagination.
 

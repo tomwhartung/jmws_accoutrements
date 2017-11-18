@@ -22,10 +22,23 @@ Sound complicated? It isn’t! All it takes is a little imagination.
 
 ## Exercising Your Imagination
 
-Look at Kandinsky’s painting of a Fugue (1914) above and imagine:
+Take a look at Kandinsky’s painting of a Fugue (1914) above and:
 
-1. step 1, etc.
-2. need to figure out what to put here…
+1. Take a quick look at the [Wikipedia's page explaining fugues])https://en.wikipedia.org/wiki/Fugue), reading as much or as little as you like.
+   There's no need to spend much time on the page, the videos explain the term much better.
+2. Listen to and watch one or more of these videos:
+-  This [music appreciation video](https://www.youtube.com/watch?v=vAFETgpt9PA) (8:29) that explains the basic structure of a fugue.
+-  This [video of a "Little" Fugue](https://www.youtube.com/watch?v=pVadl4ocX0M) (3:38) by
+   [Johann Sebastian Bach](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach).
+-  This [video of a "Great" Fugue](https://www.youtube.com/watch?v=4WhPUqpaRp4) (6:40), also by Bach.
+-  This [video of a "Great" Fugue](https://www.youtube.com/watch?v=6s0Mp7LFI-k) (16:08) by
+   [Ludwig van Beethoven](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven).
+3. Try to see how the organization of visual patterns in Kandinsky's painting express the structure of a musical fugue.
+
+Hint: Wassily Kandinsky was Russian and at various times in his life lived in Germany and France.
+He was well aware of the fact that people in Western societies habitually read things from left-to-right and top-to-bottom.
+
+So - if desired - you can read his paintings from left-to-right and top-to-bottom.
 
 Easy enough, right? Ok, now we’re ready!
 

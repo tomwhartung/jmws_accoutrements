@@ -11,10 +11,11 @@ Link: https://www.wikiart.org/en/wassily-kandinsky/two-birds-1907
 
 [Part one]() is about Bob Dylan's song All Along the Watchtower and [part three]() is about the Talking Heads' first four albums.
 
-All three articles use highly-acclaimed works that have stood the test of time to help explain how musicians and painters use
-abstractions to add value and meaning to their work.
-Spoiler alert: the secret is, when the meaning is not obvious, listeners and viewers need only to learn how to add their own
-meaning to the art they hear and see.
+All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.
+The articles use these well-known works to help explain how musicians and painters use abstractions to add value and meaning to their work.
+
+Depending on your interest level, you can read one, two, or all three of these articles.
+All of them are about essentially the same thing, but each can stand on its own, so you can read them in any sequence you desire.
 
 Sound complicated? It isn’t! All it takes is a little imagination.
 
@@ -24,7 +25,8 @@ Sound complicated? It isn’t! All it takes is a little imagination.
 
 Look at Kandinsky’s woodcut of Two Birds (1907) above and:
 
-1. Imagine you are listening to Blackbird by The Beatles - or listen to [this version by Paul McCartney](https://www.youtube.com/watch?v=swUlDc3v3DE)
+1. Listen to [this version by Paul McCartney](https://www.youtube.com/watch?v=swUlDc3v3DE) - or
+   if you're already familiar with the song, just imagine you are listening to Blackbird by The Beatles
 2. Rather than being about a bird, imagine the song is about African Americans
 3. Rather than representing birds that fly, imagine the birds in the woodcut represent two people, or groups of people, one black and one white
 

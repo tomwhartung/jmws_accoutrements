@@ -1,106 +1,22 @@
 
-# 2-new_art_new_life-100_years_later-body.md
+# 3-new_art_new_life-quotes.md
 
-Publishing this at: https://medium.com/@tomwhartung
+Just the quotes from the book *The New Art - The New Life* within the book (of the same name, containing all of his writings),
+with comments on a very few of them.
 
-# Title
+For original source material, and quotes from other works in the collection, see doc/mondrian-links_and_quotes.md in the seeourminds.com repo.
 
-The New Art - The New Life: 100 Years Later
-
-# Goal - The Big Picture
-
-To be able to reference this article in a subsequent article about my vision, and
-to be able to reference the article about my vision in a subsequent article about the
-goals and reasons for creating seeourminds.com .
-
-# Songs
-
-- What's So Funny 'Bout Peace Love and Understanding
-- Love Is All You Need
-- Love Is All Is Alright (High Universal Morality)
-
-# My Point
-
-I like Mondrian's idealism and want to contribute to the awareness of the need for more
-equlibrium and desire for equivalent relationships.
-
-Or something like that.
-
-# My Take
-
-One can't create the same sort art that Mondrian created, for that would not be art.
-
-## Ideas I Like:
-
-- Equilibrium
-- Honesty
-- Learning about and revealing inner traits and energies
-
-## Parallels With Archetypes
-
-- Breaking things down into essential elements (N/S and F/T) so that we can see them
-- Removing distracting surface shit
-
-# Possible Ending
-
-This short book was not published during his lifetime.
-I believe this is because he was so far ahead of his time.
-It is also so abstract that it is difficult to understand - even for me, and I love abstract stuff!
-
-# Body
-
-In 1911, the Dutch painter [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) (1876-1944) moved from The Netherlands to Paris.
-He soon began contributing to the
-[De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style" - art movement.
-
-Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
-Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, Public Domain
-Link: https://commons.wikimedia.org/w/index.php?curid=37634078
-
-Mondrian started out painting representational, "particular" paintings of such things as trees and landscapes.
-His paintings gradually became more and more abstract until all representation was "annihilated."
-
-Reduced to only the essential elements, his later work consisted of images
-containing black perpendicular lines and rectangles painted in primary colors on a white background.
-He called this type of painting "Pure Neo-Plasticism" and the goal of his paintings was to
-compose these essential elements so that these opposites of color and form would exist in equilibrium.
-
-Image: images/Piet_Mondrian-1930-Mondrian_Composition_II_in_Red_Blue_and_Yellow.jpg
-Title and Attribution: Composition with Red, Blue, and Yellow - By Piet Mondrian, Public Domain
-Link: https://commons.wikimedia.org/w/index.php?curid=37642803
-
-It looks easy to create these compositions, but it is not!
-
-I have learned through experience that changing one of his paintings - his Composition With Red, Blue, and Yellow,
-for example - even slightly destroys the image’s equilibrium.
-For proof, see the gallery of experimental “Mondrianesque Compositions” at seeourminds.com.
-
-The evolution in his paintings is interesting, but his writings - which explain his
-perceptions and reasons for painting like this, are fascinating.
-
-## The New Art - The New Life: A Culture of Pure Relationships
-
-Mondrian completed his final book
-[The New Art - The New Life: A Culture of Pure Relationships](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
-in 1931, but by then had been working on it since at least 1921.
-That may not quite be 100 years ago, but it's close enough.
-
-In this book he claims that just as art has evolved into a composition containing opposites of form and color in equilibrium,
-so will future society.
-Following is a quote from the book's Introduction, written by Mondrian in 1932:
-
-> The culture of art demonstrates that only *man's development* in the distant future can create universal equilibrium through the *establishment of equivalent relationships.* These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the beauty of equivalent relationships exclusively through pure line and color.  This art is an image of the ideal human goal toward which humanity is moving.
-
-Are we here today any closer to the goal of living in universal equilibrium than Mondrian was 100 years ago?
-Join me in taking a look at some more quotes from this book and see if we can answer that question!
-
-*****************************
-
-# Annotated Quotes
+# Quotes
 
 ## Introduction to The New Art - The New Life (1932)
 
-> The culture of art demonstrates that ....  (Used this quote.)
+This introduction was written after the book, but was meant as an introduction.
+
+> The culture of art demonstrates that only *man's development* in the distant future can create
+> universal equilibrium through the *establishment of equivalent relationships.*
+> These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the
+> beauty of equivalent relationships exclusively through pure line and color.
+> This art is an image of the ideal human goal toward which humanity is moving.
 (p. 278)
 
 > Until now the search for universal equilibrium has been neglected in favor of individual interests.
@@ -109,6 +25,8 @@ Join me in taking a look at some more quotes from this book and see if we can an
 > establish equivalent relationships through their universal aspect of color and line.
 (p. 280)
 
+This introduction ends with a paragraph that addresses people who are not ready for abstract art.
+
 ## The New Art - The New Life: The Culture of Pure Relationships (1931)
 
 Written over a period of three years, based on ideas developed over the previous decade, but never published during his lifetime.
@@ -116,22 +34,16 @@ Written over a period of three years, based on ideas developed over the previous
 *All emphasis is in the original.*
 
 > If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*
-> Just as with the plastic means in art, it is evident that for this life our mentality must become more ore less purified,
+> Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified,
 > not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.
 > Thus in the same way as art, life reaches a state of real equilibrium
 > *through pure and equivalent relationships of increasingly free individuals.*
 (p. 248)
 
-I see parallels between what he is saying in the next quote, about subject and particular form,
-in the (supposed) trend to ignoring demographics (race, gender, age, etc.) in hiring.
-In reality, progress in this area has been made, but there is still a ways to go.
-
 > Today we see subject and particular form, once of such great importance in the work,
 > rejected not only as being a primitive means of expression, but also as limiting expression.
 > Until now their use has been prolongd by tradition and necessity - equally by convention and inertia.
 (p. 249)
-
-In this evolution of art and life it is sincerity, rather than conformity, that matters:
 
 > In life every sincere effort leads to human evolution, and it is the same in art.
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
@@ -140,9 +52,6 @@ In this evolution of art and life it is sincerity, rather than conformity, that 
 > By using subject matter or even particular form alone, figurative art always shows a descriptive,
 > literary side that veils the purely plastic expression of line, color, and relationships.
 (p. 251)
-
-It is easier for me to define what equilibrium is *not* - for example, the images in my experimental "Mondrianesque"
-gallery - than to define what it *is:*
 
 > However, even in the new aesthetic, the word "equilibrium" has caused many misunderstandings and repeated errors.
 > The only way to correct them will be by attentive study of the plastic expression of the new art.
@@ -162,9 +71,6 @@ gallery - than to define what it *is:*
 > But just as in art these lines have different dimensions, so individuals and their groups differ in strength or size.
 > *Art demonstrates that life, through equivalence of its opposed aspects - despite their different nature - can approach real equilibrium.*
 (p. 254)
-
-I can see how the internet allows for each of us to specialize and find our brand - allowing each of us to
-live "in *independent existence consistent with his own character.*"
 
 > Art demonstrates that the true realization of real life requires *individual liberty.*
 > The new life will attain this liberty materially and spiritually.
@@ -190,8 +96,6 @@ live "in *independent existence consistent with his own character.*"
 > For least attention is given to establishing equilibrium through *equivalence of the two fundamental oppositions.*
 (pp. 256-257)
 
-A modern man who does not seek equivalence does not have the new mentality:
-
 > With regard to limiting forms, it is not only conventional forms that constitute obstacles to the new life,
 > but so do most of the new forms arising in political, social, and economic areas.
 > For instance, aristocratic limitations are re-created under democratic forms, and "socialism" often proves
@@ -213,8 +117,6 @@ A modern man who does not seek equivalence does not have the new mentality:
 > And it is also a characteristic of life's beauty and misery that we can escape neither one.
 (p. 260)
 
-I assert that spiritual portraits "show ourselves as we really are* more than meat portraits.
-When we die, what is gone?  What remains here on earth?  Who are we, really?
 > But the new art also reveals another thing of the greatest importance: *to show ourselves as we really are.*
 > It reveals that frankness and sincerity are the primordial conditions for the new life.
 (p. 260)
@@ -269,7 +171,7 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 (p. 263)
 
 > If life and art demonstrate that evolution takes place through the action of creation and abolition,
-> then all the miseries and all the advantages brought by the progresss of civilization *are so many necessities for man's evolution.*
+> then all the miseries and all the advantages brought by the progress of civilization *are so many necessities for man's evolution.*
 > But we generally see only one or the other of these two actions: thus life is seen either as declining or as unchanging.
 > Creation alone would mean no change, and abolition alone would mean ruin.
 > But those who see both actions as reciprocal understand life as *eternal growth.*
@@ -278,11 +180,11 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > The more human progress asserts itself, the more violently does natural instinct fight against it.
 > For progress involves *diminishing the privileges of the natural state.*
 >
-> This explains the present hostility to all manifestations of progresss and the reactionary efforts in art and in life.
+> This explains the present hostility to all manifestations of progress and the reactionary efforts in art and in life.
 >
 > These arise from a narrow conception, from a failure to see clearly.  One does not see the improvement progress brings.
 > One is not aware that despite all its defects - which are simply vestiges of man's primitive state - the true content of life
-> not only remains intact but shets its harmful disguises.
+> not only remains intact but sheds its harmful disguises.
 (pp. 264-265)
 
 > If all men were just and honest, all would be well and universal equilibrium would be spontaneously established.
@@ -295,7 +197,7 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > establish a mutual organization that prevents disequilibrium and constrains man to be just in his social relationships.*
 >
 > By transforming social organization, we transform the individual.
-> Those who attept to oppose the new order will nevertheless be obliged to follow it.
+> Those who attempt to oppose the new order will nevertheless be obliged to follow it.
 > There will be nothing despotic in this constraint.
 > And in a probably distant future, order will be imposed only by *mutual necessity.*
 (p. 265)
@@ -337,7 +239,7 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 > they do not conceal, they are real and show themselves for what they are.*
 (p. 267)
 
-> In communal life the question will always arise whther all are capable of contributing equivalent value if they
+> In communal life the question will always arise whether all are capable of contributing equivalent value if they
 > lack the physical or mental power; physically, for example, old people, children, and especially the sick.
 > A just solution must be found, for all human beings are basically equal and all are entitled to an equivalent existence.
 > This is not achieved by charity or love or friendship, for these qualities cannot create pure relationships.
@@ -390,7 +292,7 @@ The key to world peace - it's right here, people!
 > so in life conventional morality is confused and distored by enclosing itself within its various forms.
 (p. 270)
 
-> What high universal morality - which is an expression of human eveolution - requires is
+> What high universal morality - which is an expression of human evolution - requires is
 > precisely *the same thing that life* - which is equally an expression of human evolution - demands.
 (p. 270)
 

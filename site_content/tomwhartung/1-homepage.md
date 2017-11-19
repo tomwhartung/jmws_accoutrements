@@ -1,0 +1,56 @@
+
+# 1-homepage.md
+
+# Idea
+
+- Use the Gimp to create a "Tom W Hartung.com" logo using a fancy font.
+
+# Content
+
+For resilient income in this rapidly-changing world,
+
+
+# Separate Article, or ...?
+
+ Three Logs on the Fire
+------------------------
+
+Describe Situation: minimally
+- Love technology
+- Love variety
+- Technology is changing more and more quickly
+- Technology is getting more and more varied
+- My theory: recessions getting worse
+  - Predict the next one will be worse than the last
+  - Hope I am wrong!
+  - Cannot predict when it will happen
+  - Goal is to prepare for the worst, though
+- When recessions hit, companies go to the 1099 marketplace to get thier work done
+- I want to be able to find work for the next 20-30 years minimum
+
+Underlying Situation: add if appropriate....
+- Underlying: I feel comfortable with people and tech, but feel my Achilles heel
+   is a lack of knowledge about practical business matters.
+- Underlying: case in point: fear that clients will not pay me.
+- Underlying: never felt I had to cultivate references because I do "good work,"
+   with technology changing so fast and all businesses now needing websites, I feel
+   there is no consensus on what constitutes "good work."
+
+Describe Goals: main part of article
+- "Three logs on the fire"
+- Consider this a minimum
+- Want to have time to learn new tech as soon as it comes out
+- Willing to predict that the longer it takes, the worse it will be
+- Ideally would like to find ways to do five different types of work - one for each day of the week
+- Realistically willing to take on projects that last 3-4 days/week for a few weeks at a time
+- Goal is to identify at least five ways to make money, so that if I lose two I still have
+  "Three logs on the fire"
+
+Describe Actions:
+1. Preparing personal websites
+2. Get back to my meetup with new promotional stories and material (pitches)
+3. Try to find small projects locally
+4. Create profiles and use sites like upwork to find small projects
+5. Cut back gradually so I am spending only one or two days on personal websites
+6. Monitor income and levels of success and frustration, and adjust actions accordingly
+

@@ -28,7 +28,8 @@ Look at Kandinsky’s woodcut of Two Birds (1907) above and:
 1. Listen to [this version by Paul McCartney](https://www.youtube.com/watch?v=swUlDc3v3DE) - or
    if you're already familiar with the song, just imagine you are listening to Blackbird by The Beatles
 2. Rather than being about a bird, imagine the song is about African Americans
-3. Rather than representing birds that fly, imagine the birds in the woodcut represent two people, or groups of people, one black and one white
+3. Rather than representing actual birds, imagine the birds in the woodcut represent two people, or
+   two groups of people, one African and the other European
 
 Easy enough, right? Ok, now we’re ready!
 
@@ -148,18 +149,18 @@ After reading this, I bought Trane’s album right away!
 
 #### BYOM: Filling in Coltrane's Blanks
 
-To really understand this music requires a knowledge of some American History.
-The web and your local library give you access to a lot of this information, totally for free.
+Truly appreciating A Love Supreme requires a knowledge of some American history.
+The web and your local library provide access to a lot of this information, totally for free.
 
-I recommend watching at least one of these civil rights documentaries from the mid-1960s:
+For example, watching at least one of these civil rights documentaries from the mid-1960s is a good start:
 
 - [History of the Civil Rights Movement](https://www.youtube.com/watch?v=URxwe6LPvkM) (5:52)
 - [Alabama City Remembered as Climactic Battle of Civil Rights Movement](https://www.youtube.com/watch?v=ggUt0gJh9U8) (4:27)
 - [Burmingham 1983](https://www.youtube.com/watch?v=-0lD37bq8YI) (4:22)
 
-And at least part of at least one of these speeches by
+Also, listening to at least part of at least one of these speeches by
 [Martin Luther King Jr.](https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.)
-from that period:
+from that period can provide additional valuable context:
 
 - [I Have a Dream - August 28, 1963](https://www.youtube.com/watch?v=1UV1fs8lAbg) (17:28)
 - [Nobel Peace Prize Acceptance Speech - December 19, 1964](https://www.youtube.com/watch?v=5r98tT0j1a0) (12:01)
@@ -167,6 +168,38 @@ from that period:
 
 The more you learn about race relations in America during the early-to-mid-1960s, the more you will be able to appreciate John Coltrane’s music.
 
+## Visualizing Racism: The Americans and Heretic
+
+What does racism look like? A couple of works in Modern Photography and Dance can answer that question quite well.
+
+Image: images/Robert_Frank-1958-The_Americans-cover.jpg
+Title and Attribution: Cover of The Americans - By Robert Frank, 1958. Fair use.
+Link: https://www.amazon.com/Americans-Robert-Frank/dp/386521584X
+
+The cover of [Robert Frank](https://en.wikipedia.org/wiki/Robert_Frank)'s ground-breaking and innovative book of photographs,
+[The Americans](https://en.wikipedia.org/wiki/The_Americans_(photography)) (1958), offers a powerful and unforgettable portrait of racism.
+
+This image shows a trolley car in [New Orleans](https://en.wikipedia.org/wiki/New_Orleans) in which people must obey the
+[Jim Crow laws](https://en.wikipedia.org/wiki/Jim_Crow_laws) in force throughout the
+[Southern United States](https://en.wikipedia.org/wiki/Southern_United_States) from the 1870s through the 1950s.
+Ostensibly intended to enforce
+"[separate but equal](https://socialwelfare.library.vcu.edu/eras/civil-war-reconstruction/jim-crow-laws-andracial-segregation/)"
+treatment of the races after the [Civil War](https://en.wikipedia.org/wiki/American_Civil_War),
+in practice the laws were used to make African Americans second-class citizens.
+
+It is well worth your while to
+[search for the image](https://www.google.com/search?q=cover+of+the+americans+by+robert+frank&tbm=isch)
+and select a high-resolution copy of it so you can see "up close" the stark contrast between the smug expression of the woman
+near the front with the more matter-of-fact expression of the man behind her near the back.
+It is actually these facial expressions that give this photograph such a strong, memorable realism.
+
+Embedded video:
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IgscJaDUM9w" frameborder="0" allowfullscreen></iframe>
+```
+
+Robert Frank’s photograph is of necessity limited by time and place, and it stands in stark contrast with the similarly-themed ballet
+[Heretic](https://www.youtube.com/watch?v=IgscJaDUM9w) (1929) choreographed by [Martha Graham](https://en.wikipedia.org/wiki/Martha_Graham).
 
 ----------------
 ----------------
@@ -238,64 +271,4 @@ Me say war.
 
 Plus, I have eyes, I can see what's going on - and
 [I want to believe](https://www.youtube.com/watch?v=rbBX6aEzEz8).
-
-
-----------------
-
-## Conclusion
-
-Image: images/Wassily_Kandinsky-1914-Fugue.jpg
-Title and Attribution: Fugue - By Wassily Kandinsky, 1914.
-Link: http://www.wassilykandinsky.net/work-101.php
-
-Certainly the fact that Kandinsky's Fugue represents a type of music
-may have something to do with it selling in 1990 for $20,900,000.
-
-Links to additional information about the image in the introduction, for possible use in the conclusion.
-https://en.wikipedia.org/wiki/Fugue
-https://curiator.com/art/wassily-kandinsky/fuga-fugue
-http://www.myswitzerland.com/nl-nl/fuga-fugue.html
-
-The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
-For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
-
--------------------------------
-
-### In Conclusion
-
-To be honest, when I first learned this I was a bit pissed off!
-Of course, punk rock was huge at the time so everyone listening to that was a bit pissed off about something!
-
-In this case, I was a bit pissed off that I hadn't learned this sooner.
-- It all makes such total sense, in some ways it's like, "duh."
-- Too bad teachers think it's more important to teach us about wars and the like.
-
-But sometimes it's nice to have things spelled out in black and white.
-Hopefully this helps you better appreciate abstract art!
-
--------------------------------
-
-# (?) Now Check out Some Mondrian! (?)
-
-(?) Not sure we want to use this....
-!!! Review goals and entire article before finalizing!
-
-- Quote about equilibrium and how it fits in this article
-- Quote about harmony and lack of symmetry and how it fits in this article
-
--------------------------------
-
-# Copied From the Beginning
-
-[Not sure whether we want to use this first-person stuff.]
-
-When I first learned about abstract art, I was ready for it, because by then I had spent years listening to the
-rich variety of music available in the 1960s, 70s, and 80s.
-The purpose of this article is to share with you the awakening I experienced in this regard in the art classes
-I took at Virginia Commonwealth University [VCU](https://www.vcu.edu) in the mid-1980s.
-
-If you have difficulty understanding how this painting, [Fugue](https://curiator.com/art/wassily-kandinsky/fuga-fugue),
-created by Wassily Kandinsky in 1914 could
-[sell at Sotheby's in 1990 for $20.9 million](http://www.wassilykandinsky.net/work-101.php), or
-if you think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
 

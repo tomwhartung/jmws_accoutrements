@@ -54,28 +54,38 @@ goshs      # /var/www/seeourminds.com/htdocs/seeourminds.com
 git pull
 ```
 
-### Step (3) Run collectstatic
+### Step (3) Run collectstatic.sh
 
-These are the super-paranoid baby steps I am taking the first time.  Hopefully this works, and next time will be a breeze!
+Run the `collectstatic.sh` shell script:
 
 ```
-goshs      # /var/www/seeourminds.com/htdocs/seeourminds.com
-cd Site/
-l          # manage.py should be in this directory
-l static/
-python3 manage.py collectstatic
-l static/  # should see the new versions of any files
+gosss      # /var/www/seeourminds.com/htdocs/seeourminds.com/Site
+cd bin/
+./collectstatic.sh
 ```
 
 ### Step (4) Restart the server
 
 Restart the server.
 
+As tomh (for commands to run as root, see below):
 ```
 sudo service apache2 stop ; sleep 2 ; sudo service apache2 start
 ```
 
+OR - as root:
+```
+service apache2 stop ; sleep 2 ; service apache2 start
+```
+
 ### Step (5) Ensure site looks ok!
 
-Visit the site and ensure it looks good.
+Start a tail of the access log file to ensure that we are visiting the site we think we're visiting.
+
+```
+tapa   # macro to run tail -f on the apache access.log file
+```
+
+Visit the site and ensure it looks good, checking the output of the `tapa` alias to
+ensure we are visiting the correct installation of the site.
 

@@ -194,18 +194,18 @@ The next time you hear the song, now you have some images for your mind's eye to
 ----------------
 ----------------
 
-Outline for conclusion:
-1. Compare and contrast Goya's Third of May, 1808 to Picasso's Guernica
--  For both: give background, context, and links to more information
--  Which one is more beautiful?
--  Which one is more informative?
--  Which one is more abstract?
--  Which one is more meaningful?
--  Which one is more accessible?
--  Which one do you prefer?
-2. "Both of these are extremely powerful works of art that kind of say the same thing:"
+Ideas for a conclusion:
+
+Both of these are extremely powerful works of art that kind of say the same thing:"
 - violence against people is horrifying
-3. Post-aftermath: Mondrian's paintings showing equilibrium (maybe include an earlier, non-abstract work of his, e.g., pastoral scene)
+
+The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
+For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
+What if we get even more abstract?
+
+Post-aftermath:
+- Mondrian's paintings showing equilibrium (maybe include an earlier, non-abstract work of his, e.g., pastoral scene)
+- Marley's prediction of continuing war unless equilibrium is achieved
 
 ----------------
 ----------------
@@ -261,64 +261,4 @@ Me say war.
 
 Plus, I have eyes, I can see what's going on - and
 [I want to believe](https://www.youtube.com/watch?v=rbBX6aEzEz8).
-
-
-----------------
-
-## Conclusion
-
-Image: images/Wassily_Kandinsky-1914-Fugue.jpg
-Title and Attribution: Fugue - By Wassily Kandinsky, 1914.
-Link: http://www.wassilykandinsky.net/work-101.php
-
-Certainly the fact that Kandinsky's Fugue represents a type of music
-may have something to do with it selling in 1990 for $20,900,000.
-
-Links to additional information about the image in the introduction, for possible use in the conclusion.
-https://en.wikipedia.org/wiki/Fugue
-https://curiator.com/art/wassily-kandinsky/fuga-fugue
-http://www.myswitzerland.com/nl-nl/fuga-fugue.html
-
-The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
-For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
-
--------------------------------
-
-### In Conclusion
-
-To be honest, when I first learned this I was a bit pissed off!
-Of course, punk rock was huge at the time so everyone listening to that was a bit pissed off about something!
-
-In this case, I was a bit pissed off that I hadn't learned this sooner.
-- It all makes such total sense, in some ways it's like, "duh."
-- Too bad teachers think it's more important to teach us about wars and the like.
-
-But sometimes it's nice to have things spelled out in black and white.
-Hopefully this helps you better appreciate abstract art!
-
--------------------------------
-
-# (?) Now Check out Some Mondrian! (?)
-
-(?) Not sure we want to use this....
-!!! Review goals and entire article before finalizing!
-
-- Quote about equilibrium and how it fits in this article
-- Quote about harmony and lack of symmetry and how it fits in this article
-
--------------------------------
-
-# Copied From the Beginning
-
-[Not sure whether we want to use this first-person stuff.]
-
-When I first learned about abstract art, I was ready for it, because by then I had spent years listening to the
-rich variety of music available in the 1960s, 70s, and 80s.
-The purpose of this article is to share with you the awakening I experienced in this regard in the art classes
-I took at Virginia Commonwealth University [VCU](https://www.vcu.edu) in the mid-1980s.
-
-If you have difficulty understanding how this painting, [Fugue](https://curiator.com/art/wassily-kandinsky/fuga-fugue),
-created by Wassily Kandinsky in 1914 could
-[sell at Sotheby's in 1990 for $20.9 million](http://www.wassilykandinsky.net/work-101.php), or
-if you think Piet Mondrian's paintings are "just a bunch of squares," this article is for you!
 

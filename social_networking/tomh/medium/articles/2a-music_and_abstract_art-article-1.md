@@ -145,33 +145,51 @@ we have all been in a situation in which doom is impending!
 
 Now, what if I told you that Picasso painted the aftermath of this apocalypse, decades before Bob Dylan wrote the song?
 
-#### Picasso Painted the Aftermath!?
+#### Visualizing the Aftermath
 
 What happened after the impending doom came and the shit hit the fan for the people in Dylan's song?
-The song doesn't yield any clue whatsoever.
+
+Image: images/Francisco_de_Goya-1814-The_Third_of_May_1808-El_Tres_de_Mayo.jpg
+Title and Attribution: The Third of May 1808 (El Tres de Mayo de 1808 en Madrid) - by Francisco de Goya, 1814 - Public Domain.
+Link: https://commons.wikimedia.org/w/index.php?curid=18777858
+
+The song doesn't yield any clue whatsoever as to what happened, but two classic paintings by two different Spanish artists,
+[Francisco Goya](https://en.wikipedia.org/wiki/Francisco_Goya) and
+[Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) offer some possibilities.
+
+Goya's work, The Third of May, 1808, depicts a firing squad during the
+[Peninsular War](https://en.wikipedia.org/wiki/Peninsular_War) between Spain and the
+[Napoleonic Empire](https://en.wikipedia.org/wiki/First_French_Empire).
+It is considered to be one of the first examples of modern art - even though it is a representational work -
+because of its powerful emotional content, which at the time was unprecedented.
+
+The Third of May offers one possible result of the song, but the faces, weapons, and uniforms limit
+its applicability to a specific time and place.
+However, the general, abstract nature of Dylan’s song defies this specificity.
 
 Image: images/Pablo_Picasso-1937-Guernica.jpg
 Title and Attribution: Guernica - By Pablo Picasso, 1937.  Museo Reina Sofia, Madrid, Fair Use.
 Link: https://en.wikipedia.org/w/index.php?curid=1683114
 
-When I try to envision the aftermath of the coming of the doom described in All Along the Watchtower, I see the painting
+Painted more than a century after Goya’s work, in response to the [Spanish Civil War](https://en.wikipedia.org/wiki/Spanish_Civil_War),
+[Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso)'s
 [Guernica](http://www.museoreinasofia.es/coleccion/obra/guernica)
-by
-[Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso).
+fits in much better with the general sentiments Dylan expresses in All Along the Watchtower.
 
-It’s similarly structured: a jumble of recognizable forms that make it obvious that the shit has hit the fan!
-No more jokers, thieves, princes, women, barefoot servants, or riders.
-Even the horses those riders were on are done for!
+Guernica and Dylan's song are structured similarly.
+Like the song, this painting is a jumble of recognizable forms.
+Where the song portends inevitable doom, the painting makes it obvious the doom has come!
 
-There are easily several howling figures in this painting.
-They may not be wildcats, but the feeling is undeniably the same.
+No more jokers, thieves, princes, women, barefoot servants, or riders.  Even the horses those riders were on are done for!
+There are certainly several howling figures in this painting.  They may not be wildcats, but the feeling is undeniably the same.
 
-Your vision of the aftermath of All Along the Watchtower might be the same, vaguely similar or it might be different.
+Painted decades before Dylan wrote his song, Guernica's general sense of agony along with its deliberate lack of features
+limiting it to a specific time or place make it easier to consider it an image of the aftermath of All Along the Watchtower.
+
+Your vision of the aftermath of this song might be the same, vaguely similar or it might be different.
 Chances are, you never gave it a moment's thought till now.
 
-Now you know how to see the beauty that modern art gives us.
-It turns out it was hiding inside you all this time!
-
+The next time you hear the song, now you have some images for your mind's eye to use to supplement the experience!
 
 ----------------
 ----------------

@@ -24,7 +24,7 @@ Sound complicated? It isn’t! All it takes is a little imagination.
 
 ## Exercising Your Imagination
 
-Take a look at Kandinsky’s painting of a Fugue (1914) above and:
+Take a look at Kandinsky’s painting of a Fugue (1914) - which sold in 1990 for $20,900,000 - above and:
 
 1. Take a quick look at the [Wikipedia's page explaining fugues])https://en.wikipedia.org/wiki/Fugue), reading as much or as little as you like.
    There's no need to spend much time on the page, the videos explain the term much better.
@@ -205,12 +205,21 @@ All of Talking Heads’ love (♥) songs are a bit quirky, but this one’s over
 Other favorite songs from Remain in Light are Born Under Punches (The Heat Goes On)(★), Crosseyed and Painless, and
 [Listening Wind](https://www.youtube.com/watch?v=HEluoeMLTCI)(★).
 
-
 ----------------
 ----------------
 
-Outline for conclusion:
+**CHOOSE BETWEEN THESE TWO POSSIBLE CONCLUSIONS:**
+
+## Visualizing Abstractions: Malevich and Pollack
+
+Outline for conclusion 1:
 1. Compare and contrast Malevich's Black Square to Pollack's No. 5
+2. Etc. as outlined below and using the other two articles as a guide.
+
+## Visualizing Music: Kandinsky's Compositions and Improvisations
+
+Outline for conclusion 2:
+1. Compare and contrast Kandinsky's Compositions and Improvisations
 -  For both: give background, context, and links to more information
 -  Which one is more beautiful?
 -  Which one is more informative?

@@ -9,7 +9,7 @@ Image: images/Wassily_Kandinsky-1914-Fugue.jpg
 Title and Attribution: Fugue - By Wassily Kandinsky, 1914 - Public Domain.
 Link: http://www.wassilykandinsky.net/work-101.php
 
-[Part one]() is about Bob Dylan's song All Along the Watchtower and [part two]() is about
+[Part one]() features Bob Dylan's song All Along the Watchtower and [part two]() features
 John Coltrane's [magnum opus](https://en.wikipedia.org/wiki/Masterpiece) A Love Supreme.
 
 All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.

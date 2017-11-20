@@ -170,7 +170,7 @@ The more you learn about race relations in America during the early-to-mid-1960s
 
 ## Visualizing Racism: The Americans and Heretic
 
-What does racism look like? A couple of works in Modern Photography and Dance can answer that question quite well.
+What does racism look like? A couple of works - one each in Modern Photography and Modern Dance - can answer that question quite well.
 
 Image: images/Robert_Frank-1958-The_Americans-cover.jpg
 Title and Attribution: Cover of The Americans - By Robert Frank, 1958. Fair use.
@@ -191,7 +191,8 @@ It is well worth your while to
 [search for the image](https://www.google.com/search?q=cover+of+the+americans+by+robert+frank&tbm=isch)
 and select a high-resolution copy of it so you can see "up close" the stark contrast between the smug expression of the woman
 near the front with the more matter-of-fact expression of the man behind her near the back.
-It is actually these facial expressions that give this photograph such a strong, memorable realism.
+It is actually these facial expressions that give this photograph such a strong, memorable realism, but it is difficult to
+see them in low-resolution images such as the one on this page.
 
 Embedded video:
 ```
@@ -199,7 +200,31 @@ Embedded video:
 ```
 
 Robert Frank’s photograph is of necessity limited by time and place, and it stands in stark contrast with the similarly-themed ballet
-[Heretic](https://www.youtube.com/watch?v=IgscJaDUM9w) (1929) choreographed by [Martha Graham](https://en.wikipedia.org/wiki/Martha_Graham).
+[Heretic](https://www.youtube.com/watch?v=IgscJaDUM9w) (1929) choreographed by [Martha Graham](https://en.wikipedia.org/wiki/Martha_Graham)
+and performed by her - wearing the white dress, with her hair down, and in the lead role - along with
+[her dance company](http://www.marthagraham.org/).
+
+On the surface, Martha Graham's ballet has nothing at all to do with racism.  Its message is much more abstract.
+
+An astute viewer would quickly perceive that there are no men, no children, no non-whites, no elderly, and no overweight people in
+this dance company.
+A [pedantic](https://www.urbandictionary.com/define.php?term=pedantic) individual would be justified in claiming Martha's dance company
+practices the same type of exclusionary principles the choreographer apparently - and presumably - implicitly disdains in this dance.
+
+Also, with its basis in the word [heresy](https://en.wikipedia.org/wiki/Heresy), the title implies that the outcast has a choice in the matter -
+which is certainly not the case when it comes to skin color.
+These factors do not by any means limit the relevance or impact of, or the power present in, this work of art.
+
+It is certainly reasonable to expect a group of people such as
+[Susan Fowler](https://www.susanjfowler.com/blog/2017/2/19/reflecting-on-one-very-strange-year-at-uber),
+[Edward Snowden](https://www.seeourminds.com/image/0500-real-famous/0504/),
+[Rosa Parks](http://www.history.com/topics/black-history/rosa-parks),
+and anyone who has ever been [laid off from a job](https://en.wikipedia.org/wiki/Layoff),
+with their disparate experiences in being excluded from various groups, would interpret it differently.
+
+Moreover, as consumers we are all free to interpret all works of art in any way we want.
+And as an artwork becomes less specific and more abstract, the interpretation of it becomes more and more up to the viewer, and
+less and less up to the artist.
 
 ----------------
 ----------------

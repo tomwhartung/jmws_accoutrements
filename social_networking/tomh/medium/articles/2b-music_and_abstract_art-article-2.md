@@ -9,7 +9,7 @@ Image: images/Wassily_Kandinsky-1907-Two_Birds-wikiart_org.jpg
 Title and Attribution: Two Birds - By Wassily Kandinski, 1907 - Public Domain.
 Link: https://www.wikiart.org/en/wassily-kandinsky/two-birds-1907
 
-[Part one]() is about Bob Dylan's song All Along the Watchtower and [part three]() is about the Talking Heads' first four albums.
+[Part one]() features Bob Dylan's song All Along the Watchtower and [part three]() features the Talking Heads' first four albums.
 
 All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.
 The articles use these well-known works to help explain how musicians and painters use abstractions to add value and meaning to their work.

@@ -229,29 +229,13 @@ less and less up to the artist.
 ----------------
 ----------------
 
-Outline for conclusion:
-1. Compare and contrast cover of Robert Frank's book The Americans with Martha Graham's dance Heretic
--  For both: give background, context, and links to more information
--  Which one is more beautiful?
--  Which one is more informative?
--  Which one is more abstract?
--  Which one is more meaningful?
--  Which one is more accessible?
--  Which one do you prefer?
-2. "Both of these are extremely powerful works of art that kind of say the same thing:"
-- Treating people unfairly because they look a little different and hence belong to a minority is hurtful
-3. These show disequilibrium, I find Mondrian's paintings to be much more positive (e.g., show a mostly black-and-white painting)
-
-----------------
-----------------
-
 Conclusion:
 
 "Both of these are extremely powerful works of art that kind of say the same thing:"
-- excluding people is hurtful
+- Treating people unfairly because they look a little different and hence belong to a minority is hurtful
+- Excluding people is hurtful
 
 Something something something something.
 
 Thank you for reading.  For more about abstraction and meaning in art, part 2 is here and part 3 is there (provide links).
-
 

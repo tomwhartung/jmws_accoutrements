@@ -24,7 +24,8 @@ Sound complicated? It isn’t! All it takes is a little imagination.
 
 ## Exercising Your Imagination
 
-Take a look at Kandinsky’s painting of a Fugue (1914) - which sold in 1990 for $20,900,000 - above and:
+Look at the painting above, Fugue by Wassily Kandinsky (1914) - which
+[sold in 1990 for $22,900,000](https://www.myartbroker.com/blog/five-interesting-things-about-wassily-kandinsky/) - and:
 
 1. Take a quick look at the [Wikipedia's page explaining fugues])https://en.wikipedia.org/wiki/Fugue), reading as much or as little as you like.
    There's no need to spend much time on the page, the videos explain the term much better.
@@ -205,21 +206,28 @@ All of Talking Heads’ love (♥) songs are a bit quirky, but this one’s over
 Other favorite songs from Remain in Light are Born Under Punches (The Heat Goes On)(★), Crosseyed and Painless, and
 [Listening Wind](https://www.youtube.com/watch?v=HEluoeMLTCI)(★).
 
-----------------
-----------------
-
-**CHOOSE BETWEEN THESE TWO POSSIBLE CONCLUSIONS:**
-
 ## Visualizing Abstractions: Malevich and Pollack
 
-Outline for conclusion 1:
+What happens when artists create works that test the extremes of abstraction?
+Two Modern Paintings depict two extremes of complexity: [Black Suprematic Square](https://en.wikipedia.org/wiki/Black_Square_(painting)) by
+[Kazimir Malevich](https://en.wikipedia.org/wiki/Kazimir_Malevich) (1915) and
+[Number 5](https://en.wikipedia.org/wiki/No._5,_1948) by [Jackson Pollock](https://en.wikipedia.org/wiki/Jackson_Pollock).
+
+Image: images/Kazimir_Malevich-1915-Black_Suprematic_Square.jpg
+Title and Attribution: Black Suprematic Square - By Kazimir Malevich, 1915.  Public Domain.
+Link: https://commons.wikimedia.org/w/index.php?curid=31011870
+
+
+Image: images/Jackson_Pollack-1948-Number_5.jpg
+Title and Attribution: No. 5 - By Jackson Pollack, 1948.  Fair use.
+Link: https://en.wikipedia.org/wiki/File:No._5,_1948.jpg
+
+
+
+----------------
+----------------
+
 1. Compare and contrast Malevich's Black Square to Pollack's No. 5
-2. Etc. as outlined below and using the other two articles as a guide.
-
-## Visualizing Music: Kandinsky's Compositions and Improvisations
-
-Outline for conclusion 2:
-1. Compare and contrast Kandinsky's Compositions and Improvisations
 -  For both: give background, context, and links to more information
 -  Which one is more beautiful?
 -  Which one is more informative?
@@ -228,9 +236,6 @@ Outline for conclusion 2:
 -  Which one is more accessible?
 -  Which one do you prefer?
 2. "Both of these are extremely powerful works of art that kind of say the same thing:"
--  Abstractions may be simple or complex, but
--  Ultimately the interpretation of a specific work is more dependent on the individual than it is on the artist or the final product
-3. Happy Medium: Mondrian's paintings (maybe pick the simple one and link to my failed experiments based on it on seeourminds.com)
 
 ----------------
 ----------------
@@ -238,7 +243,9 @@ Outline for conclusion 2:
 Conclusion:
 
 "Both of these are extremely powerful works of art that kind of say the same thing:"
-- abstract art gives people the freedom to interpret it any way they choose
+- Abstractions may be simple or complex, but ultimately the interpretation of a specific work is
+    more dependent on the individual than it is on the artist or the final product
+- Abstract art gives people the freedom to interpret it any way they choose
 
 Something something something something.
 

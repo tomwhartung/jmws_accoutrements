@@ -145,7 +145,7 @@ we have all been in a situation in which doom is impending!
 
 Now, what if I told you that Picasso painted the aftermath of this apocalypse, decades before Bob Dylan wrote the song?
 
-#### Visualizing the Aftermath
+## Visualizing the Aftermath: Goya and Picasso
 
 What happened after the impending doom came and the shit hit the fan for the people in Dylan's song?
 
@@ -194,71 +194,12 @@ The next time you hear the song, now you have some images for your mind's eye to
 ----------------
 ----------------
 
-Ideas for a conclusion:
+Conclusion:
 
-Both of these are extremely powerful works of art that kind of say the same thing:"
+"Both of these are extremely powerful works of art that kind of say the same thing:"
 - violence against people is horrifying
 
-The truly beautiful thing about abstract art is it can take on meanings that were not foreseen by the artist when they created the work.
-For example, Pablo Picasso painted Guernica long before Bob Dylan wrote All Along the Watchtower.
-What if we get even more abstract?
+Something something something something.
 
-Post-aftermath:
-- Mondrian's paintings showing equilibrium (maybe include an earlier, non-abstract work of his, e.g., pastoral scene)
-- Marley's prediction of continuing war unless equilibrium is achieved
-
-----------------
-----------------
-
-#### BYOM: Filling in Mondrian's Blanks
-
-What if I told you that the opposites in Piet Mondrian's paintings can represent any pair of opposites, whatsoever?
-
-Image: images/Piet_Mondrian-1939-1942-Composition_10.jpg
-Title and Attribution: Composition No. 10 - By Piet Mondrian, 1939-1942. Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=37643395
-
-Take his Composition 10, for example.
-Because this painting is so abstract and pure, the meaning of its elements is completely open to interpretation.
-
-So, for example, the white areas could represent white people and the black areas could represent black people - or vice versa.
-Or, the white areas could represent women and the black areas could represent men - or vice versa.
-Or, the white areas could represent older people and the black areas could represent younger people - or vice versa.
-
-Similarly, for example, the vertical lines could represent white people and the horizontal lines could represent
-black people - or vice versa - and the white could just be the background.
-Or, the vertical lines could represent women and the horizontal lines could represent men - or vice versa - and
-the white could just be the background.
-Or, the vertical lines could represent older people and the horizontal lines could represent younger people - or vice versa - and
-the white could just be the background.
-
-Or, the vertical lines could represent ______ and the horizontal lines could represent ______, and
-the little colored boxes could represent ___ and ___ and ___!
-Fill in the blanks as you see fit - human life is full of pairs of opposites!
-
-And now you know the true nature of the power lying in Mondrian's Pure Neo-Plastic art!
-
-#### I Want to Believe
-
-The important thing to realize is that, no matter what identity we assign to the opposites in this painting,
-each pair opposites - black vs. white, horizontal vs. vertical, etc. - is in non-symmetrical equilibrium.
-I want to believe this means that eventually things will work out, and people will be able to live in equilibrium.
-
-The song
-[War](https://www.youtube.com/watch?v=vPZydAotVOY)
-by
-[Bob Marley](https://en.wikipedia.org/wiki/Bob_Marley)
-confirms that this is how things will turn out - or else.
-
-```
-Until the philosophy which hold one race superior
-And another, inferior,
-Is finally, and permanently,
-Discredited, and abandoned,
-Everywhere is war
-Me say war.
-```
-
-Plus, I have eyes, I can see what's going on - and
-[I want to believe](https://www.youtube.com/watch?v=rbBX6aEzEz8).
+Thank you for reading.  For more about abstraction and meaning in art, part 2 is here and part 3 is there (provide links).
 

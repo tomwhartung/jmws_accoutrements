@@ -206,23 +206,50 @@ All of Talking Heads’ love (♥) songs are a bit quirky, but this one’s over
 Other favorite songs from Remain in Light are Born Under Punches (The Heat Goes On)(★), Crosseyed and Painless, and
 [Listening Wind](https://www.youtube.com/watch?v=HEluoeMLTCI)(★).
 
-## Visualizing Abstractions: Malevich and Pollack
+## Extreme Abstractions: Malevich and Pollack
 
 What happens when artists create works that test the extremes of abstraction?
 Two Modern Paintings depict two extremes of complexity: [Black Suprematic Square](https://en.wikipedia.org/wiki/Black_Square_(painting)) by
 [Kazimir Malevich](https://en.wikipedia.org/wiki/Kazimir_Malevich) (1915) and
-[Number 5](https://en.wikipedia.org/wiki/No._5,_1948) by [Jackson Pollock](https://en.wikipedia.org/wiki/Jackson_Pollock).
+[No. 5](https://en.wikipedia.org/wiki/No._5,_1948) by [Jackson Pollock](https://en.wikipedia.org/wiki/Jackson_Pollock).
 
 Image: images/Kazimir_Malevich-1915-Black_Suprematic_Square.jpg
 Title and Attribution: Black Suprematic Square - By Kazimir Malevich, 1915.  Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=31011870
 
+In April of 2002 Malevich's Black Suprematic Square [sold for $1,000,000](https://en.wikipedia.org/wiki/Kazimir_Malevich#Art_market).
+How could such a simplistic and uninteresting painting that almost anyone - even a child - could reproduce, be worth so much money?
+
+One answer is because it is a seminal work in Malevich's [Suprematism](https://en.wikipedia.org/wiki/Suprematism) art movement.
+It has a unique place in the history of abstract art, and this makes it extremely valuable.
+
+A more abstract - and hence more powerful - answer is because, with this work Malevich managed to move
+[Kandinsky's triangle](https://medium.com/@tomwhartung/concerning-kandinskys-concerning-the-spiritual-in-art-f2f3d1ca750e)
+a bit further upwards - much like Pollock did in 1948 with his No.5.
+
+Once Kazimir Malevich moved Kandinsky’s triangle with this painting, anyone else trying to do it again would fail to move the triangle
+any further, so the result would be comparatively worthless.
 
 Image: images/Jackson_Pollack-1948-Number_5.jpg
 Title and Attribution: No. 5 - By Jackson Pollack, 1948.  Fair use.
 Link: https://en.wikipedia.org/wiki/File:No._5,_1948.jpg
 
+It is rumored that Pollock's No. 5 [sold for $140,000,000](http://www.nytimes.com/2006/11/02/arts/design/02drip.html) in 2006.
+How could such a painting, apparently created in a completely random manner that almost anyone - even a child - could imitate,
+be worth so much money?
 
+One answer is because it is a seminal work in the [Abstract Expressionist](https://en.wikipedia.org/wiki/Abstract_expressionism) art movement.
+It has a unique place in the history of abstract art, and this makes it extremely valuable.
+
+A more abstract - and hence more powerful - answer is because, with this work Pollock managed to move
+[Kandinsky's triangle](https://medium.com/@tomwhartung/concerning-kandinskys-concerning-the-spiritual-in-art-f2f3d1ca750e)
+a bit further upwards - much like Malevich did in 1915 with his Black Suprematic Square.
+
+Once Jackson Pollock moved Kandinsky’s triangle with this painting, anyone else trying to do it again would fail to move the triangle
+any further, so the result would be comparatively worthless.
+
+When viewed through the abstract lens of Kandinsky's triangle, these two extremely abstract paintings,
+that look extremely different, are actually very similar!
 
 ----------------
 ----------------

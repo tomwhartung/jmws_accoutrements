@@ -9,8 +9,8 @@ Image: images/Wassily_Kandinsky-1903-The_Blue_Rider-Der_Blaue_Reiter.jpg
 Title and Attribution: The Blue Rider (Der Blaue Reiter) - By Wassily Kandinski, 1903 - Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=38528964
 
-[Part two]() is about John Coltrane's [magnum opus](https://en.wikipedia.org/wiki/Masterpiece) A Love Supreme and
-[part three]() is about the Talking Heads' first four albums.
+[Part two]() features John Coltrane's [magnum opus](https://en.wikipedia.org/wiki/Masterpiece) A Love Supreme and
+[part three]() features the Talking Heads' first four albums.
 
 All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.
 The articles use these well-known works to help explain how musicians and painters use abstractions to add value and meaning to their work.
@@ -189,7 +189,7 @@ limiting it to a specific time or place make it easier to consider it an image o
 Your vision of the aftermath of this song might be the same, vaguely similar or it might be different.
 Chances are, you never gave it a moment's thought till now.
 
-The next time you hear the song, now you have some images for your mind's eye to use to supplement the experience!
+The next time you hear All Along the Watchtower, you will have some images for your mind’s eye to use to supplement the experience!
 
 ----------------
 ----------------

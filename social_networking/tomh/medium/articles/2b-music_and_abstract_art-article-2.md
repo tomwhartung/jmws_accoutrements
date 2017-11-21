@@ -222,11 +222,17 @@ Image: images/John_Lydon-1994-Rotten-No_Irish_No_Blacks_No_Dogs.jpg
 Title and Attribution: Cover of Rotten: No Irish - No Blacks - No Dogs - By John Lydon, 1994. Fair use.
 Link: https://www.amazon.com/dp/B00JTIZVG2
 
-It is certainly reasonable to expect a group of people such as
-[Susan Fowler](https://www.susanjfowler.com/blog/2017/2/19/reflecting-on-one-very-strange-year-at-uber),
-[Edward Snowden](https://www.seeourminds.com/image/0500-real-famous/0504/),
-[Rosa Parks](http://www.history.com/topics/black-history/rosa-parks),
-and anyone who has ever been [laid off from a job](https://en.wikipedia.org/wiki/Layoff),
+It is certainly reasonable to think a diverse set of people such as:
+
+- [Susan Fowler](https://www.susanjfowler.com/blog/2017/2/19/reflecting-on-one-very-strange-year-at-uber), who experienced a great deal of
+sexual harassment in her work as an engineer at Uber,
+- [Edward Snowden](https://www.seeourminds.com/image/0500-real-famous/0504/), who revealed how the United States Government spies on its
+citizens,
+- [John Lydon](), an Irishman who, as Johnny Rotten, founded the punk rock band The Sex Pistols,
+- [Rosa Parks](http://www.history.com/topics/black-history/rosa-parks), an African American who famously refused to surrender her seat
+to a white person in the 1950s, and
+- Anyone who has ever been [laid off from a job](https://en.wikipedia.org/wiki/Layoff), for that matter,
+
 with their disparate experiences in being excluded from various groups, would interpret it differently.
 
 Moreover, as consumers we are all free to interpret all works of art in any way we want.

@@ -238,6 +238,8 @@ Ok so abstractions are important in music, painting, and other art forms.  [So W
 ```
 <iframe width=”560" height=”315" src=”https://www.youtube.com/embed/zqNTltOGh5c" frameborder=”0" allowfullscreen></iframe>
 ```
+Title: So What - Live at The Robert Herridge Theater, New York, April 2, 1959 - By Miles Davis, 1959.
+Link: https://www.youtube.com/watch?v=zqNTltOGh5c
 
 ### Hello, My Name Is...
 

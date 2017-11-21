@@ -251,30 +251,42 @@ any further, so the result would be comparatively worthless.
 When viewed through the abstract lens of Kandinsky's triangle, these two extremely abstract paintings,
 that look extremely different, are actually very similar!
 
-----------------
-----------------
+## [So What?](https://www.youtube.com/watch?v=2Yp3WPBMTTE)
 
-1. Compare and contrast Malevich's Black Square to Pollack's No. 5
--  For both: give background, context, and links to more information
--  Which one is more beautiful?
--  Which one is more informative?
--  Which one is more abstract?
--  Which one is more meaningful?
--  Which one is more accessible?
--  Which one do you prefer?
-2. "Both of these are extremely powerful works of art that kind of say the same thing:"
+Ok so abstractions are important in music, painting, and other art forms.  [So What?!?](https://www.youtube.com/watch?v=2Yp3WPBMTTE)
 
-----------------
-----------------
+[Embed video:]
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2Yp3WPBMTTE" frameborder="0" allowfullscreen></iframe>
+```
 
-Conclusion:
+### Hello, My Name Is...
 
-"Both of these are extremely powerful works of art that kind of say the same thing:"
-- Abstractions may be simple or complex, but ultimately the interpretation of a specific work is
-    more dependent on the individual than it is on the artist or the final product
-- Abstract art gives people the freedom to interpret it any way they choose
+Hello, my name is [Tom Hartung](http://www.tomhartung.com) and I am the creator of [seeourminds.com](http://seeourminds.com)
+and [groja.com](http://groja.com).
 
-Something something something something.
+Like most people, I've been a music fan all my life!
+After learning about painters like Wassily Kandisky, Francisco Goya, Pablo Picasso,
+[Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian)  - who is my personal favorite - and many others in
+graduate school at [VCU](http://vcu.edu), I wrote a program that draws images of personalities.
 
-Thank you for reading.  For more about abstraction and meaning in art, part 2 is here and part 3 is there (provide links).
+Actually, over the years I have written [four versions of the program](https://www.groja.com/about),
+and all too frequently I get strange looks when I tell people about it.
+Knowing that most people love music - which by its nature is very abstract - I wrote these articles to clear away
+some of the mystery behind [Abstract Art](http://en.wikipedia.org/wiki/Abstract_Art).
+
+I feel the time has finally come to start actively sharing my idea of visualizing personalities - which are also by their
+nature very abstract - with the world at large, and am sure
+[I will get some push-back](https://medium.com/@seeourminds/and-the-ugly-8921a8e9c721) from people who are not yet ready for the idea.
+
+So I wrote these articles to preemptively address the criticism I will surely get from people whose backgrounds are different from mine.
+
+The process of writing these articles was a long one - a few decades, in actual fact.
+I only hope you have found them entertaining and enlightening!
+
+### Thanks!
+
+Thank you for reading this article!
+
+For more about abstraction and meaning in art, see [part 1]() or [part 2]().
 

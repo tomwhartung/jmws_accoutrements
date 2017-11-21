@@ -191,9 +191,14 @@ Chances are, you never gave it a moment's thought till now.
 
 The next time you hear All Along the Watchtower, you will have some images for your mind’s eye to use to supplement the experience!
 
-## [So What?](https://www.youtube.com/watch?v=zqNTltOGh5c)
+## [So What?](https://www.youtube.com/watch?v=917Asjadc_U)
 
-Ok so abstractions are important in music, painting, and other art forms.  [So what?](https://www.youtube.com/watch?v=zqNTltOGh5c)
+Ok so abstractions are important in music, painting, and other art forms.  [So What?!?](https://www.youtube.com/watch?v=917Asjadc_U)
+
+[Embed video:]
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/917Asjadc_U" frameborder="0" allowfullscreen></iframe>
+```
 
 ### Hello, My Name Is...
 
@@ -201,7 +206,7 @@ Hello, my name is [Tom Hartung](http://www.tomhartung.com) and I am the creator 
 and [groja.com](http://groja.com).
 
 Like most people, I've been a music fan all my life!
-After learning about artists like Wassily Kandisky, Francisco Goya, Pablo Picasso,
+After learning about painters like Wassily Kandisky, Francisco Goya, Pablo Picasso,
 [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) (who is my personal favorite), and many others in
 graduate school at [VCU](http://vcu.edu), I wrote a program that draws images of personalities.
 
@@ -212,7 +217,8 @@ some of the mystery behind [Abstract Art](http://en.wikipedia.org/wiki/Abstract_
 
 I feel the time has finally come to start actively sharing my idea of visualizing personalities - which are also by their
 nature very abstract - with the world at large, and am sure
-[I will get some pushback](https://medium.com/@seeourminds/and-the-ugly-8921a8e9c721) from people who are not yet ready for the idea.
+[I will get some push-back](https://medium.com/@seeourminds/and-the-ugly-8921a8e9c721) from people who are not yet ready for the idea.
+
 So I wrote these articles to preemptively address the criticism I will surely get from people whose backgrounds are different from mine.
 
 The process of writing these articles was a long one - a few decades, in actual fact.
@@ -222,5 +228,5 @@ I only hope you have found them entertaining and enlightening!
 
 Thank you for reading this article!
 
-For more about abstraction and meaning in art, see [part 2]() and [part 3]().
+For more about abstraction and meaning in art, see [part 2]() or [part 3]().
 

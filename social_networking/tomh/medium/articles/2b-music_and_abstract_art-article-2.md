@@ -215,6 +215,10 @@ Also, with its basis in the word [heresy](https://en.wikipedia.org/wiki/Heresy),
 which is certainly not the case when it comes to skin color.
 These factors do not by any means limit the relevance or impact of, or the power present in, this work of art.
 
+Image: images/John_Lydon-1994-Rotten-No_Irish_No_Blacks_No_Dogs.jpg
+Title and Attribution: Cover of Rotten: No Irish - No Blacks - No Dogs - By John Lydon, 1994. Fair use.
+Link: https://www.amazon.com/dp/B00JTIZVG2
+
 It is certainly reasonable to expect a group of people such as
 [Susan Fowler](https://www.susanjfowler.com/blog/2017/2/19/reflecting-on-one-very-strange-year-at-uber),
 [Edward Snowden](https://www.seeourminds.com/image/0500-real-famous/0504/),

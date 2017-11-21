@@ -228,7 +228,7 @@ less and less up to the artist.
 
 ## [So What?](https://www.youtube.com/watch?v=zqNTltOGh5c)
 
-Ok so abstractions are important in music, painting, and other art forms.  [So what?!?](https://www.youtube.com/watch?v=zqNTltOGh5c)
+Ok so abstractions are important in music, painting, and other art forms.  [So What?!?](https://www.youtube.com/watch?v=zqNTltOGh5c)
 
 [Embed video:]
 ```
@@ -252,7 +252,8 @@ some of the mystery behind [Abstract Art](http://en.wikipedia.org/wiki/Abstract_
 
 I feel the time has finally come to start actively sharing my idea of visualizing personalities - which are also by their
 nature very abstract - with the world at large, and am sure
-[I will get some pushback](https://medium.com/@seeourminds/and-the-ugly-8921a8e9c721) from people who are not yet ready for the idea.
+[I will get some push-back](https://medium.com/@seeourminds/and-the-ugly-8921a8e9c721) from people who are not yet ready for the idea.
+
 So I wrote these articles to preemptively address the criticism I will surely get from people whose backgrounds are different from mine.
 
 The process of writing these articles was a long one - a few decades, in actual fact.

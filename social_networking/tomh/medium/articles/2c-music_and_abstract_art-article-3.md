@@ -30,7 +30,7 @@ Look at the painting above, Fugue by Wassily Kandinsky (1914) - which
 1. Take a quick look at the [Wikipedia's page explaining fugues])https://en.wikipedia.org/wiki/Fugue), reading as much or as little as you like.
    There's no need to spend much time on the page, the videos explain the term much better.
 2. Listen to and watch one or more of these videos:
--  This [music appreciation video](https://www.youtube.com/watch?v=vAFETgpt9PA) (8:29) that explains the basic structure of a fugue.
+-  This [music appreciation video](https://www.youtube.com/watch?v=vAFETgpt9PA) (8:29) that explains the structure of fugues.
 -  This [video of a "Little" Fugue](https://www.youtube.com/watch?v=pVadl4ocX0M) (3:38) by
    [Johann Sebastian Bach](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach).
 -  This [video of a "Great" Fugue](https://www.youtube.com/watch?v=4WhPUqpaRp4) (6:40), also by Bach.

@@ -80,21 +80,23 @@ Title and Attribution: John Coltrane - cover of A Love Supreme.  Fair use.
 Link: https://en.wikipedia.org/w/index.php?curid=1274626
 
 The album is very spiritual and contains four songs or "parts:" 1. Acknowledgement, 2. Resolution, 3. Pursuance, and 4. Psalm.
-You can listen to
-[the whole thing on youtube.com](https://www.youtube.com/watch?v=ll3CMgiUPuU).
+[The whole thing is available on youtube.com](https://www.youtube.com/watch?v=ll3CMgiUPuU).
+It runs just over 30 minutes.
 
-Others have written about this masterpiece much more elegantly than I ever could.
-One
-[article at nytimes.com](http://www.nytimes.com/2001/09/23/arts/music-coltrane-at-75-the-man-and-the-myths.html)
+To understand what John Coltrane is saying in his masterpiece, it really helps to read what others have written about it.
+One [article at nytimes.com](http://www.nytimes.com/2001/09/23/arts/music-coltrane-at-75-the-man-and-the-myths.html)
 reviews it in the context of Trane's life and other works, and
 [another at wbur.org](http://www.wbur.org/artery/2014/10/10/coltrane-love-supreme-50)
 describes why it is still relevant after fifty years.
 
-In my mind, Miles Davis provides the best perspective on Trane's magnum opus.
+Ultimately John's bandmate [Miles Davis](https://en.wikipedia.org/wiki/Miles_Davis) may well provide the best
+perspective on Trane's magnum opus.
 
 #### Miles Davis - On Trane, A Love Supreme, and Civil Rights
 
-I first learned the significance of what John Coltrane was saying in A Love Supreme when I read about it in Miles Davis' autobiography.
+In his autobiography, Miles Davis offers extremely high praise for John Coltrane's work on this album and others he recorded during that time.
+Miles also provides valuable insight into both what John was saying with his music in the mid-to-late 1960s and
+how the African American community reacted to his message.
 
 Image: images/Miles-The_Autobiography.jpg
 Title and Attribution: Miles, The Autobiography - cover of the book written with Quincy Troupe.
@@ -145,7 +147,8 @@ It seemed a lot of what he stood for musically died with him.
 Even though some of his disciples carried on his message, they carried it to smaller and smaller audiences.
 ```
 
-After reading this, I bought Trane’s album right away!
+This longish quote provides anyone who was not an African American adult in the 1960s
+valuable context for understanding John Coltrane's work during this period.
 
 #### BYOM: Filling in Coltrane's Blanks
 

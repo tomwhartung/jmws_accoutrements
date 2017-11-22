@@ -9,8 +9,10 @@ Image: images/Wassily_Kandinsky-1903-The_Blue_Rider-Der_Blaue_Reiter.jpg
 Title and Attribution: The Blue Rider (Der Blaue Reiter) - By Wassily Kandinski, 1903 - Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=38528964
 
-[Part two]() features John Coltrane's [magnum opus](https://en.wikipedia.org/wiki/Masterpiece) A Love Supreme and
-[part three]() features the Talking Heads' first four albums.
+[Part two](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-2-of-3-f7fa8f5362f6) features John Coltrane's
+[magnum opus](https://en.wikipedia.org/wiki/Masterpiece) A Love Supreme and
+[part three](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-3-of-3-3d212b8ef7b0) features the
+Talking Heads' first four albums.
 
 All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.
 The articles use these well-known works to help explain how musicians and painters use abstractions to add value and meaning to their work.
@@ -123,7 +125,7 @@ How can a story so vague - so abstract, and even contradictory - also be so wide
 #### It's BYO Meaning Art!
 
 If you can love this song - which requires a bit of filling in the blanks - then you can love modern art.
-Because whether you realize it or not, when you listen to this song, you are supplying details from - and
+Because whether you realize it or not, when you listen to and watch this song, you are supplying details from - and
 feeling emotions felt only in - your own life.
 
 **A big part of understanding abstract art is realizing you have to bring your own meaning (BYOM).**
@@ -228,7 +230,9 @@ I only hope you have found them entertaining and enlightening!
 
 Thank you for reading this article!
 
-For more about abstraction and meaning in art, see [part 2]() or [part 3]().
+For more about abstraction and meaning in art, see
+[part 2](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-2-of-3-f7fa8f5362f6) or
+[part 3](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-3-of-3-3d212b8ef7b0).
 
 ## Bonus Epic Song!
 

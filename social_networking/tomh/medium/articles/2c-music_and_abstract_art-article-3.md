@@ -292,13 +292,16 @@ Thank you for reading this article!
 
 For more about abstraction and meaning in art, see [part 1]() or [part 2]().
 
-## P.S.
+## Bonus Epic Song!
 
-For a great song about how an abstraction - a spirit - smells, listen to Smells Like Teen Spirit by Nirvana:
+For an epic song about how an abstraction - a spirit - smells, listen to
+[Smells Like Teen Spirit](https://www.youtube.com/watch?v=hTWKbfoikeg) by
+[Nirvana](https://en.wikipedia.org/wiki/Nirvana_(band)).
 
 [Embed video:]
 ```
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hTWKbfoikeg" frameborder="0" allowfullscreen></iframe>
 ```
-Title:
-Link:
+Title: Smells Like Teen Spirit - by Nirvana (Live).
+Link: https://www.youtube.com/watch?v=hTWKbfoikeg
+

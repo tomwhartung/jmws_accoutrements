@@ -143,8 +143,6 @@ any day!
 We can all love All Along the Watchtower - because of rather than despite its vagueness - because
 we have all been in a situation in which doom is impending!
 
-Now, what if I told you that Picasso painted the aftermath of this apocalypse, decades before Bob Dylan wrote the song?
-
 ## Visualizing the Aftermath: Goya and Picasso
 
 What happened after the impending doom came and the shit hit the fan for the people in Dylan's song?

@@ -9,7 +9,9 @@ Image: images/Wassily_Kandinsky-1914-Fugue.jpg
 Title and Attribution: Fugue - By Wassily Kandinsky, 1914 - Public Domain.
 Link: http://www.wassilykandinsky.net/work-101.php
 
-[Part one]() features Bob Dylan's song All Along the Watchtower and [part two]() features
+[Part one](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) features
+Bob Dylan's song All Along the Watchtower and
+[part two](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-2-of-3-f7fa8f5362f6) features
 John Coltrane's [magnum opus](https://en.wikipedia.org/wiki/Masterpiece) A Love Supreme.
 
 All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.
@@ -90,7 +92,7 @@ The theme of this song contrasts strongly with the message of Peace and Love pre
 Its message is that it can be overwhelming to try to help everyone, that some people are actually in love with their problems,
 and for some of us, it might be a good idea to Be a little more selfish, it might do you some good!
 
-At times, I’ve had to take this advice to heart, having learned the hard way it’s easy to care more for some
+This is good advice for idealistic people who live in a big city, because it’s easy to care more for some
 people than they care for themselves. It’s sad, but true - and such situations can be quite frustrating.
 
 Other favorite songs from Talking Heads 77 are Tentative Decisions, Who Is It? (♥), and Don't Worry About the Government.
@@ -290,11 +292,13 @@ I only hope you have found them entertaining and enlightening!
 
 Thank you for reading this article!
 
-For more about abstraction and meaning in art, see [part 1]() or [part 2]().
+For more about abstraction and meaning in art, see
+[part 1](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) or
+[part 2](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-2-of-3-f7fa8f5362f6).
 
 ## Bonus Epic Song!
 
-For an epic song about how an abstraction - a spirit - smells, listen to
+For an epic song about how an abstraction - a spirit - smells, listen to and watch
 [Smells Like Teen Spirit](https://www.youtube.com/watch?v=hTWKbfoikeg) by
 [Nirvana](https://en.wikipedia.org/wiki/Nirvana_(band)).
 

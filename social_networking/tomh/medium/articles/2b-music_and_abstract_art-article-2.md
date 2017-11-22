@@ -280,13 +280,16 @@ Thank you for reading this article!
 
 For more about abstraction and meaning in art, see [part 1]() or [part 3]().
 
-## P.S.
+## Bonus Epic Song!
 
-For a great song about exclusion, listen to Cryptical Envelopment by The Grateful Dead:
+For an epic song about exclusion, listen to this medley of two songs,
+[Cryptical Envelopment -> The Other One](https://www.youtube.com/watch?v=WFtQr_W3opM) by
+[The Grateful Dead](https://en.wikipedia.org/wiki/Grateful_Dead).
 
 [Embed video:]
 ```
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WFtQr_W3opM" frameborder="0" allowfullscreen></iframe>
 ```
-Title:
-Link:
+Title: Cryptical Envelopment -> The Other One - by The Grateful Dead (Live 5/3/1968 at Columbia University, NYC).
+Link: https://www.youtube.com/watch?v=WFtQr_W3opM
+

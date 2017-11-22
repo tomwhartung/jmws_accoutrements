@@ -232,13 +232,16 @@ Thank you for reading this article!
 
 For more about abstraction and meaning in art, see [part 2]() or [part 3]().
 
-## P.S.
+## Bonus Epic Song!
 
-For a great song about the causes of War, listen to War by Bob Marley:
+For an epic song about the causes and ultimate of inevitability war - unless equilibrium is achieved - listen to this medley of two songs,
+[War -> No More Trouble](https://www.youtube.com/watch?v=vPZydAotVOY) by
+[Bob Marley](https://en.wikipedia.org/wiki/Bob_Marley).
 
 [Embed video:]
 ```
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vPZydAotVOY" frameborder="0" allowfullscreen></iframe>
 ```
-Title:
-Link:
+Title: War -> No More Trouble - by Bob Marley (Live).
+Link: https://www.youtube.com/watch?v=vPZydAotVOY
+

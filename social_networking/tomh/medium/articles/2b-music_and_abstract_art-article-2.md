@@ -9,7 +9,10 @@ Image: images/Wassily_Kandinsky-1907-Two_Birds-wikiart_org.jpg
 Title and Attribution: Two Birds - By Wassily Kandinski, 1907 - Public Domain.
 Link: https://www.wikiart.org/en/wassily-kandinsky/two-birds-1907
 
-[Part one]() features Bob Dylan's song All Along the Watchtower and [part three]() features the Talking Heads' first four albums.
+[Part one](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) features
+Bob Dylan's song All Along the Watchtower and
+[part three](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-3-of-3-3d212b8ef7b0) features the
+Talking Heads' first four albums.
 
 All three articles reference highly-acclaimed works of music and visual art that have stood the test of time.
 The articles use these well-known works to help explain how musicians and painters use abstractions to add value and meaning to their work.
@@ -159,7 +162,7 @@ For example, watching at least one of these civil rights documentaries from the 
 
 - [History of the Civil Rights Movement](https://www.youtube.com/watch?v=URxwe6LPvkM) (5:52)
 - [Alabama City Remembered as Climactic Battle of Civil Rights Movement](https://www.youtube.com/watch?v=ggUt0gJh9U8) (4:27)
-- [Burmingham 1983](https://www.youtube.com/watch?v=-0lD37bq8YI) (4:22)
+- [Birmingham 1963](https://www.youtube.com/watch?v=-0lD37bq8YI) (4:22)
 
 Also, listening to at least part of at least one of these speeches by
 [Martin Luther King Jr.](https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.)
@@ -280,11 +283,13 @@ I only hope you have found them entertaining and enlightening!
 
 Thank you for reading this article!
 
-For more about abstraction and meaning in art, see [part 1]() or [part 3]().
+For more about abstraction and meaning in art, see
+[part 1](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) or
+[part 3](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-3-of-3-3d212b8ef7b0).
 
 ## Bonus Epic Song!
 
-For an epic song about exclusion, listen to this medley of two songs,
+For an epic song about exclusion, listen to and watch this medley of two songs,
 [Cryptical Envelopment -> The Other One](https://www.youtube.com/watch?v=WFtQr_W3opM) by
 [The Grateful Dead](https://en.wikipedia.org/wiki/Grateful_Dead).
 

@@ -292,3 +292,13 @@ Thank you for reading this article!
 
 For more about abstraction and meaning in art, see [part 1]() or [part 2]().
 
+## P.S.
+
+For a great song about how an abstraction - a spirit - smells, listen to Smells Like Teen Spirit by Nirvana:
+
+[Embed video:]
+```
+
+```
+Title:
+Link:

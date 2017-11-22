@@ -232,3 +232,13 @@ Thank you for reading this article!
 
 For more about abstraction and meaning in art, see [part 2]() or [part 3]().
 
+## P.S.
+
+For a great song about the causes of War, listen to War by Bob Marley:
+
+[Embed video:]
+```
+
+```
+Title:
+Link:

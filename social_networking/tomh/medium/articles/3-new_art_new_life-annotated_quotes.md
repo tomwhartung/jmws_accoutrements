@@ -25,6 +25,8 @@ Each quote is annotated with one or more of these themes, with a few of them con
 
 ## Introduction to The New Art - The New Life (1932)
 
+This introduction was written after the book, but was meant as an introduction.
+
 - **General/Best**
 - **Progress**
 - **Opposites and the Importance of Equilibrium**
@@ -46,8 +48,8 @@ Each quote is annotated with one or more of these themes, with a few of them con
 - **Equivalent Mutual Relationships**
 > Until now the search for universal equilibrium has been neglected in favor of individual interests.
 > Art demonstrates that, as long as these dominate, world equilibrium cannot exist.
-> To achieve universal equilibrium, the new art had to sacrifice the beauty of limiting and particular form in order to
-> establish equivalent relationships through their universal aspect of color and line.
+> **To achieve universal equilibrium, the new art had to sacrifice the beauty of limiting and particular form in order to
+> establish equivalent relationships through their universal aspect of color and line.**
 (p. 280)
 
 ## The New Art - The New Life: The Culture of Pure Relationships (1931)

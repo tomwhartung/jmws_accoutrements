@@ -21,8 +21,8 @@ This introduction was written after the book, but was meant as an introduction.
 
 > Until now the search for universal equilibrium has been neglected in favor of individual interests.
 > Art demonstrates that, as long as these dominate, world equilibrium cannot exist.
-> To achieve universal equilibrium, the new art had to sacrifice the beauty of limiting and particular form in order to
-> establish equivalent relationships through their universal aspect of color and line.
+> **To achieve universal equilibrium, the new art had to sacrifice the beauty of limiting and particular form in order to
+> establish equivalent relationships through their universal aspect of color and line.**
 (p. 280)
 
 This introduction ends with a paragraph that addresses people who are not ready for abstract art.

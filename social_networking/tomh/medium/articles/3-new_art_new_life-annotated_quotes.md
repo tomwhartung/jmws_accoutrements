@@ -4,6 +4,19 @@
 Just the quotes from the book *The New Art - The New Life* within the book (of the same name, containing all of his writings),
 with each quote annotated with one or more of several themes.
 
+# Original Was in French
+
+Written in French, this "book" remained unpublished in his lifetime.
+
+Titles used on some of the manuscripts:
+
+- L'Art Et La Vie
+  - The Art and the Life
+- L'Art Nouveau - La Vie Nouvelle (La Culture des Rapports Purs)
+  - The New Art - The New Life (The Culture of Pure Relationships)
+- L'Art Et La Vie - La Culture de la Forme et de Ses Rapports Vers Une Equivalence Universelle
+  - Art and Life: The Culture of Form and of its Relationships toward Universal Equivalence
+
 # Themes
 
 These themes run through these quotes:
@@ -754,6 +767,7 @@ We can see what we really are internally, only by stripping away the external.
 (p. 270)
 
 ----------
+----------
 
 - **General/Best**
 - **Progress**
@@ -769,6 +783,7 @@ We can see what we really are internally, only by stripping away the external.
 (p. 270)
 
 ----------
+----------
 
 - **Progress**
 - **High Universal Morality**
@@ -783,6 +798,16 @@ We can see what we really are internally, only by stripping away the external.
 
 - **Progress**
 - **High Universal Morality**
+
+> Art demonstrates that at the beginning of the culture of particular form, the action of creation and cultivation is dominant,
+> while toward the end the action of abolition apparently becomes all important.  If the same is true in life, then the two
+> oppositions of morality must become accentuated in the same way.
+(p. 271)
+
+----------
+
+- **Progress**
+- **High Universal Morality**
 - **Purified Forms**
 
 > Toward the end of the culture of particular forms, high universal morality - which basically contains
@@ -790,9 +815,12 @@ We can see what we really are internally, only by stripping away the external.
 > But actually, it envisages only the establishment of pure and equivalent relationships, and therefore requires purified forms.
 (p. 271)
 
+----------
+
 - **Progress**
 - **High Universal Morality**
 - **Purified Forms**
+
 > The new morality therefore demands that we *accept the abolition of oppressive particular forms;*
 > in this sense it is for a time *a morality of evil.*
 > But it is against the mutual abolition of particular forms to the point of their total destruction,
@@ -802,20 +830,30 @@ We can see what we really are internally, only by stripping away the external.
 > For high universal morality transcends the limitations of time.
 (p. 271)
 
+----------
+
 - **Progress**
 - **Liberty**
 - **High Universal Morality**
 - **Equivalent Mutual Relationships**
+
+> Even now, when the culture of particular form is not yet ended, morality is wrong if it would have us believe that we live for others.
+> In reality we live for ourselves, and *by the fact of our own improvement* we live for the improvement of others.
+>
 > Because of the need to secure his personal existence, man, egoist by nature, will remain so throughout his evolution.
 > But in the course of evolution, egoism at the expense of others is increasingly transformed into egoism directly benefiting all.
 (p. 273)
+
+----------
 
 - **General/Best**
 - **Progress**
 - **Opposites and the Importance of Equilibrium**
 - **High Universal Morality**
 - **Equivalent Mutual Relationships**
-- **This sums it up quite nicely:**
+
+**This sums it up quite nicely:**
+
 > Every day we are astonished by the complete absence of true love, friendship, brotherhood, kindness.
 > Centuries and centuries ago the great message of universal love was proclaimed: although its influence is undeniable, man has not changed.
 >
@@ -825,11 +863,14 @@ We can see what we really are internally, only by stripping away the external.
 > This is how life can realize the high ideals proclaimed so long ago.
 (p. 273)
 
+----------
+
 - **General/Best**
 - **Progress**
 - **Opposites and the Importance of Equilibrium**
 - **High Universal Morality**
 - **Equivalent Mutual Relationships**
+
 > As the new life approaches, a new morality is clearly being established, clearly founded on the new culture revealed by life and by art.
 > During the culture of equivalent relationships, it will be based on the apogee of this culture, that is,
 > on the realization of *equivalent mutual relationships* that the new life will attain.
@@ -839,4 +880,17 @@ We can see what we really are internally, only by stripping away the external.
 > While the morality of the past was sustained by church and state, the new morality is sustained by society.
 > Its content, conceived abstractly, is *universal international justice.*
 (p. 274)
+
+----------
+
+- **General/Best**
+- **Progress**
+- **High Universal Morality**
+
+> Although the new morality and reason can guide us, and art can lead the way, let us emphasize that, in art as in life, "realization"
+> is foremost and that the new life is created by qualities that might seem simple and insignificant but have the highest value.
+> The new art demonstratees that its values of exactness and purity of execution can exist in life.
+(p. 274)
+
+----------
 

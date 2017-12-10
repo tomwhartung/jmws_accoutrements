@@ -307,9 +307,10 @@ in his General Description of the Types are prime examples!
 - **Progress**
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
-- Too few people are aware of the true significance of Jung's pairs of psychological opposites.
 
+Too few people are aware of the true significance of Jung's pairs of psychological opposites.
 Is there anyone else on the planet who can see the value of working towards equivalence of these fundamental oppositions?
+
 **This is the core of what I am working to express in the SeeOurMinds.com site: the desire to live a "truly human life."**
 The internet should help me find them!
 

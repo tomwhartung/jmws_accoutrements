@@ -110,20 +110,28 @@ Written over a period of three years, based on ideas developed over the previous
 > destroys any particular interest detremental to the others.*
 (p. 249)
 
+----------
+
 - **Progress**
 - **Diversity**
 - **Purified Forms**
-- I see parallels between what he is saying in the next quote, about subject and particular form,
+
+I see parallels between what he is saying in the next quote, about subject and particular form,
 in the (supposed) trend to ignoring demographics (race, gender, age, etc.) in hiring.
 In reality, progress in this area has been made, but there is still a ways to go.
+
 > Today we see subject and particular form, once of such great importance in the work,
 > rejected not only as being a primitive means of expression, but also as limiting expression.
 > Until now their use has been prolongd by tradition and necessity - equally by convention and inertia.
 (p. 249)
 
+----------
+
 - **General/Best**
 - **Progress**
-- In this evolution of art and life it is sincerity, rather than conformity, that matters:
+
+In this evolution of art and life it is sincerity, rather than conformity, that matters:
+
 > In life every sincere effort leads to human evolution, and it is the same in art.
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
 >
@@ -134,24 +142,34 @@ In reality, progress in this area has been made, but there is still a ways to go
 > This fact that art demonstrates is of great importance for life, because it forms the basis of progress and shows its path.
 (p. 249)
 
+----------
+
 - **Diversity**
 - **Purified Forms**
-- A person's superficial qualities veils the content of their personality.
+
+A person's superficial qualities veils the content of their personality.
 Demographics in particular can lead to erroneous expectations: assuming a person will like something or act a certain
 way because they are female, old, black or asian or jewish or whatever, can lead to mistakes.
+
 > By using subject matter or even particular form alone, figurative art always shows a descriptive,
 > literary side that veils the purely plastic expression of line, color, and relationships.
 (p. 251)
 
+----------
+
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
-- Equilibrium - not quite "harmony" - He addresses this specifically; look it up in the book!  It's around this place, p.252.
+
+Equilibrium - not quite "harmony" - He addresses this specifically; look it up in the book!  It's around this place, p.252.
 Mutual Respect: I believe he is talking about this when he talks about equilibrated relationships.
+
 For me, it is easier for me to define what equilibrium is *not* - for example, the images in
 my experimental "Mondrianesque" gallery - than to define what it *is.*
+
 The increasingly wide gap between rich and poor certainly belies a huge amount of disequilibrium.
 Disequilibrium is likewise apparent in the entire range of abusive relationships, from mansplaining to spousal murder.
+
 I suppose it is a sad fact of either my pessimistic outlook on life - or simply life itself - that I cannot
 think of a good example of equilibrium outside of Mondrian's paintings, of course.
 
@@ -166,12 +184,18 @@ think of a good example of equilibrium outside of Mondrian's paintings, of cours
 > on the contrary, *a continuous and mutually annihilating opposition of equivalent but unequal elements.*
 (p. 252)
 
+----------
+
 - **Team Building**
 - **Purified Forms**
-- I believe that at minimum a team must have at least two people: at least one who is more pragmatic and comfortable with
+
+I believe that at minimum a team must have at least two people: at least one who is more pragmatic and comfortable with
 physical aspects (xSxx) and one who is more idealistic and comfortable with spiritual aspects (xNxx).
+
 > *The physical aspect of man, of life, diminishes in opposition to the spiritual aspect, which becomes stronger.*
 (p. 254)
+
+----------
 
 - **General/Best**
 - **Team Building**
@@ -180,8 +204,10 @@ physical aspects (xSxx) and one who is more idealistic and comfortable with spir
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
 - A team can approach equilibrium by having members whose personalities compliment one another.
+
 Having spiritual portraits of the team members makes it easy to see where their strengths lie and
 what type of person could help add diversity and achieve equilibrium.
+
 > It is therefore of great importance for humanity that art manifest in an exact way the constant but varying
 > rhythm of opposition of the two principal aspects of all life.
 > The rhythm of the straight line in rectangular opposition indicates
@@ -198,7 +224,8 @@ what type of person could help add diversity and achieve equilibrium.
 - **Liberty**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
-- For equilibrium to prevail, it is essential that these relationships be mutually beneficial.
+
+For equilibrium to prevail, it is essential that these relationships be mutually beneficial.
 I can see how the internet allows for each of us to specialize and find our brand - allowing each of us to
 live "in *independent existence consistent with his own character.*"
 Certainly the trend toward freelancing and the gig economy supports a trend toward mutual relationships.
@@ -206,6 +233,7 @@ Unlike the full-time marketplace, temporary work supports quickly moving on from
 without any risk of the stigma that can come from being a "job hopper."
 Additionally, the global marketplace gives people and companies alike the opportunity to specialize in a niche, and
 thus do the type of work that they enjoy the most, or are the best at, or that pays the most, etc.
+
 > Art demonstrates that the true realization of real life requires *individual liberty.*
 > The new life will attain this liberty materially and spiritually.
 > Although joined to others by mutual equivalent relationships, the individual will be no less free,
@@ -219,8 +247,10 @@ thus do the type of work that they enjoy the most, or are the best at, or that p
 - **General/Best**
 - **Progress**
 - **Liberty**
-- If nothing else, the internet obviously offers all of us total freedom of expression.
+
+If nothing else, the internet obviously offers all of us total freedom of expression.
 Also obviously, the ability to exercise this freedom without abusing it will require some work.
+
 > Art in its end shows that individual liberty - until now an "ideal" - will become reality in the distant future.
 > This requires a stage of evolution in which man will no longer abuse his liberty.
 (p. 255)
@@ -228,9 +258,11 @@ Also obviously, the ability to exercise this freedom without abusing it will req
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
-- Oppositions other than the natural action of breathing in and out exist in the daily lives of everyone.
+
+Oppositions other than the natural action of breathing in and out exist in the daily lives of everyone.
 Significantly, the psychological oppositions of judging and perceiving, thinking and feeling, etc. that Jung identified
 in his General Description of the Types are prime examples!
+
 > By following the rhythm of the two contrary oppositions of the straight line, we can say
 > that the real life basic to man is simply the action of equilibrated opposition - for example,
 > the double movement of respiration, which is contrary and complementary.

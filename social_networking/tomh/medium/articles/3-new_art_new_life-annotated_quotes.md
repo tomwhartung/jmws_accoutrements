@@ -203,11 +203,16 @@ physical aspects (xSxx) and one who is more idealistic and comfortable with spir
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
-- A team can approach equilibrium by having members whose personalities compliment one another.
 
+A team can approach equilibrium by having members whose personalities compliment one another.
 Having spiritual portraits of the team members makes it easy to see where their strengths lie and
 what type of person could help add diversity and achieve equilibrium.
 
+> On the contrary, we must *oppose every limitation by the various forms that oppress the rhythm of life,*
+> because, just as in art, *these limitations cause the disequilibrium of life.*
+> And again, just as in art, the liberated, purified forms must be brought through pure relationships toward
+> *the state of mutual equivalence.  This dual action of art is reflected everywhere in life.*
+>
 > It is therefore of great importance for humanity that art manifest in an exact way the constant but varying
 > rhythm of opposition of the two principal aspects of all life.
 > The rhythm of the straight line in rectangular opposition indicates
@@ -217,6 +222,9 @@ what type of person could help add diversity and achieve equilibrium.
 > But just as in art these lines have different dimensions, so individuals and their groups differ in strength or size.
 > *Art demonstrates that life, through equivalence of its opposed aspects - despite their different nature - can approach real equilibrium.*
 (p. 254)
+
+----------
+----------
 
 - **General/Best**
 - **Team Building**
@@ -228,11 +236,13 @@ what type of person could help add diversity and achieve equilibrium.
 For equilibrium to prevail, it is essential that these relationships be mutually beneficial.
 I can see how the internet allows for each of us to specialize and find our brand - allowing each of us to
 live "in *independent existence consistent with his own character.*"
+
 Certainly the trend toward freelancing and the gig economy supports a trend toward mutual relationships.
 Unlike the full-time marketplace, temporary work supports quickly moving on from abusive managers
 without any risk of the stigma that can come from being a "job hopper."
-Additionally, the global marketplace gives people and companies alike the opportunity to specialize in a niche, and
-thus do the type of work that they enjoy the most, or are the best at, or that pays the most, etc.
+
+Additionally, the global marketplace gives people and companies alike the opportunity to specialize in a niche, and thus
+do the type of work that they enjoy the most, or are the best at, or that pays the most, etc.
 
 > Art demonstrates that the true realization of real life requires *individual liberty.*
 > The new life will attain this liberty materially and spiritually.
@@ -243,6 +253,9 @@ thus do the type of work that they enjoy the most, or are the best at, or that p
 > establish their own limitations *appropriate to their nature.*
 > Likewise, in future life society will allow each individual in *independent existence consistent with his own character.*
 (p. 255)
+
+----------
+----------
 
 - **General/Best**
 - **Progress**
@@ -255,11 +268,15 @@ Also obviously, the ability to exercise this freedom without abusing it will req
 > This requires a stage of evolution in which man will no longer abuse his liberty.
 (p. 255)
 
+----------
+----------
+
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
 
 Oppositions other than the natural action of breathing in and out exist in the daily lives of everyone.
+
 Significantly, the psychological oppositions of judging and perceiving, thinking and feeling, etc. that Jung identified
 in his General Description of the Types are prime examples!
 
@@ -269,29 +286,39 @@ in his General Description of the Types are prime examples!
 > It is a pure expression of vital rhythm....
 (p. 256)
 
+----------
+----------
+
 - **General/Best**
 - **Team Building**
 - **Progress**
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
 - Too few people are aware of the true significance of Jung's pairs of psychological opposites.
+
 Is there anyone else on the planet who can see the value of working towards equivalence of these fundamental oppositions?
 **This is the core of what I am working to express in the SeeOurMinds.com site: the desire to live a "truly human life."**
 The internet should help me find them!
+
 > When we understand the equivalence of contrary oppositions of art's rhythm, we work more consciously to build truly human life.
 > For least attention is given to establishing equilibrium through *equivalence of the two fundamental oppositions.*
 (pp. 256-257)
+
+----------
 
 - **General/Best**
 - **Progress**
 - **Diversity**
 - **Opposites and the Importance of Equilibrium**
 - **Equivalent Mutual Relationships**
-- A modern man who does not seek equivalence does not have the new mentality - "Not that there's anything wrong with that:"
-- Links for "Not that there's anything wrong with that:"
-  - https://www.youtube.com/watch?v=Oj3VphK9AMk
-  - http://tvtropes.org/pmwiki/pmwiki.php/Main/NotThatTheresAnythingWrongWithThat
-  - And even: https://en.wikipedia.org/wiki/The_Outing_(Seinfeld)
+
+A modern man who does not seek equivalence does not have the new mentality - "Not that there's anything wrong with that:"
+
+Links for "Not that there's anything wrong with that:"
+- https://www.youtube.com/watch?v=Oj3VphK9AMk
+- http://tvtropes.org/pmwiki/pmwiki.php/Main/NotThatTheresAnythingWrongWithThat
+- And even: https://en.wikipedia.org/wiki/The_Outing_(Seinfeld)
+
 > With regard to limiting forms, it is not only conventional forms that constitute obstacles to the new life,
 > but so do most of the new forms arising in political, social, and economic areas.
 > For instance, aristocratic limitations are re-created under democratic forms, and "socialism" often proves
@@ -300,32 +327,49 @@ The internet should help me find them!
 > despite his spiritual improvement is not of really new mentality if he fails to seek equivalence.
 (p. 257)
 
+----------
+
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
 - **High Universal Morality**
 - **Purified Forms**
-- Liberals see conservatives as "evil" because - in general - conservatives are against the good that liberals perceive as
+
+Liberals see conservatives as "evil" because - in general - conservatives are against the good that liberals perceive as
 being inherent in the creation of "new ways" of dealing with the changes we experience,
 because change is the only constant in life.
+
 Conservatives, on the other hand, see liberals as "evil" because - in general - liberals are working to abolish
 the good that conservaties perceive as being inherent in the "old ways" that conservatives seek to maintain,
 because they have obviously worked in the past, else we wouldn't be here.
+
+> By abolishing first particular form and then purified form and neutral form, the new art has liberated line and color:
+> the essential means of plastic expression.  Likewise, after long culture, the true content of man and of life is in the
+> process of freeing itself by abolishing every kind of limiting form.
+> This abolition involves suffering but, being necessary, is inevitable.  But it is always accompanied by joy,
+> for abolotion also involves creation: new life.
+>
 > Whether we conceive life as joy or as suffering depends on which is most important to us: abolition or creation.
 >
 > The beauty and the misery of concrete life consists precisely in the fact that we can escape neither abolition nor creation,
 > thus neither joy nor suffering.
 (p. 259)
 
+----------
+
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
 - **High Universal Morality**
-- You need to get to his discussion of high morality near the end before you can understand where he is going here.
+
+You need to get to his discussion of high morality near the end before you can understand where he is going here.
+
 > If evil is synonymous with abolition and thus with suffering, and
 > good is synonymous with creation and thus with joy, then in real life good and evil destroy each other.
 >
 > But in concrete life good and evil oppose each other.
 > And it is also a characteristic of life's beauty and misery that we can escape neither one.
 (p. 260)
+
+----------
 
 - **General/Best**
 - **Death and Our Personalities**

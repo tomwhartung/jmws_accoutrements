@@ -27,17 +27,22 @@ Each quote is annotated with one or more of these themes, with a few of them con
 
 This introduction was written after the book, but was meant as an introduction.
 
+----------
+
 - **General/Best**
 - **Progress**
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
+
 > The culture of art demonstrates that only *man's development* in the distant future can create
 > universal equilibrium through the *establishment of equivalent relationships.*
 > These relationships are already realized in pure art - art free from figuration and all limiting form - expressing the
 > beauty of equivalent relationships exclusively through pure line and color.
 > This art is an image of the ideal human goal toward which humanity is moving.
 (p. 278)
+
+----------
 
 - **General/Best**
 - **Team Building**
@@ -46,6 +51,7 @@ This introduction was written after the book, but was meant as an introduction.
 - **High Universal Morality**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
+
 > Until now the search for universal equilibrium has been neglected in favor of individual interests.
 > Art demonstrates that, as long as these dominate, world equilibrium cannot exist.
 > **To achieve universal equilibrium, the new art had to sacrifice the beauty of limiting and particular form in order to
@@ -61,6 +67,7 @@ Written over a period of three years, based on ideas developed over the previous
 - **General/Best**
 - **Progress**
 - **Purified Forms**
+
 > We distinguish various tendencies in the new painting.
 > First, there is the tendency in which more or less purified form is so decomposed, transformed, or
 > broken that the composition no longer renders natural appearance.
@@ -68,6 +75,8 @@ Written over a period of three years, based on ideas developed over the previous
 > Of this tendency, the strongest examples are, on the one hand, the works of Picasso and Braque and,
 > on the other, those of Kandinsky and Malevich.
 (p. 247)
+
+----------
 
 - **General/Best**
 - **Team Building**
@@ -77,6 +86,7 @@ Written over a period of three years, based on ideas developed over the previous
 - **High Universal Morality**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
+
 > If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*
 >
 > Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified,
@@ -85,12 +95,15 @@ Written over a period of three years, based on ideas developed over the previous
 > *through pure and equivalent relationships of increasingly free individuals.*
 (p. 248)
 
+----------
+
 - **General/Best**
 - **Team Building**
 - **Progress**
 - **Diversity**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
+
 > Art demonstrates the new life is not simply a creation of new forms and new, more just relationships in
 > individual, social, political, and economic areas, but the purification of forms and relationships makes them
 > increasingly capable of establishing an *entirely new organization, which through equivalent relationships

@@ -59,6 +59,17 @@ Written over a period of three years, based on ideas developed over the previous
 *All emphasis is in the original.*
 
 - **General/Best**
+- **Progress**
+- **Purified Forms**
+> We distinguish various tendencies in the new painting.
+> First, there is the tendency in which more or less purified form is so decomposed, transformed, or
+> broken that the composition no longer renders natural appearance.
+> This tendency uses particular forms, whole or fragmented, curved or straight lines as well as geometric forms.
+> Of this tendency, the strongest examples are, on the one hand, the works of Picasso and Braque and,
+> on the other, those of Kandinsky and Malevich.
+(p. 247)
+
+- **General/Best**
 - **Team Building**
 - **Progress**
 - **Liberty**
@@ -67,11 +78,24 @@ Written over a period of three years, based on ideas developed over the previous
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
 > If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*
+>
 > Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified,
 > not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.
 > Thus in the same way as art, life reaches a state of real equilibrium
 > *through pure and equivalent relationships of increasingly free individuals.*
 (p. 248)
+
+- **General/Best**
+- **Team Building**
+- **Progress**
+- **Diversity**
+- **Purified Forms**
+- **Equivalent Mutual Relationships**
+> Art demonstrates the new life is not simply a creation of new forms and new, more just relationships in
+> individual, social, political, and economic areas, but the purification of forms and relationships makes them
+> increasingly capable of establishing an *entirely new organization, which through equivalent relationships
+> destroys any particular interest detremental to the others.*
+(p. 249)
 
 - **Progress**
 - **Diversity**
@@ -89,6 +113,12 @@ In reality, progress in this area has been made, but there is still a ways to go
 - In this evolution of art and life it is sincerity, rather than conformity, that matters:
 > In life every sincere effort leads to human evolution, and it is the same in art.
 > Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
+>
+> In the evolution of art, if we see purely plastic expression - which is universal - increasingly freeing itself from
+> subject matter, freeing form from its individual limitations, then we see that the mind is *freeing itself from the
+> oppression of the individual is tending toward the universal.*
+>
+> This fact that art demonstrates is of great importance for life, because it forms the basis of progress and shows its path.
 (p. 249)
 
 - **Diversity**

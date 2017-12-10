@@ -585,6 +585,7 @@ We can see what we really are internally, only by stripping away the external.
 - **Progress**
 - **High Universal Morality**
 - **Equivalent Mutual Relationships**
+
 > Capitalism as cultivated until now is a limiting form that is abolishing itself and
 > will be abolished in the culture of equivalent relationships.
 > Already, today's disequilibrated social and economic conditions show that this form has matured and is about to transform itself.
@@ -596,11 +597,15 @@ We can see what we really are internally, only by stripping away the external.
 > For the future, Neo-Plastic demonstrates for every area *an organization of equivalent relationships and not a new form.*
 (p. 266)
 
+----------
+
 - **General/Best**
 - **Opposites and the Importance of Equilibrium**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
-- This is a good quote to support using spiritual portraits for transparency and better relationships:
+
+**This is a good quote to support using spiritual portraits for transparency and better relationships:**
+
 > Love and friendship play an important role in mutual nonequivalent exchange.
 > The new art demonstrates that in order to achieve real equivalence the oppositions of a relationship must be pure.
 > To become pure they must first be separated, that is, disengaged from whatever they are confounded with.
@@ -610,9 +615,12 @@ We can see what we really are internally, only by stripping away the external.
 > they do not conceal, they are real and show themselves for what they are.*
 (p. 267)
 
+----------
+
 - **Progress**
 - **High Universal Morality**
 - **Equivalent Mutual Relationships**
+
 > In communal life the question will always arise whether all are capable of contributing equivalent value if they
 > lack the physical or mental power; physically, for example, old people, children, and especially the sick.
 > A just solution must be found, for all human beings are basically equal and all are entitled to an equivalent existence.
@@ -625,15 +633,20 @@ We can see what we really are internally, only by stripping away the external.
 > The entire community would thus benefit.
 (p. 267)
 
+----------
+
 - **General/Best**
 - **Progress**
 - **High Universal Morality**
 - **Equivalent Mutual Relationships**
+
 > Why do we not outlaw all arms making and destroy all weapons now existing in our "civilized" society?
 > With weapons outlawed, it would be far less easy for men to kill each other.
 > But in our society so many make their fortunes or live by these barbaric instruments.
 > Again it is *particular interest* that sustains war.
 (p. 268)
+
+----------
 
 - **General/Best**
 - **Progress**
@@ -641,7 +654,9 @@ We can see what we really are internally, only by stripping away the external.
 - **High Universal Morality**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
-- The key to world peace - it's right here, people!
+
+**The key to world peace - it's right here, people!**
+
 > In politics it is not enough to work toward internally equivalent relationships, we must above all
 > achieve equivalent relationships of international order.
 >
@@ -649,25 +664,33 @@ We can see what we really are internally, only by stripping away the external.
 > Through intersecting lines, the mutual relationships destroy each plane's separateness so that all unite completely.
 >
 > The rectangular planes of varying dimensions and colors visibly demonstrate that *internationalism* does not mean
-> chaos ruled by monotony but an ordered and clearly divided unity.
-> In Neo-Plastict there are, in fact, very definite boundaries.
+> chaos ruled by monotony but an ordered and clearly divided unity.  In Neo-Plastic there are, in fact, very definite boundaries.
+> But these boundaries are not really closed; the straight lines in rectangular opposition constantly intersect,
+> so that their rhythm continues througout the whole work.  In the same way, in the international order of the future
+> the different countries, while being mutually equivalent, will have their unique and diffferent value.
 (p. 268-269)
+
+----------
 
 - **General/Best**
 - **Progress**
 - **High Universal Morality**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
+
 > Although Neo-Plastic establishes the goal of human culture, this goal points the way for tomorrow.
 > And if the mutual equality that Neo-Plastic manifests cannot be realized in life today,
 > the new art nevertheless shows that pure forms and relationships can be established,
 > and thus a *new organization* that already makes possible a freer and more really unified life.
 (p. 269)
 
+----------
+
 - **Liberty**
 - **Opposites and the Importance of Equilibrium**
 - **High Universal Morality**
 - **Purified Forms**
+
 > Religion became a limiting form, as the church, but shows its true content as it progressively frees itself from
 > its trappings in the course of human culture.
 > If art demonstrates that the mutual separation of forms increases their intrinsic value and produces a more perfect union,
@@ -675,32 +698,53 @@ We can see what we really are internally, only by stripping away the external.
 > Liberated and restored to independence, everything more easily achieves profundity.
 (p. 269)
 
+----------
+
 - **General/Best**
 - **Team Building**
 - **Progress**
 - **Opposites and the Importance of Equilibrium**
 - **Equivalent Mutual Relationships**
+
 > Just as art itself has slowly created a new plastic expression of more real equilibrium,
 > life itself will slowly create this equilibrium in a new social and economic organization.
 (p. 269)
 
+----------
+
+- **General/Best**
+- **Progress**
+
+> Necessity creates the progress that carries man forward.  While progress (in science, technology, etc.) is too advanced
+> for most men to follow, some misuse it and often all mankind suffers by it.  Therefore, experience and education are two imperatives.
+(p. 269)
+
+----------
+
 - **Progress**
 - **High Universal Morality**
 - **Purified Forms**
+
 > Conventional morality, however, is not the pure expression of high universal morality.
 > Just as in the figurative work of art, purely plastic expression is not only confused but distorted,
 > so in life conventional morality is confused and distored by enclosing itself within its various forms.
 (p. 270)
 
+----------
+
 - **Progress**
 - **High Universal Morality**
+
 > What high universal morality - which is an expression of human evolution - requires is
 > precisely *the same thing that life* - which is equally an expression of human evolution - demands.
 (p. 270)
 
+----------
+
 - **Progress**
 - **Liberty**
 - **High Universal Morality**
+
 > High universal morality missed its goal because of the limited understanding of men, whose very nature must oppose it.
 > This is very logical because high universal morality is not the essential expression of the culture of the past,
 > which is characterized as the culture of particular form.
@@ -709,29 +753,38 @@ We can see what we really are internally, only by stripping away the external.
 > Thus arose all the hypocritical and corrupt conditions for which life has been the scene.
 (p. 270)
 
+----------
+
 - **General/Best**
 - **Progress**
 - **Liberty**
 - **High Universal Morality**
 - **Purified Forms**
 - **Equivalent Mutual Relationships**
+
 > High universal morality finds its expression in the apogee of the culture of equivalent relationships.
 > Art in its end demonstrates that only line and color free from all oppression of form can constitute equivalent relationships.
 > Thus in life only the free individual and groups of free individuals can form a mutually equivalent organization and
 > become capable of realizing the content of high universal morality, which prescibes that we live for each and for all.
 (p. 270)
 
+----------
+
 - **Progress**
 - **High Universal Morality**
+
 > If the culture of particular form creates and cultivates this form and equally destroys it,
 > morality must accord with this double action.  *It must accept evil as well as good.*
 >
 > But the distorted or confused morality of the past could not accept evil and considered it to be abnormal, a disease, a defect of life.
 (p. 271)
 
+----------
+
 - **Progress**
 - **High Universal Morality**
 - **Purified Forms**
+
 > Toward the end of the culture of particular forms, high universal morality - which basically contains
 > only good - appears to dictate that we must do evil to these forms.
 > But actually, it envisages only the establishment of pure and equivalent relationships, and therefore requires purified forms.

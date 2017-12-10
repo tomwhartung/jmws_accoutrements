@@ -141,6 +141,12 @@ The increasingly wide gap between rich and poor certainly belies a huge amount o
 Disequilibrium is likewise apparent in the entire range of abusive relationships, from mansplaining to spousal murder.
 I suppose it is a sad fact of either my pessimistic outlook on life - or simply life itself - that I cannot
 think of a good example of equilibrium outside of Mondrian's paintings, of course.
+
+> The new art reveals that its plastic expression of harmony is entirely different from the harmony of the
+> past; that is, it manifests the same content altogether differently.  That is why the new aesthetic
+> speaks of "equilibrium" instead of harmony.  Moreover, while the "harmony" of the past expresses a veiled state,
+> the equilibrium of the new art denotes an exact state.
+>
 > However, even in the new aesthetic, the word "equilibrium" has caused many misunderstandings and repeated errors.
 > The only way to correct them will be by attentive study of the plastic expression of the new art.
 > It will be seen that the equilibrium in the new art is not a static state without action, as is generally thought but,

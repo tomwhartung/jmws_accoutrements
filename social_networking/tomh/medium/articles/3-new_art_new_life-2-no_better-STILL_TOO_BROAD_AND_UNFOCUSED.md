@@ -1,9 +1,9 @@
 
-# 3-new_art_new_life-2-article.md
+# 3-new_art_new_life-2-no_better-STILL_TOO_BROAD_AND_UNFOCUSED.md
 
-I intend to eventually publish this at: https://medium.com/@tomwhartung .
+Having given it some thought, I have decided to abandon this line of thought as well for a new one.
 
-"Eventually."
+It seems prudent though to also save this "version," minimal as it is, for possible future reference.
 
 # Goal - The Big Picture
 
@@ -128,10 +128,4 @@ My main point and where we quote and explain only the best quotes....
 This short book was not published during his lifetime.
 I believe this is because he was so far ahead of his time.
 It is also so abstract that it is difficult to understand - even for me, and I love abstract stuff!
-
-*****************************
-
-## Old Body of Article - For Possible Future Reference
-
-See `3-new_art_new_life-1-OLD.md` in this directory.
 

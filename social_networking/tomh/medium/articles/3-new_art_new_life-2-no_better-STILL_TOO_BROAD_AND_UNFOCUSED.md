@@ -64,46 +64,47 @@ This is where the original idea becomes intractable.
 
 Thoughts on this topic are now in the file:
 - `3-new_art_new_life-3a-BIG_PICTURE.md`
+
 in this directory.
 
 #### Abstractions in Art
 
-Literature, poetry and music - anything with similies and metaphors - All Along the Watchtower ....
-Dance - ballet - story abstracted to its essential elements and retold using the movements permitted by the dance.
+Thoughts on this topic are now in the file:
+- `3-new_art_new_life-3a-BIG_PICTURE.md`
 
-[Business - organizational chart - (do I want this here, or in a separate section, or maybe just skip it?)]
-[Even terms like bread, man, woman, dog, cat are abstractions in that they are only concepts unless they are qualified (e.g., my cat).]
+in this directory.
 
 #### Abstractions in Politics
 
-- Countries: Declaration of Independence,
-- Political Parties: Statement of Principles
-- Manifestos
+Thoughts on this topic are now in the file:
+- `3-new_art_new_life-3a-BIG_PICTURE.md`
 
-Assassinations can be "tricky," because they can turn popular leaders into martyrs.
-It's much more difficult to kill an idea - an abstraction - than it is to kill a person.
+in this directory.
 
 #### Abstractions in Religion
 
 One might say that gods are the ultimate abstractions.
 
+It sucks that differences of specifics - "particular forms" - are the source of so much violence!
+
 #### BYO Specifics
 
-Abstractions ....
+Thoughts on this topic are now in the file:
+- `3-new_art_new_life-3a-BIG_PICTURE.md`
+
+in this directory.
 
 ### The Power of Intuition
 
-[Abstracting processes - ideas: installing software, vacuuming, ???]
+Thoughts on this topic are now in the file:
+- `3-new_art_new_life-3a-BIG_PICTURE.md`
 
-Subconscious processing - the "aha" we get when driving, mowing the lawn, washing dishes, taking a shower, etc.
-
-### The New Art - The New Life
-
-My main point and where we quote and explain only the best quotes....
+in this directory.
 
 ### (Possible) Conclusion
 
-This short book was not published during his lifetime.
-I believe this is because he was so far ahead of his time.
-It is also so abstract that it is difficult to understand - even for me, and I love abstract stuff!
+Thoughts on this topic are now in the file:
+- `3-new_art_new_life-3a-BIG_PICTURE.md`
+
+in this directory.
 

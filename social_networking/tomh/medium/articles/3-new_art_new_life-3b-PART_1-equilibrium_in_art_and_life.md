@@ -1,61 +1,19 @@
 
-# 3-new_art_new_life-2-no_better-STILL_TOO_BROAD_AND_UNFOCUSED.md
+# 3-new_art_new_life-3b-PART_1-equilibrium_in_art_and_life.md
 
-Having given it some thought, I have decided to abandon this line of thought as well for a new one.
+After giving it some thought, I have decided to write a series of articles, focusing the first of them on Mondrian's notion of equilibrium.
 
-It seems prudent though to also save this "version," minimal as it is, for possible future reference.
+# Ultimate Goal of This Article
 
-# Goal - The Big Picture
-
-To be able to reference this article in a subsequent article about my vision, and then
-able to reference *that* article (about my vision) in a *subsequent* article about the
-goals and reasons for creating seeourminds.com .
-
-# Ideas
-
-## Songs
-
-I sometimes like to put Easter-eggy-type links to songs in my articles.  It's a thing.
-
-- What's So Funny 'Bout Peace Love and Understanding
-- Love Is All You Need
-- Love Is All Is Alright (High Universal Morality)
-
-## My Point
-
-I like Mondrian's idealism and want to contribute to the awareness of the need for more
-equlibrium and desire for equivalent relationships.
-
-Or something like that.
-
-## My Take
-
-### Ideas I Like:
-
-- Equilibrium in general
-- Equivalent mutual relationships in particular
-- Purified forms - in art, people, and society
-- Learning about and revealing inner traits and energies
-- Honesty
-
-### Parallels With Archetypes
-
-- Breaking things down into essential elements (N/S and F/T) so that we can see them
-- Removing distracting surface shit
-
-### Obvious but Important
-
-One can't create the same sort art that Mondrian created, for that would not be art.
-
-*****************************
+To be able to reference this article in a subsequent article about my vision.
 
 # The Article
 
 ## Title
 
-The Prophetic Vision of Piet Mondrian
+The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life
 
-## Body - New
+## Body
 
 ### ("Cold" Introduction)
 

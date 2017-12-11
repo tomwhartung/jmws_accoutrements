@@ -1,11 +1,8 @@
 
-# 3-new_art_new_life-1-OLD.md
-
-Publishing this at: https://medium.com/@tomwhartung
-
-**NOT!!**
+# 3-new_art_new_life-1-a_start_but-TOO_BROAD_AND_UNFOCUSED.md
 
 Having given it some thought, I have decided to abandon this line of thought for a new one.
+
 It seems prudent though to save this for possible future reference.
 
 # Title
@@ -136,6 +133,4 @@ Following is a quote from the book's Introduction, written by Mondrian in 1932:
 
 Are we here today any closer to the goal of living in universal equilibrium than Mondrian was 100 years ago?
 Join me in taking a look at some more quotes from this book and see if we can answer that question!
-
-*****************************
 

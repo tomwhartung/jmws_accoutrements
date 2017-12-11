@@ -63,9 +63,7 @@ This is where the original idea becomes intractable.
 #### Abstractions in Math and Science
 
 Thoughts on this topic are now in the file:
-
 - `3-new_art_new_life-3a-BIG_PICTURE.md`
-
 in this directory.
 
 #### Abstractions in Art

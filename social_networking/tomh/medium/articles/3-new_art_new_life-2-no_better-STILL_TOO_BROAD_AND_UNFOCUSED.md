@@ -60,6 +60,14 @@ This article seeks to answer those questions!
 
 This is where the original idea becomes intractable.
 
+#### Abstractions in Religion
+
+One might say that gods are the ultimate abstractions.
+
+This could make a nice **short** article with a broad appeal!  **Keep it short though!**
+
+It sucks that differences of specifics - "particular forms" - are the source of so much violence!
+
 #### Abstractions in Math and Science
 
 Thoughts on this topic are now in the file:
@@ -80,12 +88,6 @@ Thoughts on this topic are now in the file:
 - `3-new_art_new_life-3a-BIG_PICTURE.md`
 
 in this directory.
-
-#### Abstractions in Religion
-
-One might say that gods are the ultimate abstractions.
-
-It sucks that differences of specifics - "particular forms" - are the source of so much violence!
 
 #### BYO Specifics
 

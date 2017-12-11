@@ -14,9 +14,12 @@ To be able to reference this article in subsequent articles, about how Mondrian 
 At this time, only the content of the first part is certain:
 
 - The first part will focus on equilibrium.
-- There will be at least one additional part, on high universal morality.
+- Possible idea for a second part: Mondrian's *Composition with Red, Blue, and Yellow* represents equilibrium between
+the various gods or religions or both
+- At minimum, there will be at least one part on high universal morality.
 
-At this time I am unsure whether there will be more than these two parts.
+At this time I am unsure whether there will be more than these two-or-three parts.
+Ponder!  Think!  Incubate!
 
 # Ideas
 
@@ -65,10 +68,20 @@ Titles should follow this format:
 For example:
 
 - The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life
+- The Prophetic Vision of Piet Mondrian, Part 2: Equilibrium in Religion (proposed)
+- The Prophetic Vision of Piet Mondrian, Part 3: High Universal Morality (proposed)
 
 That may be too long, and may need to be split into a title and subtitle, as appropriate.
 
-## Abstractions to Cover in the Articles
+## Possible Abstractions to Discuss in the Articles
+
+#### Abstractions in Religion
+
+One might say that gods are the ultimate abstractions.
+
+This could make a nice **short** article with a broad appeal!  **Keep it short though!**
+
+It sucks that differences of specifics - "particular forms" - are the source of so much violence!
 
 #### Abstractions in Math and Science
 
@@ -94,13 +107,14 @@ Assassinations can be "tricky," because they can turn popular leaders into marty
 
 It's much more difficult to kill an idea - an abstraction - than it is to kill a person.
 
-#### Abstractions in Religion
-
-One might say that gods are the ultimate abstractions.
-
 #### BYO Specifics
 
-Abstractions ....
+The already-published articles in the files:
+- `2?-music_and_abstract_art-article*`
+
+in this directory cover this topic quite well.
+
+They took a long time to write so definitely refer to them as necessary - that's why I wrote them!
 
 ### The Power of Intuition
 

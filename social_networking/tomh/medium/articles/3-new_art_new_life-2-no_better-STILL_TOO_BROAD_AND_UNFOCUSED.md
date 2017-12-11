@@ -11,51 +11,27 @@ To be able to reference this article in a subsequent article about my vision, an
 able to reference *that* article (about my vision) in a *subsequent* article about the
 goals and reasons for creating seeourminds.com .
 
-# Ideas
+For more information about the Big Picture, see the file:
 
-## Songs
+- `3-new_art_new_life-3a-BIG_PICTURE.md`
 
-I sometimes like to put Easter-eggy-type links to songs in my articles.  It's a thing.
+in this directory.
 
-- What's So Funny 'Bout Peace Love and Understanding
-- Love Is All You Need
-- Love Is All Is Alright (High Universal Morality)
-
-## My Point
-
-I like Mondrian's idealism and want to contribute to the awareness of the need for more
-equlibrium and desire for equivalent relationships.
-
-Or something like that.
-
-## My Take
-
-### Ideas I Like:
-
-- Equilibrium in general
-- Equivalent mutual relationships in particular
-- Purified forms - in art, people, and society
-- Learning about and revealing inner traits and energies
-- Honesty
-
-### Parallels With Archetypes
-
-- Breaking things down into essential elements (N/S and F/T) so that we can see them
-- Removing distracting surface shit
-
-### Obvious but Important
-
-One can't create the same sort art that Mondrian created, for that would not be art.
-
-*****************************
-
-# The Article
+# The Article - such as it is
 
 ## Title
 
-The Prophetic Vision of Piet Mondrian
+It is now obvious this title is too broad:
 
-## Body - New
+- The Prophetic Vision of Piet Mondrian
+
+Titles of articles to be actually published must be much more specific.
+
+## Body - New, and Unused
+
+This is not a bad start, overall!
+
+We just need to narrow the focus of subsequent articles, so as to not be overwhelmed and made unproductive as a result.
 
 ### ("Cold" Introduction)
 
@@ -82,11 +58,15 @@ This article seeks to answer those questions!
 
 ### The Power of Abstractions
 
+This is where the original idea becomes intractable.
+
 #### Abstractions in Math and Science
 
-Formulas - V = IR (Ohm's law) - describes the flow of electrons in everything electronic, from the 12 volts of direct current in cars, to
-the 220 volts of alternating current in heavy appliances like air conditioners, washers and driers, to the
-micro electronics in our smart phones and key fobs.
+Thoughts on this topic are now in the file:
+
+- `3-new_art_new_life-3a-BIG_PICTURE.md`
+
+in this directory.
 
 #### Abstractions in Art
 

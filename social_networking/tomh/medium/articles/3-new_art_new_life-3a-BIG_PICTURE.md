@@ -1,15 +1,15 @@
 
-# 3-new_art_new_life-2-no_better-STILL_TOO_BROAD_AND_UNFOCUSED.md
+# 3-new_art_new_life-3a-BIG_PICTURE.md
 
-Having given it some thought, I have decided to abandon this line of thought as well for a new one.
+Having given it some thought, I have decided to write multiple articles about Mondrian's vision, with each focused on a single aspect.
 
-It seems prudent though to also save this "version," minimal as it is, for possible future reference.
+This file contains some thoughts about the series, for future consideration.
+
+For the first part I will focus on equilibrium.
 
 # Goal - The Big Picture
 
-To be able to reference this article in a subsequent article about my vision, and then
-able to reference *that* article (about my vision) in a *subsequent* article about the
-goals and reasons for creating seeourminds.com .
+To be able to reference this article in subsequent articles, about how Mondrian has influenced my personal vision over the years.
 
 # Ideas
 

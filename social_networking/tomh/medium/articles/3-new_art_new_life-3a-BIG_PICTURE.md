@@ -5,11 +5,18 @@ Having given it some thought, I have decided to write multiple articles about Mo
 
 This file contains some thoughts about the series, for future consideration.
 
-For the first part I will focus on equilibrium.
-
 # Goal - The Big Picture
 
 To be able to reference this article in subsequent articles, about how Mondrian has influenced my personal vision over the years.
+
+## The First and Subsequent Parts
+
+At this time, only the content of the first part is certain:
+
+- The first part will focus on equilibrium.
+- There will be at least one additional part, on high universal morality.
+
+At this time I am unsure whether there will be more than these two parts.
 
 # Ideas
 
@@ -47,40 +54,21 @@ Or something like that.
 
 One can't create the same sort art that Mondrian created, for that would not be art.
 
-*****************************
+# The Articles
 
-# The Article
+## Titles
 
-## Title
+Titles should follow this format:
 
-The Prophetic Vision of Piet Mondrian
+- The Prophetic Vision of Piet Mondrian, Part X: [Specific Topic Covered in the Article]
 
-## Body - New
+For example:
 
-### ("Cold" Introduction)
+- The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life
 
-Piet Mondrian completed his final book, *The New Art - The New Life: A Culture of Pure Relationships,*
-in 1931, but by then had been working on it since at least 1921.
-It is short but profound and abstract - so much so that
-[The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
-published in 1987, bears the same title.
+That may be too long, and may need to be split into a title and subtitle, as appropriate.
 
-Image: images/Piet_Mondrian-1921-Tableau_I.jpg
-Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=37668615
-
-Mondrian believed that art and life follow similar paths:
-> In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
-
-He also believed the path that art and life follow is one of purification and equilibrium of opposites:
-> If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*  Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified, not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.  Thus in the same way as art, life reaches a state of real equilibrium *through pure and equivalent relationships of increasingly free individuals.*
-
-How and why did Mondrian develop his distinctive style, and what are the implications of it for us today and in the future?
-This article seeks to answer those questions!
-
-### Introducing Piet Mondrian
-
-### The Power of Abstractions
+## Abstractions to Cover in the Articles
 
 #### Abstractions in Math and Science
 
@@ -103,6 +91,7 @@ Dance - ballet - story abstracted to its essential elements and retold using the
 - Manifestos
 
 Assassinations can be "tricky," because they can turn popular leaders into martyrs.
+
 It's much more difficult to kill an idea - an abstraction - than it is to kill a person.
 
 #### Abstractions in Religion
@@ -123,7 +112,7 @@ Subconscious processing - the "aha" we get when driving, mowing the lawn, washin
 
 My main point and where we quote and explain only the best quotes....
 
-### (Possible) Conclusion
+### Possible Conclusion for One or More Articles
 
 This short book was not published during his lifetime.
 I believe this is because he was so far ahead of his time.

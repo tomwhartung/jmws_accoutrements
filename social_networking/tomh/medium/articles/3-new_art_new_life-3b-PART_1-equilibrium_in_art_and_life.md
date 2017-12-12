@@ -28,11 +28,11 @@ Subsequent articles will be about some of hisother ideas - such as liberatio
 ### Introducing Piet Mondrian
 
 Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
-Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, Public Domain
+Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, 1909, Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=37634078
 
-[Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) was born in 1872, in the town of
-[Amersfoort](https://en.wikipedia.org/wiki/Amersfoort) in the
+[Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) was born to Johanna Christina de Kok and Pieter Cornelis Mondriaan sr.
+in 1872, in the town of [Amersfoort](https://en.wikipedia.org/wiki/Amersfoort) in the
 [Netherlands](https://en.wikipedia.org/wiki/Netherlands).  He started painting at an early age and in 1892 entered the
 [Academy for Fine Art](https://en.wikipedia.org/wiki/Rijksakademie_van_beeldende_kunsten) in
 [Amsterdam](https://en.wikipedia.org/wiki/Amsterdam).
@@ -41,18 +41,39 @@ Mondrian's early works were representational - landscapes containing fields, riv
 His Evening; Red Tree (Avond; De rode boom) from 1908–1910 and the 1909 painting View from the Dunes with Beach and Piers, Domburg are
 examples of his work at this time.
 
+### Theosophism, Cubism, and De Stijl
+
+Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_I-Stilleven_met_gemberpot_I.jpg
+Title and Attribution: - Still Life With Ginger Jar I (Stilleven met gemberpot I), By Piet Mondrian, 1911-1912, Public Domain.
+Link: http://www.abcgallery.com/M/mondrian/mondrian32.html
+
+Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_II-Stilleven_met_gemberpot_II.jpg
+Title and Attribution: - Still Life With Ginger Jar II (Stilleven met gemberpot II), By Piet Mondrian, 1911-1912, Public Domain.
+Link: http://www.abcgallery.com/M/mondrian/mondrian33.html
+
 In 1909 he joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society).
 [Theosophists](https://www.theosophical.org/) "encourage open-minded inquiry into world religions, philosophy, science, and the
 arts in order to understand the wisdom of the ages, respect the unity of all life, and help people explore spiritual self-transformation."
 
-You might say that theosophists taught themselves how to "think outside the box" long before it was even a thing, much less cool.
+One could say theosophists taught themselves how to "think outside the box" long before it was even a thing, much less cool.
 
-### De Stijl and Neoplasticism
+The 1910s were transformative for Mondrian.  It is fascinating to view his paintings during this period in chronological order.
 
-In 1917, while World War I still raged, Mondrian joined several other painters and architects in founding an art movement called
+Using terms from his writings, it was during this time that he abandoned "particular forms" completely.
+By the end of the decade his paintings became so abstract that all representation was “annihilated.”
+
+His work [from 1910 through 1914](http://www.abcgallery.com/M/mondrian/mondrian-2.html) shows how his representative works became more
+and more geometric until they were totally abstract.  Some of his paintings, such as Still Life With Gingerpot I and II,
+show a trend towards the [Cubist](https://en.wikipedia.org/wiki/Cubism) style for which artists such as
+[Georges Braque](https://en.wikipedia.org/wiki/Georges_Braque)
+and [Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) are most well-known.
+
+The Netherlands was neutral in World War I, but it raged from 1914-1918 in other parts of Europe.
+It was during the war, in 1917, that Mondrian joined several other painters and architects there in founding an art movement called
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style."
 
-His paintings gradually became more and more abstract until all representation was “annihilated.”
+And it was during this time, [from 1916 through 1921](http://www.abcgallery.com/M/mondrian/mondrian-3.html), that he developed the
+style for which he is most famous.
 
 ---
 

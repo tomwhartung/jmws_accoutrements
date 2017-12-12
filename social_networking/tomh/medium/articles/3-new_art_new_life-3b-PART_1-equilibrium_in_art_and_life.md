@@ -23,7 +23,7 @@ This is Part 1 in an series of occasional articles about why Piet Mondrian went 
 His writings reveal his reasons for this progression.  These writings are profound and enlightening, but can be difficult to understand.
 
 This article focuses on the parallels he saw between the evolution of his art and the progress of culture and life itself.
-Subsequent articles will be about other ideas — such as liberation and high universal morality — that he describes in his writings.
+Subsequent articles will be about some of hisother ideas - such as liberation and high universal morality - described in his writings.
 
 ### Introducing Piet Mondrian
 
@@ -37,16 +37,24 @@ Link: https://commons.wikimedia.org/w/index.php?curid=37634078
 [Academy for Fine Art](https://en.wikipedia.org/wiki/Rijksakademie_van_beeldende_kunsten) in
 [Amsterdam](https://en.wikipedia.org/wiki/Amsterdam).
 
-His early works were representational - landscapes containing fields, rivers, windmills, and the like.
-His 1909 painting View from the Dunes with Beach and Piers, Domburg is an example of his work at this time.
+Mondrian's early works were representational - landscapes containing fields, rivers, windmills, and the like.
+His Evening; Red Tree (Avond; De rode boom) from 1908–1910 and the 1909 painting View from the Dunes with Beach and Piers, Domburg are
+examples of his work at this time.
 
-In 1909 he also joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society).
+In 1909 he joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society).
 [Theosophists](https://www.theosophical.org/) "encourage open-minded inquiry into world religions, philosophy, science, and the
 arts in order to understand the wisdom of the ages, respect the unity of all life, and help people explore spiritual self-transformation."
 
-### Paris and Pure Plastic Art
+You might say that theosophists taught themselves how to "think outside the box" long before it was even a thing, much less cool.
 
-a Dutch painter
+### De Stijl and Neoplasticism
+
+In 1917, while World War I still raged, Mondrian joined several other painters and architects in founding an art movement called
+[De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style."
+
+His paintings gradually became more and more abstract until all representation was “annihilated.”
+
+---
 
 Understanding this, in turn, requires understanding the difference between equality, harmony, and what he called equilibrium.
 

@@ -14,26 +14,36 @@ To be able to reference this article in a subsequent article about my vision.
 ### Sub-title: "Part 1: Equilibrium in Art and Life"
 
 This is Part 1 in an series of occasional articles about why Piet Mondrian went from painting
-(https://en.wikipedia.org/wiki/Representation_(arts))
-[representational images]
-to painting <a href='https://en.wikipedia.org/wiki/Abstract_art' title='Wikipedia page for abstract art' target='_blank'>abstract images</a>.
+[representational images]( https://en.wikipedia.org/wiki/Representation_(arts) ) to painting
+[abstract images](https://en.wikipedia.org/wiki/Abstract_art).
 His writings reveal his reasons for this progression.  These writings are profound and enlightening, but can be difficult to understand.
 
 This article focuses on the parallels he saw between the evolution of his art and the progress of culture and life itself.
+Understanding this, in turn, requires understanding the difference between equality, harmony, and what he called equilibrium.
 
 ### Introducing Piet Mondrian
 
-Piet Mondrian was a Dutch painter
+Piet Mondrian was born in 1872, in the town of [Amersfoort](https://en.wikipedia.org/wiki/Amersfoort) in the
+[Netherlands](https://en.wikipedia.org/wiki/Netherlands).  He started painting at an early age and in 1892 entered the
+[Academy for Fine Art](https://en.wikipedia.org/wiki/Rijksakademie_van_beeldende_kunsten) in
+[Amsterdam](https://en.wikipedia.org/wiki/Amsterdam).
+
+a Dutch painter
+
+Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
+Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, Public Domain
+Link: https://commons.wikimedia.org/w/index.php?curid=37634078
+
+
+Image: images/Piet_Mondrian-1921-Tableau_I.jpg
+Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
+Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
 Piet completed his final book, *The New Art - The New Life: A Culture of Pure Relationships,*
 in 1931, but by then had been working on it since at least 1921.
 It is short but profound and abstract - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
 published in 1987, bears the same title.
-
-Image: images/Piet_Mondrian-1921-Tableau_I.jpg
-Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
 Mondrian believed that art and life follow similar paths:
 > In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*

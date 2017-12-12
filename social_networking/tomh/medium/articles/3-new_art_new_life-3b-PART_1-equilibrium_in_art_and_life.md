@@ -23,9 +23,10 @@ This is Part 1 in an series of occasional articles about why Piet Mondrian went 
 His writings reveal his reasons for this progression.  These writings are profound and enlightening, but can be difficult to understand.
 
 This article focuses on the parallels he saw between the evolution of his art and the progress of culture and life itself.
-Subsequent articles will be about some of hisother ideas - such as liberation and high universal morality - described in his writings.
+Subsequent articles will be about some of the other ideas - such as equilibrium, liberation, and high
+universal morality - described in his writings.
 
-### Introducing Piet Mondrian
+### Pieter Cornelis “Piet” Mondriaan
 
 Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
 Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, 1909, Public Domain.
@@ -73,32 +74,59 @@ It was during the war, in 1917, that Mondrian joined several other painters and 
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style."
 
 And it was during this time, [from 1916 through 1921](http://www.abcgallery.com/M/mondrian/mondrian-3.html), that he developed the
-style for which he is most famous.
+distinctive, ["neoplastic"](http://the-artists.org/artistsbymovement/neo-plasticism) style for which he is most famous.
 
----
-
-Understanding this, in turn, requires understanding the difference between equality, harmony, and what he called equilibrium.
-
-### The New Art, The New Life
+### The New Art — The New Life: A Culture of Pure Relationships
 
 Image: images/Piet_Mondrian-1921-Tableau_I.jpg
 Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
 Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
-Piet completed his final book, *The New Art - The New Life: A Culture of Pure Relationships,*
-in 1931, but by then had been working on it since at least 1921.
-It is short but profound and abstract - so much so that
+Most of his paintings from the 1920s on were reduced to only the essential elements.
+They contained only black perpendicular lines and rectangles painted in primary colors on a white background. 
+
+He called this type of painting Pure Neo-Plasticism, his goal was to compose these
+essential elements so that these opposites of color and form would exist in equilibrium.
+The evolution in his paintings is interesting, but his writings - which explain his perceptions and reasons for creating
+this style - are fascinating.
+
+Piet Mondrian completed his book - *The New Art - The New Life: A Culture of Pure Relationships* -
+in 1931, but by then had been working on it since at least 1921.  It is short but profound and abstract - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
 published in 1987, bears the same title.
 
-Mondrian believed that art and life follow similar paths:
-> In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there remains *a single path of evolution* that, regardless of time, *is identical for life and for art.*
+In this work Mondrian reveals how he believed that art and life follow similar paths:
+
+> In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there
+> remains *a single path of evolution* that, regardless of time, *is identical for life and for art....*
+>
+> This fact that art demonstrates is of great importance for life, because it forms the basis of progress and shows its path.
+ - Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]
+
+This realization is key to seeing how Mondrian's vision was prophetic.
+
+Mondrian claims that just as art has evolved into a composition containing opposites of form and color in
+equilibrium, so will future society.  If at first this notion seems preposterous, it takes only a moment’s thought to
+realize that society and everyday life are rife with opposites:
+
+> The rhythm of the straight line in rectangular opposition indicates *the need for equivalence* of these two aspects in life:
+*the equal value of the material and spiritual, the masculine and feminine, the collective and individual, etc.*
+Just as the vertical line differes in character from the horizontal, so in life the two aspects have their inherent and opposed character.
+But just as in art these lines have different dimensions, so individuals and their groups differ in strength or size.
+*Art demonstrates that life, through equivalence of its opposed aspects - despite their different nature - can approach real equilibrium.*
+
+---
+
+Those who instinctively understand this tendency towards equilibrium are likely to feel concern for the current trend of increasing
+income inequality.
 
 He also believed the path that art and life follow is one of purification and equilibrium of opposites:
 > If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*  Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified, not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.  Thus in the same way as art, life reaches a state of real equilibrium *through pure and equivalent relationships of increasingly free individuals.*
 
-How and why did Mondrian develop his distinctive style, and what are the implications of it for us today and in the future?
-This article seeks to answer those questions!
+
+---
+
+Understanding this, in turn, requires understanding the difference between equality, harmony, and what he called equilibrium.
 
 ### [(Possible) Conclusion]
 

@@ -9,15 +9,23 @@ To be able to reference this article in a subsequent article about my vision.
 
 # The Article
 
-## Title
+## Title: "The Prophetic Vision of Piet Mondrian"
 
-The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life
+### Sub-title: "Part 1: Equilibrium in Art and Life"
 
-## Body
+This is Part 1 in an series of occasional articles about why Piet Mondrian went from painting
+(https://en.wikipedia.org/wiki/Representation_(arts))
+[representational images]
+to painting <a href='https://en.wikipedia.org/wiki/Abstract_art' title='Wikipedia page for abstract art' target='_blank'>abstract images</a>.
+His writings reveal his reasons for this progression.  These writings are profound and enlightening, but can be difficult to understand.
 
-### ("Cold" Introduction)
+This article focuses on the parallels he saw between the evolution of his art and the progress of culture and life itself.
 
-Piet Mondrian completed his final book, *The New Art - The New Life: A Culture of Pure Relationships,*
+### Introducing Piet Mondrian
+
+Piet Mondrian was a Dutch painter
+
+Piet completed his final book, *The New Art - The New Life: A Culture of Pure Relationships,*
 in 1931, but by then had been working on it since at least 1921.
 It is short but profound and abstract - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
@@ -36,52 +44,7 @@ He also believed the path that art and life follow is one of purification and eq
 How and why did Mondrian develop his distinctive style, and what are the implications of it for us today and in the future?
 This article seeks to answer those questions!
 
-### Introducing Piet Mondrian
-
-### The Power of Abstractions
-
-#### Abstractions in Math and Science
-
-Formulas - V = IR (Ohm's law) - describes the flow of electrons in everything electronic, from the 12 volts of direct current in cars, to
-the 220 volts of alternating current in heavy appliances like air conditioners, washers and driers, to the
-micro electronics in our smart phones and key fobs.
-
-#### Abstractions in Art
-
-Literature, poetry and music - anything with similies and metaphors - All Along the Watchtower ....
-Dance - ballet - story abstracted to its essential elements and retold using the movements permitted by the dance.
-
-[Business - organizational chart - (do I want this here, or in a separate section, or maybe just skip it?)]
-[Even terms like bread, man, woman, dog, cat are abstractions in that they are only concepts unless they are qualified (e.g., my cat).]
-
-#### Abstractions in Politics
-
-- Countries: Declaration of Independence,
-- Political Parties: Statement of Principles
-- Manifestos
-
-Assassinations can be "tricky," because they can turn popular leaders into martyrs.
-It's much more difficult to kill an idea - an abstraction - than it is to kill a person.
-
-#### Abstractions in Religion
-
-One might say that gods are the ultimate abstractions.
-
-#### BYO Specifics
-
-Abstractions ....
-
-### The Power of Intuition
-
-[Abstracting processes - ideas: installing software, vacuuming, ???]
-
-Subconscious processing - the "aha" we get when driving, mowing the lawn, washing dishes, taking a shower, etc.
-
-### The New Art - The New Life
-
-My main point and where we quote and explain only the best quotes....
-
-### (Possible) Conclusion
+### [(Possible) Conclusion]
 
 This short book was not published during his lifetime.
 I believe this is because he was so far ahead of his time.

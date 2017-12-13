@@ -109,16 +109,33 @@ Mondrian claims that just as art has evolved into a composition containing oppos
 equilibrium, so will future society.  If at first this notion seems preposterous, it takes only a moment’s thought to
 realize that society and everyday life are rife with opposites:
 
-> The rhythm of the straight line in rectangular opposition indicates *the need for equivalence* of these two aspects in life:
-*the equal value of the material and spiritual, the masculine and feminine, the collective and individual, etc.*
-Just as the vertical line differes in character from the horizontal, so in life the two aspects have their inherent and opposed character.
-But just as in art these lines have different dimensions, so individuals and their groups differ in strength or size.
-*Art demonstrates that life, through equivalence of its opposed aspects - despite their different nature - can approach real equilibrium.*
+> The rhythm of the straight line in rectangular opposition indicates **the need for equivalence** of these two aspects in life:
+> **the equal value of the material and spiritual, the masculine and feminine, the collective and individual, etc.**
+> Just as the vertical line differs in character from the horizontal, so in life the two aspects have their inherent and opposed character.
+> But just as in art these lines have different dimensions, so individuals and their groups differ in strength or size.
+> **Art demonstrates that life, through equivalence of its opposed aspects - despite their
+> different nature - can approach real equilibrium.**
+
+Fully understanding this requires understanding the the word "equilibrium."
+
+### Equilibrium
+
+A full definition of what Mondrian means by the term "[equilibrium](https://en.wiktionary.org/wiki/equilibrium)" is beyond the
+scope of this article.  In fact, he asserts that "the word *equilibrium* has caused many misunderstandings and repeated errors."
+
+The [wiktionary](https://en.wiktionary.org/) defines it as being “The condition of a system in which
+competing influences are balanced, resulting in no net change.”
+
+Thinking of "equilibrium" as being a "balance" of "competing influences" is a good start, but it implies that symmetry would
+suffice, and that is not the case with Mondrian's use of the term.  Likewise the word "harmony" falls short of capturing what
+he meant as well, because "the *harmony* of the past expresses a veiled state."
+
 
 ---
 
-Those who instinctively understand this tendency towards equilibrium are likely to feel concern for the current trend of increasing
-income inequality.
+Understanding this, in turn, requires understanding the difference between equality, harmony, and what he called equilibrium.
+
+---
 
 He also believed the path that art and life follow is one of purification and equilibrium of opposites:
 > If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*  Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified, not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.  Thus in the same way as art, life reaches a state of real equilibrium *through pure and equivalent relationships of increasingly free individuals.*
@@ -126,9 +143,11 @@ He also believed the path that art and life follow is one of purification and eq
 
 ---
 
-Understanding this, in turn, requires understanding the difference between equality, harmony, and what he called equilibrium.
 
-### [(Possible) Conclusion]
+### [(Possible) Conclusions]
+
+Those who instinctively understand this tendency towards equilibrium are likely to feel concern for the current trend of increasing
+income inequality.
 
 This short book was not published during his lifetime.
 I believe this is because he was so far ahead of his time.

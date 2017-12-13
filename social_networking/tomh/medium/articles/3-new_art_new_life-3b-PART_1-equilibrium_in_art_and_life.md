@@ -166,9 +166,16 @@ When I learned about Mondrian in Art History class, I immediately thought "a com
 
 I have tried programming this type of art, and failed.
 
----
+It looks easy to create these compositions, but it is not!
+I have learned through experience that changing one of his paintings - his Composition With Red, Blue, and Yellow, for example - even
+slightly destroys the image’s equilibrium. For proof, see the gallery of experimental “Mondrianesque Compositions” at seeourminds.com.
 
-### [(Possible) Conclusions]
+
+### A Final Thought
+
+Are we here today any closer to the goal of living in universal equilibrium than Mondrian was 100 years ago?
+
+### [(Other Possible) Conclusions]
 
 Those who instinctively understand this tendency towards equilibrium are likely to feel concern for the current trend of increasing
 income inequality.

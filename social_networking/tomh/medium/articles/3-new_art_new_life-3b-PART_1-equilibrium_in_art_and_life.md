@@ -11,9 +11,9 @@ To be able to reference this article in a subsequent article about my vision.
 
 ## Title: "The Prophetic Vision of Piet Mondrian"
 
-Image: images/Piet_Mondrian-1908_1910-Evening-Red_Tree-Avond-De_rode_boom.jpg
-Title and Attribution: Evening; Red Tree (Avond; De rode boom) - By Piet Mondrian, 1908-1910, Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=37629457
+- Image: images/Piet_Mondrian-1908_1910-Evening-Red_Tree-Avond-De_rode_boom.jpg
+- Title and Attribution: Evening; Red Tree (Avond; De rode boom) - By Piet Mondrian, 1908-1910, Public Domain.
+- Link: https://commons.wikimedia.org/w/index.php?curid=37629457
 
 ### Sub-title: "Part 1: Equilibrium in Art and Life"
 
@@ -28,9 +28,9 @@ universal morality - described in his writings.
 
 ### Pieter Cornelis “Piet” Mondriaan
 
-Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
-Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, 1909, Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=37634078
+- Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
+- Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, 1909, Public Domain.
+- Link: https://commons.wikimedia.org/w/index.php?curid=37634078
 
 [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) was born to Johanna Christina de Kok and Pieter Cornelis Mondriaan sr.
 in 1872, in the town of [Amersfoort](https://en.wikipedia.org/wiki/Amersfoort) in the
@@ -44,13 +44,13 @@ examples of his work at this time.
 
 ### Theosophism, Cubism, and De Stijl
 
-Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_I-Stilleven_met_gemberpot_I.jpg
-Title and Attribution: - Still Life With Ginger Jar I (Stilleven met gemberpot I), By Piet Mondrian, 1911-1912, Public Domain.
-Link: http://www.abcgallery.com/M/mondrian/mondrian32.html
+- Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_I-Stilleven_met_gemberpot_I.jpg
+- Title and Attribution: - Still Life With Ginger Jar I (Stilleven met gemberpot I), By Piet Mondrian, 1911-1912, Public Domain.
+- Link: http://www.abcgallery.com/M/mondrian/mondrian32.html
 
-Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_II-Stilleven_met_gemberpot_II.jpg
-Title and Attribution: - Still Life With Ginger Jar II (Stilleven met gemberpot II), By Piet Mondrian, 1911-1912, Public Domain.
-Link: http://www.abcgallery.com/M/mondrian/mondrian33.html
+- Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_II-Stilleven_met_gemberpot_II.jpg
+- Title and Attribution: - Still Life With Ginger Jar II (Stilleven met gemberpot II), By Piet Mondrian, 1911-1912, Public Domain.
+- Link: http://www.abcgallery.com/M/mondrian/mondrian33.html
 
 In 1909 he joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society).
 [Theosophists](https://www.theosophical.org/) "encourage open-minded inquiry into world religions, philosophy, science, and the
@@ -78,9 +78,9 @@ distinctive, ["neoplastic"](http://the-artists.org/artistsbymovement/neo-plastic
 
 ### The New Art — The New Life: A Culture of Pure Relationships
 
-Image: images/Piet_Mondrian-1921-Tableau_I.jpg
-Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
-Link: https://commons.wikimedia.org/w/index.php?curid=37668615
+- Image: images/Piet_Mondrian-1921-Tableau_I.jpg
+- Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
+- Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
 Most of his paintings from the 1920s on were reduced to only the essential elements.
 They contained only black perpendicular lines and rectangles painted in primary colors on a white background. 
@@ -98,7 +98,7 @@ published in 1987, bears the same title.
 In this work Mondrian reveals how he believed that art and life follow similar paths:
 
 > In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there
-> remains *a single path of evolution* that, regardless of time, *is identical for life and for art....*
+> remains **a single path of evolution** that, regardless of time, **is identical for life and for art....**
 >
 > This fact that art demonstrates is of great importance for life, because it forms the basis of progress and shows its path.
  - Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]

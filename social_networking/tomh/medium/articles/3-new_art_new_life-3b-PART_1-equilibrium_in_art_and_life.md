@@ -121,14 +121,20 @@ Fully understanding this, of course, requires full understanding of the word "*e
 
 ### Equilibrium
 
+- Image: images/Piet_Mondrian-1921-Composition_With_Red_Yellow_Blue_and_Black-Compositie_met_rood_geel_blaw_en_swart.jpg
+- Title and Attribution: Composition with Red, Yellow, Blue and Black (Compositie met rood, geel, blaw en swart) - By Piet Mondrian, 1921.
+- Link: [Public Domain.](http://www.abcgallery.com/M/mondrian/mondrian53.html)
+
 A full definition of what Mondrian means by the term "[equilibrium](https://en.wiktionary.org/wiki/equilibrium)" is beyond the
-scope of this article.  In fact, he asserts that "the word *equilibrium* has caused many misunderstandings and repeated errors."
+scope of this article.
+In fact, in this book Mondrian asserts that "the word *equilibrium* has caused many misunderstandings and repeated errors."
 
 The [wiktionary](https://en.wiktionary.org/) defines it as being “The condition of a system in which
 competing influences are balanced, resulting in no net change.” Thinking of "equilibrium" as being a "balance" of
-"competing influences" is a good start, but it implies that symmetry would suffice.
+"competing influences" is a good start, but it implies the influences are static and that even mere symmetry could suffice to balance them.
 
-Symmetry cannot bring the opposing forces in art and life into equilibrium.
+In reality, life is in constant flux, so there is no way symmetry can bring these opposing forces into equilibrium.
+
 The word harmony also falls short of defining what Mondrian meant, because "the *harmony* of the past expresses a veiled state."
 
 

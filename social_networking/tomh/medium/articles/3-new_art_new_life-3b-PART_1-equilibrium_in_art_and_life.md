@@ -83,18 +83,17 @@ use only primary colors and horizontal and vertical lines.
 - Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
-Most of his paintings from the 1920s on were reduced to only the essential elements.
-They contained only black perpendicular lines and rectangles painted in primary colors on a white background. 
+Most of his paintings from the 1920s on were reduced to only the essential elements:
+black perpendicular lines and rectangles painted in primary colors on a white background. 
+The goal of neoplasticism was to compose these essential elements so that these opposites of color and form would exist in *equilibrium.*
 
-He called this type of painting Pure Neo-Plasticism, his goal was to compose these
-essential elements so that these opposites of color and form would exist in equilibrium.
-The evolution in his paintings is interesting, but his writings - which explain his perceptions and reasons for creating
+While the evolution in his paintings is interesting, his writings - which explain his perceptions and reasons for creating
 this style - are fascinating.
 
-Piet Mondrian completed his book - *The New Art - The New Life: A Culture of Pure Relationships* -
+Piet Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
 in 1931, but by then had been working on it since at least 1921.  It is short but profound and abstract - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
-published in 1987, bears the same title.
+published in 1987, bears the title as its sub-title.
 
 In this book Mondrian reveals how he believed that art and life follow similar paths:
 
@@ -104,10 +103,11 @@ In this book Mondrian reveals how he believed that art and life follow similar p
 > This fact that art demonstrates is of great importance for life, because it forms the basis of progress and shows its path.
  - Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]
 
-This realization is key to seeing how Mondrian's vision was prophetic.
+This realization is key to seeing how Mondrian's vision was not just unique for its time but also quite prophetic.
 
-Mondrian claims that just as art has evolved into a composition containing opposites of form and color in
-equilibrium, so will future society.  If at first this notion seems preposterous, it takes only a moment’s thought to
+Mondrian claims that just as his and others’ art has evolved into a composition containing opposites of form and color in
+equilibrium, future society will likewise evolve, with its opposites finding their own equilibrium.
+If at first this notion seems preposterous, it takes only a moment’s thought to
 realize that society and everyday life are rife with opposites:
 
 > The rhythm of the straight line in rectangular opposition indicates **the need for equivalence** of these two aspects in life:
@@ -117,7 +117,7 @@ realize that society and everyday life are rife with opposites:
 > **Art demonstrates that life, through equivalence of its opposed aspects - despite their
 > different nature - can approach real equilibrium.**
 
-Fully understanding this, of course, requires full understanding of the word "equilibrium."
+Fully understanding this, of course, requires full understanding of the word "*equilibrium*."
 
 ### Equilibrium
 

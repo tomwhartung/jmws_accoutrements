@@ -129,27 +129,44 @@ A full definition of what Mondrian means by the term "[equilibrium](https://en.w
 scope of this article.
 In fact, in this book Mondrian asserts that "the word *equilibrium* has caused many misunderstandings and repeated errors."
 
-The [wiktionary](https://en.wiktionary.org/) defines it as being “The condition of a system in which
-competing influences are balanced, resulting in no net change.” Thinking of "equilibrium" as being a "balance" of
-"competing influences" is a good start, but it implies the influences are static and that even mere symmetry could suffice to balance them.
+The [wiktionary](https://en.wiktionary.org/) defines it as being “The condition of a system in which competing influences are balanced,
+resulting in no net change.” Thinking of *equilibrium* as being a *balance* of "competing influences" is a good start, but
+it implies the opposing influences are static, and that even mere symmetry could suffice to balance them.
 
 In reality, life is in constant flux, so there is no way symmetry can bring these opposing forces into equilibrium.
 
-The word harmony also falls short of defining what Mondrian meant, because "the *harmony* of the past expresses a veiled state."
+The word harmony also falls short of defining what Mondrian meant. In The New Art, The New Life he states
+“the new aesthetic speaks of ‘equilibrium’ instead of harmony” because “the 'harmony' of the past expresses a veiled state.”
 
+Taken out of context, these last few excerpts may not make much sense to readers new to Mondrian’s ideas and his way of expressing them.
+Significantly, he wrote the original in French, so his words may well have lost something in the translation.
+
+Although it’s difficult to explain and understand what Mondrian meant by the term equilibrium, seeing a sufficient number of his
+paintings can show more intuitive people the gist of what he means by the term *equilibrium*.
+And that, of course, this was precisely his intent in painting them - and explaining them in his writings.
+
+### For the Skeptical
+
+As an [open-minded, intuitive person](link to my spiritual portrait on seeourminds.com),
+I was immediately receptive and able to understand all this.
+
+Not everyone is all that intuitive (link to mbti percentages of S vs. N).
+
+#### Understanding Abstract Art
+
+[Short discussion about and links to the series of articles about Music, Meaning, and Modern Art.]
+
+#### It Looks So Easy!
+
+- Image: images/Piet_Mondrian-1930-Composition_II_in_Red_Blue_and_Yellow.jpg
+- Title and Attribution: Composition II in Red, Blue, and Yellow - By Piet Mondrian, 1930,
+- Link: [Public Domain.](https://commons.wikimedia.org/w/index.php?curid=37642803)
+
+When I learned about Mondrian in Art History class, I immediately thought "a computer could do this."
+
+I have tried programming this type of art, and failed.
 
 ---
-
-Understanding this, in turn, requires understanding the difference between equality, harmony, and what he called equilibrium.
-
----
-
-He also believed the path that art and life follow is one of purification and equilibrium of opposites:
-> If art is an expression of life and anticipates it, we can state that the new life is *the culture of equivalent relationships.*  Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified, not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.  Thus in the same way as art, life reaches a state of real equilibrium *through pure and equivalent relationships of increasingly free individuals.*
-
-
----
-
 
 ### [(Possible) Conclusions]
 

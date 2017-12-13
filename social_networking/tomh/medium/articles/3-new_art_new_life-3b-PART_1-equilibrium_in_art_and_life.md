@@ -9,15 +9,13 @@ To be able to reference this article in a subsequent article about my vision.
 
 # The Article
 
-## Title: "The Prophetic Vision of Piet Mondrian"
+## The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life
 
 - Image: images/Piet_Mondrian-1908_1910-Evening-Red_Tree-Avond-De_rode_boom.jpg
 - Title and Attribution: Evening; Red Tree (Avond; De rode boom) - By Piet Mondrian, 1908-1910, Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=37629457
 
-### Sub-title: "Part 1: Equilibrium in Art and Life"
-
-This is Part 1 in an series of occasional articles about why Piet Mondrian went from painting
+This is the first part in an series of occasional articles about why Piet Mondrian went from painting
 [representational images]( https://en.wikipedia.org/wiki/Representation_(arts) ) to painting
 [abstract images](https://en.wikipedia.org/wiki/Abstract_art).
 His writings reveal his reasons for this progression.  These writings are profound and enlightening, but can be difficult to understand.
@@ -58,23 +56,26 @@ arts in order to understand the wisdom of the ages, respect the unity of all lif
 
 One could say theosophists taught themselves how to "think outside the box" long before it was even a thing, much less cool.
 
-The 1910s were transformative for Mondrian.  It is fascinating to view his paintings during this period in chronological order.
+The 1910s were transformative for Mondrian.  It is fascinating to view his paintings during this period
+[in chronological order](http://www.abcgallery.com/M/mondrian/mondrian.html).
 
-Using terms from his writings, it was during this time that he abandoned "particular forms" completely.
-By the end of the decade his paintings became so abstract that all representation was “annihilated.”
+It was during this time that he - using terms from his writings - abandoned "particular forms" completely.
+By 1919 his paintings became so abstract that all representation was “annihilated.”
 
 His work [from 1910 through 1914](http://www.abcgallery.com/M/mondrian/mondrian-2.html) shows how his representative works became more
-and more geometric until they were totally abstract.  Some of his paintings, such as Still Life With Gingerpot I and II,
-show a trend towards the [Cubist](https://en.wikipedia.org/wiki/Cubism) style for which artists such as
+and more geometric until they were totally abstract.  Some of his paintings - such as Still Life With Gingerpot I and
+Still Life With Gingerpot II - show a trend towards the [Cubist](https://en.wikipedia.org/wiki/Cubism) style for which artists such as
 [Georges Braque](https://en.wikipedia.org/wiki/Georges_Braque)
 and [Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) are most well-known.
 
-The Netherlands was neutral in World War I, but it raged from 1914-1918 in other parts of Europe.
+World War I raged from 1914-1918 in other parts of Europe, but the Netherlands was neutral.
 It was during the war, in 1917, that Mondrian joined several other painters and architects there in founding an art movement called
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style."
 
 And it was during this time, [from 1916 through 1921](http://www.abcgallery.com/M/mondrian/mondrian-3.html), that he developed the
 distinctive, ["neoplastic"](http://the-artists.org/artistsbymovement/neo-plasticism) style for which he is most famous.
+[Neoplastic](http://www.tate.org.uk/art/art-terms/n/neo-plasticism) paintings are totally abstract and non-representational, and
+use only primary colors and horizontal and vertical lines.
 
 ### The New Art — The New Life: A Culture of Pure Relationships
 
@@ -95,7 +96,7 @@ in 1931, but by then had been working on it since at least 1921.  It is short bu
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
 published in 1987, bears the same title.
 
-In this work Mondrian reveals how he believed that art and life follow similar paths:
+In this book Mondrian reveals how he believed that art and life follow similar paths:
 
 > In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there
 > remains **a single path of evolution** that, regardless of time, **is identical for life and for art....**
@@ -116,7 +117,7 @@ realize that society and everyday life are rife with opposites:
 > **Art demonstrates that life, through equivalence of its opposed aspects - despite their
 > different nature - can approach real equilibrium.**
 
-Fully understanding this requires understanding the the word "equilibrium."
+Fully understanding this, of course, requires full understanding of the word "equilibrium."
 
 ### Equilibrium
 
@@ -124,11 +125,11 @@ A full definition of what Mondrian means by the term "[equilibrium](https://en.w
 scope of this article.  In fact, he asserts that "the word *equilibrium* has caused many misunderstandings and repeated errors."
 
 The [wiktionary](https://en.wiktionary.org/) defines it as being “The condition of a system in which
-competing influences are balanced, resulting in no net change.”
+competing influences are balanced, resulting in no net change.” Thinking of "equilibrium" as being a "balance" of
+"competing influences" is a good start, but it implies that symmetry would suffice.
 
-Thinking of "equilibrium" as being a "balance" of "competing influences" is a good start, but it implies that symmetry would
-suffice, and that is not the case with Mondrian's use of the term.  Likewise the word "harmony" falls short of capturing what
-he meant as well, because "the *harmony* of the past expresses a veiled state."
+Symmetry cannot bring the opposing forces in art and life into equilibrium.
+The word harmony also falls short of defining what Mondrian meant, because "the *harmony* of the past expresses a veiled state."
 
 
 ---

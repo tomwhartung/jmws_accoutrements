@@ -50,7 +50,7 @@ examples of his work at this time.
 - Title and Attribution: - Still Life With Ginger Jar II (Stilleven met gemberpot II), By Piet Mondrian, 1911-1912, Public Domain.
 - Link: http://www.abcgallery.com/M/mondrian/mondrian33.html
 
-In 1909 he joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society).
+He joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society) in 1909.
 [Theosophists](https://www.theosophical.org/) "encourage open-minded inquiry into world religions, philosophy, science, and the
 arts in order to understand the wisdom of the ages, respect the unity of all life, and help people explore spiritual self-transformation."
 
@@ -68,29 +68,34 @@ Still Life With Gingerpot II - show a trend towards the [Cubist](https://en.wiki
 [Georges Braque](https://en.wikipedia.org/wiki/Georges_Braque)
 and [Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) are most well-known.
 
-World War I raged from 1914-1918 in other parts of Europe, but the Netherlands was neutral.
+World War I raged from 1914-1918 in other parts of Europe, but the
+[Netherlands was](https://english.stackexchange.com/questions/189936/the-netherlands-are-vs-the-netherlands-is) neutral.
 It was during the war, in 1917, that Mondrian joined several other painters and architects there in founding an art movement called
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style."
 
 And it was during this time, [from 1916 through 1921](http://www.abcgallery.com/M/mondrian/mondrian-3.html), that he developed the
 distinctive, ["neoplastic"](http://the-artists.org/artistsbymovement/neo-plasticism) style for which he is most famous.
 [Neoplastic](http://www.tate.org.uk/art/art-terms/n/neo-plasticism) paintings are totally abstract and non-representational, and
-use only primary colors and horizontal and vertical lines.
+contain only perpendicular rectangles and lines, and black, grey, white, and primary colors.
 
-### The New Art — The New Life: A Culture of Pure Relationships
+### Mondrian's Writings
 
 - Image: images/Piet_Mondrian-1921-Tableau_I.jpg
 - Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
-Most of his paintings from the 1920s on were reduced to only the essential elements:
-black perpendicular lines and rectangles painted in primary colors on a white background. 
-The goal of neoplasticism was to compose these essential elements so that these opposites of color and form would exist in *equilibrium.*
+Most of Mondrian’s paintings after 1921 were what he called "*purely plastic expression*."  Reduced to only the essential elements,
+these paintings contain only black horizontal and vertical lines, and rectangles painted in primary colors, all on a white background.
 
-While the evolution in his paintings is interesting, his writings - which explain his perceptions and reasons for creating
+While the evolution in Piet Mondrian’s paintings is interesting, his writings - which explain his perceptions and reasons for creating
 this style - are fascinating.
 
-Piet Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
+In his writings, Mondrian makes it clear his goal in using "pure line and color" was to compose these essential elements so that the
+opposites of form and color would exist *in equilibrium*.
+
+#### The New Art — The New Life: A Culture of Pure Relationships
+
+Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
 in 1931, but by then had been working on it since at least 1921.  It is short but profound and abstract - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
 published in 1987, bears the title as its sub-title.
@@ -119,7 +124,7 @@ realize that society and everyday life are rife with opposites:
 
 Fully understanding this, of course, requires full understanding of the word "*equilibrium*."
 
-### Equilibrium
+### Equilibrium: It’s Not Symmetry nor Harmony
 
 - Image: images/Piet_Mondrian-1921-Composition_With_Red_Yellow_Blue_and_Black-Compositie_met_rood_geel_blaw_en_swart.jpg
 - Title and Attribution: Composition with Red, Yellow, Blue and Black (Compositie met rood, geel, blaw en swart) - By Piet Mondrian, 1921.

@@ -167,7 +167,7 @@ And that, of course, this was precisely his intent in painting them - and explai
 
 ### Skeptics versus Believers
 
-- Image: images/Piet_Mondrian-
+- Image: images/Piet_Mondrian-1939-1942-Composition_With_Black_White_Yellow_and_Red-Compositie_met_zwart_wit_geel_en_rood.jpg
 - Title and Attribution: Composition with Black, White, Yellow and Red (Compositie met zwart, wit, geel en rood) - By Piet Mondrian, 1939-1942.
 - Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian68.html).
 

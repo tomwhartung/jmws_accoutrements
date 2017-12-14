@@ -175,15 +175,34 @@ Life is full of pairs of opposites - and people who are convinced as opposed to 
 this comprise one such pair.
 
 As an [open-minded, intuitive person](https://www.seeourminds.com/gallery/9100-real-self_portraits/),
-I was immediately receptive and able to understand all this.  Not everyone, however, is all that intuitive.
+I was immediately receptive and able to understand all this.
 
-In fact, there is evidence that
+Not everyone, however, is all that intuitive.  In fact, there is evidence that
 [realistic people outnumber intuitives by about 3-to-1](http://www.myersbriggs.org/my-mbti-personality-type/my-mbti-results/how-frequent-is-my-type.htm).
+
 So the skeptics are no doubt actually in the majority!
 
-#### Understanding Abstract Art
+#### Abstract Art, WTF?!?
 
-[Short discussion about and links to the series of articles about Music, Meaning, and Modern Art.]
+Many people grow up with the idea that visual art should be representational - depicting objects in the real world - without
+realizing they have been loving music that is, due to the invisible nature of music, quite abstract.
+This is the path I found myself on when I first learned about Mondrian.
+
+To help people in a similar position understand the painters of the early 20th centure, in light of more modern popular music,
+I have written a [series of articles](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) about this
+on [medium.com](https://medium.com/).
+
+[Part 1](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) is about
+[Bob Dylan](https://en.wikipedia.org/wiki/Bob_Dylan)'s song
+[All Along the Watchtower](https://en.wikipedia.org/wiki/All_Along_the_Watchtower),
+[Part 2](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-2-of-3-f7fa8f5362f6) focuses on
+[John Coltrane](https://en.wikipedia.org/wiki/John_Coltrane)'s magnum opus
+[A Love Supreme](https://en.wikipedia.org/wiki/A_Love_Supreme), and
+[Part 3](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-3-of-3-3d212b8ef7b0) discusses the music of
+[The Talking Heads](https://en.wikipedia.org/wiki/Talking_Heads).
+
+If you are a fan of one or more of these artists, but struggle understanding abstract visual art, please
+check out one or more of these articles!
 
 #### It Looks So Easy!
 

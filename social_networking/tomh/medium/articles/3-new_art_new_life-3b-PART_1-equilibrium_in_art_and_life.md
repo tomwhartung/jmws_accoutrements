@@ -84,8 +84,9 @@ contain only perpendicular rectangles and lines, and black, grey, white, and pri
 - Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
-Most of Mondrian’s paintings after 1921 were what he called "*purely plastic expression*."  Reduced to only the essential elements,
-these paintings contain only black horizontal and vertical lines, and rectangles painted in primary colors, all on a white background.
+Most of Mondrian’s [paintings after 1921](http://www.abcgallery.com/M/mondrian/mondrian-4.html) were what he
+called "*purely plastic expression*."  Reduced to only the essential elements, these paintings contain only black horizontal
+and vertical lines, and rectangles painted in primary colors, all on a white background.
 
 While the evolution in Piet Mondrian’s paintings is interesting, his writings - which explain his perceptions and reasons for creating
 this style - are fascinating.
@@ -95,9 +96,15 @@ opposites of form and color would exist *in equilibrium*.
 
 #### The New Art — The New Life: A Culture of Pure Relationships
 
+- Image: images/Piet_Mondrian-1921-Composition_With_Red_Yellow_Blue_and_Black-Compositie_met_rood_geel_blaw_en_swart.jpg
+- Title and Attribution: Composition with Red, Yellow, Blue and Black (Compositie met rood, geel, blaw en swart) - By Piet Mondrian, 1921.
+- Link: [Public Domain.](http://www.abcgallery.com/M/mondrian/mondrian53.html)
+
 Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
-in 1931, but by then had been working on it since at least 1921.  It is short but profound and abstract - so much so that
-[The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081)
+in 1931, but by then had been working on it since at least 1921.
+
+This book is short but profound and abstract - so much so that
+[The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081),
 published in 1987, bears the title as its sub-title.
 
 In this book Mondrian reveals how he believed that art and life follow similar paths:
@@ -126,9 +133,9 @@ Fully understanding this, of course, requires full understanding of the word "*e
 
 ### Equilibrium: It’s Not Symmetry nor Harmony
 
-- Image: images/Piet_Mondrian-1921-Composition_With_Red_Yellow_Blue_and_Black-Compositie_met_rood_geel_blaw_en_swart.jpg
-- Title and Attribution: Composition with Red, Yellow, Blue and Black (Compositie met rood, geel, blaw en swart) - By Piet Mondrian, 1921.
-- Link: [Public Domain.](http://www.abcgallery.com/M/mondrian/mondrian53.html)
+- Image: images/Piet_Mondrian-1930-Composition_II_With_Black_Lines-Compositie_nr_2_met_swarte_lijnen.jpg
+- Title and Attribution: Composition II with Black Lines (Compositie nr.2 met swarte lijnen) - By Piet Mondrian, 1921.
+- Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian55.html).
 
 A full definition of what Mondrian means by the term "[equilibrium](https://en.wiktionary.org/wiki/equilibrium)" is beyond the
 scope of this article.

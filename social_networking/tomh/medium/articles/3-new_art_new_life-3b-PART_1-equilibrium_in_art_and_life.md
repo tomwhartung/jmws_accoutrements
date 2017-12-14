@@ -184,10 +184,16 @@ So the skeptics are no doubt actually in the majority!
 
 #### Abstract Art, WTF?!?
 
-Many people grow up with the idea that visual art should be representational - depicting objects in the real world - without
-realizing they have been loving music that is, due to the invisible nature of music, quite abstract.
-This is the path I found myself on when I first learned about Mondrian.
+- Image: images/Piet_Mondrian-1942-1944-New_York_City_II.jpg
+- Title and Attribution: New York City II - By Piet Mondrian, 1942-1944.
+- Link: [Public Domain.](http://www.abcgallery.com/M/mondrian/mondrian71.html).
 
+Many people grow up with the idea that visual art should be representational - depicting objects in the real world - without
+realizing they have been hearing abstractions in music all their lives.
+This is because, for millennia, since the earliest [cave wall paintings](https://en.wikipedia.org/wiki/Cave_painting),
+visual art has been representational, while music is - due to its being invisible - by its very nature quite abstract.
+
+This is the path I found myself on when I first learned about Mondrian.
 To help people in a similar position understand the painters of the early 20th centure, in light of more modern popular music,
 I have written a [series of articles](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) about this
 on [medium.com](https://medium.com/).

@@ -149,7 +149,7 @@ It’s much easier to explain Mondrian’s sense of equilibrium in terms of what
 
 #### Equilibrium Is Not Symmetry nor Harmony
 
-- Image: images/1937-Composition_With_Blue-Compositie_met_blauw.jpg
+- Image: images/Piet_Mondrian-1937-Composition_With_Blue-Compositie_met_blauw.jpg
 - Title and Attribution: Composition with Blue (Compositie met blauw) - By Piet Mondrian, 1937.
 - Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian62.html).
 
@@ -158,19 +158,28 @@ In reality, life is in constant flux, so there is no way symmetry can bring thes
 The word harmony also falls short of defining what Mondrian meant. In The New Art, The New Life he states
 “the new aesthetic speaks of ‘equilibrium’ instead of harmony” because “the 'harmony' of the past expresses a veiled state.”
 
-Taken out of context, these last few excerpts may not make much sense to readers new to Mondrian’s ideas and his way of expressing them.
-Significantly, he wrote the original in French, so his words may well have lost something in the translation.
+Taken out of context, these excerpts from the book may not make much sense to readers new to Mondrian’s ideas and his way of expressing
+them.  Significantly, he wrote the original in French, so his words may well have lost something in the translation.
 
 Although it is difficult to explain and understand what Mondrian meant by the term equilibrium, seeing a sufficient number of his
 paintings can help more intuitive people get the gist of what he means by the term *equilibrium*.
 And that, of course, this was precisely his intent in painting them - and explaining them in his writings.
 
-### For the Skeptical
+### Skeptics versus Believers
 
-As an [open-minded, intuitive person](link to my spiritual portrait on seeourminds.com),
-I was immediately receptive and able to understand all this.
+- Image: images/Piet_Mondrian-
+- Title and Attribution: Composition with Black, White, Yellow and Red (Compositie met zwart, wit, geel en rood) - By Piet Mondrian, 1939-1942.
+- Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian68.html).
 
-Not everyone is all that intuitive (link to mbti percentages of S vs. N).
+Life is full of pairs of opposites - and people who are convinced as opposed to those who are skeptical about all
+this comprise one such pair.
+
+As an [open-minded, intuitive person](https://www.seeourminds.com/gallery/9100-real-self_portraits/),
+I was immediately receptive and able to understand all this.  Not everyone, however, is all that intuitive.
+
+In fact, there is evidence that
+[realistic people outnumber intuitives by about 3-to-1](http://www.myersbriggs.org/my-mbti-personality-type/my-mbti-results/how-frequent-is-my-type.htm).
+So the skeptics are no doubt actually in the majority!
 
 #### Understanding Abstract Art
 

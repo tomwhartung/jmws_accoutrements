@@ -92,7 +92,7 @@ While the evolution in Piet Mondrian’s paintings is interesting, his writings�
 this style - are fascinating.
 
 In his writings, Mondrian makes it clear his goal in using "pure line and color" was to compose these essential elements so that the
-opposites of form and color would exist *in equilibrium*.
+opposites of form and color would exist "*in equilibrium*."
 
 #### The New Art — The New Life: A Culture of Pure Relationships
 
@@ -103,7 +103,7 @@ opposites of form and color would exist *in equilibrium*.
 Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
 in 1931, but by then had been working on it since at least 1921.
 
-This book is short but profound and abstract - so much so that
+This book is short but abstract, prophetic, and very profound - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081),
 published in 1987, bears the title as its sub-title.
 
@@ -131,7 +131,7 @@ realize that society and everyday life are rife with opposites:
 
 Fully understanding this, of course, requires full understanding of the word "*equilibrium*."
 
-### Equilibrium: It’s Not Symmetry nor Harmony
+### Explaining Equilibrium
 
 - Image: images/Piet_Mondrian-1930-Composition_II_With_Black_Lines-Compositie_nr_2_met_swarte_lijnen.jpg
 - Title and Attribution: Composition II with Black Lines (Compositie nr.2 met swarte lijnen) - By Piet Mondrian, 1921.
@@ -145,6 +145,14 @@ The [wiktionary](https://en.wiktionary.org/) defines it as being “The conditio
 resulting in no net change.” Thinking of *equilibrium* as being a *balance* of "competing influences" is a good start, but
 it implies the opposing influences are static, and that even mere symmetry could suffice to balance them.
 
+It’s much easier to explain Mondrian’s sense of equilibrium in terms of what it is *not.*
+
+#### Equilibrium Is Not Symmetry nor Harmony
+
+- Image: images/1937-Composition_With_Blue-Compositie_met_blauw.jpg
+- Title and Attribution: Composition with Blue (Compositie met blauw) - By Piet Mondrian, 1937.
+- Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian62.html).
+
 In reality, life is in constant flux, so there is no way symmetry can bring these opposing forces into equilibrium.
 
 The word harmony also falls short of defining what Mondrian meant. In The New Art, The New Life he states
@@ -153,8 +161,8 @@ The word harmony also falls short of defining what Mondrian meant. In The New Ar
 Taken out of context, these last few excerpts may not make much sense to readers new to Mondrian’s ideas and his way of expressing them.
 Significantly, he wrote the original in French, so his words may well have lost something in the translation.
 
-Although it’s difficult to explain and understand what Mondrian meant by the term equilibrium, seeing a sufficient number of his
-paintings can show more intuitive people the gist of what he means by the term *equilibrium*.
+Although it is difficult to explain and understand what Mondrian meant by the term equilibrium, seeing a sufficient number of his
+paintings can help more intuitive people get the gist of what he means by the term *equilibrium*.
 And that, of course, this was precisely his intent in painting them - and explaining them in his writings.
 
 ### For the Skeptical

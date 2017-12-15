@@ -222,10 +222,12 @@ Since then, I have tried writing a program to produce this type of art - more th
 It looks easy to create these compositions, but it is not!  I have learned through experience that changing one of his
 paintings - his Composition With Red, Blue, and Yellow, for example - even slightly can destroy the image’s equilibrium.
 
-For proof, see the [gallery[(https://www.seeourminds.com/galleries) of experimental
+For proof, see the [gallery](https://www.seeourminds.com/galleries) of experimental
 “[Mondrianesque Compositions](https://www.seeourminds.com/gallery/9600-generic_images-experiments-mondrian/)”
 at [seeourminds.com](https://www.seeourminds.com/).
 
+This is one of his less complicated images, but as it turns out it is quite fragile, despite its superficial simplicity.  After this
+experience, I for one am sure that trying to tweak an of his paintings would result in similar less-than-ideal compositions!
 
 ### A Final Thought
 

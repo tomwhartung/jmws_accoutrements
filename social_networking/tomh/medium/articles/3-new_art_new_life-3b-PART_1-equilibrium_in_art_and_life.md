@@ -109,14 +109,14 @@ opposites of form and color would exist "*in equilibrium*."
 - Title and Attribution: Composition with Red, Yellow, Blue and Black (Compositie met rood, geel, blaw en swart), by Piet Mondrian, 1921.
 - Link: [Public Domain.](http://www.abcgallery.com/M/mondrian/mondrian53.html)
 
-Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
+Piet Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
 in 1931, but by then had been working on it since at least 1921.
 
 This book is short but abstract, prophetic, and very profound - so much so that
 [The Collected Works of Piet Mondrian,](https://www.amazon.co.uk/New-Art-Life-Collected-Twentieth-Century/dp/0306805081),
 published in 1987, bears the title as its sub-title.
 
-In this book Mondrian reveals how he believed that art and life follow similar paths:
+In this book - as the following quotes from it show - Mondrian reveals how he believed that art and life follow similar paths of evolution:
 
 > In life every sincere effort leads to human evolution, and it is the same in art.  Rightly seen, there
 > remains **a single path of evolution** that, regardless of time, **is identical for life and for art....**
@@ -126,8 +126,23 @@ In this book Mondrian reveals how he believed that art and life follow similar p
 
 This realization is key to seeing how Mondrian's vision was not just unique for its time but also quite prophetic.
 
-Mondrian claims that just as his and others’ art has evolved into a composition containing opposites of form and color in
-equilibrium, future society will likewise evolve, with its opposites finding their own equilibrium.
+In this book Mondrian claims that, just as his and others’ art has evolved into a composition containing opposites of form and
+color in equilibrium, future society will likewise evolve.
+By liberating themselves from limiting forms, people will be able to see the opposites in society purely.
+
+> If art is an expression of life and anticipates it, we can state that the new life is **the culture of equivalent relationships.**
+>
+> Just as with the plastic means in art, it is evident that for this life our mentality must become more or less purified,
+> not in an old-fashioned puritanical way, but so as to rise above the oppression of limiting, particular forms.
+> Thus in the same way as art, life reaches a state of real equilibrium
+> **through pure and equivalent relationships of increasingly free individuals.**
+ - Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]
+
+Once free people can clearly perceive and understand life’s opposing forces, they can replace today's conflicts
+with equilibrium - what he calls "equivalent relationships."
+
+#### Preposterous!?!
+
 If at first this notion seems preposterous, it takes only a moment’s thought to
 realize that society and everyday life are rife with opposites:
 

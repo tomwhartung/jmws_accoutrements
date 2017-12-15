@@ -232,6 +232,16 @@ experience, I for one am sure that trying to tweak an of his paintings would res
 ### A Final Thought
 
 Are we here today any closer to the goal of living in universal equilibrium than Mondrian was 100 years ago?
+Is the following quote any less true now than it was when he wrote it in 1931?
+
+> Every day we are astonished by the complete absence of true love, friendship, brotherhood, kindness.
+Centuries and centuries ago the great message of universal love was proclaimed: although its influence is undeniable, man has not changed.
+>
+> Therefore, let us not insist upon what has shown itself as unrealizable.  Art demonstrates that life impels humanity toward
+equivalence of its two opposed aspects and thus toward the destruction of individual limitations.
+> This is how life can realize the high ideals proclaimed so long ago.
+- Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]
+
 
 ### [(Other Possible) Conclusions]
 

@@ -180,13 +180,13 @@ I was immediately receptive and able to understand all this.
 Not everyone, however, is all that intuitive.  In fact, there is evidence that
 [realistic people outnumber intuitives by about 3-to-1](http://www.myersbriggs.org/my-mbti-personality-type/my-mbti-results/how-frequent-is-my-type.htm).
 
-So the skeptics are no doubt actually in the majority!
+So the skeptics are no doubt actually in the majority!  If you are one of these people, but willing to learn something new, keep reading.
 
 #### Abstract Art, WTF?!?
 
 - Image: images/Piet_Mondrian-1942-1944-New_York_City_II.jpg
 - Title and Attribution: New York City II - By Piet Mondrian, 1942-1944.
-- Link: [Public Domain.](http://www.abcgallery.com/M/mondrian/mondrian71.html).
+- Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian71.html).
 
 Many people grow up with the idea that visual art should be representational - depicting objects in the real world - without
 realizing they have been hearing abstractions in music all their lives.
@@ -194,7 +194,7 @@ This is because, for millennia, since the earliest [cave wall paintings](https:/
 visual art has been representational, while music is - due to its being invisible - by its very nature quite abstract.
 
 This is the path I found myself on when I first learned about Mondrian.
-To help people in a similar position understand the painters of the early 20th centure, in light of more modern popular music,
+To help people in a similar position understand the painters of the early 20th century, in light of more modern popular music,
 I have written a [series of articles](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-1-of-3-84fe10f480a2) about this
 on [medium.com](https://medium.com/).
 
@@ -207,22 +207,24 @@ on [medium.com](https://medium.com/).
 [Part 3](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-3-of-3-3d212b8ef7b0) discusses the music of
 [The Talking Heads](https://en.wikipedia.org/wiki/Talking_Heads).
 
-If you are a fan of one or more of these artists, but struggle understanding abstract visual art, please
+If you are a fan of one or more of these artists, but struggle to understand abstract visual art, please
 check out one or more of these articles!
 
-#### It Looks So Easy!
+#### It Looks Too Easy!
 
 - Image: images/Piet_Mondrian-1930-Composition_II_in_Red_Blue_and_Yellow.jpg
-- Title and Attribution: Composition II in Red, Blue, and Yellow - By Piet Mondrian, 1930,
-- Link: [Public Domain.](https://commons.wikimedia.org/w/index.php?curid=37642803)
+- Title and Attribution: Composition II in Red Blue and Yellow - By Piet Mondrian, 1930.
+- Link: [Public Domain](https://commons.wikimedia.org/w/index.php?curid=37642803).
 
-When I learned about Mondrian in Art History class, I immediately thought "a computer could do this."
+When I learned about Piet Mondrian, I immediately thought "a computer could do this."
+Since then, I have tried writing a program to produce this type of art - more than once - and failed.
 
-I have tried programming this type of art, and failed.
+It looks easy to create these compositions, but it is not!  I have learned through experience that changing one of his
+paintings - his Composition With Red, Blue, and Yellow, for example - even slightly can destroy the image’s equilibrium.
 
-It looks easy to create these compositions, but it is not!
-I have learned through experience that changing one of his paintings - his Composition With Red, Blue, and Yellow, for example - even
-slightly destroys the image’s equilibrium. For proof, see the gallery of experimental “Mondrianesque Compositions” at seeourminds.com.
+For proof, see the [gallery[(https://www.seeourminds.com/galleries) of experimental
+“[Mondrianesque Compositions](https://www.seeourminds.com/gallery/9600-generic_images-experiments-mondrian/)”
+at [seeourminds.com](https://www.seeourminds.com/).
 
 
 ### A Final Thought

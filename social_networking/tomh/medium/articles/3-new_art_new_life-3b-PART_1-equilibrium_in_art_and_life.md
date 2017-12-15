@@ -12,7 +12,7 @@ To be able to reference this article in a subsequent article about my vision.
 ## The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life
 
 - Image: images/Piet_Mondrian-1908_1910-Evening-Red_Tree-Avond-De_rode_boom.jpg
-- Title and Attribution: Evening; Red Tree (Avond; De rode boom) - By Piet Mondrian, 1908-1910, Public Domain.
+- Title and Attribution: Evening; Red Tree (Avond; De rode boom), by Piet Mondrian, 1908-1910, Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=37629457
 
 This is the first part in an series of occasional articles about why Piet Mondrian went from painting
@@ -27,7 +27,7 @@ universal morality - described in his writings.
 ### Pieter Cornelis “Piet” Mondriaan
 
 - Image: images/Piet_Mondrian-1909-View_From_the_Dunes_With_Beach_and_Piers-Domburg_MoMA.jpg
-- Title and Attribution: View from the Dunes with Beach and Piers, Domburg - By Piet Mondrian, 1909, Public Domain.
+- Title and Attribution: View from the Dunes with Beach and Piers, Domburg, by Piet Mondrian, 1909, Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=37634078
 
 [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) was born to Johanna Christina de Kok and Pieter Cornelis Mondriaan sr.
@@ -43,11 +43,11 @@ examples of his work at this time.
 ### Theosophism, Cubism, and De Stijl
 
 - Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_I-Stilleven_met_gemberpot_I.jpg
-- Title and Attribution: - Still Life With Ginger Jar I (Stilleven met gemberpot I), By Piet Mondrian, 1911-1912, Public Domain.
+- Title and Attribution: Still Life With Ginger Jar I (Stilleven met gemberpot I), by Piet Mondrian, 1911-1912, Public Domain.
 - Link: http://www.abcgallery.com/M/mondrian/mondrian32.html
 
 - Image: images/Piet_Mondrian-1911_1912-Still_Life_With_Ginger_Jar_II-Stilleven_met_gemberpot_II.jpg
-- Title and Attribution: - Still Life With Ginger Jar II (Stilleven met gemberpot II), By Piet Mondrian, 1911-1912, Public Domain.
+- Title and Attribution: Still Life With Ginger Jar II (Stilleven met gemberpot II), by Piet Mondrian, 1911-1912, Public Domain.
 - Link: http://www.abcgallery.com/M/mondrian/mondrian33.html
 
 Piet Mondrian joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society) in 1909.
@@ -69,10 +69,15 @@ Gingerpot I* and *Still Life With Gingerpot II* - show a trend towards the [Cubi
 style for which artists such as [Georges Braque](https://en.wikipedia.org/wiki/Georges_Braque)
 and [Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) are most well-known.
 
+- Image: images/
+- Title and Attribution: Cover of "De Stijl," Volume 1, no. 1, by Theo van Doesburg, 1917.  Public Domain.
+- Link: https://commons.wikimedia.org/w/index.php?curid=63813854
+
 World War I raged from 1914-1918 in other parts of Europe, but the
 [Netherlands was](https://english.stackexchange.com/questions/189936/the-netherlands-are-vs-the-netherlands-is) neutral.
-It was during the war, in 1917, that Mondrian joined several other painters and architects there in founding an art movement called
-[De Stijl](https://en.wikipedia.org/wiki/De_Stijl) - Dutch for "The Style."
+It was during the war, in 1917, that Mondrian joined several other painters - one of them
+[Theo van Doesburg](https://en.wikipedia.org/wiki/Theo_van_Doesburg) - and architects in founding an art movement called
+[De Stijl](https://en.wikipedia.org/wiki/De_Stijl), Dutch for "The Style."
 
 And it was during this time, [from 1916 through 1921](http://www.abcgallery.com/M/mondrian/mondrian-3.html), that he developed the
 distinctive, ["neoplastic"](http://the-artists.org/artistsbymovement/neo-plasticism) style for which he is most famous.
@@ -82,7 +87,7 @@ contain only perpendicular rectangles and lines, and black, grey, white, and pri
 ### Mondrian's Writings
 
 - Image: images/Piet_Mondrian-1921-Tableau_I.jpg
-- Title and Attribution: Tableau I - By Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
+- Title and Attribution: Tableau I, by Piet Mondrian, 1921.  Gemeentemuseum Den Haag, Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=37668615
 
 Most of Mondrian’s [paintings after 1921](http://www.abcgallery.com/M/mondrian/mondrian-4.html) were what he
@@ -98,7 +103,7 @@ opposites of form and color would exist "*in equilibrium*."
 #### The New Art — The New Life: A Culture of Pure Relationships
 
 - Image: images/Piet_Mondrian-1921-Composition_With_Red_Yellow_Blue_and_Black-Compositie_met_rood_geel_blaw_en_swart.jpg
-- Title and Attribution: Composition with Red, Yellow, Blue and Black (Compositie met rood, geel, blaw en swart) - By Piet Mondrian, 1921.
+- Title and Attribution: Composition with Red, Yellow, Blue and Black (Compositie met rood, geel, blaw en swart), by Piet Mondrian, 1921.
 - Link: [Public Domain.](http://www.abcgallery.com/M/mondrian/mondrian53.html)
 
 Mondrian completed his book, *The New Art - The New Life: A Culture of Pure Relationships*,
@@ -135,7 +140,7 @@ Fully understanding this, of course, requires full understanding of the word "*e
 ### Explaining Equilibrium
 
 - Image: images/Piet_Mondrian-1930-Composition_II_With_Black_Lines-Compositie_nr_2_met_swarte_lijnen.jpg
-- Title and Attribution: Composition II with Black Lines (Compositie nr.2 met swarte lijnen) - By Piet Mondrian, 1921.
+- Title and Attribution: Composition II with Black Lines (Compositie nr.2 met swarte lijnen), by Piet Mondrian, 1921.
 - Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian55.html).
 
 A full definition of what Mondrian means by the term "[equilibrium](https://en.wiktionary.org/wiki/equilibrium)" is beyond the
@@ -151,7 +156,7 @@ It’s much easier to explain Mondrian’s sense of equilibrium in terms of what
 #### Equilibrium Is Not Symmetry nor Harmony
 
 - Image: images/Piet_Mondrian-1937-Composition_With_Blue-Compositie_met_blauw.jpg
-- Title and Attribution: Composition with Blue (Compositie met blauw) - By Piet Mondrian, 1937.
+- Title and Attribution: Composition with Blue (Compositie met blauw), by Piet Mondrian, 1937.
 - Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian62.html).
 
 In reality, life is in constant flux, so there is no way symmetry can bring these opposing forces into equilibrium.
@@ -169,7 +174,7 @@ And that, of course, this was precisely his intent in painting them - and explai
 ### Skeptics versus Believers
 
 - Image: images/Piet_Mondrian-1939-1942-Composition_With_Black_White_Yellow_and_Red-Compositie_met_zwart_wit_geel_en_rood.jpg
-- Title and Attribution: Composition with Black, White, Yellow and Red (Compositie met zwart, wit, geel en rood) - By Piet Mondrian, 1939-1942.
+- Title and Attribution: Composition with Black, White, Yellow and Red (Compositie met zwart, wit, geel en rood), by Piet Mondrian, 1939-1942.
 - Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian68.html).
 
 Life is full of pairs of opposites - and people who are convinced as opposed to those who are skeptical about all
@@ -186,7 +191,7 @@ So the skeptics are no doubt actually in the majority!  If you are one of these 
 #### Abstract Art, WTF?!?
 
 - Image: images/Piet_Mondrian-1942-1944-New_York_City_II.jpg
-- Title and Attribution: New York City II - By Piet Mondrian, 1942-1944.
+- Title and Attribution: New York City II, by Piet Mondrian, 1942-1944.
 - Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian71.html).
 
 Many people grow up with the idea that visual art should be representational - depicting objects in the real world - without
@@ -214,7 +219,7 @@ check out one or more of these articles!
 #### It Looks Too Easy!
 
 - Image: images/Piet_Mondrian-1930-Composition_II_in_Red_Blue_and_Yellow.jpg
-- Title and Attribution: Composition II in Red Blue and Yellow - By Piet Mondrian, 1930.
+- Title and Attribution: Composition II in Red Blue and Yellow, by Piet Mondrian, 1930.
 - Link: [Public Domain](https://commons.wikimedia.org/w/index.php?curid=37642803).
 
 When I learned about Piet Mondrian, I immediately thought "a computer could do this."
@@ -233,7 +238,7 @@ experience, I for one am sure that trying to tweak an of his paintings would res
 ### A Final Thought
 
 - Image: images/Piet_Mondrian-1942-1944-Victory_Boogie_Woogie-unfinished.jpg
-- Title and Attribution: Victory Boogie-Woogie (unfinished) - By Piet Mondrian, 1942-1944.
+- Title and Attribution: Victory Boogie-Woogie (unfinished), by Piet Mondrian, 1942-1944.
 - Link: [Public Domain](https://commons.wikimedia.org/w/index.php?curid=37614350).
 
 Are we here today any closer to the goal of living in universal equilibrium than Mondrian was 100 years ago?

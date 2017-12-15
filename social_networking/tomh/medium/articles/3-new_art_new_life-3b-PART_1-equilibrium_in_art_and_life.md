@@ -231,17 +231,29 @@ experience, I for one am sure that trying to tweak an of his paintings would res
 
 ### A Final Thought
 
+- Image: images/Piet_Mondrian-1942-1944-Victory_Boogie_Woogie-unfinished.jpg
+- Title and Attribution: Victory Boogie-Woogie (unfinished) - By Piet Mondrian, 1942-1944.
+- Link: [Public Domain](https://commons.wikimedia.org/w/index.php?curid=37614350).
+
 Are we here today any closer to the goal of living in universal equilibrium than Mondrian was 100 years ago?
 Is the following quote any less true now than it was when he wrote it in 1931?
 
 > Every day we are astonished by the complete absence of true love, friendship, brotherhood, kindness.
-Centuries and centuries ago the great message of universal love was proclaimed: although its influence is undeniable, man has not changed.
+> Centuries and centuries ago the great message of universal love was proclaimed: although its influence is undeniable, man has not changed.
 >
-> Therefore, let us not insist upon what has shown itself as unrealizable.  Art demonstrates that life impels humanity toward
-equivalence of its two opposed aspects and thus toward the destruction of individual limitations.
+> Therefore, let us not insist upon what has shown itself as unrealizable.  Art demonstrates that *life impels humanity toward
+> equivalence of its two opposed aspects and thus toward the destruction of individual limitations.*
 > This is how life can realize the high ideals proclaimed so long ago.
-- Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]
+> - Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]
 
+These are questions each of us must answer in our own way, in our own time.
+
+[What's so Funny Bout Peace Love and Understanding](https://www.youtube.com/watch?v=Ssd3U_zicAI), indeed.
+
+[Embed video:]
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ssd3U_zicAI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+```
 
 ### [(Other Possible) Conclusions]
 

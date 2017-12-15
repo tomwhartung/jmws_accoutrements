@@ -69,14 +69,17 @@ Gingerpot I* and *Still Life With Gingerpot II* - show a trend towards the [Cubi
 style for which artists such as [Georges Braque](https://en.wikipedia.org/wiki/Georges_Braque)
 and [Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) are most well-known.
 
-- Image: images/
+### World War I and De Stijl
+
+- Image: images/Theo_van_Doesburg-1917-Cover_of_De_Stijl.jpg
 - Title and Attribution: Cover of "De Stijl," Volume 1, no. 1, by Theo van Doesburg, 1917.  Public Domain.
 - Link: https://commons.wikimedia.org/w/index.php?curid=63813854
 
 World War I raged from 1914-1918 in other parts of Europe, but the
 [Netherlands was](https://english.stackexchange.com/questions/189936/the-netherlands-are-vs-the-netherlands-is) neutral.
-It was during the war, in 1917, that Mondrian joined several other painters - one of them
-[Theo van Doesburg](https://en.wikipedia.org/wiki/Theo_van_Doesburg) - and architects in founding an art movement called
+
+It was during the war, in 1917, that Mondrian joined several other artists and architects - one of them
+[Theo van Doesburg](https://en.wikipedia.org/wiki/Theo_van_Doesburg) - in founding an art movement called
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl), Dutch for "The Style."
 
 And it was during this time, [from 1916 through 1921](http://www.abcgallery.com/M/mondrian/mondrian-3.html), that he developed the

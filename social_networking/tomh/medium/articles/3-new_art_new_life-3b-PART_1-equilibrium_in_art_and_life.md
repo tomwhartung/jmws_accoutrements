@@ -50,8 +50,9 @@ examples of his work at this time.
 - Title and Attribution: - Still Life With Ginger Jar II (Stilleven met gemberpot II), By Piet Mondrian, 1911-1912, Public Domain.
 - Link: http://www.abcgallery.com/M/mondrian/mondrian33.html
 
-He joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society) in 1909.
-[Theosophists](https://www.theosophical.org/) "encourage open-minded inquiry into world religions, philosophy, science, and the
+Piet Mondrian joined the [Theosophical Society](https://en.wikipedia.org/wiki/Theosophical_Society) in 1909.
+According to [theosophical.org](https://www.theosophical.org/), Theosophists
+"encourage open-minded inquiry into world religions, philosophy, science, and the
 arts in order to understand the wisdom of the ages, respect the unity of all life, and help people explore spiritual self-transformation."
 
 One could say theosophists taught themselves how to "think outside the box" long before it was even a thing, much less cool.
@@ -62,10 +63,10 @@ The 1910s were transformative for Mondrian.  It is fascinating to view his paint
 It was during this time that he - using terms from his writings - abandoned "particular forms" completely.
 By 1919 his paintings became so abstract that all representation was “annihilated.”
 
-His work [from 1910 through 1914](http://www.abcgallery.com/M/mondrian/mondrian-2.html) shows how his representative works became more
-and more geometric until they were totally abstract.  Some of his paintings - such as Still Life With Gingerpot I and
-Still Life With Gingerpot II - show a trend towards the [Cubist](https://en.wikipedia.org/wiki/Cubism) style for which artists such as
-[Georges Braque](https://en.wikipedia.org/wiki/Georges_Braque)
+Mondrian’s work [from 1910 through 1914](http://www.abcgallery.com/M/mondrian/mondrian-2.html) shows how his representative works
+became more and more geometric until they were totally abstract.  Some of his paintings during this time- such as *Still Life With
+Gingerpot I* and *Still Life With Gingerpot II* - show a trend towards the [Cubist](https://en.wikipedia.org/wiki/Cubism)
+style for which artists such as [Georges Braque](https://en.wikipedia.org/wiki/Georges_Braque)
 and [Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) are most well-known.
 
 World War I raged from 1914-1918 in other parts of Europe, but the

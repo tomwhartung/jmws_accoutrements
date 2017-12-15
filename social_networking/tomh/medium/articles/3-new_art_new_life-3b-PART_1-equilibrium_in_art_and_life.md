@@ -199,7 +199,7 @@ Life is full of pairs of opposites - and people who are convinced as opposed to 
 this comprise one such pair.
 
 As an [open-minded, intuitive person](https://www.seeourminds.com/gallery/9100-real-self_portraits/),
-I was immediately receptive and able to understand all this.
+I was immediately receptive to all this and had no trouble understanding it.
 
 Not everyone, however, is all that intuitive.  In fact, there is evidence that
 [realistic people outnumber intuitives by about 3-to-1](http://www.myersbriggs.org/my-mbti-personality-type/my-mbti-results/how-frequent-is-my-type.htm).
@@ -214,7 +214,7 @@ So the skeptics are no doubt actually in the majority!  If you are one of these 
 
 Many people grow up with the idea that visual art should be representational - depicting objects in the real world - without
 realizing they have been hearing abstractions in music all their lives.
-This is because, for millennia, since the earliest [cave wall paintings](https://en.wikipedia.org/wiki/Cave_painting),
+This is because, since the earliest [cave wall paintings](https://en.wikipedia.org/wiki/Cave_painting),
 visual art has been representational, while music is - due to its being invisible - by its very nature quite abstract.
 
 This is the path I found myself on when I first learned about Mondrian.
@@ -231,7 +231,7 @@ on [medium.com](https://medium.com/).
 [Part 3](https://medium.com/@tomwhartung/music-meaning-and-modern-art-part-3-of-3-3d212b8ef7b0) discusses the music of
 [The Talking Heads](https://en.wikipedia.org/wiki/Talking_Heads).
 
-If you are a fan of one or more of these artists, but struggle to understand abstract visual art, please
+If you are a fan of one or more of these artists, but do not yet fully appreciate abstract visual art, please
 check out one or more of these articles!
 
 #### It Looks Too Easy!
@@ -241,7 +241,7 @@ check out one or more of these articles!
 - Link: [Public Domain](https://commons.wikimedia.org/w/index.php?curid=37642803).
 
 When I learned about Piet Mondrian, I immediately thought "a computer could do this."
-Since then, I have tried writing a program to produce this type of art - more than once - and failed.
+Since then, I have tried writing a program to produce this type of art - multiple times, in fact - and failed.
 
 It looks easy to create these compositions, but it is not!  I have learned through experience that changing one of his
 paintings - his Composition With Red, Blue, and Yellow, for example - even slightly can destroy the image’s equilibrium.

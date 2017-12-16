@@ -171,7 +171,7 @@ it implies the opposing influences are static, and that even mere symmetry could
 
 It’s much easier to explain Mondrian’s sense of equilibrium in terms of what it is *not.*
 
-#### Equilibrium Is Not Symmetry nor Harmony
+#### Equilibrium It's Not Symmetry nor Harmony
 
 - Image: images/Piet_Mondrian-1937-Composition_With_Blue-Compositie_met_blauw.jpg
 - Title and Attribution: Composition with Blue (Compositie met blauw), by Piet Mondrian, 1937.
@@ -181,6 +181,9 @@ In reality, life is in constant flux, so there is no way symmetry can bring thes
 And even though a specific work of art may be static,
 [art as a whole is always in flux](https://medium.com/@tomwhartung/concerning-kandinskys-concerning-the-spiritual-in-art-f2f3d1ca750e)
 as well.
+
+So trying to use Mondrian’s art to understanding equilibrium definitely requires looking at more than one of his paintings.
+Looking at the work of other artists can be helpful, too!
 
 The word harmony also falls short of defining what Mondrian meant. In The New Art, The New Life he states
 “the new aesthetic speaks of ‘equilibrium’ instead of harmony” because “the 'harmony' of the past expresses a veiled state.”

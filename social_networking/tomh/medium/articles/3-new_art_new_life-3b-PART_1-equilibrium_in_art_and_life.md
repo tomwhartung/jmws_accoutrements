@@ -178,6 +178,9 @@ It’s much easier to explain Mondrian’s sense of equilibrium in terms of what
 - Link: [Public Domain](http://www.abcgallery.com/M/mondrian/mondrian62.html).
 
 In reality, life is in constant flux, so there is no way symmetry can bring these opposing forces into equilibrium.
+And even though a specific work of art may be static,
+[art as a whole is always in flux](https://medium.com/@tomwhartung/concerning-kandinskys-concerning-the-spiritual-in-art-f2f3d1ca750e)
+as well.
 
 The word harmony also falls short of defining what Mondrian meant. In The New Art, The New Life he states
 “the new aesthetic speaks of ‘equilibrium’ instead of harmony” because “the 'harmony' of the past expresses a veiled state.”

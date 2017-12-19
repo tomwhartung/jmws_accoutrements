@@ -18,11 +18,12 @@ To be able to reference this article in a subsequent article about my vision.
 This is the first part in an series of occasional articles about why Piet Mondrian went from painting
 [representational images]( https://en.wikipedia.org/wiki/Representation_(arts) ) to painting
 [abstract images](https://en.wikipedia.org/wiki/Abstract_art).
+
 His writings reveal his reasons for this progression.  These writings are profound and enlightening, but can be difficult to understand.
 
-This article focuses on the parallels he saw between the evolution of his art and the progress of culture and life itself.
-Subsequent articles will be about some of the other ideas - such as equilibrium, liberation, and high
-universal morality - described in his writings.
+After a short review of his earlier work, this article examines the parallels he saw between the evolution of his art and
+the progress of culture and life itself.  Subsequent articles will be about some of the other ideas - such as equilibrium,
+liberation, and high universal morality - described in his writings.
 
 ### Pieter Cornelis “Piet” Mondriaan
 
@@ -78,14 +79,14 @@ and [Pablo Picasso](https://en.wikipedia.org/wiki/Pablo_Picasso) are most well-k
 World War I raged from 1914-1918 in other parts of Europe, but the
 [Netherlands was](https://english.stackexchange.com/questions/189936/the-netherlands-are-vs-the-netherlands-is) neutral.
 
-It was during the war, in 1917, that Mondrian joined several other artists and architects - one of them
+It was during the war, in 1917, that Mondrian joined several other artists and architects - one of them the very versatile
 [Theo van Doesburg](https://en.wikipedia.org/wiki/Theo_van_Doesburg) - in founding an art movement called
 [De Stijl](https://en.wikipedia.org/wiki/De_Stijl), Dutch for "The Style."
 
 And it was during this time, [from 1916 through 1921](http://www.abcgallery.com/M/mondrian/mondrian-3.html), that he developed the
 distinctive, ["neoplastic"](http://the-artists.org/artistsbymovement/neo-plasticism) style for which he is most famous.
 [Neoplastic](http://www.tate.org.uk/art/art-terms/n/neo-plasticism) paintings are totally abstract and non-representational, and
-contain only perpendicular rectangles and lines, and black, grey, white, and primary colors.
+contain only perpendicular rectangles and lines drawn using only black, white, grey, and primary colors.
 
 ### Mondrian's Writings
 
@@ -124,7 +125,7 @@ In this book - as the following quotes from it show - Mondrian reveals how he be
 > This fact that art demonstrates is of great importance for life, because it forms the basis of progress and shows its path.
  - Piet Mondrian, The New Art, The New Life, 1931. [Emphasis in original.]
 
-This realization is key to seeing how Mondrian's vision was not just unique for its time but also quite prophetic.
+This realization is key to seeing how Mondrian's vision was not just unique for its time, but also quite prophetic.
 
 In this book Mondrian claims that, just as his and others’ art has evolved into a composition containing opposites of form and
 color in equilibrium, future society will likewise evolve.
@@ -155,7 +156,7 @@ realize that society and everyday life are rife with opposites:
 
 Fully understanding this, of course, requires full understanding of the word "*equilibrium*."
 
-### Explaining Equilibrium
+### Understanding Equilibrium
 
 - Image: images/Piet_Mondrian-1930-Composition_II_With_Black_Lines-Compositie_nr_2_met_swarte_lijnen.jpg
 - Title and Attribution: Composition II with Black Lines (Compositie nr.2 met swarte lijnen), by Piet Mondrian, 1921.
@@ -169,7 +170,7 @@ The [wiktionary](https://en.wiktionary.org/) defines it as being “The conditio
 resulting in no net change.” Thinking of *equilibrium* as being a *balance* of "competing influences" is a good start, but
 it implies the opposing influences are static, and that even mere symmetry could suffice to balance them.
 
-It’s much easier to explain Mondrian’s sense of equilibrium in terms of what it is *not.*
+So what is “*equilibrium?*” It’s actually a bit easier to explain Mondrian’s sense of the word in terms of what it is *not*.
 
 #### Equilibrium It's Not Symmetry nor Harmony
 
@@ -187,6 +188,8 @@ Looking at the work of other artists can be helpful, too!
 
 The word harmony also falls short of defining what Mondrian meant. In The New Art, The New Life he states
 “the new aesthetic speaks of ‘equilibrium’ instead of harmony” because “the 'harmony' of the past expresses a veiled state.”
+
+#### Say What?!?
 
 Taken out of context, these excerpts from the book may not make much sense to readers new to Mondrian’s ideas and his way of expressing
 them.  Significantly, he wrote the original in French, so his words may well have lost something in the translation.
@@ -249,8 +252,9 @@ check out one or more of these articles!
 When I learned about Piet Mondrian, I immediately thought "a computer could do this."
 Since then, I have tried writing a program to produce this type of art - multiple times, in fact - and failed.
 
-It looks easy to create these compositions, but it is not!  I have learned through experience that changing one of his
-paintings - his Composition With Red, Blue, and Yellow, for example - even slightly can destroy the image’s equilibrium.
+It looks easy to create these compositions, but it is not!  I have learned through experience that taking one of his
+paintings - his Composition With Red, Blue, and Yellow, for example - and changing it even slightly - changing just the colors,
+for example - can destroy the image’s equilibrium.
 
 For proof, see the [gallery](https://www.seeourminds.com/galleries) of experimental
 “[Mondrianesque Compositions](https://www.seeourminds.com/gallery/9600-generic_images-experiments-mondrian/)”

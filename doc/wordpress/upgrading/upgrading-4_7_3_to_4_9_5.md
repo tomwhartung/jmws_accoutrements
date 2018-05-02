@@ -71,7 +71,7 @@ This is one key.
 
 ### 1.2. Ensure the web server can write the files by making the following changes:
 
-   Change ownership of all files to www-data, create directory wp-content/upgrade
+- Change ownership of all files to www-data, create directory wp-content/upgrade
 
 Run commands:
 
@@ -102,6 +102,12 @@ ls -al wp-content/upgrade
 
 ### 2.2. Check in browser for each gadget type:
 
+Access the site: [http://jane.tomwhartung.com](jane.tomwhartung.com)
+
+Access `mobile.php`:
+
+- Chrome -> Browser home icon -> Heading: Development (jane/[http://jane.tomhartung.com/gitignored//mobile.php](mobile))
+
 If it looks OK, proceed, else figure out what went wrong.
 
 ### 2.3. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
@@ -114,6 +120,8 @@ sudo chown -R tomh:www-data *
 sudo chmod 755 wp-content wp-content/*
 ls -al wp-content/
 ```
+
+The permissions on all files and directories should be `755` and the ownership should be `tomh:www-data` .
 
 ### 2.4. Check the changes into git:
 

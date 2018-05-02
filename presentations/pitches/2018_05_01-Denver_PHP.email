@@ -1,0 +1,41 @@
+
+Hi Amanda,
+
+The talk I would most like to give isn't technical in nature but rather has to do with building teams, history, and psychology.
+
+I have written a program (a few times now, in LISP and PHP) that, given the results of a personality quiz, draws an image of the personality.  This might sound weird at first, but it works quite well, and I can explain it - explain how the colors (the source of the impact of the images) represent how the people's preferences - their perceptions and decisions - influence their abilities and contributions.
+
+The talk I would most like to give would show the images I have created representing the personalities of some of America's Founding Fathers and describe how the personality of each one helped produce our nation.  The idea here is that psychologically diverse teams can do a lot more than a team consisting of people who all have similar personalities.
+
+It would certainly be possible to bring the program and the quiz to the meetup and let people see whom their "spirit founding father" might be.  I would be happy to create the spiritual portrait of anyone who attends and is willing to take the quiz, and give it to them as a souvenir.
+
+The most recent version of the program was written using Joomla, and is currently off line.  I do have two sites though, one that describes the idea fairly well, and another with a quiz and an extensive gallery of images of both real and fictional people.  These two sites are:
+
+- https://groja.com/ - flask site with a bit of overview information, and
+- https://www.seeourminds.com/ - django site with the quiz and more importantly a gallery full of examples.
+
+Now, these two sites are in python (but do not generate the images, that one's still in Joomla, and off-line).
+
+So, alternatively, if you want something a bit more technical, I could discuss, compare and contrast, these two popular python CMSes with Joomla (which hopefully you have heard of ) and Wordpress.  I still run a Joomla (joomoowebsites.com) and a WP (tomwhartung.com) site, so they are still a part of my life.
+
+I run all of these out of my home, and have developed extensions for all four CMSes, so can give my perspective on development and administrating them (I use Ubuntu and Apache).
+
+But I'd rather talk about the value of psychologically diverse teams, using the personalities of Ben Franklin, George Washington, Patrick Henry, Thomas Jefferson, John Adams, and Alexander Hamilton as examples.
+
+You can find images of all these founding fathers on the seeourminds.com site, here: https://www.seeourminds.com/galleries/politicians/
+
+I do not yet have good stories for Ben and Patrick, but most of the others are decent, and the ones about Hamilton (and Mark Twain, my latest masterpiece) are among the best.  (I plan to re-do the stories for Washington, and possibly Adams, but I digress...).
+
+If you snoop around in the galleries, you can see I have a lot of fictional characters in there, so I could liven up the talk with mentions of how the various personalities show similarities to characters in the Star Wars movies, on Deadwood, Game of Thrones, The Sopranos, etc.
+
+I am passionate about this idea, and have easily invested five years of my life exploring it (but not yet making any money off it - not yet) so I can say with confidence and total humility that I am an "expert in drawing personalities."
+
+If it's too off-track for what you're looking for, that's fine, just say so.
+
+But I am hoping to start making the rounds of various meetups and giving this talk, and would like to give it to you guys, because after all, the program is in PHP.
+
+Thanks for taking the time to read all this and check out my sites!  Hope to hear from you soon, and hopefully meet you in person at a meetup!
+
+P.S. Ben Franklin was big on "meetups," check out the Junto group he formed in Philadelphia back in the day!
+
+

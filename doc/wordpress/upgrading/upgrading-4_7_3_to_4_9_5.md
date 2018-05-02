@@ -178,7 +178,7 @@ Run commands:
 gotwt
 git status
 git add wp-content/
-git commit -m 'Upgraded akismet to version 3.3 .' ; git push origin master
+git commit -m 'Upgraded akismet to version 4.0.3 .' ; git push origin master
 ```
 
 ### 3.4 Backup the db and backup the backup
@@ -186,7 +186,7 @@ git commit -m 'Upgraded akismet to version 3.3 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrading_plugins_4_7_0_to_4_7_3
+bu tw 03-after_upgrading_plugins_4_7_3_to_4_9_5
 tarHome
 ```
 
@@ -229,7 +229,7 @@ Run commands:
 gotwt
 git status
 git add wp-content/
-git commit -m 'Upgraded themes to version 4.7.0 .' ; git push origin master
+git commit -m 'Upgraded themes to version 4.9.5 .' ; git push origin master
 ```
 
 ### 4.4 Backup the db and backup the backup
@@ -237,7 +237,7 @@ git commit -m 'Upgraded themes to version 4.7.0 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrading_themes_4_7_0_to_4_7_3
+bu tw 04-after_upgrading_themes_4_7_3_to_4_9_5
 tarHome
 ```
 

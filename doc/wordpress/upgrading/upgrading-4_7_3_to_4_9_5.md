@@ -102,11 +102,11 @@ ls -al wp-content/upgrade
 
 ### 2.2. Check in browser for each gadget type:
 
-Access the site: [http://jane.tomwhartung.com](jane.tomwhartung.com)
+Access the site: [jane.tomwhartung.com](http://jane.tomwhartung.com)
 
 Access `mobile.php`:
 
-- Chrome -> Browser home icon -> Heading: Development (jane/[http://jane.tomhartung.com/gitignored//mobile.php](mobile))
+- Chrome -> Browser home icon -> Heading: Development (jane/[mobile](http://jane.tomhartung.com/gitignored//mobile.php))
 
 If it looks OK, proceed, else figure out what went wrong.
 

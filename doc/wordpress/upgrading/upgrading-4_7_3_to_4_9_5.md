@@ -131,7 +131,7 @@ Run commands:
 gotwt
 git status
 git add --all .
-git commit -m 'Upgrading from 4.7.0 to 4.7.3 .' ; git push origin master
+git commit -m 'Upgrading from 4.7.3 to 4.9.5 .' ; git push origin master
 ```
 
 ### 2.5. Backup db on this host, and backup the backup:
@@ -139,7 +139,7 @@ git commit -m 'Upgrading from 4.7.0 to 4.7.3 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 02-after_upgrading_4_7_0_to_4_7_3
+bu tw 02-after_upgrading_4_7_3_to_4_9_5
 tarHome
 ```
 

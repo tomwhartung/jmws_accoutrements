@@ -258,6 +258,22 @@ bu tw 01-before_upgrading_4_7_to_4_7_3
 
 * Admin panel -> Dashboard -> Updates
 
+#### Troubleshooting!
+
+Converting from http to https really complicates the ability to maintain a backup host.
+
+If unable to access site or admin panel due to https issues, try these solutions:
+
+- Link just the non-https apache config files from `/etc/apache2/sites-available` to `/etc/apache2/sites-enabled` :
+  - `080-tomwhartung.com.conf`
+  - `086-tomwhartung.com-le-ssl-redirect.conf`
+  - This is how jane is set up
+  - Re-link https (082-* and 084-*) when done (maybe ...)
+
+- Update wp-config.php to use the http://barbara/tomwhartung.com
+
+**We should be able to access the backup site on barbara from within barbara without https, temporarily, anyway.**
+
 #### Note!
 
 Rather than copy the database from one host to another, we upgrade the code and let WP update the DB.

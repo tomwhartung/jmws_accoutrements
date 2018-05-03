@@ -245,6 +245,10 @@ tarHome
 
 ## Step (5) Updating wp core and plugins on barbara:
 
+**Note!**
+
+- Rather than copy the database from one host to another, we upgrade the code and let WP update the DB.
+
 ### 5.1. Make sure database is backed up (in previous section "All Hosts: above)
 
 Run commands:
@@ -268,15 +272,21 @@ If unable to access site or admin panel due to https issues, try these solutions
   - `080-tomwhartung.com.conf`
   - `086-tomwhartung.com-le-ssl-redirect.conf`
   - This is how jane is set up
-  - Re-link https (082-* and 084-*) when done (maybe ...)
+  - Re-link https (082-* and 084-*) when done (or, not ... and just remember to if we need the backup to go live...)
 
-- Update wp-config.php to use the http://barbara/tomwhartung.com
+- Update wp-config.php to use the url http://barbara.tomwhartung.com , as follows:
 
-**We should be able to access the backup site on barbara from within barbara without https, temporarily, anyway.**
+```
+ $ diff wp-config.php wp-config.php-http_barbara
+108,109c108,109
+< define('WP_HOME','https://www.tomwhartung.com');
+< define('WP_SITEURL','https://www.tomwhartung.com');
+---
+> define('WP_HOME','http://barbara.tomwhartung.com');
+> define('WP_SITEURL','http://barbara.tomwhartung.com');
+```
 
-#### Note!
-
-Rather than copy the database from one host to another, we upgrade the code and let WP update the DB.
+**In theory, we should be able to access the backup site on barbara from within barbara without https, temporarily, anyway.**
 
 #### Warning!
 
@@ -310,7 +320,7 @@ If there are db updates will see: "Database update required."
 
 * Click "Continue" button
 
-**There were definitely some updates to db this time.**
+**There were no updates to db this time.**
 
 ### 5.5. Verify Updated Versions
 
@@ -325,7 +335,7 @@ Access the site, perform a "Smoke Test."
 Run commands:
 
 ```
-bu tw 02-after_upgrading_4_7_0_to_4_7_3
+bu tw 02-after_upgrading_4_7_3_to_4_9_5
 tarHome
 ```
 

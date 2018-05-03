@@ -4,7 +4,7 @@
 The process seems to change about the time I get used to it and acheive a comfortable level of automation and documentation.
 Plus we don't run it often enough to be really confident about it or good at it etc.
 
-## TomWHartung.com - WP Upgrading Notes for 2017
+## TomWHartung.com - WP Upgrading Notes for 2018
 
 The Latest References (from upgrade to 4.3.1):
 
@@ -14,8 +14,8 @@ The Latest References (from upgrade to 4.3.1):
 ## Log
 
 - [ ] 2017-
-- [ ] 2017-XX-XX: 4.8.2 to 4.X.X
-- [X] 2017-09-26: 4.7.3 to 4.8.2
+- [ ] 2017-XX-XX: 4.9.5 to 4.X.X
+- [X] 2017-09-26: 4.7.3 to 4.9.5
 - [X] 2017-03-17: 4.7.0 to 4.7.3
 - [X] 2016-12-22: 4.6.1 to 4.7.0
 - [X] 2016-11-01: 4.6.0 to 4.6.1
@@ -38,7 +38,7 @@ Backup db on all hosts and ensure code matches what is in github:
 Run these commands on each host listed above:
 
 ```
-bu tw 01-before_upgrading_4_7_to_4_7_3
+bu tw 01-before_upgrading_4_7_3_to_4_9_5
 gotwt
 git pull
 git status
@@ -50,9 +50,18 @@ To enable using the back end to update the code rather than downloading it, foll
 
 We need to do this for **only one host:**
 
-* jane on 2017-03-17
+* jane on 2018-05-02
 
-### 1.1. Ensure the following line has been added to wp-config.php :
+### 1.1. FS_METHOD must be 'direct'
+
+Run the following commands:
+
+```
+gotwt
+grep FS_METHOD wp-config.php
+```
+
+Ensure the following line has been added to wp-config.php :
 
 ```
 define('FS_METHOD','direct');
@@ -62,7 +71,7 @@ This is one key.
 
 ### 1.2. Ensure the web server can write the files by making the following changes:
 
-   Change ownership of all files to www-data, create directory wp-content/upgrade
+- Change ownership of all files to www-data, create directory wp-content/upgrade
 
 Run commands:
 
@@ -93,6 +102,12 @@ ls -al wp-content/upgrade
 
 ### 2.2. Check in browser for each gadget type:
 
+Access the site: [jane.tomwhartung.com](http://jane.tomwhartung.com)
+
+Access `mobile.php`:
+
+- Chrome -> Browser home icon -> Heading: Development (jane/[mobile](http://jane.tomhartung.com/gitignored//mobile.php))
+
 If it looks OK, proceed, else figure out what went wrong.
 
 ### 2.3. Change owner of all files back to tomh and change perm of wp-content and all subdirectories of wp-content back to 755
@@ -106,6 +121,8 @@ sudo chmod 755 wp-content wp-content/*
 ls -al wp-content/
 ```
 
+The permissions on all files and directories should be `755` and the ownership should be `tomh:www-data` .
+
 ### 2.4. Check the changes into git:
 
 Run commands:
@@ -114,7 +131,7 @@ Run commands:
 gotwt
 git status
 git add --all .
-git commit -m 'Upgrading from 4.7.0 to 4.7.3 .' ; git push origin master
+git commit -m 'Upgrading from 4.7.3 to 4.9.5 .' ; git push origin master
 ```
 
 ### 2.5. Backup db on this host, and backup the backup:
@@ -122,7 +139,7 @@ git commit -m 'Upgrading from 4.7.0 to 4.7.3 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 02-after_upgrading_4_7_0_to_4_7_3
+bu tw 02-after_upgrading_4_7_3_to_4_9_5
 tarHome
 ```
 
@@ -161,7 +178,7 @@ Run commands:
 gotwt
 git status
 git add wp-content/
-git commit -m 'Upgraded akismet to version 3.3 .' ; git push origin master
+git commit -m 'Upgraded akismet to version 4.0.3 .' ; git push origin master
 ```
 
 ### 3.4 Backup the db and backup the backup
@@ -169,7 +186,7 @@ git commit -m 'Upgraded akismet to version 3.3 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrading_plugins_4_7_0_to_4_7_3
+bu tw 03-after_upgrading_plugins_4_7_3_to_4_9_5
 tarHome
 ```
 
@@ -212,7 +229,7 @@ Run commands:
 gotwt
 git status
 git add wp-content/
-git commit -m 'Upgraded themes to version 4.7.0 .' ; git push origin master
+git commit -m 'Upgraded themes to version 4.9.5 .' ; git push origin master
 ```
 
 ### 4.4 Backup the db and backup the backup
@@ -220,13 +237,17 @@ git commit -m 'Upgraded themes to version 4.7.0 .' ; git push origin master
 Run commands:
 
 ```
-bu tw 03-after_upgrading_themes_4_7_0_to_4_7_3
+bu tw 04-after_upgrading_themes_4_7_3_to_4_9_5
 tarHome
 ```
 
 (Actually I am unsure whether this step is necessary.)
 
 ## Step (5) Updating wp core and plugins on barbara:
+
+**Note!**
+
+- Rather than copy the database from one host to another, we upgrade the code and let WP update the DB.
 
 ### 5.1. Make sure database is backed up (in previous section "All Hosts: above)
 
@@ -241,9 +262,31 @@ bu tw 01-before_upgrading_4_7_to_4_7_3
 
 * Admin panel -> Dashboard -> Updates
 
-#### Note!
+#### Troubleshooting!
 
-Rather than copy the database from one host to another, we upgrade the code and let WP update the DB.
+Converting from http to https really complicates the ability to maintain a backup host.
+
+If unable to access site or admin panel due to https issues, try these solutions:
+
+- Link just the non-https apache config files from `/etc/apache2/sites-available` to `/etc/apache2/sites-enabled` :
+  - `080-tomwhartung.com.conf`
+  - `086-tomwhartung.com-le-ssl-redirect.conf`
+  - This is how jane is set up
+  - Re-link https (082-* and 084-*) when done (or, not ... and just remember to if we need the backup to go live...)
+
+- Update wp-config.php to use the url http://barbara.tomwhartung.com , as follows:
+
+```
+ $ diff wp-config.php wp-config.php-http_barbara
+108,109c108,109
+< define('WP_HOME','https://www.tomwhartung.com');
+< define('WP_SITEURL','https://www.tomwhartung.com');
+---
+> define('WP_HOME','http://barbara.tomwhartung.com');
+> define('WP_SITEURL','http://barbara.tomwhartung.com');
+```
+
+**In theory, we should be able to access the backup site on barbara from within barbara without https, temporarily, anyway.**
 
 #### Warning!
 
@@ -277,7 +320,7 @@ If there are db updates will see: "Database update required."
 
 * Click "Continue" button
 
-**There were definitely some updates to db this time.**
+**There were no updates to db this time.**
 
 ### 5.5. Verify Updated Versions
 
@@ -292,7 +335,7 @@ Access the site, perform a "Smoke Test."
 Run commands:
 
 ```
-bu tw 02-after_upgrading_4_7_0_to_4_7_3
+bu tw 02-after_upgrading_4_7_3_to_4_9_5
 tarHome
 ```
 
@@ -311,5 +354,5 @@ Repeat process used for barabara on ava.
 
 5. Verify updated versions in admin panel
 
-6. Backup db `bu tw 02-after_upgrading_4_7_0_to_4_7_3`
+6. Backup db `bu tw 02-after_upgrading_4_7_3_to_4_9_5`
 

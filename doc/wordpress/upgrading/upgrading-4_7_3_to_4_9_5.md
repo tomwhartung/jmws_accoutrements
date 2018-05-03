@@ -354,5 +354,5 @@ Repeat process used for barabara on ava.
 
 5. Verify updated versions in admin panel
 
-6. Backup db `bu tw 02-after_upgrading_4_7_0_to_4_7_3`
+6. Backup db `bu tw 02-after_upgrading_4_7_3_to_4_9_5`
 

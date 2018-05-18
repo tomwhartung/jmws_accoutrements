@@ -1,4 +1,9 @@
-Given the prompt "The horse came back alone," the task was to write a 100-150 word story in 15 minutes.  Following is the story I wrote:
+
+Date: 2018-05-17
+
+Given the prompt "The horse came back alone," the task was to write a 100-150 word story in 15 minutes.
+
+Following is the story I wrote:
 
 [The horse came back alone] from the trip into the wilderness.  Traveling into Indian country was risky, but he was determined to learn whether the stories of a Fountain of Youth were true.
 

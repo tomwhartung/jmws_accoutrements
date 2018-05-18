@@ -1,0 +1,13 @@
+
+Following are the scores I got on the multiple-choice quizzes, listed in the order in which they were presented and taken:
+
+1. Grammar and vocabulary: 15/15
+2. MLA Formatting: 1/5
+3. APA Formatting: 2/5
+4. Chicago/Turabian Formatting: 3/5
+5. Write a short story, containing 100-150 words, for the given prompt.
+   See story.txt in this directory.
+6. Plagiarism Quiz: 5/5
+7. Write a 275-350 word essay on the following topic: Is working 40 hours a week closer to freedom or slavery?
+   See essay.txt in this directory.
+

@@ -8,11 +8,11 @@ Grojas are Graphica Representations of Jungian Archetypes.
 
 2. C-3PO, the Atypical Droid
 
-Very emotional.
+Very emotional, rather like Dr. McCoy.
 
 3. R2-D2, a More Typical Droid
 
-Very logical.
+Very logical, rather like Mr. Spock.
 
 4. Conclusion
 

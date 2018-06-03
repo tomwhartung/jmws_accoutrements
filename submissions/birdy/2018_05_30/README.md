@@ -13,7 +13,9 @@ Actually, check with Birdy to see if posting them online, and plugging their mag
 - Tywin Lannister and Tony Soprano
 - George Washington and Fidel Castro
 - Eleanor and Franklin Roosevelt
-- Mark Twain and Yoda (Could Mark Twain be a Jedi Knight?)
-- Phillip Marlowe and Mike Hammer
+- Mark Twain and Yoda (subtitle: Could Mark Twain be a Jedi Knight?)
+- Thomas Jefferson and Alexander Hamilton
 - Citizen Kane and Donald Trump
+- Phillip Marlowe and Mike Hammer
+
 

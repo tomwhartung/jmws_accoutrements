@@ -8,11 +8,26 @@ Then post links to the article on social networking sites.
 
 Actually, check with Birdy to see if posting them online, and plugging their magazine in an intro to the article, is ok.
 
+# Checklist
+
+Check these off when they are done.
+
+- [ ] 01-kitties
+- [ ] 02-x_files
+- [ ] 03-star_wars-leia_and_han
+- [ ] 04-jfk_lbj
+- [ ] 05-fawlty_towers
+- [ ] 06-original_star_trek
+- [ ] 07-tywin_lannister-tony_soprano
+- [ ] 08-the_roosevelts
+- [ ] 09-star_wars-droids
+- [ ] 10-trixie_and_shea
+
+
 # More Ideas - To Think About, Hmmmm....
 
-- Tywin Lannister and Tony Soprano
+- Big Edie and Little Edie of Grey Gardens
 - George Washington and Fidel Castro
-- Eleanor and Franklin Roosevelt
 - Mark Twain and Yoda (subtitle: Could Mark Twain be a Jedi Knight?)
 - Thomas Jefferson and Alexander Hamilton
 - Citizen Kane and Donald Trump

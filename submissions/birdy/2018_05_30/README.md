@@ -11,12 +11,13 @@ Actually, check with Birdy to see if posting them online, and plugging their mag
 # Checklist
 
 Check these off when they are done.
+Word counts are for the article ONLY, and does not inclue the titles or footnotes, just the article.
 
-- [ ] 01-kitties
-- [ ] 02-x_files
+- [x] 01-kitties (808 words) - may want to add photos?
+- [x] 02-x_files (661 words)
 - [ ] 03-star_wars-leia_and_han
 - [ ] 04-jfk_lbj
-- [ ] 05-fawlty_towers
+- [x] 05-fawlty_towers (395 words)
 - [ ] 06-original_star_trek
 - [ ] 07-tywin_lannister-tony_soprano
 - [ ] 08-the_roosevelts

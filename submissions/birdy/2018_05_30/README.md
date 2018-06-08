@@ -16,13 +16,13 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 - [x] 01-kitties (808 words) - may want to add photos?
 - [x] 02-x_files (661 words)
 - [ ] 03-star_wars-leia_and_han
-- [-] 04-jfk_lbj (793 words) - should be good but I want to re-read it at least once more before checking it off
-- [x] 05-fawlty_towers (395 words)
+- [x] 04-jfk_lbj (796 words) - may want to re-read it at least once more?
+- [x] 05-fawlty_towers (398 words)
 - [ ] 06-original_star_trek
 - [ ] 07-grey_gardens
 - [ ] 08-the_roosevelts
 - [ ] 09-trixie_and_shea
-- [x] 10-star_wars-droids (761 words) - a good chance to try out the singular they, but it sounds awkward with singular verbs, hmm...
+- [x] 10-star_wars-droids (794 words) - a good chance to try out the singular they, but it sounds awkward with singular verbs, hmm...
 - [ ] 11-citizen_kane-donald_trump
 - [ ] 12-tywin_lannister-tony_soprano
 

@@ -13,10 +13,10 @@ Actually, check with Birdy to see if posting them online, and plugging their mag
 Check these off when they are done.
 Word counts are for the article ONLY, and do not include the titles or footnotes, just the article.
 
-- [x] 01-kitties (808 words) - may want to add photos?
-- [x] 02-x_files (661 words)
-- [x] 03-star_wars-leia_and_han (802 words) - may want to re-read it at least once more?
-- [x] 04-jfk_lbj (796 words) - may want to re-read it at least once more?
+- [x] 01-x_files (661 words)
+- [x] 02-star_wars-leia_and_han (802 words) - may want to re-read it at least once more?
+- [x] 03-jfk_lbj (796 words) - may want to re-read it at least once more?
+- [x] 04-kitties (808 words) - may want to add photos?
 - [x] 05-fawlty_towers (398 words)
 - [ ] 06-original_star_trek
 - [ ] 07-grey_gardens

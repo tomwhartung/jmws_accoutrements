@@ -18,7 +18,7 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 - [x] 03-jfk_lbj (796 words) - may want to re-read it at least once more?
 - [x] 04-kitties (808 words) - may want to add photos?
 - [x] 05-fawlty_towers (398 words)
-- [ ] 06-original_star_trek
+- [-] 06-original_star_trek (733 words) - definitely re-read it fresh, on a new day
 - [ ] 07-grey_gardens
 - [ ] 08-the_roosevelts
 - [ ] 09-trixie_and_shea

@@ -15,9 +15,9 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 
 Key:
 
-- x: done, but worth re-reading before submitting
-- -: complete, but definitely requires review before submitting
-- .: at least a solid start: an expanded outline or close to complete, at best: may need only a nice ending
+- [x] - done, but worth re-reading before submitting
+- [-] - complete, but definitely requires review before submitting
+- [.] - at least a solid start: an expanded outline or close to complete, at best: may need only a nice ending
 
 - [x] 01-x_files (661 words)
 - [x] 02-star_wars-leia_and_han (802 words)

@@ -13,15 +13,21 @@ Actually, check with Birdy to see if posting them online, and plugging their mag
 Check these off when they are done.
 Word counts are for the article ONLY, and do not include the titles or footnotes, just the article.
 
+Key:
+
+- x: done, but worth re-reading before submitting
+- -: complete, but definitely requires review before submitting
+- .: at least a solid start: an expanded outline or close to complete, at best: may need only a nice ending
+
 - [x] 01-x_files (661 words)
-- [x] 02-star_wars-leia_and_han (802 words) - may want to re-read it at least once more?
-- [x] 03-jfk_lbj (796 words) - may want to re-read it at least once more?
+- [x] 02-star_wars-leia_and_han (802 words)
+- [x] 03-jfk_lbj (796 words)
 - [x] 04-kitties (808 words) - may want to add photos?
 - [x] 05-fawlty_towers (398 words)
-- [-] 06-original_star_trek (733 words) - definitely re-read it fresh, on a new day
-- [ ] 07-grey_gardens
+- [-] 06-original_star_trek (733 words)
+- [.] 07-grey_gardens
 - [ ] 08-the_roosevelts
-- [ ] 09-trixie_and_shea
+- [.] 09-trixie_and_shea
 - [x] 10-star_wars-droids (794 words) - a good chance to try out the singular they, but it sounds awkward with singular verbs, hmm...
 - [ ] 11-citizen_kane-donald_trump
 - [ ] 12-tywin_lannister-tony_soprano

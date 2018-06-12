@@ -13,13 +13,14 @@ Actually, check with Birdy to see if posting them online, and plugging their mag
 Check these off when they are done.
 Word counts are for the article ONLY, and do not include the titles or footnotes, just the article.
 
-Key:
+## Key to the Checklist:
 
-- [X] - done, but worth re-reading before submitting
-- [x] - complete, but definitely requires review before submitting
-- [-] - at least a solid start: an expanded outline or close to complete, at best: may need only a nice ending
+- [X] - Upper case "X" - Done, but worth re-reading before submitting
+- [x] - Lower case "x" - Complete, but definitely requires review before submitting
+- [-] - Dash - Article has at least a solid start, it's an expanded outline or close to complete, or at best may need only a nice ending
+- [ ] - Blank - Images, titles, and boiler plate are done **before** adding the article to the checklist
 
-Checklist:
+## Checklist:
 
 - [X] 01-x_files (661 words)
 - [X] 02-star_wars-leia_and_han (802 words)

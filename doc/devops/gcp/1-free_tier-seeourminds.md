@@ -19,6 +19,19 @@ This file is for notes about using the Google Cloud Platform to host seeourminds
 I have been doing some research, and the process looks reasonable.
 If anything, setup is probably easier than hosting it here at home, because each instance is specialized.
 
-## Links
+## Introductory Information
 
-- 
+- GCP Free Tier Portal: https://cloud.google.com/free/
+- GCP Free Tier FAQ: https://cloud.google.com/free/docs/frequently-asked-questions
+- Translating AWS jargon to GCP: https://cloud.google.com/free/docs/map-aws-google-cloud-platform
+- GCP Docs landing page: https://cloud.google.com/docs/
+
+## Tutorials
+
+- Create a VM: https://cloud.google.com/compute/docs/instances/create-start-instance
+- Quickstart Linux VM: https://cloud.google.com/compute/docs/quickstart-linux
+- Running an Apache Webserver: https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache
+- Compute Engine Quickstart
+  - To-do app using Mongo DB:
+  -  https://console.cloud.google.com/getting-started?tutorial=compute_quickstart&project=actions-codelab-f5fa4&folder&organizationId
+

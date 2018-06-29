@@ -25,10 +25,6 @@ If anything, setup is probably easier than hosting it here at home, because each
 - GCP Free Tier FAQ: https://cloud.google.com/free/docs/frequently-asked-questions
 - Translating AWS jargon to GCP: https://cloud.google.com/free/docs/map-aws-google-cloud-platform
 
-## Looks Like What I Want:
-
-- GCP Cloud Launcher: https://cloud.google.com/launcher/
-
 ## Tutorials
 
 - Create a VM: https://cloud.google.com/compute/docs/instances/create-start-instance
@@ -38,7 +34,11 @@ If anything, setup is probably easier than hosting it here at home, because each
   - To-do app using Mongo DB:
   -  https://console.cloud.google.com/getting-started?tutorial=compute_quickstart&project=actions-codelab-f5fa4&folder&organizationId
 
-## Docs Certification and More
+## This Looks Like What I Ultimately Want to Do:
+
+- GCP Cloud Launcher: https://cloud.google.com/launcher/
+
+## Docs, Certification, and More
 
 - GCP Documentation Home: https://cloud.google.com/docs/
 - GCP Documentation Overview: https://cloud.google.com/docs/overview/

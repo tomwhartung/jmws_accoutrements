@@ -29,4 +29,31 @@ TODO:
 
 - Fill out W-9 form and fax to 877-286-4889
 
+### affiliates-cj:
+
+- CJ Affiliate: Formerly Commission Junction
+  - Home page: http://www.cj.com/
+- Used by:
+  - O'Reilly Books: https://www.oreilly.com/affiliates/
+  - Barnes and Noble: http://affiliates.barnesandnoble.com/
+- Links on those pages take me to a branded page at:
+  - Oreilly.com: https://signup.cj.com/member/signup/publisher/?cid=3812999#/branded?_k=xxbpl5
+  - barnsandnoble.com: https://signup.cj.com/member/signup/publisher/?cid=4258829#/branded?_k=qtk0x8
+- Tips for Publishers:
+  - http://www.cj.com/publisher/join
+
+Signing up at:
+
+- https://signup.cj.com/member/signup/publisher/#/?_k=iewapd
+- Minimal form: select language (En), enter first and last name, email, and done.
+- That got me an email that took me to a longer form - but not as long as the one for pbs.
+- Among other things, the Service Agreement says:
+  - I need a Privacy Policy, hmm.
+  - Account goes dormant if no activity for six months
+- Also had to sign off on:
+  - Software Policy: http://www.cj.com/legal/software-policy
+  - Privacy Policy: https://www.conversantmedia.com/legal/privacy
+- Instantly accepted, it's saying I can log in!
+
+
 

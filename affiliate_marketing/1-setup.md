@@ -74,8 +74,19 @@ Signing up at:
 - And on Hosting (not using right now)
   - Basic WP (or static) hosting runs $3.75/month
   - Consider using them for one or more sites (when gcp and aws research is done)
+- Specifying www.tomwhartung.com as my website (NOT seeourminds.com)
+  - Type: Blog
+- Disclosure: https://www.dotster.com/affiliate/ftc-disclosure.bml
+  - Disclosures must be obvious, as mandated by the FTC
+  - I.e., "frequent, clear, conspicuous, and require no scrolling or other type of user action to locate"
+- Agreement: https://www.dotster.com/affiliate/affiliateagreement.bml
+- Submitted W-9 information via secure online form
 
+TODO:
 
-
+- Review the FTC's guidlines:
+  - See file FTC-091005revisedendorsementguides.pdf in this directory
+- Review tasks in the Affiliate Console:
+  - https://www.dotster.com/controlpanel/affiliateprogram/index.bml
 
 

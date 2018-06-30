@@ -19,8 +19,6 @@ This file is for notes about using the Amazon Web Services to host tomwhartung.c
 I have been doing some research, and the process looks reasonable.
 If anything, setup is probably easier than hosting it here at home, because each instance is specialized.
 
-## Links
-
 ## Introductory Information
 
 - AWS free tier landing page: https://aws.amazon.com/free/
@@ -37,7 +35,6 @@ If anything, setup is probably easier than hosting it here at home, because each
 - Getting started with Linux instances: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 - Remote Management of instances: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/tutorial_run_command.html
 
-
 ## This Looks Like What I Ultimately Want to Do:
 
 - Wordpress Blog on Amazon Linux: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hosting-wordpress.html
@@ -50,4 +47,16 @@ If anything, setup is probably easier than hosting it here at home, because each
 - Tracking free tier usage: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/tracking-free-tier-usage.html
 - Running commands remotely: https://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html
 - About Elastic IP Addresses: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html
+
+# Process
+
+Following is the proposed process to use, going forward:
+
+[X] 1. Research AWS and assess feasibility
+[ ] 2. Try out some very simple, basic, introductory tutorials
+[ ] 3. Do the Wordpress Blog on Amazon Linux tutorial
+[ ] 4. Assess whether we want to do this for tomwhartung.com
+[ ]    4.1 Backup idea: Maybe host tomhartung.com or joomoowebsites.com instead of, or in addition to, tomwhartung.com
+[ ] 5. Proceed, or not, as decided
+[ ] 6. Compare process, free tier, resulting site maintenance required, etc. of AWS to GCP
 

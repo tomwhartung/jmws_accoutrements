@@ -11,6 +11,8 @@ Setting up some affiliate marketing on a couple sites, let's see what happens.
 
 ### affiliates-pbs:
 
+Signing up at:
+
 - https://shop.pbs.org/affiliate-program
 - Uses the Pepperjam Network
 - Gave them SSN (NOT JooMoo Websites company id)
@@ -30,6 +32,8 @@ TODO:
 - Fill out W-9 form and fax to 877-286-4889
 
 ### affiliates-cj:
+
+Notes - on how we got here:
 
 - CJ Affiliate: Formerly Commission Junction
   - Home page: http://www.cj.com/
@@ -56,6 +60,22 @@ Signing up at:
   - Software Policy: http://www.cj.com/legal/software-policy
   - Privacy Policy: https://www.conversantmedia.com/legal/privacy
 - Instantly accepted, it's saying I can log in!
+
+TODO:
+
+- See the email they sent with a list of stuff TODO
+
+### affiliates-dotster:
+
+Signing up at:
+
+- https://www.dotster.com/affiliate/gettingstarted.bml
+- Offers commissions on Domains (which I am using)
+- And on Hosting (not using right now)
+  - Basic WP (or static) hosting runs $3.75/month
+  - Consider using them for one or more sites (when gcp and aws research is done)
+
+
 
 
 

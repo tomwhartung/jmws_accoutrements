@@ -36,9 +36,11 @@ TODO:
 - Used by:
   - O'Reilly Books: https://www.oreilly.com/affiliates/
   - Barnes and Noble: http://affiliates.barnesandnoble.com/
+  - Petco: https://www.petco.com/affiliate
 - Links on those pages take me to a branded page at:
-  - Oreilly.com: https://signup.cj.com/member/signup/publisher/?cid=3812999#/branded?_k=xxbpl5
-  - barnsandnoble.com: https://signup.cj.com/member/signup/publisher/?cid=4258829#/branded?_k=qtk0x8
+  - Oreilly.com:       https://signup.cj.com/member/signup/publisher/?cid=3812999#/branded?_k=xxbpl5
+  - Barnsandnoble.com: https://signup.cj.com/member/signup/publisher/?cid=4258829#/branded?_k=qtk0x8
+  - Petco.com:         https://signup.cj.com/member/signup/publisher/?cid=1711708#/branded?_k=ndbjmx
 - Tips for Publishers:
   - http://www.cj.com/publisher/join
 

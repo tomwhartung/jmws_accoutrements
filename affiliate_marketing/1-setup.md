@@ -11,6 +11,8 @@ Setting up some affiliate marketing on a couple sites, let's see what happens.
 
 ### affiliates-pbs:
 
+Signing up at:
+
 - https://shop.pbs.org/affiliate-program
 - Uses the Pepperjam Network
 - Gave them SSN (NOT JooMoo Websites company id)
@@ -31,14 +33,18 @@ TODO:
 
 ### affiliates-cj:
 
+Notes - on how we got here:
+
 - CJ Affiliate: Formerly Commission Junction
   - Home page: http://www.cj.com/
 - Used by:
   - O'Reilly Books: https://www.oreilly.com/affiliates/
   - Barnes and Noble: http://affiliates.barnesandnoble.com/
+  - Petco: https://www.petco.com/affiliate
 - Links on those pages take me to a branded page at:
-  - Oreilly.com: https://signup.cj.com/member/signup/publisher/?cid=3812999#/branded?_k=xxbpl5
-  - barnsandnoble.com: https://signup.cj.com/member/signup/publisher/?cid=4258829#/branded?_k=qtk0x8
+  - Oreilly.com:       https://signup.cj.com/member/signup/publisher/?cid=3812999#/branded?_k=xxbpl5
+  - Barnsandnoble.com: https://signup.cj.com/member/signup/publisher/?cid=4258829#/branded?_k=qtk0x8
+  - Petco.com:         https://signup.cj.com/member/signup/publisher/?cid=1711708#/branded?_k=ndbjmx
 - Tips for Publishers:
   - http://www.cj.com/publisher/join
 
@@ -55,5 +61,32 @@ Signing up at:
   - Privacy Policy: https://www.conversantmedia.com/legal/privacy
 - Instantly accepted, it's saying I can log in!
 
+TODO:
+
+- See the email they sent with a list of stuff TODO
+
+### affiliates-dotster:
+
+Signing up at:
+
+- https://www.dotster.com/affiliate/gettingstarted.bml
+- Offers commissions on Domains (which I am using)
+- And on Hosting (not using right now)
+  - Basic WP (or static) hosting runs $3.75/month
+  - Consider using them for one or more sites (when gcp and aws research is done)
+- Specifying www.tomwhartung.com as my website (NOT seeourminds.com)
+  - Type: Blog
+- Disclosure: https://www.dotster.com/affiliate/ftc-disclosure.bml
+  - Disclosures must be obvious, as mandated by the FTC
+  - I.e., "frequent, clear, conspicuous, and require no scrolling or other type of user action to locate"
+- Agreement: https://www.dotster.com/affiliate/affiliateagreement.bml
+- Submitted W-9 information via secure online form
+
+TODO:
+
+- Review the FTC's guidlines:
+  - See file FTC-091005revisedendorsementguides.pdf in this directory
+- Review tasks in the Affiliate Console:
+  - https://www.dotster.com/controlpanel/affiliateprogram/index.bml
 
 

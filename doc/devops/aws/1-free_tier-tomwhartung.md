@@ -52,11 +52,11 @@ If anything, setup is probably easier than hosting it here at home, because each
 
 Following is the proposed process to use, going forward:
 
-[X] 1. Research AWS and assess feasibility
-[ ] 2. Try out some very simple, basic, introductory tutorials
-[ ] 3. Do the Wordpress Blog on Amazon Linux tutorial
-[ ] 4. Assess whether we want to do this for tomwhartung.com
-[ ]    4.1 Backup idea: Maybe host tomhartung.com or joomoowebsites.com instead of, or in addition to, tomwhartung.com
-[ ] 5. Proceed, or not, as decided
-[ ] 6. Compare process, free tier, resulting site maintenance required, etc. of AWS to GCP
+- [X] 1. Research AWS and assess feasibility
+- [ ] 2. Try out some very simple, basic, introductory tutorials
+- [ ] 3. Do the Wordpress Blog on Amazon Linux tutorial
+- [ ] 4. Assess whether we want to do this for tomwhartung.com
+- [ ]    4.1 Backup idea: Maybe host tomhartung.com or joomoowebsites.com instead of, or in addition to, tomwhartung.com
+- [ ] 5. Proceed, or not, as decided
+- [ ] 6. Compare process, free tier, resulting site maintenance required, etc. of AWS to GCP
 

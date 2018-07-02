@@ -6,6 +6,10 @@ Setting up some affiliate marketing on a couple sites, let's see what happens.
 ## References
 
 - https://www.wikihow.com/Make-Money-With-Amazon-Affiliate-Program
+- https://www.wikihow.com/Become-an-Amazon-Associate
+- https://gedground.com/is-affiliate-marketing-dead/
+- http://www.azam.info/how-to-make-money-performance-affiliate-marketing/
+- http://www.azam.net/best-affiliate-programs/
 
 ## Starting Points
 
@@ -88,5 +92,4 @@ TODO:
   - See file FTC-091005revisedendorsementguides.pdf in this directory
 - Review tasks in the Affiliate Console:
   - https://www.dotster.com/controlpanel/affiliateprogram/index.bml
-
 

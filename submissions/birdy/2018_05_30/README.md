@@ -18,6 +18,7 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 - [X] - Upper case "X" - Done, but worth re-reading before submitting
 - [x] - Lower case "x" - Complete, but definitely requires review before submitting
 - [-] - Dash - Article has at least a solid start, it's an expanded outline or close to complete, or at best may need only a nice ending
+- [.] - Dot - Article has at least the outline expanded at least a little bit
 - [ ] - Blank - Images, titles, and boiler plate are done **before** adding the article to the checklist
 
 ## Checklist:
@@ -29,11 +30,11 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 - [X] 05-fawlty_towers (398 words)
 - [x] 06-original_star_trek (733 words) - done but review before submitting
 - [x] 07-grey_gardens (894 words) - done but review before submitting
-- [ ] 08-the_roosevelts
+- [-] 08-the_roosevelts
 - [-] 09-trixie_and_shea
 - [x] 10-star_wars-droids (794 words) - a good chance to try out the singular they, but it sounds awkward with singular verbs, hmm...
-- [ ] 11-citizen_kane-donald_trump
-- [ ] 12-tywin_lannister-tony_soprano
+- [-] 11-citizen_kane-donald_trump
+- [.] 12-tywin_lannister-tony_soprano
 - [ ] XX-sam_and_diane
 - [ ] XX-lilith_and_norm
 

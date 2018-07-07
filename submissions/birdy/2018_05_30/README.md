@@ -35,8 +35,8 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 - [x] 10-star_wars-droids (794 words) - a good chance to try out the singular they, but it sounds awkward with singular verbs, hmm...
 - [-] 11-citizen_kane-donald_trump
 - [.] 12-tywin_lannister-tony_soprano
-- [ ] XX-sam_and_diane
-- [ ] XX-lilith_and_norm
+- [x] XX-sam_and_diane
+- [-] XX-lilith_and_norm
 
 
 # More Ideas - To Think About, Hmmmm....

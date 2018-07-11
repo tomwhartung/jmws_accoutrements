@@ -36,7 +36,7 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 - [-] 11-citizen_kane-donald_trump
 - [.] 12-tywin_lannister-tony_soprano
 - [x] XX-sam_and_diane
-- [-] XX-lilith_and_norm
+- [x] XX-lilith_and_norm
 
 
 # More Ideas - To Think About, Hmmmm....

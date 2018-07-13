@@ -13,28 +13,6 @@ Setting up some affiliate marketing on a couple sites, let's see what happens.
 
 ## Starting Points
 
-### affiliates-pbs:
-
-Signing up at:
-
-- https://shop.pbs.org/affiliate-program
-- Uses the Pepperjam Network
-- Gave them SSN (NOT JooMoo Websites company id)
-- Checked these "Promotional Methods" (not completely sure what that means though)
-  - Web Site/Content
-  - Coupon / Value Proposition
-  - Incentive (cannot be changed)
-  - Social Shopping
-  - Retargeting & Remarketing
-  - Blog
-  - Direct Link (cannot be changed)
-
-- Registration formcompleted Fri. 6/29/2018
-
-TODO:
-
-- Fill out W-9 form and fax to 877-286-4889
-
 ### affiliates-cj:
 
 Notes - on how we got here:
@@ -92,4 +70,18 @@ TODO:
   - See file FTC-091005revisedendorsementguides.pdf in this directory
 - Review tasks in the Affiliate Console:
   - https://www.dotster.com/controlpanel/affiliateprogram/index.bml
+
+### affiliates-amazon:
+
+Signing up at:
+
+
+TODO:
+
+### affiliates-xxx:
+
+Signing up at:
+
+
+TODO:
 

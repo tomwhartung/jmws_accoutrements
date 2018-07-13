@@ -26,7 +26,7 @@ Word counts are for the article ONLY, and do not include the titles or footnotes
 - [X] 01-x_files (661 words)
 - [X] 02-star_wars-leia_and_han (802 words)
 - [X] 03-jfk_lbj (796 words)
-- [X] 04-kitties (808 words) - may want to add photos?
+- [X] 04-mildred_and_zeronimo (808 words) - may want to add photos?
 - [X] 05-fawlty_towers (398 words)
 - [x] 06-original_star_trek (733 words) - done but review before submitting
 - [x] 07-grey_gardens (894 words) - done but review before submitting

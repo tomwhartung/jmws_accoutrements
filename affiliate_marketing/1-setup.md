@@ -93,3 +93,17 @@ TODO:
 - Review tasks in the Affiliate Console:
   - https://www.dotster.com/controlpanel/affiliateprogram/index.bml
 
+### affiliates-amazon:
+
+Signing up at:
+
+
+TODO:
+
+### affiliates-xxx:
+
+Signing up at:
+
+
+TODO:
+

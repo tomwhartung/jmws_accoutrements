@@ -7,8 +7,8 @@ Yikes (I could get sued) and hmm (more stuff to learn about) and ugh (legalese, 
 
 ## Requirements
 
-- Privacy Policy must be general yet specific enough to use on any of my sites
-- The Policy should allow for:
+- Privacy Policy (PP) must be general yet specific enough to use on any of my sites
+- The PP should allow for:
   - Displaying AdSense ads
   - Selling (or giving away) images
   - Affiliate marketing
@@ -22,6 +22,27 @@ Yikes (I could get sued) and hmm (more stuff to learn about) and ugh (legalese, 
 - WikiHow page: https://www.wikihow.com/Create-a-Website-Privacy-Policy
 - WikiHow sample: https://www.wikihow.com/Sample/WikiHow-Privacy-Policy
 - WikiHow page: https://www.wikihow.com/Make-Terms-and-Conditions-and-Privacy-Policies-for-a-Business
+
+### Informative Pages
+
+These explain why I should have both the PP and the ToS and how to ensure users are aware of them.
+
+- https://termsfeed.com/blog/privacy-policies-vs-terms-conditions/
+- https://termsfeed.com/blog/examples-click-accept/
+
+More specific articles - these are all fairly long:
+
+- PP concerns for Google Analytics: https://termsfeed.com/blog/privacy-policy-google-analytics/
+- CA Online Privacy Protection Act: https://termsfeed.com/blog/caloppa/
+- History of legislation in the EU: https://termsfeed.com/blog/eu-privacy-policy/
+- The EU cookies directive: https://termsfeed.com/blog/eu-cookies-directive/
+- About the latest EU legislation:
+  - General info: https://termsfeed.com/blog/gdpr/
+  - PP implications: https://termsfeed.com/blog/gdpr-privacy-policy/
+  - Creating the notice: https://termsfeed.com/blog/gdpr-notice/
+
+Importantly: "Unless you can absolutely guarantee that no users from the EU will ever find their way to your website,
+you’ll need a GDPR notice and compliant consent measures."  (From the last link in the above list.)
 
 
 ## My General Yet Specific Privacy Policy

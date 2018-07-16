@@ -44,8 +44,25 @@ More specific articles - these are all fairly long:
 Importantly: "Unless you can absolutely guarantee that no users from the EU will ever find their way to your website,
 you’ll need a GDPR notice and compliant consent measures."  (From the last link in the above list.)
 
+### Ones to Try:
 
-## My General Yet Specific Privacy Policy
+- Simple, try first (#10 on list): https://getterms.io/
+- Popular in search results (#6 on list): https://www.iubenda.com/
+- Site has good articles about PP and ToS (#3 on list): https://termsfeed.com/
+
+## Simple, First Try: https://getterms.io/
+
+
+
+## Get a Second Opinion: https://www.iubenda.com/
+
+
+
+## Third Version From Site With Nice Blog: https://termsfeed.com/
+
+
+
+## Combined General Yet Specific Privacy Policy
 
 
 

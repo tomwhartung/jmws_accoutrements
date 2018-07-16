@@ -37,7 +37,25 @@ More specific articles - these are all fairly long (and already appear in the li
   - General info: https://termsfeed.com/blog/gdpr/
   - Creating the notice: https://termsfeed.com/blog/gdpr-notice/
 
-## My General Yet Specific Terms of Service
+### Ones to Try:
+
+- Simple, try first (#10 on list): https://getterms.io/
+- Popular in search results (#6 on list): https://www.iubenda.com/
+- Site has good articles about PP and ToS (#3 on list): https://termsfeed.com/
+
+## Simple, First Try: https://getterms.io/
+
+
+
+## Get a Second Opinion: https://www.iubenda.com/
+
+
+
+## Third Version From Site With Nice Blog: https://termsfeed.com/
+
+
+
+## Combined General Yet Specific Terms of Service
 
 
 

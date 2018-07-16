@@ -8,8 +8,8 @@ Yikes (I could get sued) and hmm (more stuff to learn about) and ugh (legalese, 
 
 ## Requirements
 
-- The Terms of Service must be general yet specific enough to use on any of my sites
-- The Terms of Service should allow for:
+- The Terms of Service (ToS) must be general yet specific enough to use on any of my sites
+- The ToS should allow for:
   - Displaying AdSense ads
   - Selling (or giving away) images
   - Affiliate marketing
@@ -21,6 +21,21 @@ Yikes (I could get sued) and hmm (more stuff to learn about) and ugh (legalese, 
 - Picking a few from this page: https://digital.com/blog/best-privacy-policy-generators/
 - WikiHow page: https://www.wikihow.com/Make-Terms-and-Conditions-and-Privacy-Policies-for-a-Business
 
+### Informative Pages
+
+These explain why I should have both the PP and the ToS and how to ensure users are aware of them.
+
+- https://termsfeed.com/blog/privacy-policies-vs-terms-conditions/
+- https://termsfeed.com/blog/examples-click-accept/
+
+More specific articles - these are all fairly long (and already appear in the list in 2-privacy_policy.md ):
+
+- CA Online Privacy Protection Act: https://termsfeed.com/blog/caloppa/
+- History of legislation in the EU: https://termsfeed.com/blog/eu-privacy-policy/
+- The EU cookies directive: https://termsfeed.com/blog/eu-cookies-directive/
+- About the latest EU legislation:
+  - General info: https://termsfeed.com/blog/gdpr/
+  - Creating the notice: https://termsfeed.com/blog/gdpr-notice/
 
 ## My General Yet Specific Terms of Service
 

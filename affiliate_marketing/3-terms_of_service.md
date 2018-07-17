@@ -20,6 +20,7 @@ Yikes (I could get sued) and hmm (more stuff to learn about) and ugh (legalese, 
 
 - Picking a few from this page: https://digital.com/blog/best-privacy-policy-generators/
 - WikiHow page: https://www.wikihow.com/Make-Terms-and-Conditions-and-Privacy-Policies-for-a-Business
+  - From Part 1, Step 3: "All companies selling products will need to include a return, refund and loss provision."
 
 ### Informative Pages
 

@@ -27,8 +27,13 @@ Yikes (I could get sued) and hmm (more stuff to learn about) and ugh (legalese, 
 
 These explain why I should have both the PP and the ToS and how to ensure users are aware of them.
 
+- https://termsfeed.com/blog/privacy-policy-mandatory-law/
 - https://termsfeed.com/blog/privacy-policies-vs-terms-conditions/
 - https://termsfeed.com/blog/examples-click-accept/
+  - "Browsewrap methods are typically held to be unenforceable in courts because they aren’t conspicuous enough."
+- What clickwrap is and why it is better, and related best practices:
+  - Long with many examples: https://termsfeed.com/blog/browsewrap-clickwrap/
+  - Bottom line: https://termsfeed.com/blog/browsewrap-clickwrap/#Best_practices
 
 More specific articles - these are all fairly long:
 
@@ -40,6 +45,7 @@ More specific articles - these are all fairly long:
   - General info: https://termsfeed.com/blog/gdpr/
   - PP implications: https://termsfeed.com/blog/gdpr-privacy-policy/
   - Creating the notice: https://termsfeed.com/blog/gdpr-notice/
+  - Creating a compliance plan: https://termsfeed.com/blog/gdpr-compliance-plan/
 
 Importantly: "Unless you can absolutely guarantee that no users from the EU will ever find their way to your website,
 you’ll need a GDPR notice and compliant consent measures."  (From the last link in the above list.)

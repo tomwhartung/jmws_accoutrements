@@ -46,7 +46,7 @@ More specific articles - these are all fairly long (and already appear in the li
 
 ## Simple, First Try: https://getterms.io/
 
-
+- Generated terms along with the privacy policy (see the file with those notes)
 
 ## Get a Second Opinion: https://www.iubenda.com/
 

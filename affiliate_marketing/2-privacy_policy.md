@@ -52,9 +52,12 @@ you’ll need a GDPR notice and compliant consent measures."  (From the last lin
 
 ### Ones to Try:
 
-- Simple, try first (#10 on list): https://getterms.io/
-- Popular in search results (#6 on list): https://www.iubenda.com/
-- Site has good articles about PP and ToS (#3 on list): https://termsfeed.com/
+- Simple, try first (#10 on list):
+  - https://getterms.io/
+- Popular in search results (#6 on list):
+  - https://www.iubenda.com/
+- Site has good articles about PP and ToS (#3 on list):
+  - https://termsfeed.com/
 
 ## Simple, First Try: https://getterms.io/
 
@@ -63,16 +66,54 @@ you’ll need a GDPR notice and compliant consent measures."  (From the last lin
   - Company name
   - State or Location
   - Policy effective date
-- Generated terms along with the privacy policy
+- Used default "website" option to generate both the privacy policy and terms
+  - 2-privacy_policy-1-getterms_io-website.html
+  - 2-privacy_policy-1-getterms_io-website.txt
+  - 3-terms_of_service-1-getterms_io-website.html
+  - 3-terms_of_service-1-getterms_io-website.txt
 - It is very minimal but better than nothing
   - They openly claim it is only a starting point
   - Their policy is much more extensive: https://getterms.io/privacy/
+- Tried creating both the policy and the terms using the "blog" option, but got only terms (no policy)
+  - 3-terms_of_service-1-getterms_io-blog.html
+  - 3-terms_of_service-1-getterms_io-blog.txt
 - Other options: Custom: $5; Comprehensive: $15
 - Rest of site: nothing I haven't already seen on WikiHow, etc.
 
 ## Get a Second Opinion: https://www.iubenda.com/
 
+### Their notice:
 
+This notice appears on their website:
+
+> This website or its third-party tools use cookies, which are necessary to its functioning and required to
+> achieve the purposes illustrated in the cookie policy. If you want to know more or withdraw your consent to
+> all or some of the cookies, please refer to the cookie policy.
+> By closing this banner, scrolling this page, clicking a link or continuing to browse otherwise, you agree to the use of cookies.
+
+I like the last line in particular:
+
+> By closing this banner, scrolling this page, clicking a link or continuing to browse otherwise, you agree to the use of cookies.
+
+### Notes:
+
+- Site is extensive and has a lot of information
+- Had to create an account
+- For some services, must upgrade to Pro: $27/yr (and up)
+- Services:
+  - Mailing list, under "Contacting the User" on the left: added ok
+  - Google Tag Manager, under "Tag Management" on the left: added ok
+  - Contact form, under "Most frequent services" on the right and "Contacting the User" on the left: added ok
+  - Google AdSense: must upgrade to Pro
+  - Google Analytics, under "Analytics," on the left: must upgrade to Pro (?!?)
+  - Google Analytics, under "Most frequent services," on the right: added ok (?!?)
+  - Paypal, under "Handling payments" on the left: must upgrade to Pro
+  - Under "Most frequent services" there are Fb, twitter, linkedin, etc.: NOT adding these (do not see a reason to)
+- Summary of Services added: Contact form, Google Analytics, Google Tag Manager, Mailing list
+- Generated simplified and complete versions:
+  - 2-privacy_policy-2-iubenda_com-complete.txt
+  - 2-privacy_policy-2-iubenda_com-simplified.txt
+- No option to generate terms
 
 ## Third Version From Site With Nice Blog: https://termsfeed.com/
 

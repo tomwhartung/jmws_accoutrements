@@ -58,7 +58,17 @@ you’ll need a GDPR notice and compliant consent measures."  (From the last lin
 
 ## Simple, First Try: https://getterms.io/
 
-
+- Very short form to fill out:
+  - Website address
+  - Company name
+  - State or Location
+  - Policy effective date
+- Generated terms along with the privacy policy
+- It is very minimal but better than nothing
+  - They openly claim it is only a starting point
+  - Their policy is much more extensive: https://getterms.io/privacy/
+- Other options: Custom: $5; Comprehensive: $15
+- Rest of site: nothing I haven't already seen on WikiHow, etc.
 
 ## Get a Second Opinion: https://www.iubenda.com/
 

@@ -61,6 +61,7 @@ you’ll need a GDPR notice and compliant consent measures."  (From the last lin
 
 ## Simple, First Try: https://getterms.io/
 
+- Using seeourminds.com
 - Very short form to fill out:
   - Website address
   - Company name
@@ -97,6 +98,7 @@ I like the last line in particular:
 
 ### Notes:
 
+- Using seeourminds.com
 - Site is extensive and has a lot of information
 - Had to create an account
 - For some services, must upgrade to Pro: $27/yr (and up)
@@ -115,9 +117,25 @@ I like the last line in particular:
   - 2-privacy_policy-2-iubenda_com-simplified.txt
 - No option to generate terms
 
-## Third Version From Site With Nice Blog: https://termsfeed.com/
+## Third Version From the Site With the Nice Blog: https://termsfeed.com/
 
-
+- Using tomwhartung.com
+  - Choosing individual option (business option costs $14)
+- Choosing the NOT sending email option, sending emails costs $9
+- Choosing the NOT charging for services option, charging for services option costs $9
+- Choosing the Show Ads option (no cost)
+  - Choosing Bing Ads, Google AdSense costs $7
+- Choosing the NOT using Analytics option, Google Analytics costs $14
+- NOT choosing the using Adsense option, Google Adsense costs $7
+- NOT choosing the GDPR compliance option, GDPR compliance costs $24
+- NOT choosing the CalOPPA compliance option, GDPR compliance costs $14
+- Gave them phone number and email (webmaster@example.com) so they can send it
+- They want you to link to a copy on their site, so they can update it if they need to
+  - https://termsfeed.com/privacy-policy/7386c79eaae9ae7d364349ad0e6b28e6
+- Downloaded it all four formats:
+  -
+- Their privacy policy: https://termsfeed.com/legal/privacy-policy
+- Their terms of use: https://termsfeed.com/legal/terms-of-use
 
 ## Combined General Yet Specific Privacy Policy
 

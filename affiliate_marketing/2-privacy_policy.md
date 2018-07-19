@@ -59,7 +59,7 @@ you’ll need a GDPR notice and compliant consent measures."  (From the last lin
 - Site has good articles about PP and ToS (#3 on list):
   - https://termsfeed.com/
 
-## Simple, First Try: https://getterms.io/
+## 1 - Simple, First Try: https://getterms.io/
 
 - Using seeourminds.com
 - Very short form to fill out:
@@ -81,7 +81,7 @@ you’ll need a GDPR notice and compliant consent measures."  (From the last lin
 - Other options: Custom: $5; Comprehensive: $15
 - Rest of site: nothing I haven't already seen on WikiHow, etc.
 
-## Get a Second Opinion: https://www.iubenda.com/
+## 2 - Get a Second Opinion: https://www.iubenda.com/
 
 ### Their notice:
 
@@ -117,10 +117,10 @@ I like the last line in particular:
   - 2-privacy_policy-2-iubenda_com-simplified.txt
 - No option to generate terms
 
-## Third Version From the Site With the Nice Blog: https://termsfeed.com/
+## 3 - Third Version From the Site With the Nice Blog: https://termsfeed.com/
 
 - Using tomwhartung.com
-  - Choosing individual option (business option costs $14)
+  - Choosing individual option, business option costs $14
 - Choosing the NOT sending email option, sending emails costs $9
 - Choosing the NOT charging for services option, charging for services option costs $9
 - Choosing the Show Ads option (no cost)
@@ -133,9 +133,15 @@ I like the last line in particular:
 - They want you to link to a copy on their site, so they can update it if they need to
   - https://termsfeed.com/privacy-policy/7386c79eaae9ae7d364349ad0e6b28e6
 - Downloaded it all four formats:
-  -
+  - `2-privacy_policy-3-termsfeed_com.docx`
+  - `2-privacy_policy-3-termsfeed_com.html`
+  - `2-privacy_policy-3-termsfeed_com.pdf`
+  - `2-privacy_policy-3-termsfeed_com.txt`
 - Their privacy policy: https://termsfeed.com/legal/privacy-policy
+  - Might make a good outline for the final product
 - Their terms of use: https://termsfeed.com/legal/terms-of-use
+- Their disclaimer: https://termsfeed.com/legal/disclaimer
+  - Something similar to this would be good to have for the quiz
 
 ## Combined General Yet Specific Privacy Policy
 

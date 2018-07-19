@@ -2,11 +2,11 @@ Privacy Policy of seeourminds.com
 This Application collects some Personal Data from its Users.
 
 Owner and Data Controller
-JooMoo WebSites LLC 
-2075 Emerson Street 
+JooMoo WebSites LLC
+2075 Emerson Street
 Denver, CO 80205
 
-Owner contact email: iubenda@tomwhartung.com
+Owner contact email: iubenda@example.com
 
 Types of Data collected
 Among the types of Personal Data that this Application collects, by itself or through third parties, there are: email address, first name, last name, Cookies and Usage Data.

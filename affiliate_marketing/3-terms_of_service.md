@@ -44,15 +44,35 @@ More specific articles - these are all fairly long (and already appear in the li
 - Popular in search results (#6 on list): https://www.iubenda.com/
 - Site has good articles about PP and ToS (#3 on list): https://termsfeed.com/
 
-## Simple, First Try: https://getterms.io/
+## 1 - Simple, First Try: https://getterms.io/
 
 - Generated terms along with the privacy policy (see the file with those notes)
+- Tried creating policy and terms using the "blog" option, but got only terms (no policy)
 
-## Get a Second Opinion: https://www.iubenda.com/
+## 2 - Get a Second Opinion: https://www.iubenda.com/
+
+- No option to generate terms
+
+## 3 - Third Version From the Site With the Nice Blog: https://termsfeed.com/
+
+- Using tomwhartung.com
+  - Choosing individual option, business option costs $7
+- Forms are fairly similar to those used for the privacy policy
+- Choosing the DON'T sell products option, selling products costs $9
+- Choosing to NOT make it clear I own the content, that costs $12
+- Choosing to NOT limit the liability, using "AS IS" and "AS AVAILABLE," that costs $12
+- Downloaded it all four formats:
+  - `3-terms_of_service-3-termsfeed_com.docx`
+  - `3-terms_of_service-3-termsfeed_com.html`
+  - `3-terms_of_service-3-termsfeed_com.pdf`
+  - `3-terms_of_service-3-termsfeed_com.txt`
+- Their privacy policy: https://termsfeed.com/legal/privacy-policy
+  - Might make a good outline for the final product
+- Their terms of use: https://termsfeed.com/legal/terms-of-use
+- Their disclaimer: https://termsfeed.com/legal/disclaimer
+  - Something similar to this would be good to have for the quiz
 
 
-
-## Third Version From Site With Nice Blog: https://termsfeed.com/
 
 
 

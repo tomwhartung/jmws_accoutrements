@@ -163,6 +163,36 @@ I like the last line in particular:
 - Their disclaimer: https://termsfeed.com/legal/disclaimer
   - Something similar to this would be good to have for the quiz
 
+## 4 - First on List Is Run by Same People Who Created the List: https://privacypolicies.com/
+
+- The documents they use look to be simple and well-organized, should be good examples:
+  - Privacy Policy: https://privacypolicies.com/legal/privacy-policy
+  - Terms and Conditions: https://privacypolicies.com/legal/terms-and-conditions
+  - Disclaimer: https://privacypolicies.com/legal/disclaimer
+- Free version includes Google Analytics and Cookies Consent, but NOT Google AdSense
+  - Paid versions: $39 for GDPR compliance, $49 for international (CalOPPA) compliance
+- Creating the free version:
+  - Choosing business (still free)
+  - Using seeourminds.com
+  - Yes: Sending emails (name and email address)
+  - No: Asking for GPS data
+  - Yes: Using Google Analytics
+  - For questions they may use: Email (webmaster@example.com), Phone, or Snail Mail
+- Results:
+  - 2-privacy_policy-4-privacypolicies_com.html
+  - 2-privacy_policy-4-privacypolicies_com.txt
+  - Link: https://privacypolicies.com/privacy/view/87b2718ea55f3c4b6209b1ce54673886
+- Overall: seems decent, having a clause for Google Analytics is nice
+
+## 5 - Covers Commission Junction and AdSense: http://www.privacypolicyonline.com/
+
+
+## 6 - Liking the Idea of it Being Free: https://www.freeprivacypolicy.com/
+
+
+## 7 - Offers a Seal, Probably Not for Free: https://www.trust-guard.com/
+
+
 ## Combined General Yet Specific Privacy Policy
 
 

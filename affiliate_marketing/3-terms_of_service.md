@@ -38,11 +38,34 @@ More specific articles - these are all fairly long (and already appear in the li
   - General info: https://termsfeed.com/blog/gdpr/
   - Creating the notice: https://termsfeed.com/blog/gdpr-notice/
 
-### Ones to Try:
+## Process
 
-- Simple, try first (#10 on list): https://getterms.io/
-- Popular in search results (#6 on list): https://www.iubenda.com/
-- Site has good articles about PP and ToS (#3 on list): https://termsfeed.com/
+1. Try a bunch of the generators
+2. Pick the best and closest one to start with
+3. Add in any updates needed from the other ones
+4. Customize further if needed
+
+### Sites to Use:
+
+Doing this first batch made me decide to do more:
+
+- Simple, try first - #10 on list:
+  - https://getterms.io/
+- Popular in search results - #6 on list:
+  - https://www.iubenda.com/
+- Site has good articles about PP and ToS - #3 on list:
+  - https://termsfeed.com/
+
+After doing those, decided to review the list again and try a few more:
+
+- #1 on list - run by same people who created the list
+  - https://privacypolicies.com/
+- #4 on list - being on a strict budget, I like the idea of it being free
+  - https://www.freeprivacypolicy.com/
+- #5 on list - covers Commission Junction and AdSense
+  - http://www.privacypolicyonline.com/
+- #7 on list - offers a seal
+  - https://www.trust-guard.com/
 
 ## 1 - Simple, First Try: https://getterms.io/
 

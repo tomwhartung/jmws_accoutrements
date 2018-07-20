@@ -49,23 +49,25 @@ More specific articles - these are all fairly long (and already appear in the li
 
 Doing this first batch made me decide to do more:
 
-- Simple, try first - #10 on list:
+1. Simple, try first - #10 on list:
   - https://getterms.io/
-- Popular in search results - #6 on list:
+2. Popular in search results - #6 on list:
   - https://www.iubenda.com/
-- Site has good articles about PP and ToS - #3 on list:
+3. Site has good articles about PP and ToS - #3 on list:
   - https://termsfeed.com/
 
 After doing those, decided to review the list again and try a few more:
 
-- #1 on list - run by same people who created the list
+4. #1 on list - run by same people who created the list
   - https://privacypolicies.com/
-- #4 on list - being on a strict budget, I like the idea of it being free
+5. #4 on list - being on a strict budget, I like the idea of it being free
   - https://www.freeprivacypolicy.com/
-- #5 on list - covers Commission Junction and AdSense
+6. #5 on list - covers Commission Junction and AdSense
   - http://www.privacypolicyonline.com/
-- #7 on list - offers a seal
-  - https://www.trust-guard.com/
+7. Not on list - found in another search
+  - https://www.volusion.com/v2/tools/privacy-policy
+8. Not on list - found in another search
+  - https://termly.io/privacy-policy/privacy-policy-generator/
 
 ## 1 - Simple, First Try: https://getterms.io/
 
@@ -112,12 +114,18 @@ After doing those, decided to review the list again and try a few more:
   - Judging by the options, and just glancing at the results, looks decent
   - Looks like the site originator is in a situation much like mine
 
-
 ## 6 - Liking the Idea of it Being Free: https://www.freeprivacypolicy.com/
 
+- There is NO option to create a terms page at freeprivacypolicy.com
+- The site, and especially the results page, looks very much like what we saw at privacypolicies.com
 
-## 7 - Offers a Seal, Probably Not for Free: https://www.trust-guard.com/
+## 7. Found in another search
 
+- https://www.volusion.com/v2/tools/privacy-policy
+
+## 8. Found in another search
+
+- https://termly.io/privacy-policy/privacy-policy-generator/
 
 
 

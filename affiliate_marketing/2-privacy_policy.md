@@ -182,6 +182,19 @@ I like the last line in particular:
   - 2-privacy_policy-4-privacypolicies_com.html
   - 2-privacy_policy-4-privacypolicies_com.txt
   - Link: https://privacypolicies.com/privacy/view/87b2718ea55f3c4b6209b1ce54673886
+- Cookie Consent:
+  - GDPR option: Changes text of button they need to click from "Ok" to "I Agree"
+  - Choosing "See Our Minds," Headline Dialog, Dark color palette
+  - DOM selector, so they can change their preferences: "#changePreferences"
+  - URL for Cookies Policy: https://www.seeourminds.com/legal/cookies-policy
+  - Levels of Cookie Consent - must copy-and-paste javascript to set this up, so doing only GA right now
+- Levels of Cookie Consent (NOT doing this right now, but food for thought):
+  - Strictly necessary (ie. account login related cookies)
+  - Functionality (ie. remembering users choices)
+  - Tracking and performance (ie. Google Analytics)
+  - Targeting and advertising (ie. Google AdSense, Google AdWords)
+- Cookie consent results in:
+  - 2-privacy_policy-4-privacypolicies_com-cookie_consent.html
 - Overall: seems decent, having a clause for Google Analytics is nice
 
 ## 5 - Covers Commission Junction and AdSense: http://www.privacypolicyonline.com/

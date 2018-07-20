@@ -181,8 +181,8 @@ I like the last line in particular:
   - Yes: Using Google Analytics
   - For questions they may use: Email (webmaster@example.com), Phone, or Snail Mail
 - Results:
-  - 2-privacy_policy-4-privacypolicies_com.html
-  - 2-privacy_policy-4-privacypolicies_com.txt
+  - `2-privacy_policy-4-privacypolicies_com.html`
+  - `2-privacy_policy-4-privacypolicies_com.txt`
   - Link to results: https://privacypolicies.com/privacy/view/87b2718ea55f3c4b6209b1ce54673886
 - Cookie Consent:
   - GDPR option: Changes text of button they need to click from "Ok" to "I Agree"
@@ -210,8 +210,8 @@ I like the last line in particular:
   - Contact: webmaster@example.com
   - Selecting advertisers: AdSense, Amazon, Commission Junction, and Share a Sale
 - Results:
-  - 2-privacy_policy-5-privacypoliciesonline_com.html
-  - 2-privacy_policy-5-privacypoliciesonline_com.txt
+  - `2-privacy_policy-5-privacypoliciesonline_com.html`
+  - `2-privacy_policy-5-privacypoliciesonline_com.txt`
 
 ## 6 - Liking the Idea of it Being Free: https://www.freeprivacypolicy.com/
 
@@ -224,18 +224,22 @@ I like the last line in particular:
   - NOT choosing Professional Privacy Policy includes GPDR + CalOPPA wording option (costs $39)
 - Results page looks very familiar, and is almost identical to privacypolicies.com
 - Results:
-  - 2-privacy_policy-6-freeprivacypolicy_com.html
-  - 2-privacy_policy-6-freeprivacypolicy_com.txt
+  - `2-privacy_policy-6-freeprivacypolicy_com.html`
+  - `2-privacy_policy-6-freeprivacypolicy_com.txt`
   - Link to results: https://www.freeprivacypolicy.com/privacy/view/309bc827826ff93f1d5d8f464f43c57d
 - The site, and especially the results page, looks very much like what we saw at privacypolicies.com
 
-## 7. Found in another search
+## 7. Found in another search: https://www.volusion.com/v2/tools/privacy-policy
 
-- https://www.volusion.com/v2/tools/privacy-policy
+- Very simple form:
+  - JooMoo WebSites LLC
+  - webmaster@example.com
+- Results:
+  - `2-privacy_policy-7-volusion_com.docx`
+  - `2-privacy_policy-7-volusion_com.html`
+  - `2-privacy_policy-7-volusion_com.txt`
 
-## 8. Found in another search
-
-- https://termly.io/privacy-policy/privacy-policy-generator/
+## 8. Found in another search: https://termly.io/privacy-policy/privacy-policy-generator/
 
 
 

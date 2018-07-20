@@ -199,6 +199,17 @@ I like the last line in particular:
 
 ## 5 - Covers Commission Junction and AdSense: http://www.privacypolicyonline.com/
 
+- List of links to monetization alternatives to Google AdSense:
+  - http://www.privacypolicyonline.com/site-monetization/
+- List of links to good examples of privacy documents:
+  - http://www.privacypolicyonline.com/privacy-policies/
+- Simple, single-page form
+  - Using www.seeourminds.com
+  - Contact: webmaster@example.com
+  - Selecting advertisers: AdSense, Amazon, Commission Junction, and Share a Sale
+- Results:
+  - 2-privacy_policy-5-privacypoliciesonline_com.html
+  - 2-privacy_policy-5-privacypoliciesonline_com.txt
 
 ## 6 - Liking the Idea of it Being Free: https://www.freeprivacypolicy.com/
 

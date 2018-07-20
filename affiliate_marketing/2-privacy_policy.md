@@ -181,7 +181,7 @@ I like the last line in particular:
 - Results:
   - 2-privacy_policy-4-privacypolicies_com.html
   - 2-privacy_policy-4-privacypolicies_com.txt
-  - Link: https://privacypolicies.com/privacy/view/87b2718ea55f3c4b6209b1ce54673886
+  - Link to results: https://privacypolicies.com/privacy/view/87b2718ea55f3c4b6209b1ce54673886
 - Cookie Consent:
   - GDPR option: Changes text of button they need to click from "Ok" to "I Agree"
   - Choosing "See Our Minds," Headline Dialog, Dark color palette
@@ -213,6 +213,19 @@ I like the last line in particular:
 
 ## 6 - Liking the Idea of it Being Free: https://www.freeprivacypolicy.com/
 
+- Site has no real options or blog, but the girl on the home page is quite pretty
+- Filling out the form:
+  - Choosing the business option
+  - Using seeourminds.com
+  - Choosing to add clauses for asking for name and address, emailing newsletters, and using Google Analytics
+  - They can contact me by email, phone, or snail mail
+  - NOT choosing Professional Privacy Policy includes GPDR + CalOPPA wording option (costs $39)
+- Results page looks very familiar, and is almost identical to privacypolicies.com
+- Results:
+  - 2-privacy_policy-6-freeprivacypolicy_com.html
+  - 2-privacy_policy-6-freeprivacypolicy_com.txt
+  - Link to results: https://www.freeprivacypolicy.com/privacy/view/309bc827826ff93f1d5d8f464f43c57d
+- The site, and especially the results page, looks very much like what we saw at privacypolicies.com
 
 ## 7 - Offers a Seal, Probably Not for Free: https://www.trust-guard.com/
 

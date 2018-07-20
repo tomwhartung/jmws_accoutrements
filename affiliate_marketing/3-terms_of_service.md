@@ -95,6 +95,28 @@ After doing those, decided to review the list again and try a few more:
 - Their disclaimer: https://termsfeed.com/legal/disclaimer
   - Something similar to this would be good to have for the quiz
 
+## 4 - First on List Is Run by Same People Who Created the List: https://privacypolicies.com/
+
+- There is no option to create a terms page at privacypolicies.com
+  - Theirs may serve as a good example, though: https://privacypolicies.com/legal/terms-and-conditions
+
+## 5 - Covers Commission Junction and AdSense: http://www.privacypolicyonline.com/
+
+- Simple, single-page form, same as for the policy
+  - Using www.seeourminds.com
+  - Contact: webmaster@example.com
+- Results:
+  - 3-terms_of_service-5-privacypoliciesonline_com.html
+  - 3-terms_of_service-5-privacypoliciesonline_com.txt
+- Overall:
+  - Judging by the options, and just glancing at the results, looks decent
+  - Looks like the site originator is in a situation much like mine
+
+
+## 6 - Liking the Idea of it Being Free: https://www.freeprivacypolicy.com/
+
+
+## 7 - Offers a Seal, Probably Not for Free: https://www.trust-guard.com/
 
 
 

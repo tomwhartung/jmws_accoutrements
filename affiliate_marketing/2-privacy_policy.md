@@ -241,7 +241,12 @@ I like the last line in particular:
 
 ## 8. Found in another search: https://termly.io/privacy-policy/privacy-policy-generator/
 
-
+- Under pricing, they want $10/month to allow me to post it on my own site without their logo
+  - https://app.termly.io/user/products
+- Skipping this one, we should have enough, at least for now
+- **May want to come back and check out some of the templates, though:**
+  - https://termly.io/privacy-policy/sample-privacy-policy-templates-guide/
+- **Note:** They also have templates for return policies, disclosures, and cookie policies
 
 ## Combined General Yet Specific Privacy Policy
 

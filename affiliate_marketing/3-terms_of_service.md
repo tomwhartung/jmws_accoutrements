@@ -108,8 +108,8 @@ After doing those, decided to review the list again and try a few more:
   - Using www.seeourminds.com
   - Contact: webmaster@example.com
 - Results:
-  - 3-terms_of_service-5-privacypoliciesonline_com.html
-  - 3-terms_of_service-5-privacypoliciesonline_com.txt
+  - `3-terms_of_service-5-privacypoliciesonline_com.html`
+  - `3-terms_of_service-5-privacypoliciesonline_com.txt`
 - Overall:
   - Judging by the options, and just glancing at the results, looks decent
   - Looks like the site originator is in a situation much like mine
@@ -119,15 +119,25 @@ After doing those, decided to review the list again and try a few more:
 - There is NO option to create a terms page at freeprivacypolicy.com
 - The site, and especially the results page, looks very much like what we saw at privacypolicies.com
 
-## 7. Found in another search
+## 7. Found in another search: https://www.volusion.com/v2/tools/privacy-policy
 
-- https://www.volusion.com/v2/tools/privacy-policy
+- Another very simple form:
+  - JooMoo WebSites LLC
+  - webmaster@example.com
+- Results:
+  - `3-terms_of_service-7-volusion_com.docx`
+  - `3-terms_of_service-7-volusion_com.html`
+  - `3-terms_of_service-7-volusion_com.txt`
 
-## 8. Found in another search
 
-- https://termly.io/privacy-policy/privacy-policy-generator/
+## 8. Found in another search: https://termly.io/privacy-policy/privacy-policy-generator/
 
-
+- Under pricing, they want $10/month to allow me to post it on my own site without their logo
+  - https://app.termly.io/user/products
+- Skipping this one, we should have enough, at least for now
+- **May want to come back and check out some of the templates, though:**
+  - https://termly.io/terms-and-conditions/sample-terms-and-conditions-templates-guide/
+- **Note:** They also have templates for return policies, disclosures, and cookie policies
 
 ## Combined General Yet Specific Terms of Service
 

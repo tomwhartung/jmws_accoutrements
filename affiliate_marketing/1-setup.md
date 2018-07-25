@@ -94,6 +94,16 @@ TODO:
 - Look into the different ad types, e.g. cards
   - https://affiliate-program.amazon.com/resource-center/introducing-card-format-for-native-shopping-ads-on-sitestripe
 
+### affiliates-flexoffers:
+
+Signing up at Flex Offers:
+
+- www.flexoffers.com
+- Note: Lists Barnes and Noble as one of their best markets
+
+
+TODO:
+
 ### affiliates-xxx:
 
 Signing up at:

@@ -259,13 +259,20 @@ I like the last line in particular:
 
 ## Checklist:
 
-- [ ] 1-getterms_io-website
+- [x] 1-getterms_io-website
+  - Did not use anything from this
 - [ ] 2-iubenda_com-complete
-- [ ] 2-iubenda_com-simplified
-- [ ] 3-termsfeed_com
-- [ ] 4-privacypolicies_com
-- [ ] 5-privacypoliciesonline_com
-- [ ] 6-freeprivacypolicy_com
+  - Holding off on this one for now
+- [x] 2-iubenda_com-simplified
+  - Too simple to be of use
+- [x] 3-termsfeed_com
+  - Very similar to the one we are using as the starting point
+- [x] 4-privacypolicies_com
+  - Very similar to the one we are using as the starting point
+- [x] 5-privacypoliciesonline_com
+  - Used as the starting point
+- [x] 6-freeprivacypolicy_com
+  - Very similar to the one we are using as the starting point
 - [ ] 7-volusion_com
 
 ## Result:

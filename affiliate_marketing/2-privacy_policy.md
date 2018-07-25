@@ -248,7 +248,28 @@ I like the last line in particular:
   - https://termly.io/privacy-policy/sample-privacy-policy-templates-guide/
 - **Note:** They also have templates for return policies, disclosures, and cookie policies
 
-## Combined General Yet Specific Privacy Policy
+# End Result: Combined Privacy Policy
 
+## Process:
+
+1. Start with the selected starting point
+2. Review and revise as necessary, checking them off on the Checklist as we go
+3. Review other Privacy documents
+4. Add clauses from other documents as desired
+
+## Checklist:
+
+- [ ] 1-getterms_io-website
+- [ ] 2-iubenda_com-complete
+- [ ] 2-iubenda_com-simplified
+- [ ] 3-termsfeed_com
+- [ ] 4-privacypolicies_com
+- [ ] 5-privacypoliciesonline_com
+- [ ] 6-freeprivacypolicy_com
+- [ ] 7-volusion_com
+
+## Result:
+
+- `4-privacy_policy-8-custom.html`
 
 

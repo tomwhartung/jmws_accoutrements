@@ -139,7 +139,17 @@ After doing those, decided to review the list again and try a few more:
   - https://termly.io/terms-and-conditions/sample-terms-and-conditions-templates-guide/
 - **Note:** They also have templates for return policies, disclosures, and cookie policies
 
-## Combined General Yet Specific Terms of Service
+# End Result: Combined Terms of Service
 
+## Process:
+
+1. Start with the selected starting point
+2. Review and revise as necessary
+3. Review other Terms documents
+4. Add clauses from other documents as desired
+
+## Result:
+
+- `4-terms_of_service-8-custom.html`
 
 

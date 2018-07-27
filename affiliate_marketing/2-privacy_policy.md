@@ -270,9 +270,8 @@ I like the last line in particular:
 - [x] 4-privacypolicies_com
   - Very similar to the one we are using as the starting point
 - [x] 5-privacypoliciesonline_com
-  - Used as the starting point
 - [x] 6-freeprivacypolicy_com
-  - Very similar to the one we are using as the starting point
+  - Used as the starting point
 - [ ] 7-volusion_com
 
 ## Result:

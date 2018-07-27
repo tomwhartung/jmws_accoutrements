@@ -50,6 +50,12 @@ More specific articles - these are all fairly long:
 Importantly: "Unless you can absolutely guarantee that no users from the EU will ever find their way to your website,
 you’ll need a GDPR notice and compliant consent measures."  (From the last link in the above list.)
 
+### Pages Specific to Google AdSense and Other Google Services
+
+- https://support.google.com/adsense/answer/1348695?hl=en
+- https://termsfeed.com/blog/privacy-policy-google-adsense/
+- https://www.iubenda.com/blog/google-adsense-analytics-admob-privacy-policy-template/
+
 ## Process
 
 1. Try a bunch of the generators

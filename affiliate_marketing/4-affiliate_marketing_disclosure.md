@@ -18,6 +18,16 @@ If I want to add affiliate marketing links on my sites and cover my butt, I need
   - Requires sharing email address, try the generator first
 - Advice specific to Amazon: https://termsfeed.com/blog/disclaimer-amazon-associates/
 
+### More Better References
+
+The links above were largely unproductive.  Try:
+
+- https://www.smartpassiveincome.com/affiliate-disclaimer/
+  - Looks good enough, try just changing the names and a few other things
+- http://scotthurtado.com/how-to-properly-disclose-your-affiliate-links/
+  - Has a short example near the end
+- https://michelleismoneyhungry.com/disclosure/
+  - The disclosure Michelle is using
 
 ## Strategy
 
@@ -40,11 +50,15 @@ Sounds like the foundation of a good strategy to me!
 
 1. Generator at termsfeed.com: wants $4 for an affiliate marketing disclaimer
   - Checking boxes for website and external links
-
-
+2. Download templates from termsfeed (they include more clauses, including for affiliate marketing)
+  - These are all disappointing
+3. Try the templates from thesheapproach.com
+  - These are good for short, simple disclosures, but not the main one
+4. Copy the Privacy Policy, delete all but the few paragraphs about affiliate marketing, and review and revise it as necessary
+  - Review all files found while researching this, i.e., `4-affiliate_marketing_disclosure-*.*` , and update it as necessary
 
 ## Result:
 
-- ``
+- `6-affiliate_marketing_disclosure-8-custom.html`
 
 

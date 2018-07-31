@@ -6,6 +6,7 @@ If I want to have a questionnaire and cover my butt, I should have a formal disc
 ## Requirements
 
 - I forsee there being only one quiz, so it should be easy to keep it simple
+- At this time the quiz is **on seeourminds.com only,** so we intend for this disclaimer to be posted only on that site
 
 ## References
 
@@ -18,10 +19,12 @@ This example is good, though, and should be enough:
 ## Process
 
 1. Find a good example
-2. Adapt it to our needs
+2. Look at what we have now
+3. Combine these two sources
+4. Adapt what we have to our current needs and concerns
 
 ## Result:
 
-- ``
+- `6-questionnaire_disclaimer-8-custom.html`
 
 

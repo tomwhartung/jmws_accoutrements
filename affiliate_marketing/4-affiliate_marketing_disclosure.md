@@ -26,8 +26,10 @@ The links above were largely unproductive.  Try:
   - Looks good enough, try just changing the names and a few other things
 - http://scotthurtado.com/how-to-properly-disclose-your-affiliate-links/
   - Has a short example near the end
-- https://michelleismoneyhungry.com/disclosure/
-  - The disclosure Michelle is using
+- Resources at https://michelleismoneyhungry.com
+  - The disclosure Michelle is using: https://michelleismoneyhungry.com/disclosure/
+  - General blog post: https://michelleismoneyhungry.com/affiliatesrock/
+  - Specific to podcasting: https://michelleismoneyhungry.com/11-actions-podcasters-can-take-to-make-affiliate-income/
 
 ## Strategy
 

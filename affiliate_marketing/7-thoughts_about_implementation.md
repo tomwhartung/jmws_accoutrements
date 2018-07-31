@@ -1,5 +1,14 @@
 # 7-thoughts_about_implementation.md
 
+## References
+
+### Cookie Consent
+
+Wouldn't it be nice to come up with some cute or clever way of doing this annoying thing?
+
+- https://privacypolicies.com/cookie-consent/
+- https://www.cookiechoices.org/
+
 ## For More Transparency
 
 - Ensure the link or the title attribute or both contain the merchant (e.g., Amazon) or middleman (e.g., CJ Affiliate) or both

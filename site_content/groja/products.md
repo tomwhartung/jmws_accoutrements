@@ -10,12 +10,19 @@ How I might make money from this site.
 - Free with subscription: 19x19
 
 - Regular: 21x21
+  - $10.00
 - Medium:  25x25
+  - $20.00
 - Large:   29x29
+  - $30.00
 
 ## Aspect Ratios
 
-- Default - no extra cost: 25 px x 25 px
+- Default: 25 px x 25 px
+  - No extra cost
+
+- Also available: 4x3 and 16x9
+  - Add $5.00
 
 - Images of Introverts must be in the landsape orientation
   - 4 (w) x 3 (h) - 28 px x 21 px

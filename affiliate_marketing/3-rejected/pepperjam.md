@@ -1,5 +1,5 @@
 
-# affiliate_marketing/declined/1-setup.md
+# affiliate_marketing/3-rejected/pepperjam.md
 
 Tried setting up some affiliate marketing on a few sites, and the assholes at pepperjam declined me.
 BASTARDS!

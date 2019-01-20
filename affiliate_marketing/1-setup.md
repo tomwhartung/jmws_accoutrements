@@ -65,34 +65,9 @@ Signing up at:
 TODO:
 
 - Review the FTC's guidlines:
-  - See file FTC-091005revisedendorsementguides.pdf in this directory
+  - See file /legal/reference/FTC-091005revisedendorsementguides.pdf in this repo
 - Review tasks in the Affiliate Console:
   - https://www.dotster.com/controlpanel/affiliateprogram/index.bml
-
-### affiliates-amazon:
-
-#### Amazon-Specific References
-
-- https://www.wikihow.com/Make-Money-With-Amazon-Affiliate-Program
-- https://www.wikihow.com/Become-an-Amazon-Associate
-- https://www.shoutmeloud.com/how-to-make-money-with-amazon-affiliate-program.html
-
-Signing up at:
-
-- https://affiliate-program.amazon.com/signup
-- Websites reveiwed **after** they get a referral
-- They must get a referral within 180 days
-- Signed up using existing amazon account
-
-TODO:
-
-- Review the Associates Program Operating Agreement:
-  - https://affiliate-program.amazon.com/help/operating/agreement?ac-ms-src=ac-nav
-- Review Program Policies:
-  - https://affiliate-program.amazon.com/help/operating/policies
-- Add links to sites
-- Look into the different ad types, e.g. cards
-  - https://affiliate-program.amazon.com/resource-center/introducing-card-format-for-native-shopping-ads-on-sitestripe
 
 ### affiliates-flexoffers:
 

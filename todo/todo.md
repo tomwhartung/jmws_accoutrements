@@ -118,11 +118,15 @@ See which sites, if any, get any response.
   - [ ] SeeOurMinds.com
 
 ### 3.2. Technical Updates - Phase 2
+
 - [ ] Revisit Google Analytics and set up event tracking
   - [ ] Add events for ArtsyVisions.com, if deemed necessary
   - [ ] Add events for conversions on Groja.com, as necessary
   - [ ] Review existing event tracking and add additional event tracking for SeeOurMinds.com, as necessary
   - [ ] Add events for TomHartung.com, if deemed necessary
+
+- [ ] Consider implementing Cookie Consent logic for GDPR
+  - [ ] See References in `legal/cookie_consent/todo-cookie_consent.md` in this repo
 
 ## 4. Ongoing
 

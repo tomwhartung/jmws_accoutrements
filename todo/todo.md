@@ -17,6 +17,13 @@ Moving the todo list in the README.md for artsyvisions.com to here.
   - [ ] Groja.com
   - [ ] ArtsyVisions.com
   - [ ] SeeOurMinds.com
+- Remove amazon from **all** legal documents
+  - [ ] Site checklist:
+    - [ ] Groja.com
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+    - [ ] JooMooWebSites.com
+    - [ ] TomHartung.com
 
 ## 1. Start Social Networking
 
@@ -36,9 +43,9 @@ Minimum tasks TODO for each social networking site:
 
 See which sites, if any, get any response.
 
-# 2. Technical and Content Updates - Phase 1
+## 2. Technical and Content Updates - Phase 1
 
-## 2.1. Content Updates - Phase 1
+### 2.1. Content Updates - Phase 1
 
 - [ ] Add new articles:
   - [x] Wild at Heart
@@ -51,23 +58,18 @@ See which sites, if any, get any response.
   - [ ] Woody Allen
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
-  - [ ] Roosevelts - ALL
-    - [ ] DVD
-    - [ ] Magazine
-    - [ ] Keirsey E-book
+  - [ ] Catelyn Stark
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
-  - [ ] Leia and Han
-  - [ ] Trixie and Shae
-  - [ ] Audrey Horne?
-    - [ ] ArtsyVisions.com
-    - [x] SeeOurMinds.com
 - [ ] SeeOurMinds.com - continue adding affiliate marketing links - Phase I
   - [ ] See list in notebook
   - [ ] Always fix pages referred to by stories on ArtsyVisions.com
 
-## 2.2. Technical Updates - Phase 1
+### 2.2. Technical Updates - Phase 1
 
+- [ ] Update JooMooWebSites.com
+  - [x] Use MDL and Flask
+  - [ ] Spend some time re-reading Daniel Pink's book, To Sell Is Human
 - [ ] SeeOurMinds.com image page
   - [ ] Fix alignment of title and Back button
 - [ ] Implement RSS feed
@@ -95,26 +97,42 @@ See which sites, if any, get any response.
     - Possible to use code similar to that used in groja.com?
   - [ ] Quiz - get saved results - should it send an email?
 
-### 11.5. Technical and Content Updates - Phase 2
+## 3. Technical and Content Updates - Phase 2
 
-- [ ] Update JooMooWebSites.com
-  - [ ] Use MDL and Flask
-  - [ ] Spend some time re-reading Daniel Pink's book, To Sell Is Human
+### 3.1. Content Updates - Phase 2
+
+- [ ] Roosevelts - ALL
+  - [ ] DVD
+  - [ ] Magazine
+  - [ ] Keirsey E-book
+  - [ ] ArtsyVisions.com
+  - [ ] SeeOurMinds.com
+- [ ] Leia and Han
+  - [ ] ArtsyVisions.com
+  - [x] SeeOurMinds.com
+- [ ] Trixie and Shae
+  - [ ] ArtsyVisions.com
+  - [ ] SeeOurMinds.com
+- [ ] Audrey Horne?
+  - [ ] ArtsyVisions.com
+  - [ ] SeeOurMinds.com
+
+### 3.2. Technical Updates - Phase 2
 - [ ] Revisit Google Analytics and set up event tracking
   - [ ] Add events for ArtsyVisions.com, if deemed necessary
   - [ ] Add events for conversions on Groja.com, as necessary
   - [ ] Review existing event tracking and add additional event tracking for SeeOurMinds.com, as necessary
   - [ ] Add events for TomHartung.com, if deemed necessary
 
-### 11.6. Ongoing
+## 4. Ongoing
 
-Once all three sites are stable, split time between the following tasks:
+Once all new sites are stable, split time between the following tasks:
 
 - [ ] ArtsyVisions.com:
   - [ ] Review existing articles already written and tweak as necessary
   - [ ] Post this content, adding as many affiliate links as possible
-- [ ] Groja.com:
-  - [ ] Should be ok as-is for awhile
 - [ ] SeeOurMinds.com:
   - [ ] Soon: Firefly!
+- [ ] Groja.com:
+  - [ ] Should be ok as-is for awhile
 

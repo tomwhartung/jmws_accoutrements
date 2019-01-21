@@ -7,6 +7,10 @@ There are many affiliate marketing opportunities in addition to those run by the
 
 Googling for "best affiliate sites for books" and "best affiliate sites dvds" led me to the following sites:
 
+- http://dvdbundles.com/affiliates
+  - Looks interesting: "lucrative dvd affiliate program"
+  - 10% on each sale
+
 - Best Affiliate Networks 2019
   - https://highpayingaffiliateprograms.com/affiliate-network/
   - Note: comments go back to 2016
@@ -35,10 +39,16 @@ Googling for "best affiliate sites for books" and "best affiliate sites dvds" le
   - The She Approach Affiliate Program
 
 - https://problogger.com/10-popular-affiliate-programs-for-small-and-medium-sized-blogs/
-  - Dated 2012-06-29
+  - Dated 2012-06-29 - and shows its age
   1. LinkShare
-  2. CJ Affiliate
+  2. "Commission Junction" [sic] - now CJ Affiliate
   3. ShareASale
-  - . . .
+  4. ~~amazon can kiss my fucking ass~~
+  5. Google Affiliate Network - now obsolete
+  6. ClixGalore - Australian
+  7. PeerFly.com
+  8. ClickBank
+  9. MaxBounty
+  10. Neverblue.com
 
 

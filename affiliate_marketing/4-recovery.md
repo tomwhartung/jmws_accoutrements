@@ -13,11 +13,6 @@ Googling for "best affiliate sites for books" and "best affiliate sites dvds" le
 - Looks interesting: "lucrative dvd affiliate program"
 - 10% on each sale
 
-### Best Affiliate Networks 2019
-
-- https://highpayingaffiliateprograms.com/affiliate-network/
-- Note: comments go back to 2016
-
 ### The Top 10 Affiliate Programs
 
 - https://pureresiduals.com/top-10-affiliate-programs/
@@ -28,7 +23,7 @@ Googling for "best affiliate sites for books" and "best affiliate sites dvds" le
 1. Rakuten Linkshare - "Smaller affiliate network"
 2. ClickBank - "Delay in payments"
 3. CJ Affiliate - "Long delays in payments"
-4. ~~Fuck amazon - "Low commission rates"~~
+4. ~~Fuck amazon - and their 24-hour cookie and "Low commission rates"~~
 5. Avantlink - "Not the best customer support"
 6. Ebay - "Not great for beginners, Fluctuating payment"
 7. ShareASale - "Old reporting tools"
@@ -45,6 +40,68 @@ Googling for "best affiliate sites for books" and "best affiliate sites dvds" le
 - ~~amazon sucks~~
 - Ultimate Bundles
 - The She Approach Affiliate Program
+
+### 21 of the Best Affiliate Programs to Find High Quality Products for Your Website
+
+- https://nichehacks.com/best-affiliate-programs/
+- Notes:
+  - Has quite a bit of detail about each one, including:
+    - How to find best selling items
+    - Examples of successful people
+    - Pros and cons
+
+Excerpts:
+
+- #2 eBay
+- #3 Jet - "relatively new eCommerce site"
+- #4 Target - "a pretty good alternative to" ~~shithole amazon~~ but apparently doesn't pay much for books and dvds
+- #6 Clickbank - "one of the oldest and the most popular affiliate marketing platforms on the web"
+- #7 JVZoo - "most popular products are mostly in the internet marketing niche"
+- #9 VigLink - "dynamically changes the source of your affiliate links and ..."
+  - "... chooses the merchant with the highest conversion rate and commission"
+  - Con: "Despite being approved by VigLinks, you still need the approval of individual merchants"
+- #10 Skimlinks - "works on a very similar model to VigLinks"
+  - "Unlike VigLink, however, Skimlinks doesn’t require you to seek the approval of individual merchants"
+  - Con: "Skimlinks takes a significant portion of your commissions"
+- #11 AWin - Affiliate Window - "isn’t very newbie friendly though. They require a $5 payment on sign-up"
+- #12 Rakuten Linkshare - "not for newbies or even intermediate level affiliates."
+  - "To become a Rakuten affiliate, you need to be a seasoned affiliate with a proven track record."
+- #13 FlexOffers - "you get a dedicated relationship manager to help you with any issues."
+- #14 ShareASale - "among the most popular affiliate platforms on the web"
+- #15 CJ - Commission Junction - "It is a great place to start for newbies"
+- #16 Avangate - "caters specifically to eCommerce solutions, software and other forms of digital products"
+- #19 PeerFly - "it is quite generous in approving completely new marketers"
+  - Con: "Each offer has its own requirements and restrictions which filters out most newbies"
+- #21 Udemy
+
+### Best Affiliate Networks 2019
+
+- https://highpayingaffiliateprograms.com/affiliate-network/
+- Notes:
+  - Article has 2019 in the title but comments go back to March, 2016
+  - Joined email list to get "How to Get Super Affiliate Commissions - 2015 Edition"
+    - Downloaded as `downloads/SuperAffiliateGuide2016.pdf` in this directory
+
+1. PeerFly - "an award-winning, international online affiliate platform"
+2. ShareASale - "has been in business for over 15 years, exclusively as an affiliate marketing network."
+3. Wide Markets - "provides a unique cross-channel advertising solution for eCommerce businesses"
+4. Rakuten - "ranks among the top three e-commerce companies in the world"
+5. CJ by Conversant - "The Conversant, Inc. companies include Commission Junction, Dotomi, Greystripe, Mediaplex, and ValueClick Media."
+6. Clickbank - "digital information products"
+7. ~~fuck amazon in its ass~~
+8. Affliliate Partners Ltd. - for the financial industry, e.g., "niches like trading, gaming, casino, sales funnels"
+9. CrakRevenue - "a must for affiliates wanting to enjoy some of the industry’s most cutting-edge tools"
+10. Commission Factory - "Because they have little to no barriers to entry Commission Factory has an enormously fast growing user base"
+11. Ebay - "provides first class tools, tracking, and reporting."
+12. Avangate - focuses on online commerce, subscription billing, and global payments for Software, SaaS and Online Services companies"
+13. FlexOffers - "builds mutually profitable relationships"
+14. Avantlink - affiliate referrals
+15. AdCombo - encourages "strategic lucrative partnerships between advertisers and publishers"
+16. ReviMedia - lead generation network
+17. RevenueWire - digital products, like Clickbank
+18. Olavivo - health, beauty, cryptocurrency
+19. MoreNiche - health products
+20. AffiBank - pays up to 75% commission
 
 ### 10 Popular Affiliate Programs for Small and Medium-sized Blogs
 

@@ -3,17 +3,47 @@
 
 There are many affiliate marketing opportunities in addition to those run by the assholes who rejected me.
 
-## Fresh Resources
+# Fresh Resources
 
 Googling for "best affiliate sites for books" and "best affiliate sites dvds" led me to the following sites:
 
+## Specific Resources - To Come Back To
+
+These sound interesting, but I am not sure whether I am ready to jump in right this second.
+
+### Viglinks and Skimlinks
+
+Appear in a couple of lists and it sounds like they are different and so one or both might be good,
+maybe after getting going with a more traditional site such as CJ Affiliate.
+
+### Target Affiliates
+
+Mentioned in one list as good for beginners but in another says it doesn't pay much on books and dvds.
+
+- http://affiliate.target.com/
+
 ### DVD Bundles
+
+Not in the lists but found in the search results.
 
 - http://dvdbundles.com/affiliates
 - Looks interesting: "lucrative dvd affiliate program"
 - 10% on each sale
 
+## Gleaned From the Lists
+
+These appear in one or more of the lists below and look particularly interesting:
+
+- CJ Affiliate - on many of the lists, already signed up, start here
+- ShareASale - also on many of the lists
+- VigLink - sounds quite intersting
+- FlexOffers - on forexreferral's highest paying list
+
+## Lists of Resources
+
 ### The Top 10 Affiliate Programs
+
+From pureresiduals.com
 
 - https://pureresiduals.com/top-10-affiliate-programs/
 - Notes:
@@ -33,15 +63,18 @@ Googling for "best affiliate sites for books" and "best affiliate sites dvds" le
 
 ### 5 High-Paying Affiliate Programs For Bloggers
 
-- https://thesheapproach.com/high-paying-affiliate-programs-for-bloggers/
+From thesheapproach.com
 
-- Awin
-- ShareASale
-- ~~amazon sucks~~
-- Ultimate Bundles
-- The She Approach Affiliate Program
+- https://thesheapproach.com/high-paying-affiliate-programs-for-bloggers/
+  - Awin
+  - ShareASale
+  - ~~amazon sucks~~
+  - Ultimate Bundles
+  - The She Approach Affiliate Program
 
 ### 21 of the Best Affiliate Programs to Find High Quality Products for Your Website
+
+From nichehacks.com
 
 - https://nichehacks.com/best-affiliate-programs/
 - Notes:
@@ -76,6 +109,8 @@ Excerpts:
 
 ### Best Affiliate Networks 2019
 
+From highpayingaffiliateprograms.com
+
 - https://highpayingaffiliateprograms.com/affiliate-network/
 - Notes:
   - Article has 2019 in the title but comments go back to March, 2016
@@ -103,7 +138,53 @@ Excerpts:
 19. MoreNiche - health products
 20. AffiBank - pays up to 75% commission
 
+### The (67+) best affiliate programs for every marketer
+
+From www.forexreferral.com
+
+- https://www.forexreferral.com/best-affiliate-programs
+  - Broken into four groups: Highest Paying, Bloggers, Beginners, Networks
+  - Includes many sites, such as the ~~assfucks at pepperjam at #56~~ that do not appear in other listings
+
+#### Highest Paying - #1-21
+
+- #3 FlexOffers
+- #4 VigLink - "their technology works in the background to automatically convert ordinary product links into monetized links"
+  - Also appears in list as #48
+- #6 Peerfly
+- #7 Shopify - "Earn 200% commission based on the price of the subscription your referral signs up to."
+
+#### Best for Bloggers - #22-41
+
+- #24 iTunes Affiliate Program - "You can earn affiliate fees from promoting  songs, apps, books, movies and TV shows."
+- #39 Gaiam Affiliate Program - "Earn up to 7% commission on a wide range of yoga and meditation products and apparel."
+
+#### Best for Beginners - #42-46
+
+- #44 eBay
+- #45 Target
+
+#### Best Affiliate Networks - #47-66
+
+- #47 Skimlinks
+  - "copy and paste a short line of code into the footer of your site once and then continue to create content as you normally would"
+  - "Your site needs to have commerce related content for this to be useful."
+  - "they will receive 25% of any commissions"
+- #48 Viglinks - similar to Skimlinks
+  - "you add a line of code to your site and all links are automatically turned into affiliate links to generate you commissions."
+  - Also appears in list as #4
+- #49 ShareASale
+- #50 CJ Affiliate
+- #51 Clickbank
+- #52 Rakuten
+- #54 Peerfly
+- #55 Awin
+- #62 Avangate - "Commissions can be up to 75% and merchants sometimes offer bonuses as well"
+
+
 ### 10 Popular Affiliate Programs for Small and Medium-sized Blogs
+
+From problogger.com
 
 - https://problogger.com/10-popular-affiliate-programs-for-small-and-medium-sized-blogs/
 - Dated 2012-06-29 - and shows its age

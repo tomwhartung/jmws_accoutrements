@@ -1,5 +1,5 @@
 
-# 4-recovery.md
+# 4-research.md
 
 There are many affiliate marketing opportunities in addition to those run by the assholes who rejected me.
 

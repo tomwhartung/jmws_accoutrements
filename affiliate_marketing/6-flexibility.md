@@ -1,5 +1,5 @@
 
-# 5-flexibility.md
+# 6-flexibility.md
 
 Affiliate marketing changes a lot:
 
@@ -13,5 +13,11 @@ Therefore we need to build flexibility into our use of their links.
 
 # Using Python Dictionaries
 
+Idea
+
+1. Store affiliate links in vendor-specific python dictionaries
+   - E.g., afl_bn, afl_???
+2. In class AffiliateLinks, assign these to the python dictionaries used in the content
+   - E.g., afl_content, afl_button
 
 

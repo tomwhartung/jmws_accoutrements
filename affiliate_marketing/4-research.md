@@ -148,10 +148,14 @@ From www.forexreferral.com
 
 #### Highest Paying - #1-21
 
-- #3 FlexOffers
-- #4 VigLink - "their technology works in the background to automatically convert ordinary product links into monetized links"
+- #1 ClickFunnels - "Simply refer 100 customers to ClickFunnels  and your new car could arrive sooner than you think."
+- #2 FlexOffers - "provides programs from well known brands and niche markets alike (over 12,000 programs to choose from)."
+- #3 VigLink - "their technology works in the background to automatically convert ordinary product links into monetized links"
   - Also appears in list as #48
-- #6 Peerfly
+- #4 Wealthy Affiliate - www.wealthyaffiliate.com , they will do your website and everything
+  - "follow their proven process easy to use tools to launch a website, attract visitors, and most importantly, earn revenue."
+- #5 AWeber - "offers a 30% recurring commission for as long as your referral remains a customer."
+- #6 Peerfly - "has a rigorous signup process ... and can take up to three days to approve your application."
 - #7 Shopify - "Earn 200% commission based on the price of the subscription your referral signs up to."
 
 #### Best for Bloggers - #22-41

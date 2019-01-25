@@ -25,6 +25,10 @@ The **CJ Affiliate Publisher Service Agreement** is at https://www.cj.com/legal/
 
 From section "6 Term, Termination, Deactivation and Notices" of the CJ Affiliate Publisher Service Agreement
 
+> (c) Termination or Deactivation by CJ. CJ may terminate You, one of Your Web sites, or Your use of a promotional method, from an Advertiser's Program, at any time in CJ's sole discretion
+
+and
+
 > (d) Termination of Programs and Offers. Programs and Offers may be discontinued at any time.
 
 Therefore we need to build flexibility into our use of their links.
@@ -34,7 +38,7 @@ Therefore we need to build flexibility into our use of their links.
 Idea
 
 1. Store affiliate links in vendor-specific python dictionaries
-   - E.g., afl_bn, afl_???
+   - E.g., afl_cj_bn, afl_cj_???, afl_???_???
 2. In class AffiliateLinks, assign these to the python dictionaries used in the content
    - E.g., afl_content, afl_button
 

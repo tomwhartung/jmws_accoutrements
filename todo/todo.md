@@ -9,21 +9,23 @@ Moving the todo list in the README.md for artsyvisions.com to here.
 
 - [ ] Create new model for affiliate marketing
   - [ ] Store links in dictionaries
-    - [ ] afl_bn dictionary
-    - [ ] afl_cj dictionary
-    - [ ] afl_master dictionary
+    - [ ] afl_cj_bn dictionary
+    - [x] afl_none dictionary
     - [ ] etc.
+  - [x] Get links from dictionaries
+    - [x] afl_content dictionary
+    - [x] afl_button dictionary
 - [ ] Site checklist:
-  - [ ] Groja.com
+  - [x] Groja.com
   - [ ] ArtsyVisions.com
   - [ ] SeeOurMinds.com
-- Remove amazon from **all** legal documents
-  - [ ] Site checklist:
-    - [ ] Groja.com
-    - [ ] ArtsyVisions.com
-    - [ ] SeeOurMinds.com
-    - [ ] JooMooWebSites.com
-    - [ ] TomHartung.com
+- [x] Remove amazon from **all** legal documents
+  - [x] Site checklist:
+    - [x] Groja.com
+    - [x] ArtsyVisions.com
+    - [x] SeeOurMinds.com
+    - [x] JooMooWebSites.com
+    - [x] TomHartung.com
 
 ## 1. Start Social Networking
 
@@ -44,6 +46,10 @@ Minimum tasks TODO for each social networking site:
 See which sites, if any, get any response.
 
 ## 2. Technical and Content Updates - Phase 1
+
+### 2.0. Technical Updates - ASAP
+
+- [ ] Fix SSL Certificates on Server
 
 ### 2.1. Content Updates - Phase 1
 
@@ -126,6 +132,7 @@ See which sites, if any, get any response.
   - [ ] Add events for TomHartung.com, if deemed necessary
 
 - [ ] Consider implementing Cookie Consent logic for GDPR
+  - [ ] Note that by and large we are not targeting people in Europe, so this is not a big priority
   - [ ] See References in `legal/cookie_consent/todo-cookie_consent.md` in this repo
 
 ## 4. Ongoing

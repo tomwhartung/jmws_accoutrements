@@ -19,6 +19,25 @@ So welcome to my polemic, **Why Amazon Sucks.**
 
 Found in an email from medium.com.
 
+- Amazon Is Becoming More Powerful Than You Realize
+- https://medium.com/s/2069/amazon-is-becoming-more-powerful-than-you-realize-2093d6860886
+
+> American history is pockmarked by countless instances where the obvious
+> perils of consolidation were ignored by those tasked with protecting us
+> from them. Amazon is the culmination of our multigenerational refusal to
+> learn anything from those experiences.
+
+and
+
+> Unchecked cross-sector corporate power of the sort Amazon holds “not only
+> undermines our economic well-being, but it’s a direct threat to democracy,”
+> Mitchell says. “Economic power concentrated to this degree has historically
+> gone hand in hand with authoritarianism.”
+
+## Medium
+
+Also found in an email from medium.com.
+
 - Apple, Amazon, and the Future of Capitalism
 - https://eand.co/what-happened-to-apple-9ae2f36b7ee8
 

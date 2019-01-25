@@ -1,5 +1,5 @@
 
-# 6-flexibility.md
+# 6-a-why_flexibility.md
 
 Affiliate marketing changes a lot, and it would be great to have a way to
 easily find and change the links we have in our content.
@@ -32,14 +32,4 @@ and
 > (d) Termination of Programs and Offers. Programs and Offers may be discontinued at any time.
 
 Therefore we need to build flexibility into our use of their links.
-
-# Using Python Dictionaries
-
-Idea
-
-1. Store affiliate links in vendor-specific python dictionaries
-   - E.g., afl_cj_bn, afl_cj_???, afl_???_???
-2. In class AffiliateLinks, assign these to the python dictionaries used in the content
-   - E.g., afl_content, afl_button
-
 

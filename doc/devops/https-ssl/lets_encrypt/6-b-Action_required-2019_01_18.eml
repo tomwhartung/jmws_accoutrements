@@ -1,0 +1,69 @@
+Return-path: <bounce-md_30850198.5c4159fb.v1-de968922b4474a109741e6b83120d270@mandrillapp.com>
+Envelope-to: lets_encrypt@tomhartung.com
+Delivery-date: Thu, 17 Jan 2019 21:45:50 -0700
+Received: from mail135-11.atl141.mandrillapp.com ([198.2.135.11])
+	by mz4.forethought.net with esmtps (TLSv1:DHE-RSA-AES256-SHA:256)
+	(Exim 4.80.1)
+	(envelope-from <bounce-md_30850198.5c4159fb.v1-de968922b4474a109741e6b83120d270@mandrillapp.com>)
+	id 1gkM2Q-0002Ex-Hy
+	for lets_encrypt@tomhartung.com; Thu, 17 Jan 2019 21:45:50 -0700
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mandrill; d=letsencrypt.org;
+ h=From:Subject:Message-Id:To:Date:MIME-Version:Content-Type:Content-Transfer-Encoding; i=noreply@letsencrypt.org;
+ bh=puRqrKG/FmSoOPCq7HUmOx8BUZcryBgmcqS3XhbLgzE=;
+ b=IFcTrWUxvglCUvV5VdwnZXgU/h2ZG0f2dX0ntq1p7pRgE9mvu93Nu/MybRSjg5OpQvb+WaVAetGu
+   seHaTpQG3ASlMEXZamkWQD7Wt+qI90XrnWIX1P69eePKcdWR65W8mAtq636MZOy4KPd1/BqebWYO
+   DHbLQk227LSm16RvxYg=
+Received: from pmta03.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail135-11.atl141.mandrillapp.com id h85cvm1sau8o for <lets_encrypt@tomhartung.com>; Fri, 18 Jan 2019 04:45:47 +0000 (envelope-from <bounce-md_30850198.5c4159fb.v1-de968922b4474a109741e6b83120d270@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1547786747; h=From : 
+ Subject : Message-Id : To : Date : MIME-Version : Content-Type : 
+ Content-Transfer-Encoding : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=puRqrKG/FmSoOPCq7HUmOx8BUZcryBgmcqS3XhbLgzE=; 
+ b=ZzVHftnfMKPADJNAcgA8DqNopD/BTOzlL71U209dTpXSr++P6MCi3309QgBNsC3Ey7ym90
+ UFsd0nPkfzT9vdvWjq71hH4kAHCNXPVVHo/8ktRS8G+raYcbfWbviaa8pLMB/xZhTQfJcd+Y
+ CPQAJF7fBfbdf5S+Ek2vy5DX3HsAU=
+From: <noreply@letsencrypt.org>
+Subject: Action required: Let's Encrypt certificate renewals
+Received: from [66.133.109.36] by mandrillapp.com id de968922b4474a109741e6b83120d270; Fri, 18 Jan 2019 04:45:47 +0000
+Message-Id: <20190118T044546.722109772843101713.noreply@letsencrypt.org>
+To: <lets_encrypt@tomhartung.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30850198.de968922b4474a109741e6b83120d270
+X-Mandrill-User: md_30850198
+Date: Fri, 18 Jan 2019 04:45:47 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+**Action is required to prevent your Let's Encrypt certificate renewals fro=
+m breaking.**
+
+Your Let=E2=80=99s Encrypt client used ACME TLS-SNI-01 domain validation to=
+ issue a certificate in the past 60 days.
+
+TLS-SNI-01 validation is reaching end-of-life and will stop working on **Fe=
+bruary 13th, 2019.**
+
+You need to update your ACME client to use an alternative validation method=
+ (HTTP-01, DNS-01 or TLS-ALPN-01) before this date or your certificate rene=
+wals will break and existing certificates will start to expire.
+
+If you need help updating your ACME client, please open a new topic in the =
+Help category of the Let's Encrypt community forum:
+
+  https://community.letsencrypt.org/c/help
+
+Please answer all of the questions in the topic template so we can help you=
+.
+
+For more information about the TLS-SNI-01 end-of-life please see our API an=
+nouncement:
+
+https://community.letsencrypt.org/t/february-13-2019-end-of-life-for-all-tl=
+s-sni-01-validation-support/74209
+
+Thank you,
+  Let's Encrypt Staff
+

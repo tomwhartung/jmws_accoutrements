@@ -5,28 +5,6 @@ Moving the todo list in the README.md for artsyvisions.com to here.
 
 # TO-DO
 
-## 0. Replace Amazon Links
-
-- [ ] Create new model for affiliate marketing
-  - [ ] Store links in dictionaries
-    - [ ] afl_cj_bn dictionary
-    - [x] afl_none dictionary
-    - [ ] etc.
-  - [x] Get links from dictionaries
-    - [x] afl_content dictionary
-    - [x] afl_button dictionary
-- [ ] Site checklist:
-  - [x] Groja.com
-  - [ ] ArtsyVisions.com
-  - [ ] SeeOurMinds.com
-- [x] Remove amazon from **all** legal documents
-  - [x] Site checklist:
-    - [x] Groja.com
-    - [x] ArtsyVisions.com
-    - [x] SeeOurMinds.com
-    - [x] JooMooWebSites.com
-    - [x] TomHartung.com
-
 ## 1. Start Social Networking
 
 Time to start updating social networking sites!

@@ -1,0 +1,78 @@
+Return-path: <bounce-md_30850198.5c4e0882.v1-5388a811c41c4601bf12a26d05a3eb1c@mandrillapp.com>
+Envelope-to: lets_encrypt@tomhartung.com
+Delivery-date: Sun, 27 Jan 2019 12:37:42 -0700
+Received: from mail186-14.suw21.mandrillapp.com ([198.2.186.14])
+	by mz4.forethought.net with esmtps (TLSv1:DHE-RSA-AES256-SHA:256)
+	(Exim 4.80.1)
+	(envelope-from <bounce-md_30850198.5c4e0882.v1-5388a811c41c4601bf12a26d05a3eb1c@mandrillapp.com>)
+	id 1gnqFR-00035g-9N
+	for lets_encrypt@tomhartung.com; Sun, 27 Jan 2019 12:37:41 -0700
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mandrill; d=letsencrypt.org;
+ h=From:Subject:Message-Id:To:Date:MIME-Version:Content-Type:Content-Transfer-Encoding; i=noreply@letsencrypt.org;
+ bh=2oCvRKjPdWjAWd0DOUhq1K95qgi0QuRlUmRgB0z/0rE=;
+ b=CCAyOx3gHUbPCC13Itdfm8YpGXogwtqp6vW8+NMxNdfSUn1wXz0EdQFQjiiwI6WoEe+7f70WbMnb
+   RgoUW+tXr2qFY5lOSwEYnev5Vu2r0H88UJ3iAKSArNlIk0Q3PqZTehOIeoueCD0aNL5AVbqEX5VW
+   dJhJaEfgbOdzpZSyn2c=
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-14.suw21.mandrillapp.com id h9o486174bkn for <lets_encrypt@tomhartung.com>; Sun, 27 Jan 2019 19:37:38 +0000 (envelope-from <bounce-md_30850198.5c4e0882.v1-5388a811c41c4601bf12a26d05a3eb1c@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1548617858; h=From : 
+ Subject : Message-Id : To : Date : MIME-Version : Content-Type : 
+ Content-Transfer-Encoding : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=2oCvRKjPdWjAWd0DOUhq1K95qgi0QuRlUmRgB0z/0rE=; 
+ b=fKCMpwIT46GEjadpKaiDSufMzUY86mE4jVxB2UofynCWmaN3YA1iTxLL2D07TfRo2EVzHB
+ wfWnI8Zpmvwhtl+2LfE7HGuPWD6tM9TkcafvCLNQCjgcs8FyVhLXFbViEUjjhQODLJqWcS0x
+ bqXBAaURFEodx3GVZ03yXOZfnk8HQ=
+From: <noreply@letsencrypt.org>
+Subject: Action required: Let's Encrypt certificate renewals
+Received: from [66.133.109.36] by mandrillapp.com id 5388a811c41c4601bf12a26d05a3eb1c; Sun, 27 Jan 2019 19:37:38 +0000
+Message-Id: <20190127T193737.2263002413854846536.noreply@letsencrypt.org>
+To: <lets_encrypt@tomhartung.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30850198.5388a811c41c4601bf12a26d05a3eb1c
+X-Mandrill-User: md_30850198
+Date: Sun, 27 Jan 2019 19:37:38 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Action may be required to prevent your Let's Encrypt certificate renewals
+from breaking.
+
+If you already received a similar e-mail, this one contains updated
+information.
+
+Your Let's Encrypt client used ACME TLS-SNI-01 domain validation to issue
+a certificate in the past 60 days. Below is a list of names and IP
+addresses validated (max of one per account):
+
+ joomoowebsites.com (206.124.10.54) on 2018-11-20
+
+TLS-SNI-01 validation is reaching end-of-life. It will stop working
+temporarily on February 13th, 2019, and permanently on March 13th, 2019.
+Any certificates issued before then will continue to work for 90 days
+after their issuance date.
+
+You need to update your ACME client to use an alternative validation
+method (HTTP-01, DNS-01 or TLS-ALPN-01) before this date or your
+certificate renewals will break and existing certificates will start to
+expire.
+
+Our staging environment already has TLS-SNI-01 disabled, so if you'd like
+to test whether your system will work after February 13, you can run
+against staging: https://letsencrypt.org/docs/staging-environment/
+
+If you're a Certbot user, you can find more information here:
+https://community.letsencrypt.org/t/how-to-stop-using-tls-sni-01-with-certbot/83210
+
+Our forum has many threads on this topic. Please search to see if your
+question has been answered, then open a new thread if it has not:
+https://community.letsencrypt.org/
+
+For more information about the TLS-SNI-01 end-of-life please see our API
+announcement:
+https://community.letsencrypt.org/t/february-13-2019-end-of-life-for-all-tls-sni-01-validation-support/74209
+
+Thank you,
+Let's Encrypt Staff

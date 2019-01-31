@@ -12,6 +12,26 @@ Here is the whole thing:
 
 It is ok, we now have the flexibility to change these quickly!
 
+# Affiliate Program Signup
+
+Giving them four site names:
+
+- ArtsyVisions.com
+- Groja.com
+- SeeOurMinds.com
+- TomHartung.com
+
+Giving them the following brief description:
+
+> My content is unique: I draw images of personalities.  The people may
+> be real or fictional, and many are based on books, frequently biographies.
+> By writing stories about the images I can discuss psychological
+> patterns and highlight the differences between famous people - for example,
+> the differences between Alexander Hamilton and Thomas Jefferson.
+> This increases people's curiosity, ideally prompting them to buy books to
+> learn more about the characters and underlying psychology.
+
+
 # Affiliate Program Agreement - Copy and Pasted
 
 Please read this Agreement carefully.  You will be an affiliate once you have clicked "Submit Application" at the bottom of this page, and have completed the Online Enrollment Form. PLEASE NOTE that we reserve the right to reject or cancel your acceptance if your Website discriminates against others, advocates illegal activities, or otherwise violates the terms of the following Agreement.

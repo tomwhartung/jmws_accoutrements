@@ -7,6 +7,7 @@ There are many affiliate marketing opportunities in addition to those run by the
 
 Googling for "best affiliate sites for books" and "best affiliate sites dvds" led me to the following sites:
 
+
 ## Specific Resources - To Come Back To
 
 These sound interesting, but I am not sure whether I am ready to jump in right this second.
@@ -29,6 +30,10 @@ Not in the lists but found in the search results.
 - http://dvdbundles.com/affiliates
 - Looks interesting: "lucrative dvd affiliate program"
 - 10% on each sale
+- Also highlighted at http://www.affiliateguide.com/internettv.html
+
+**Note: They use ShareASale.**
+
 
 ## Gleaned From the Lists
 
@@ -38,6 +43,7 @@ These appear in one or more of the lists below and look particularly interesting
 - ShareASale - also on many of the lists
 - VigLink - sounds quite intersting
 - FlexOffers - on forexreferral's highest paying list
+
 
 ## Lists of Resources
 
@@ -61,6 +67,27 @@ From pureresiduals.com
 9. FlexOffers - "Commissions are not so great"
 10. RevenueWire - "Steep learning curve"
 
+
+### Affiliate Directory
+
+This directory has a large list of affiliate programs broken down by category.
+
+From www.affiliateguide.com
+
+- http://www.affiliateguide.com/
+- Recommended Affiliate Programs
+  - http://www.affiliateguide.com/recomend.html
+  - ShareASale tops the list
+- Internet TV and Video Affiliate Programs
+  - http://www.affiliateguide.com/internettv.html
+  - Page highlights DVD Bundles
+  - "Legal Movie Downloads"
+    - "Legally download unlimited movies to your PC, Mobile or Tablet. Affiliate program will pay you **65% commission.**"
+  - Brief entry near the end for "DVD Wave.Com - DVD movies - 5% commission
+    - http://www.dvdwave.com/
+    - Takes me to cduniverse.com: https://www.cduniverse.com/default.asp?style=movie&frm=www.dvdwave.com
+
+
 ### 5 High-Paying Affiliate Programs For Bloggers
 
 From thesheapproach.com
@@ -71,6 +98,7 @@ From thesheapproach.com
   - ~~amazon sucks~~
   - Ultimate Bundles
   - The She Approach Affiliate Program
+
 
 ### 21 of the Best Affiliate Programs to Find High Quality Products for Your Website
 
@@ -107,6 +135,7 @@ Excerpts:
   - Con: "Each offer has its own requirements and restrictions which filters out most newbies"
 - #21 Udemy
 
+
 ### Best Affiliate Networks 2019
 
 From highpayingaffiliateprograms.com
@@ -137,6 +166,7 @@ From highpayingaffiliateprograms.com
 18. Olavivo - health, beauty, cryptocurrency
 19. MoreNiche - health products
 20. AffiBank - pays up to 75% commission
+
 
 ### The (67+) best affiliate programs for every marketer
 

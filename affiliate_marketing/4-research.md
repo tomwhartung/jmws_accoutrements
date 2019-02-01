@@ -34,6 +34,14 @@ Not in the lists but found in the search results.
 
 **Note: They use ShareASale.**
 
+### Smart Passive Income
+
+This site has a lot of information about earning passive income online:
+
+- https://www.smartpassiveincome.com/passive-income-101/
+
+Maybe sign up for one of their email classes someday?
+
 
 ## Gleaned From the Lists
 

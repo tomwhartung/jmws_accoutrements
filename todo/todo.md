@@ -36,15 +36,43 @@ See which sites, if any, get any response.
     - [x] ArtsyVisions.com
     - [x] SeeOurMinds.com
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
-  - [ ] Populist Politicians
+  - [ ] Imelda Marcos
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
-  - [ ] Woody Allen
+  - [ ] Populist Politicians
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
   - [ ] Catelyn Stark
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
+  - [ ] Another Game of Thrones - Jon Snow and ???
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Luke Skywalker
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Leia and Han
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Woody Allen
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Star Trek Bridge Crew
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] The Roosevelts - Review Resources
+    - [ ] DVD
+    - [ ] Magazine
+    - [ ] Keirsey E-book
+  - [ ] Eleanor and Franklin Roosevelt
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Theodore Roosevelt
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Leia and Han
+    - [ ] ArtsyVisions.com
+    - [x] SeeOurMinds.com
 - [ ] SeeOurMinds.com - continue adding affiliate marketing links - Phase I
   - [ ] See list in notebook
   - [ ] Always fix pages referred to by stories on ArtsyVisions.com
@@ -85,15 +113,6 @@ See which sites, if any, get any response.
 
 ### 3.1. Content Updates - Phase 2
 
-- [ ] Roosevelts - ALL
-  - [ ] DVD
-  - [ ] Magazine
-  - [ ] Keirsey E-book
-  - [ ] ArtsyVisions.com
-  - [ ] SeeOurMinds.com
-- [ ] Leia and Han
-  - [ ] ArtsyVisions.com
-  - [x] SeeOurMinds.com
 - [ ] Trixie and Shae
   - [ ] ArtsyVisions.com
   - [ ] SeeOurMinds.com

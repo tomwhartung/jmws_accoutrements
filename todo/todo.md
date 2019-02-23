@@ -31,21 +31,24 @@ See which sites, if any, get any response.
 
 ### 2.1. Content Updates - Phase 1
 
-- [ ] Add new articles:
+- [ ] Publish new articles:
   - [x] Wild at Heart
     - [x] ArtsyVisions.com
     - [x] SeeOurMinds.com
+  - [x] Imelda Marcos
+    - [x] ArtsyVisions.com
+    - [x] SeeOurMinds.com
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
-  - [ ] Imelda Marcos
-    - [ ] ArtsyVisions.com
-    - [ ] SeeOurMinds.com
   - [ ] Populist Politicians
-    - [ ] ArtsyVisions.com
+    - [x] ArtsyVisions.com
     - [ ] SeeOurMinds.com
   - [ ] Catelyn Stark
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
-  - [ ] Another Game of Thrones - Jon Snow and ???
+  - [ ] "Team" Lannister
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+  - [ ] Another Game of Thrones - Jon Snow and Stannis Baratheon, maybe??
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
   - [ ] Luke Skywalker
@@ -60,7 +63,7 @@ See which sites, if any, get any response.
   - [ ] Star Trek Bridge Crew
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
-  - [ ] The Roosevelts - Review Resources
+  - [ ] The Roosevelts - Preparation: Review Resources
     - [ ] DVD
     - [ ] Magazine
     - [ ] Keirsey E-book
@@ -70,9 +73,6 @@ See which sites, if any, get any response.
   - [ ] Theodore Roosevelt
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
-  - [ ] Leia and Han
-    - [ ] ArtsyVisions.com
-    - [x] SeeOurMinds.com
 - [ ] SeeOurMinds.com - continue adding affiliate marketing links - Phase I
   - [ ] See list in notebook
   - [ ] Always fix pages referred to by stories on ArtsyVisions.com

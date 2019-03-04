@@ -3,8 +3,8 @@
 
 Idea for addressing a want, pain, or fear in my first ebook:
 
-- Death
-- Grojas
+- Death: yours and mine
+- Grojas: only way to really preserve your personality
 
 Planning to give it away.
 

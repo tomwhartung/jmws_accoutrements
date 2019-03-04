@@ -1,9 +1,10 @@
 
-# books/1-marketing/1-idea.md
+# books/1-marketing/2-outline.md
 
-Idea for first ebook:
+Idea for addressing a want, pain, or fear in my first ebook:
 
-- Pure marketing, shameless promotion of Grojas
+- Death
+- Grojas
 
 Planning to give it away.
 
@@ -26,5 +27,3 @@ It's always nice to bring stuff like this to the surface.
 That's all I am doing, is making the invisible visible.
 
 - Except - maybe some people are afraid of their subconscious?
-
-

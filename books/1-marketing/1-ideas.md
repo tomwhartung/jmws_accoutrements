@@ -17,14 +17,3 @@ Planning to give it away.
 This might be silly but think about it.
 
 **Need to focus on content to start!**
-
-## Marketing Ideas
-
-Many of us are already subconsciously processing this information to varying degrees.
-
-It's always nice to bring stuff like this to the surface.
-That's all I am doing, is making the invisible visible.
-
-- Except - maybe some people are afraid of their subconscious?
-
-

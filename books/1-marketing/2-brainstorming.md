@@ -1,7 +1,7 @@
 
-# books/1-marketing/2-outline.md
+# books/1-marketing/2-brainstorming.md
 
-# Core Ideas
+## Core Ideas
 
 Ideas for addressing a want, pain, or fear - which is what Seth Godin suggests - in my first ebook:
 
@@ -11,18 +11,7 @@ Ideas for addressing a want, pain, or fear - which is what Seth Godin suggests -
   - You will never see your personality unless I do it before you die
 - Fear: are you afraid of your own subconscious?
 
-Planning to give it away.
-
-- Idea for experiementation:
-  - Give book away, sell the image
-  - Sell the book for like $1 and have it include a coupon for a free image
-  - Logistics?
-  - Compare success of ideas?
-  - How to have a coupon in an e-book?
-
-This might be silly but think about it.
-
-**Need to focus on content to start!**
+Not sure where to put these in the outline?
 
 ## Unorganized Ideas
 
@@ -163,7 +152,6 @@ Either:
        - If you prefer emotions to logic,
        - If you'd rather work with people than things,
        - Then you will understand the images more easily
-
 
 
 ### End

@@ -31,21 +31,48 @@ Either merge these ideas into one of the major sections below or don't use them
 - Key Point: the images reflect the strength of the preferences
   - People with mild preferences are very different from those with strong preferences - and the images reflect that
 
+- Explaining the core pairs of opposites
+  - N vs. S - Perceptions
+    - As different as night and day
+    - The biggest differences between people
+  - F vs. T - Motivations
+    - Warm vs. Cool
+    - The source of most difficulties between people
+
+  - Strong preferences:
+    - Meyers-Briggs warns repeatedly that a strong supporting function is essential
+
+## My Theories
+
+On the fence about including these ideas.
+
+**It may be best to present these ideas in an article on medium.**
+
+- My Theory 1
+  - We tend to look for who we are in others
+  - In my opinion, we tend to unconsciously project our tendencies preferences onto others
+  - That is, we expect others to do what we would do - unless there is a reason not to, such as until we get to know someone better
+
+
+
 ## Selling Points
 
+- Gain insight into recurring people problems
 - Wake up - increase awareness of self and others
   - It's always nice to bring unconscious information to the surface
 - All of us are expressing these traits in our daily actions
   - Take control - choose self-knowledge over floating through life like flotsam
   - Many of us are already subconsciously processing this information to varying degrees
   - All I am doing is making the invisible visible
-
+- Strong preferences are visible immediately
+    - For example: stubbornness and haplessness
 
 
 ## Major Sections
 
 Go ahead and expand these now if desired, and just paste them into the outline later.
 
+-
 - How to Draw a Personality
   - Choose what qualities you want to portray
     - For example, Jungian, Big 5, something from the DSM, etc.

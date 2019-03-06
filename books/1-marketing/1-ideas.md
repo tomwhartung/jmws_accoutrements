@@ -5,9 +5,9 @@ Idea for first ebook:
 
 - Pure marketing, shameless promotion of Grojas
 
-Planning to give it away.
+**Planning to give it away.**
 
-- Idea for experiementation:
+- Idea for experimentation:
   - Give book away, sell the image
   - Sell the book for like $1 and have it include a coupon for a free image
   - Logistics?

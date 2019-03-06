@@ -31,11 +31,16 @@ Either merge these ideas into one of the major sections below or don't use them
 - Key Point: the images reflect the strength of the preferences
   - People with mild preferences are very different from those with strong preferences - and the images reflect that
 
-- Many of us are already subconsciously processing this information to varying degrees
+## Selling Points
 
-- It's always nice to bring stuff like this to the surface
+- Wake up - increase awareness of self and others
+  - It's always nice to bring unconscious information to the surface
+- All of us are expressing these traits in our daily actions
+  - Take control - choose self-knowledge over floating through life like flotsam
+  - Many of us are already subconsciously processing this information to varying degrees
+  - All I am doing is making the invisible visible
 
-- All I am doing is making the invisible visible
+
 
 ## Major Sections
 
@@ -49,7 +54,7 @@ Go ahead and expand these now if desired, and just paste them into the outline l
   - Decide how to represent the qualities
     - For example, what shapes and colors to use for these traits, what types vectors for those traits, etc.
   - Consider writing a program to do the work
-    - A program is **not** necessary, but it makes it very easy to be consistent
+    - Writing a program to convert the results to an image is **not** necessary, but it makes it easy to create consistent images
   - Obtain personality profiles and draw them!
     - Get people to answer the questionnaire
 
@@ -64,7 +69,7 @@ Go ahead and expand these now if desired, and just paste them into the outline l
     - Instant Personality Quiz?
     - Two questions, pick where you are on the continuum
       - Use at least positive, neutral, and negative synonym on each side
-      - Use the colors subtly in the continuum - a gradient with white in the middle might be nice
+      - Use the colors subtlely in the continuum - a gradient with white in the middle might be nice
       - S ------- N - where are you, on a scale of 1-10?
       - T ------- F - where are you, on a scale of 1-10?
     - What your score means:
@@ -72,6 +77,35 @@ Go ahead and expand these now if desired, and just paste them into the outline l
         - The higher your score, the better chance you will like it
       - If your score is less than 10, a spiritual portrait is not for you
         - The lower your score, the less probability you will like it
+   - How it works
+     - Personality traits and images of personalities are abstract
+       - If you are more N than S,
+       - If you are more Blue than Yellow,
+       - If you prefer ideas to facts,
+       - If you are more comfortable with abstractions than most,
+       - Then you will understand the images more easily
+     - Personality traits and images of personalities are all about people
+       - If you are more F than T,
+       - If you are more Red than Green,
+       - If you prefer emotions to logic,
+       - If you'd rather work with people than things,
+       - Then you will understand the images more easily
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

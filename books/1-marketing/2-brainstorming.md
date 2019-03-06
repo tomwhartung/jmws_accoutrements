@@ -11,7 +11,11 @@ Ideas for addressing a want, pain, or fear - which is what Seth Godin suggests -
   - You will never see your personality unless I do it before you die
 - Fear: are you afraid of your own subconscious?
 
-Not sure where to put these in the outline?
+More positive ideas:
+
+- Understand where others are coming from.
+
+Probably want to put these near the beginning.
 
 ## Unorganized Ideas
 
@@ -66,7 +70,26 @@ My Theory 2: Androids and AI Theory
 
 Regardless of what type you are, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
 
-## Selling Points
+
+## Major Sections
+
+Go ahead and expand these now if desired, and just paste them into the outline later.
+
+### Beginning
+
+- Prelude/Forward/Introduction
+  - Questions:
+    - Are you as happy as you could be?
+    - Would you like to know why some people just rub you the wrong way, right from the start?
+    - Do you really know yourself?
+    - Do you go through life without direction, just responding to things, like flotsam?
+    - Could your relationships be better?
+    - Do you ever wonder where other people are coming from?
+    - Do you ever wonder why you relate to some fictional characters better than others?
+    - Etc., "as many as possible"
+  - **Grojas can help with all of these issues**
+
+### Why: Selling Points
 
 - Good to know what sort of work you are best suited for
 - Gain insight into recurring people problems
@@ -83,43 +106,7 @@ Regardless of what type you are, if you are naturally drawn to work that is easi
 
 
 
-## Major Sections
-
-Go ahead and expand these now if desired, and just paste them into the outline later.
-
-### Beginning
-
-- Prelude/Forward/Introduction
-  - Questions:
-    - Are you as happy as you could be?
-    - Do you really know yourself?
-    - Do you go through life without direction, just responding to things, like flotsam?
-    - Could your relationships be better?
-    - Etc., "as many as possible"
-  - **Grojas can help with all of these issues**
-
-### Middle
-
-Do we want How-to information in this marketing document?
-
-Either:
-- Include the How-to
-- Put the How-to in a separate document, e.g., an infographic
-- Describe what the images represent some other way
-
-- How to Draw a Personality
-  - Choose what qualities you want to portray
-    - For example, Jungian, Big 5, something from the DSM, etc.
-  - Find a questionnaire
-    - Find an existing questionnaire that is OK to use, or write your own, or both
-  - Decide how to represent the qualities
-    - For example, what shapes and colors to use for these traits, what types vectors for those traits, etc.
-  - Consider writing a program to do the work
-    - Writing a program to convert the results to an image is **not** necessary, but it makes it easy to create consistent images
-  - Obtain personality profiles and draw them!
-    - Get people to answer the questionnaire
-
-  - [TODO: Adapt this into an infographic - **or do portions of it or the whole thing as an infographic** - and post to pinterst]
+### What:
 
 
 - Introduce what each of the colors represents
@@ -160,4 +147,23 @@ Conclusion/The Pitch - Grojas can help with:
 
 - Self-awareness
 - Relationships - personal & professional teams - explain how briefly
--
+- Etc.
+
+### Appendix: How to Draw a Personality
+
+Consider doing all or portions of this as an infographic - see TODOs below.
+
+- Choose what qualities you want to portray
+  - For example, Jungian, Big 5, something from the DSM, etc.
+- Find a questionnaire
+  - Find an existing questionnaire that is OK to use, or write your own, or both
+- Decide how to represent the qualities
+  - For example, what shapes and colors to use for these traits, what types vectors for those traits, etc.
+- Consider writing a program to do the work
+  - Writing a program to convert the results to an image is **not** necessary, but it makes it easy to create consistent images
+- Obtain personality profiles and draw them!
+  - Get people to answer the questionnaire
+
+- [TODOs:]
+  1. Adapt this into an infographic and post to pinterst
+  2. Adapt this How-to into an article and post to medium

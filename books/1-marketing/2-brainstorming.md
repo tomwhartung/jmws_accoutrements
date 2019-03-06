@@ -89,6 +89,7 @@ Go ahead and expand these now if desired, and just paste them into the outline l
     - Etc., "as many as possible"
   - **Grojas can help with all of these issues**
 
+
 ### Why: Selling Points
 
 - Good to know what sort of work you are best suited for
@@ -102,16 +103,19 @@ Go ahead and expand these now if desired, and just paste them into the outline l
 - Strong preferences are visible immediately
   - For example: stubbornness and haplessness
 - Regardless of what type you are, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
-  - See "My Theory 2" above
-
+  - See "My Theory 2"
 
 
 ### What:
 
+Don't go too deep - for details refer to the How-to
 
-- Introduce what each of the colors represents
-  - Maybe as part of the How-to?
+- Introduce what Grojas are:
+  - What each of the colors represent
+  - What horizontal and vertical lines represent
 
+
+### Who:
 
 - Are You Someone Who Will Appreciate Their Spiritual Portrait?
   - World's Shortest Personality Quiz - or Something
@@ -141,15 +145,20 @@ Go ahead and expand these now if desired, and just paste them into the outline l
        - Then you will understand the images more easily
 
 
-### End
+### Conclusion - The Pitch
 
-Conclusion/The Pitch - Grojas can help with:
+Grojas can help with:
 
 - Self-awareness
 - Relationships - personal & professional teams - explain how briefly
 - Etc.
 
+
 ### Appendix: How to Draw a Personality
+
+This will be **the definitive, detailed How-to,** to be excerpted from and adapted into articles for posting on social networking sites.
+
+So it's ok to delve into details.  Dive away!
 
 Consider doing all or portions of this as an infographic - see TODOs below.
 
@@ -164,6 +173,6 @@ Consider doing all or portions of this as an infographic - see TODOs below.
 - Obtain personality profiles and draw them!
   - Get people to answer the questionnaire
 
-- [TODOs:]
+- TODOs:
   1. Adapt this into an infographic and post to pinterst
   2. Adapt this How-to into an article and post to medium

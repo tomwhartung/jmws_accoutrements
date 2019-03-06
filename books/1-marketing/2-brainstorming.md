@@ -82,15 +82,20 @@ Go ahead and expand these now if desired, and just paste them into the outline l
     - Are you as happy as you could be?
     - Would you like to know why some people just rub you the wrong way, right from the start?
     - Do you really know yourself?
-    - Do you go through life without direction, just responding to things, like flotsam?
+    - Do you ever wonder why other people aren't more like you?
     - Could your relationships be better?
     - Do you ever wonder where other people are coming from?
-    - Do you ever wonder why you relate to some fictional characters better than others?
+    - Would you like to know why you relate to some fictional characters better than others?
+    - Do you go through life without direction, just responding to things, like flotsam?
     - Etc., "as many as possible"
+    - Would you like to know why
+    - Do you ever wonder why
   - **Grojas can help with all of these issues**
 
 
 ### Why: Selling Points
+
+These should address **all** questions in the previous section.
 
 - Good to know what sort of work you are best suited for
 - Gain insight into recurring people problems
@@ -117,32 +122,34 @@ Don't go too deep - for details refer to the How-to
 
 ### Who:
 
-- Are You Someone Who Will Appreciate Their Spiritual Portrait?
-  - World's Shortest Personality Quiz - or Something
-    - Instant Personality Quiz?
-    - Two questions, pick where you are on the continuum
-      - Use at least positive, neutral, and negative synonym on each side
-      - Use the colors subtlely in the continuum - a gradient with white in the middle might be nice
-      - S ------- N - where are you, on a scale of 1-10?
-      - T ------- F - where are you, on a scale of 1-10?
-    - What your score means:
-      - If your score is 10 or more, you will like your spiritual portrait
-        - The higher your score, the better chance you will like it
-      - If your score is less than 10, a spiritual portrait is not for you
-        - The lower your score, the less probability you will like it
-   - How it works
-     - Personality traits and images of personalities are abstract
-       - If you are more N than S,
-       - If you are more Blue than Yellow,
-       - If you prefer ideas to facts,
-       - If you are more comfortable with abstractions than most,
-       - Then you will understand the images more easily
-     - Personality traits and images of personalities are all about people
-       - If you are more F than T,
-       - If you are more Red than Green,
-       - If you prefer emotions to logic,
-       - If you'd rather work with people than things,
-       - Then you will understand the images more easily
+How to determine whether you would like to see your Spiritual Portrait.
+
+- World's Shortest Personality Quiz - or Something
+  - Instant Personality Quiz?
+  - Two questions, pick where you are on the continuum
+    - Use at least positive, neutral, and negative synonym on each side
+    - Use the colors subtlely in the continuum - a gradient with white in the middle might be nice
+    - S ------- N - where are you, on a scale of 1-10?
+    - T ------- F - where are you, on a scale of 1-10?
+  - What your score means:
+    - If your score is 10 or more, you will like your spiritual portrait
+      - The higher your score, the better chance you will like it
+    - If your score is less than 10, a spiritual portrait is not for you
+      - The lower your score, the less probability you will like it
+
+- How it works
+  - Personality traits and images of personalities are abstract
+    - If you are more N than S,
+    - If you are more Blue than Yellow,
+    - If you prefer ideas to facts,
+    - If you are more comfortable with abstractions than most,
+    - Then you will understand the images more easily
+  - Personality traits and images of personalities are all about people
+    - If you are more F than T,
+    - If you are more Red than Green,
+    - If you prefer emotions to logic,
+    - If you'd rather work with people than things,
+    - Then you will understand the images more easily
 
 
 ### Conclusion - The Pitch

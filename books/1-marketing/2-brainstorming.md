@@ -30,7 +30,6 @@ Either merge these ideas into one of the major sections below or don't use them
 
 - Key Point: the images reflect the strength of the preferences
   - People with mild preferences are very different from those with strong preferences - and the images reflect that
-
 - Explaining the core pairs of opposites
   - N vs. S - Perceptions
     - As different as night and day
@@ -38,12 +37,12 @@ Either merge these ideas into one of the major sections below or don't use them
   - F vs. T - Motivations
     - Warm vs. Cool
     - The source of most difficulties between people
-
 - Strong preferences:
   - Meyers-Briggs warns repeatedly that a strong supporting function is essential
-
 - Jobs frequently require us to be more logical than emotional
   - E.g., require working with things when someone would prefer to work with people
+- Want to disrupt stereotypes based on demographics
+- Sick of the voice in my head that categorizes and judges others based on superficial BS
 
 ## My Theories
 
@@ -66,15 +65,17 @@ My Theory 1: we project who we are on others.
 
 These are all real world consequences caused by people's failure to understand a few simple abstract principles.
 
-### My Theory 2: Androids and AI Theory
+### My Theory 2: ST Jobs at Risk of Automation
 
 My Theory 2: Androids and AI Theory
 
 - People who will like these images are more N and F
+  - These people naturally seek out work that is less subject to being automated
 - If you are more S and T, your occupation, no matter what it is, is at risk of automation
   - It is easy to give a machine sensory input, but difficult or impossible to give it ideas
   - Machines are made to be logical, it is difficult or impossible to give them emotions
 
+Regardless of what type you are, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
 
 ## Selling Points
 
@@ -87,14 +88,36 @@ My Theory 2: Androids and AI Theory
   - Many of us are already subconsciously processing this information to varying degrees
   - All I am doing is making the invisible visible
 - Strong preferences are visible immediately
-    - For example: stubbornness and haplessness
+  - For example: stubbornness and haplessness
+- Regardless of what type you are, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
+  - See "My Theory 2" above
+
 
 
 ## Major Sections
 
 Go ahead and expand these now if desired, and just paste them into the outline later.
 
--
+### Beginning
+
+- Prelude/Forward/Introduction
+  - Questions:
+    - Are you as happy as you could be?
+    - Do you really know yourself?
+    - Do you go through life without direction, just responding to things, like flotsam?
+    - Could your relationships be better?
+    - Etc., "as many as possible"
+  - **Grojas can help with all of these issues**
+
+### Middle
+
+Do we want How-to information in this marketing document?
+
+Either:
+- Include the How-to
+- Put the How-to in a separate document, e.g., an infographic
+- Describe what the images represent some other way
+
 - How to Draw a Personality
   - Choose what qualities you want to portray
     - For example, Jungian, Big 5, something from the DSM, etc.
@@ -108,6 +131,7 @@ Go ahead and expand these now if desired, and just paste them into the outline l
     - Get people to answer the questionnaire
 
   - [TODO: Adapt this into an infographic - **or do portions of it or the whole thing as an infographic** - and post to pinterst]
+
 
 - Introduce what each of the colors represents
   - Maybe as part of the How-to?
@@ -142,20 +166,10 @@ Go ahead and expand these now if desired, and just paste them into the outline l
 
 
 
+### End
 
+Conclusion/The Pitch - Grojas can help with:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-x
+- Self-awareness
+- Relationships - personal & professional teams - explain how briefly
+-

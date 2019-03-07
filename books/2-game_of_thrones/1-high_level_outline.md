@@ -33,36 +33,38 @@ A book about visualizing the personalities of characters on Game of Thrones.
 
 ## Part 2: The Houses
 
-### 2.1. House Martell
+### 2.1. House Tyrell
 
-- Olenna
-- Margeary
-- Loras
+- Olenna Tyrell
+- Margeary Tyrell
+- Loras Tyrell
 
 ### 2.2. House Lannister
 
-- Tywin
-- Jamie
-- Cersei
-- Tyrion
+- Tywin Lannister
+- Jamie Lannister
+- Cersei Lannister
+- Tyrion Lannister
 
 ### 2.3. House Baratheon
 
-- Robert
-- Stannis
-- Renly
-- Jeoffrey
-- Tommen
+- Robert Baratheon
+- Stannis Baratheon
+- Renly Baratheon
+- Jeoffrey Baratheon
+- Tommen Baratheon
 
 ### 2.4. House Stark
 
-- Ned
-- Catelyn
-- Robb
-- Sansa
-- Arya
-- Brandon
-- Jon
+- Ned Stark
+- Catelyn Stark
+- Robb Stark
+- Sansa Stark
+- Arya Stark
+- Brandon Stark
+- Rickon Stark
+  - Not fully developed in the show
+- Jon Snow
 
 ## Part 3: Cross-sections
 
@@ -80,19 +82,26 @@ Not too many of these in Westeros.  Most people are very cold.
 
 ### 3.2. Soldiers
 
+They are skilled at fighting.
+
 - Sandor Clegane
--
+- Brienne
+- Davos
+- Oberyn
+- Loras
 
-### 3.3. Idealists/Thinkers
+### 3.3. Humanists
 
-### 3.3.1. Humanists
+They care about other people.
 
 - Samwell
 - Margeary
 - Sansa
 - Tyrion
 
-### 3.3.2. Strategists
+### 3.4. Strategists
+
+They plot, for selfish reasons or for the good of the realm.
 
 - Littlefinger
 - Varys
@@ -100,21 +109,24 @@ Not too many of these in Westeros.  Most people are very cold.
 - High Sparrow
 - Joffrey
 
-### 3.4. Bosses
+### 3.5. Bosses
 
-- Robert
-- Stannis
-- Renly
-- Jeoffrey
+They crave control and demand obedience.
+
+- Robert Baratheon
+- Stannis Baratheon
+- Jeoffrey Baratheon
 - Theon
 - High Sparrow
 
-### 3.5. Kings and Queens
+### 3.6. Kings and Queens
 
-- Lannisters
-- Baratheons
-- Starks
+Their personalities run the gamut, and demonstrate that heredity is not a good predictor of ruling capability.
 
+- Robert Baratheon
+- Joffrey Baratheon
+- Tommen Baratheon
+- Cersei Lannister
 
 
 ## Part 4: Conclusions

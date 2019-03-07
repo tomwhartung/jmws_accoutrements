@@ -16,4 +16,4 @@ Idea for first ebook:
 
 This might be silly but think about it.
 
-**Need to focus on content to start!**
+**Need to focus on content to start - worry about distribution later!**

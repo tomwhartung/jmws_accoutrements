@@ -1,20 +1,59 @@
 
-# books/visualizing_got_personalities.md
+# books/2-game_of_thrones/1-high_level_outline.md
 
-Idea: write a book about visualizing the personalities of characters on Game of Thrones.
+A book about visualizing the personalities of characters on Game of Thrones.
 
-# Visualizing Game of Thrones Personalities
+# Title
 
-## High-level Outline
+- Visualizing Game of Thrones Personalities
 
-- Dedicated to anyone who ever felt they were on the wrong planet.
+# High-level Outline
 
-0. Forward
+## Part 1: Introduction
 
+### 1.1. Forward
 
-1. Introducing Spiritual Portraits
+- Dedicated to anyone who has ever struggled with fitting in and felt they were on the wrong planet.
 
-2. The Normals
+### 1.2. Introducing Spiritual Portraits
+
+- Keep it short
+- Refer to online resources
+
+## Part 2: The Houses
+
+### 2.1. House Martell
+
+- Olenna
+- Margeary
+- Loras
+
+### 2.2. House Lannister
+
+- Tywin
+- Jamie
+- Cersei
+- Tyrion
+
+### 2.3. House Baratheon
+
+- Robert
+- Stannis
+- Renly
+- Jeoffrey
+- Tommen
+
+### 2.4. House Stark
+
+- Ned
+- Catelyn
+- Robb
+- Sansa
+- Arya
+- Brandon
+- Jon
+
+## Part 3: Cross-sections
 
 - Soldiers
 

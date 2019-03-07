@@ -113,11 +113,41 @@ These should address **all** questions in the previous section.
 
 ### What:
 
-Don't go too deep - for details refer to the How-to
+[Don't go too deep - for details refer to the How-to]
+
+#### What do you do?
+
+What do you do in your life?
+
+No matter who you are, you:
+
+- Observe things
+  - See, hear, touch, smell, and taste
+    - Even animals and machines can do these things
+  - After awhile, we begin to see patterns and get ideas
+    - In general humans are better at these things than animals and machines
+- Make decisions
+  - Many decisions are subconscious: reflexive, instinctive, and habitual
+  - After awhile, we develop a tendency to:
+    - Make logical decisions that are consistent and determined by external circumstances
+    - Make emotional decisions that can vary and are determined by how we feel at the moment
+    - Consciously consider both alternatives and pick the one best suited to the situation
+
+#### What do the images represent?
 
 - Introduce what Grojas are:
-  - What each of the colors represent
-  - What horizontal and vertical lines represent
+  - The images must be abstract because personalities are abstract
+  - They are based on Jungian Achetypes
+    - Myers Briggs codified and commercialized Jung's typology, and adapted his methodology into the popular four-letter type shorthand
+- What each of the colors represent
+  - Refer to About page on Groja.com, **do not duplicate it**
+    - Possibly refer to Appendix, where there might be more information
+  - Sensing-Yellow versus iNtuition-Blue
+    - Three or more adjectives for each, at least one each positive, neutral, and negative
+  - Thinking-Green versus Feeling-Red
+    - Three or more adjectives for each, at least one each positive, neutral, and negative
+
+- What horizontal and vertical lines represent
 
 
 ### Who:
@@ -159,6 +189,16 @@ Grojas can help with:
 - Self-awareness
 - Relationships - personal & professional teams - explain how briefly
 - Etc.
+
+#### Pricing
+
+Pricing is variable.
+If you see us running a special offer, you would be wise to take advantage of it.
+
+- Increased demand:
+  - May well drive up the price of hand-crafted images
+  - May push me to better automate production, so the price will always be reasonable
+- Images of similar personalities will look similar, but no two images will never be identical
 
 
 ### Appendix: How to Draw a Personality

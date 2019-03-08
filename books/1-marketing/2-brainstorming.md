@@ -22,55 +22,32 @@ More positive ideas:
 Probably want to put these near the beginning.
 
 
-## Unorganized Ideas
-
-Either merge these ideas into one of the major sections below or don't use them
-
-- Key Point: the images reflect the strength of the preferences
-  - People with mild preferences are very different from those with strong preferences - and the images reflect that
-- Explaining the core pairs of opposites
-  - N vs. S - Perceptions
-    - As different as night and day
-    - The biggest differences between people
-  - F vs. T - Motivations
-    - Warm vs. Cool
-    - The source of most difficulties between people
-- Strong preferences:
-  - Meyers-Briggs warns repeatedly that a strong supporting function is essential
-- Some jobs require us to be more logical than emotional
-  - E.g., require working with things when someone would prefer to work with people
-- Want to disrupt stereotypes based on demographics
-- Sick of the voice in my head that categorizes and judges others based on superficial BS
-- It's easier to sell logic than emotion, because logic is universal
-
-
 ## Major Sections
 
 Go ahead and expand these now if desired, and just paste them into the outline later.
 
-### Beginning
+### Beginning - Prelude/Forward/Introduction
 
-- Prelude/Forward/Introduction
-  - Questions:
-    - Are you as happy as you could be?
-    - Would you like to know why some people just rub you the wrong way, right from the start?
-    - Do you really know yourself?
-    - Do you ever wonder why other people aren't more like you?
-    - Could your relationships be better?
-    - Do you ever wonder where other people are coming from?
-    - Would you like to know why you relate to some fictional characters better than others?
-    - Do you go through life without direction, just responding to things, like flotsam?
-    - Etc., "as many as possible"
-    - Would you like to know why
-    - Do you ever wonder why
-  - **Grojas can help with all of these issues**
+- Questions:
+  - Are you as happy as you could be?
+  - Would you like to know why some people just rub you the wrong way, right from the start?
+  - Do you really know yourself?
+  - Do you ever wonder why other people aren't more like you?
+  - Could your relationships be better?
+  - Do you ever wonder where other people are coming from?
+  - Would you like to know why you relate to some fictional characters better than others?
+  - Do you go through life without direction, just responding to things, like flotsam?
+  - Etc., "as many as possible"
+  - Would you like to know why
+  - Do you ever wonder why
+
+**Grojas can help with all of these issues**
 
 
 ### Why: Selling Points
 
 These should address **all** questions in the previous section.
 
-- Good to know what sort of work you are best suited for
 - Gain insight into recurring people problems
 - Wake up - increase awareness of self and others
   - It's always nice to bring unconscious information to the surface
@@ -78,10 +55,13 @@ These should address **all** questions in the previous section.
   - Take control - choose self-knowledge over floating through life like flotsam
   - Many of us are already subconsciously processing this information to varying degrees
   - All I am doing is making the invisible visible
-- Strong preferences are visible immediately
-  - For example: stubbornness and haplessness
-- Regardless of what type you are, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
-  - See "My Theory 2"
+- Good to know what sort of work you are best suited for
+  - For example, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
+- Key Point: the images reflect the strength of the preferences
+  - People with mild preferences are very different from those with strong preferences - and the images reflect that
+  - Strong preferences in particular are visible immediately
+    - Meyers-Briggs warns repeatedly that a strong supporting function is essential for all types
+    - For example: stubbornness and haplessness
 
 
 ### What:
@@ -123,9 +103,15 @@ Finally, people tend to direct their dominant preference either outwardly or inw
     - Possibly refer to Appendix, where there might be more information
   - Sensing-Yellow versus iNtuition-Blue
     - Three or more adjectives for each, at least one each positive, neutral, and negative
+    - N vs. S - Perceptions
+      - As different as night and day
+      - The biggest differences between people
   - Thinking-Green versus Feeling-Red
     - Three or more adjectives for each, at least one each positive, neutral, and negative
-- What horizontal and vertical lines represent
+    - F vs. T - Motivations
+      - Warm vs. Cool
+      - The source of most difficulties between people
+- What the horizontal and vertical lines represent
   - These images use:
     - Vertical lines to represent the preference the person directs outwardly
     - Horizontal lines to represent the preference the person directs inwardly
@@ -190,6 +176,9 @@ If you see us running a special offer, you would be wise to take advantage of it
   - May push me to better automate production, so the price will always be reasonable
 - Images of similar personalities will look similar, but no two images will never be identical
 
+#### FAQ
+
+[Idea: resist the temptation to add a FAQ until we actually have real live questions that are getting asked frequently.]
 
 ### Appendix: How to Draw a Personality
 

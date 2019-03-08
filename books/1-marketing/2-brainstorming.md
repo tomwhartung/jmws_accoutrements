@@ -1,6 +1,10 @@
 
 # books/1-marketing/2-brainstorming.md
 
+I have a lot - and I mean **a lot** - of ideas about all this.
+
+Therefore it will be best to dump them all out here, look at them, and organize them from there.
+
 ## Core Ideas
 
 Ideas for addressing a want, pain, or fear - which is what Seth Godin suggests - in my first ebook:
@@ -16,6 +20,7 @@ More positive ideas:
 - Understand where others are coming from.
 
 Probably want to put these near the beginning.
+
 
 ## Unorganized Ideas
 
@@ -36,6 +41,8 @@ Either merge these ideas into one of the major sections below or don't use them
   - E.g., require working with things when someone would prefer to work with people
 - Want to disrupt stereotypes based on demographics
 - Sick of the voice in my head that categorizes and judges others based on superficial BS
+- It's easier to sell logic than emotion, because logic is universal
+
 
 ## My Theories
 
@@ -45,7 +52,13 @@ On the fence about including these ideas.
 
 ### My Theory 1: Projection and Disappointment
 
-My Theory 1: we project who we are on others.
+My Theory 1:
+- We project who we are on others
+- We look for the qualities we see in fictional characters
+
+The Game of Thrones Psychology book references some of these ideas, and attributes them
+to a book entitled "Psychology in action."
+Will be getting it from the library soon.
 
 - We tend to look for who we are in others
 - In my opinion, we tend to unconsciously project our tendencies preferences onto others
@@ -121,17 +134,23 @@ What do you do in your life?
 
 No matter who you are, you:
 
-- Observe things
-  - See, hear, touch, smell, and taste
-    - Even animals and machines can do these things
-  - After awhile, we begin to see patterns and get ideas
-    - In general humans are better at these things than animals and machines
-- Make decisions
-  - Many decisions are subconscious: reflexive, instinctive, and habitual
-  - After awhile, we develop a tendency to:
-    - Make logical decisions that are consistent and determined by external circumstances
-    - Make emotional decisions that can vary and are determined by how we feel at the moment
-    - Consciously consider both alternatives and pick the one best suited to the situation
+Open ourselves to observing things
+- See, hear, touch, smell, and taste
+  - Even animals and machines can do these things
+- After awhile, we begin to see patterns and get ideas
+  - In general humans are better at these things than animals and machines
+
+Process our observations to make decisions
+- Many decisions are subconscious: reflexive, instinctive, and habitual
+- After awhile, we develop a tendency to:
+  - Make logical decisions that are consistent and determined by external circumstances
+  - Make emotional decisions that can vary and are determined by how we feel at the moment
+  - Consciously consider both alternatives and pick the one best suited to the situation
+
+In most people, one of these - observing or deciding - takes precedence.
+In a minority of people - I call them "chameleonesque" - these tendencies are balanced.
+
+Finally, people tend to direct their dominant preference either outwardly or inwardly.
 
 #### What do the images represent?
 
@@ -146,8 +165,15 @@ No matter who you are, you:
     - Three or more adjectives for each, at least one each positive, neutral, and negative
   - Thinking-Green versus Feeling-Red
     - Three or more adjectives for each, at least one each positive, neutral, and negative
-
 - What horizontal and vertical lines represent
+  - These images use:
+    - Vertical lines to represent the preference the person directs outwardly
+    - Horizontal lines to represent the preference the person directs inwardly
+  - When the dominant function is directed outwardly, the image contains a long vertical line to the left of the image's center
+    - These are extraverts and it is usually quickly obvious who they are
+  - When the dominant function is directed inwardly, the image contains a long vertical line underneath the image's center
+    - These are introverts and it often takes some time to learn who they are
+  - When a person's preferences are very strong, these lines may get lost, but they are there
 
 
 ### Who:
@@ -184,11 +210,15 @@ How to determine whether you would like to see your Spiritual Portrait.
 
 ### Conclusion - The Pitch
 
+**Review Daniel Pink's book before completing this section.**
+
+#### Benefits
+
 Grojas can help with:
 
 - Self-awareness
 - Relationships - personal & professional teams - explain how briefly
-- Etc.
+- Etc. - review salient points from the Selling Points section.
 
 #### Pricing
 

@@ -25,9 +25,14 @@ See which sites, if any, get any response.
 
 ## 2. Technical and Content Updates - Phase 1
 
-### 2.0. Technical Updates - ASAP
+### 2.0. Technical Updates
 
-- [ ] Fix SSL Certificates on Server
+- [x] Fix SSL Certificates on Server
+
+- [x] Upgrade Ubuntu to 18.04 LTS
+  - [x] Try using upgrade process rather than reinstalling from scratch
+    - [x] lauren
+    - [x] bette
 
 ### 2.1. Content Updates - Phase 1
 
@@ -43,7 +48,7 @@ See which sites, if any, get any response.
     - [x] ArtsyVisions.com
     - [ ] SeeOurMinds.com
   - [ ] Catelyn Stark
-    - [ ] ArtsyVisions.com
+    - [x] ArtsyVisions.com
     - [ ] SeeOurMinds.com
   - [ ] "Team" Lannister
     - [ ] ArtsyVisions.com
@@ -121,6 +126,17 @@ See which sites, if any, get any response.
   - [ ] SeeOurMinds.com
 
 ### 3.2. Technical Updates - Phase 2
+
+- [ ] Continue to consider what to do with server
+  - [ ] Do we want to move to the cloud?
+  - [ ] Do we want to continue using ava as the server?
+    - [ ] ava has more memory but we are not using it
+    - [ ] We are using barbara more but it has less memory
+
+- [ ] Continue upgrading Ubuntu to 18.04 LTS
+  - [ ] jane
+  - [ ] barbara
+  - [ ] ava
 
 - [ ] Revisit Google Analytics and set up event tracking
   - [ ] Add events for ArtsyVisions.com, if deemed necessary

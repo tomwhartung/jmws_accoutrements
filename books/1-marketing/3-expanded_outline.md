@@ -1,28 +1,19 @@
 
 # books/1-marketing/3-expanded_outline.md
 
-- [ ] Figure out how to integrate the Core Ideas
+- [x] Figure out how to integrate the Core Ideas
 - [ ] Start with what's in 2-brainstorming.md and expand it
 - [ ] Go ahead and use complete sentences if desired
 - [ ] Start thinking about what images to add
 
-# Core Ideas
-
-- Fear: are you afraid of your own subconscious?
-
-More positive ideas:
-
-- Understand where others are coming from.
-
-Probably want to put these near the beginning.
-
-**Use criticism sandwich idea - put the negative between two positives.**
 
 # Title Ideas
 
 This section is for all possible ideas for a title.
 
-**Do not delete from this list.**
+**Do not delete from this list of titles.**
+
+We will figure out which one to use **when we are done.**
 
 - Why Would You Want a Spiritual Portrait?
 - The Why, What, Who, and How of Spiritual Portraits
@@ -89,9 +80,9 @@ Questions:
 
 [This section should address **all** questions in the previous section.]
 
-- Gain insight into recurring people problems
-- Wake up - increase awareness of self and others
-  - It's always nice to bring unconscious information to the surface
+The fact that we are all going to die is a big reason you might want to get your spiritual portrait!
+
+
 - All of us are expressing these traits in our daily actions
   - Take control - choose self-knowledge over floating through life like flotsam
   - Many of us are already subconsciously processing this information to varying degrees
@@ -105,7 +96,6 @@ Questions:
     - For example: stubbornness and haplessness
 
 
-The fact that we are all going to die is a big reason you might want to get your spiritual portrait!
 
 #### Death - Yours and Mine
 
@@ -133,9 +123,10 @@ make your spiritual portrait while we are both still alive.
 
 Having your spiritual portrait allows you to better understand:
 
-- Why you do the things you do
+- Why we do the things we do
 - Where others are coming from
 - Why you relate better to some people - both real and fictional - than to others
+- What can cause recurring difficulties we have with some types of people
 
 [**Key point**]
 Even if you are conscious of your preferences, being able to visualize your own
@@ -171,7 +162,10 @@ appreciate having your spiritual portrait.
 
 ### Mindfulness
 
-Mindfulness is becoming increasingly popular - and for a good reason.
+Bringing unconscious information to the surface in general and
+mindfulness in particular is becoming increasingly popular - and
+for a good reason.
+
 We now have more options than ever before for how to spend our time more,
 so it's important to make the best of the limited time we have here.
 

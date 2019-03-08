@@ -1,5 +1,10 @@
 
-# books/1-marketing/2-outline.md
+# books/1-marketing/3-outline.md
+
+- [ ] Figure out how to integrate the Core Ideas
+- [ ] Start with what's in 2-brainstorming.md and expand it
+- [ ] Go ahead and use complete sentences if desired
+- [ ] Start thinking about what images to add
 
 # Core Ideas
 
@@ -17,28 +22,48 @@ More positive ideas:
 
 Probably want to put these near the beginning.
 
+**Use criticism sandwich idea - put the negative between two positives.**
 
-## Major Sections
+# Title Ideas
 
-Go ahead and expand these now if desired, and just paste them into the outline later.
+- Why Would You Want a Spiritual Portrait?
+- The Why, What, Who, and How of Spiritual Portraits
+- The Who, What, Why, and How of Spiritual Portraits
 
-### Beginning - Prelude/Forward/Introduction
 
-- Questions:
-  - Are you as happy as you could be?
-  - Would you like to know why some people just rub you the wrong way, right from the start?
-  - Do you really know yourself?
-  - Do you ever wonder why other people aren't more like you?
-  - Could your relationships be better?
-  - Do you ever wonder where other people are coming from?
-  - Would you like to know why you relate to some fictional characters better than others?
-  - Do you go through life without direction, just responding to things, like flotsam?
-  - Etc., "as many as possible"
-  - Would you like to know why
-  - Do you ever wonder why
+# Outline
+
+## Preface: It's Really Quite Simple
+
+No matter who we are, as we go through life we are constantly:
+
+- Observing: perceiving, gathering and assimilating information, and
+- Doing things: making decisions based on our observations - and observing the results
+
+Each of us has a preference for doing one of these more than the other - and **that preference may be great or small.**
+
+A few preferences like this are the content of the images - the Spiritual Portraits or Grojas[x] - I create.
+
+Personalities are abstract things, so the images are abstract.
+
+## Questions:
+
+- Are you as happy as you could be?
+- Would you like to know why some people just rub you the wrong way, right from the start?
+- Do you really know yourself?
+- Do you ever wonder why other people aren't more like you?
+- Could your relationships be better?
+- Do you ever wonder where other people are coming from?
+- Would you like to know why you relate to some fictional characters better than others?
+- Do you go through life without direction, just responding to things, like flotsam?
+- Etc., "as many as possible"
+- Would you like to know why
+- Do you ever wonder why
 
 **Grojas can help with all of these issues**
 
+
+## Prelude/Forward/Introduction
 
 ### Why: Selling Points
 

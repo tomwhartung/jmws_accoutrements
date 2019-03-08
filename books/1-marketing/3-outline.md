@@ -8,8 +8,6 @@
 
 # Core Ideas
 
-Ideas for addressing a want, pain, or fear - which is what Seth Godin suggests - in my first ebook:
-
 - Death: yours and mine
   - You cannot answer the questions when you are dead
 - Grojas: only way to really preserve your personality
@@ -31,22 +29,59 @@ Probably want to put these near the beginning.
 - The Who, What, Why, and How of Spiritual Portraits
 
 
-# Outline
+# Outline - Including Images
 
 ## Preface: It's Really Quite Simple
+
+The thought of visualizing a personality sounds strange at first, but it's really quite simple.
+
+### Observations and Choices
 
 No matter who we are, as we go through life we are constantly:
 
 - Observing: perceiving, gathering and assimilating information, and
 - Doing things: making decisions based on our observations - and observing the results
 
-Each of us has a preference for doing one of these more than the other - and **that preference may be great or small.**
+Every living thing - animals and more recently even some machines - has a preference for doing one of these more than the other.
 
-A few preferences like this are the content of the images - the Spiritual Portraits or Grojas[x] - I create.
+More importantly: **that preference may be great or small.**
 
-Personalities are abstract things, so the images are abstract.
+I combine a person's preference for observing or choosing with a few more similar
+preferences into the images - the Spiritual Portraits or Grojas[x] - I create.
 
-## Questions:
+#### These Preferences Are Abstract
+
+Personalities are abstract, so the images are abstract.
+
+It's really just that simple.
+
+### Why Would I Want to See an Image of My Personality?
+
+Here are a few reasons you might want to get your spiritual portrait.
+
+#### Death - Yours and Mine
+
+If you die without getting your spiritual portrait, no one will ever know what it looks like.
+
+You cannot answer the questions when you are dead.
+Someone else could answer them for you, but their answers will never be as accurate -
+it will be only an imitation, not the real thing.
+
+If you die without getting your spiritual portrait, you will be able to get only an imitation, not the real thing.
+I have been doing this for over forty years,
+
+as the ones you can make while we are both still alive.
+
+- Grojas: only way to really preserve your personality
+  - You will never see your personality unless I do it before you die
+- Fear: are you afraid of your own subconscious?
+
+More positive ideas:
+
+- Understand where others are coming from.
+
+
+## 1. Questions:
 
 - Are you as happy as you could be?
 - Would you like to know why some people just rub you the wrong way, right from the start?

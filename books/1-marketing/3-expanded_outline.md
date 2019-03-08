@@ -8,10 +8,6 @@
 
 # Core Ideas
 
-- Death: yours and mine
-  - You cannot answer the questions when you are dead
-- Grojas: only way to really preserve your personality
-  - You will never see your personality unless I do it before you die
 - Fear: are you afraid of your own subconscious?
 
 More positive ideas:
@@ -41,14 +37,22 @@ The thought of visualizing a personality sounds strange at first, but it's reall
 
 ### Observations and Choices
 
-No matter who we are, as we go through life we are constantly:
+Every living thing is constantly:
 
 - Observing: perceiving, gathering and assimilating information, and
 - Doing things: making decisions based on our observations - and observing the results
 
-Every living thing - animals and more recently even some machines - has a preference for doing one of these more than the other.
+Even when we are going through the motions on a typical day, even when dreaming,
+we are either observing or doing something.
+Sometimes - such as when we are using muscle memory and on automatic pilot - we
+can even be doing both at the same time!
 
-More importantly: **that preference may be great or small.**
+#### Preferences Happen
+
+Every living thing - animals and more recently even some machines - has
+a preference for either observing or doing something.
+
+This preference may be subconscious, and it **may be great or small.**
 
 I combine a person's preference for observing or choosing with a few more similar
 preferences into the images - the Spiritual Portraits or Grojas[x] - I create.
@@ -59,13 +63,13 @@ Personalities are abstract, so the images are abstract.
 
 It's really just that simple.
 
-### Why Would I Want to See an Image of My Personality?
+### Why Would You Want to See an Image of Your Personality?
 
-Here are a few reasons you might want to get your spiritual portrait.
+The fact that we are all going to die is a big reason you might want to get your spiritual portrait!
 
 #### Death - Yours and Mine
 
-If you die without getting your spiritual portrait, no one will ever know what it looks like.
+If **you** die without getting your spiritual portrait, no one will ever know what it looks like.
 
 You cannot answer the questions when you are dead.
 Someone else could answer them for you, but **their answers will never be
@@ -73,13 +77,13 @@ as accurate as yours.**
 
 The result will be only an imitation, not the real thing.
 
-Also, if I die before you get your spiritual portrait, it will be only
+Also: if **I** die before you get your spiritual portrait, it will be only
 an imitation, not the real thing.
 
 I have been drawing personalities like this for over forty years.
-When I am gone, someone **might** take an interest and **might** be
-able to replicate my process, but I am the only person who
-can create the real thing.
+When I am gone, someone **might** take an interest in this project and
+they **might** be able to replicate my process, but I am the only
+person who can create the real thing.
 
 [Key point: make this stand out so skimmers will be sure to see it.]
 The best way to get the most accurate image of your personality is for me to
@@ -93,7 +97,11 @@ Having your spiritual portrait allows you to better understand:
 - Where others are coming from
 - Why you relate better to some people - both real and fictional - than to others
 
-### Are You Just Too Busy - or Afraid of the Unknown?
+[Key point: make this stand out so skimmers will be sure to see it.]
+Even if you are conscious of your preferences, being able to visualize your own
+preferences is incredibly enlightening.
+
+### Are You Too Busy - or Afraid of the Unknown?
 
 My spiritual portraits are reasonably priced, so what do you have to lose?
 
@@ -101,20 +109,13 @@ For many people, answering a questionnaire may seem like too much work.
 It may bring back unpleasant memories of the quizzes, tests, and exams we
 suffered through in school.
 
-But I have another theory: some people are afraid of their own subconscious.
+For others, I have another theory: some people are afraid of their own subconscious.
 
-Some of us are very conscious of our observations and decisions.
-This awareness tends to increase as we get older.
-
- notice patterns in how we
-act instinctively and how these observations and decisions affect our relationships.
-
-Mindfulness is becoming increasingly popular.
-
-One drawback
+#### Fear
 
 Are you afraid of your own subconscious?
 Regrettably, I feel some people are.
+
 
 
 ## 1. Questions:

@@ -1,5 +1,5 @@
 
-# books/1-marketing/3-outline.md
+# books/1-marketing/3-expanded_outline.md
 
 - [ ] Figure out how to integrate the Core Ideas
 - [ ] Start with what's in 2-brainstorming.md and expand it
@@ -23,6 +23,10 @@ Probably want to put these near the beginning.
 **Use criticism sandwich idea - put the negative between two positives.**
 
 # Title Ideas
+
+This section is for all possible ideas for a title.
+
+**Do not delete from this list.**
 
 - Why Would You Want a Spiritual Portrait?
 - The Why, What, Who, and How of Spiritual Portraits
@@ -64,21 +68,53 @@ Here are a few reasons you might want to get your spiritual portrait.
 If you die without getting your spiritual portrait, no one will ever know what it looks like.
 
 You cannot answer the questions when you are dead.
-Someone else could answer them for you, but their answers will never be as accurate -
-it will be only an imitation, not the real thing.
+Someone else could answer them for you, but **their answers will never be
+as accurate as yours.**
 
-If you die without getting your spiritual portrait, you will be able to get only an imitation, not the real thing.
-I have been doing this for over forty years,
+The result will be only an imitation, not the real thing.
 
-as the ones you can make while we are both still alive.
+Also, if I die before you get your spiritual portrait, it will be only
+an imitation, not the real thing.
 
-- Grojas: only way to really preserve your personality
-  - You will never see your personality unless I do it before you die
-- Fear: are you afraid of your own subconscious?
+I have been drawing personalities like this for over forty years.
+When I am gone, someone **might** take an interest and **might** be
+able to replicate my process, but I am the only person who
+can create the real thing.
 
-More positive ideas:
+[Key point: make this stand out so skimmers will be sure to see it.]
+The best way to get the most accurate image of your personality is for me to
+make your spiritual portrait while we are both still alive.
 
-- Understand where others are coming from.
+#### Insight Into Yourself and others
+
+Having your spiritual portrait allows you to better understand:
+
+- Why you do the things you do
+- Where others are coming from
+- Why you relate better to some people - both real and fictional - than to others
+
+### Are You Just Too Busy - or Afraid of the Unknown?
+
+My spiritual portraits are reasonably priced, so what do you have to lose?
+
+For many people, answering a questionnaire may seem like too much work.
+It may bring back unpleasant memories of the quizzes, tests, and exams we
+suffered through in school.
+
+But I have another theory: some people are afraid of their own subconscious.
+
+Some of us are very conscious of our observations and decisions.
+This awareness tends to increase as we get older.
+
+ notice patterns in how we
+act instinctively and how these observations and decisions affect our relationships.
+
+Mindfulness is becoming increasingly popular.
+
+One drawback
+
+Are you afraid of your own subconscious?
+Regrettably, I feel some people are.
 
 
 ## 1. Questions:

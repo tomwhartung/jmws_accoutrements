@@ -44,6 +44,7 @@ Every living thing is constantly:
 
 Even when we are going through the motions on a typical day, even when dreaming,
 we are either observing or doing something.
+
 Sometimes - such as when we are using muscle memory and on automatic pilot - we
 can even be doing both at the same time!
 
@@ -52,10 +53,11 @@ can even be doing both at the same time!
 Every living thing - animals and more recently even some machines - has
 a preference for either observing or doing something.
 
-This preference may be subconscious, and it **may be great or small.**
+This preference may be subconscious, and it **may be great or slight.**
 
-I combine a person's preference for observing or choosing with a few more similar
-preferences into the images - the Spiritual Portraits or Grojas[x] - I create.
+To create a Spiritual Portrait I combine a person's
+preference for observing or choosing with a few more similar
+preferences into what I call a "Groja[footnote]".
 
 #### These Preferences Are Abstract
 
@@ -63,7 +65,45 @@ Personalities are abstract, so the images are abstract.
 
 It's really just that simple.
 
-### Why Would You Want to See an Image of Your Personality?
+
+## Introduction
+
+Questions:
+
+- Are you as happy as you could be?
+- Would you like to know why some people just rub you the wrong way, right from the start?
+- Do you really know yourself?
+- Do you ever wonder why other people aren't more like you?
+- Could your relationships be better?
+- Do you ever wonder where other people are coming from?
+- Would you like to know why you relate to some fictional characters better than others?
+- Do you go through life without direction, just responding to things, like flotsam?
+- Etc., "as many as possible"
+- Would you like to know why
+- Do you ever wonder why
+
+**Grojas can help with all of these issues**
+
+
+### Why Would You Want an Image of Your Personality?
+
+[This section should address **all** questions in the previous section.]
+
+- Gain insight into recurring people problems
+- Wake up - increase awareness of self and others
+  - It's always nice to bring unconscious information to the surface
+- All of us are expressing these traits in our daily actions
+  - Take control - choose self-knowledge over floating through life like flotsam
+  - Many of us are already subconsciously processing this information to varying degrees
+  - All I am doing is making the invisible visible
+- Good to know what sort of work you are best suited for
+  - For example, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
+- Key Point: the images reflect the strength of the preferences
+  - People with mild preferences are very different from those with strong preferences - and the images reflect that
+  - Strong preferences in particular are visible immediately
+    - Meyers-Briggs warns repeatedly that a strong supporting function is essential for all types
+    - For example: stubbornness and haplessness
+
 
 The fact that we are all going to die is a big reason you might want to get your spiritual portrait!
 
@@ -149,50 +189,13 @@ thinking that somehow shows they are weak.
 Spiritual portraits can give mindfulness a fresh framework for understanding
 who we are and how we might improve.
 
-
-## Introduction
-
-Questions:
-
-- Are you as happy as you could be?
-- Would you like to know why some people just rub you the wrong way, right from the start?
-- Do you really know yourself?
-- Do you ever wonder why other people aren't more like you?
-- Could your relationships be better?
-- Do you ever wonder where other people are coming from?
-- Would you like to know why you relate to some fictional characters better than others?
-- Do you go through life without direction, just responding to things, like flotsam?
-- Etc., "as many as possible"
-- Would you like to know why
-- Do you ever wonder why
-
-**Grojas can help with all of these issues**
-
-
-
-### Why: Selling Points
-
-[These should address **all** questions in the previous section.]
-
-- Gain insight into recurring people problems
-- Wake up - increase awareness of self and others
-  - It's always nice to bring unconscious information to the surface
-- All of us are expressing these traits in our daily actions
-  - Take control - choose self-knowledge over floating through life like flotsam
-  - Many of us are already subconsciously processing this information to varying degrees
-  - All I am doing is making the invisible visible
-- Good to know what sort of work you are best suited for
-  - For example, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
-- Key Point: the images reflect the strength of the preferences
-  - People with mild preferences are very different from those with strong preferences - and the images reflect that
-  - Strong preferences in particular are visible immediately
-    - Meyers-Briggs warns repeatedly that a strong supporting function is essential for all types
-    - For example: stubbornness and haplessness
-
+------------ we are here --------------
 
 ### What:
 
-[Don't go too deep - for details refer to the How-to]
+[Don't go too deep - for details refer them to the How-to.]
+[It's ok to expand on ideas hinted at in the Prologue, because some
+people will skip the Prologue entirely.]
 
 #### What do you do?
 

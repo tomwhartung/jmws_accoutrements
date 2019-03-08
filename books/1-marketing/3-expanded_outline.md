@@ -85,7 +85,7 @@ When I am gone, someone **might** take an interest in this project and
 they **might** be able to replicate my process, but I am the only
 person who can create the real thing.
 
-[Key point: make this stand out so skimmers will be sure to see it.]
+[**Key point**]
 The best way to get the most accurate image of your personality is for me to
 make your spiritual portrait while we are both still alive.
 
@@ -97,7 +97,7 @@ Having your spiritual portrait allows you to better understand:
 - Where others are coming from
 - Why you relate better to some people - both real and fictional - than to others
 
-[Key point: make this stand out so skimmers will be sure to see it.]
+[**Key point**]
 Even if you are conscious of your preferences, being able to visualize your own
 preferences is incredibly enlightening.
 
@@ -116,9 +116,43 @@ For others, I have another theory: some people are afraid of their own subconsci
 Are you afraid of your own subconscious?
 Regrettably, I feel some people are.
 
+Do you prefer to go through life "naturally?"
+Are you afraid that seeing your spiritual portrait might reveal a "dark side?"
+
+There is nothing unnatural about a spiritual portrait.
+One of my images will never reveal whether you are good or bad - but it
+can reveal your motivations, which may be subconscious - for being the way
+you are.
+
+[**Key point**]
+But if you think it's best to coast through life, responding instinctively
+rather than consciously to whatever it throws at you, you will not
+appreciate having your spiritual portrait.
+
+### Mindfulness
+
+Mindfulness is becoming increasingly popular - and for a good reason.
+We now have more options than ever before for how to spend our time more,
+so it's important to make the best of the limited time we have here.
+
+Some people are more aware than others of the power of their
+perceptions and the impacts of their decisions.
+This awareness tends to increase as we get older - particularly if we
+start being more mindful of our observations and actions - and we
+feel good about improving ourselves by learning from our mistakes.
+
+But mindfulness is not for everyone.
+Indeed, some people steadfastly refuse to learn from their mistakes,
+thinking that somehow shows they are weak.
+
+[**Key point**]
+Spiritual portraits can give mindfulness a fresh framework for understanding
+who we are and how we might improve.
 
 
-## 1. Questions:
+## Introduction
+
+Questions:
 
 - Are you as happy as you could be?
 - Would you like to know why some people just rub you the wrong way, right from the start?
@@ -135,11 +169,10 @@ Regrettably, I feel some people are.
 **Grojas can help with all of these issues**
 
 
-## Prelude/Forward/Introduction
 
 ### Why: Selling Points
 
-These should address **all** questions in the previous section.
+[These should address **all** questions in the previous section.]
 
 - Gain insight into recurring people problems
 - Wake up - increase awareness of self and others

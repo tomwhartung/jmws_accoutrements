@@ -57,7 +57,7 @@ preferences requires using an abstract image.
 It's really just that simple.
 
 
-# Introduction
+# Chapter 1: Introduction
 
 [Include one of my self-portraits here.]
 
@@ -78,7 +78,7 @@ The next section explains how having an image of your personality - something
 I call a "spiritual portrait" or "Groja"[footnote] - can help answer these questions.
 
 
-# Why Would You Want an Image of Your Personality?
+# Chapter 2: Why You Might Want an Image of Your Personality
 
 [This section should address **all** questions in the previous section.]
 
@@ -188,7 +188,7 @@ thinking that somehow shows they are weak.
 Spiritual portraits can give mindfulness a fresh framework for understanding
 who we are and how we might improve.
 
-## Does Your Work Match Your Personality?
+## Finding Work That Matches Your Personality?
 
 Spiritual portraits can help you learn what sort of work you are best suited for.
 For example, if you are naturally drawn to work that is easily automated,
@@ -203,7 +203,7 @@ You can't just input your preferences and have the perfect career pop out,
 but a little self-knowledge can go a long way when it comes to understanding
 your strengths and weaknesses.
 
-## Do You Have an Extreme Personality?
+## The Hazards of Extreme Personalities
 
 Spiritual portraits reflect not just a person's preferences but also
 the strength of them.
@@ -234,7 +234,7 @@ strong preferences can make a person vulnerable.
 
 
 
-# What do the images represent?
+# Chapter 3: What the Images Represent
 
 [Don't go too deep - for details refer them to the How-to.]
 [It's ok to expand on ideas hinted at in the Prologue, because some
@@ -296,7 +296,7 @@ Finally, people tend to direct their dominant preference either outwardly or inw
   - When a person's preferences are very strong, these lines may get lost, but they are there
 
 
-# Who Would Best Appreciate a Spiritual Portrait?
+# Chapter 4: People Who Would Appreciate a Spiritual Portrait the Most
 
 How to determine whether you would like to see your Spiritual Portrait.
 
@@ -328,7 +328,7 @@ How to determine whether you would like to see your Spiritual Portrait.
     - Then you will understand the images more easily
 
 
-# Conclusion - The Pitch
+# Chapter 5: Conclusion - The Pitch
 
 **Review Daniel Pink's book before completing this section.**
 

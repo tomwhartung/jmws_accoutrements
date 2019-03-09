@@ -34,7 +34,7 @@ Every living thing is constantly:
 - Doing things: making decisions based on our observations - and observing the results
 
 Even when we are going through the motions on a typical day, even when dreaming,
-we are either observing or doing something.
+we are either observing or doing something - or both.
 
 Sometimes - such as when we are using muscle memory and on automatic pilot - we
 can even be doing both at the same time!
@@ -46,13 +46,20 @@ a preference for either observing or doing something.
 
 This preference may be subconscious, and it **may be great or slight.**
 
-To create a Spiritual Portrait I combine a person's
-preference for observing or choosing with a few more similar
-preferences into what I call a "Groja[footnote]".
+To create a spiritual portrait I combine a person's
+preference for observing or choosing with a few other,
+similar preferences into what I call a "Groja[footnote]".
 
 #### These Preferences Are Abstract
 
-Personalities are abstract, so the images are abstract.
+Personalities are abstract - an idea we get about people whom we get to know.
+
+Preferences are an abstraction - generalizations based on multiple
+instances - based on the observations and decisions made over the
+course of a lifetime.
+
+Visualizing a personality, especially one based on the subject's
+preferences requires using an abstract image.
 
 It's really just that simple.
 
@@ -73,20 +80,14 @@ Questions:
 - Would you like to know why
 - Do you ever wonder why
 
-**Grojas can help with all of these issues**
+**Grojas can help answer all of these questions.**
 
 
 ### Why Would You Want an Image of Your Personality?
 
 [This section should address **all** questions in the previous section.]
 
-The fact that we are all going to die is a big reason you might want to get your spiritual portrait!
 
-
-- All of us are expressing these traits in our daily actions
-  - Take control - choose self-knowledge over floating through life like flotsam
-  - Many of us are already subconsciously processing this information to varying degrees
-  - All I am doing is making the invisible visible
 - Good to know what sort of work you are best suited for
   - For example, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
 - Key Point: the images reflect the strength of the preferences
@@ -97,15 +98,19 @@ The fact that we are all going to die is a big reason you might want to get your
 
 
 
+The fact that we are all going to die is a big reason you might want to get your spiritual portrait!
+
 #### Death - Yours and Mine
 
-If **you** die without getting your spiritual portrait, no one will ever know what it looks like.
+If **you** die without getting your spiritual portrait, no one will
+ever know what it looks like.
 
-You cannot answer the questions when you are dead.
-Someone else could answer them for you, but **their answers will never be
-as accurate as yours.**
+These portraits are based on the answers to a questionnaire, and
+you cannot answer the questions when you are dead.
+Someone else could answer them for you, but **their answers will
+never be as accurate as yours.**
 
-The result will be only an imitation, not the real thing.
+The result will at best be only an imitation, not the real thing.
 
 Also: if **I** die before you get your spiritual portrait, it will be only
 an imitation, not the real thing.
@@ -121,16 +126,24 @@ make your spiritual portrait while we are both still alive.
 
 #### Insight Into Yourself and others
 
-Having your spiritual portrait allows you to better understand:
+As we go through life, all of us are of necessity expressing these
+preferences, and demonstrating the resultant personality traits
+in our daily actions.
+And many of us are already subconsciously processing this information,
+to varying degrees.
+
+Spiritual portraits make these invisible personality traits visible.
+This means having your spiritual portrait allows you to better understand:
 
 - Why we do the things we do
 - Where others are coming from
-- Why you relate better to some people - both real and fictional - than to others
-- What can cause recurring difficulties we have with some types of people
+- Why we relate better to some people - both real and fictional - than to others
+- What can cause difficulties we have with some types of people to happen again and again
 
 [**Key point**]
-Even if you are conscious of your preferences, being able to visualize your own
-preferences is incredibly enlightening.
+People are aware of their preferences to varying degrees.
+Regardless of how well you know yourself, being able to visualize
+your personal preferences in a Groja[footnote] is incredibly enlightening.
 
 ### Are You Too Busy - or Afraid of the Unknown?
 
@@ -184,6 +197,8 @@ Spiritual portraits can give mindfulness a fresh framework for understanding
 who we are and how we might improve.
 
 ------------ we are here --------------
+
+
 
 ### What:
 

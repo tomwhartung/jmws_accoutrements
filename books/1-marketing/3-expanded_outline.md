@@ -68,23 +68,22 @@ Here are a handful that I am thinking about right now:
 
 - How well do you know yourself?
 - Do you ever wonder why other people aren't more like you?
-- Are you as happy as you could be?
-- Do you ever wonder where other people are coming from?
 - Could your relationships be better?
+- Do you ever wonder where other people are coming from?
 - Would you like to know why some people just rub you the wrong way, right from the start?
+- Are you as happy as you could be?
 - Do you go through life without direction, just responding to things, like flotsam?
 
 The next section explains how having an image of your personality - something
 I call a "spiritual portrait" or "Groja"[footnote] - can help answer these questions.
 
 
-# Chapter 2: Why You Might Want an Image of Your Personality
+# Chapter 2: Why Someone Would Want an Image of Their Personality
 
 [This section should address **all** questions in the previous section.]
 
 The fact that we are all going to die is a big reason you might
 want to get your spiritual portrait!
-
 These images also offer insight into your personality and how you
 relate to other people, both real and fictional.
 
@@ -147,15 +146,19 @@ suffered through in school.
 
 For others, I have another theory: some people are afraid of their own subconscious.
 
-### Fear
+### Willful, Blissful Ignorance
 
 Are you afraid of your own subconscious?
 Regrettably, I feel some people are.
 
-Do you prefer to go through life "naturally?"
-Are you afraid that seeing your spiritual portrait might reveal a "dark side?"
+Some people just want to go through life naturally.
+Some may be afraid that seeing their spiritual
+portrait might reveal a "dark side," or something else
+they want to keep secret.
 
-There is nothing unnatural about a spiritual portrait.
+There is nothing unnatural about a spiritual portrait - it's just an idea
+I had one day and have only lately decided to pursue.
+
 One of my images will never reveal whether you are good or bad - but it
 can reveal your motivations, which may be subconscious - for being the way
 you are.
@@ -188,7 +191,7 @@ thinking that somehow shows they are weak.
 Spiritual portraits can give mindfulness a fresh framework for understanding
 who we are and how we might improve.
 
-## Finding Work That Matches Your Personality?
+## Finding Work That Matches Your Personality
 
 Spiritual portraits can help you learn what sort of work you are best suited for.
 For example, if you are naturally drawn to work that is easily automated,

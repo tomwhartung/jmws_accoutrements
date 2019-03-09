@@ -3,7 +3,7 @@
 
 - [x] Figure out how to integrate the Core Ideas
 - [ ] Start with what's in 2-brainstorming.md and expand it
-- [ ] Go ahead and use complete sentences if desired
+- [x] Go ahead and use complete sentences if desired
 - [ ] Start thinking about what images to add
 
 
@@ -85,22 +85,15 @@ Questions:
 
 [This section should address **all** questions in the previous section.]
 
-
-- Key Point: the images reflect the strength of the preferences
-  - People with mild preferences are very different from those with strong preferences - and the images reflect that
-  - Strong preferences in particular are visible immediately
-    - Meyers-Briggs warns repeatedly that a strong supporting function is essential for all types
-    - For example: stubbornness and haplessness
-
-
-
 The fact that we are all going to die is a big reason you might
 want to get your spiritual portrait!
 
 These images also offer insight into your personality and how you
 relate to other people, both real and fictional.
 
-Spiritual portraits can
+Spiritual portraits can also provide a framework for better mindfulness,
+help you identify the type of work you are best suited for, and
+give you instant feedback on the strength of your preferences.
 
 ## Death - Yours and Mine
 
@@ -171,7 +164,7 @@ can reveal your motivations, which may be subconscious - for being the way
 you are.
 
 [**Key point**]
-But if you think it's best to coast through life, responding instinctively
+If you prefer to just coast through life, responding instinctively
 rather than consciously to whatever it throws at you, you will not
 appreciate having your spiritual portrait.
 
@@ -198,15 +191,52 @@ thinking that somehow shows they are weak.
 Spiritual portraits can give mindfulness a fresh framework for understanding
 who we are and how we might improve.
 
-- Good to know what sort of work you are best suited for
-  - For example, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
+## Does Your Work Match Your Preferences?
+
+Spiritual portraits can help you learn what sort of work you are best suited for.
+For example, if you are naturally drawn to work that is easily automated,
+wouldn't you want to know about it?
+
+But if you take a little time to learn what the questionnaire results
+and the image means, it will help you identify what type of jobs
+will be easiest for you.
+
+[**Key point**]
+You can't just input your preferences and have the perfect career pop out,
+but a little self-knowledge can go a long way when it comes to understanding
+your strengths and weaknesses.
+
+## Do You Have an Extreme Personality?
+
+Spiritual portraits reflect not just a person's preferences but also
+the strength of them.
+
+People with mild preferences are very different from those with strong
+preferences - and the images reflect those qualities.
+In particular, images of personalities with strong preferences show
+a predominance of a single color, making them visible immediately.
+
+In her book **Gifts Differing,** Meyers-Briggs [footnote]
+repeatedly cautions that a strong supporting function is
+essential for all personality types.
+
+For example, some people prey on those who are gullible - those
+who have a preference for observing rather than doing things.
+Likewise, someone with a preference for doing things while
+refusing to consider the consequences or listen to others can
+be regarded as stubborn.
+
+[**Key Point**]
+The images reflect the strength of the preferences, and
+strong preferences can make a person vulnerable.
+
+
 
 
 ------------ we are here --------------
 
 
 
-# What:
 # What do the images represent?
 
 [Don't go too deep - for details refer them to the How-to.]

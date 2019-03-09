@@ -20,13 +20,11 @@ We will figure out which one to use **when we are done.**
 - The Who, What, Why, and How of Spiritual Portraits
 
 
-# Outline - Including Images
-
-## Preface: It's Really Quite Simple
+# Preface: It's Really Quite Simple
 
 The thought of visualizing a personality sounds strange at first, but it's really quite simple.
 
-### Observations and Choices
+## Observations and Choices
 
 Every living thing is constantly:
 
@@ -39,7 +37,7 @@ we are either observing or doing something - or both.
 Sometimes - such as when we are using muscle memory and on automatic pilot - we
 can even be doing both at the same time!
 
-#### Preferences Happen
+## Preferences Happen
 
 Every living thing - animals and more recently even some machines - has
 a preference for either observing or doing something.
@@ -50,7 +48,7 @@ To create a spiritual portrait I combine a person's
 preference for observing or choosing with a few other,
 similar preferences into what I call a "Groja[footnote]".
 
-#### These Preferences Are Abstract
+## These Preferences Are Abstract
 
 Personalities are abstract - an idea we get about people whom we get to know.
 
@@ -64,7 +62,7 @@ preferences requires using an abstract image.
 It's really just that simple.
 
 
-## Introduction
+# Introduction
 
 Questions:
 
@@ -83,13 +81,11 @@ Questions:
 **Grojas can help answer all of these questions.**
 
 
-### Why Would You Want an Image of Your Personality?
+# Why Would You Want an Image of Your Personality?
 
 [This section should address **all** questions in the previous section.]
 
 
-- Good to know what sort of work you are best suited for
-  - For example, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
 - Key Point: the images reflect the strength of the preferences
   - People with mild preferences are very different from those with strong preferences - and the images reflect that
   - Strong preferences in particular are visible immediately
@@ -98,9 +94,15 @@ Questions:
 
 
 
-The fact that we are all going to die is a big reason you might want to get your spiritual portrait!
+The fact that we are all going to die is a big reason you might
+want to get your spiritual portrait!
 
-#### Death - Yours and Mine
+These images also offer insight into your personality and how you
+relate to other people, both real and fictional.
+
+Spiritual portraits can
+
+## Death - Yours and Mine
 
 If **you** die without getting your spiritual portrait, no one will
 ever know what it looks like.
@@ -124,7 +126,7 @@ person who can create the real thing.
 The best way to get the most accurate image of your personality is for me to
 make your spiritual portrait while we are both still alive.
 
-#### Insight Into Yourself and others
+## Insight Into Yourself and others
 
 As we go through life, all of us are of necessity expressing these
 preferences, and demonstrating the resultant personality traits
@@ -145,7 +147,7 @@ People are aware of their preferences to varying degrees.
 Regardless of how well you know yourself, being able to visualize
 your personal preferences in a Groja[footnote] is incredibly enlightening.
 
-### Are You Too Busy - or Afraid of the Unknown?
+## Are You Too Busy - or Afraid of the Unknown?
 
 My spiritual portraits are reasonably priced, so what do you have to lose?
 
@@ -155,7 +157,7 @@ suffered through in school.
 
 For others, I have another theory: some people are afraid of their own subconscious.
 
-#### Fear
+### Fear
 
 Are you afraid of your own subconscious?
 Regrettably, I feel some people are.
@@ -173,7 +175,7 @@ But if you think it's best to coast through life, responding instinctively
 rather than consciously to whatever it throws at you, you will not
 appreciate having your spiritual portrait.
 
-### Mindfulness
+## Mindfulness
 
 Bringing unconscious information to the surface in general and
 mindfulness in particular is becoming increasingly popular - and
@@ -196,11 +198,16 @@ thinking that somehow shows they are weak.
 Spiritual portraits can give mindfulness a fresh framework for understanding
 who we are and how we might improve.
 
+- Good to know what sort of work you are best suited for
+  - For example, if you are naturally drawn to work that is easily automated, wouldn't you want to know about it?
+
+
 ------------ we are here --------------
 
 
 
-### What:
+# What:
+# What do the images represent?
 
 [Don't go too deep - for details refer them to the How-to.]
 [It's ok to expand on ideas hinted at in the Prologue, because some
@@ -260,7 +267,7 @@ Finally, people tend to direct their dominant preference either outwardly or inw
   - When a person's preferences are very strong, these lines may get lost, but they are there
 
 
-### Who:
+# Who Would Best Appreciate a Spiritual Portrait?
 
 How to determine whether you would like to see your Spiritual Portrait.
 
@@ -292,11 +299,11 @@ How to determine whether you would like to see your Spiritual Portrait.
     - Then you will understand the images more easily
 
 
-### Conclusion - The Pitch
+# Conclusion - The Pitch
 
 **Review Daniel Pink's book before completing this section.**
 
-#### Benefits
+## Benefits
 
 Grojas can help with:
 
@@ -304,7 +311,7 @@ Grojas can help with:
 - Relationships - personal & professional teams - explain how briefly
 - Etc. - review salient points from the Selling Points section.
 
-#### Pricing
+## Pricing
 
 Pricing is variable.
 If you see us running a special offer, you would be wise to take advantage of it.
@@ -314,11 +321,8 @@ If you see us running a special offer, you would be wise to take advantage of it
   - May push me to better automate production, so the price will always be reasonable
 - Images of similar personalities will look similar, but no two images will never be identical
 
-#### FAQ
 
-[Idea: resist the temptation to add a FAQ until we actually have real live questions that are getting asked frequently.]
-
-### Appendix: How to Draw a Personality
+# Appendix: How to Draw a Personality
 
 This will be **the definitive, detailed How-to,** to be excerpted from and adapted into articles for posting on social networking sites.
 

@@ -1,11 +1,6 @@
 
 # books/1-marketing/3-expanded_outline.md
 
-- [x] Figure out how to integrate the Core Ideas
-- [ ] Start with what's in 2-brainstorming.md and expand it
-- [x] Go ahead and use complete sentences if desired
-- [ ] Start thinking about what images to add
-
 
 # Title Ideas
 
@@ -48,7 +43,7 @@ To create a spiritual portrait I combine a person's
 preference for observing or choosing with a few other,
 similar preferences into what I call a "Groja[footnote]".
 
-## These Preferences Are Abstract
+## Abstract Personalities, Abstract Preferences, Abstract Images
 
 Personalities are abstract - an idea we get about people whom we get to know.
 
@@ -56,7 +51,7 @@ Preferences are an abstraction - generalizations based on multiple
 instances - based on the observations and decisions made over the
 course of a lifetime.
 
-Visualizing a personality, especially one based on the subject's
+Visualizing a personality based on a person's
 preferences requires using an abstract image.
 
 It's really just that simple.
@@ -64,21 +59,23 @@ It's really just that simple.
 
 # Introduction
 
-Questions:
+[Include one of my self-portraits here.]
 
-- Are you as happy as you could be?
-- Would you like to know why some people just rub you the wrong way, right from the start?
-- Do you really know yourself?
+Hi, my name is Tom Hartung and I tend to prefer observing to deciding.
+
+So it's only natural for me to ask a lot of questions.
+Here are a handful that I am thinking about right now:
+
+- How well do you know yourself?
 - Do you ever wonder why other people aren't more like you?
-- Could your relationships be better?
+- Are you as happy as you could be?
 - Do you ever wonder where other people are coming from?
-- Would you like to know why you relate to some fictional characters better than others?
+- Could your relationships be better?
+- Would you like to know why some people just rub you the wrong way, right from the start?
 - Do you go through life without direction, just responding to things, like flotsam?
-- Etc., "as many as possible"
-- Would you like to know why
-- Do you ever wonder why
 
-**Grojas can help answer all of these questions.**
+The next section explains how having an image of your personality - something
+I call a "spiritual portrait" or "Groja"[footnote] - can help answer these questions.
 
 
 # Why Would You Want an Image of Your Personality?
@@ -191,7 +188,7 @@ thinking that somehow shows they are weak.
 Spiritual portraits can give mindfulness a fresh framework for understanding
 who we are and how we might improve.
 
-## Does Your Work Match Your Preferences?
+## Does Your Work Match Your Personality?
 
 Spiritual portraits can help you learn what sort of work you are best suited for.
 For example, if you are naturally drawn to work that is easily automated,
@@ -244,6 +241,8 @@ strong preferences can make a person vulnerable.
 people will skip the Prologue entirely.]
 
 #### What do you do?
+
+[Note: it's ok to repeat what's in the Prologue, some people may skip it.]
 
 What do you do in your life?
 

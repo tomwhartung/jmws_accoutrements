@@ -29,31 +29,58 @@ pip3 install Django==1.11.16
 ```
 
 First try: got an error.
+Coming back to this later, as time permits....
 
-Trying some suggestions from this page:
-- https://stackoverflow.com/questions/39845636/the-pip-7-1-0-distribution-was-not-found-and-is-required-by-the-application
+First tried some suggestions from this page:
+
+- (1) https://stackoverflow.com/questions/39845636/the-pip-7-1-0-distribution-was-not-found-and-is-required-by-the-application
+
+Then tried a variety of suggestions from a variety of pages at stackoverflow.
+Worked on this off-and-on for a few days!
+
+Ultimately the **second answer** on this page got me past one error...:
+
+- (2) https://stackoverflow.com/questions/16237490/i-screwed-up-the-system-version-of-python-pip-on-ubuntu-12-10
+
+... only to get another error.
+The takeaways from that page are to run `pip install -U pip` and to use `hash -r`
+
+This page helped fix the second error:
+
+- (3) https://stackoverflow.com/questions/28210269/importerror-cannot-import-name-main-when-running-pip-version-command-in-windo
+
+The takeaway from that page is to edit `/usr/bin/pip` .
+
+Here are the commands that finally worked:
 
 ```
 apt purge python-pip
 apt purge python3-pip
 cd /usr/local/bin
 ls -al
-rm pip*
-apt-get install python-pip python3-pip
+rm pip*                       ## Per (1)
+apt-get install python-pip    ## Per (2)
+which pip
+pip install -U pip            ## Error
+hash -r                       ## Didn't help
+cd /usr/bin
+cat pip
+l RCS
+mkdir RCS
+ci -l pip
+vi pip                        ## Edit per (3)
+pip install -U pip            ## Per (2)
+cd
+which pip
+hash -r                       ## Per (2)
+which pip
+cat pip3
 pip3 install Django==1.11.16
 python3 -c "import django; print(django.get_version())"
+### 1.11.16
 ```
 
 #### 3. Ensure it runs
 
 Visit http://jane.artsyvisions.com/v
-
-
-#### 4. Add to Launcher
-
-Find xscreensaver icon in dock search tool and add it to the Launcher.
-
-#### 5. Adjust settings as necessary
-
-Check times and other parameters in dialog.
 

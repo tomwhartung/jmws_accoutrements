@@ -17,6 +17,8 @@ We will figure out which one to use **when we are done.**
 
 # Preface: It's Really Quite Simple
 
+[**Image** here???]
+
 The thought of visualizing a personality sounds strange at first, but it's really quite simple.
 
 ## Observations and Choices
@@ -45,6 +47,8 @@ similar preferences into what I call a "Groja[footnote]".
 
 ## Abstract Personalities, Abstract Preferences, Abstract Images
 
+[**Image** here???]
+
 Personalities are abstract - an idea we get about people whom we get to know.
 
 Preferences are an abstraction - generalizations based on multiple
@@ -59,7 +63,7 @@ It's really just that simple.
 
 # Chapter 1: Introduction
 
-[Include one of my self-portraits here.]
+[**Image** - one of my self-portraits here.]
 
 Hi, my name is Tom Hartung and I tend to prefer observing to deciding.
 
@@ -71,6 +75,7 @@ Here are a handful that I am thinking about right now:
 - Could your relationships be better?
 - Do you ever wonder where other people are coming from?
 - Would you like to know why some people just rub you the wrong way, right from the start?
+- Could your team work better together?
 - Are you as happy as you could be?
 - Do you go through life without direction, just responding to things, like flotsam?
 
@@ -92,6 +97,8 @@ help you identify the type of work you are best suited for, and
 give you instant feedback on the strength of your preferences.
 
 ## Death - Yours and Mine
+
+[**Image** - the blurred one with the question marks on groja.com here.]
 
 If **you** die without getting your spiritual portrait, no one will
 ever know what it looks like.
@@ -206,10 +213,24 @@ You can't just input your preferences and have the perfect career pop out,
 but a little self-knowledge can go a long way when it comes to understanding
 your strengths and weaknesses.
 
-## The Hazards of Extreme Personalities
+
+------------ we are here --------------
+
+
+## Chameleons and Extreme Personalities
 
 Spiritual portraits reflect not just a person's preferences but also
 the strength of them.
+
+### Chameleons Have Slight Preferences
+
+In a minority of people - I call them "chameleonesque" - these tendencies are balanced.
+
+### The Hazards of Extreme Personalities
+
+[**Image** - of Tywin Lannister here.]
+[**Image** - of Norm Peterson here.]
+[**Image** - of Margaret Lanterman here.]
 
 People with mild preferences are very different from those with strong
 preferences - and the images reflect those qualities.
@@ -231,9 +252,14 @@ The images reflect the strength of the preferences, and
 strong preferences can make a person vulnerable.
 
 
+## Learn How to See Past the Surface
 
+Drawing personalities has taught me that there is more to people
+than meets the eye.
 
------------- we are here --------------
+I've become more attentive and sensitive to what people say and do
+rather than how they look on the surface.
+
 
 
 

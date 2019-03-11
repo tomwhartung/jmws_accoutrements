@@ -82,5 +82,48 @@ python3 -c "import django; print(django.get_version())"
 
 #### 3. Ensure it runs
 
-Visit http://jane.artsyvisions.com/v
+Visit:
+
+- http://127.0.0.1:8001/
+- http://127.0.0.1:8001/v
+
+#### 4. SeeOurMinds.com and Postgresql
+
+Need to install postgresql.
+
+Reference used - but only minimally:
+- https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+
+As root:
+```
+apt-get install postgresql           ## "postgresql is already the newest version"
+apt-get install postgresql-contrib   ## "postgresql-contrib is already the newest version"
+pip3 install psycopg2                ## "Successfully installed psycopg2-2.7.7"
+```
+
+**Note: Get the following message running `seeourminds.com/Site/bin/run.sh`:**
+
+```
+/usr/local/lib/python3.6/dist-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+```
+
+As root:
+```
+pip install psycopg2-binary  ## Using pip instead of pip3, to see what happens
+```
+
+**Note: Got the following message:**
+
+```
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+```
+
+**Note: Still get the above message when running `seeourminds.com/Site/bin/run.sh`.**
+
+Trying pip3 as root:
+```
+pip3 install psycopg2-binary
+```
+
+**This stops the message above from appearing when running `seeourminds.com/Site/bin/run.sh`.**
 

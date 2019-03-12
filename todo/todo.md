@@ -33,6 +33,24 @@ See which sites, if any, get any response.
   - [x] Try using upgrade process rather than reinstalling from scratch
     - [x] lauren
     - [x] bette
+- [ ] Smoke-test all sites on bette
+  - [x] artsyvisions.com
+  - [x] groja.com
+  - [x] seeourminds.com
+  - [ ] joomoowebsites.com
+  - [ ] tomhartung.com
+- [ ] Fix CMSes for all sites on bette
+  - [x] Fix django and postgresql for seeourmines.com
+  - [x] Fix flask for groja.com
+  - [ ] ...
+- [ ] Thoroughly test all sites on bette
+  - [ ] artsyvisions.com
+  - [ ] groja.com
+    - [ ] Test all conversions
+  - [ ] seeourminds.com
+    - [ ] Test saving quiz results
+  - [ ] joomoowebsites.com
+  - [ ] tomhartung.com
 
 ### 2.1. Content Updates - Phase 1
 

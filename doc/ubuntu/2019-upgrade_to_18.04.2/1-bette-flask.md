@@ -26,16 +26,8 @@ Reference:
 As root:
 ```
 pip3 install Flask
+pip3 install flask_bootstrap
 ```
-
-Now the app runs, but I get an error.
-
-```
-ModuleNotFoundError: No module named 'flask_bootstrap'
-```
-
-**Coming back to this later, as time permits....**
-
 
 #### 3. Ensure it runs
 

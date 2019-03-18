@@ -68,13 +68,16 @@ See which sites, if any, get any response.
   - [ ] Catelyn Stark
     - [x] ArtsyVisions.com
     - [ ] SeeOurMinds.com
+  - [ ] Luke Skywalker
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
+- [ ] SeeOurMinds.com
+  - [ ] Gallery page for I Love Lucy
+- [ ] Copy and update as appropriate articles about these high-priority people and shows:
   - [ ] "Team" Lannister
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
   - [ ] Another Game of Thrones - Jon Snow and Stannis Baratheon, maybe??
-    - [ ] ArtsyVisions.com
-    - [ ] SeeOurMinds.com
-  - [ ] Luke Skywalker
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
   - [ ] Leia and Han

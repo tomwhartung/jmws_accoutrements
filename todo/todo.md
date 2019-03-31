@@ -5,7 +5,14 @@ Moving the todo list in the README.md for artsyvisions.com to here.
 
 # TO-DO
 
-## 1. Start Social Networking
+## 1. Write Ebooks
+
+- [ ] Marketing
+- [ ] Game of Thrones
+- [ ] Twin Peaks or maybe Cheers and Twin Peaks
+- [ ] Teams on The Wire
+
+## 2. Start Social Networking
 
 Time to start updating social networking sites!
 
@@ -23,9 +30,9 @@ Minimum tasks TODO for each social networking site:
 
 See which sites, if any, get any response.
 
-## 2. Technical and Content Updates - Phase 1
+## 3. Technical and Content Updates - Phase 1
 
-### 2.0. Technical Updates
+### 3.0. Technical Updates
 
 - [x] Fix SSL Certificates on Server
 
@@ -52,7 +59,7 @@ See which sites, if any, get any response.
   - [ ] joomoowebsites.com
   - [ ] tomhartung.com
 
-### 2.1. Content Updates - Phase 1
+### 3.1. Content Updates - Phase 1
 
 - [ ] Publish new articles:
   - [x] Wild at Heart
@@ -72,7 +79,16 @@ See which sites, if any, get any response.
     - [ ] ArtsyVisions.com
     - [ ] SeeOurMinds.com
 - [ ] SeeOurMinds.com
-  - [ ] Gallery page for I Love Lucy
+  - [x] Gallery page for I Love Lucy
+  - [ ] Stories for the following image pages, for consistency with other images in the gallery:
+    - [ ] Arya Stark
+    - [ ] Sansa Stark
+    - [ ] Renly Baratheon
+    - [ ] Loras Tyrell
+- [ ] Write new article about:
+  - [ ] Arya and Sansa Stark
+    - [ ] ArtsyVisions.com
+    - [ ] SeeOurMinds.com
 - [ ] Copy and update as appropriate articles about these high-priority people and shows:
   - [ ] "Team" Lannister
     - [ ] ArtsyVisions.com
@@ -103,7 +119,7 @@ See which sites, if any, get any response.
   - [ ] See list in notebook
   - [ ] Always fix pages referred to by stories on ArtsyVisions.com
 
-### 2.2. Technical Updates - Phase 1
+### 3.2. Technical Updates - Phase 1
 
 - [ ] Update JooMooWebSites.com
   - [x] Use MDL and Flask

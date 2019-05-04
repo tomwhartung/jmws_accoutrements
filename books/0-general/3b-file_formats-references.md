@@ -24,9 +24,36 @@ This page lists docx at the top and pdf at the bottom - and many more in between
 
 - https://kdp.amazon.com/en_US/help/topic/G200634390
 
+Images may still be a problem, though.
+
+This page has some guidelines for using Word:
+
+- https://kdp.amazon.com/en_US/help/topic/G200645680
+
 Will just have to try it and see.
 
-### Calibre
+### General Information
 
-Use calibre for conversion, rather than trying to export an epub from libre office.
+Tips for including images:
+
+- Written in 2011, updated 2017:
+  - https://blog.bookbaby.com/2011/11/6-tips-for-formatting-images-for-your-ebook/
+- Written in 2015:
+  - https://www.thebookdesigner.com/2015/10/preparing-images-for-your-e-book/
+
+Informative and looks fairly up-to-date:
+
+- https://bubblecow.com/blog/ebook-formats-a-quick-guide-for-self-publishers
+
+This looks somewhat helpful, and has precautions about using images:
+
+- https://www.thecreativepenn.com/how-to-self-publish-an-ebook/
+
+It also lists some alternatives to amazon.
+
+This page is old, and they want to charge you for doing it for you:
+
+- http://www.booknook.biz/tips-tutorials/what-is-the-best-ebook-format-for-kindle
+
+
 

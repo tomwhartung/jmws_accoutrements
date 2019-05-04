@@ -3,14 +3,26 @@
 
 References found concerning the various file formats available for publishing ebooks.
 
-## The Main Concern
+## The Main Concern: Images
 
 ### Initial Impressions
 
 Putting "thumbnail" images in tables works fine in odt, docx, and pdf files.
 
-These tables look like crap in .epub, .mobi, and azw3 formats - which people
-commonly use for ebooks.
+Following are some disappointments found when converting odt to epub, mobi, and azw3 formats.
+
+- Tables of images look like crap
+- Centered images are no longer centered
+- Captions can be misplaced from the image at some screen sizes
+
+### Brute Force Fix
+
+Next time consider:
+
+- Combining images with their captions into a single jpg
+- Combining multiple images into one, each including its caption, into a single jpg
+
+This will be foolproof but will also require a bit of work.
 
 ## Exporting and Converting
 
@@ -25,9 +37,9 @@ commonly use for ebooks.
 - Use calibre to convert
   - Add odt or docx file
   - Convert option opens a dialog box
+  - Have NOT tried all options - not by a long shot
 
-The dialog box contains a lot of options and they are somewhat dependent on the
-output file type.
+The conversion dialog box contains a lot of options and one group of them is dependent on the output file type.
 
 - Converting with calibre works much better than exporting from libre office
 - There are still issues with the images, though

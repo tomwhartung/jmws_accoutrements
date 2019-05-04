@@ -1,7 +1,7 @@
 
-# 3-formats.md
+# 3a-file_formats-notes.md
 
-References found concerning the various file formats available for publishing ebooks.
+Notes and concerns about the various file formats available for publishing ebooks.
 
 ## The Main Concern: Images
 

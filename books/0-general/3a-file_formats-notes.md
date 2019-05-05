@@ -46,6 +46,34 @@ The conversion dialog box contains a lot of options and one group of them is dep
   - Tables of images do not look right
   - The images are not centered on pages with just one image
 
-I did not try all the options, though - and there are a lot of them.
+### Calibre Conversion Options
 
+Have been trying these, and it seems that at least they do not make it any worse:
+
+#### Fresh tries, 2019-05-05:
+
+##### ODT -> MOBI
+
+- Look & Feel
+  - [x] Disable font size rescaling
+- Heuristic Processing
+  - [ ] Maybe try this at some point
+- Page Setup
+  - Output profile
+    - Have tried Kindle and Tablet, but images get messed up
+    - [x] Default Output Profile - try this time
+  - Input profile
+    - Default Input Profile
+- Structure detection
+- Table of contents
+  - [x] Force use of auto-generated ToC
+- Search and Replace
+- MOBI output
+  - [x] Do not add ToC to book
+- Debug
+
+Results:
+
+- OK except the tables containing images are messed up
+  - Should be able to fix this by using the individual images to create a new combo image
 

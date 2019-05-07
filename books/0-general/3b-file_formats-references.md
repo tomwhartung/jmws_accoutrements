@@ -10,6 +10,8 @@ References found concerning the various file formats available for publishing eb
 Use calibre for conversion, rather than trying to export an epub from libre office.
 
 - https://manual.calibre-ebook.com/conversion.html
+- https://manual.calibre-ebook.com/faq.html#best-source-formats
+- https://manual.calibre-ebook.com/#customizing-calibre-s-e-book-conversion
 
 ### Amazon
 

@@ -19,6 +19,7 @@ Part II General Best Practices
 
 - 4. Cover Image
   - I should be ok
+  - Reference: https://kdp.amazon.com/en_US/help/topic/G200645690
 - 5. HTML TOC
   - I should be ok
 - 5.3 Guide Items

@@ -56,4 +56,24 @@ Important notes from ebook: Building your book for Kindle.
 - Upload book file
 - "Save as Draft" - or - "Save and Publish"
 
+### Preview
+
+- "Preview Book"
+- Look for goofs
+  - Check everything!
+- Check on different devices
+
+### Uploading revisions
+
+- Edit HTML file in "Word"
+
+### Just Before Publishing
+
+- Save and Continue
+- Rights and Pricing
+- Save and Publish
+
+### Making Changes
+
+- Text, details, pricing, etc.
 

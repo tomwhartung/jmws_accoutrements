@@ -13,6 +13,8 @@ Getting started:
 - List of formats: https://kdp.amazon.com/en_US/help/topic/G200634390
 - For using Word and Kindle Create:
   - https://kdp.amazon.com/en_US/help/topic/G200645680
+  - Must be on PC or Mac:
+    - https://www.amazon.com/b/?node=18292298011
   - Using this as a backup option
 
 For more see `3b-file_formats-references.md` in this directory.
@@ -33,6 +35,11 @@ Digging deeper into kdp:
   - Also ordered free ebook
 - List Price Requirements:
   - https://kdp.amazon.com/en_US/help/topic/G200634560
+- Digital Pricing Page:
+  - https://kdp.amazon.com/en_US/help/topic/G200634500
+- Images
+  - https://kdp.amazon.com/en_US/help/topic/G200645710
+  - Should be 300 dpi
 
 ## Giving It a Try
 

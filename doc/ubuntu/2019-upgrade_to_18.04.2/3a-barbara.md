@@ -1,5 +1,5 @@
 
-# 3-barbara.md
+# 3a-barbara.md
 
 Upgrading barbara by installing into existing /mnt/future* partitions.
 

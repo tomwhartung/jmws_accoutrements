@@ -41,7 +41,7 @@ Reboot
 
 ## Install standard packages
 
-[ ] Install unity-tmeak-tool
+[ ] Install unity-tweak-tool
     apt-get install unity-tweak-tool
 [ ] Install rcs, synaptic, vim, openssh-server
 [ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
@@ -63,12 +63,47 @@ Reboot
 
 ## Get look and feel to be consistent with others
 
+### Multiple desktops
+
+Gone!  WTF!?!
+
+References:
+- Why they are gone - drag and drop windows to use them dynamically - what bs
+  - https://websiteforstudents.com/what-are-workspaces-and-how-to-use-them-on-ubuntu-18-04-beta/
+- How to get them back:
+  - https://askubuntu.com/questions/1081251/multiple-workspaces-on-ubuntu-18-04-1-lts-and-later-with-gnome-shell
+
+Commands:
+```
+sudo apt-get update
+sudo apt install gnome-tweaks
+gnome-tweaks   ## Once it is running, right-click on the icon and Add it as a Favorite
+```
+
+### More Standard Apps
+
+```
+gnome-calculator   ## Once it is running, right-click on the icon and Add it as a Favorite
+```
+
+Ubuntu Software icon in dock -> Search -> Libreoffice Calc -> Launch
+- Once it is running, right-click on the icon and Add it as a Favorite
 
 
 
 
 ## Start using barbara to rip CDs to mp3
 
+### Easy Tag
 
+Ubuntu Software icon in dock -> Search -> Easy Tag -> Launch
+- Once it is running, right-click on the icon and Add it as a Favorite
+
+### Ripping CDs
+
+#### Trying Rhythmbox
+
+- Ok to rip to .ogg by default
+-
 
 

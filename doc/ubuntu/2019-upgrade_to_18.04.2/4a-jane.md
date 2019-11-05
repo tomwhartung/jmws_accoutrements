@@ -3,18 +3,12 @@
 
 Upgrading jane by installing into existing /mnt/future* partitions.
 
-# Upgrading While Leaving Existing OS As-Is
+# Upgrading to 20.04 LTS
 
-This process should be a little bit easier than always starting from scratch:
+20.04 LTS is not available until 2020.
 
-- No need to partion disks - always the hardest part
-- Will need to burn new DVDs
-- Will need to reinstall my favorite programs
+- "Ubuntu 20.04 LTS, codenamed Focal Fossa, will be the next Long Term Support release and is expected on 23 April 2020"
+  - https://en.wikipedia.org/wiki/Ubuntu_version_history#2004
 
-# List of `/mnt/future*` Partitions
+See `../2020-upgrade_to_20.04_LTS/1a-jane.md` .
 
-```
-/dev/sda7        23G   44M   22G   1% /mnt/future
-/dev/sda2       925M  1.2M  860M   1% /mnt/future/boot
-/dev/sda9        23G   44M   22G   1% /mnt/future/home
-```

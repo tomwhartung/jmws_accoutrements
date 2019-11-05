@@ -63,3 +63,16 @@ Oops, got an error:
 Possible solution:
 - https://askubuntu.com/questions/866901/what-can-i-do-if-a-repository-ppa-does-not-have-a-release-file
 
+## Ripperx
+
+Try installing ripperx:
+```
+apt-get install ripperx
+```
+
+It runs, but does not seem to see the CD Rom - same deal as with Rhythymbox and Soundjuicer.  Hmm.
+```
+which ripperx
+/usr/bin/ripperx
+```
+

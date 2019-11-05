@@ -1,5 +1,5 @@
 
-# 4-jane.md
+# 4a-jane.md
 
 Upgrading jane by installing into existing /mnt/future* partitions.
 

@@ -62,40 +62,92 @@ ln -s ~tomh/bin .
 ln -s ~tomh/.vimrc  .
 ```
 
-Reboot
+Reboot to be safe - check that nothing got messed up somehow.
 
 
 ## Get barbara on the network
 
-### Restore old copy of `/etc/hosts` .
+### Restore old copy of `/etc/hosts*` files.
+
 
 Commands run as root:
 ```
+Leave hosts.allow and hosts.deny alone
+
+```
+root@barbara: ~
+$ l /etc/hosts*
+-rw-r--r-- 1 root root 222 Aug  4 23:01 /etc/hosts
+-rw-r--r-- 1 root root 411 Feb  9  2019 /etc/hosts.allow
+-rw-r--r-- 1 root root 711 Feb  9  2019 /etc/hosts.deny
+root@barbara: ~
+$ cd /etc
+root@barbara: /etc
+$ diff /ubuntu-16.04/etc/hosts.allow  hosts.allow
+1d0
+< sendmail: all
+root@barbara: /etc
+$ diff /ubuntu-16.04/etc/hosts.deny  hosts.deny
+root@barbara: /etc
+$
 ```
 
 ### Set static IP address
 
 
+Reboot and test network.
+
 ## Install standard packages
 
-[ ] Install unity-tweak-tool
-    apt-get install unity-tweak-tool
-[ ] Install rcs, synaptic, vim, openssh-server
-[ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
-[ ] Install fortune-mod, fortunes, other fortune* packages as desired
-[ ] Install xscreensaver, xscreensaver-data-extra
-[ ] Install xscreensaver-gl-extra
-[ ] Lock xscreensaver and unity-tweak-tool to launcher
-[ ] Remove gnome-screensaver
-    apt-get update
-    apt list gnome-screensaver
-    apt-get remove gnome-screensaver
-[ ] Add xscreensaver to startup programs
-    gnome-session-properties
-[ ] Update System Settings -> Brightness & Lock
-[ ] Update System Settings -> Power
-[ ] Update Terminal Preferences
-[ ] Check man page for other steps needed to get it working at startup
+### unity-tweak-tool
+
+- [x] Install unity-tweak-tool
+
+```
+sudo apt-get install unity-tweak-tool
+unity-tweak-tool
+```
+
+Got an error when trying to run it:
+- The following schema missing is com.canonical.notify-osd
+  - "In order to work properly, Unity Tweak Took recommends you install the necessary packages"
+
+Solution found:
+- https://askubuntu.com/questions/965583/unity-tweak-tool-schema-missing-com-canonical-desktop-interface/965602
+
+```
+apt-get install notify-osd
+apt-get install overlay-scrollbar
+```
+
+### Version Control
+
+- [ ] Install rcs, synaptic, vim, openssh-server
+- [ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
+- [ ] Install fortune-mod, fortunes, other fortune* packages as desired
+
+### Screensaver
+
+- [ ] Install xscreensaver, xscreensaver-data-extra
+- [ ] Install xscreensaver-gl-extra
+- [ ] Lock xscreensaver and unity-tweak-tool to launcher
+- [ ] Remove gnome-screensaver
+
+```
+apt-get update
+apt list gnome-screensaver
+apt-get remove gnome-screensaver
+```
+
+- [ ] Add xscreensaver to startup programs
+  - It did this automatically
+
+### Getting More Normal - Settings
+
+- [ ] Update System Settings -> Brightness & Lock
+- [ ] Update System Settings -> Power
+- [ ] Update Terminal Preferences
+- [ ] Check man page for other steps needed to get it working at startup
     man xscreensaver
 
 ## Get look and feel to be consistent with others

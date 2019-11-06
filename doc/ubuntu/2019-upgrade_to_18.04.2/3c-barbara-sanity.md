@@ -7,17 +7,23 @@ Achieving sanity as quickly as possible on barbara by installing essential progr
 
 Immediate Goals:
 
-- Restore home directory
-- Get barbara on the network
-- Install standard packages
-- Get look and feel to be consistent with others
-- Start using barbara to rip CDs to mp3
+- [x] Restore home directories
+- [x] Get barbara on the network
+- [ ] Install standard packages
+- [ ] Get look and feel to be consistent with others
+- [ ] Start using barbara to rip CDs to mp3
 
 # Details
 
-## Restore home directory
+## Restore home directories
+
+Note: must do tomh first because the root user links to some of tomh's files.
+
+### Restoring `~tomh`
 
 Copy of old home directory is in `/ubuntu-16.04/home` .
+
+Commands run as tomh:
 
 ```
 cd /home
@@ -30,13 +36,44 @@ cp -rp /ubuntu-16.04/home/tomh/* .
 cp -rp /ubuntu-16.04/home/tomh/.[a-zA-Z]* .
 ```
 
+### Updating `~root`
+
+Copy of old home directory is in `/ubuntu-16.04/home` .
+
+- **Check to ensure we are not overwriting something needed for the new version**
+- This is unlikely but it's best to be safe
+
+Commands run as root:
+```
+l /ubuntu-16.04/root/
+ls -al /ubuntu-16.04/root/
+cat .bashrc
+diff .bashrc /ubuntu-16.04/root/.bashrc
+cp /ubuntu-16.04/root/.bashrc .
+ls -al /ubuntu-16.04/root/
+cat /ubuntu-16.04/root/postgres_commands.txt
+cp /ubuntu-16.04/root/postgres_commands.txt .
+apt install rcs
+mkdir RCS
+ci -l .bashrc  # Installed version
+ln -s ~tomh/.bash_aliases .
+ln -s ~tomh/.bash_aliases-barbara .
+ln -s ~tomh/bin .
+ln -s ~tomh/.vimrc  .
+```
+
 Reboot
 
 
 ## Get barbara on the network
 
-- Restore old copy of `/etc/hosts` .
-- Set static IP address
+### Restore old copy of `/etc/hosts` .
+
+Commands run as root:
+```
+```
+
+### Set static IP address
 
 
 ## Install standard packages

@@ -153,10 +153,21 @@ lrwxrwxrwx 1 root root   16 Nov  6 16:05 hosts -> hosts-www_is_ava
 
 ### Set static IP address
 
+Settings -> Network -> Wired -> IPv4 tab
+
+- Manual
+- Addresses
+  - Address: 192.168.1.116
+  - Netmask: 255.255.255.0
+  - Gateway: 192.168.1.1
+- DNS
+  - 192.168.30.2, 192.168.31.2
+
 Commands run as root:
 ```
+apt install net-tools
+ifconfig
 ```
-
 
 Reboot and test network.
 
@@ -168,6 +179,7 @@ Reboot and test network.
 - [x] Install unity-tweak-tool
 
 ```
+sudo apt-get update
 sudo apt-get install unity-tweak-tool
 unity-tweak-tool
 ```
@@ -184,17 +196,22 @@ apt-get install notify-osd
 apt-get install overlay-scrollbar
 ```
 
-### Version Control
+### Networking and Version Control
 
+- [x] Install vim, openssh-server
 - [x] Install rcs, synaptic, vim, openssh-server
 - [x] Install subversion, git, git-svn, (??git-stuff, git-magic??)
-- [x] Install fortune-mod, fortunes, other fortune* packages as desired
 
 ```
+apt-get update
+apt install vim
+apt install synaptic openssh-server
+apt install subversion git
 ```
 
 ### Screensaver
 
+- [x] Install fortune-mod, fortunes, other fortune* packages as desired
 - [x] Install xscreensaver, xscreensaver-data-extra
 - [x] Install xscreensaver-gl-extra
 - [x] Lock xscreensaver and unity-tweak-tool to launcher
@@ -203,6 +220,8 @@ apt-get install overlay-scrollbar
 
 ```
 apt-get update
+apt install -y fortune-mod fortunes
+apt install -y xscreensaver xscreensaver-data-extra xscreensaver-gl-extra
 apt list gnome-screensaver
 apt-get remove gnome-screensaver
 man xscreensaver     ## if needed
@@ -218,8 +237,16 @@ xscreensaver-demo    ## to get settings dialog
 - [x] Update Terminal Preferences
   - Apparently included when updating home directory
 
+
 ## Get look and feel to be consistent with others
 
+Background is very important.  Botticelli looks good!
+
+### Essential directories
+
+Commands run:
+```
+```
 
 ### More Standard Apps
 
@@ -232,8 +259,17 @@ Ubuntu Software icon in dock -> Search -> Libreoffice Calc -> Launch
 
 
 
-
 ## Start using barbara to rip CDs to mp3
+
+### Essential directories
+
+Commands run:
+```
+cd /
+sudo mkdir art
+sudo chown tomh:tomh art
+mkdir -p art/music/mp3-new
+```
 
 ### Easy Tag
 
@@ -244,7 +280,7 @@ Ubuntu Software icon in dock -> Search -> Easy Tag -> Launch
 
 #### Trying Rhythmbox
 
-- Ok to rip to .ogg by default
+- Tested ripping to .ogg and it works ok
 -
 
 

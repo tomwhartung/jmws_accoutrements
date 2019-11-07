@@ -8,6 +8,7 @@ Achieving sanity as quickly as possible on barbara by installing essential progr
 Immediate Goals:
 
 - [x] Restore home directories
+- [x] Multiple desktops
 - [x] Get barbara on the network
 - [ ] Install standard packages
 - [ ] Get look and feel to be consistent with others
@@ -65,14 +66,33 @@ ln -s ~tomh/.vimrc  .
 Reboot to be safe - check that nothing got messed up somehow.
 
 
+## Multiple desktops
+
+Gone!  WTF!?!
+
+References:
+- Why they are gone - drag and drop windows to use them dynamically - what bs
+  - https://websiteforstudents.com/what-are-workspaces-and-how-to-use-them-on-ubuntu-18-04-beta/
+- How to get them back:
+  - https://askubuntu.com/questions/1081251/multiple-workspaces-on-ubuntu-18-04-1-lts-and-later-with-gnome-shell
+
+Commands:
+```
+sudo apt-get update
+sudo apt install gnome-tweaks
+gnome-tweaks   ## Once it is running, right-click on the icon and Add it as a Favorite
+```
+
+Installing `unity-tweak-tool` as described in a later step gives more control.
+
+
 ## Get barbara on the network
 
-### Restore old copy of `/etc/hosts*` files.
+Restore `/etc/hosts*` files and set the settings.
 
+### Restore old copies of `/etc/hosts*` files.
 
-Commands run as root:
-```
-Leave hosts.allow and hosts.deny alone
+#### Leave hosts.allow and hosts.deny alone
 
 ```
 root@barbara: ~
@@ -92,10 +112,54 @@ root@barbara: /etc
 $
 ```
 
+#### Keep link to `hosts-www_is_ava` file.
+
+Commands run as root:
+```
+cd /etc
+l host*
+l /ubuntu-16.04/etc/host*
+l /ubuntu-16.04/etc/hosts*
+rcsdiff hosts
+rcsdiff hosts.*
+ci -l hosts.*
+ci -l hosts
+l /ubuntu-16.04/etc/hosts*
+l /ubuntu-16.04/etc/hosts-www_is_*
+l hosts*
+   95  l /ubuntu-16.04/etc/hosts-www_is_*
+cp /ubuntu-16.04/etc/hosts-www_is_* .
+l hosts*
+diff hosts hosts-www_is_ava
+rd hosts
+rm hosts; ln -s hosts-www_is_ava hosts
+l
+l hosts*
+rd hosts
+ci -l hosts-www_is_*
+rd hosts*
+```
+
+End result of all that, much of which was admittedly overly cautious, but that is how I roll:
+```
+l hosts*
+lrwxrwxrwx 1 root root   16 Nov  6 16:05 hosts -> hosts-www_is_ava
+-rw-r--r-- 1 root root 2715 Nov  6 16:04 hosts-www_is_ava
+-rw-r--r-- 1 root root 3343 Nov  6 16:04 hosts-www_is_barbara
+-rw-r--r-- 1 root root  411 Feb  9  2019 hosts.allow
+-rw-r--r-- 1 root root  711 Feb  9  2019 hosts.deny
+
+```
+
 ### Set static IP address
+
+Commands run as root:
+```
+```
 
 
 Reboot and test network.
+
 
 ## Install standard packages
 
@@ -122,52 +186,40 @@ apt-get install overlay-scrollbar
 
 ### Version Control
 
-- [ ] Install rcs, synaptic, vim, openssh-server
-- [ ] Install subversion, git, git-svn, (??git-stuff, git-magic??)
-- [ ] Install fortune-mod, fortunes, other fortune* packages as desired
+- [x] Install rcs, synaptic, vim, openssh-server
+- [x] Install subversion, git, git-svn, (??git-stuff, git-magic??)
+- [x] Install fortune-mod, fortunes, other fortune* packages as desired
+
+```
+```
 
 ### Screensaver
 
-- [ ] Install xscreensaver, xscreensaver-data-extra
-- [ ] Install xscreensaver-gl-extra
-- [ ] Lock xscreensaver and unity-tweak-tool to launcher
-- [ ] Remove gnome-screensaver
+- [x] Install xscreensaver, xscreensaver-data-extra
+- [x] Install xscreensaver-gl-extra
+- [x] Lock xscreensaver and unity-tweak-tool to launcher
+- [x] Remove gnome-screensaver
+- [x] Check man page for other steps needed to get it working at startup
 
 ```
 apt-get update
 apt list gnome-screensaver
 apt-get remove gnome-screensaver
+man xscreensaver     ## if needed
+xscreensaver-demo    ## to get settings dialog
 ```
 
-- [ ] Add xscreensaver to startup programs
+- [x] Add xscreensaver to startup programs
   - It did this automatically
 
 ### Getting More Normal - Settings
 
-- [ ] Update System Settings -> Brightness & Lock
-- [ ] Update System Settings -> Power
-- [ ] Update Terminal Preferences
-- [ ] Check man page for other steps needed to get it working at startup
-    man xscreensaver
+- [x] Update System Settings -> Power
+- [x] Update Terminal Preferences
+  - Apparently included when updating home directory
 
 ## Get look and feel to be consistent with others
 
-### Multiple desktops
-
-Gone!  WTF!?!
-
-References:
-- Why they are gone - drag and drop windows to use them dynamically - what bs
-  - https://websiteforstudents.com/what-are-workspaces-and-how-to-use-them-on-ubuntu-18-04-beta/
-- How to get them back:
-  - https://askubuntu.com/questions/1081251/multiple-workspaces-on-ubuntu-18-04-1-lts-and-later-with-gnome-shell
-
-Commands:
-```
-sudo apt-get update
-sudo apt install gnome-tweaks
-gnome-tweaks   ## Once it is running, right-click on the icon and Add it as a Favorite
-```
 
 ### More Standard Apps
 

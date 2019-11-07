@@ -294,4 +294,37 @@ Ubuntu Software icon in dock -> Search -> Easy Tag -> Launch
 - Setting preferences to use mp3 gets this error message:
   - "Install additional software required to use this format"
 
+First try - try installing gstreamer
+- Reference:
+  - https://www.lifewire.com/complete-guide-rhythmbox-2204885
+- Steps run:
+  - Run Ubuntu Software via icon in doc
+  - Search for "gstreamer" and install
+
+Second try - try installing from "error button"
+- In Rhythmbox -> Menu -> Preferences -> Music tab
+  - Tried setting "Preferred format" to MPEG Layer 3 4 Audio
+  - Tried clicking on error button, then little popup at the top
+    - Opens Ubuntu Software to find "Available software for ID3 tag muxer"
+    - Then get error message "Unable to find Requested Software"
+
+Third try - try installing first Gstreamer Multimedia Codecs package
+- In Rhythmbox -> Menu -> Preferences -> Music tab
+  - Tried setting "Preferred format" to MPEG 4 Audio
+  - Tried clicking on error button, then little popup at the top
+    - Opens Ubuntu Software to find "Available software for MPEG-4 AAC encoder"
+    - Then get two options, both named "GStreamer Multimedia Codecs"
+  - Try first one, description begins with "This GStreamer plugin supports a large number of audio ..."
+
+Rebooted, does not work.
+
+Fourth try - try installing second Gstreamer Multimedia Codecs package
+- In Rhythmbox -> Menu -> Preferences -> Music tab
+  - Tried setting "Preferred format" to MPEG 4 Audio
+  - Tried clicking on error button, then little popup at the top
+    - Opens Ubuntu Software to find "Available software for MPEG-4 AAC encoder"
+    - Then get two options, both named "GStreamer Multimedia Codecs"
+  - Try second one, description begins with "GStreamer is a streaming media framework, based on graphs ..."
+  - Seems to be working, but I will believe it when I see it
+    - Concerned because I saw an online post saying gstreamer is sucky ...
 

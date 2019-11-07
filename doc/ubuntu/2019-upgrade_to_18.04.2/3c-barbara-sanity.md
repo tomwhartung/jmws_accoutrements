@@ -209,6 +209,12 @@ apt install synaptic openssh-server
 apt install subversion git
 ```
 
+### SSH
+
+**Must remove all `~/.ssh/known_hosts` files to prevent scary errors.**
+
+There is no doubt a more elegant way to do this but just removing them all is simple and effective.
+
 ### Screensaver
 
 - [x] Install fortune-mod, fortunes, other fortune* packages as desired
@@ -244,11 +250,16 @@ Background is very important.  Botticelli looks good!
 
 ### Essential directories
 
-Commands run:
+Commands run as root:
 ```
+cd /var
+mkdir www
+chown tomh:tomh www
 ```
 
-### More Standard Apps
+Now it is ok to add github repos, such as this one, `jmws_accoutrement` .
+
+### More Standard Apps for the Dock
 
 ```
 gnome-calculator   ## Once it is running, right-click on the icon and Add it as a Favorite
@@ -256,7 +267,6 @@ gnome-calculator   ## Once it is running, right-click on the icon and Add it as 
 
 Ubuntu Software icon in dock -> Search -> Libreoffice Calc -> Launch
 - Once it is running, right-click on the icon and Add it as a Favorite
-
 
 
 ## Start using barbara to rip CDs to mp3
@@ -281,6 +291,7 @@ Ubuntu Software icon in dock -> Search -> Easy Tag -> Launch
 #### Trying Rhythmbox
 
 - Tested ripping to .ogg and it works ok
--
+- Setting preferences to use mp3 gets this error message:
+  - "Install additional software required to use this format"
 
 

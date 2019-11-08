@@ -10,9 +10,9 @@ Immediate Goals:
 - [x] Restore home directories
 - [x] Multiple desktops
 - [x] Get barbara on the network
-- [ ] Install standard packages
-- [ ] Get look and feel to be consistent with others
-- [ ] Start using barbara to rip CDs to mp3
+- [x] Install standard packages
+- [x] Get look and feel to be consistent with others
+- [x] Start using barbara to rip CDs to mp3
 
 # Details
 
@@ -327,4 +327,8 @@ Fourth try - try installing second Gstreamer Multimedia Codecs package
   - Try second one, description begins with "GStreamer is a streaming media framework, based on graphs ..."
   - Seems to be working, but I will believe it when I see it
     - Concerned because I saw an online post saying gstreamer is sucky ...
+    - First track of each CD is less than 320 kpbs, weird
+    - The tracks sound fine and file sizes look ok, though
+
+Fifth and subsequent tries: see `3d-barbara-ripping_cds.md` in this directory.
 

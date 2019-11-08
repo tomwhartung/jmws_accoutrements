@@ -267,3 +267,8 @@ gnome-calculator   ## Once it is running, right-click on the icon and Add it as 
 Ubuntu Software icon in dock -> Search -> Libreoffice Calc -> Launch
 - Once it is running, right-click on the icon and Add it as a Favorite
 
+### Adding Apps to the Dock
+
+- 1. Click on the Show Applications button in lower right corner of dock
+- 2. To add an app to the dock, right-click on it and select Add to Favorites
+

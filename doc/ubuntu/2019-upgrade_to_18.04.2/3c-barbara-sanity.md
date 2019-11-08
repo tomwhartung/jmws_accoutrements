@@ -330,5 +330,21 @@ Fourth try - try installing second Gstreamer Multimedia Codecs package
     - First track of each CD is less than 320 kpbs, weird
     - The tracks sound fine and file sizes look ok, though
 
-Fifth and subsequent tries: see `3d-barbara-ripping_cds.md` in this directory.
+#### Trying k3b
+
+This reference says k3b is the "least worst" ripper for linux:
+- https://askubuntu.com/questions/1881/what-are-some-cd-ripping-programs-you-can-use-on-ubuntu
+- "The current CD rippers in Ubuntu are terrible. The least worst CD Ripper for Linux is the venerable k3b."
+
+Reference:
+- https://userbase.kde.org/K3b
+
+Doesn't seem to rip at the maximum 320 kbps.  Even when I set it to do that, it rips at VBR.  Rats.
+
+#### Possible Hack
+
+Rhythmbox is fine except for the first song, so a possible hack is to:
+
+- 1. Use Rhythmbox to rip cd
+- 2. Use k3b to rip first song of each cd
 

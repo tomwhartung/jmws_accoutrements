@@ -73,7 +73,9 @@ else
 	echo "Copying \"${source_file_directory}/${source_file_name}\" to \"${backup_file_directory}/${destination_file_name}\""
 	date +"%Y-%m-%d @ %H:%M:%S"
 	set -x
-	ssh ${dest_hostname} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
+	## When keeping the tar file and the thumb drive on the same host, we can use ssh instead of scp:
+	## ssh ${dest_hostname} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
+	scp ${source_file_directory}/${source_file_name} ${dest_hostname}:${backup_file_directory}/${destination_file_name}
 	ret_val=$?
 	set +x
 	date +"%Y-%m-%d @ %H:%M:%S"

@@ -18,12 +18,13 @@ source_file_directory="/usr/local/tar"
 #
 this_hostname=$(hostname)
 
-if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
-   ## dest_hostname=ava
+## if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
+if [ "$this_hostname" == "ava" ]; then
+   dest_hostname=ava
    ## backup_drive_name=usb0
-   dest_hostname=barbara
 else
-   dest_hostname=jane
+   ## dest_hostname=jane
+   dest_hostname=barbara
 fi
 
 backup_drive_name=tomh/ext4Thumb

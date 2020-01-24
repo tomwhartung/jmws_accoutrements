@@ -7,8 +7,8 @@ tar_file_names=$@
 this_hostname=$(hostname)
 dest_file_directory='/usr/local/tar'
 
-if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
-   dest_hostname="barbara"
+if [ "$this_hostname" == "ava" ]; then
+   dest_hostname="ava"
 else
    dest_hostname="jane"
 fi

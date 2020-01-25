@@ -18,14 +18,8 @@ source_file_directory="/usr/local/tar"
 #
 this_hostname=$(hostname)
 
-## if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
-if [ "$this_hostname" == "ava" ]; then
-   dest_hostname=ava
-   ## backup_drive_name=usb0
-else
-   ## dest_hostname=jane
-   dest_hostname=barbara
-fi
+echo "copy_to_remote_thumb: copying tar file to thumb drive"
+echo "  remote_thumb_host: ${remote_thumb_host}"
 
 backup_drive_name=tomh/ext4Thumb
 
@@ -33,13 +27,14 @@ backup_directory_name=usr_local_tar
 backup_file_directory=/media/${backup_drive_name}/${backup_directory_name}/
 dest_sum_command="md5sum"
 
-if [ "$this_hostname" == "$dest_hostname" ]; then
+if [ "$this_hostname" == "$remote_thumb_host" ]; then
    cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
    ret_val=$?
    if [ $ret_val -ne 0 ]; then
-      echo "--------------------------------------------"
-      echo "WARNING: unable to copy file to thumb drive!"
-      echo "--------------------------------------------"
+		echo "*** Error: cp command returned a non-zero value: $ret_val"
+      echo "*** Unable to copy file to thumb drive on local host!"
+		echo "*** Fix the problem and try again."
+		echo
    fi
    exit $ret_val
 elif [ "$this_hostname" == "rita.local" ]; then
@@ -48,7 +43,7 @@ else
    this_sum_command="md5sum"
 fi
 
-ssh ${dest_hostname} ls -l ${backup_file_directory} > /tmp/ls.$$.txt 2>&1
+ssh ${remote_thumb_host} ls -l ${backup_file_directory} > /tmp/ls.$$.txt 2>&1
 ret_val=$?
 
 set +x 
@@ -66,7 +61,7 @@ else
 	echo
 	echo "Listing backup directory ${backup_file_directory} before:"
 	echo "----------------------------------------------------------------"
-	ssh ${dest_hostname} df -h $backup_file_directory | grep '/media/'
+	ssh ${remote_thumb_host} df -h $backup_file_directory | grep '/media/'
 	cat /tmp/ls.$$.txt 2>&1
 	rm /tmp/ls.$$.txt 2>&1
 	### ##
@@ -75,13 +70,13 @@ else
 	### echo
 	### echo "Using ssh to copy \"${source_file_directory}/${source_file_name}\" to \"${backup_file_directory}/${destination_file_name}\""
 	### ...
-	### ssh ${dest_hostname} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
+	### ssh ${remote_thumb_host} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
 	###
 	echo
-	echo "scping \"${source_file_directory}/${source_file_name}\" to \"${dest_hostname}:${backup_file_directory}/${destination_file_name}\""
+	echo "scping \"${source_file_directory}/${source_file_name}\" to \"${remote_thumb_host}:${backup_file_directory}/${destination_file_name}\""
 	echo "Starting scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
 	set -x
-	scp ${source_file_directory}/${source_file_name} ${dest_hostname}:${backup_file_directory}/${destination_file_name}
+	scp ${source_file_directory}/${source_file_name} ${remote_thumb_host}:${backup_file_directory}/${destination_file_name}
 	ret_val=$?
 	set +x
 	echo "Ending scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
@@ -96,8 +91,8 @@ else
 	echo
 	echo "Listing backup directory ${backup_file_directory} after:"
 	echo "---------------------------------------------------------------"
-	ssh ${dest_hostname} df -h $backup_file_directory | grep '/media/'
-	ssh ${dest_hostname} ls -al $backup_file_directory
+	ssh ${remote_thumb_host} df -h $backup_file_directory | grep '/media/'
+	ssh ${remote_thumb_host} ls -al $backup_file_directory
 fi
 
 echo
@@ -110,8 +105,8 @@ fi
 
 set -x
 $this_sum_command ${source_file_directory}/${source_file_name}
-ssh ${dest_hostname} $dest_sum_command ${source_file_directory}/${source_file_name} \
-	${backup_file_directory}/${destination_file_name}
+ssh ${tar_file_host} $dest_sum_command ${source_file_directory}/${source_file_name}
+ssh ${remote_thumb_host} $dest_sum_command ${backup_file_directory}/${destination_file_name}
 set +x
 
 exit $ret_val

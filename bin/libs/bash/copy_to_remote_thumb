@@ -69,20 +69,29 @@ else
 	ssh ${dest_hostname} df -h $backup_file_directory | grep '/media/'
 	cat /tmp/ls.$$.txt 2>&1
 	rm /tmp/ls.$$.txt 2>&1
+	### ##
+	### ## When keeping the tar file and the thumb drive on the same host, we can use ssh instead of scp
+	### ##
+	### echo
+	### echo "Using ssh to copy \"${source_file_directory}/${source_file_name}\" to \"${backup_file_directory}/${destination_file_name}\""
+	### ...
+	### ssh ${dest_hostname} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
+	###
 	echo
-	echo "Copying \"${source_file_directory}/${source_file_name}\" to \"${backup_file_directory}/${destination_file_name}\""
-	date +"%Y-%m-%d @ %H:%M:%S"
+	echo "scping \"${source_file_directory}/${source_file_name}\" to \"${dest_hostname}:${backup_file_directory}/${destination_file_name}\""
+	echo "Starting scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
 	set -x
-	## When keeping the tar file and the thumb drive on the same host, we can use ssh instead of scp:
-	## ssh ${dest_hostname} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
 	scp ${source_file_directory}/${source_file_name} ${dest_hostname}:${backup_file_directory}/${destination_file_name}
 	ret_val=$?
 	set +x
-	date +"%Y-%m-%d @ %H:%M:%S"
+	echo "Ending scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
 	if [ $ret_val -ne 0 ]; then
 		echo
-		echo "Error: ssh cp command returned a non-zero value: $ret_val"
+		echo "*** Error: scp command returned a non-zero value: $ret_val"
+		echo "*** Unable to copy file to thumb drive!"
+		echo "*** Fix the problem and try again."
 		echo
+		exit $ret_val
 	fi
 	echo
 	echo "Listing backup directory ${backup_file_directory} after:"

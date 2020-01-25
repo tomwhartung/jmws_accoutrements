@@ -79,6 +79,16 @@ tar -cvzf $tar_file_fullname $all_to_backup 2> /tmp/tarHome-errors.$$
 ret_val=$?
 set +x
 
+### if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
+if [ "$this_hostname" == "ava" ]; then
+   export tar_file_host='ava'
+   export remote_thumb_host='ava'
+   ### backup_drive_name=usb0
+else
+   export tar_file_host='lauren'
+   export remote_thumb_host='barbara'
+fi
+
 copy_to_tar_file_host $tar_file_fullname
 copy_to_remote_thumb $tar_file_basename $tar_file_name_no_date
 

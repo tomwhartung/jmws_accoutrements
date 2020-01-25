@@ -7,50 +7,47 @@ tar_file_names=$@
 this_hostname=$(hostname)
 dest_file_directory='/usr/local/tar'
 
-if [ "$this_hostname" == "ava" ]; then
-   dest_hostname="ava"
-else
-   dest_hostname="jane"
-fi
-
-if [ "$this_hostname" == "$dest_hostname" ]; then
-   echo "---> Not copying tar file to $dest_hostname"
-   echo "---> (because we are running this script on ${dest_hostname})"
+if [ "$this_hostname" == "$tar_file_host" ]; then
+   echo "---> Not copying tar file to $tar_file_host"
+   echo "---> (because we are running this script on ${tar_file_host})"
    exit
+else
+   echo "copy_to_tar_file_host: copying tar file to tar_file_host"
+   echo "  tar_file_host: ${tar_file_host}"
 fi
 
-ping -c 1 -W 3 $dest_hostname > /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$ 2>&1
+ping -c 1 -W 3 $tar_file_host > /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$ 2>&1
 ret_val=$?
 
 if [ $ret_val -ne 0 ]; then
 	echo "=================================="
-	echo "=-> unable to ping $dest_hostname <=-"
+	echo "=-> unable to ping $tar_file_host <=-"
 	echo "=================================="
-	cat /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$
-	rm  /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$
+	cat /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
+	rm  /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
 	echo "=================================="
 	exit $ret_val
 fi
 
-rm  /tmp/copy_to_tar_file_host-ping_output-${dest_hostname}.$$
+rm  /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
 echo
-echo "Listing ${dest_hostname}:${dest_file_directory}/*.tgz before:"
+echo "Listing ${tar_file_host}:${dest_file_directory}/*.tgz before:"
 echo "-----------------------------------------"
-ssh $dest_hostname "ls -l ${dest_file_directory}/*.tgz"
+ssh $tar_file_host "ls -l ${dest_file_directory}/*.tgz"
 ret_val=$?
 
 if [ $ret_val -eq 0 ]; then
 	echo
-	echo "Copying $tar_file_names to $dest_file_directory on $dest_hostname"
+	echo "Copying $tar_file_names to $dest_file_directory on $tar_file_host"
 	date +"%Y-%m-%d @ %H:%M:%S"
-	scp $tar_file_names $dest_hostname:${dest_file_directory}
+	scp $tar_file_names $tar_file_host:${dest_file_directory}
 	ret_val=$?
 	date +"%Y-%m-%d @ %H:%M:%S"
 	if [ $ret_val -eq 0 ]; then
 		echo
-		echo "Listing ${dest_hostname}:${dest_file_directory}/*.tgz after:"
+		echo "Listing ${tar_file_host}:${dest_file_directory}/*.tgz after:"
 		echo "----------------------------------------"
-		ssh $dest_hostname ls -al "${dest_file_directory}/*.tgz"
+		ssh $tar_file_host ls -al "${dest_file_directory}/*.tgz"
 		echo
 	else
 		echo "--------------------------------------------------"
@@ -59,8 +56,8 @@ if [ $ret_val -eq 0 ]; then
 		exit $ret_val
 	fi
 else
-	echo "Unable to copy tar file to $dest_file_directory on $dest_hostname"
-	echo "Please mount filesystem for $dest_file_directory (on $dest_hostname)"
+	echo "Unable to copy tar file to $dest_file_directory on $tar_file_host"
+	echo "Please mount filesystem for $dest_file_directory (on $tar_file_host)"
 fi
 
 exit $ret_val

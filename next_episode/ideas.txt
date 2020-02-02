@@ -1,0 +1,33 @@
+
+
+Here are some ideas I have been having for the next version of the GRoJA program.
+
+- Re-write in Python
+- Base it on a new quiz - more ideas below
+- Different default resolutions, based on number of questions answered
+- Include the person's name in the jpg
+
+Thinking about adding terms derived from the Big Five traits to my mix.
+
+I always like to think "OCEAN:"
+
+Open vs. Closed
+- inventive/curious vs. consistent/cautious
+- White vs. Black - in addition to existing Blue and Yellow vs. Green and Red
+
+Conscientious vs. ??
+- efficient/organized vs. easy-going/careless
+- ??
+
+Extraverted vs. Introverted
+- outgoing/energetic vs. solitary/reserved
+- Good - Vertical vs. Horizontal
+
+Agreeableness vs. ??
+- friendly/compassionate vs. challenging/detached
+-
+
+Neurotic vs. Calm
+- sensitive/nervous vs. secure/confident
+- Good - Red vs. Green
+

@@ -3,7 +3,7 @@
 
 Installing audacious on barbara, which is running ubuntu 18.04.
 
-FYI, tried installing it using the GUI, and it failed repeatedly.
+Oops, realized after installing it, that I wanted audacity.
 
 ## Reference
 
@@ -30,10 +30,4 @@ apt-get install audacious
 ```
 
 Note that this command also installs the plugins package.
-
-## Try It Out
-
-Try recording something on vinyl.
-
-Hmmmm.
 

@@ -22,3 +22,14 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
 
+## Running Chrome the First Time
+
+```
+which google-chrome-stable
+google-chrome-stable &
+```
+
+1. Log in to sync settings.
+2. Find icon in taskbar, move it to a location next to Firefox, and lock it there.
+3. Exit and use the taskbar icon to run it in the future.
+

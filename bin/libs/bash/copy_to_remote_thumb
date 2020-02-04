@@ -98,15 +98,23 @@ fi
 echo
 
 if [ $# -gt 1 ]; then
-	echo "Check sums (all three files):"
+	  echo "Check sums - local host, ${tar_file_host}, ${remote_thumb_host}:"
 else
-	echo "Check sums:"
+	  echo "Check sums:"
 fi
 
-set -x
 $this_sum_command ${source_file_directory}/${source_file_name}
-ssh ${tar_file_host} $dest_sum_command ${source_file_directory}/${source_file_name}
-ssh ${remote_thumb_host} $dest_sum_command ${backup_file_directory}/${destination_file_name}
-set +x
+
+if [ "$this_hostname" == "$tar_file_host" ]; then
+   $dest_sum_command ${source_file_directory}/${source_file_name}
+else
+   ssh ${tar_file_host} $dest_sum_command ${source_file_directory}/${source_file_name}
+fi
+
+if [ "$this_hostname" == "$remote_thumb_host" ]; then
+   $dest_sum_command ${backup_file_directory}/${destination_file_name}
+else
+   ssh ${remote_thumb_host} $dest_sum_command ${backup_file_directory}/${destination_file_name}
+fi
 
 exit $ret_val

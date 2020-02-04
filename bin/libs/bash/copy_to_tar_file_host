@@ -8,10 +8,14 @@ this_hostname=$(hostname)
 dest_file_directory='/usr/local/tar'
 
 if [ "$this_hostname" == "$tar_file_host" ]; then
+   echo
+   echo "copy_to_tar_file_host:"
    echo "---> Not copying tar file to $tar_file_host"
    echo "---> (because we are running this script on ${tar_file_host})"
+   echo
    exit
 else
+   echo
    echo "copy_to_tar_file_host: copying tar file to tar_file_host"
    echo "  tar_file_host: ${tar_file_host}"
 fi
@@ -20,13 +24,13 @@ ping -c 1 -W 3 $tar_file_host > /tmp/copy_to_tar_file_host-ping_output-${tar_fil
 ret_val=$?
 
 if [ $ret_val -ne 0 ]; then
-	echo "=================================="
-	echo "=-> unable to ping $tar_file_host <=-"
-	echo "=================================="
-	cat /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
-	rm  /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
-	echo "=================================="
-	exit $ret_val
+   echo "=================================="
+   echo "=-> unable to ping $tar_file_host <=-"
+   echo "=================================="
+   cat /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
+   rm  /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
+   echo "=================================="
+   exit $ret_val
 fi
 
 rm  /tmp/copy_to_tar_file_host-ping_output-${tar_file_host}.$$
@@ -37,27 +41,27 @@ ssh $tar_file_host "ls -l ${dest_file_directory}/*.tgz"
 ret_val=$?
 
 if [ $ret_val -eq 0 ]; then
-	echo
-	echo "Copying $tar_file_names to $dest_file_directory on $tar_file_host"
-	date +"%Y-%m-%d @ %H:%M:%S"
-	scp $tar_file_names $tar_file_host:${dest_file_directory}
-	ret_val=$?
-	date +"%Y-%m-%d @ %H:%M:%S"
-	if [ $ret_val -eq 0 ]; then
-		echo
-		echo "Listing ${tar_file_host}:${dest_file_directory}/*.tgz after:"
-		echo "----------------------------------------"
-		ssh $tar_file_host ls -al "${dest_file_directory}/*.tgz"
-		echo
-	else
-		echo "--------------------------------------------------"
-		echo "Error: something went wrong; scp comand returned $ret_val"
-		echo "--------------------------------------------------"
-		exit $ret_val
-	fi
+   echo
+   echo "Copying $tar_file_names to $dest_file_directory on $tar_file_host"
+   date +"%Y-%m-%d @ %H:%M:%S"
+   scp $tar_file_names $tar_file_host:${dest_file_directory}
+   ret_val=$?
+   date +"%Y-%m-%d @ %H:%M:%S"
+   if [ $ret_val -eq 0 ]; then
+      echo
+      echo "Listing ${tar_file_host}:${dest_file_directory}/*.tgz after:"
+      echo "----------------------------------------"
+      ssh $tar_file_host ls -al "${dest_file_directory}/*.tgz"
+      echo
+   else
+      echo "--------------------------------------------------"
+      echo "Error: something went wrong; scp comand returned $ret_val"
+      echo "--------------------------------------------------"
+      exit $ret_val
+   fi
 else
-	echo "Unable to copy tar file to $dest_file_directory on $tar_file_host"
-	echo "Please mount filesystem for $dest_file_directory (on $tar_file_host)"
+   echo "Unable to copy tar file to $dest_file_directory on $tar_file_host"
+   echo "Please mount filesystem for $dest_file_directory (on $tar_file_host)"
 fi
 
 exit $ret_val

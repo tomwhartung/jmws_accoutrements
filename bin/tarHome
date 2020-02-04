@@ -16,10 +16,10 @@ if [ $this_hostname == "ava" ]; then
    more_dirs=""
    mail_dirs=""
 elif [ $this_hostname == "barbara" ]; then
-   more_dirs="Pictures technical"
+   more_dirs=".kde/share Downloads Pictures technical"
    mail_dirs=".thunderbird"
 elif [ $this_hostname == "bette" ]; then
-   more_dirs="Downloads jobsearch marketing personal technical work"
+   more_dirs=".kde/share Downloads jobsearch marketing personal technical work"
    ## mail_dirs=".thunderbird"
    mail_dirs=""
 elif [ $this_hostname == "humphrey" ]; then

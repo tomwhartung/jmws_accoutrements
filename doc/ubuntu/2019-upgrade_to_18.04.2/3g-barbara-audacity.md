@@ -7,9 +7,19 @@ FYI, tried installing it using the GUI, and it failed repeatedly, probably becau
 
 ## References
 
+Basic info:
+
+- https://en.wikipedia.org/wiki/Audacity_(audio_editor)
+
 This one looks like the best, but it is also quite out of date:
 
 - https://help.ubuntu.com/community/Audacity
+
+This one looks like the most thorough, but ...
+
+- https://www.atechtown.com/install-audacity-on-ubuntu/
+
+... there are two others that make it look easier.
 
 These two agree on the same, very simple process.
 
@@ -34,7 +44,7 @@ apt-get install audacity
 #   audacity audacity-data libportaudio2 libportsmf0v5 libsuil-0-0 libvamp-hostsdk3v5 libwxbase3.0-0v5 libwxgtk3.0-0v5
 ```
 
-So far, so good.
+Installed version 2.3.3, which is the latest.
 
 ## Try It Out
 
@@ -55,5 +65,9 @@ audacity &
 
 Try recording something on vinyl.
 
-Hmmmm.
+Works but need to plug the output from the amp into the micropone jack **in the front** of the PC.
+
+- **Line in does not work when plugged into the back**
+
+Otherwise it looks like we are good to start ripping vinyl!
 

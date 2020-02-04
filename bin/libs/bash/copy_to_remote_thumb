@@ -4,9 +4,9 @@
 # --------------------------------------------------------------------------
 #
 if [ $# -lt 2 ]; then
-	echo "Syntax: copy_to_remote_thumb source_file destination_file"
-	echo "  Please specify a source file name and destination file name."
-	exit 1
+   echo "Syntax: copy_to_remote_thumb source_file destination_file"
+   echo "  Please specify a source file name and destination file name."
+   exit 1
 fi
 
 source_file_name=$1
@@ -31,10 +31,10 @@ if [ "$this_hostname" == "$remote_thumb_host" ]; then
    cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
    ret_val=$?
    if [ $ret_val -ne 0 ]; then
-		echo "*** Error: cp command returned a non-zero value: $ret_val"
+      echo "*** Error: cp command returned a non-zero value: $ret_val"
       echo "*** Unable to copy file to thumb drive on local host!"
-		echo "*** Fix the problem and try again."
-		echo
+      echo "*** Fix the problem and try again."
+      echo
    fi
    exit $ret_val
 elif [ "$this_hostname" == "rita.local" ]; then
@@ -49,65 +49,60 @@ ret_val=$?
 set +x 
 
 if [ $ret_val -ne 0 ]; then
-	cat /tmp/ls.$$.txt 2>&1
-	echo 
-	echo "ERROR: Unable to copy backup file to backup_file_directory = \"${backup_file_directory}\""
-	echo "  -->  Plugin a thumb drive named \"${backup_drive_name}\" that contains a directory named \"${backup_directory_name}\""
-	echo 
-	cat /tmp/ls.$$.txt 2>&1
-	rm /tmp/ls.$$.txt 2>&1
-	exit $ret_val
+   cat /tmp/ls.$$.txt 2>&1
+   echo 
+   echo "ERROR: Unable to copy backup file to backup_file_directory = \"${backup_file_directory}\""
+   echo "  -->  Plugin a thumb drive named \"${backup_drive_name}\" that contains a directory named \"${backup_directory_name}\""
+   echo 
+   cat /tmp/ls.$$.txt 2>&1
+   rm /tmp/ls.$$.txt 2>&1
+   exit $ret_val
 else
-	echo
-	echo "Listing backup directory ${backup_file_directory} before:"
-	echo "----------------------------------------------------------------"
-	ssh ${remote_thumb_host} df -h $backup_file_directory | grep '/media/'
-	cat /tmp/ls.$$.txt 2>&1
-	rm /tmp/ls.$$.txt 2>&1
-	### ##
-	### ## When keeping the tar file and the thumb drive on the same host, we can use ssh instead of scp
-	### ##
-	### echo
-	### echo "Using ssh to copy \"${source_file_directory}/${source_file_name}\" to \"${backup_file_directory}/${destination_file_name}\""
-	### ...
-	### ssh ${remote_thumb_host} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
-	###
-	echo
-	echo "scping \"${source_file_directory}/${source_file_name}\" to \"${remote_thumb_host}:${backup_file_directory}/${destination_file_name}\""
-	echo "Starting scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
-	set -x
-	scp ${source_file_directory}/${source_file_name} ${remote_thumb_host}:${backup_file_directory}/${destination_file_name}
-	ret_val=$?
-	set +x
-	echo "Ending scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
-	if [ $ret_val -ne 0 ]; then
-		echo
-		echo "*** Error: scp command returned a non-zero value: $ret_val"
-		echo "*** Unable to copy file to thumb drive!"
-		echo "*** Fix the problem and try again."
-		echo
-		exit $ret_val
-	fi
-	echo
-	echo "Listing backup directory ${backup_file_directory} after:"
-	echo "---------------------------------------------------------------"
-	ssh ${remote_thumb_host} df -h $backup_file_directory | grep '/media/'
-	ssh ${remote_thumb_host} ls -al $backup_file_directory
+   echo
+   echo "Listing backup directory ${backup_file_directory} before:"
+   echo "----------------------------------------------------------------"
+   ssh ${remote_thumb_host} df -h $backup_file_directory | grep '/media/'
+   cat /tmp/ls.$$.txt 2>&1
+   rm /tmp/ls.$$.txt 2>&1
+   ### ##
+   ### ## When keeping the tar file and the thumb drive on the same host, we can use ssh instead of scp
+   ### ##
+   ### echo
+   ### echo "Using ssh to copy \"${source_file_directory}/${source_file_name}\" to \"${backup_file_directory}/${destination_file_name}\""
+   ### ...
+   ### ssh ${remote_thumb_host} cp ${source_file_directory}/${source_file_name} ${backup_file_directory}/${destination_file_name}
+   ###
+   echo
+   echo "scping \"${source_file_directory}/${source_file_name}\" to \"${remote_thumb_host}:${backup_file_directory}/${destination_file_name}\""
+   echo "Starting scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
+   set -x
+   scp ${source_file_directory}/${source_file_name} ${remote_thumb_host}:${backup_file_directory}/${destination_file_name}
+   ret_val=$?
+   set +x
+   echo "Ending scp on $(date +'%Y-%m-%d @ %H:%M:%S')"
+   if [ $ret_val -ne 0 ]; then
+      echo
+      echo "*** Error: scp command returned a non-zero value: $ret_val"
+      echo "*** Unable to copy file to thumb drive!"
+      echo "*** Fix the problem and try again."
+      echo
+      exit $ret_val
+   fi
+   echo
+   echo "Listing backup directory ${backup_file_directory} after:"
+   echo "---------------------------------------------------------------"
+   ssh ${remote_thumb_host} df -h $backup_file_directory | grep '/media/'
+   ssh ${remote_thumb_host} ls -al $backup_file_directory
 fi
 
 echo
 
-if [ $# -gt 1 ]; then
-	  echo "Check sums - local host, ${tar_file_host}, ${remote_thumb_host}:"
-else
-	  echo "Check sums:"
-fi
-
-$this_sum_command ${source_file_directory}/${source_file_name}
-
 if [ "$this_hostname" == "$tar_file_host" ]; then
-   $dest_sum_command ${source_file_directory}/${source_file_name}
+   echo "Check sums - localhost ${this_hostname} = ${tar_file_host}, ${remote_thumb_host}:"
+   $this_sum_command ${source_file_directory}/${source_file_name}
 else
+   echo "Check sums - localhost ${this_hostname}, ${tar_file_host}, ${remote_thumb_host}:"
+   $this_sum_command ${source_file_directory}/${source_file_name}
    ssh ${tar_file_host} $dest_sum_command ${source_file_directory}/${source_file_name}
 fi
 

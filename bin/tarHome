@@ -96,15 +96,16 @@ copy_to_remote_thumb $tar_file_basename $tar_file_name_no_date
 #
 #  cat out the errors file and remove it
 #
-if [ ! -z /tmp/tarHome-errors.$$ ]; then
+echo
+if [ $ret_val -eq 0 ]; then
+   echo "================="
+   echo "No errors occured"
+   echo "================="
+else
+   echo "============================="
    echo "The following errors occured:"
    echo "============================="
    cat /tmp/tarHome-errors.$$
-   echo "============================="
-elif [ $ret_val -ne 0 ]; then
-   echo "============================="
-   echo "Some unknown error occurred?"
-   echo "  ret_val = $ret_val"
    echo "============================="
 fi
 

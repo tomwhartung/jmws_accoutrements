@@ -98,6 +98,9 @@ copy_to_remote_thumb $tar_file_basename $tar_file_name_no_date
 #
 echo
 if [ $ret_val -eq 0 ]; then
+   set -x
+   ls -al /tmp/tarHome-errors.$$
+   set +x
    echo "================="
    echo "No errors occured"
    echo "================="

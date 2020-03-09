@@ -86,7 +86,7 @@ if [ "$this_hostname" == "ava" ]; then
    export remote_thumb_host='ava'
    ### backup_drive_name=usb0
 else
-   export tar_file_host='lauren'
+   export tar_file_host='jane'
    export remote_thumb_host='barbara'
 fi
 

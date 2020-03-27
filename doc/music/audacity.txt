@@ -8,24 +8,30 @@ References:
 Adjusting input level:
 - https://manual.audacityteam.org/man/meter_toolbar.html#recording
 
-Noise Removal:
+Noise Reduction:
 - http://www.podfeet.com/blog/recording/how-to-remove-noise-with-audacity/
 
 Splitting Into Tracks:
 - http://manual.audacityteam.org/man/splitting_a_recording_into_separate_tracks.html
 
-Click Removal (done in the past but not this time - call them "quaint"):
-- http://manual.audacityteam.org/man/click_removal.html
-- http://manual.audacityteam.org/man/tutorial_click_and_pop_removal_techniques.html
+Click Removal
+- I have done this in the past but we do not always want this
+- We can call minor clicks "quaint!"
+- References for when they are "bad" and we want to remove them:
+  - http://manual.audacityteam.org/man/click_removal.html
+  - http://manual.audacityteam.org/man/tutorial_click_and_pop_removal_techniques.html
 
 Quick keys:
 -----------
-Cmd-A = Select all
-Cmd-1
-Cmd-E - Zoom to selection
+Ctl-A - Select all
+Ctl-1 - Zoom in
+Ctl-2 - Zoom normal
+Ctl-3 - Zoom out
+Ctl-E - Zoom to selection
+Ctl-B - Give a track name to the current selction
 
-Adjusting Input Level:
-----------------------
+Adjusting the Input Level:
+--------------------------
 1. Start with System Settings -> Sound
    Ensure it is set to Unamplified
 2. Play the album and adjust the microphone's input level
@@ -37,18 +43,22 @@ Adjusting Input Level:
 Recording Process
 -----------------
 1. File -> Save As into directory:
-     /art/music/analog_projects/Audacity/<Artist>/YYYY-<Album>
-2. Record - do not pause when flipping, use that dead space for noise removal
-3. Noise Removal:
+   /art/music/analog_projects/Audacity/<Artist>/YYYY[_MM_DD]-<Album>
+   Add the Month and Day when an artist has multiple releases in a single year
+2. Record
+   Do not pause when flipping, use that dead space for noise reduction
+3. Optional: Noise Reduction:
    Click and drag to select dead space between sides
-   Effect -> Noise Removal - take sample
-   Cmd-A (select all)
-   Effect -> Noise Removal - remove noise
+   Effect -> Noise Reduction -> Get Noise Profile
+   Ctl-A (select all)
+   Ctl-E (zoom to selection)
+   Effect -> Noise Reduction - remove noise
 4. Optional: Find Silence
-   Cmd-A (select all)
+   Ctl-A (select all)
    Analyze -> Silence Finder
 5. Split into Tracks
-   Use tracks found in step 4. or use Cmd-B to insert them individually
+   Option 1: Use tracks found in step 4,
+   Option 2: Select a range of the audio for a track and use Ctl-B to name it
 6. File -> Edit Metadata
 7. File -> Export Multiple Tracks
    Export into:
@@ -67,5 +77,5 @@ ALWAYS clean the record first - it can't hurt!
 
 Splitting into tracks:
 o Silence finder doesn't work very well on live recordings
-o It's much easier to use Cmd-B to add track labels
+o It's much easier to use Ctl-B to add track labels
 

@@ -23,6 +23,7 @@ Click Removal
 
 Quick keys:
 -----------
+Space - Play/Stop
 Ctl-A - Select all
 Ctl-1 - Zoom in
 Ctl-2 - Zoom normal
@@ -34,17 +35,24 @@ Adjusting the Input Level:
 --------------------------
 1. Start with System Settings -> Sound
    Ensure it is set to Unamplified
+   It seems to migrate upwards slightly, weird
 2. Play the album and adjust the microphone's input level
-   For the Bob Marley albums I am doing, around 0.45-0.50 looks good
+   For the Bob Marley albums I am doing, around 0.40-0.45 is looking good...
 3. Ensure there is no clipping
    Look for Red lines in the meter toolbar -- these indicate the recording has been clipped at some point
    See reference for location of meter toolbar and the relevance of the Red lines
+   If they are there when done with a side, reduce the input volume level and start the side over!
 
 Recording Process
 -----------------
-1. File -> Save As into directory:
-   /art/music/analog_projects/Audacity/<Artist>/YYYY[_MM_DD]-<Album>
+1. File -> Save As:
    Add the Month and Day when an artist has multiple releases in a single year
+   **Note:** Both the name of directory and the name of files are of the form:
+      YYYY[_MM_DD]-<Album>
+   Save Into directory:
+      /art/music/analog_projects/Audacity/<Artist>/YYYY[_MM_DD]-<Album>
+   Save as name:
+      YYYY[_MM_DD]-<Album>
 2. Record
    Do not pause when flipping, use that dead space for noise reduction
 3. Optional: Noise Reduction:
@@ -59,10 +67,22 @@ Recording Process
 5. Split into Tracks
    Option 1: Use tracks found in step 4,
    Option 2: Select a range of the audio for a track and use Ctl-B to name it
-6. File -> Edit Metadata
+6. Edit the album's metadata
+   File -> Edit Metadata
+      Artist Name
+      Album Title
+      Year
+      Genre
+      Comments -- e.g.: "Ripped using Audacity 2020-03-27"
 7. File -> Export Multiple Tracks
    Export into:
-     /art/music/mp3-new/<Artist>/YYYY-<Album>
+     /art/music/mp3-new/<Artist>/YYYY[_MM_DD]-<Album>
+   Format:
+      MP3 Files
+   Quality:
+      Insane, 320 kbps
+   Name files:
+      Numbering before Label/Trackl Name
    Check the metadata for each track
 8. Tar and copy to a linux host, e.g., bette
      tar -cvzf YYYY-<Album>.tgz YYYY-<Album>
@@ -76,6 +96,6 @@ Tips
 ALWAYS clean the record first - it can't hurt!
 
 Splitting into tracks:
-o Silence finder doesn't work very well on live recordings
-o It's much easier to use Ctl-B to add track labels
+- Silence finder doesn't work very well on live recordings
+- It's much easier to use Ctl-B to add track labels
 

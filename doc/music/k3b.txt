@@ -1,8 +1,11 @@
 
-When ripping, k3b frequently hangs when the downloaded tags contain a lot of special characters.
+When ripping, k3b sometimes hangs.  Following are a couple of things to try:
 
-If it hangs, or better yet before it hangs:
+- If the downloaded tags contain a lot of special characters, try removing them -- see Edit Info below
+- If a popup dialog says there are other processes using the drive, tell it to kill those processes
 
-- Edit Info: remove all special characters from the album-level tags
+Edit Info -- to remove special characters:
+
+- Click on Edit Info and remove all special characters from the album-level tags
 - For each track: hightlight then F2 or enter to reduce the name to alphabetical chars only
 

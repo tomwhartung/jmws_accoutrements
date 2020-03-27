@@ -81,8 +81,10 @@ Recording Process
       MP3 Files
    Quality:
       Insane, 320 kbps
+   Split files based on:
+      Labels
    Name files:
-      Numbering before Label/Trackl Name
+      Numbering before Label/Track Name
    Check the metadata for each track
 8. Tar and copy to a linux host, e.g., bette
      tar -cvzf YYYY-<Album>.tgz YYYY-<Album>

@@ -1,18 +1,22 @@
 
  Using Audacity to Rip Vinyl to Mp3s
 =====================================
-The process is simple enough, but can be a little tricky 
-when we haven't done it in awhile.
+The process is simple enough, but can be a little tricky when we haven't done it in awhile.
 
 References:
 -----------
+Adjusting input level:
+- https://manual.audacityteam.org/man/meter_toolbar.html#recording
+
 Noise Removal:
-  http://www.podfeet.com/blog/recording/how-to-remove-noise-with-audacity/
+- http://www.podfeet.com/blog/recording/how-to-remove-noise-with-audacity/
+
 Splitting Into Tracks:
-  http://manual.audacityteam.org/man/splitting_a_recording_into_separate_tracks.html
+- http://manual.audacityteam.org/man/splitting_a_recording_into_separate_tracks.html
+
 Click Removal (done in the past but not this time - call them "quaint"):
-  http://manual.audacityteam.org/man/click_removal.html
-  http://manual.audacityteam.org/man/tutorial_click_and_pop_removal_techniques.html
+- http://manual.audacityteam.org/man/click_removal.html
+- http://manual.audacityteam.org/man/tutorial_click_and_pop_removal_techniques.html
 
 Quick keys:
 -----------
@@ -20,8 +24,18 @@ Cmd-A = Select all
 Cmd-1
 Cmd-E - Zoom to selection
 
-Process
---------
+Adjusting Input Level:
+----------------------
+1. Start with System Settings -> Sound
+   Ensure it is set to Unamplified
+2. Play the album and adjust the microphone's input level
+   For the Bob Marley albums I am doing, around 0.45-0.50 looks good
+3. Ensure there is no clipping
+   Look for Red lines in the meter toolbar -- these indicate the recording has been clipped at some point
+   See reference for location of meter toolbar and the relevance of the Red lines
+
+Recording Process
+-----------------
 1. File -> Save As into directory:
      /art/music/analog_projects/Audacity/<Artist>/YYYY-<Album>
 2. Record - do not pause when flipping, use that dead space for noise removal

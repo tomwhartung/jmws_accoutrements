@@ -37,7 +37,7 @@ Adjusting the Input Level:
    Ensure it is set to Unamplified
    It seems to migrate upwards slightly, weird
 2. Play the album and adjust the microphone's input level
-   For the Bob Marley albums I am doing, around 0.40-0.45 is looking good...
+   For the Bob Marley albums I am doing, around 0.35-0.40 is looking good...
 3. Ensure there is no clipping
    Look for Red lines in the meter toolbar -- these indicate the recording has been clipped at some point
    See reference for location of meter toolbar and the relevance of the Red lines
@@ -61,20 +61,24 @@ Recording Process
    Ctl-A (select all)
    Ctl-E (zoom to selection)
    Effect -> Noise Reduction - remove noise
-4. Optional: Find Silence
-   Ctl-A (select all)
-   Analyze -> Silence Finder
-5. Split into Tracks
-   Option 1: Use tracks found in step 4,
-   Option 2: Select a range of the audio for a track and use Ctl-B to name it
-6. Edit the album's metadata
+
+Creating the Mp3s
+-----------------
+2. Split into Tracks
+   Option 1: Find Silence
+      Ctl-A (select all)
+      Analyze -> Silence Finder
+   Option 2:
+      Use mouse to select a range of the audio for a track
+      Ctl-B to name it
+3. Edit the album's metadata
    File -> Edit Metadata
       Artist Name
       Album Title
       Year
       Genre
       Comments -- e.g.: "Ripped using Audacity 2020-03-27"
-7. File -> Export Multiple Tracks
+4. File -> Export Multiple Tracks
    Export into:
      /art/music/mp3-new/<Artist>/YYYY[_MM_DD]-<Album>
    Format:
@@ -86,12 +90,15 @@ Recording Process
    Name files:
       Numbering before Label/Track Name
    Check the metadata for each track
-8. Tar and copy to a linux host, e.g., bette
+6. Tar and copy to a linux host, e.g., bette
      tar -cvzf YYYY-<Album>.tgz YYYY-<Album>
      toBette YYYY-<Album>.tgz
-9  Fix file names (remove spaces and special characters) by running:
+7. Fix file names (remove spaces and special characters) by running:
      fixMusicFileNames
-10. Use Easytag to add album artwork and check mp3 ID data
+8. Use Easytag to finish up:
+   - Check mp3 ID data
+   - Add album artwork
+   - To easily fix spaces in file names, use the Scanner
 
 Tips
 ----

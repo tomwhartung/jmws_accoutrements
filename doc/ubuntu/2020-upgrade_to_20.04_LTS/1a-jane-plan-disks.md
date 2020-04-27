@@ -1,22 +1,23 @@
 
 # 1a-jane.md
 
-Upgrading jane by installing into existing `/mnt/future*` and `/mnt/spare*` partitions.
+Upgrade jane to 20.04.
 
-# Upgrading to Ubuntu 20.04 LTS (Focal Fossa)
+# Plan
 
-Note: at this time it "is expected on 23 April 2020."
-- https://en.wikipedia.org/wiki/Ubuntu_version_history#Table_of_versions
+Upgrade jane by installing into existing `/mnt/future*` and `/mnt/spare*` partitions.
 
-# Upgrading While Leaving Existing OS As-Is
+## Upgrading to Ubuntu 20.04 LTS (Focal Fossa)
+
+Upgrade and leave existing OS as-is.
 
 This process should be a little bit easier than always starting from scratch:
 
 - No need to partion disks - always the hardest part
-- Will need to burn new DVDs
+- Will need to burn new DVD
 - Will need to reinstall my favorite programs
 
-# List of `/mnt/future*` and `/mnt/spare*` Partitions
+## List of `/mnt/future*` and `/mnt/spare*` Partitions
 
 Use these partitions first:
 ```
@@ -29,5 +30,13 @@ Use these partitions if needed:
 ```
 /dev/sda11      924M  1.5M  859M   1% /mnt/spare/sda11
 /dev/sda14      174G   60M  165G   1% /mnt/spare/sda14
+```
+
+# Disks
+
+How to name partitions during install:
+
+```
+
 ```
 

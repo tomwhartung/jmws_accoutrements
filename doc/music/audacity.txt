@@ -1,57 +1,110 @@
 
  Using Audacity to Rip Vinyl to Mp3s
 =====================================
-The process is simple enough, but can be a little tricky 
-when we haven't done it in awhile.
+The process is simple enough, but can be a little tricky when we haven't done it in awhile.
 
 References:
 -----------
-Noise Removal:
-  http://www.podfeet.com/blog/recording/how-to-remove-noise-with-audacity/
+Adjusting input level:
+- https://manual.audacityteam.org/man/meter_toolbar.html#recording
+
+Noise Reduction:
+- http://www.podfeet.com/blog/recording/how-to-remove-noise-with-audacity/
+
 Splitting Into Tracks:
-  http://manual.audacityteam.org/man/splitting_a_recording_into_separate_tracks.html
-Click Removal (done in the past but not this time - call them "quaint"):
-  http://manual.audacityteam.org/man/click_removal.html
-  http://manual.audacityteam.org/man/tutorial_click_and_pop_removal_techniques.html
+- http://manual.audacityteam.org/man/splitting_a_recording_into_separate_tracks.html
+
+Click Removal
+- I have done this in the past but we do not always want this
+- We can call minor clicks "quaint!"
+- References for when they are "bad" and we want to remove them:
+  - http://manual.audacityteam.org/man/click_removal.html
+  - http://manual.audacityteam.org/man/tutorial_click_and_pop_removal_techniques.html
 
 Quick keys:
 -----------
-Cmd-A = Select all
-Cmd-1
-Cmd-E - Zoom to selection
+Space - Play/Stop
+Ctl-A - Select all
+Ctl-1 - Zoom in
+Ctl-2 - Zoom normal
+Ctl-3 - Zoom out
+Ctl-E - Zoom to selection
+Ctl-B - Give a track name to the current selction
 
-Process
---------
-1. File -> Save As into directory:
-     /art/music/analog_projects/Audacity/<Artist>/YYYY-<Album>
-2. Record - do not pause when flipping, use that dead space for noise removal
-3. Noise Removal:
+Adjusting the Input Level:
+--------------------------
+1. Start with System Settings -> Sound
+   Ensure it is set to Unamplified
+   It seems to migrate upwards slightly, weird
+2. Play the album and adjust the microphone's input level
+   For the Bob Marley albums I am doing, around 0.35-0.40 is looking good...
+3. Ensure there is no clipping
+   Look for Red lines in the meter toolbar -- these indicate the recording has been clipped at some point
+   See reference for location of meter toolbar and the relevance of the Red lines
+   If they are there when done with a side, reduce the input volume level and start the side over!
+
+Recording Process
+-----------------
+1. File -> Save As:
+   Add the Month and Day when an artist has multiple releases in a single year
+   **Note:** Both the name of directory and the name of files are of the form:
+      YYYY[_MM_DD]-<Album>
+   Save Into directory:
+      /art/music/analog_projects/Audacity/<Artist>/YYYY[_MM_DD]-<Album>
+   Save as name:
+      YYYY[_MM_DD]-<Album>
+2. Record
+   Do not pause when flipping, use that dead space for noise reduction
+3. Optional: Noise Reduction:
    Click and drag to select dead space between sides
-   Effect -> Noise Removal - take sample
-   Cmd-A (select all)
-   Effect -> Noise Removal - remove noise
-4. Optional: Find Silence
-   Cmd-A (select all)
-   Analyze -> Silence Finder
-5. Split into Tracks
-   Use tracks found in step 4. or use Cmd-B to insert them individually
-6. File -> Edit Metadata
-7. File -> Export Multiple Tracks
+   Effect -> Noise Reduction -> Get Noise Profile
+   Ctl-A (select all)
+   Ctl-E (zoom to selection)
+   Effect -> Noise Reduction - remove noise
+
+Creating the Mp3s
+-----------------
+2. Split into Tracks
+   Option 1: Find Silence
+      Ctl-A (select all)
+      Analyze -> Silence Finder
+   Option 2:
+      Use mouse to select a range of the audio for a track
+      Ctl-B to name it
+3. Edit the album's metadata
+   File -> Edit Metadata
+      Artist Name
+      Album Title
+      Year
+      Genre
+      Comments -- e.g.: "Ripped using Audacity 2020-03-27"
+4. File -> Export Multiple Tracks
    Export into:
-     /art/music/mp3-new/<Artist>/YYYY-<Album>
+     /art/music/mp3-new/<Artist>/YYYY[_MM_DD]-<Album>
+   Format:
+      MP3 Files
+   Quality:
+      Insane, 320 kbps
+   Split files based on:
+      Labels
+   Name files:
+      Numbering before Label/Track Name
    Check the metadata for each track
-8. Tar and copy to a linux host, e.g., bette
+6. Tar and copy to a linux host, e.g., bette
      tar -cvzf YYYY-<Album>.tgz YYYY-<Album>
      toBette YYYY-<Album>.tgz
-9  Fix file names (remove spaces and special characters) by running:
+7. Fix file names (remove spaces and special characters) by running:
      fixMusicFileNames
-10. Use Easytag to add album artwork and check mp3 ID data
+8. Use Easytag to finish up:
+   - Check mp3 ID data
+   - Add album artwork
+   - To easily fix spaces in file names, use the Scanner
 
 Tips
 ----
 ALWAYS clean the record first - it can't hurt!
 
 Splitting into tracks:
-o Silence finder doesn't work very well on live recordings
-o It's much easier to use Cmd-B to add track labels
+- Silence finder doesn't work very well on live recordings
+- It's much easier to use Ctl-B to add track labels
 

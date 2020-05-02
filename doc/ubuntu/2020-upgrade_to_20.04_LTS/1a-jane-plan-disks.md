@@ -43,13 +43,10 @@ These are the partitions before the install:
 /dev/sda10       19G   12G  5.3G  70% /var/www
 /dev/sda11      924M  1.5M  859M   1% /mnt/spare/sda11
 /dev/sda12       92G   68G   19G  79% /usr/local/tar
-
-/dev/sda13       55G  4.4G   48G   9% /var/lib/libvirt -- Copy /var files here and rename partition to /var
-/dev/sda13       55G  4.4G   48G   9% /var             -- Don't worry about old files currently in /var of sda6
-
+/dev/sda13       55G   52M   53G   1% /mnt/spare/sda13
 /dev/sda14      174G   60M  165G   1% /mnt/spare/sda14
 /dev/sda2       925M  1.2M  860M   1% /mnt/future/boot
-/dev/sda6        23G  7.6G   15G  35% /
+/dev/sda6        23G   12G  9.8G  55% /
 /dev/sda7        23G   44M   22G   1% /mnt/future
 /dev/sda8        23G  6.9G   15G  32% /home
 /dev/sda9        23G   44M   22G   1% /mnt/future/home
@@ -64,19 +61,12 @@ How to name the partitions during install:
 /dev/sda10       19G   12G  5.3G  70% /var/www         -- Reuse in 16.04
 /dev/sda11      924M  1.5M  859M   1% /mnt/spare/sda11
 /dev/sda12       92G   68G   19G  79% /usr/local/tar   -- Reuse in 16.04
-/dev/sda13       55G  4.4G   48G   9% /ubuntu-16.04-var
-/dev/sda14      174G   60M  165G   1% /mnt/spare/sda14 -- (*)
+/dev/sda13       55G   52M   53G   1% /
+/dev/sda14      174G   60M  165G   1% /mnt/spare/sda14
 /dev/sda2       925M  1.2M  860M   1% /boot
-/dev/sda6        23G  7.6G   15G  35% /ubuntu-16.04
-/dev/sda7        23G   44M   22G   1% /
+/dev/sda6        23G   12G  9.8G  55% /ubuntu-16.04
+/dev/sda7        23G   44M   22G   1% /mnt/spare/sda7
 /dev/sda8        23G  6.9G   15G  32% /ubuntu-16.04-home
 /dev/sda9        23G   44M   22G   1% /home
 ```
-
-(*) See Plan for sda14
-
-## Plans for Specific Partitions
-
-
-### See Plan for sda14
 

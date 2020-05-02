@@ -70,3 +70,25 @@ How to name the partitions during install:
 /dev/sda9        23G   44M   22G   1% /home
 ```
 
+# Basic Install
+
+Choosing:
+
+- English
+- Normal installation
+  - Download updates while installing Ubuntu
+- Something else - RATHER THAN erase 16.04, install side-by-side with 16.04, or erase disk
+  - Fill in partition information as defined above
+  - Install Now
+- Denver
+- Install
+  - Tom
+  - jane
+  - tomh
+  - Log in automatically
+- "An error occurred while restoring previously-installed applications.
+   The installation will continue, but you may have to manually reinstall
+   some applications after the computer reboots.
+                           OK"
+  - Ok
+

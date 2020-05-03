@@ -43,16 +43,18 @@ sudo apt install ubuntu-restricted-extras   ## 2. Install media codec
 ## Claims it cannot download tts-mscorefonts (or similar) and will try again later.  Whatever!
 ```
 
-## Install Git, RCS, and Chrome
+## Install Vim, Git, RCS, and Chrome
 
 Try using the Ubuntu Software app.
 
 - Note: the Search icon is way up in the upper-left corner of the screen!
 - RCS and chrome are not found, but chromium and opera are there, so use the app to install them.
 
-### Git and RCS: Use the Command Line.
+### Vim, Git, and RCS: Use the Command Line.
 
 ```
+apt list vim
+apt install vim
 apt list git
 apt install git
 apt list rcs
@@ -70,6 +72,14 @@ Download from google then install:
 dpkg -i google-chrome-stable_current_amd64.deb
 apt-get install -f
 ```
+
+Run on command line then lock to launcher, err, "save as a favorite."
+
+### Chromium and Opera
+
+Use Ubuntu software app to install.
+
+Run on command line then lock to launcher, err, "save as a favorite."
 
 Ahh, that is much better!
 

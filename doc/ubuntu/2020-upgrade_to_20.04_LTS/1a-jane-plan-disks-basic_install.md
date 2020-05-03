@@ -92,15 +92,23 @@ Choosing:
                            OK"
   - Ok
 
-- Does not boot!
-- Try again with same options
-  - Except: choose to format sda2 [/boot] this time
-    - It gives a warning about formatting it when I choose Install Now
-    - Worth a shot
-  - Also: choose to "not use" sda10 [/var/www] yet
-    - It gives a warning about formatting it when I choose Install Now, hmmm
-    - Worth a shot
-  - Also: choose to format sda13 [/] and sda14 [/mnt/spare/sda14] this time
-    - It hung on sda13 after checking the sda13 filesystem when trying to boot
-    - Also worth a shot
+## Faiure!
+
+Does not boot!
+
+Try again with mostly the same, but a few different options:
+
+- Except: choose to format sda2 [/boot] this time
+  - It gives a warning about formatting it when I choose Install Now
+  - Worth a shot
+- Also: choose to "not use" sda10 [/var/www] yet
+  - It gives a warning about formatting it when I choose Install Now, hmmm
+  - Worth a shot
+- Also: choose to format sda13 [/] and sda14 [/mnt/spare/sda14] this time
+  - It hung on sda13 after checking the sda13 filesystem when trying to boot
+  - Also worth a shot
+
+## Success!!
+
+One of the changes made this time fixed the issue.  Yay!
 

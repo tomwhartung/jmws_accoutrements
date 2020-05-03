@@ -83,6 +83,3 @@ Run on command line then lock to launcher, err, "save as a favorite."
 
 Ahh, that is much better!
 
-## Workspaces!
-
-

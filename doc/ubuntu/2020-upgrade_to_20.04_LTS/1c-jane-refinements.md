@@ -18,13 +18,20 @@ apt install -y openssh-server
 
 Ssh into `ava`, `barbara`, and `bette`, and from each of those into the others and `jane` as well.
 
-## Fixed, as Opposed to Dynamic, Workspaces!
+## Setting Number of Workspaces
 
-Try this:
+Install gnome-tweaks:
 
 ```
 sudo apt install gnome-tweaks
 ```
+
+Run it on the command line, Add to Favorites, and use it to:
+
+- Set number of workspaces
+- Window Titlebars: Move close button on window title to the left side
+- Access Startup Applications
+- Tweak top bar
 
 Found here:
 
@@ -36,9 +43,11 @@ Find and install all relevant packages:
 
 ```
 apt search '.*xscreensaver.*'
-apt list 'xscreensaver-*'
-apt install 'xscreensaver-*'
+apt list 'xscreensaver*'
+apt install xscreensaver xscreensaver-data-extra xscreensaver-data xscreensaver-gl xscreensaver-gl-extra
 ```
+
+Run it on the command line and Add to Favorites.
 
 ## Installing Some Extras
 

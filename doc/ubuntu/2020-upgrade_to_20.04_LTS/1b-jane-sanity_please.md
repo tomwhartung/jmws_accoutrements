@@ -10,7 +10,7 @@ Upgrading jane to 20.04.
 - 1. Tar up old home directory left in ubuntu-16.04-home
 - 2. Move installed /home/tomh to /home/tomh-installed
 - 3. Unpack tar file into /home/tomh
-- 4. Yikes!  All files and directories in the root /home/tomh directory now appear as icons on the screen!!  See below for fix
+- 4. Yikes!  All files and directories in the root /home/tomh directory now appear as icons on the screen!!  See below for fix.
 
 ## Root User's Home Directory
 
@@ -24,24 +24,15 @@ Use blkid to properly add /dev/sda10 to /etc/fstab
 
 Well rats: the install wiped out everything in /dev/sda10.  Good thing it's all in github!
 
-Will restore all this in a separate step later.
+**Will restore all this in a separate step later.**
 
 ## Fix Icons
 
-Installed Extensions application, ran and used it to hide the freakin icons.  Whew!
-
-## Following Some Basic Suggestions
-
-Trying a few things as suggested by this page:
+Number 13 on this page says to use the Extensions application, and that it is already installed.
 
 - https://itsfoss.com/things-to-do-after-installing-ubuntu-20-04/
 
-Note: when get a window blocking progress, press tab to select OK, Yes, Agree, or whatever and press Enter.
-
-```
-sudo apt install ubuntu-restricted-extras   ## 2. Install media codec
-## Claims it cannot download tts-mscorefonts (or similar) and will try again later.  Whatever!
-```
+I could not find it in my apps, so I installed, ran, and used it to hide the freakin icons.  Whew!
 
 ## Install Vim, Git, RCS, and Chrome
 

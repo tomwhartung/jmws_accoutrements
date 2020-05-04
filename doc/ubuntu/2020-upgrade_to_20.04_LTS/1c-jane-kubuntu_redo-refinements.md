@@ -49,7 +49,7 @@ apt install xscreensaver xscreensaver-data-extra xscreensaver-data xscreensaver-
 
 Run it on the command line and Add to Favorites.
 
-## Installing Some Extras
+## Installing Some Suggested Extras
 
 This page suggests, among other things, installing some restricted extra software:
 
@@ -63,5 +63,16 @@ sudo apt install ubuntu-restricted-extras   ## 2. Install media codec
 
 Claims it cannot download tts-mscorefonts (or similar) and will try again later.  Whatever!
 
+## Turning off Sticky Edges
 
+Sticky edges are totally annoying.  Fortunately we can turn them off.
+
+```
+gsettings set org.gnome.mutter edge-tiling false            ## Worked ok for xeyes
+gsettings set org.gnome.shell.overrides edge-tiling false   ## Maybe overkill but I hate it when its sticky
+```
+
+Found these commands here:
+
+- https://askubuntu.com/questions/1029168/18-04-how-to-disable-the-window-resizing-when-accidentally-touching-one-of-the
 

@@ -54,20 +54,20 @@ These are the partitions before the install:
 
 ## Goal
 
-How to name the partitions during install:
+How to name the partitions during and after install:
 
 ```
-/dev/sda1       924M  109M  752M  13% /ubuntu-16.04-boot
-/dev/sda10       19G   12G  5.3G  70% /var/www         -- Reuse in 16.04
-/dev/sda11      924M  1.5M  859M   1% /mnt/spare/sda11
-/dev/sda12       92G   68G   19G  79% /usr/local/tar   -- Reuse in 16.04
-/dev/sda13       55G   52M   53G   1% /
-/dev/sda14      174G   60M  165G   1% /mnt/spare/sda14
-/dev/sda2       925M  1.2M  860M   1% /boot
-/dev/sda6        23G   12G  9.8G  55% /ubuntu-16.04
-/dev/sda7        23G   44M   22G   1% /mnt/spare/sda7
-/dev/sda8        23G  6.9G   15G  32% /ubuntu-16.04-home
-/dev/sda9        23G   44M   22G   1% /home
+/dev/sda1       924M  109M  752M  13% /ubuntu-16.04-boot  -- name after install
+/dev/sda10       19G   12G  5.3G  70% /var/www            -- same as in 16.04 -- name after install
+/dev/sda11      924M  1.5M  859M   1% /mnt/spare/sda11    -- assign name during install
+/dev/sda12       92G   68G   19G  79% /usr/local/tar      -- same as in 16.04 -- name after install
+/dev/sda13       55G   52M   53G   1% /                   -- assign name during install
+/dev/sda14      174G   60M  165G   1% /mnt/spare/sda14    -- assign name during install
+/dev/sda2       925M  1.2M  860M   1% /boot               -- assign name during install
+/dev/sda6        23G   12G  9.8G  55% /ubuntu-16.04       -- name after install
+/dev/sda7        23G   44M   22G   1% /mnt/spare/sda7     -- assign name during install
+/dev/sda8        23G  6.9G   15G  32% /ubuntu-16.04-home  -- name after install
+/dev/sda9        23G   44M   22G   1% /home               -- assign name during install
 ```
 
 # Basic Install
@@ -86,29 +86,6 @@ Choosing:
   - jane
   - tomh
   - Log in automatically
-- "An error occurred while restoring previously-installed applications.
-   The installation will continue, but you may have to manually reinstall
-   some applications after the computer reboots.
-                           OK"
-  - Ok
 
-## Faiure!
-
-Does not boot!
-
-Try again with mostly the same, but a few different options:
-
-- Except: choose to format sda2 [/boot] this time
-  - It gives a warning about formatting it when I choose Install Now
-  - Worth a shot
-- Also: choose to "not use" sda10 [/var/www] yet
-  - It gives a warning about formatting it when I choose Install Now, hmmm
-  - Worth a shot
-- Also: choose to format sda13 [/] and sda14 [/mnt/spare/sda14] this time
-  - It hung on sda13 after checking the sda13 filesystem when trying to boot
-  - Also worth a shot
-
-## Success!!
-
-One of the changes made this time fixed the issue.  Yay!
+Success!!
 

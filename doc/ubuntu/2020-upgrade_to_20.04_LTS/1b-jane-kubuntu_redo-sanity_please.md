@@ -31,6 +31,13 @@ mkdir RCS
 ci -l fstab hosts
 ```
 
+Configure git:
+
+```
+git config --global user.email "tomwhartung@gmail.com"
+git config --global user.name "Tom Hartung"
+```
+
 ## Install Chrome
 
 Download from google then install:

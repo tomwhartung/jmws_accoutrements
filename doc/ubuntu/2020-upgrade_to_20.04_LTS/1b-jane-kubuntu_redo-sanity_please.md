@@ -7,10 +7,7 @@ Upgrading jane to 20.04.
 
 ## Home Directory
 
-- 1. Tar up old home directory left in ubuntu-16.04-home
-- 2. Move installed /home/tomh to /home/tomh-installed
-- 3. Unpack tar file into /home/tomh
-- 4. Yikes!  All files and directories in the root /home/tomh directory now appear as icons on the screen!!  See below for fix.
+Restore home directory, one file and directory at a time, for safety.
 
 ## Root User's Home Directory
 
@@ -18,30 +15,9 @@ Reconstruct links, e.g., .bash_aliases, present in /ubuntu-16.04/root to /root a
 
 Copy files and directories, e.g., .vim and RCS, from /ubuntu-16.04/root to /root as appropriate
 
-## Fix /var/www
-
-Use blkid to properly add /dev/sda10 to /etc/fstab
-
-Well rats: the install wiped out everything in /dev/sda10.  Good thing it's all in github!
-
-**Will restore all this in a separate step later.**
-
-## Fix Icons
-
-Number 13 on this page says to use the Extensions application, and that it is already installed.
-
-- https://itsfoss.com/things-to-do-after-installing-ubuntu-20-04/
-
-I could not find it in my apps, so I installed, ran, and used it to hide the freakin icons.  Whew!
-
 ## Install Vim, Git, RCS, and Chrome
 
-Try using the Ubuntu Software app.
-
-- Note: the Search icon is way up in the upper-left corner of the screen!
-- RCS and chrome are not found, but chromium and opera are there, so use the app to install them.
-
-### Vim, Git, and RCS: Use the Command Line.
+Vim, Git, and RCS: use the command line.
 
 ```
 apt list vim
@@ -55,22 +31,24 @@ mkdir RCS
 ci -l fstab hosts
 ```
 
-### Chrome
+## Install Chrome
 
 Download from google then install:
 
 ```
-dpkg -i google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb    ## got an error first time
+apt install libappindicator3-1
+dpkg -i google-chrome-stable_current_amd64.deb    ## worked ok the second time
 apt-get install -f
 ```
 
-Run on command line then lock to launcher, err, "save as a favorite."
+Find in menu then Add to Favorites.
 
-### Chromium and Opera
+## Install Chromium and Opera
 
-Use Ubuntu software app to install.
+Use Ubuntu software app -- i.e., **Discover** -- to install.
 
-Run on command line then lock to launcher, err, "save as a favorite."
+Find in menu then Add to Favorites.
 
 Ahh, that is much better!
 

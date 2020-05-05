@@ -14,28 +14,11 @@ Remove `~/.ssh/known_hosts` from `jane`, `barbara`, and `bette`.
 ```
 apt list openssh-server
 apt install -y openssh-server
+apt install net-tools          ## so I can run ifconfig
+apt install ifupdown           ## so I can run ifup and ifdown
 ```
 
-Ssh into `ava`, `barbara`, and `bette`, and from each of those into the others and `jane` as well.
-
-## Setting Number of Workspaces
-
-Install gnome-tweaks:
-
-```
-sudo apt install gnome-tweaks
-```
-
-Run it on the command line, Add to Favorites, and use it to:
-
-- Set number of workspaces
-- Window Titlebars: Move close button on window title to the left side
-- Access Startup Applications
-- Tweak top bar
-
-Found here:
-
-- https://askubuntu.com/questions/1081251/multiple-workspaces-on-ubuntu-18-04-1-lts-and-later-with-gnome-shell
+Reboot and ssh into `ava`, `barbara`, and `bette`, and from each of those into the others and `jane` as well.
 
 ## Xscreensaver
 
@@ -49,30 +32,57 @@ apt install xscreensaver xscreensaver-data-extra xscreensaver-data xscreensaver-
 
 Run it on the command line and Add to Favorites.
 
-## Installing Some Suggested Extras
+## External Disk
 
-This page suggests, among other things, installing some restricted extra software:
+Reference:
 
-- https://itsfoss.com/things-to-do-after-installing-ubuntu-20-04/
+- https://askubuntu.com/questions/125257/how-do-i-add-an-additional-hard-drive
 
-Note: when get a window blocking progress, press tab to select OK, Yes, Agree, or whatever and press Enter.
-
-```
-sudo apt install ubuntu-restricted-extras   ## 2. Install media codec
-```
-
-Claims it cannot download tts-mscorefonts (or similar) and will try again later.  Whatever!
-
-## Turning off Sticky Edges
-
-Sticky edges are totally annoying.  Fortunately we can turn them off.
 
 ```
-gsettings set org.gnome.mutter edge-tiling false            ## Worked ok for xeyes
-gsettings set org.gnome.shell.overrides edge-tiling false   ## Maybe overkill but I hate it when its sticky
+apt install gparted
+fdisk -l
+cd /
+mkdir -p /mnt/disks/art
+mkdir -p /mnt/disks/FATART
+cd /etc
+rd fstab
+vi fstab
 ```
 
-Found these commands here:
+Update fstab to mount:
 
-- https://askubuntu.com/questions/1029168/18-04-how-to-disable-the-window-resizing-when-accidentally-touching-one-of-the
+- /dev/sdb/art to /mnt/disks/art
+- /dev/sdb/FATART to /mnt/disks/FATART
+
+Fix the links in /art as follows:
+
+```
+ll
+ln -s /mnt/disks/art/art .
+l art
+gogd            ## should take you to /art/music/songs/mp3/Grateful_Dead
+cd /art/music/
+l
+rm analog_projects
+ln -s /mnt/disks/FATART/art_music_analog_projects analog_projects
+goamaa          ## should take you to /art/music/analog_projects/Audacity
+cd /art/videos/
+l purchased/
+cd  purchased/
+rm Movies
+ln -s /mnt/disks/FATART/art_videos_purchased/Movies  Movies
+rm TV_Shows
+ln -s /mnt/disks/FATART/art_videos_purchased/TV_Shows .
+```
+
+Reboot and ensure the partitions are properly mounted and the `gogd` and `goamaa` aliases work properly.
+
+## Workspace Background
+
+Change the workspace background image:
+
+- Right click an empty area of the desktop
+- Select the Desktop Settings option
+- Add a new wallpaper image by clicking the Get New Wallpapers... button.
 

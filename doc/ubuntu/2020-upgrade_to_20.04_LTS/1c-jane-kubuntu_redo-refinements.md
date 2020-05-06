@@ -46,6 +46,18 @@ Reference:
 
 - https://askubuntu.com/questions/487920/how-to-control-programs-run-at-startup
 
+Install the fortune program:
+
+```
+apt list '*fortune*'
+apt show fortunes
+apt install fortune-mod fortunes fortunes-min fortunes-bofh-excuses fortunes-mario
+apt install fortunes-ga fortunes-debian-hints fortunes-off fortunes-spam fortunes-ubuntu-server
+apt install fortune-anarchism    ## Note: "fortune" is singular in this one
+```
+
+Reboot and ensure the screensaver runs automatically.
+
 ## External Disk
 
 Install gparted, make directories appropriate for mounting the disk contents, and update fstab to mount them automatically when the system boots.

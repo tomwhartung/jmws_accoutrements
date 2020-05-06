@@ -46,7 +46,7 @@ fi
 
 ## all_to_backup="."
 files_to_backup=".bash_profile .bashrc* .bash_aliases* .gitconfig r* .vimrc "
-dirs_to_backup=".ssh $mail_dirs backup bin $more_dirs RCS"
+dirs_to_backup=".config .ssh .vim .xscreensaver $mail_dirs backup bin $more_dirs RCS"
 all_to_backup="$files_to_backup $dirs_to_backup"
 
 echo "files_to_backup: \"$files_to_backup\""

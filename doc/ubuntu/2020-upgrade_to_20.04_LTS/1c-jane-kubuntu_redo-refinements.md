@@ -30,14 +30,28 @@ apt list 'xscreensaver*'
 apt install xscreensaver xscreensaver-data-extra xscreensaver-data xscreensaver-gl xscreensaver-gl-extra
 ```
 
-Run it on the command line and Add to Favorites.
+Add a short script named `xscreensaver.sh` to run it when the system boots to the directory `~/.config/autostart-scripts` .
 
-## External Disk
+Following is an example:
+
+```
+ $ cat  .config/autostart-scripts/xscreensaver.sh
+#!/bin/bash
+#
+## xscreensaver-demo &
+xscreensaver &
+```
 
 Reference:
 
-- https://askubuntu.com/questions/125257/how-do-i-add-an-additional-hard-drive
+- https://askubuntu.com/questions/487920/how-to-control-programs-run-at-startup
 
+## External Disk
+
+Install gparted, make directories appropriate for mounting the disk contents, and update fstab to mount them automatically when the system boots.
+Reference:
+
+- https://askubuntu.com/questions/125257/how-do-i-add-an-additional-hard-drive
 
 ```
 apt install gparted
@@ -55,10 +69,11 @@ Update fstab to mount:
 - /dev/sdb/art to /mnt/disks/art
 - /dev/sdb/FATART to /mnt/disks/FATART
 
-Fix the links in /art as follows:
+Add a link to the root directory and fix the links under /art to the FAT filesystem as follows:
 
 ```
-ll
+cd /
+l
 ln -s /mnt/disks/art/art .
 l art
 gogd            ## should take you to /art/music/songs/mp3/Grateful_Dead
@@ -76,7 +91,7 @@ rm TV_Shows
 ln -s /mnt/disks/FATART/art_videos_purchased/TV_Shows .
 ```
 
-Reboot and ensure the partitions are properly mounted and the `gogd` and `goamaa` aliases work properly.
+Reboot and ensure the partitions are properly mounted and the `gogd` and `goamaa` aliases still work properly after a reboot.
 
 ## Workspace Background
 

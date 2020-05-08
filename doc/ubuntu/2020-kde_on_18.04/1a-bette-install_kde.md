@@ -30,4 +30,19 @@ This file is about installing KDE side-by-side with gnome on bette, which is alr
 - tasksel & kubuntu-desktop OR plasma-desktop
   - https://itsubuntu.com/install-latest-kde-plasma-ubuntu-18-04/
 
+- kubuntu-desktop & sddm
+  - https://www.osradar.com/how-to-install-kde-plasma-on-ubuntu-18-04/
+  - Includes commands to use to delete it
+
+- plasma-desktop OR kde-plasma-desktop & sddm
+  - https://askubuntu.com/questions/999244/how-to-install-kde-plasma-without-installing-full-kubuntu-desktop
+
+- add-apt-repository ppa:kubuntu-ppa/backports & plasma-desktop OR kde-full OR kde-standeard
+  - https://www.how2shout.com/how-to/how-install-kde-plasma-5-17-de-on-ubuntu-18-04-or-19-10.html
+
+- tasksel & kubuntu-desktop & sddm
+  - https://linuxtips.us/install-kde-plasma-ubuntu-18-04/
+
+- tasksel & kubuntu-desktop & sddm
+  - https://wpcademy.com/how-to-install-kde-plasma-on-ubuntu-18-04-lts/
 

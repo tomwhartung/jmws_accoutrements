@@ -130,11 +130,31 @@ tasksel install kubuntu-desktop
 
 This is where it goes into GUI mode.  The references contain plenty of screenshots of this.
 
+[x] This step appears to have completed ok.
+
 ## If Necessary, Run the `sddm` Step
 
-Haven't looked at this closely but
+The references are a bit ambiguous about this step.
 
-Not sure why some of the pages do not mention this step.
-Maybe I'll figure that out once I get to it.
-Surely it could not hurt to do it?
+- Some of the references do not mention it
+- The ones that do, claim it should run automatically
+- Some claim to install sddm manually, if it is not already installed
+  - It is already installed:
+
+```
+# apt list sddm
+Listing... Done
+sddm/bionic,now 0.17.0-1ubuntu7 amd64 [installed]
+```
+
+Reinstalling it simply confirms that `sddm is already the newest version (0.17.0-1ubuntu7).`
+
+Some of those that do -- #1, etc. -- mention it also mention this workaround.
+The idea is to set sddm to run as the default choice, rather than gdm3 -- I also have lightdm, which was selected.
+
+```
+dpkg-reconfigure sddm
+```
+
+Ok, it seems to have run ok.  Now I need to log out or reboot -- or both.
 

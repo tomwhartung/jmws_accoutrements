@@ -26,11 +26,12 @@ These are listed in the order in which they came up when searching duckduckgo fo
     - Why??  This is unclear.
     - Moreover, I want to avoid using add-apt-repository ppa:kubuntu-ppa/backports if at all possible, so it is suspicious
 
-5. tasksel & kubuntu-desktop & sddm
-  - https://www.fossmint.com/install-kde-plasma-on-ubuntu/
+5. tasksel & kubuntu-desktop
+  - https://www.fossmint.com/install-kde-plasma-on-ubuntu/ -- contains two slightly different processes
 
-6. tasksel & kubuntu-desktop & plasma-desktop
-  - https://www.fossmint.com/install-kde-plasma-on-ubuntu/
+6. just plasma-desktop
+  - https://www.fossmint.com/install-kde-plasma-on-ubuntu/ -- contains two slightly different processes
+  - "This method neither edits your bootup configuration nor does it install any unnecessary dependencies."
 
 7. tasksel & kubuntu-desktop OR plasma-desktop
   - https://itsubuntu.com/install-latest-kde-plasma-ubuntu-18-04/
@@ -79,21 +80,28 @@ So I want to "play it safe," which means not cutting any corners, which in turn 
 
 Should I install `kde-desktop` or `kde-plasma-desktop` or `kde-full` or `plasma-desktop` or ???
 
-Outliers: `kde-standard` appears only as an optional suggestion, as opposed to the main suggestion, in #2 and [#10].
+### Outliers:
 
-At first I was thinking about `kde-full` because I have plenty of space and want to recreate
+The `kde-standard` package appears only as an optional suggestion, as opposed to the main suggestion, in #2 and [#10].
+
+At first I thought `kde-full` sounded good because I have plenty of space and want to recreate
 what I have after installing kubuntu on jane.
-
 But now looking more closely at the references, `kde-full` appears in only two of them, #2 and [#10].
 
 Also, `kde-plasma-desktop` appears in only three of the references, #2, #3, and [#9].
 
-Interestingly, `plasma-desktop` appears in four of the references, #6, #7, [#9], and [#10].
+Interestingly, `plasma-desktop` appears in four of the references, #6, #7, [#9], and [#10] --
+but two are no longer under consideration.
 
-The most popular option looks to be `kubuntu-desktop` , which appears in seven of the twelve references:
-#1, [#4], #5, #6, #7, #8, [#9], #11, and #12.
+### Most Popular Option: `kubuntu-desktop`
 
-- Note that in [#9] the user claims this slowed down his PC.  Hmmm.
+The most popular option is `kubuntu-desktop` , which appears in eight of the twelve references:
+#1, [#4], #5, #6, #7, #8, #11, and #12.
+
+- Note that #1 actually contains two references, but we only count it as one
+- Note that in [#9] the user claims this slowed down his PC when they installed it on 17.10
+
+Let's pick this one, `kubuntu-desktop` .
 
 # Proposed Process Plan
 
@@ -104,15 +112,25 @@ Here is what I will try.  May need to adjust this as necessary.
 Assuming `tasksel` is short for "task selection."
 I definitely want to be able to choose between KDE and Gnome, so I can return to the old familar UI anytime I want.
 
-Not sure why some of the pages do not mention this step.
-Maybe I'll figure that out once I get to it.
-Surely it could not hurt to do it?
+Seven of the eight references -- i.e., all but [#8] -- that recommend `kubuntu-desktop` also recommend installing `tasksel` first.
 
-## ??? Install `kde-desktop` or `kde-plasma-desktop` or `kde-full` or `plasma-desktop` or ???
+```
+apt install tasksel
+```
 
-TBD.  See ongoing discussion in the Analysis section.
+[x] so far so good
 
-## Run the `sddm` Step
+## Install `kubuntu-desktop`
+
+Use `tasksel` to install `kubuntu-desktop`
+
+```
+tasksel install kubuntu-desktop
+```
+
+This is where it goes into GUI mode.  The references contain plenty of screenshots of this.
+
+## If Necessary, Run the `sddm` Step
 
 Haven't looked at this closely but
 

@@ -69,6 +69,12 @@ This is where it goes into GUI mode.  The references contain plenty of screensho
 
 **This step appears to have FAILED!**
 
+Not sure, but it looks bad.
+
+**NOTE THAT WE ARE GOING TO INSTALL 20.04 SERVER HERE ANYWAY!!**
+
+So, ultimately, it's no biggie and not worth sweating over.
+
 Output of running the `tasksel` command, a few times:
 
 ```
@@ -101,6 +107,16 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 Searching for the error message `E: Unable to correct problems, you have held broken packages.`
 led to trying a few things, that did not seem to help.
+
+I examined the following urls that I found by searching duckduckgo for
+"tasksel install kubuntu-desktop E: Unable to correct problems, you have held broken packages."
+
+- https://askubuntu.com/questions/223237/unable-to-correct-problems-you-have-held-broken-packages#223267
+- https://askubuntu.com/questions/164587/how-can-you-unhold-remove-a-hold-on-a-package
+- https://www.linux.org/threads/kde-plasma-instead-of-compiz.26078/
+- https://appuals.com/fix-unable-correct-problems-held-broken-packages/
+- https://www.linuxquestions.org/questions/linux-desktop-74/unable-to-correct-problems-you-have-held-broken-packages-4175510237/
+- http://forums.debian.net/viewtopic.php?t=125122
 
 The things I tried, and the output:
 

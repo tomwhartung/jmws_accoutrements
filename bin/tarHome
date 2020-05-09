@@ -16,10 +16,10 @@ if [ $this_hostname == "ava" ]; then
    more_dirs=""
    mail_dirs=""
 elif [ $this_hostname == "barbara" ]; then
-   more_dirs=".kde/share Downloads Pictures technical"
+   more_dirs="Downloads Pictures technical"
    mail_dirs=".thunderbird"
 elif [ $this_hostname == "bette" ]; then
-   more_dirs=".kde/share Downloads jobsearch marketing personal technical work"
+   more_dirs="Downloads jobsearch marketing personal technical work"
    ## mail_dirs=".thunderbird"
    mail_dirs=""
 elif [ $this_hostname == "humphrey" ]; then
@@ -46,7 +46,7 @@ fi
 
 ## all_to_backup="."
 files_to_backup=".bash_profile .bashrc* .bash_aliases* .gitconfig r* .vimrc "
-dirs_to_backup=".config .ssh .vim .xscreensaver $mail_dirs backup bin $more_dirs RCS"
+dirs_to_backup=".config .kde .ssh .vim .xscreensaver $mail_dirs backup bin $more_dirs RCS"
 all_to_backup="$files_to_backup $dirs_to_backup"
 
 echo "files_to_backup: \"$files_to_backup\""

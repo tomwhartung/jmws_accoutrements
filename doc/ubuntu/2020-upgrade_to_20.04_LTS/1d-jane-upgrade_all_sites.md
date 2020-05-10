@@ -44,5 +44,9 @@ While updating these sites, also make the following changes:
 [ ] TomWHartung.com
     - Replace the WP version of TomWHartung.com with a new, minimal Flask version, also aimed at selling my books
 
-# Plan
+Each site has its own file in this directory containing details about what I want to change.
+
+# Plan for Upgrading
+
+# Actual
 

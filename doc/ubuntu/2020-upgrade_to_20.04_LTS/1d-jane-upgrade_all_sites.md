@@ -22,9 +22,17 @@ These are the sites I am supporting, and that need to be updated:
 
 Per the wikipedia.
 
-- Python:
-- Flask:
-- Django:
+- Python: 3.8.2
+  - Stable release: 3.8.2
+  - Already installed with 20.04
+  - 3.8.x: Full support through 2021-04, with security fixes through 2024-10
+- Flask: 1.1.2
+  - Stable release: 1.1.2
+- Django: 3.0.6
+  - Stable release: 3.0.6
+  - 3.2 LTS: due 2021-04, will be supported until at least 2024-04
+  - 4.0: due 2021-12, will be supported until at least 2023-04
+
 
 # Additional Goals
 

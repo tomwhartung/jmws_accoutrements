@@ -40,13 +40,18 @@ While updating these sites, also make the following changes:
 
 [ ] ArtsyVisions.com - Django and Materialize
     - Content ok for now
+    - Remove free spiritual portrait offer
 [ ] Groja.com - Flask and Material Design Bootstrap [MDB]
     - Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open
+    - Remove free spiritual portrait offer
+    - Set the price for portraits at $500 each
     - Reexamine conversions to prevent spam
 [ ] JooMooWebSites.com - Flask and Material Design Lite [MDL]
     - Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books
 [ ] SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+    - Content ok for now, but could be updated with latest images
     - Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
+    - Remove free spiritual portrait offer
 [ ] TomHartung.com - Django and MUI-CSS
     - Content ok for now
 [ ] TomWHartung.com - Wordpress

@@ -60,6 +60,10 @@ Server built:   2020-03-13T12:26:16
 #
 ```
 
+More commands to know:
+
+- https://linuxize.com/post/apache-commands-you-should-know/
+
 ## Set ServerName Globally
 
 The first error message - and in truth it may be just a warning - said to set ServerName globally, so I did.
@@ -89,7 +93,9 @@ These pages show similar issues, but I cannot see anything for `"...code=exited 
 - https://unix.stackexchange.com/questions/268613/apache2-service-failed-because-the-control-process-exited-with-error-code
 - https://serverfault.com/questions/1016668/apache2-service-failed-with-result-exit-code
 
-### Canonical Liveupdate??  Or Livepatch??
+Presumably, the `status=139` is key.
+
+### Canonical Livepatch
 
 A command named `canonical-livepatch` allows updating the kernel while the machine is still running.
 
@@ -101,8 +107,76 @@ No payload available during refresh: cannot check: No machine-token.
 Please run 'canonical-livepatch enable'!
 ```
 
-I tried to enable it and it did not work.
 Unfortunately, those commands are no longer in my history.
 
-**They require a key and allow only 3 hosts for the free user level.**
+I got the key from this page:
+
+- https://auth.livepatch.canonical.com/?user_type=ubuntu-user
+
+Which shows how to install `canonical-livepatch`:
+
+```
+snap install canonical-livepatch
+canonical-livepatch enable 92b377a4f46641609779b7f15f7b533d
+```
+
+I tried to enable it and it did not work until I got a key (i.e., `92b377a4f46641609779b7f15f7b533d`) from:
+
+- https://ubuntu.com/livepatch
+
+**They require a key and allow it to be used on only 3 hosts for the free user level.**
+
+I am presumably using that key to allow me to keep the kernel up-to-date while the computer is running.
+
+The version history on the ubuntu wikipedia page says this is a big thing in 20.04.
+
+## The Problem Persists
+
+Still getting the 139 error:
+
+```
+# service apache2 start
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xe" for details.
+# systemctl status apache2.service
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: failed (Result: exit-code) since Fri 2020-05-29 14:03:58 MDT; 40s ago
+  Process: 9482 ExecStart=/usr/sbin/apachectl start (code=exited, status=139)
+
+May 29 14:03:58 bette systemd[1]: Starting The Apache HTTP Server...
+May 29 14:03:58 bette apachectl[9482]: Segmentation fault (core dumped)
+May 29 14:03:58 bette apachectl[9482]: Action 'start' failed.
+May 29 14:03:58 bette apachectl[9482]: The Apache error log may have more information.
+May 29 14:03:58 bette systemd[1]: apache2.service: Control process exited, code=exited status=139
+May 29 14:03:58 bette systemd[1]: apache2.service: Failed with result 'exit-code'.
+May 29 14:03:58 bette systemd[1]: Failed to start The Apache HTTP Server.
+# journalctl -xe
+ . . .
+ . . .
+ . . .
+May 29 15:27:05 bette systemd[1]: Starting The Apache HTTP Server...
+-- Subject: Unit apache2.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+--
+-- Unit apache2.service has begun starting up.
+May 29 15:27:05 bette kernel: apache2[11744]: segfault at 7f90046b6940 ip 00007f900082c30b sp 00007ffc540ce9a0 error 6 in libphp7.2.so[7f9000598000+3fb000]
+May 29 15:27:05 bette apachectl[11741]: Segmentation fault (core dumped)
+May 29 15:27:05 bette apachectl[11741]: Action 'start' failed.
+May 29 15:27:05 bette apachectl[11741]: The Apache error log may have more information.
+May 29 15:27:06 bette systemd[1]: apache2.service: Control process exited, code=exited status=139
+May 29 15:27:06 bette systemd[1]: apache2.service: Failed with result 'exit-code'.
+May 29 15:27:06 bette systemd[1]: Failed to start The Apache HTTP Server.
+-- Subject: Unit apache2.service has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+--
+-- Unit apache2.service has failed.
+--
+-- The result is RESULT.
+#
+```
 

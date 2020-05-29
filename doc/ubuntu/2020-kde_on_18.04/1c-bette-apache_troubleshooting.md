@@ -223,5 +223,49 @@ tomh@bette: ~
 
 Installing the KDE desktop may have caused this.
 
-**Something to investigate later.**
+More evidence that PHP might be at fault.
+
+lauren:
+
+```
+tomh@lauren: ~
+ $ cd /etc/apache2/
+tomh@lauren: /etc/apache2
+ $ l mods-*/php*
+-rw-r--r-- 1 root root 867 Jun  9  2017 mods-available/php5.6.conf
+-rw-r--r-- 1 root root 102 Jun  9  2017 mods-available/php5.6.load
+lrwxrwxrwx 1 root root  29 Jul  3  2017 mods-enabled/php5.6.conf -> ../mods-available/php5.6.conf
+lrwxrwxrwx 1 root root  29 Jul  3  2017 mods-enabled/php5.6.load -> ../mods-available/php5.6.load
+tomh@lauren: /etc/apache2
+ $
+```
+
+bette:
+
+```
+tomh@bette: /var/www/html
+ $ cd /etc/apache2/
+tomh@bette: /etc/apache2
+ $ l mods-*/php*
+-rw-r--r-- 1 root root 867 Jun  9  2017 mods-available/php5.6.conf
+-rw-r--r-- 1 root root 102 Jun  9  2017 mods-available/php5.6.load
+-rw-r--r-- 1 root root 867 Mar  2  2017 mods-available/php7.0.conf
+-rw-r--r-- 1 root root 102 Oct  1  2018 mods-available/php7.0.load
+-rw-r--r-- 1 root root 855 Jul  7  2017 mods-available/php7.1.conf
+-rw-r--r-- 1 root root 102 Jul  7  2017 mods-available/php7.1.load
+-rw-r--r-- 1 root root 855 Feb  8  2019 mods-available/php7.2.conf
+-rw-r--r-- 1 root root 102 Feb  8  2019 mods-available/php7.2.load
+lrwxrwxrwx 1 root root  29 Jul  1  2017 mods-enabled/php5.6.conf -> ../mods-available/php5.6.conf
+lrwxrwxrwx 1 root root  29 Jul  1  2017 mods-enabled/php5.6.load -> ../mods-available/php5.6.load
+lrwxrwxrwx 1 root root  29 May 28 06:05 mods-enabled/php7.2.conf -> ../mods-available/php7.2.conf
+lrwxrwxrwx 1 root root  29 May 28 06:05 mods-enabled/php7.2.load -> ../mods-available/php7.2.load
+tomh@bette: /etc/apache2
+ $
+```
+
+I can see how having both php5.6 and php7.2 enabled might be a problem.
+
+Sure enough disabling php7.2 did the trick.  Check out my first answer ever posted on stackoverflow.com, woot!
+
+- https://stackoverflow.com/questions/60640440/apache2-service-control-process-exited-code-exited-status-139
 

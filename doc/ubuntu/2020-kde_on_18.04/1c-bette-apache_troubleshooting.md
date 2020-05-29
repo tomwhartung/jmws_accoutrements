@@ -71,8 +71,10 @@ The first error message - and in truth it may be just a warning - said to set Se
 ```
 cd /etc/apache2
 mkdir RCS
-ci -l apache2.conf   # Installed version
+ci -l apache2.conf     # Installed version
 vi apache2.conf
+ci -l apache2.conf     # Added "ServerName bette" to stop the warning.
+apachectl configtest   # Syntax OK
 ```
 
 Also updated ServerName in `sites-enabled/020-groja.com.conf` .
@@ -85,7 +87,7 @@ This shows the same error.  Posted 2 months ago, no one has responded.
 
 - https://stackoverflow.com/questions/60640440/apache2-service-control-process-exited-code-exited-status-139
 
-I upvoted the question.
+I upvoted the question.  See **Possible PHP Problem** below.
 
 These pages show similar issues, but I cannot see anything for `"...code=exited status=139"`
 
@@ -129,6 +131,7 @@ I tried to enable it and it did not work until I got a key (i.e., `92b377a4f4664
 I am presumably using that key to allow me to keep the kernel up-to-date while the computer is running.
 
 The version history on the ubuntu wikipedia page says this is a big thing in 20.04.
+
 
 ## The Problem Persists
 
@@ -179,4 +182,46 @@ May 29 15:27:06 bette systemd[1]: Failed to start The Apache HTTP Server.
 -- The result is RESULT.
 #
 ```
+
+## Possible PHP Problem?
+
+Looking at this page, which shows the same error, was posted 2 months ago, and so far no one has answered.
+
+- https://stackoverflow.com/questions/60640440/apache2-service-control-process-exited-code-exited-status-139
+
+But someone responded that it might be due to changing the version of PHP.
+
+Maybe this could be it?
+
+lauren:
+
+```
+tomh@lauren: ~
+ $ php -v
+PHP 5.6.40-1+ubuntu16.04.1+deb.sury.org+2+will+reach+end+of+life+in+april+2019 (cli)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies
+    with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans
+tomh@lauren: ~
+ $
+```
+
+bette:
+
+```
+tomh@bette: ~
+ $ php -v
+PHP 7.2.24-0ubuntu0.18.04.6 (cli) (built: May 26 2020 13:09:11) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.24-0ubuntu0.18.04.6, Copyright (c) 1999-2018, by Zend Technologies
+    with Xdebug v2.6.1, Copyright (c) 2002-2018, by Derick Rethans
+tomh@bette: ~
+ $
+```
+
+Installing the KDE desktop may have caused this.
+
+**Something to investigate later.**
 

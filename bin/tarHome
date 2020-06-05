@@ -27,7 +27,7 @@ elif [ $this_hostname == "humphrey" ]; then
    mail_dirs=""
 elif [ $this_hostname == "jane" ]; then
    more_dirs="Downloads jobsearch marketing personal technical work"
-   mail_dirs=""
+   mail_dirs=".thunderbird"
 elif [ $this_hostname == "lauren" ]; then
    more_dirs="Downloads personal technical"
    mail_dirs=""

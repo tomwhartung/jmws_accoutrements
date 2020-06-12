@@ -1,5 +1,5 @@
 
-# 1d-jane-upgrade_all_sites.md
+# 1d-jane-upgrade_all_sites-overview.md
 
 Get all sites working on jane, now running 20.04, with the latest stable versions of underlying software:
 
@@ -11,12 +11,12 @@ Get all sites working on jane, now running 20.04, with the latest stable version
 
 These are the sites I am supporting, and that need to be updated:
 
-[ ] ArtsyVisions.com
-[ ] Groja.com
-[ ] JooMooWebSites.com
-[ ] SeeOurMinds.com
-[ ] TomHartung.com
-[ ] TomWHartung.com
+- [ ] ArtsyVisions.com
+- [ ] Groja.com
+- [ ] JooMooWebSites.com
+- [ ] SeeOurMinds.com
+- [ ] TomHartung.com
+- [ ] TomWHartung.com
 
 # Latest Stable Versions
 
@@ -38,26 +38,26 @@ Per the wikipedia.
 
 While updating these sites, also make the following changes:
 
-[ ] ArtsyVisions.com - Django and Materialize
-    - Content ok for now
-    - Remove free spiritual portrait offer
-[ ] Groja.com - Flask and Material Design Bootstrap [MDB]
-    - Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open
-    - Remove free spiritual portrait offer
-    - Set the price for portraits at $500 each
-    - Reexamine conversions to prevent spam
-[ ] JooMooWebSites.com - Flask and Material Design Lite [MDL]
-    - Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books
-[ ] SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
-    - Content ok for now, but could be updated with latest images
-    - Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
-    - Remove free spiritual portrait offer
-[ ] TomHartung.com - Django and MUI-CSS
-    - Content ok for now
-[ ] TomWHartung.com - Wordpress
-    - Replace the WP version of TomWHartung.com with a new, minimal Flask version, also aimed at selling my books
+- [ ] ArtsyVisions.com - Django and Materialize
+    - [ ] Content ok for now
+    - [ ] Remove free spiritual portrait offer
+- [ ] Groja.com - Flask and Material Design Bootstrap [MDB]
+    - [ ] Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open
+    - [ ] Remove free spiritual portrait offer
+    - [ ] Set the price for portraits at $500 each
+    - [ ] Reexamine conversions to prevent spam
+- [ ] JooMooWebSites.com - Flask and Material Design Lite [MDL]
+    - [ ] Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books
+- [ ] SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+    - [ ] Content ok for now, but could be updated with latest images
+    - [ ] Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
+    - [ ] Remove free spiritual portrait offer
+- [ ] TomHartung.com - Django and MUI-CSS
+    - [ ] Content ok for now
+- [ ] TomWHartung.com - Wordpress
+    - [ ] Replace the WP version of TomWHartung.com with a new, minimal Flask version, also aimed at selling my books
 
-Each site has its own file in this directory containing details about what I want to change.
+Each site has its own file in this directory, e.g., `2a-artsyvisions.md`, containing details about what I want to change.
 
 # Plan for Upgrading
 
@@ -91,14 +91,18 @@ Here is a list of sites and the sequence in which I am thinking I will upgrade t
     - Replace the WP version of TomWHartung.com with a new, minimal Flask version,
     - New content should be aimed at selling my books and promoting my social networking sites
 
+# Actual Steps Taken
+
+Find details for installing the underlying software in:
+
+- `1e-jane-needed_for_all_sites.md`
+
 Find details for each site in the `2*.md` files in this directory:
 
-- 2a-artsyvisions.md
-- 2b-groja.md
-- 2c-joomoowebsites.md
-- 2d-seeourminds.md
-- 2e-tomhartung.md
-- 2f-tomwhartung.md
-
-# Actual
+- `2a-artsyvisions.md`
+- `2b-groja.md`
+- `2c-joomoowebsites.md`
+- `2d-seeourminds.md`
+- `2e-tomhartung.md`
+- `2f-tomwhartung.md`
 

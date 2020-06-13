@@ -9,6 +9,7 @@
 import getopt      # for processing command line options
 import os          # for getting values for environment vars
 import re
+import sh          # for running ps
 import string
 import subprocess
 import sys         # for accessing command line arguments
@@ -24,8 +25,9 @@ def myCall( shellCommand ) :
 #  Wrapper to check_output function
 #
 def getCommandOutput( shellCommand, commandArgs ) :
-	commandOutput = subprocess.check_output( [ shellCommand, commandArgs ] )
-	return commandOutput
+##  commandOutput = subprocess.check_output( [ shellCommand, commandArgs ] )
+	commandOutput = subprocess.run( [ shellCommand, commandArgs ], stderr=subprocess.PIPE, stdout=subprocess.PIPE, universal_newlines=True, shell=True )
+	return commandOutput.stdout
 
 ##
 #  UNUSED Wrapper function to run a command and return its output
@@ -56,29 +58,19 @@ def isYoctoLinux() :
 # Runs ps command and returns lines containing string to match
 #
 def getMatchingProcesses( toMatch ) :
-	if ( isYoctoLinux() ) :
-		psCommandArgs = ''
-	else :
-		psCommandArgs = '-aef'
-	psCommandOutput = getCommandOutput( 'ps', psCommandArgs )
-	psOutputLines = string.split( psCommandOutput, '\n' )
-	matchingLines = []
-	if( len(toMatch) > 0 ) :
-		pid = os.getpid()
-		patternThisProcess = re.compile( str(pid) )
-		patternToMatch = re.compile( toMatch )
-		for psLine in psOutputLines :
-			matchesToMatch = patternToMatch.search( psLine )
-			if( str(matchesToMatch) != 'None' ) :
-				matchesThisProcess = patternThisProcess.search( psLine )
-				if( str(matchesThisProcess) == 'None' ) :
-					matchingLines.append( psLine )
-			##	else :
-			##		print( 'pid: ' + str(pid) )
-			##		print( 'Skipping ps output line for this process: ' + psLine )
-	else :
-		matchingLines = psOutputLines
-	return matchingLines
+##    if ( isYoctoLinux() ) :
+##        psCommandArgs = ''
+##    else :
+    try:
+        matching_lines = sh.grep(sh.ps("cax"), toMatch)
+    except sh.ErrorReturnCode_1:
+        print(f'String "{toMatch:s}" not found in process table', file=sys.stderr)
+        matching_lines = ''
+    except sh.ErrorReturnCode_2:
+        print('Unknown return code: 2', file=sys.stderr)
+        matching_lines = ''
+##  print("matching_lines = ", matching_lines)
+    return matching_lines
 
 #
 #  Process the command line arguments.

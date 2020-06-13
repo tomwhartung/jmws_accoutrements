@@ -101,9 +101,7 @@ Install `python3-pip` and run `update-alternatives`:
 ```
 $ apt install python3-pip -y
 $ pip --version
-
 Command 'pip' not found, but there are 18 similar ones.
-
 $ pip3 --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 $ update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
@@ -114,7 +112,7 @@ $
 
 ## Installing the Latest Version of Django
 
-The `apt` command wants to install version 2.2:
+The `apt` command wants to install version 2.2, **but that's not what we want!**:
 
 ```
 $ apt show python3-django
@@ -157,6 +155,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 $
 ```
+
+## Steps needed for All Django Sites
+
+Get a copy of `gitignored/Site/Site/settings.py` from another host.
+
+Review and remember: **`SECURITY WARNING: don't run with debug turned on in production!`**
 
 
 # Flask

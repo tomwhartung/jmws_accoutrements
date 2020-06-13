@@ -29,26 +29,31 @@ import tomsBinFunctions     # custom functions in the pythonLibs subdir
 # Kill the processes in the list
 #
 def killTheProcesses( matchingLines ) :
+	print( 'Killing the following processes.  Use "up" to verify processes are gone.' )
+	last_pid = 0
 	for matchingLine in matchingLines :
 		## processInfo = string.split( matchingLine, '\w+' )
+		## print( 'matchingLine in killTheProcesses = ', matchingLine )
 		processInfo = matchingLine.split()
-		if( tomsBinFunctions.isYoctoLinux() ) :
-			pid = processInfo[0]
-			owner = processInfo[1]
-		else :
-			owner = processInfo[0]
-			pid = processInfo[1]
-		killCommand = 'kill -9 ' + pid
-		if( args.yes ) :
-			print( 'Killing process ' + pid + ' owned by ' + owner )
-			tomsBinFunctions.myCall( killCommand )
-		else :
-			yOrN = raw_input( 'Enter "y" to kill process ' + pid + ' owned by ' + owner + ': ' )
-			if( yOrN == 'y' or yOrN == 'Y' ) :
+##		if( tomsBinFunctions.isYoctoLinux() ) :
+##			pid = processInfo[0]
+##			owner = processInfo[1]
+##		else :
+		owner = processInfo[0]
+		pid = processInfo[1]
+		if pid != last_pid:
+			killCommand = 'kill -9 ' + pid
+			if( args.yes ) :
 				print( 'Killing process ' + pid + ' owned by ' + owner )
 				tomsBinFunctions.myCall( killCommand )
 			else :
-				print( 'NOT killing process ' + pid + ' owned by ' + owner )
+				yOrN = input( 'Enter "y" to kill process ' + pid + ' owned by ' + owner + ': ' )
+				if( yOrN == 'y' or yOrN == 'Y' ) :
+					print( 'Killing process ' + pid + ' owned by ' + owner )
+					tomsBinFunctions.myCall( killCommand )
+				else :
+					print( 'NOT killing process ' + pid + ' owned by ' + owner )
+		last_pid = pid
 
 ###################
 # Initialization
@@ -66,15 +71,12 @@ args = argsParser.parse_args()
 ###################
 #  Mainline code
 #
-print( 'args.toMatch: "' + args.toMatch + '"' )
-print( 'args.yes: "' + str(args.yes) + '"' )
+## print( 'args.toMatch: "' + args.toMatch + '"' )
+## print( 'args.yes: "' + str(args.yes) + '"' )
 #
 matchingLines = tomsBinFunctions.getMatchingProcesses( args.toMatch )
 
 if( len(matchingLines) > 0 ) :
-	print( 'Killing the following processes.  Use "up" to verify processes are gone.' )
-	for matchingLine in matchingLines :
-		print( matchingLine )
 	killTheProcesses( matchingLines )
 else :
 	print( 'No processes found to kill.  Use "up" to find processes.' )

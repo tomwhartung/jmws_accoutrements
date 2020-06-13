@@ -5,11 +5,11 @@ Updating ArtsyVisions.com .
 
 # Technical Updates
 
-This site is OK technically.
+This site is OK technically and I was able to run it locally by installing django and adding a `gitignored/Site/Site/settings.py` file.
 
 # Content Updates
 
-The content on this site is OK as-is.
+Remove free spiritual portrait offer.
 
 # Review
 

@@ -62,7 +62,7 @@ def getMatchingProcesses( toMatch ) :
 ##        psCommandArgs = ''
 ##    else :
     try:
-        matching_lines = sh.grep(sh.ps("cax"), toMatch)
+        matching_lines = sh.grep(sh.ps("ceHux"), toMatch)
     except sh.ErrorReturnCode_1:
         print(f'String "{toMatch:s}" not found in process table', file=sys.stderr)
         matching_lines = ''

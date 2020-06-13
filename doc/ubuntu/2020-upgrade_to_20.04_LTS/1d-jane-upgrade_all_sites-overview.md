@@ -9,35 +9,52 @@ Get all sites working on jane, now running 20.04, with the latest stable version
 
 Find detailed descriptions of steps taken in `1e-jane-needed_for_all_sites.md`.
 
-# Checklist
+# Checklists
 
-These are the sites I am supporting, and that need to be updated:
+These checklists contain the sites I am supporting, and that need to be updated.
+
+## Working OK - Checklist
+
+This checklist tracks progress in getting these sites to work ok.
 
 - [x] ArtsyVisions.com
 - [ ] Groja.com
 - [ ] JooMooWebSites.com
-- [ ] SeeOurMinds.com
+- [x] SeeOurMinds.com
 - [x] TomHartung.com
 - [ ] TomWHartung.com
+
+## Content Updates - Checklist
+
+This checklist tracks progress in getting the content reviewed and updated on these sites.
+
+- [ ] ArtsyVisions.com
+- [ ] Groja.com
+- [ ] JooMooWebSites.com
+- [ ] SeeOurMinds.com
+- [ ] TomHartung.com
+- [ ] TomWHartung.com
+
+For high-level details about each site, see the **"Additional Goals"** section.
 
 # Top-level Process
 
 - [ ] 1. Get all sites running locally
 - [ ] 2. Get all sites running under apache -- but don't worry about SSL yet
-- [ ] 3. Make changes listed in the next section "Additional Goals"
+- [ ] 3. Make changes listed in the **"Additional Goals"** section
 
 # Additional Goals
 
 While updating these sites, also make the following changes:
 
 - [ ] 1. ArtsyVisions.com - Django and Materialize
-    - [ ] Content ok for now
+    - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
 - [ ] 2. TomHartung.com - Django and MUI-CSS
     - [ ] Content ok for now
 - [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
     - [ ] Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
-    - [ ] Content ok for now, but **needs to be updated with latest images ASAP**
+    - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
 - [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
     - [ ] Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open

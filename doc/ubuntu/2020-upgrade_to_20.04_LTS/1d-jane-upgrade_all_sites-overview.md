@@ -13,12 +13,18 @@ Find detailed descriptions of steps taken in `1e-jane-needed_for_all_sites.md`.
 
 These are the sites I am supporting, and that need to be updated:
 
-- [ ] ArtsyVisions.com
+- [x] ArtsyVisions.com
 - [ ] Groja.com
 - [ ] JooMooWebSites.com
 - [ ] SeeOurMinds.com
-- [ ] TomHartung.com
+- [x] TomHartung.com
 - [ ] TomWHartung.com
+
+# Top-level Process
+
+- [ ] 1. Get all sites running locally
+- [ ] 2. Get all sites running under apache -- but don't worry about SSL yet
+- [ ] 3. Make changes listed in the next section "Additional Goals"
 
 # Additional Goals
 
@@ -84,16 +90,16 @@ Here is a list of sites and the sequence in which I am thinking I will upgrade t
 
 # Actual Steps Taken
 
-Find details for installing the underlying software in:
+Find details for installing underlying software used by more than one site, e.g., installing django and flask, in:
 
 - `1e-jane-needed_for_all_sites.md`
 
 Find details for each site in the `2*.md` files in this directory:
 
 - `2a-artsyvisions.md`
-- `2b-groja.md`
-- `2c-joomoowebsites.md`
-- `2d-seeourminds.md`
-- `2e-tomhartung.md`
+- `2b-tomhartung.md`
+- `2c-seeourminds.md`
+- `2d-groja.md`
+- `2e-joomoowebsites.md`
 - `2f-tomwhartung.md`
 

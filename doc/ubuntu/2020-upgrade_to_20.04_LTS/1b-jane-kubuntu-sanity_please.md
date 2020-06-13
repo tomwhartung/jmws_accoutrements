@@ -51,6 +51,38 @@ apt-get install -f
 
 Find in menu then Add to Favorites.
 
+## Fix My `up` Command
+
+My `up` command depends on having python3 and the `sh` module installed.
+
+Steps:
+
+- 1. Install python3, if it's missing
+- 2. Install pip, if it's missing
+- 3. Use pip to install the sh module
+
+Commands:
+
+```
+$ apt list --installed | grep python3/focal
+python3/focal,now 3.8.2-0ubuntu2 amd64 [installed]
+$ which python
+$ update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+$ which python
+/usr/bin/python
+$ python -V
+Python 3.8.2
+$ apt install python3-pip -y
+$ pip --version
+Command 'pip' not found, but there are 18 similar ones.
+$ pip3 --version
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+$ update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+$ pip --version
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+$
+```
+
 ## Install Chromium and Opera
 
 Use Ubuntu software app -- i.e., **Discover** -- to install.

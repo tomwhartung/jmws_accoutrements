@@ -4,8 +4,8 @@
 Instructions for installing the latest stable versions of software needed for two or more sites:
 
 - Python
-- Flask
 - Django
+- Flask
 
 # Latest Stable Versions
 
@@ -196,7 +196,9 @@ $
 
 ## Installing pip
 
-Having installed django, we now have pip already installed.  For details about the process, see "Installing pip" above.
+Having installed django, we now have pip already installed.
+
+For details about the process, see "Installing pip" above.
 
 ## Installing the Latest Version of flask
 
@@ -296,4 +298,6 @@ Installing collected packages: dominate, visitor, Flask-Bootstrap
 Successfully installed Flask-Bootstrap-3.3.7.1 dominate-2.5.1 visitor-0.1.3
 $
 ```
+
+Both flask sites are now operational!
 

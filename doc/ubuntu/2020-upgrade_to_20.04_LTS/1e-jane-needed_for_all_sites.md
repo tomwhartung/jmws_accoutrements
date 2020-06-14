@@ -119,7 +119,8 @@ Version: 2:2.2.12-1ubuntu0.1
 . . .
 . . .
 . . .
-$ ```
+$
+```
 
 We want the latest, version 3.0.6.
 

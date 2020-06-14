@@ -3,6 +3,37 @@
 
 Updating Groja.com .
 
+# Getting the Site to Run Locally
+
+After installing flask and providing a `gitignored/Site/groja_config.py` file, the site still needed some help.
+
+## Grabbing a Copy of the Database
+
+Copy the required db files from the production host, `ava`.
+
+```
+$ gog                          # /var/www/groja.com/htdocs/groja.com
+$ cd gitignored/db/
+$ l
+total 0
+-rw-r--r-- 1 tomh tomh 0 May  9 16:08 .this_dir_intentionally_left_empty
+$ fromAva NameEmail.db
+. . .
+. . .
+. . .
+$ fromAva NameEmailSchema.sql
+. . .
+. . .
+. . .
+$
+```
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Installing Additional Required Packages
+
+Postgres is needed I am sure, but will do this later.
+
 # Technical Updates
 
 ## Security Issue

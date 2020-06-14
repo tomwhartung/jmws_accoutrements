@@ -55,13 +55,22 @@ Find in menu then Add to Favorites.
 
 My `up` command depends on having python3 and the `sh` module installed.
 
-Steps:
+- Reference: https://pypi.org/project/sh/
 
-- 1. Install python3, if it's missing
-- 2. Install pip, if it's missing
-- 3. Use pip to install the sh module
+Steps, starting with the basics:
 
-Commands:
+- 1. Install `python3`, if it's missing
+- 2. Install `pip3`, if it's missing
+- 3. Optionally use `update-alternatives` to enable running just `python` and `pip` without the `3`s
+- 4. Use `pip` to install the `sh` module
+
+The most important part:
+
+```
+pip3 install sh
+```
+
+Additional optional but totally cool commands:
 
 ```
 $ apt list --installed | grep python3/focal

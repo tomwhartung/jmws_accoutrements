@@ -13,39 +13,62 @@ Find detailed descriptions of steps taken in `1e-jane-needed_for_all_sites.md`.
 
 These checklists contain the sites I am supporting, and that need to be updated.
 
-## Working OK - Checklist
+## Checklist: Basic Functionality
 
-This checklist tracks progress in getting these sites to work ok.
+Tracking the progress in getting the home pages of these sites to render without errors or warnings.
 
 - [x] ArtsyVisions.com
-- [ ] Groja.com
-- [ ] JooMooWebSites.com
+- [x] Groja.com
+- [x] JooMooWebSites.com
 - [x] SeeOurMinds.com
 - [x] TomHartung.com
 - [ ] TomWHartung.com
 
-## Content Updates - Checklist
+## Checklist: Essential Tasks
 
-This checklist tracks progress in getting the content reviewed and updated on these sites.
+Tracking the progress in making essential updates to the content on these sites.
+These changes include security updates and essential review items.
 
 - [ ] ArtsyVisions.com
 - [ ] Groja.com
 - [ ] JooMooWebSites.com
 - [ ] SeeOurMinds.com
-- [ ] TomHartung.com
+- [x] TomHartung.com
+- [ ] TomWHartung.com
+
+For high-level details about each site, see the **"Essential Tasks"** section.
+
+## Checklist: Additional Updates to Content
+
+Checklist to track the progress in getting the content reviewed and updated on these sites.
+
+- [ ] ArtsyVisions.com
+- [ ] Groja.com
+- [ ] JooMooWebSites.com
+- [ ] SeeOurMinds.com
+- [x] TomHartung.com
 - [ ] TomWHartung.com
 
 For high-level details about each site, see the **"Additional Goals"** section.
 
-# Top-level Process
+# The Main Process of Processes
 
-- [ ] 1. Get all sites running locally
-- [ ] 2. Get all sites running under apache -- but don't worry about SSL yet
-- [ ] 3. Make changes listed in the **"Additional Goals"** section
+- [ ] 1. Get all sites running locally on jane
+- [ ] 2. Get all sites running under apache -- but don't worry about SSL yet - new backup
+- [ ] 3. Make changes listed in the **"Essential Tasks"** section
+- [ ] 4. Server shuffle:
+  - [ ] 4.1 Start using bette for music
+  - [ ] 4.2 Install ubuntu server focal fossa 20.04 on barbara and make it the server
+  - [ ] 4.3 Start using jane for tv surfing
+- [ ] 5. Install kubuntu focal fossa 20.04 on ava
+  - [ ] 5.1 Get all sites running
+  - [ ] 5.2 Get all sites running under apache -- but don't worry about SSL yet - newer backup
+  - [ ] 5.3 Start using it for new development
+- [ ] 6. Make changes listed in the **"Additional Goals"** section
 
-# Additional Goals
+# Essential Tasks - Before Making Barbara the Server
 
-While updating these sites, also make the following changes:
+Make these changes before updating barbara to be the server:
 
 - [ ] 1. ArtsyVisions.com - Django and Materialize
     - [ ] Review social networking icons
@@ -62,12 +85,32 @@ While updating these sites, also make the following changes:
     - [ ] Set the price for portraits at $500 each
     - [ ] Reexamine conversions to prevent spam
 - [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
+    - [ ] Will update content later
+- [ ] 6. TomWHartung.com - ~~Wordpress~~ -> Django and Material Design Bootstrap [MDB]
+    - [ ] Replace the WP version of TomWHartung.com with a new, single-page Django site
+    - [ ] Will update content later
+
+Each site has its own file in this directory, e.g., `2a-artsyvisions.md`, containing details about what I want to change.
+
+# Additional Goals - After Making Barbara the Server
+
+Once barbara is the server and we have ava for development, also make the following changes:
+
+- [ ] 1. ArtsyVisions.com - Django and Materialize
+    - [ ] Should be ok already
+- [ ] 2. TomHartung.com - Django and MUI-CSS
+    - [ ] Should already be ok
+- [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+    - [ ] Should already be ok
+- [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
+    - [ ] Should already be ok
+- [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
     - [ ] Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books
     - [ ] Consider switching to Material Design Bootstrap [MDB]
-    - [ ] Stick to contant that says what I have for sale, and what's in progress and coming soon
+    - [ ] Stick to content that says what I have for sale, and what's in progress and coming soon
     - [ ] **Do not duplicate what's on TomWHartung.com**
 - [ ] 6. TomWHartung.com - ~~Wordpress~~ -> Django and Material Design Bootstrap [MDB]
-    - [ ] Replace the WP version of TomWHartung.com with a new, minimal Django version
+    - [ ] Create new content on TomWHartung.com with a new menu and articles
     - [ ] Stick to content that says who I am and what I do, e.g., Download spreadsheets, article about my FFM results
     - [ ] **Do not duplicate what's on JooMooWebSites.com**
 

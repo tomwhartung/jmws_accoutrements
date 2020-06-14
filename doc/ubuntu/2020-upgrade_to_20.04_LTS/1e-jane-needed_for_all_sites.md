@@ -170,9 +170,11 @@ References:
 
 - https://en.wikipedia.org/wiki/Flask_(web_framework)
 - https://flask.palletsprojects.com/en/1.1.x/installation/
-  - Contains command to use pip toinstall flask, along with info about virtual environments
+  - Contains command to use pip to install flask, along with info about virtual environments
 - https://pypi.org/project/Flask/
   - Python Package Index - project page
+- https://python-forum.io/Thread-How-to-install-flask-boostrap
+  - Contains command to use pip to install flask_bootstrap
 
 ## Installing flask Globally
 

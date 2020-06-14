@@ -74,25 +74,23 @@ References:
   - General yet very concise
   - The page howtoforge.com is better
 
-## Starting from scratch:
+## Installing django Globally
+
+At least for right now, we want all sites to use the same, current version of django.
+
+So we are not going to worry about environments and the like.
+
+## Starting From Scratch:
 
 ```
 $ apt list | grep python3-django/
 python3-django/focal-updates,focal-updates,focal-security,focal-security 2:2.2.12-1ubuntu0.1 all
 $ apt list | grep python3-pip/
 python3-pip/focal,focal 20.0.2-5ubuntu1 all
-root@jane: ~
 $ apt list --installed | grep python3-pip
-root@jane: ~
 $ apt list --installed | grep python3-django
 $
 ```
-
-## Installing django Globally
-
-At least right now, we want all sites to use the same, current version of django.
-
-So we are not going to worry about environments and the like.
 
 ## Installing pip
 
@@ -121,8 +119,7 @@ Version: 2:2.2.12-1ubuntu0.1
 . . .
 . . .
 . . .
-$
-```
+$ ```
 
 We want the latest, version 3.0.6.
 
@@ -156,13 +153,146 @@ Type "help", "copyright", "credits" or "license" for more information.
 $
 ```
 
-## Steps needed for All Django Sites
+## The Settings File Is Needed for All Django Sites
 
-Get a copy of `gitignored/Site/Site/settings.py` from another host.
+Get a copy of `gitignored/Site/Site/settings.py` from another host, e.g., bette.
+
+Use `rcsdiff` to check the settings file for changes, and if there are differences, check in the current version.
+
+Then copy the `settings.py` file along with the `RCS` directory to jane.
 
 Review and remember: **`SECURITY WARNING: don't run with debug turned on in production!`**
 
-
 # Flask
 
-TBD.
+References:
+
+- https://en.wikipedia.org/wiki/Flask_(web_framework)
+- https://flask.palletsprojects.com/en/1.1.x/installation/
+  - Contains command to use pip toinstall flask, along with info about virtual environments
+- https://pypi.org/project/Flask/
+  - Python Package Index - project page
+
+## Installing flask Globally
+
+At least for right now, we want all sites to use the same, current version of flask.
+
+So we are not going to worry about environments and the like.
+
+## Starting From Not Quite Scratch:
+
+Having installed django, we now have pip already installed.
+
+```
+$ apt list | grep python3-flask/
+python3-flask/focal,focal 1.1.1-2 all
+$ apt list | grep python3-pip/
+python3-pip/focal,focal,now 20.0.2-5ubuntu1 all [installed]
+$ apt list --installed | grep python3-pip
+$ apt list --installed | grep python3-flask/
+$
+```
+
+## Installing pip
+
+Having installed django, we now have pip already installed.  For details about the process, see "Installing pip" above.
+
+## Installing the Latest Version of flask
+
+The apt list command above under "Starting From Not Quite Scratch" shows the "current version" as being 1.1.1-2.
+
+The wikipedia page above under "References" shows the "current version" as being 1.1.2.  Note the subtle difference!
+
+We want the latest, so we go to https://flask.palletsprojects.com/en/1.1.x/installation/ and find the very simple command we need to run.
+
+**Using `pip` to install flask instead of `apt`.**
+
+```
+$ pip install Flask
+Collecting Flask
+  Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+     |████████████████████████████████| 94 kB 145 kB/s
+Collecting Jinja2>=2.10.1
+  Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+     |████████████████████████████████| 125 kB 143 kB/s
+Collecting click>=5.1
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+     |████████████████████████████████| 82 kB 141 kB/s
+Collecting Werkzeug>=0.15
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+     |████████████████████████████████| 298 kB 144 kB/s
+Collecting itsdangerous>=0.24
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting MarkupSafe>=0.23
+  Downloading MarkupSafe-1.1.1-cp38-cp38-manylinux1_x86_64.whl (32 kB)
+Installing collected packages: MarkupSafe, Jinja2, click, Werkzeug, itsdangerous, Flask
+Successfully installed Flask-1.1.2 Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 itsdangerous-1.1.0
+$
+```
+
+## The Settings File Is Needed for All Django Sites
+
+Get a copy of `gitignored/Site/Site/settings.py` from another host.
+
+E.g., on bette for joomoowebsites.com:
+
+```
+$ gojm                                 # /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/
+$ cd gitignored/Site/
+$ l
+$ rd  joomoowebsites_config.py         # if there are differences, check in the current version
+$ toJane -y joomoowebsites_config.py
+$ cd RCS/
+$ toJane -y
+$
+```
+
+And on bette for groja.com:
+
+```
+$ gog                           # /var/www/groja.com/htdocs/groja.com/
+$ cd gitignored/Site/
+$ l
+$ rd groja_config.py            # if there are differences, check in the current version
+$ toJane -y groja_config.py
+$ cd RCS/
+$ toJane -y
+$ cd ..
+$ l
+$ l db/                         # empty
+```
+
+**Note: for groja.com we also need the database, so see `2d-groja.md`.**
+
+## The Module Is Needed for All Flask Sites
+
+Running `run.sh` for both sites gives the following error:
+
+```
+$ gogs
+$ cd bin
+$ ./run.sh
+ModuleNotFoundError: No module named 'flask_bootstrap'
+$
+```
+
+Find and install the flask_bootstrap module:
+
+```
+$ pip search bootstrap | grep -i flask           # pip search is case-insensitive by default, grep is not, so use -i
+Bootstrap-Flask (1.3.2)                          - Bootstrap helper for Flask/Jinja2.
+Flask-Bootstrap (3.3.7.1)                        - An extension that includes Bootstrap in your project, without any boilerplate code.
+Flask-Bootstrap-Components (0.1.8)               - Collection of HTML generation helpers for Flask with Bootstrap 4
+root@jane: ~
+$ pip install Flask-Bootstrap
+Collecting Flask-Bootstrap
+  Downloading Flask-Bootstrap-3.3.7.1.tar.gz (456 kB)
+     |████████████████████████████████| 456 kB 128 kB/s
+. . .
+. . .
+. . .
+Installing collected packages: dominate, visitor, Flask-Bootstrap
+Successfully installed Flask-Bootstrap-3.3.7.1 dominate-2.5.1 visitor-0.1.3
+$
+```
+

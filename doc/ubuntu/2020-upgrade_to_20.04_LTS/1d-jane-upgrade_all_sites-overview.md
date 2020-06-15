@@ -72,18 +72,14 @@ Make these changes before updating barbara to be the server:
 
 - [ ] 1. ArtsyVisions.com - Django and Materialize
     - [ ] Review social networking icons
-    - [ ] Remove free spiritual portrait offer
 - [ ] 2. TomHartung.com - Django and MUI-CSS
     - [ ] Content ok for now
 - [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
     - [ ] Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
     - [ ] Review social networking icons
-    - [ ] Remove free spiritual portrait offer
 - [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
     - [ ] Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open
-    - [ ] Remove free spiritual portrait offer
-    - [ ] Set the price for portraits at $500 each
-    - [ ] Reexamine conversions to prevent spam
+    - [ ] Reexamine conversions to ensure they work and to prevent spam
 - [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
     - [ ] Will update content later
 - [ ] 6. TomWHartung.com - ~~Wordpress~~ -> Django and Material Design Bootstrap [MDB]
@@ -97,12 +93,16 @@ Each site has its own file in this directory, e.g., `2a-artsyvisions.md`, contai
 Once barbara is the server and we have ava for development, also make the following changes:
 
 - [ ] 1. ArtsyVisions.com - Django and Materialize
-    - [ ] Should be ok already
+    - [ ] Remove free spiritual portrait offer
+    - [ ] Review for anything glaring, but it should be ok already
 - [ ] 2. TomHartung.com - Django and MUI-CSS
     - [ ] Should already be ok
 - [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
-    - [ ] Should already be ok
+    - [ ] Remove free spiritual portrait offer
+    - [ ] Review for anything glaring, but it should be ok already
 - [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
+    - [ ] Remove free spiritual portrait offer
+    - [ ] Set the price for portraits at $500 each
     - [ ] Should already be ok
 - [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
     - [ ] Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books

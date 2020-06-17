@@ -22,7 +22,7 @@ Tracking the progress in getting the home pages of these sites to render without
 - [x] JooMooWebSites.com
 - [x] SeeOurMinds.com
 - [x] TomHartung.com
-- [ ] TomWHartung.com
+- [x] TomWHartung.com
 
 ## Checklist: Essential Tasks
 
@@ -31,7 +31,7 @@ These changes include security updates and essential review items.
 
 - [ ] ArtsyVisions.com
 - [ ] Groja.com
-- [ ] JooMooWebSites.com
+- [x] JooMooWebSites.com
 - [ ] SeeOurMinds.com
 - [x] TomHartung.com
 - [ ] TomWHartung.com
@@ -54,21 +54,21 @@ For high-level details about each site, see the **"Additional Goals"** section.
 # The Main Process of Processes
 
 - [ ] 1. Get all sites running locally on jane
-- [ ] 2. Get all sites running under apache -- but don't worry about SSL yet - new backup
+- [ ] 2. Get all sites running under apache -- but don't worry about SSL yet - **new backup**
 - [ ] 3. Make changes listed in the **"Essential Tasks"** section
 - [ ] 4. Server shuffle:
   - [ ] 4.1 Start using bette for music
-  - [ ] 4.2 Install ubuntu server focal fossa 20.04 on barbara and make it the server
+  - [ ] 4.2 Install Ubuntu server 20.04 Focal Fossa on barbara and make it the server
   - [ ] 4.3 Start using jane for tv surfing
-- [ ] 5. Install kubuntu focal fossa 20.04 on ava
+- [ ] 5. Install Kubuntu Focal Fossa 20.04 on ava
   - [ ] 5.1 Get all sites running
-  - [ ] 5.2 Get all sites running under apache -- but don't worry about SSL yet - newer backup
+  - [ ] 5.2 Get all sites running under apache -- but don't worry about SSL yet - **newer backup**
   - [ ] 5.3 Start using it for new development
 - [ ] 6. Make changes listed in the **"Additional Goals"** section
 
 # Essential Tasks - Before Making Barbara the Server
 
-Make these changes before updating barbara to be the server:
+Make these essential changes before updating barbara to be the server:
 
 - [ ] 1. ArtsyVisions.com - Django and Materialize
     - [ ] Review social networking icons

@@ -161,7 +161,7 @@ Check these key settings and update them as applicable.
 
 These references apply to this step only.
 
-- https://docs.djangoproject.com/en/3.0/intro/tutorial03/
+- https://mdbootstrap.com/
 - https://mdbootstrap.com/education/bootstrap/quick-start/
 
 #### Add `favicon.ico` File
@@ -191,12 +191,38 @@ cp /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/templates/conten
 cp /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/templates/content/base.html .
 cp /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/templates/content/home.html .
 ga *.html
-gc 'Adding 404.html , base.html , and home.html .  These initial versions were copied from seeourminds.com .'
+gc 'Adding the 404.html , base.html , and home.html templates.  These initial versions were copied from seeourminds.com .'
 ```
 
 Now edit those files, e.g., in kate, making them suitable for tomwhartung.com rather than seeourminds.com .
 
-#### Convert View Templates
+- Change all `seeourminds.com` to `tomwhartung.com`
+- Remove all menus
+
+#### Convert View Templates to Use MDB
+
+Download the latest version (4) of MDB + JQuery from:
+
+- https://mdbootstrap.com/
+
+Save the downloaded file for possible future reference and unzip it someplace "safe," e.g., `/var/www/tomwhartung.com/unzip`.
+
+```
+gotw                        # /var/www/tomwhartung.com
+mkdir downloads
+mkdir unzip
+cd  downloads
+lst ~/Downloads/
+mv  ~/Downloads/MDB-Free_4.19.0.zip .
+cp MDB-Free_4.19.0.zip ../unzip
+cd ../unzip
+unzip MDB-Free_4.19.0.zip
+rm MDB-Free_4.19.0.zip
+```
+
+Now access [file:///var/www/tomwhartung.com/unzip/index.html](file:///var/www/tomwhartung.com/unzip/index.html) in a browser window.
+
+Review the tutorial, the files in the unpack area and adjust the templates - especially `base.html` - accordingly.
 
 #### Implement Essential View Templates
 

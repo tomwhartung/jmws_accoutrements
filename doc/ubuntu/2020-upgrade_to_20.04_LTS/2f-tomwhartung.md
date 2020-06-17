@@ -7,8 +7,8 @@ Totally changing everything about tomwhartung.com before moving it to the new se
 
 Switch tomwhartung.com from using WP to using Django and MDB.
 
-- [ ] Get single-page, bare minimum, hello-world type site going
-- [ ] Worry about coding after we do the server shuffle
+- [x] Get single-page, bare minimum, hello-world type site going
+- [x] Worry about coding after we do the server shuffle
 
 # TomWHartung.com on Django
 
@@ -19,8 +19,9 @@ Details for accomplishing each of these tasks appear below.
 - [x] 1. Establish the Site
 - [x] 2. Ye Olde Hello, World
 - [x] 3. Tutorial Part 2: Settings Cleanup
-- [ ] 4. Material Design Bootstrap
-- [ ] 5. Minimal Content
+- [x] 4. Material Design Bootstrap
+- [ ] 5. Implement Essential View Templates
+- [ ] 6. Minimal Content
 
 ## References
 
@@ -197,7 +198,9 @@ gc 'Adding the 404.html , base.html , and home.html templates.  These initial ve
 Now edit those files, e.g., in kate, making them suitable for tomwhartung.com rather than seeourminds.com .
 
 - Change all `seeourminds.com` to `tomwhartung.com`
-- Remove all menus
+- Remove navigation, i.e., `block navbar` from `base.html`
+- Remove almost all content, leaving just a statement or two stating the site is under construction.
+- Remove much of the footer, leaving just a copyright statement and maybe a link or two.
 
 #### Convert View Templates to Use MDB
 
@@ -222,18 +225,88 @@ rm MDB-Free_4.19.0.zip
 
 Now access [file:///var/www/tomwhartung.com/unzip/index.html](file:///var/www/tomwhartung.com/unzip/index.html) in a browser window.
 
-Review the tutorial, the files in the unpack area and adjust the templates - especially `base.html` - accordingly.
+- 1. Review the tutorial and the files in the unpack area.
+- 2. Adjust the templates - especially `base.html` - as necessary.
+- 3. Copy files from the unzip area into the appropriate subdirectory in the static files tree
 
-#### Implement Essential View Templates
+```
+gotwscs                               # /var/www/tomwhartung.com/htdocs/tomwhartung.com/Site/content/static/content
+l
+l /var/www/tomwhartung.com/unzip/
+mkdir css
+cp -r /var/www/tomwhartung.com/unzip/css/* css/
+mkdir js
+cp -r /var/www/tomwhartung.com/unzip/js/* js/
+l
+l /var/www/tomwhartung.com/unzip/
+cp  /var/www/tomwhartung.com/unzip/*.pdf  /var/www/tomwhartung.com/unzip/README.txt  .
+l
+l /var/www/tomwhartung.com/unzip/
+cp -r /var/www/tomwhartung.com/unzip/exclusive-templates/  /var/www/tomwhartung.com/unzip/img/ /var/www/tomwhartung.com/unzip/scss/  /var/www/tomwhartung.com/unzip/src .
+l
+gs .
+ga *
+gc 'Adding the MDB static files into Site/content/static/content .'
+touch css/tomwhartung.css
+touch js/tomwhartung.js
+gs
+ga css/tomwhartung.css
+gc 'Adding empty placeholder css file css/tomwhartung.css .'
+ga js/tomwhartung.js
+gc 'Adding empty placeholder js file css/tomwhartung.js .'
+```
+
+The sample `index.html` file, and hence my `base.html` template, use just the `css/*.css` and `js/*.js` files,
+so I copied them first.
+
+**After some consideration, I decided to copy almost all of the other files in the downloaded zip file into this area as well.**
+
+### 5. Implement Essential View Templates
 
 Update `urls.py` and `views.py` to use the new templates.
 
-```
-```
+#### References
 
-### 5. Minimal Content
+This reference applies to this step only.
+
+- https://docs.djangoproject.com/en/3.0/intro/tutorial03/
+
+#### The `base.html` and `home.html` templates.
+
+Following the third part of the tutorial, edit the code to use the `base.html` and `home.html` templates.
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#### Try to Fix the Css Map Issue
+
+The firefox developer tools says it can't find the map file for `bootstrap.min.css`.
+
+I am not sure why it wants this, but there is a `.map` file for the other two `*.min.css` files,
+and there is no error messages for them.
+
+```
+-rw-r--r-- 1 tomh tomh 198313 Jun 17 14:48 bootstrap.css
+-rw-r--r-- 1 tomh tomh 160403 Jun 17 14:48 bootstrap.min.css
+-rw-r--r-- 1 tomh tomh 327246 Jun 17 14:48 mdb.css
+-rw-r--r-- 1 tomh tomh 249303 Jun 17 14:48 mdb.lite.css
+-rw-r--r-- 1 tomh tomh 218524 Jun 17 14:48 mdb.lite.min.css
+-rw-r--r-- 1 tomh tomh 249965 Jun 17 14:48 mdb.lite.min.css.map
+-rw-r--r-- 1 tomh tomh 277052 Jun 17 14:48 mdb.min.css
+-rw-r--r-- 1 tomh tomh 321278 Jun 17 14:48 mdb.min.css.map
+```
+
+Tried changing it to use just `bootstrap.css` but that did not fix the issue.
+
+This page may have some answers: https://developer.mozilla.org/en-US/docs/Tools/Debugger/Source_map_errors
+
+#### The `404.html` template.
+
+Update the code to use the `404.html` template.
+
+
+### 6. Minimal Content
+
+
 
 # Content Updates
 

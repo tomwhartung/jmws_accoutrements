@@ -161,17 +161,48 @@ Check these key settings and update them as applicable.
 
 These references apply to this step only.
 
+- https://docs.djangoproject.com/en/3.0/intro/tutorial03/
 - https://mdbootstrap.com/education/bootstrap/quick-start/
 
-**I think I did this wrong, oops.**
+#### Add `favicon.ico` File
+
+This should work ok, we'll see.
 
 ```
-cd Site/Site/
+gotws                                  # /var/www/tomwhartung.com/htdocs/tomwhartung.com/Site
 l
 mkdir -p content/static/content
 cp /var/www/artsyvisions.com/htdocs/artsyvisions.com/Site/content/static/content/favicon.ico  content/static/content
 ga content/static/content/favicon.ico
 gc 'Adding the content/static/content/favicon.ico file.'
+```
+
+#### Add Essential View Templates
+
+Add templates for the base, home, and 404 views.
+
+To make things easy, we copy them from seeourminds.com , which also uses MDB.
+
+```
+gotwsc                                # /var/www/tomwhartung.com/htdocs/tomwhartung.com/Site/content
+mkdir -p templates/content
+l /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/templates/content
+cp /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/templates/content/404.html .
+cp /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/templates/content/base.html .
+cp /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/templates/content/home.html .
+ga *.html
+gc 'Adding 404.html , base.html , and home.html .  These initial versions were copied from seeourminds.com .'
+```
+
+Now edit those files, e.g., in kate, making them suitable for tomwhartung.com rather than seeourminds.com .
+
+#### Convert View Templates
+
+#### Implement Essential View Templates
+
+Update `urls.py` and `views.py` to use the new templates.
+
+```
 ```
 
 ### 5. Minimal Content

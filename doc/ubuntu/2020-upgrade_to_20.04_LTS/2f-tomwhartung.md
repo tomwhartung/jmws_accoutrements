@@ -18,8 +18,9 @@ Details for accomplishing each of these tasks appear below.
 
 - [x] 1. Establish the Site
 - [x] 2. Ye Olde Hello, World
-- [ ] 3. Material Design Bootstrap
-- [ ] 4. Minimal Content
+- [x] 3. Tutorial Part 2: Settings Cleanup
+- [ ] 4. Material Design Bootstrap
+- [ ] 5. Minimal Content
 
 ## References
 
@@ -29,7 +30,7 @@ Details for accomplishing each of these tasks appear below.
   - Using the jQuery version
   - https://mdbootstrap.com/docs/jquery/getting-started/download/
 
-## Process
+## Process Details
 
 For an overview of these steps, see the section "Process Overview" above.
 
@@ -113,7 +114,54 @@ cd bin
 
 Accessing the server at [http://127.0.0.1:8003/](http://127.0.0.1:8003/) displays the Hello World message from the view.
 
-### 3. Material Design Bootstrap
+### 3. Tutorial Part 2: Settings Cleanup
+
+Part 2 is all about the Database and models, which we will not be using now, if ever.
+
+In my case, the goal of this step is to clean up `settings.py`.
+
+#### References
+
+These references apply to this step only.
+
+- (1) https://docs.djangoproject.com/en/3.0/intro/tutorial02/
+- (2) https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+- (3) https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-SECRET_KEY
+- (4) https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-DEBUG
+- (5) https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-ALLOWED_HOSTS
+- (6) https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-INSTALLED_APPS
+- (7) https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-DATABASES
+- (8) https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-STATIC_ROOT
+
+#### Key Settings
+
+Check these key settings and update them as applicable.
+
+- SECRET_KEY
+  - Per (3) "django-admin startproject automatically adds a randomly-generated SECRET_KEY to each new project"
+- DEBUG
+  - Use `RUNNING_LOCALLY` variable, as in the artsyvisions.com file
+- ALLOWED_HOSTS
+  - Set in a fashion similar to that used in the artsyvisions.com file
+- INSTALLED_APPS
+  - Add `content`
+- DATABASES
+  - Per (7) "The DATABASES setting must configure a default database"
+  - So far, I have not experienced problems running without a DB
+  - I believe this is for the admin feature, which I will not be using right away
+  - **For now, just comment out all lines defining the `DATABASES` parameter**
+- STATIC_ROOT
+  - We want to make this match what we are using on artsyvisions.com, so copy the code and comments for that setting
+- STATIC_URL
+  - We want to make this match what we are using on artsyvisions.com, so copy the code and comments for that setting
+
+### 4. Material Design Bootstrap
+
+#### References
+
+These references apply to this step only.
+
+- https://mdbootstrap.com/education/bootstrap/quick-start/
 
 **I think I did this wrong, oops.**
 
@@ -126,7 +174,7 @@ ga content/static/content/favicon.ico
 gc 'Adding the content/static/content/favicon.ico file.'
 ```
 
-### 4. Minimal Content
+### 5. Minimal Content
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

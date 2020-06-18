@@ -20,7 +20,7 @@ Details for accomplishing each of these tasks appear below.
 - [x] 2. Ye Olde Hello, World
 - [x] 3. Tutorial Part 2: Settings Cleanup
 - [x] 4. Material Design Bootstrap
-- [ ] 5. Implement Essential View Templates
+- [x] 5. Implement Essential View Templates
 - [ ] 6. Minimal Content
 
 ## References
@@ -267,41 +267,38 @@ Update `urls.py` and `views.py` to use the new templates.
 
 #### References
 
-This reference applies to this step only.
+These references apply to this step only.
 
 - https://docs.djangoproject.com/en/3.0/intro/tutorial03/
+- https://docs.djangoproject.com/en/3.0/topics/http/urls/
 
-#### The `base.html` and `home.html` templates.
+#### The `base.html` and `home.html` Templates
 
 Following the third part of the tutorial, edit the code to use the `base.html` and `home.html` templates.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#### The `404.html` template
 
-#### Try to Fix the Css Map Issue
+Update the code to use the `404.html` template.
+
+Update `urls.py` to use the `re_path` function to set up a regex that catches everything but '' and 'home'
+and update `views.py` to display the `404.html` template when that happens.
+
+#### Fix for the Css Map Issue
 
 The firefox developer tools says it can't find the map file for `bootstrap.min.css`.
 
-I am not sure why it wants this, but there is a `.map` file for the other two `*.min.css` files,
-and there is no error messages for them.
+##### References:
 
-```
--rw-r--r-- 1 tomh tomh 198313 Jun 17 14:48 bootstrap.css
--rw-r--r-- 1 tomh tomh 160403 Jun 17 14:48 bootstrap.min.css
--rw-r--r-- 1 tomh tomh 327246 Jun 17 14:48 mdb.css
--rw-r--r-- 1 tomh tomh 249303 Jun 17 14:48 mdb.lite.css
--rw-r--r-- 1 tomh tomh 218524 Jun 17 14:48 mdb.lite.min.css
--rw-r--r-- 1 tomh tomh 249965 Jun 17 14:48 mdb.lite.min.css.map
--rw-r--r-- 1 tomh tomh 277052 Jun 17 14:48 mdb.min.css
--rw-r--r-- 1 tomh tomh 321278 Jun 17 14:48 mdb.min.css.map
-```
+- https://developer.mozilla.org/en-US/docs/Tools/Debugger/Source_map_errors
+- https://stackoverflow.com/questions/21773376/bootstrap-trying-to-load-map-file-how-to-disable-it-do-i-need-to-do-it
 
-Tried changing it to use just `bootstrap.css` but that did not fix the issue.
+Updated the special comment at the end of `Site/content/static/content/css/bootstrap.css` (rather than delete it)
+and updated `base.html` to use the `bootstrap.css` file instead of `bootstrap.min.css`.
 
-This page may have some answers: https://developer.mozilla.org/en-US/docs/Tools/Debugger/Source_map_errors
+Now the page loads without errors or warnings, yay!
 
-#### The `404.html` template.
 
-Update the code to use the `404.html` template.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 ### 6. Minimal Content

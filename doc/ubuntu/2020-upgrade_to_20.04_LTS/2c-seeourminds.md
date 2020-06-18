@@ -30,8 +30,6 @@ Several of these warning messages appear when I run `run.sh`:
 
 Changing "is" to "==" in the lines mentioned in the messages seems to have fixed the problem.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 # Technical Updates Needed
 
 ## Security Issue
@@ -39,6 +37,20 @@ Changing "is" to "==" in the lines mentioned in the messages seems to have fixed
 Examine security issue flagged by github:
 
 - https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
+
+### The Fix:
+
+Github says the fix is to upgrade jquery to 3.5+.
+
+Note: **MDB 4 uses jQuery 3.5.1,** and we are using MDB 4 on the new tomwhartung.com.
+
+- 1. Update jQuery to see if warning goes away
+- 2. If it does, update the remaining MDB files
+
+This fix works ok!
+However, now we really **need to run a regression test on the entire site** to make sure everything still looks ok.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 ## CSS Issue
 

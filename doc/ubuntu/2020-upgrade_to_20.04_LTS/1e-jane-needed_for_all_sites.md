@@ -6,6 +6,7 @@ Instructions for installing the latest stable versions of software needed for tw
 - Python
 - Django
 - Flask
+- Apache
 
 # Latest Stable Versions
 
@@ -303,3 +304,64 @@ $
 
 Both flask sites are now operational!
 
+# Apache
+
+Installing apache on jane to help identify the process we need when we install it on barbara and ava,
+and so that jane can serve as an extra backup server in case we need it someday.
+
+Not worrying about ssl at this juncture.
+
+## References
+
+There are many references showing how to install LAMP.
+Fortunately we are done with all that and just want to install apache2
+
+- Includes info about setting up SSL
+  - https://tecadmin.net/install-apache-ubuntu-20-04/
+- Includes info about setting up Virtual Hosts:
+  - https://linuxhint.com/install_apache_server_setup_virtual_hosts_ubuntu/
+- Includes Firewall configuration:
+  - https://linuxhint.com/install_apache_web_server_ubuntu/
+
+## Process and Commands
+
+Process Overview:
+
+- 1. update everything so we have the latest of any associated dependencies, etc.
+- 2. Install apache2
+- 3. Update configuration files as necessary
+  - 3.1. Update main config files
+  - 3.2. Update config files for individual sites
+- 4. Restart apache and test
+
+Commands:
+
+```
+apt-get update
+apt-get upgrade -y
+apt install apache2
+cd /etc/apache2/conf
+```
+
+Updating the configuration - first update the files in the top-level directory.
+
+Get updates made for previous installs by looking for "CusTOMizations" in /ubuntu-16.04/etc/apache2
+
+```
+cd /etc/apache2/
+l
+mkdir RCS
+ci -l apache2.conf       # 'Installed version.'
+vi apache2.conf          # Add "CusTOMizations"
+rd apache2.conf
+ci -l apache2.conf       # 'Added "ServerName jane" and a bunch of comments.'
+ci -l envvars            # 'Installed version.'
+vi envvars               # Add "CusTOMizations"
+rd envvars
+ci -l envvars            # 'Added definitions of GROJA_MAIL_FROM and GROJA_MAIL_TO .'
+```
+
+Updating the configuration - second update the virtual hosts files:
+
+```
+```

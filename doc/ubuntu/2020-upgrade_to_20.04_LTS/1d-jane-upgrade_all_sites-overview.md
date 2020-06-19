@@ -29,12 +29,12 @@ Tracking the progress in getting the home pages of these sites to render without
 Tracking the progress in making essential updates to the content on these sites.
 These changes include security updates and essential review items.
 
-- [ ] ArtsyVisions.com
-- [ ] Groja.com
+- [x] ArtsyVisions.com
+- [x] Groja.com
 - [x] JooMooWebSites.com
-- [ ] SeeOurMinds.com
+- [x] SeeOurMinds.com
 - [x] TomHartung.com
-- [ ] TomWHartung.com
+- [x] TomWHartung.com
 
 For high-level details about each site, see the **"Essential Tasks"** section.
 
@@ -53,9 +53,9 @@ For high-level details about each site, see the **"Additional Goals"** section.
 
 # The Main Process of Processes
 
-- [ ] 1. Get all sites running locally on jane
-- [ ] 2. Get all sites running under apache -- but don't worry about SSL yet - **new backup**
-- [ ] 3. Make changes listed in the **"Essential Tasks"** section
+- [x] 1. Get all sites running locally on jane
+- [x] 2. Make changes listed in the **"Essential Tasks"** section
+- [x] 3. Get all sites running under apache -- but don't worry about SSL yet - **new backup**
 - [ ] 4. Server shuffle:
   - [ ] 4.1 Start using bette for music
   - [ ] 4.2 Install Ubuntu server 20.04 Focal Fossa on barbara and make it the server
@@ -70,21 +70,20 @@ For high-level details about each site, see the **"Additional Goals"** section.
 
 Make these essential changes before updating barbara to be the server:
 
-- [ ] 1. ArtsyVisions.com - Django and Materialize
-    - [ ] Review social networking icons
-- [ ] 2. TomHartung.com - Django and MUI-CSS
-    - [ ] Content ok for now
-- [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
-    - [ ] Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
-    - [ ] Review social networking icons
-- [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
-    - [ ] Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open
-    - [ ] Reexamine conversions to ensure they work and to prevent spam
-- [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
-    - [ ] Will update content later
-- [ ] 6. TomWHartung.com - ~~Wordpress~~ -> Django and Material Design Bootstrap [MDB]
-    - [ ] Replace the WP version of TomWHartung.com with a new, single-page Django site
-    - [ ] Will update content later
+- [x] 1. ArtsyVisions.com - Django and Materialize
+    - [x] Content ok for now
+- [x] 2. TomHartung.com - Django and MUI-CSS
+    - [x] Content ok for now
+- [x] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+    - [x] Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
+- [x] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
+    - [x] Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open
+    - [x] Content ok for now
+- [x] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
+    - [x] Will update content later
+- [x] 6. TomWHartung.com - ~~Wordpress~~ -> Django and Material Design Bootstrap [MDB]
+    - [x] Replace the WP version of TomWHartung.com with a new, single-page Django site
+    - [x] Will update content later
 
 Each site has its own file in this directory, e.g., `2a-artsyvisions.md`, containing details about what I want to change.
 
@@ -93,16 +92,20 @@ Each site has its own file in this directory, e.g., `2a-artsyvisions.md`, contai
 Once barbara is the server and we have ava for development, also make the following changes:
 
 - [ ] 1. ArtsyVisions.com - Django and Materialize
+    - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
     - [ ] Review for anything glaring, but it should be ok already
 - [ ] 2. TomHartung.com - Django and MUI-CSS
     - [ ] Should already be ok
 - [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+    - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
     - [ ] Review for anything glaring, but it should be ok already
 - [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
+    - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
     - [ ] Set the price for portraits at $500 each
+    - [ ] Reexamine conversions to ensure they work and to prevent spam
     - [ ] Should already be ok
 - [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
     - [ ] Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books

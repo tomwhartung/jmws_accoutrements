@@ -1,13 +1,15 @@
 
-# 1b-jane-sanity_please.md
+# 3b-barbara-server-sanity_please.md
 
-Upgrading jane to 20.04.
+Upgrading barbara to ubuntu server 20.04 focal fossa.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 # Acheiving Sanity
 
 ## Home Directory
 
-Restore home directory, one file and directory at a time, for safety.
+Copy home directory from ava.
 
 ## Root User's Home Directory
 

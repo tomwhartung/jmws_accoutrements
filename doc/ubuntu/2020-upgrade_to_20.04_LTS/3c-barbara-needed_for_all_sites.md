@@ -1,5 +1,5 @@
 
-# 1e-jane-needed_for_all_sites.md
+# 3c-barbara-needed_for_all_sites.md
 
 Instructions for installing the latest stable versions of software needed for two or more sites:
 
@@ -7,6 +7,18 @@ Instructions for installing the latest stable versions of software needed for tw
 - Django
 - Flask
 - Apache
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Consideration: Python - Latest Version?
+
+See `1e-jane-needed_for_all_sites.md` to learn why we are using 3.8.2 there, i.e.,
+"the current version of python is now 3.8.3, but it is not yet available for upgrading to."
+
+Be sure to **check the version of Python installed when installing 20.04 server on barbara**
+and make and adjust plans as necessary.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 # Latest Stable Versions
 

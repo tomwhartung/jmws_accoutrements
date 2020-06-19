@@ -268,3 +268,9 @@ $
 
 We will try it tomorrow, and hope it works!
 
+# Getting It to Work
+
+It did not work at first - I had the layout ok but no play counts.
+
+Uninstalling and reinstalling amarok did the trick, however!  Yay!
+

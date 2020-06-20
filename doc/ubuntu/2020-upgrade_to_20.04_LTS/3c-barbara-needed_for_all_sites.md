@@ -8,17 +8,41 @@ Instructions for installing the latest stable versions of software needed for tw
 - Flask
 - Apache
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Cloning the Source Repos
 
-## Consideration: Python - Latest Version?
+Extract the source files for the six sites by entering the following commands:
 
-See `1e-jane-needed_for_all_sites.md` to learn why we are using 3.8.2 there, i.e.,
-"the current version of python is now 3.8.3, but it is not yet available for upgrading to."
+```
+govw        # /var/www
+mkdir -p artsyvisions.com/htdocs/artsyvisions.com
+cd artsyvisions.com/htdocs/artsyvisions.com
+git clone git@github.com:tomwhartung/artsyvisions.com.git
 
-Be sure to **check the version of Python installed when installing 20.04 server on barbara**
-and make and adjust plans as necessary.
+govw        # /var/www
+mkdir -p groja.com/htdocs/groja.com
+cd groja.com/htdocs/groja.com
+git clone git@github.com:tomwhartung/groja.com.git
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+govw        # /var/www
+mkdir -p joomoowebsites.com/htdocs/joomoowebsites.com
+cd joomoowebsites.com/htdocs/joomoowebsites.com
+git clone git@github.com:tomwhartung/joomoowebsites.com.git
+
+govw        # /var/www
+mkdir -p seeourminds.com/htdocs/seeourminds.com
+cd seeourminds.com/htdocs/seeourminds.com
+git clone git@github.com:tomwhartung/seeourminds.com.git
+
+govw        # /var/www
+mkdir -p tomhartung.com/htdocs/tomhartung.com
+cd tomhartung.com/htdocs/tomhartung.com
+git clone git@github.com:tomwhartung/tomhartung.com.git
+
+govw        # /var/www
+mkdir -p tomwhartung.com/htdocs/tomwhartung.com
+cd tomwhartung.com/htdocs/tomwhartung.com
+git clone git@github.com:tomwhartung/tomwhartung.com.git
+```
 
 # Latest Stable Versions
 
@@ -36,46 +60,16 @@ Per the wikipedia.
 - Flask: 1.1.2
   - Stable release: 1.1.2
 
-For additional goals and an overall plan see `1d-jane-upgrade_all_sites-overview.md`.
-
-For details for each site in the `2*.md` files, e.g., `2a-artsyvisions.md` in this directory.
-
 # Python
 
 The current version of python is now 3.8.3, but it is not yet available for upgrading to.
 
-```
-$ apt list --installed | grep python3/focal
-python3/focal,now 3.8.2-0ubuntu2 amd64 [installed]
-$ apt-get upgrade python3
-. . .
-. . .
-. . .
-python3 is already the newest version (3.8.2-0ubuntu2).
-. . .
-. . .
-. . .
-0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
-$
-```
+## Consideration: Python - Latest Version?
 
-Python2 has reached the end of its life.
+See `1e-jane-needed_for_all_sites.md` to learn why we are using 3.8.2 there, i.e.,
+"the current version of python is now 3.8.3, but it is not yet available for upgrading to."
 
-This is how to make python3 the default python:
-
-```
-$ which python
-$ update-alternatives --install /usr/bin/python python /usr/bin/python3 1
-$ which python
-/usr/bin/python
-$ python -V
-Python 3.8.2
-$
-```
-
-Learned about the `update-alternatives` command at https://www.howtoforge.com/tutorial/how-to-install-django-on-ubuntu/
-
-**Check version installed when installing 20.04 server on barbara.**
+**The main thing it should be current and match what we use on jane and ava.**
 
 # Django
 
@@ -93,29 +87,19 @@ At least for right now, we want all sites to use the same, current version of dj
 
 So we are not going to worry about environments and the like.
 
-## Starting From Scratch:
+## Finding the Starting Point
+
+The `pip3` package should already be installed from the last step, `3b-barbara-server-sanity_please.md`,
+and should run when we enter just `pip`.
 
 ```
+$ apt list | grep python3-pip/
+python3-pip/focal,now 20.0.2-5ubuntu1 all [installed]
 $ apt list | grep python3-django/
 python3-django/focal-updates,focal-updates,focal-security,focal-security 2:2.2.12-1ubuntu0.1 all
-$ apt list | grep python3-pip/
-python3-pip/focal,focal 20.0.2-5ubuntu1 all
 $ apt list --installed | grep python3-pip
+python3-pip/focal,now 20.0.2-5ubuntu1 all [installed]
 $ apt list --installed | grep python3-django
-$
-```
-
-## Installing pip
-
-Install `python3-pip` and run `update-alternatives`:
-
-```
-$ apt install python3-pip -y
-$ pip --version
-Command 'pip' not found, but there are 18 similar ones.
-$ pip3 --version
-pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
-$ update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 $ pip --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 $
@@ -135,25 +119,25 @@ Version: 2:2.2.12-1ubuntu0.1
 $
 ```
 
-We want the latest, version 3.0.6.
+**We don't want version 2.2, we want the latest, version 3.0.6.**
 
-**Use `pip` to install django instead of `apt`.**
+Hence we use `pip` to install django instead of `apt`.
 
 ```
 $ pip install django==3.0.6
 Collecting django==3.0.6
   Downloading Django-3.0.6-py3-none-any.whl (7.5 MB)
-     |████████████████████████████████| 7.5 MB 245 kB/s
-Collecting sqlparse>=0.2.2
-  Downloading sqlparse-0.3.1-py2.py3-none-any.whl (40 kB)
-     |████████████████████████████████| 40 kB 146 kB/s
+     |████████████████████████████████| 7.5 MB 163 kB/s
+Collecting asgiref~=3.2
+  Downloading asgiref-3.2.10-py3-none-any.whl (19 kB)
 Collecting pytz
   Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
-     |████████████████████████████████| 510 kB 151 kB/s
-Collecting asgiref~=3.2
-  Downloading asgiref-3.2.7-py2.py3-none-any.whl (19 kB)
-Installing collected packages: sqlparse, pytz, asgiref, django
-Successfully installed asgiref-3.2.7 django-3.0.6 pytz-2020.1 sqlparse-0.3.1
+     |████████████████████████████████| 510 kB 169 kB/s
+Collecting sqlparse>=0.2.2
+  Downloading sqlparse-0.3.1-py2.py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 140 kB/s
+Installing collected packages: asgiref, pytz, sqlparse, django
+Successfully installed asgiref-3.2.10 django-3.0.6 pytz-2020.1 sqlparse-0.3.1
 $ django-admin --version
 3.0.6
 $ python

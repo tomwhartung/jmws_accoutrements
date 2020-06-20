@@ -159,7 +159,7 @@ Use `rcsdiff` to check the settings file for changes, and if there are differenc
 
 Then copy the `settings.py` file along with the `RCS` directory to barbara.
 
-Review and remember: **`SECURITY WARNING: don't run with debug turned on in production!`**
+Commands to run on jane:
 
 ```
 goav                     # var/www/artsyvisions.com/htdocs/artsyvisions.com
@@ -192,6 +192,14 @@ toBarbara -y settings.py
 cd RCS/
 toBarbara -y
 ```
+
+Review and remember: **`SECURITY WARNING: don't run with debug turned on in production!`**
+
+## Check All Django Sites for Sanity
+
+Running `run.sh` for all django sites shows no errors.
+
+All django sites should now be operational.
 
 # Flask
 
@@ -251,39 +259,33 @@ $
 
 ## The Settings File Is Needed for All Flask Sites
 
-Get a copy of `gitignored/Site/Site/settings.py` from another host.
+Get a copy of `gitignored/Site/Site/settings.py` from another host, i.e., `jane`.
 
-E.g., on bette for joomoowebsites.com:
-
-```
-$ gojm                                 # /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/
-$ cd gitignored/Site/
-$ l
-$ rd  joomoowebsites_config.py         # if there are differences, check in the current version
-$ toJane -y joomoowebsites_config.py
-$ cd RCS/
-$ toJane -y
-$
-```
-
-And on bette for groja.com:
+Run these commands on jane for joomoowebsites.com and groja.com:
 
 ```
-$ gog                           # /var/www/groja.com/htdocs/groja.com/
-$ cd gitignored/Site/
-$ l
-$ rd groja_config.py            # if there are differences, check in the current version
-$ toJane -y groja_config.py
-$ cd RCS/
-$ toJane -y
-$ cd ..
-$ l
-$ l db/                         # empty
+gojm                                 # /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/
+cd gitignored/Site/
+rd joomoowebsites_config.py
+toBarbara -y
+cd RCS/
+toBarbara -y
+
+gog                           # /var/www/groja.com/htdocs/groja.com/
+cd gitignored/Site/
+rd groja_config.py
+toBarbara -y
+cd RCS/
+toBarbara -y
+cd ../..
+l db/
+cd  db/
+lsBarbara
+toBarbara NameEmail*
+govw
 ```
 
-**Note: for groja.com we also need the database, so see `2d-groja.md`.**
-
-## The Module Is Needed for All Flask Sites
+## The `flask_bootstrap` Module Is Needed for All Flask Sites
 
 Running `run.sh` for both sites gives the following error:
 
@@ -299,30 +301,38 @@ Find and install the flask_bootstrap module:
 
 ```
 $ pip search bootstrap | grep -i flask           # pip search is case-insensitive by default, grep is not, so use -i
-Bootstrap-Flask (1.3.2)                          - Bootstrap helper for Flask/Jinja2.
-Flask-Bootstrap (3.3.7.1)                        - An extension that includes Bootstrap in your project, without any boilerplate code.
-Flask-Bootstrap-Components (0.1.8)               - Collection of HTML generation helpers for Flask with Bootstrap 4
-root@jane: ~
-$ pip install Flask-Bootstrap
 Collecting Flask-Bootstrap
   Downloading Flask-Bootstrap-3.3.7.1.tar.gz (456 kB)
-     |████████████████████████████████| 456 kB 128 kB/s
-. . .
-. . .
-. . .
+     |████████████████████████████████| 456 kB 159 kB/s
+Requirement already satisfied: Flask>=0.8 in /usr/local/lib/python3.8/dist-packages (from Flask-Bootstrap) (1.1.2)
+Collecting dominate
+  Downloading dominate-2.5.1-py2.py3-none-any.whl (29 kB)
+Collecting visitor
+  Downloading visitor-0.1.3.tar.gz (3.3 kB)
+Requirement already satisfied: Werkzeug>=0.15 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->Flask-Bootstrap) (1.0.1)
+Requirement already satisfied: Jinja2>=2.10.1 in /usr/lib/python3/dist-packages (from Flask>=0.8->Flask-Bootstrap) (2.10.1)
+Requirement already satisfied: itsdangerous>=0.24 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->Flask-Bootstrap) (1.1.0)
+Requirement already satisfied: click>=5.1 in /usr/lib/python3/dist-packages (from Flask>=0.8->Flask-Bootstrap) (7.0)
+Building wheels for collected packages: Flask-Bootstrap, visitor
+  Building wheel for Flask-Bootstrap (setup.py) ... done
+  Created wheel for Flask-Bootstrap: filename=Flask_Bootstrap-3.3.7.1-py3-none-any.whl size=460123 sha256=50218628f54ca1e38e27ba16eb61f81b568677ff82ad7566df024d458cd0500d
+  Stored in directory: /root/.cache/pip/wheels/f2/a3/85/fe8b65a65a447c9906e3b7edb7d9e6c74dfa9c8425c3dd3007
+  Building wheel for visitor (setup.py) ... done
+  Created wheel for visitor: filename=visitor-0.1.3-py3-none-any.whl size=3931 sha256=c21be597de79994a0b1b4da8484f1c38a103884630f2b6eddba66835f2067e24
+  Stored in directory: /root/.cache/pip/wheels/d3/40/52/5dae7760434a82caf8b8f88323029188b2d4ea3ac1235e550a
+Successfully built Flask-Bootstrap visitor
 Installing collected packages: dominate, visitor, Flask-Bootstrap
 Successfully installed Flask-Bootstrap-3.3.7.1 dominate-2.5.1 visitor-0.1.3
 $
 ```
 
-Both flask sites are now operational!
+Running `run.sh` for both sites shows they are now operational.
 
 # Apache
 
-Installing apache on jane to help identify the process we need when we install it on barbara and ava,
-and so that jane can serve as an extra backup server in case we need it someday.
+Installing apache on barbara.
 
-Not worrying about ssl at this juncture.
+**Not worrying about ssl at this juncture, because the site must be live for that.**
 
 ## References
 
@@ -337,6 +347,8 @@ Fortunately we are done with all that and just want to install apache2
   - https://linuxhint.com/install_apache_web_server_ubuntu/
 - How to enable wsgi apps - needed for python:
   - https://askubuntu.com/questions/25374/how-do-you-install-mod-wsgi
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 ## Process and Commands
 

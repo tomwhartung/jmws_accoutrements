@@ -3,8 +3,6 @@
 
 Upgrading barbara to ubuntu server 20.04 focal fossa.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 # Acheiving Sanity
 
 ## Install Vim, Git, RCS, and Chrome
@@ -111,36 +109,126 @@ $ netplan apply    # Silence is golden
 $
 ```
 
-## Home Directory
+## Update Home Directories
 
-Copy home directory from ava.
+Copy selected files from the 18.04 home directories saved in `/dev/sda8` and `/dev/sda10`,
+which must first be mounted.
 
-## Root User's Home Directory
+### Mount the `/ubuntu-18.04*` Directories
 
-Reconstruct links, e.g., .bash_aliases, present in /ubuntu-16.04/root to /root as appropriate.
+Mount `/dev/sda8` on `/ubuntu-18.04` and `/dev/sda10` on `/ubuntu-18.04/home`, and update fstab to do that at boot:
+
+```
+cd /
+ll
+mkdir ubuntu-18.04
+mount /dev/sda8 /ubuntu-18.04
+mount /dev/sda10 /ubuntu-18.04/home
+blkid /dev/sda8
+blkid /dev/sda10
+cd etc
+vi fstab
+```
+
+## Update `tomh`'s Home Directory
+
+Make sure to **not destroy any installed files,** then copy selected files from `/ubuntu-18.04/home/tomh`.
+
+```
+mkdir .ssh
+cd .ssh
+cp -r /ubuntu-18.04/home/tomh/.ssh/* .
+cd
+mkdir RCS
+ci -l .bashrc   # "Installed version"
+mkdir RCS
+ci -l .bashrc
+diff .bashrc /ubuntu-18.04/home/tomh/.bashrc
+```
+
+The only differences are my CusTOMizations, so we are good to go.
+
+```
+cp /ubuntu-18.04/home/tomh/.bashrc .
+rcsdiff ./.bashrc
+vi ./.bashrc                    # delete obsolete CusTOMizations, e.g., for coursera
+rcsdiff ./.bashrc
+ci -l ./.bashrc                 # "Added my CusTOMizations."
+ll
+ll /ubuntu-18.04/home/tomh/
+ll /ubuntu-18.04/home/tomh/.bash*
+ll /ubuntu-18.04/home/tomh/.bash_aliases*
+grep .bash_aliases .bashrc
+ll /ubuntu-18.04/home/tomh/.bash_aliases*
+cp /ubuntu-18.04/home/tomh/.bash_aliases* .
+. ./.bashrc
+l /ubuntu-18.04/home/tomh/.bash*                            # We can now run just "l"
+diff  /ubuntu-18.04/home/tomh/.bash_logout .bash_logout     # No differences
+l /ubuntu-18.04/home/tomh/
+cp -r /ubuntu-18.04/home/tomh/bin .
+cp /ubuntu-18.04/home/tomh/d.e  /ubuntu-18.04/home/tomh/r* .
+l /ubuntu-18.04/home/tomh/.vim*
+cp -r /ubuntu-18.04/home/tomh/.vimrc  /ubuntu-18.04/home/tomh/.vim .
+l
+mkdir tmp
+```
+
+## Update Root User's Home Directory
 
 Copy files and directories, e.g., .vim and RCS, from /ubuntu-16.04/root to /root as appropriate
 
-## Fix My `up` Command
+```
+ll
+ll /ubuntu-18.04/
+ll /ubuntu-18.04/root/
+mkdir RCS
+ci -l .bashrc      # "Installed version"
+ll
+ll /ubuntu-18.04/root/
+diff .bashrc /ubuntu-18.04/root/.bashrc    # Only differences are my CusTOMizations
+rcsdiff .bashrc
+diff .bashrc /ubuntu-18.04/root/.bashrc
+cp /ubuntu-18.04/root/.bashrc .
+```
 
-My `up` command depends on having python3 and the `sh` module installed.
+Reconstruct links, e.g., to .bash_aliases, present in /ubuntu-18.04/root to /root as appropriate.
 
-- Reference: https://pypi.org/project/sh/
+```
+ll /ubuntu-18.04/root/
+ln -s /home/tomh/.bash_aliases .
+ln -s /home/tomh/.bash_aliases-barbara  .
+ln -s /home/tomh/.vimrc  .
+ln -s /home/tomh/.vim  .
+ln -s /home/tomh/bin  .
+mkdir tmp
+ll /ubuntu-18.04/root/
+cp /ubuntu-18.04/root/postgres_commands.txt .
+ll
+. ./.bashrc
+rd .bashrc
+ci -l .bashrc       # "Added my CusTOMizations."
+```
 
-Steps, starting with the basics:
+## Reboot
+
+Reboot and check for mounted filesystems and the presence of aliases.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Install `python`, `pip`, and the `sh` Module
+
+The sites use `python3` aka `python` so might as well might as well properly install it now.
+
+### Process
 
 - 1. Install `python3`, if it's missing
 - 2. Install `pip3`, if it's missing
 - 3. Optionally use `update-alternatives` to enable running just `python` and `pip` without the `3`s
 - 4. Use `pip` to install the `sh` module
 
-The most important part:
+### Commands
 
-```
-pip3 install sh
-```
-
-Additional optional but totally cool commands:
+Run these commands:
 
 ```
 $ apt list --installed | grep python3/focal
@@ -161,4 +249,16 @@ $ pip --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 $
 ```
+## Fix My `up` Command
+
+My `up` command depends on having python3 and the `sh` module installed.
+
+- Reference: https://pypi.org/project/sh/
+
+The most important part:
+
+```
+pip3 install sh
+```
+
 

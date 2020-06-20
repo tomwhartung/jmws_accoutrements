@@ -14,33 +14,33 @@ Extract the source files for the six sites by entering the following commands:
 
 ```
 govw        # /var/www
-mkdir -p artsyvisions.com/htdocs/artsyvisions.com
-cd artsyvisions.com/htdocs/artsyvisions.com
+mkdir -p artsyvisions.com/htdocs
+cd artsyvisions.com/htdocs
 git clone git@github.com:tomwhartung/artsyvisions.com.git
 
 govw        # /var/www
-mkdir -p groja.com/htdocs/groja.com
-cd groja.com/htdocs/groja.com
+mkdir -p groja.com/htdocs
+cd groja.com/htdocs
 git clone git@github.com:tomwhartung/groja.com.git
 
 govw        # /var/www
-mkdir -p joomoowebsites.com/htdocs/joomoowebsites.com
-cd joomoowebsites.com/htdocs/joomoowebsites.com
+mkdir -p joomoowebsites.com/htdocs
+cd joomoowebsites.com/htdocs
 git clone git@github.com:tomwhartung/joomoowebsites.com.git
 
 govw        # /var/www
-mkdir -p seeourminds.com/htdocs/seeourminds.com
-cd seeourminds.com/htdocs/seeourminds.com
+mkdir -p seeourminds.com/htdocs
+cd seeourminds.com/htdocs
 git clone git@github.com:tomwhartung/seeourminds.com.git
 
 govw        # /var/www
-mkdir -p tomhartung.com/htdocs/tomhartung.com
-cd tomhartung.com/htdocs/tomhartung.com
+mkdir -p tomhartung.com/htdocs
+cd tomhartung.com/htdocs
 git clone git@github.com:tomwhartung/tomhartung.com.git
 
 govw        # /var/www
-mkdir -p tomwhartung.com/htdocs/tomwhartung.com
-cd tomwhartung.com/htdocs/tomwhartung.com
+mkdir -p tomwhartung.com/htdocs
+cd tomwhartung.com/htdocs
 git clone git@github.com:tomwhartung/tomwhartung.com.git
 ```
 
@@ -153,13 +153,45 @@ $
 
 ## The Settings File Is Needed for All Django Sites
 
-Get a copy of `gitignored/Site/Site/settings.py` from another host, e.g., bette.
+Get a copy of `gitignored/Site/Site/settings.py` from another host, e.g., jane.
 
 Use `rcsdiff` to check the settings file for changes, and if there are differences, check in the current version.
 
-Then copy the `settings.py` file along with the `RCS` directory to jane.
+Then copy the `settings.py` file along with the `RCS` directory to barbara.
 
 Review and remember: **`SECURITY WARNING: don't run with debug turned on in production!`**
+
+```
+goav                     # var/www/artsyvisions.com/htdocs/artsyvisions.com
+l
+cd gitignored/Site/Site/
+l
+rd settings.py
+toBarbara -y settings.py
+cd RCS/
+toBarbara -y
+
+govw                     # /var/www
+cd seeourminds.com/htdocs/seeourminds.com/gitignored/Site/Site/
+rd settings.py
+toBarbara -y settings.py
+cd RCS/
+toBarbara -y
+
+govw                     # /var/www
+cd tomhartung.com/htdocs/tomhartung.com/gitignored/Site/Site/
+rd settings.py
+toBarbara -y settings.py
+cd RCS/
+toBarbara -y
+
+govw                     # /var/www
+cd tomwhartung.com/htdocs/tomwhartung.com/gitignored/Site/Site/
+rd settings.py
+toBarbara -y settings.py
+cd RCS/
+toBarbara -y
+```
 
 # Flask
 
@@ -186,18 +218,9 @@ Having installed django, we now have pip already installed.
 ```
 $ apt list | grep python3-flask/
 python3-flask/focal,focal 1.1.1-2 all
-$ apt list | grep python3-pip/
-python3-pip/focal,focal,now 20.0.2-5ubuntu1 all [installed]
-$ apt list --installed | grep python3-pip
 $ apt list --installed | grep python3-flask/
 $
 ```
-
-## Installing pip
-
-Having installed django, we now have pip already installed.
-
-For details about the process, see "Installing pip" above.
 
 ## Installing the Latest Version of flask
 
@@ -213,26 +236,20 @@ We want the latest, so we go to https://flask.palletsprojects.com/en/1.1.x/insta
 $ pip install Flask
 Collecting Flask
   Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
-     |████████████████████████████████| 94 kB 145 kB/s
-Collecting Jinja2>=2.10.1
-  Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
-     |████████████████████████████████| 125 kB 143 kB/s
-Collecting click>=5.1
-  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
-     |████████████████████████████████| 82 kB 141 kB/s
-Collecting Werkzeug>=0.15
-  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
-     |████████████████████████████████| 298 kB 144 kB/s
+     |████████████████████████████████| 94 kB 127 kB/s
+Requirement already satisfied: click>=5.1 in /usr/lib/python3/dist-packages (from Flask) (7.0)
+Requirement already satisfied: Jinja2>=2.10.1 in /usr/lib/python3/dist-packages (from Flask) (2.10.1)
 Collecting itsdangerous>=0.24
   Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
-Collecting MarkupSafe>=0.23
-  Downloading MarkupSafe-1.1.1-cp38-cp38-manylinux1_x86_64.whl (32 kB)
-Installing collected packages: MarkupSafe, Jinja2, click, Werkzeug, itsdangerous, Flask
-Successfully installed Flask-1.1.2 Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 itsdangerous-1.1.0
+Collecting Werkzeug>=0.15
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+     |████████████████████████████████| 298 kB 158 kB/s
+Installing collected packages: itsdangerous, Werkzeug, Flask
+Successfully installed Flask-1.1.2 Werkzeug-1.0.1 itsdangerous-1.1.0
 $
 ```
 
-## The Settings File Is Needed for All Django Sites
+## The Settings File Is Needed for All Flask Sites
 
 Get a copy of `gitignored/Site/Site/settings.py` from another host.
 

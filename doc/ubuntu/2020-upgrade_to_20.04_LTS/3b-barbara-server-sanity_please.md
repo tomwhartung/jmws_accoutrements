@@ -209,12 +209,6 @@ rd .bashrc
 ci -l .bashrc       # "Added my CusTOMizations."
 ```
 
-## Reboot
-
-Reboot and check for mounted filesystems and the presence of aliases.
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 ## Install `python`, `pip`, and the `sh` Module
 
 The sites use `python3` aka `python` so might as well might as well properly install it now.
@@ -232,7 +226,9 @@ Run these commands:
 
 ```
 $ apt list --installed | grep python3/focal
-python3/focal,now 3.8.2-0ubuntu2 amd64 [installed]
+python3/focal,now 3.8.2-0ubuntu2 amd64 [installed,automatic]
+$ which python3
+/usr/bin/python3
 $ which python
 $ update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 $ which python
@@ -251,14 +247,29 @@ $
 ```
 ## Fix My `up` Command
 
-My `up` command depends on having python3 and the `sh` module installed.
+Clone the `jmws_accoutrements` repo:
+
+```
+cd /var
+sudo mkdir www
+sudo chown tomh:tomh www
+cd www
+git clone git@github.com:tomwhartung/jmws_accoutrements.git
+```
+
+My `up` command also depends on having the `sh` module installed.
 
 - Reference: https://pypi.org/project/sh/
 
-The most important part:
+Install the `sh` module installed.
 
 ```
-pip3 install sh
+pip install sh
 ```
 
+It still does not work as well as I would like it to, but whatevs.
+
+## Reboot
+
+Reboot and check for mounted filesystems and the presence of aliases.
 

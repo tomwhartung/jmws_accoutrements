@@ -50,28 +50,7 @@ Note: **MDB 4 uses jQuery 3.5.1,** and we are using MDB 4 on the new tomwhartung
 This fix works ok!
 However, now we really **need to run a regression test on the entire site** to make sure everything still looks ok.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Continued
 
-## CSS Issue
-
-The content of the `blockquote` tags look just like that of the `p` tags.
-Something is not right here.
-
-Example: Nixon's page:
-
-- http://127.0.0.1:8001/image/5040-politicians-us_presidents-1900s/5062/
-
-# Content Updates
-
-Remove free spiritual portrait offer.
-
-# Review
-
-## Check the Icons
-
-Ensure social media icons link to correct accounts.
-
-## Test the Quiz
-
-**I made several very minor updates to class Score in `models.py`, so we need to re-test the quiz to make sure it still works.**
+These updates are continued in `5b-seeourminds.md`.
 

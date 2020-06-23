@@ -297,22 +297,7 @@ and updated `base.html` to use the `bootstrap.css` file instead of `bootstrap.mi
 
 Now the page loads without errors or warnings, yay!
 
+# Continued
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-
-### 6. Minimal Content
-
-
-
-# Content Updates
-
-Update site to contain:
-
-- List of my spiritual portrait books
-- List of my spiritual portrait sites
-- List of social networking sites where I post spiritual portraits
-- Call for help with sales
-  - Maybe dedicate a page to this: I am no salesman, can offer commision only, etc.
-
+Updates continue in `5f-tomwhartung.md`.
 

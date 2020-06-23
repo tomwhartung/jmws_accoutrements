@@ -58,21 +58,7 @@ Fixed by copying link tag used for font Awesome from seeourminds.com .
 recommends for using with MDB 4 - and it did not work.**
 That is just an FYI, something to think about when we get to working on that site.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Continued
 
-## Installing Additional Required Packages
-
-Postgres may be needed I am not totally sure, but will look into this later.
-
-Or the site might use sqlite?  Need to make sure, but I am anxious to do my server shuffle.
-
-# Content Updates
-
-The content on this site is OK as-is.
-
-# Review
-
-Review conversions with an eye to prevent spam.
-
-Ensure social media icons link to correct accounts.
+These updates are continued in `5a-groja.md`.
 

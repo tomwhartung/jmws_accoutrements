@@ -19,20 +19,20 @@ elif [ $this_hostname == "barbara" ]; then
    more_dirs="Downloads Pictures technical"
    mail_dirs=".thunderbird"
 elif [ $this_hostname == "bette" ]; then
-   more_dirs="Downloads jobsearch marketing personal technical work"
+   more_dirs="Downloads Pictures jobsearch marketing personal technical"
    ## mail_dirs=".thunderbird"
    mail_dirs=""
 elif [ $this_hostname == "humphrey" ]; then
    more_dirs="iot"
    mail_dirs=""
 elif [ $this_hostname == "jane" ]; then
-   more_dirs="Downloads jobsearch marketing personal technical work"
+   more_dirs="Downloads jobsearch marketing personal technical"
    mail_dirs=".thunderbird"
 elif [ $this_hostname == "lauren" ]; then
    more_dirs="Downloads personal technical"
    mail_dirs=""
 elif [ $this_hostname == "rita.local" ]; then
-   more_dirs="Documents Pictures jobsearch my_joomla personal technical work"
+   more_dirs="Documents Pictures jobsearch my_joomla personal technical"
    mail_dirs=""
    this_sum_command="md5 -q"
    dest_sum_command="md5sum"

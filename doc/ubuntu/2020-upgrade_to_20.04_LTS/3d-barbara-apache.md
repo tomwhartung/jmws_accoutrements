@@ -93,14 +93,19 @@ On barbara:
 cd /etc/apache2/
 l
 mkdir RCS
-ci -l apache2.conf       # 'Installed version.'
-vi apache2.conf          # Add "CusTOMizations"
+ci -l apache2.conf             # 'Installed version.'
 rd apache2.conf
-ci -l apache2.conf       # 'Added "ServerName jane" and a bunch of comments.'
-ci -l envvars            # 'Installed version.'
-vi envvars               # Add "CusTOMizations"
+diff ~/unpack/apache2.conf apache2.conf     # cusTOMizations plus other updates
+cat ~/unpack/apache2.conf                   # grab just the cuTOMizations
+cat >> apache2.conf                         # and paste them at the end
+rd apache2.conf
+ci -l apache2.conf             # 'Added cusTOMizations: "ServerName ava", disable indexes, and a bunch of comments.'
+
+diff ~/unpack/envvars envvars      # just cusTOMizations
+cat ~/unpack/envvars               # grab just the cusTOMizations
+cat >> envvars                     # and paste them at the end
 rd envvars
-ci -l envvars            # 'Added definitions of GROJA_MAIL_FROM and GROJA_MAIL_TO .'
+ci -l envvars                  # 'Added definitions of GROJA_MAIL_FROM and GROJA_MAIL_TO .'
 ```
 
 ### Part 2: Site-specific Configuration
@@ -123,77 +128,98 @@ Note that old config files for each site are in /ubuntu-16.04/etc/apache2/sites-
 First, though, see whether the maintainers have made any changes to the installed `*default*.conf` server config files:
 
 ```
-diff /ubuntu-16.04/etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
-diff /ubuntu-16.04/etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
-```
-
-I am seeing some changes I made to these files, and these two lines that are not in the installed version
-yet are commented out in my old versions:
-
-```
-3,4d2
-<       ### <VirtualHost *:443>
-<       ### <VirtualHost jane.seeourminds.com:443>
-```
-
-Not totally sure where those came from or why, but they look like ideas I tried but that did not work,
-and I left them in there so I wouldn't waste time trying them again.
-
-More than that, lines 1-2 in both the old and new `default-ssl.conf` files are:
-
-```
-<IfModule mod_ssl.c>
-        <VirtualHost _default_:443>
-```
-
-Which is obviously the syntax we want for this directive.
-The comments are not useful, except to keep me from trying something similar again and again etc.
-
-**Bottom line:** it looks like it will be ok to just copy the old config files into the new directory.
-
-#### Copy the Files and Test
-
-Just copy the files and test it, noting that:
-
-- I really do not plan to use apache on jane
-- I can't test ssl unless I go live
-
-And really the whole point of this exercise is to just do what I can to help make
-the server shuffle for barbara go more quickly.
-
-```
-$ rd *
-===================================================================
-RCS file: RCS/000-default.conf,v
-retrieving revision 1.1
-diff -r1.1 000-default.conf
-===================================================================
-RCS file: RCS/default-ssl.conf,v
-retrieving revision 1.1
-diff -r1.1 default-ssl.conf
-$ l /ubuntu-16.04/etc/apache2/sites-available
-total 144
--rw-r--r-- 1 root root 1417 Nov 21  2016 000-default.conf
--rw-r--r-- 1 root root 3509 Nov 24  2018 010-artsyvisions.com.conf
-. . .
-. . .
-. . .
--rw-r--r-- 1 root root 2476 Jun  1  2017 086-tomwhartung.com-le-ssl-redirect.conf
--rw-r--r-- 1 root root 3169 Nov 21  2016 150-wsgi.test.conf
-drwxr-xr-x 2 root root 4096 Jun 18 15:22 RCS
--rw-r--r-- 1 root root 6884 May 20  2017 default-ssl.conf
-$ cp  /ubuntu-16.04/etc/apache2/sites-available/*.conf .
-cp: overwrite './000-default.conf'? y
-cp: overwrite './default-ssl.conf'? y
+$ diff ~/unpack/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
+11,14c11,12
+<       ### ServerAdmin webmaster@localhost
+<       ### DocumentRoot /var/www/html
+<       ServerAdmin junk@tomhartung.com
+<       DocumentRoot /var/www
+---
+>       ServerAdmin webmaster@localhost
+>       DocumentRoot /var/www/html
+22d19
+<       LogLevel info
+24c21
+<       CustomLog ${APACHE_LOG_DIR}/access.log vhost_combined
+---
+>       CustomLog ${APACHE_LOG_DIR}/access.log combined
+$ diff ~/unpack/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
+14c14
+<               CustomLog ${APACHE_LOG_DIR}/access.log vhost_combined
+---
+>               CustomLog ${APACHE_LOG_DIR}/access.log combined
 $
 ```
 
-Link only the regular, "skid row," `??0-*.conf` files in `sites-available` to `sites-enabled`:
+**These are changes we want to keep:** so just copy the old config files into the new directory.
+
+```
+cp ~/unpack/sites-available/000-default.conf .
+cp ~/unpack/sites-available/default-ssl.conf  .
+rd *.conf
+ci -l *.conf                    # "Updated to the version of this default file I am more likely to use."
+```
+
+Also copy and check in the wsgi test file.
+
+```
+cp  ~/unpack/sites-available/150-wsgi.test.conf .
+ci -l 150-wsgi.test.conf                         # "Adding a wsgi test file that might come in handy someday when troubleshooting."
+```
+
+#### Copy and Rename the Files, Change the hostname, and Test
+
+Copy the site files used on ava, rename a few of them, change the hostname, and test the sites.
+
+```
+$ ~/unpack/sites-available/*.com*
+total 144
+-rw-r--r-- 1 root root 3578 Dec 29  2018 /root/unpack/sites-available/010-artsyvisions.com.conf
+-rw-r--r-- 1 root root 3687 Dec 29  2018 /root/unpack/sites-available/012-artsyvisions.com-redirect.conf
+. . .
+. . .
+. . .
+-rw-r--r-- 1 root root 2086 May 29  2017 /root/unpack/sites-available/082-tomwhartung.com-redirect.conf
+-rw-r--r-- 1 root root 2406 Jun  1  2017 /root/unpack/sites-available/084-tomwhartung.com-le-ssl.conf
+-rw-r--r-- 1 root root 2550 Jun  1  2017 /root/unpack/sites-available/086-tomwhartung.com-le-ssl-redirect.conf
+$ cp ~/unpack/sites-available/*.com* .
+```
+
+Rename files that we do not use, adding `UNUSED` to the name.
+
+```
+mv 014-artsyvisions.com-self_signed-ssl.conf 014-artsyvisions.com-ss_snakeoil-ssl-UNUSED.conf
+mv 024-groja.com-self_signed-ssl.conf 024-groja.com-ss_snakeoil-ssl-UNUSED.conf
+l *self*   # make sure we got them all
+
+mv 016-artsyvisions.com-le-ssl-redirect.conf 016-artsyvisions.com-le-ssl-redirect-UNUSED.conf
+mv 026-groja.com-le-ssl-redirect.conf 026-groja.com-le-ssl-redirect-UNUSED.conf
+mv 046-joomoowebsites.com-le-ssl-redirect.conf 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf
+mv 056-seeourminds.com-le-ssl-redirect.conf 056-seeourminds.com-le-ssl-redirect-UNUSED.conf
+mv 066-tomhartung.com-le-ssl-redirect.conf 066-tomhartung.com-le-ssl-redirect-UNUSED.conf
+mv 086-tomwhartung.com-le-ssl-redirect.conf 086-tomwhartung.com-le-ssl-redirect-UNUSED.conf
+l *ssl-redirect*   # make sure we got them all
+```
+
+Check in the files before changing any of them.  Don't worry about the `*tomwhartung*` for now, those will come from jane.
+
+```
+ci -l 0[12456]*.conf        # "Apache config file copied from ava 2020-06-24."
+```
+
+Change all occurrences of `ava\.` to `barbara.`
+
+```
+$ vi 0[12456]*.conf
+$
+```
+
+Link only the non-ssl using, "skid row," `0[12456]0*.conf` files in `sites-available` to `sites-enabled`:
 
 ```
 $ cd /etc/apache2/sites-enabled
-$ l ../sites-available/??0-*.conf
-$ ln -s  ../sites-available/??0-*.conf .
+$ l ../sites-available/0[12456]0*.conf
+$ ln -s ../sites-available/0[12456]0*.conf .
 ln: failed to create symbolic link './000-default.conf': File exists
 $ l
 total 0
@@ -208,27 +234,19 @@ lrwxrwxrwx 1 root root 37 Jun 18 17:25 150-wsgi.test.conf -> ../sites-available/
 $
 ```
 
-That's easier than running `a2ensite`, but oops, we wind up with too many links:
+Test the config files.
 
 ```
 $ apache2ctl configtest
-AH00526: Syntax error on line 16 of /etc/apache2/sites-enabled/080-tomwhartung.com.conf:
-Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+AH00526: Syntax error on line 33 of /etc/apache2/sites-enabled/010-artsyvisions.com.conf:
+Invalid command 'WSGIDaemonProcess', perhaps misspelled or defined by a module not included in the server configuration
 Action 'configtest' failed.
 The Apache error log may have more information.
-$ l sites-enabled/
-$ rm  sites-enabled/080-tomwhartung.com.conf
-rm: remove symbolic link 'sites-enabled/080-tomwhartung.com.conf'? y
-$ apache2ctl configtest
-AH00112: Warning: DocumentRoot [/var/www/learn/django/github/customizations/always_learning_python/3-mod_wsgi/documents] does not exist
-Syntax OK
-$ l sites-enabled/150-wsgi.test.conf
-$ more sites-enabled/150-wsgi.test.conf
-. . .
-. . .
-. . .
-$ rm sites-enabled/150-wsgi.test.conf
-rm: remove symbolic link 'sites-enabled/150-wsgi.test.conf'? y
+```
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+```
 $ apache2ctl configtest
 Syntax OK
 $

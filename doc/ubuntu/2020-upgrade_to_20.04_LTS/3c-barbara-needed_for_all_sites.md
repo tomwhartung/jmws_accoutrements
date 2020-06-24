@@ -6,7 +6,7 @@ Instructions for installing the latest stable versions of software needed for tw
 - Python
 - Django
 - Flask
-- Apache
+- [Apache] - moved all that to `3d-barbara-apache.md`
 
 # Cloning the Source Repos
 

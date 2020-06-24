@@ -27,7 +27,7 @@ We **do** want to set it up to use SSL, though!
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-## Process and Commands
+## Installation: Process and Commands
 
 ### Process Overview:
 
@@ -45,18 +45,49 @@ We **do** want to set it up to use SSL, though!
 apt-get update
 apt-get upgrade -y
 apt install apache2
-## apt-get install libapache2-mod-wsgi      ## WRONG!!!  SEE BELOW!!!
-apt-get install libapache2-mod-wsgi-py3     ## YES!!!  SEE BELOW!!!
+apt-get install libapache2-mod-wsgi-py3
 cd /etc/apache2/conf
 ```
 
 ## Fixing the Configuration Files
 
-### Part 1: Installation-wide Configuration
+Overview:
 
-Updating the configuration part one - update the files in the top-level directory.
+Use files on ava as starting points
+
+- 0. Create a tar file to help copy files from ava to barbara
+- 1. Update files in top-level directory
+- 2. Add site-specific config files from ava, updating them as needed for barbara
+- 3. Rename unused files as done at the end of `1e-jane-needed_for_all_sites.md`
+- 4. Test and ensure all sites work ok.
+- 5. Ensure all current versions are checked into RCS
+- 6. Clean up the files as appropriate, e.g., deleting obsolete comments, etc.
+- 7. Check all final versions into RCS
+
+### 0: Tar File From ava
+
+Copy the files from ava in one fell swoop.
+
+On ava:
+
+```
+cd /etc/apache2
+tar -cvzf  config_for_barbara.tgz apache2.conf envvars sites-available/*.conf
+. . .
+. . .
+. . .
+mv config_for_barbara.tgz /tmp
+cd /tmp
+toBarbara config_for_barbara.tgz
+```
+
+### 1: Top-level Configuration Files
+
+- 1. Update the files in the top-level directory.
 
 Get updates made for previous installs by looking for "CusTOMizations" in /ubuntu-16.04/etc/apache2
+
+On barbara:
 
 ```
 cd /etc/apache2/

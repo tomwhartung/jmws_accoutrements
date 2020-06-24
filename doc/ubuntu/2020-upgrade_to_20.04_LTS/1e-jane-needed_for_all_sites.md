@@ -550,9 +550,27 @@ cd bin
 
 And so on, as necessary.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+### Part 3: Update the `*-tomwhartung.conf` Files
 
-#### Update the `*-tomwhartung.conf` Files
+Update the `*-tomwhartung.conf` files to serve python3 rather than php apps.
 
-Finally, we need to update the `*-tomwhartung.conf` files to serve python3 rather than php apps.
+- Use the `*-tomhartung.conf` files as starting points.
+
+### Part 4: Begin Apache2 Config Files Cleanup
+
+- Rename unused config files to contain `-UNUSED` in their names
+
+```
+mv 014-artsyvisions.com-self_signed-ssl.conf 014-artsyvisions.com-ss_snakeoil-ssl-UNUSED.conf
+mv 024-groja.com-self_signed-ssl.conf 024-groja.com-ss_snakeoil-ssl-UNUSED.conf
+mv 054-seeourminds.com-self_signed-ssl.conf 054-seeourminds.com-ss_snakeoil-ssl-UNUSED.conf
+
+mv 016-artsyvisions.com-le-ssl-redirect.conf 016-artsyvisions.com-le-ssl-redirect-UNUSED.conf
+mv 026-groja.com-le-ssl-redirect.conf 026-groja.com-le-ssl-redirect-UNUSED.conf
+mv 046-joomoowebsites.com-le-ssl-redirect.conf 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf
+mv 056-seeourminds.com-le-ssl-redirect.conf 056-seeourminds.com-le-ssl-redirect-UNUSED.conf
+mv 066-tomhartung.com-le-ssl-redirect.conf 066-tomhartung.com-le-ssl-redirect-UNUSED.conf
+```
+
+- Ensure all files are checked in to RCS
 

@@ -7,6 +7,12 @@ Installing apache on barbara.
 
 We **do** want to set it up to use SSL, though!
 
+# Process - The Big Picture
+
+- [ ] 1. Install Apache
+- [ ] 2. Fix Configuration Files
+- [ ] 3. Setup SSL
+
 ## References
 
 ### References Used for Setting up jane
@@ -25,9 +31,9 @@ We **do** want to set it up to use SSL, though!
 - Explains how to move SSL certificates from one host to another
   - https://serverfault.com/questions/209409/moving-ssl-certificate-from-one-apache-server-to-another
 
-## Installation: Process and Commands
+# Install Apache - Process and Commands
 
-### Process Overview:
+## Process Overview:
 
 - 1. Update everything so we have the latest of any associated dependencies, etc.
 - 2. Install apache2
@@ -37,7 +43,7 @@ We **do** want to set it up to use SSL, though!
 - 4. Run `collectstatic.sh` for each django site
 - 5. Restart apache and test
 
-### Commands:
+## Commands:
 
 ```
 apt-get update
@@ -47,7 +53,7 @@ apt-get install libapache2-mod-wsgi-py3
 cd /etc/apache2/conf
 ```
 
-## Fixing the Configuration Files
+# Fix the Configuration Files
 
 Overview:
 
@@ -62,7 +68,7 @@ Use files on ava as starting points
 - 6. Clean up the files as appropriate, e.g., deleting obsolete comments, etc.
 - 7. Check all final versions into RCS
 
-### 0: Tar File From ava
+## Step 1: Tar File From ava
 
 Copy the files from ava in one fell swoop.
 
@@ -79,7 +85,7 @@ cd /tmp
 toBarbara config_for_barbara.tgz
 ```
 
-### 1: Top-level Configuration Files
+## Step 2: Top-level Configuration Files
 
 - 1. Update the files in the top-level directory.
 
@@ -106,7 +112,7 @@ rd envvars
 ci -l envvars                  # 'Added definitions of GROJA_MAIL_FROM and GROJA_MAIL_TO .'
 ```
 
-### Part 2: Site-specific Configuration
+## Step 3: Site-specific Configuration
 
 Updating the configuration part two - update the virtual hosts files.
 
@@ -121,7 +127,7 @@ rd *.conf
 
 Note that old config files for each site are in /ubuntu-16.04/etc/apache2/sites-available .
 
-#### Look for Changes Made by the Maintainers
+### Look for Changes Made by the Maintainers
 
 First, though, see whether the maintainers have made any changes to the installed `*default*.conf` server config files:
 
@@ -165,7 +171,7 @@ cp  ~/unpack/sites-available/150-wsgi.test.conf .
 ci -l 150-wsgi.test.conf                         # "Adding a wsgi test file that might come in handy someday when troubleshooting."
 ```
 
-#### Copy and Rename the Files, Change the hostname, and Test
+### Copy and Rename the Files, Change the hostname, and Test
 
 Copy the site files used on ava, rename a few of them, change the hostname, and test the sites.
 
@@ -272,7 +278,7 @@ systemctl restart apache2
 
 Sites starting to render, but the django sites have no style.
 
-#### Run `collectstatic.sh` for Each django Site
+### Run `collectstatic.sh` for Each django Site
 
 Run `collectstatic.sh` as follows:
 
@@ -290,7 +296,7 @@ cd bin
 ./collectstatic.sh
 ```
 
-#### Update the `*-tomwhartung.conf` Files
+### Update the `*-tomwhartung.conf` Files
 
 Get the new `*-tomwhartung.conf` files from jane, and update them for barbara.
 
@@ -333,7 +339,52 @@ cd bin
 ./collectstatic.sh
 ```
 
-Assuming it works, check
+## Step 4: Checkin, Cleanup, and Checkin Again
+
+### Check in the Working Versions
+
+Check in all site-specific config files.
 
 ```
+goeaa                     # /etc/apache2/sites-available
+l 0[124568]*.conf
+rd 0[124568]*.conf
+ci -l 0[12456]*.conf    # "Changed for use on barbara instead of ava."
+rd 08*.conf
+ci -l 08*.conf          # "Initial version copied from jane."
 ```
+
+### Cleanup and Retest
+
+- Remove old comments from the trial-and-error days
+- Do not change any configuration commands
+
+```
+vi 0[124568]*.conf
+```
+
+Restart apache and ensure each site still loads
+
+```
+systemctl reload apache2
+```
+
+Assuming no configuration was changed, everything should still work!
+
+### Check in the Final Working Versions
+
+```
+goeaa                     # /etc/apache2/sites-available
+l 0[124568]*.conf
+rd 0[124568]*.conf
+ci -l 0[124568]*.conf    # "Removed old comments that I have deemed unneeded."
+```
+
+# Setup SSL
+
+We want to use the same certificates we are using on ava, now on barbara.
+
+**The life-saving reference:**
+
+- https://serverfault.com/questions/209409/moving-ssl-certificate-from-one-apache-server-to-another
+

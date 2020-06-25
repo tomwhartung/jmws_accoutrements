@@ -20,12 +20,10 @@ We **do** want to set it up to use SSL, though!
 - How to enable wsgi apps - needed for python:
   - https://askubuntu.com/questions/25374/how-do-you-install-mod-wsgi
 
-### Reference Needed for Setting up barbara
+### Additional Reference Needed for Setting up barbara
 
 - Explains how to move SSL certificates from one host to another
   - https://serverfault.com/questions/209409/moving-ssl-certificate-from-one-apache-server-to-another
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 ## Installation: Process and Commands
 
@@ -181,7 +179,6 @@ total 144
 . . .
 -rw-r--r-- 1 root root 2086 May 29  2017 /root/unpack/sites-available/082-tomwhartung.com-redirect.conf
 -rw-r--r-- 1 root root 2406 Jun  1  2017 /root/unpack/sites-available/084-tomwhartung.com-le-ssl.conf
--rw-r--r-- 1 root root 2550 Jun  1  2017 /root/unpack/sites-available/086-tomwhartung.com-le-ssl-redirect.conf
 $ cp ~/unpack/sites-available/*.com* .
 ```
 
@@ -197,7 +194,6 @@ mv 026-groja.com-le-ssl-redirect.conf 026-groja.com-le-ssl-redirect-UNUSED.conf
 mv 046-joomoowebsites.com-le-ssl-redirect.conf 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf
 mv 056-seeourminds.com-le-ssl-redirect.conf 056-seeourminds.com-le-ssl-redirect-UNUSED.conf
 mv 066-tomhartung.com-le-ssl-redirect.conf 066-tomhartung.com-le-ssl-redirect-UNUSED.conf
-mv 086-tomwhartung.com-le-ssl-redirect.conf 086-tomwhartung.com-le-ssl-redirect-UNUSED.conf
 l *ssl-redirect*   # make sure we got them all
 ```
 
@@ -207,7 +203,7 @@ Check in the files before changing any of them.  Don't worry about the `*tomwhar
 ci -l 0[12456]*.conf        # "Apache config file copied from ava 2020-06-24."
 ```
 
-Change all occurrences of `ava\.` to `barbara.`
+Change all occurrences of `ava\.` to `barbara.`  There should be precisely one occurrence in each file.
 
 ```
 $ vi 0[12456]*.conf
@@ -244,66 +240,100 @@ Action 'configtest' failed.
 The Apache error log may have more information.
 ```
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+This is an easy fix: https://stackoverflow.com/questions/20627327/invalid-command-wsgiscriptalias-perhaps-misspelled-or-defined-by-a-module-not#20627328
+
+Might as well enable vhosts while we're at it.
 
 ```
+$ apt-get install libapache2-mod-wsgi
+$ a2enmod wsgi
+$ a2enmod vhost_alias
 $ apache2ctl configtest
 Syntax OK
 $
 ```
 
-Now to start apache2:
+Restart apache2:
 
 ```
 systemctl restart apache2
 ```
 
-Still having issues, as if the virtual hosts are not working.
-
-```
-$ rm  sites-enabled/000-default.conf
-rm: remove symbolic link 'sites-enabled/000-default.conf'? y
-$
-```
-
-It might help to enable the vhosts module.
-
-```
-l mods-available/          # See vhost_alias
-l mods-enabled/            # No vhost_alias
-a2enmod vhost_alias
-l mods-enabled/            # Now vhost_alias is there
-```
-
 Now getting a 500 error.
+Oops, I thought that python2 stuff I saw while isntalling mod-wsgi looked suspicious.
 
 Fix: https://stackoverflow.com/questions/14927345/importerror-no-module-named-django-core-wsgi-apache-virtualenv-aws-wsgi#22477904
 
 ```
 apt-get remove libapache2-mod-python libapache2-mod-wsgi
 apt-get install libapache2-mod-wsgi-py3
+systemctl restart apache2
 ```
 
-Sites starting to render.  Some have no style.
+Sites starting to render, but the django sites have no style.
 
 #### Run `collectstatic.sh` for Each django Site
 
 Run `collectstatic.sh` as follows:
 
 ```
-goavs                  # /var/www/artsyvisions.com/htdocs/artsyvisions.com/Site/bin
+goavs                  # /var/www/artsyvisions.com/htdocs/artsyvisions.com/Site
 cd bin
 ./collectstatic.sh
-gosss                  # /var/www/seeourminds.com/htdocs/seeourminds.com/Site/bin
+
+gosss                  # /var/www/seeourminds.com/htdocs/seeourminds.com/Site
+cd bin
+./collectstatic.sh
+
+goths                  # /var/www/tomhartung.com/htdocs/tomhartung.com/Site
 cd bin
 ./collectstatic.sh
 ```
 
-And so on, as necessary.
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 #### Update the `*-tomwhartung.conf` Files
 
-Finally, we need to update the `*-tomwhartung.conf` files to serve python3 rather than php apps.
+Get the new `*-tomwhartung.conf` files from jane, and update them for barbara.
 
+On jane:
+
+```
+cp 08* ~/tmp
+cd ~/tmp
+toBarbara 08*
+```
+
+On barbara:
+
+```
+goeaa          # /etc/apache2/sites-available
+$ rd 08*
+rcsdiff: RCS/080-tomwhartung.com.conf,v: No such file or directory
+rcsdiff: RCS/082-tomwhartung.com-redirect.conf,v: No such file or directory
+rcsdiff: RCS/084-tomwhartung.com-le-ssl.conf,v: No such file or directory
+$ mv ~tomh/tmp/08* .
+mv: overwrite './080-tomwhartung.com.conf'? y
+mv: overwrite './082-tomwhartung.com-redirect.conf'? y
+mv: overwrite './084-tomwhartung.com-le-ssl.conf'? y
+chown root:root 08*
+$ vi 08*
+```
+
+Change all occurrences of `jane\.` to `barbara.`
+
+Then enable the site, reload apache2, and run `collectstatic.sh`.
+
+```
+a2ensite 080-tomwhartung.com
+systemctl reload apache2
+```
+
+```
+gotws                  # /var/www/tomwhartung.com/htdocs/tomwhartung.com/Site
+cd bin
+./collectstatic.sh
+```
+
+Assuming it works, check
+
+```
+```

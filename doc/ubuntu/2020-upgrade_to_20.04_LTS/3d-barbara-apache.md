@@ -384,7 +384,84 @@ ci -l 0[124568]*.conf    # "Removed old comments that I have deemed unneeded."
 
 We want to use the same certificates we are using on ava, now on barbara.
 
-**The life-saving reference:**
+- These files are all in `/etc/letsencrypt`
 
-- https://serverfault.com/questions/209409/moving-ssl-certificate-from-one-apache-server-to-another
+## References
+
+The reference below is like 10 years old and this SSL stuff was giving me nightmares recently so let's dig a little deeper.
+
+- (1) "The life-saving reference:"
+  - https://serverfault.com/questions/209409/moving-ssl-certificate-from-one-apache-server-to-another
+- (2) This one also says to just copy the files referenced in the apache config file:
+  - https://askubuntu.com/questions/437340/how-to-export-an-ssl-certificate-from-one-to-another-server-server-migration
+  - This reference is also fairly old, from 2014
+- (3) A **much** more detailed and newer - 201[89], ubuntu 16.04 - reference :
+  - https://www.liquidweb.com/kb/transfer-an-ssl-to-ubuntu-16-04-or-centos-7/
+  - Has some interesting things but is not 100% correct - see below
+- (4) From 2019-03-26 and for 18.04
+  - https://ivanderevianko.com/2019/03/migrate-letsencrypt-certificates-certbot-to-new-server
+- (5) From /etc/letsencrypt//README
+  - https://certbot.eff.org/docs/using.html#where-are-my-certificates
+
+## Observations
+
+It's clear there is more than what references (1) and (2) propose, i.e., just copying the files.
+
+Sample investigative commands from reference (3) show discrepancies between what they say and what I am seeing.
+
+```
+apache2ctl -S
+apt-get install mod_ssl     # "E: Unable to locate package mod_ssl" - interesting
+```
+
+Reference (4) points out:
+
+- Apache conf files want to the file in `/etc/letsencrypt/options-ssl-apache.conf` - not mentioned in (1) or (2), oops
+  - Include /etc/letsencrypt/options-ssl-apache.conf
+- Apache conf files point to "files" in `/etc/letsencrypt/live/*/` - but these are links, oops
+  - SSLCertificateFile    /etc/letsencrypt/live/*/fullchain.pem
+  - SSLCertificateKeyFile /etc/letsencrypt/live/*/privkey.pem
+
+E.g., for groja.com:
+
+```
+$ l /etc/letsencrypt/live/groja.com/*
+-rw-r--r-- 1 root root 543 May 24  2017 /etc/letsencrypt/live/groja.com/README
+lrwxrwxrwx 1 root root  34 May 13 03:20 /etc/letsencrypt/live/groja.com/cert.pem -> ../../archive/groja.com/cert19.pem
+lrwxrwxrwx 1 root root  35 May 13 03:20 /etc/letsencrypt/live/groja.com/chain.pem -> ../../archive/groja.com/chain19.pem
+lrwxrwxrwx 1 root root  39 May 13 03:20 /etc/letsencrypt/live/groja.com/fullchain.pem -> ../../archive/groja.com/fullchain19.pem
+lrwxrwxrwx 1 root root  37 May 13 03:20 /etc/letsencrypt/live/groja.com/privkey.pem -> ../../archive/groja.com/privkey19.pem
+```
+
+So we will need the `archive` directory.
+
+Reference (4) also points out that the `renewal` directory has important config files:
+
+```
+$ l renewal/*.conf
+-rw-r--r-- 1 root root 539 May 13 03:20 renewal/artsyvisions.com.conf
+-rw-r--r-- 1 root root 504 May 13 03:20 renewal/groja.com.conf
+-rw-r--r-- 1 root root 549 May 15 22:47 renewal/joomoowebsites.com.conf
+-rw-r--r-- 1 root root 529 May 14 03:17 renewal/tomhartung.com.conf
+-rw-r--r-- 1 root root 554 May 13 22:39 renewal/www.seeourminds.com.conf
+-rw-r--r-- 1 root root 554 May 14 03:18 renewal/www.tomwhartung.com.conf
+$
+```
+
+There is also a `renewal-hooks` directory that we will need to copy.
+
+Reference (4) also points out that there is a crontab, but theirs is different from what I have.
+
+```
+$ crontab -l
+#
+# Check the Let's Encrypt certificates for expiration every day at 3:15 AM.
+#
+15 3 * * * /usr/bin/certbot renew --quiet
+$ crontab -l > crontab-ssl
+$
+```
+
+We will want to recreate that on barbara
+
 

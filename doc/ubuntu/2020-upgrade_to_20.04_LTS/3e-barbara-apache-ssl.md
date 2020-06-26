@@ -216,7 +216,9 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
           - `a2ensite ...`
     - [x] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
           - `a2ensite ...`
-- [ ] 6. Switch server to barbara
+    - [x] 5.4. Check apache Config and Oops Twice
+    - [x] 5.5. Restart apache
+- [x] 6. Switch server to barbara
     - [x] 6.1. Tail apache access and error log files on ava and barbara
           - `tapa` and `tape` aliases
     - [ ] 6.2. Update tp-link router at `192.168.1.1`
@@ -336,6 +338,44 @@ ln -s  ../sites-available/0?[24]*.conf
 ```
 
 Voila!
+
+#### 5.4. Check apache Config and Oops Twice
+
+Not sure about this, interesting but oh well.
+
+```
+apache2ctl configtest
+```
+```
+gotwt           # /var/www/tomwhartung.com/htdocs/tomwhartung.com
+mkdir documents
+cd  documents
+cp /var/www/tomhartung.com/htdocs/tomhartung.com/documents/index.html .
+```
+
+Oops again.
+
+```
+apache2ctl configtest
+goeaa
+vi 084-tomwhartung.com-le-ssl.conf
+rd 084-tomwhartung.com-le-ssl.conf
+ci -l 084-tomwhartung.com-le-ssl.conf     # "Added 'www.' prefix to match the way letsencrypt is set up."
+```
+```
+$ apache2ctl configtest
+Syntax OK
+$
+```
+
+YES!!!!
+
+#### 5.5. Restart apache
+
+```
+apache2ctl configtest
+systemctl restart apache2
+```
 
 ### Switch server to barbara
 

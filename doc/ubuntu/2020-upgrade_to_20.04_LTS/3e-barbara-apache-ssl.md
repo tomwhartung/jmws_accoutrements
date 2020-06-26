@@ -221,14 +221,13 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
 - [x] 6. Switch server to barbara
     - [x] 6.1. Tail apache access and error log files on ava and barbara
           - `tapa` and `tape` aliases
-    - [ ] 6.2. Update tp-link router at `192.168.1.1`
+    - [x] 6.2. Update tp-link router at `192.168.1.1`
           - Be sure to document changes made so we can un-do them if necessary
-    - [ ] 6.3. Test sites in browser
+    - [x] 6.3. Update `/etc/hosts` and `/var/www/index.html` on jane
+    - [ ] 6.4. Test sites in browser
           - Check https, which should work
           - Check http, which should redirect to https
 - [ ] 7. Decide whether to keep barbara the server or fall back to ava and regroup
-- [ ] 1.
-- [ ] 1. Troubleshooting
 - [ ] 1.
 - [ ] 1. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
 - [ ] 1.
@@ -328,10 +327,10 @@ goeae     # /etc/apache2/sites-enabled
 rm -f *.conf
 ```
 
-#### 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
-#### 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
+#### 5.2. Enable the `0?2-*` files in `/etc/apache2/sites-avalaible/`
+#### 5.3. Enable the `0?4-*` files in `/etc/apache2/sites-avalaible/`
 
-Seriously, eff dem `a2*` commands!  I can do it my way in just one command!
+Seriously, eff dem `a2*` commands!  I can do it my way with just one!!
 
 ```
 ln -s  ../sites-available/0?[24]*.conf
@@ -362,6 +361,9 @@ vi 084-tomwhartung.com-le-ssl.conf
 rd 084-tomwhartung.com-le-ssl.conf
 ci -l 084-tomwhartung.com-le-ssl.conf     # "Added 'www.' prefix to match the way letsencrypt is set up."
 ```
+
+[x] **Be sure to migrate this change to the version of the file on jane.**
+
 ```
 $ apache2ctl configtest
 Syntax OK
@@ -373,7 +375,7 @@ YES!!!!
 #### 5.5. Restart apache
 
 ```
-apache2ctl configtest
+service apache2 restart     # --OR--
 systemctl restart apache2
 ```
 
@@ -394,18 +396,23 @@ Process:
 
 1. Access http://192.168.1.1/ and sign in
 2. Menu -> Advanced -> NAT -> Virtual Server
-3. ava -> Deactivate
-3. ava -> Edit (Pencil) -> Change both port parameters to 81
-3. ava-ssl -> Deactivate
-3. ava-ssl -> Edit (Pencil) -> Change both port parameters to 445
-3. barbara -> Edit (Pencil) -> Change both port parameters to 80
-3. barbara -> Activate
-3. barbara-ssl -> Edit (Pencil) -> Change both port parameters to 443
-3. barbara-ssl -> Activate
+3. ava -> Inactivate
+4. ava -> Edit (Pencil) -> Change both port parameters to 81
+5. ava-ssl -> Inactivate
+6. ava-ssl -> Edit (Pencil) -> Change both port parameters to 445
+7. barbara -> Edit (Pencil) -> Change both port parameters to 80
+8. barbara -> Activate
+9. barbara-ssl -> Edit (Pencil) -> Change both port parameters to 443
+10. barbara-ssl -> Activate
 
-#### 6.3. Test sites in browser
-    - Check https, which should work
-    - Check http, which should redirect to https
+#### 6.3. Update `/etc/hosts` and `/var/www/index.html` on jane
+
+Update `/etc/hosts` and `/var/www/index.html` on jane to reflect the `www.*` and [no-prefix] sites are all now on barbara, `192.168.0.116`.
+
+#### 6.4. Test sites in browser
+
+- Check https, which should work
+- Check http, which should redirect to https
 
 ```
 ```

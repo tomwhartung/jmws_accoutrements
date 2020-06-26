@@ -224,15 +224,12 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
     - [x] 6.2. Update tp-link router at `192.168.1.1`
           - Be sure to document changes made so we can un-do them if necessary
     - [x] 6.3. Update `/etc/hosts` and `/var/www/index.html` on jane
-    - [ ] 6.4. Test sites in browser
+    - [x] 6.4. Test sites in browser
           - Check https, which should work
           - Check http, which should redirect to https
-- [ ] 7. Decide whether to keep barbara the server or fall back to ava and regroup
-- [ ] 1.
-- [ ] 1. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
-- [ ] 1.
-- [ ] 1. More??
-- [ ] 1.
+- [x] 7. Decide whether to keep barbara the server or fall back to ava and regroup
+- [x] 8. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
+- [ ] 9. Troubleshooting tomwhartung.com
 
 ## Steps, Commands, and Notes
 
@@ -411,34 +408,51 @@ Update `/etc/hosts` and `/var/www/index.html` on jane to reflect the `www.*` and
 
 #### 6.4. Test sites in browser
 
-- Check https, which should work
-- Check http, which should redirect to https
+All sites work ok except tomwhartung.com , which redirects to artsyvisions.com.  Rats.
+
+#### 6.5. Log Files
+
+- [x] Seeing activity in the logfiles on barbara.
+- [x] Seeing **NO** activity in the logfiles on ava.
+
+Nice.
+
+### 7. Decide whether to keep barbara the server or fall back to ava and regroup
+
+Since I do not have anything for tomwhartung.com yet, I say it's not a biggie, but try to fix it asap.
+
+### 8. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
+
+I do not think it is necessary, because the certbot cronjob is there.
+
+```
+$ cat /etc/cron.d/certbot
+# /etc/cron.d/certbot: crontab entries for the certbot package
+#
+# Upstream recommends attempting renewal twice a day
+#
+# Eventually, this will be an opportunity to validate certificates
+# haven't been revoked, etc.  Renewal will only occur if expiration
+# is within 30 days.
+#
+# Important Note!  This cronjob will NOT be executed if you are
+# running systemd as your init system.  If you are running systemd,
+# the cronjob.timer function takes precedence over this cronjob.  For
+# more details, see the systemd.timer manpage, or use systemctl show
+# certbot.timer.
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 */12 * * * root test -x /usr/bin/certbot -a \! -d /run/systemd/system && perl -e 'sleep int(rand(43200))' && certbot -q renew
+$
+```
+
+This must have been installed when I installed the certbot packages in Step 2.
+
+**Hope it does what I think it does.**
+
+### 9. Troubleshooting tomwhartung.com
 
 ```
 ```
-
-### Decide whether to keep barbara the server or fall back to ava and regroup
-
-```
-```
-
-###
-### Troubleshooting
-
-```
-```
-
-###
-### If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
-
-```
-```
-
-###
-### More??
-
-```
-```
-
-###
 

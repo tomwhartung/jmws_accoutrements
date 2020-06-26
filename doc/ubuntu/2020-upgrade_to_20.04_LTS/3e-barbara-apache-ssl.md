@@ -206,8 +206,8 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
 - [x] 1. Install certbot packages
   - `apt list certbot python3-certbot-apache`
 - [x] 2. Put all of the `/etc/letsencrypt` directory on ava into a tar file
-- [ ] 3. Copy the tar file to barbara and unpack it
-- [ ] 4. Enable mod_ssl on barbara
+- [x] 3. Copy the tar file to barbara and unpack it
+- [x] 4. Enable mod_ssl on barbara
   - `a2enmod ssl`
 - [ ] 5. Switch over the apache config files
     - [ ] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
@@ -280,15 +280,40 @@ toBarbara letsencrypt-for_barbara-2020_06_26.tgz
 On barbara:
 
 ```
+cd /etc
+mkdir unpack
+cd unpack
+mv /tmp/letsencrypt-for_barbara-2020_06_26.tgz .
+tar -xvzf letsencrypt-for_barbara-2020_06_26.tgz
+cd ..
+mv letsencrypt letsencrypt-installed
+mv unpack/letsencrypt .
 ```
 
 ### Enable mod_ssl on barbara
-  - `a2enmod ssl`
+
+For grins, restart apache and test sites before enabling the module.
 
 ```
+$ a2enmod ssl
+Considering dependency setenvif for ssl:
+Module setenvif already enabled
+Considering dependency mime for ssl:
+Module mime already enabled
+Considering dependency socache_shmcb for ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+$
 ```
+
+The sites still work after running `systemctl restart apache2`.
+Fortunately, ye olde `service apache2 restart` still works as well, because that's what I'm used to running.
 
 ### Switch over the apache config files
+
   - 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
     - `a2dissite ...`
 
@@ -297,6 +322,8 @@ On barbara:
 
   - 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
     - `a2ensite ...`
+
+The sites still work after enabling the module, will they work when I enable the config files?
 
 ```
 ```

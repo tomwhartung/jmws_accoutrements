@@ -203,37 +203,123 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
 
 **The sequence of these steps may need to be modified somewhat.**
 
-1. Put all of the `/etc/letsencrypt` on ava into a tar file
-2. Copy the tar file to barbara and unpack it
-3. Install certbot packages
+- [ ] 1. Put all of the `/etc/letsencrypt` on ava into a tar file
+- [ ] 2. Copy the tar file to barbara and unpack it
+- [ ] 3. Install certbot packages
   - `apt list certbot python3-certbot-apache`
-4. Enable mod_ssl on barbara
+- [ ] 4. Enable mod_ssl on barbara
   - `a2enmod ssl`
-5. Switch over the apache config files
+- [ ] 5. Switch over the apache config files
+    - [ ] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
+          - `a2dissite ...`
+    - [ ] 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
+          - `a2ensite ...`
+    - [ ] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
+          - `a2ensite ...`
+- [ ] 6. Switch server to barbara
+    - [ ] 6.1. Tail apache access and error log files
+          - `tapa` and `tape` aliases
+    - [ ] 6.2. Update tp-link router at `192.168.1.1`
+          - Be sure to document changes made so we can un-do them if necessary
+    - [ ] 6.3. Test sites in browser
+          - Check https, which should work
+          - Check http, which should redirect to https
+- [ ] 7. Decide whether to keep barbara the server or fall back to ava and regroup
+- [ ] 1.
+- [ ] 1. Troubleshooting
+- [ ] 1.
+- [ ] 1. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
+- [ ] 1.
+- [ ] 1. More??
+- [ ] 1.
+
+## Steps, Commands, and Notes
+
+Ok, here we go!  Time to put this behind us and get on to new improved nightmares!!
+
+### Put all of the `/etc/letsencrypt` on ava into a tar file
+
+```
+```
+
+### Copy the tar file to barbara and unpack it
+
+```
+```
+
+### Install certbot packages
+  - `apt list certbot python3-certbot-apache`
+
+```
+```
+
+### Enable mod_ssl on barbara
+  - `a2enmod ssl`
+
+```
+```
+
+### Switch over the apache config files
   - 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
     - `a2dissite ...`
+
+```
+```
+
   - 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
     - `a2ensite ...`
+
+```
+```
+
   - 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
     - `a2ensite ...`
-6. Switch server to barbara
+
+```
+```
+
+### Switch server to barbara
   - 6.1. Tail apache access and error log files
     - `tapa` and `tape` aliases
+
+```
+```
+
   - 6.2. Update tp-link router at `192.168.1.1`
     - Be sure to document changes made so we can un-do them if necessary
+
+```
+```
+
   - 6.3. Test sites in browser
     - Check https, which should work
     - Check http, which should redirect to https
-7. Decide whether to keep barbara the server or fall back to ava and regroup
-1.
-1. Troubleshooting
-1.
-1. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
-1.
-1. More??
-1.
 
-## Notes and Commands
+```
+```
 
-Ok, here we go!
+### Decide whether to keep barbara the server or fall back to ava and regroup
+
+```
+```
+
+###
+### Troubleshooting
+
+```
+```
+
+###
+### If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
+
+```
+```
+
+###
+### More??
+
+```
+```
+
+###
 

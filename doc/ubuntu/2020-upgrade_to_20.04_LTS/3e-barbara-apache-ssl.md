@@ -209,12 +209,12 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
 - [x] 3. Copy the tar file to barbara and unpack it
 - [x] 4. Enable mod_ssl on barbara
   - `a2enmod ssl`
-- [ ] 5. Switch over the apache config files
-    - [ ] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
+- [x] 5. Switch over the apache config files
+    - [x] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
           - `a2dissite ...`
-    - [ ] 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
+    - [x] 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
           - `a2ensite ...`
-    - [ ] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
+    - [x] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
           - `a2ensite ...`
 - [ ] 6. Switch server to barbara
     - [x] 6.1. Tail apache access and error log files on ava and barbara
@@ -314,25 +314,28 @@ Fortunately, ye olde `service apache2 restart` still works as well, because that
 
 ### Switch over the apache config files
 
-  #### 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
-    - `a2dissite ...`
+Ya know, eff `a2dissite ...` and `a2ensite ...`!
+
+I purposely assigned names to the sites-available files that would make it easy to do links,
+which is all those programs do anyway.
+
+#### 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
 
 ```
+goeae     # /etc/apache2/sites-enabled
+rm -f *.conf
 ```
 
-  #### 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
-    - `a2ensite ...`
+#### 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
+#### 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
 
-The sites still work after enabling the module, will they work when I enable the config files?
-
-```
-```
-
-  #### 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
-    - `a2ensite ...`
+Seriously, eff dem `a2*` commands!  I can do it my way in just one command!
 
 ```
+ln -s  ../sites-available/0?[24]*.conf
 ```
+
+Voila!
 
 ### Switch server to barbara
 

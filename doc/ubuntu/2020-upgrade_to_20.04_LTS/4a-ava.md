@@ -3,20 +3,17 @@
 
 Upgrading ava by installing into existing `/mnt/future*` and `/mnt/spare*` partitions
 
-# Upgrading to Ubuntu 20.04 LTS (Focal Fossa)
+# Upgrading to Kubuntu Desktop 20.04 LTS (Focal Fossa)
 
-Note: at this time it "is expected on 23 April 2020."
-- https://en.wikipedia.org/wiki/Ubuntu_version_history#Table_of_versions
-
-# Upgrading While Leaving Existing OS As-Is
-
-This process should be a little bit easier than always starting from scratch:
-
-- No need to partion disks - always the hardest part
-- Will need to burn new DVDs
-- Will need to reinstall my favorite programs
+Install kubuntu while Leaving Existing OS As-Is - if possible.
 
 # List of `/mnt/future*` and `/mnt/spare*` Partitions
+
+**Also: Windows 7 is using up 240G, and complaining about being counterfeit, lol.**
+
+So what to do with 240G?  Will it let me format it?  Let's try it and see!
+
+# What I Had Before
 
 Use these partitions first:
 ```

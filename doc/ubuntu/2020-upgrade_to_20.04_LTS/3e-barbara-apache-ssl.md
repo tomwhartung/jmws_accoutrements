@@ -13,8 +13,9 @@ We want to use the same certificates we are using on ava, now on barbara.
 
 The reference below is like 10 years old and this SSL stuff was giving me nightmares recently so let's dig a little deeper.
 
-- (1) "The life-saving reference:"
+- (1) Formely I thought this was "the life-saving reference," but now I am not so sure:
   - https://serverfault.com/questions/209409/moving-ssl-certificate-from-one-apache-server-to-another
+  - It is from 2010-12-05, making it almost ten years old
 - (2) This one also says to just copy the files referenced in the apache config file:
   - https://askubuntu.com/questions/437340/how-to-export-an-ssl-certificate-from-one-to-another-server-server-migration
   - This reference is also fairly old, from 2014
@@ -33,10 +34,14 @@ The reference below is like 10 years old and this SSL stuff was giving me nightm
   - Maybe use for troubleshooting
 - (7) From 2020-06-05 and for 20.04
   - https://www.cyberciti.biz/faq/how-to-install-apache-on-ubuntu-20-04-lts/
-  - Maybe use for troubleshooting
+  - Maybe use for troubleshooting apache issues?
 - (8) From 2020-06-07 and for 20.04
   - https://www.cyberciti.biz/faq/how-to-secure-apache-with-mod_md-lets-encrypt-on-ubuntu-20-04-lts/
-  - Maybe use for troubleshooting
+  - Instructions for starting from scratch, which I do not want to do
+  - Also it looks a little suspicious, e.g., several grammatical errors
+  - More significantly the page for the mod_md module on apache.org says it is "Experimental"
+    - https://httpd.apache.org/docs/2.4/mod/mod_md.html
+  - Maybe use for troubleshooting?
 
 ## Observations
 
@@ -168,6 +173,29 @@ certbot/focal 0.40.0-1 all
 python3-certbot-apache/focal 0.39.0-1 all
 $
 ```
+
+Reference (7) has some sample commands for managing apache:
+
+```
+systemctl start apache2.service
+systemctl stop apache2.service
+systemctl restart apache2.service
+systemctl reload apache2.service
+systemctl status apache2.service
+```
+
+Reference (7) says we need to open firewall ports, and can use `curl` to verify it's working:
+
+```
+ufw allow 80/tcp comment 'accept Apache'
+ufw allow 443/tcp comment 'accept HTTPS connections'
+
+ufw status                     # "Verify it"
+
+curl -I http://10.105.28.158   # Test server
+```
+
+Much of the rest of reference (7) rehashes what I know about virtual hosts, etc.
 
 ## Plan
 

@@ -203,10 +203,10 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
 
 **The sequence of these steps may need to be modified somewhat.**
 
-- [ ] 1. Put all of the `/etc/letsencrypt` on ava into a tar file
-- [ ] 2. Copy the tar file to barbara and unpack it
-- [ ] 3. Install certbot packages
+- [x] 1. Install certbot packages
   - `apt list certbot python3-certbot-apache`
+- [x] 2. Put all of the `/etc/letsencrypt` directory on ava into a tar file
+- [ ] 3. Copy the tar file to barbara and unpack it
 - [ ] 4. Enable mod_ssl on barbara
   - `a2enmod ssl`
 - [ ] 5. Switch over the apache config files
@@ -237,18 +237,47 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
 
 Ok, here we go!  Time to put this behind us and get on to new improved nightmares!!
 
-### Put all of the `/etc/letsencrypt` on ava into a tar file
+### Install Certbot Packages
 
 ```
+$ apt list certbot python3-certbot-apache
+$ apt install certbot python3-certbot-apache
+$ cd /etc
+$ ll letsencrypt
+$ cat  letsencrypt/cli.ini
+# Because we are using logrotate for greater flexibility, disable the
+# internal certbot logrotation.
+max-log-backups = 0$
+```
+
+Note that the only file installed, `cli.ini`, matches the one installed on ava.
+
+On ava:
+
+```
+$ cd /etc
+$ cat letsencrypt/cli.ini
+# Because we are using logrotate for greater flexibility, disable the
+# internal certbot logrotation.
+max-log-backups = 0$
+```
+
+The trailing `$` is the prompt.
+
+### Put all of the `/etc/letsencrypt` directory on ava into a tar file
+
+On ava:
+
+```
+cd /etc
+tar -cvzf /tmp/letsencrypt-for_barbara-2020_06_26.tgz letsencrypt/
+chown tomh:tomh /tmp/letsencrypt-for_barbara-2020_06_26.tgz
+toBarbara letsencrypt-for_barbara-2020_06_26.tgz
 ```
 
 ### Copy the tar file to barbara and unpack it
 
-```
-```
-
-### Install certbot packages
-  - `apt list certbot python3-certbot-apache`
+On barbara:
 
 ```
 ```

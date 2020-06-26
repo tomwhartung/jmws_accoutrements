@@ -217,7 +217,7 @@ If the plan doesn't work, we can always switch the server back to ava and "regro
     - [ ] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
           - `a2ensite ...`
 - [ ] 6. Switch server to barbara
-    - [ ] 6.1. Tail apache access and error log files
+    - [x] 6.1. Tail apache access and error log files on ava and barbara
           - `tapa` and `tape` aliases
     - [ ] 6.2. Update tp-link router at `192.168.1.1`
           - Be sure to document changes made so we can un-do them if necessary
@@ -314,13 +314,13 @@ Fortunately, ye olde `service apache2 restart` still works as well, because that
 
 ### Switch over the apache config files
 
-  - 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
+  #### 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
     - `a2dissite ...`
 
 ```
 ```
 
-  - 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
+  #### 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
     - `a2ensite ...`
 
 The sites still work after enabling the module, will they work when I enable the config files?
@@ -328,26 +328,39 @@ The sites still work after enabling the module, will they work when I enable the
 ```
 ```
 
-  - 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
+  #### 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
     - `a2ensite ...`
 
 ```
 ```
 
 ### Switch server to barbara
-  - 6.1. Tail apache access and error log files
-    - `tapa` and `tape` aliases
+
+#### 6.1. Tail apache access and error log files on ava and barbara
+
+On barbara and ava, four windows total.
 
 ```
+tapa  # In one window
+tape  # In another
 ```
 
-  - 6.2. Update tp-link router at `192.168.1.1`
-    - Be sure to document changes made so we can un-do them if necessary
+#### 6.2. Update tp-link router at `192.168.1.1`
 
-```
-```
+Process:
 
-  - 6.3. Test sites in browser
+1. Access http://192.168.1.1/ and sign in
+2. Menu -> Advanced -> NAT -> Virtual Server
+3. ava -> Deactivate
+3. ava -> Edit (Pencil) -> Change both port parameters to 81
+3. ava-ssl -> Deactivate
+3. ava-ssl -> Edit (Pencil) -> Change both port parameters to 445
+3. barbara -> Edit (Pencil) -> Change both port parameters to 80
+3. barbara -> Activate
+3. barbara-ssl -> Edit (Pencil) -> Change both port parameters to 443
+3. barbara-ssl -> Activate
+
+#### 6.3. Test sites in browser
     - Check https, which should work
     - Check http, which should redirect to https
 

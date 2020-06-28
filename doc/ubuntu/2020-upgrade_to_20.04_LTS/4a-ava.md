@@ -121,7 +121,11 @@ Looks like I need to try again.
 
 #### Decision 2
 
-After looking into the swap issue, and deciding it can't hurt -- see below -- and looking at the
+After looking into the swap issue, and deciding it can't hurt -- see below.
+
+And after looking at the partition scheme the installer suggests, I have decided to use that.
+
+**See the section entitled "Partitions - Suggested and Accepted" below."
 
 ### (**) Do I Need a Swap Partition?
 
@@ -145,6 +149,43 @@ They also agree that I should make it twice as big as your memory.
 #### Decision
 
 Delete the spare sda7 partition, create 16G swap partition out of unallocated space, and use the remainder to create a spare sda8 partition.
+
+## Partitions - Suggested and Accepted
+
+The installer suggests a partition scheme similar to what I have in mind.
+Since it is suggesting this scheme, presumably it will work without the errors I have been encountering.
+
+### Suggested Partitions
+
+The default option, "Guided - resize SCSI1 (0,0,0), partition #3 (sda) and use freed space" is similar to what's under the section
+entitled "Partitions - Proposed" above.
+
+They suggest doing the following:
+
+- Format `sda1` as ext4
+- Somehow split `sda3` into two partitions
+  - Formatting `sda3` as 132.4G of ext4
+  - Installing "Kubuntu (auto)" in 125.4G of ext4
+  - Interestingly, there's a slider between these two partitions, allowing me to shrink one and grow the other
+- Leaving Ubuntu 16.04 alone
+- Also presumably leaving the Ubuntu 16.04 /boot 1G partition alone
+- Formating `sda7` as 16G of swap
+- Presumably leaving the remaining unallocated space alone
+
+### Accepted Partitions
+
+This actually makes a lot of sense.
+
+However, why not use the slider between the `sda3` and "Kubuntu (auto)" partitions to make the "Kubuntu (auto)" partition larger?
+
+**Using the slider to:**
+
+- Make the `sda3` smaller, about 60G
+- Make the "Kubuntu (auto)" partition larger, about 200G, which is about the size of the free space we still have
+
+**Make it so.**  Done, captain!
+
+Clicking on "Install Now."
 
 ## Partitions After
 

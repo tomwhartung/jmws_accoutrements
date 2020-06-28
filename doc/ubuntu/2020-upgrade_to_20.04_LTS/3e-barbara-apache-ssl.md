@@ -453,6 +453,9 @@ This must have been installed when I installed the certbot packages in Step 2.
 
 ### 9. Troubleshooting tomwhartung.com
 
-```
-```
+Found a misconfiguration for STATIC_FILES in settings.py, but fixing it did not help.
+
+I suspect it has something to do with ssl.
+
+To be continued in `3f-barbara-fix-tomwhartung.md`.
 

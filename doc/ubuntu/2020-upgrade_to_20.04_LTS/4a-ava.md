@@ -82,6 +82,8 @@ Leaving sda7 spare for now, in memory of the old times, and for use as swap.
 
 ### (*) EFI Partition or /boot?
 
+Are they related, mutually exclusive, or maybe even the same thing?
+
 #### References
 
 - (1) https://askubuntu.com/questions/353683/uefi-partitioning-for-dummies#353780
@@ -111,14 +113,34 @@ Reference (6) suggests that 300M is plenty of room for it, no matter what the OS
 In the table, the entry for ubuntu claims it needs only 4.9 MB but the default partition size is 513 MB.
 Surely 300M is big enough, I hope.
 
-##### Try Again!
+##### Oops!  Try Again!!
 
 After setting /dev/sda2 as an EFI the installer seemed to be happy, and progressed tot he next step, then a popup appeared saying
 "The attempt to mount a file system with type vfat in partition #2 at /boot/efi failed."
 Looks like I need to try again.
 
-#### Decision
+#### Decision 2
 
+After looking into the swap issue, and deciding it can't hurt -- see below -- and looking at the
+
+### (**) Do I Need a Swap Partition?
+
+#### References
+
+- (1) https://www.tecmint.com/install-ubuntu-20-04-desktop/
+- (2) https://linuxconfig.org/how-to-install-ubuntu-20-04-focal-fossa-desktop
+- (3) https://askubuntu.com/questions/398258/do-i-need-a-swap-partition
+- (4) https://askubuntu.com/questions/49109/i-have-16gb-ram-do-i-need-32gb-swap
+
+#### Deliberations
+
+At first I thought, no.
+Then I thought, why not use the 5G sda7?
+
+After checking the references below, which mostly say yes, I am re-thinking the issue.
+The references agree that at worst it cannot hurt, provided you have plenty of space, which I do in fact have.
+And at best it can save your system from crashing should a process want more memory than there is currently available.
+They also agree that I should make it twice as big as your memory.
 
 #### Decision
 

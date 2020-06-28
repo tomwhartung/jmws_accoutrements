@@ -187,7 +187,121 @@ However, why not use the slider between the `sda3` and "Kubuntu (auto)" partitio
 
 Clicking on "Install Now."
 
-## Partitions After
+### Feedback
+
+Now there is a popup warning it will:
+
+- Format "partition #9 of SCSI1 (0, 0, 0) (sda) as ESP"
+   - Note that this is just another name for EFI, which caused me to rethink all this
+- Format ""partition #10 of SCSI1 (0, 0, 0) (sda) as ext4"
+
+It says nothing about the size of these partitions, and I am curious about that, so rats.
+But this is what it wants to do!
+
+Clicking on "Continue."
+
+## Fatal Error!
+
+Now we have a new popup!
+
+- Title: "Unable to install GRUB in /dev/sda"
+- Body: "Executing `grub-install /dev/sda' failed.  This is a fatal error"
+
+Rut-roh!!
+
+Now we have a new popup!
+
+- Title: "Installation failed - KDialog ?"
+- Body: "The installer encountered an unrecoverable error.  A desktop session will not be run so that you may investigate the problem or try installing again."
+
+Idea: try again, this time don't use the slider.
+
+## Trying Again
+
+Now we have a new popup!
+
+- Title: "ubi-partman crashed"
+- Body: "ubi-partman crashed with exit code 10.  Further information may be found in /var/log/syslog.  Do you want to try running this step again before continuing?  If you do not, your installation may fail entirely or may be broken"
+- Buttons: Retry, Ignore, Close
+
+The `syslog` is no help.
+
+This post for 18.04 has a suggestion:
+
+- https://askubuntu.com/questions/1032905/ubi-partman-failed-with-exit-code-10-ubuntu-18-04
+
+Interestingly, it has to do with having an EFI partition.
+
+Picking Retry causes the same dialog to appear.
+
+Picking Close.
+
+## Trying the Suggestion from Askubuntu.com
+
+Trying the fixes from this post:
+
+- https://askubuntu.com/questions/1032905/ubi-partman-failed-with-exit-code-10-ubuntu-18-04
+
+There are two, but they are very similar.
+It's worth a shot!
+
+### Attempting to Fix It
+
+- [x] Installing GParted, hope this works
+- [x] Changed sda2 to FAT32, because I thought that is what the post wanted me to do.
+      - Right clicking on it does not show any options to edit the partition, rats
+- [x] Right clicking on sda9, which is already 512M of FAT32, allows me to manage flags
+      - The boot and esp flags are already set
+      - Clearing both of these flags
+- [x] Looking at sda2 again, I can right click on it and change things
+      - Setting the boot and esp flags
+      - Setting the label to "EFI" as the post suggests
+
+Thinking maybe this crapped out because it tried to use sda9 as the EFI partition, when sda9 is not a **primary partition.**
+
+Thinking maybe that sda2 is a **primary partition** so it ~~will~~ might (don't want to get overconfident and jinx it!) succeed this time.
+
+Things I notice in gparted:
+
+- /dev/sda3 is a primary partition, 55.75G of ext4
+- /dev/sda7 is a secondary partition, 14.9G of 'linux-swap' space
+- /dev/sda10 is a secondary partition, 183.9G of ext4, mounted on /target
+
+Exiting gparted and running through the installation again.
+
+### Start From "Scratch"
+
+Getting the same error: "ubi-partman crashed with exit code 10...."
+
+The syslog says that it cannot unmount /target because it is busy, and trying to unmount it in gparted causes the same error.
+
+**Time to reboot and try again.**  Sometimes a crashed process can make the OS think it's using a partition, when it really isn't, is what I'm thinking.
+
+### Start "Fresh"
+
+Partition manager shows the disks as they did above, with out sda10 being mounted on /target .
+
+Install -> Disk Setup step shows it is very confused....
+
+- It sees "Ubuntu 16.04" and "Ubuntu 20.04" in the Before picture
+- It sees "Ubuntu 20.04" and "Kubuntu (auto)" in the After picture
+- The slider trades space between the "Ubuntu 20.04" and "Kubuntu (auto)" partitions, weird
+
+Picking the "Guided - use entire disk" option.
+
+- Single partition using 500.1 GB for Kubuntu
+
+Clicking on "Install Now."
+
+Interestingly, the popup says:
+
+- partition #1 of SCSI1 (0, 0, 0) (sda) as ESP
+- partition #2 of SCSI1 (0, 0, 0) (sda) as ext4
+
+Interesting because I think it is the ESP bit that got me into all this trouble in the first place.
+Live and learn.
+
+## Partitions After Install
 
 ```
 ```

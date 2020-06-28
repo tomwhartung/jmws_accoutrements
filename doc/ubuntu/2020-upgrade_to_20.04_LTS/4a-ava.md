@@ -304,5 +304,7 @@ Live and learn.
 ## Partitions After Install
 
 ```
+/dev/sda1       511M  7.8M  504M   2% /boot/efi
+/dev/sda2       457G  8.1G  416G   2% /
 ```
 

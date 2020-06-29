@@ -1,7 +1,7 @@
 
-# 1c-jane-refinements.md
+# 4c-ava-refinements.md
 
-Refining 20.04 install on jane.
+Refining 20.04 install on ava.
 
 # Necessary Refinements
 
@@ -9,7 +9,7 @@ Now that I can do stuff without cursing, it's time to get serious.
 
 ## Ssh to and From Hosts on the LAN
 
-Remove `~/.ssh/known_hosts` from `jane`, `barbara`, and `bette`.
+Remove `~/.ssh/known_hosts` from `jane`, `barbara`, `bette`, and `ava`.
 
 ```
 apt list openssh-server

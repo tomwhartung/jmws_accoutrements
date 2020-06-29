@@ -81,6 +81,8 @@ Update fstab to mount:
 - /dev/sdb/art to /mnt/disks/art
 - /dev/sdb/FATART to /mnt/disks/FATART
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 Add a link to the root directory and fix the links under /art to the FAT filesystem as follows:
 
 ```

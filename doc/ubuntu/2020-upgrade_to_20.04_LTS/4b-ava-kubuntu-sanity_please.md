@@ -1,34 +1,32 @@
 
-# 1b-jane-sanity_please.md
+# 4b-ava-sanity_please.md
 
-Upgrading jane to 20.04.
+Upgrading ava to 20.04.
 
 # Acheiving Sanity
 
 ## Home Directory
 
-Restore home directory, one file and directory at a time, for safety.
+Restore the `/home/tomh` directory from barbara, saved on the thumb drive.
 
 ## Root User's Home Directory
 
-Reconstruct links, e.g., .bash_aliases, present in /ubuntu-16.04/root to /root as appropriate.
+Reconstruct links to ~tomh/.bash_aliases, etc., present in /root on another host, e.g., bette, to /root as appropriate.
 
-Copy files and directories, e.g., .vim and RCS, from /ubuntu-16.04/root to /root as appropriate
+Copy files and directories to /root, e.g., .vim and RCS, from /root on another host, e.g., bette, to /root as appropriate.
 
 ## Install Vim, Git, RCS, and Chrome
 
 Vim, Git, and RCS: use the command line.
 
 ```
-apt list vim
-apt install vim
-apt list git
-apt install git
-apt list rcs
-apt install rcs
+apt-get update
+apt vim
+apt install vim git rcs
 cd /etc
 mkdir RCS
 ci -l fstab hosts
+apt-get upgrade -y
 ```
 
 Configure git:
@@ -37,6 +35,15 @@ Configure git:
 git config --global user.email "tomwhartung@gmail.com"
 git config --global user.name "Tom Hartung"
 ```
+
+## Setup Static IP
+
+Access Settings -> Network -> Connections -> IPv4 Tab
+
+Method: Manual
+DNS: 192.168.30.2, 192.168.31.2
+Netmask: 255.255.255.0
+Gateway: 192.168.1.1
 
 ## Install Chrome
 

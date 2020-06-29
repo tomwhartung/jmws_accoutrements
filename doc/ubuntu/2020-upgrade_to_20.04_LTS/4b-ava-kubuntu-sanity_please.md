@@ -71,13 +71,7 @@ Steps, starting with the basics:
 - 3. Optionally use `update-alternatives` to enable running just `python` and `pip` without the `3`s
 - 4. Use `pip` to install the `sh` module
 
-The most important part:
-
-```
-pip3 install sh
-```
-
-Additional optional but totally cool commands:
+Commands:
 
 ```
 $ apt list --installed | grep python3/focal
@@ -96,6 +90,7 @@ pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 $ update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 $ pip --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+$ pip3 install sh
 $
 ```
 

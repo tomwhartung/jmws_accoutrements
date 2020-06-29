@@ -50,10 +50,10 @@ Gateway: 192.168.1.1
 Download from google then install:
 
 ```
-dpkg -i google-chrome-stable_current_amd64.deb    ## got an error first time
 apt install libappindicator3-1
-dpkg -i google-chrome-stable_current_amd64.deb    ## worked ok the second time
-apt-get install -f
+cd ~/Downloads
+cp ~tomh/Downloads/google-chrome-stable_current_amd64.deb .
+apt install ./google-chrome-stable_current_amd64.deb
 ```
 
 Find in menu then Add to Favorites.

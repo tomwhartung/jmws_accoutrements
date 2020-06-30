@@ -13,15 +13,15 @@ this_sum_command="md5sum"
 dest_sum_command="md5sum"
 
 if [ $this_hostname == "ava" ]; then
-   more_dirs=""
-   mail_dirs=""
-elif [ $this_hostname == "barbara" ]; then
    more_dirs="Downloads Pictures technical"
    mail_dirs=".thunderbird"
+elif [ $this_hostname == "barbara" ]; then
+   more_dirs=""
+   mail_dirs=""
 elif [ $this_hostname == "bette" ]; then
    more_dirs="Downloads Pictures jobsearch marketing personal technical"
-   ## mail_dirs=".thunderbird"
-   mail_dirs=""
+   ## mail_dirs=""
+   mail_dirs=".thunderbird"
 elif [ $this_hostname == "humphrey" ]; then
    more_dirs="iot"
    mail_dirs=""
@@ -80,11 +80,9 @@ tar -cvzf $tar_file_fullname $all_to_backup 2> /tmp/tarHome-errors.$$
 ret_val=$?
 set +x
 
-### if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
-if [ "$this_hostname" == "ava" ]; then
+if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
    export tar_file_host='ava'
-   export remote_thumb_host='ava'
-   ### backup_drive_name=usb0
+   export remote_thumb_host='barbara'
 else
    export tar_file_host='jane'
    export remote_thumb_host='barbara'

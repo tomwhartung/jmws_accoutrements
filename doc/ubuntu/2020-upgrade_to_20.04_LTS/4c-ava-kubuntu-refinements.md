@@ -81,8 +81,6 @@ Update fstab to mount:
 - /dev/sdb/art to /mnt/disks/art
 - /dev/sdb/FATART to /mnt/disks/FATART
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 Add a link to the root directory and fix the links under /art to the FAT filesystem as follows:
 
 ```
@@ -90,11 +88,14 @@ cd /
 l
 ln -s /mnt/disks/art/art .
 l art
-gogd            ## should take you to /art/music/songs/mp3/Grateful_Dead
-cd /art/music/
+gogd                 # should take you to /art/music/songs/mp3/Grateful_Dead
+goam                 #  /art/music/
+cd analog_projects/
+ll
+rm Audacity
+ll /mnt/disks/FATART/art_music_analog_projects
+ln -s  /mnt/disks/FATART/art_music_analog_projects/Audacity .
 l
-rm analog_projects
-ln -s /mnt/disks/FATART/art_music_analog_projects analog_projects
 goamaa          ## should take you to /art/music/analog_projects/Audacity
 cd /art/videos/
 l purchased/

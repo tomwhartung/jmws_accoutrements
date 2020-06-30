@@ -58,7 +58,7 @@ apt install fortune-anarchism    ## Note: "fortune" is singular in this one
 
 Reboot and ensure the screensaver runs automatically.
 
-## External Disk
+## External Art Disk
 
 Install gparted, make directories appropriate for mounting the disk contents, and update fstab to mount them automatically when the system boots.
 Reference:
@@ -115,4 +115,8 @@ Change the workspace background image:
 - Right click an empty area of the desktop
 - Select the Desktop Settings option
 - Add a new wallpaper image by clicking the Get New Wallpapers... button.
+
+## External Backup Disk
+
+Update `bin/tarHome` as needed for our new setup.
 

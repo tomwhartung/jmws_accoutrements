@@ -56,7 +56,10 @@ cp ~tomh/Downloads/google-chrome-stable_current_amd64.deb .
 apt install ./google-chrome-stable_current_amd64.deb
 ```
 
-Find in menu then Add to Favorites.
+Add to menu, if it's not there already, by right-clicking on the gear icon and choosing "Edit Applications..."
+Fill in the dialog and save it.
+
+Find chrome in the menu then right-click and Add to Favorites.
 
 ## Fix My `up` Command
 

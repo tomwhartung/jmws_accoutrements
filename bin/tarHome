@@ -45,7 +45,7 @@ else
 fi
 
 ## all_to_backup="."
-files_to_backup=".bash_profile .bashrc* .bash_aliases* .gitconfig r* .vimrc "
+files_to_backup=".bashrc* .bash_aliases* .gitconfig r* .vimrc "
 dirs_to_backup=".config .kde .ssh .vim .xscreensaver $mail_dirs backup bin $more_dirs RCS"
 all_to_backup="$files_to_backup $dirs_to_backup"
 

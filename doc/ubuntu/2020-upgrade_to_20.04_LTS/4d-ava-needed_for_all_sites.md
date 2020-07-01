@@ -1,12 +1,12 @@
 
-# 3c-barbara-needed_for_all_sites.md
+# 4d-ava-needed_for_all_sites.md
 
 Instructions for installing the latest stable versions of software needed for two or more sites:
 
 - Python
 - Django
 - Flask
-- [Apache] - moved all that to `3d-barbara-apache.md`
+- Apache: see `4e-ava-apache.md`
 
 # Cloning the Source Repos
 
@@ -97,9 +97,6 @@ $ apt list | grep python3-pip/
 python3-pip/focal,now 20.0.2-5ubuntu1 all [installed]
 $ apt list | grep python3-django/
 python3-django/focal-updates,focal-updates,focal-security,focal-security 2:2.2.12-1ubuntu0.1 all
-$ apt list --installed | grep python3-pip
-python3-pip/focal,now 20.0.2-5ubuntu1 all [installed]
-$ apt list --installed | grep python3-django
 $ pip --version
 pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 $
@@ -107,21 +104,7 @@ $
 
 ## Installing the Latest Version of Django
 
-The `apt` command wants to install version 2.2, **but that's not what we want!**:
-
-```
-$ apt show python3-django
-Package: python3-django
-Version: 2:2.2.12-1ubuntu0.1
-. . .
-. . .
-. . .
-$
-```
-
-**We don't want version 2.2, we want the latest, version 3.0.6.**
-
-Hence we use `pip` to install django instead of `apt`.
+Use `pip` to install django instead of `apt`, so we get the current version.
 
 ```
 $ pip install django==3.0.6
@@ -153,45 +136,33 @@ $
 
 ## The Settings File Is Needed for All Django Sites
 
-Get a copy of `gitignored/Site/Site/settings.py` from another host, e.g., jane.
+Get a copy of `gitignored/Site/Site/settings.py` from another host, i.e., barbara.
 
-Use `rcsdiff` to check the settings file for changes, and if there are differences, check in the current version.
+Copy the `settings.py` file to ava.
 
-Then copy the `settings.py` file along with the `RCS` directory to barbara.
-
-Commands to run on jane:
+Commands to run on barbara:
 
 ```
 goav                     # var/www/artsyvisions.com/htdocs/artsyvisions.com
 l
 cd gitignored/Site/Site/
 l
-rd settings.py
 toBarbara -y settings.py
-cd RCS/
-toBarbara -y
 
 govw                     # /var/www
 cd seeourminds.com/htdocs/seeourminds.com/gitignored/Site/Site/
-rd settings.py
 toBarbara -y settings.py
-cd RCS/
-toBarbara -y
 
 govw                     # /var/www
 cd tomhartung.com/htdocs/tomhartung.com/gitignored/Site/Site/
-rd settings.py
 toBarbara -y settings.py
-cd RCS/
-toBarbara -y
 
 govw                     # /var/www
 cd tomwhartung.com/htdocs/tomwhartung.com/gitignored/Site/Site/
-rd settings.py
 toBarbara -y settings.py
-cd RCS/
-toBarbara -y
 ```
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 Review and remember: **`SECURITY WARNING: don't run with debug turned on in production!`**
 

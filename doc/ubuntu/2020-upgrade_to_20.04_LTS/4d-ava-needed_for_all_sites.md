@@ -147,26 +147,22 @@ goav                     # var/www/artsyvisions.com/htdocs/artsyvisions.com
 l
 cd gitignored/Site/Site/
 l
-toBarbara -y settings.py
+toAva -y settings.py
 
 govw                     # /var/www
 cd seeourminds.com/htdocs/seeourminds.com/gitignored/Site/Site/
-toBarbara -y settings.py
+toAva -y settings.py
 
 govw                     # /var/www
 cd tomhartung.com/htdocs/tomhartung.com/gitignored/Site/Site/
-toBarbara -y settings.py
+toAva -y settings.py
 
 govw                     # /var/www
 cd tomwhartung.com/htdocs/tomwhartung.com/gitignored/Site/Site/
-toBarbara -y settings.py
+toAva -y settings.py
 ```
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-Review and remember: **`SECURITY WARNING: don't run with debug turned on in production!`**
-
-## Check All Django Sites for Sanity
+## Check All Django Sites for Minimal Sanity
 
 Running `run.sh` for all django sites shows no errors.
 
@@ -228,73 +224,61 @@ Successfully installed Flask-1.1.2 Werkzeug-1.0.1 itsdangerous-1.1.0
 $
 ```
 
-## The Settings File Is Needed for All Flask Sites
-
-Get a copy of `gitignored/Site/Site/settings.py` from another host, i.e., `jane`.
-
-Run these commands on jane for joomoowebsites.com and groja.com:
-
-```
-gojm                                 # /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/
-cd gitignored/Site/
-rd joomoowebsites_config.py
-toBarbara -y
-cd RCS/
-toBarbara -y
-
-gog                           # /var/www/groja.com/htdocs/groja.com/
-cd gitignored/Site/
-rd groja_config.py
-toBarbara -y
-cd RCS/
-toBarbara -y
-cd ../..
-l db/
-cd  db/
-lsBarbara
-toBarbara NameEmail*
-govw
-```
-
 ## The `flask_bootstrap` Module Is Needed for All Flask Sites
-
-Running `run.sh` for both sites gives the following error:
-
-```
-$ gogs
-$ cd bin
-$ ./run.sh
-ModuleNotFoundError: No module named 'flask_bootstrap'
-$
-```
 
 Find and install the flask_bootstrap module:
 
 ```
 $ pip search bootstrap | grep -i flask           # pip search is case-insensitive by default, grep is not, so use -i
+Bootstrap-Flask (1.4)                            - Bootstrap helper for Flask/Jinja2.
+Flask-Bootstrap (3.3.7.1)                        - An extension that includes Bootstrap in your project, without any boilerplate code.
+Flask-Bootstrap-Components (0.1.8)               - Collection of HTML generation helpers for Flask with Bootstrap 4
+root@ava: ~
+$ pip install Flask-Bootstrap
 Collecting Flask-Bootstrap
   Downloading Flask-Bootstrap-3.3.7.1.tar.gz (456 kB)
-     |████████████████████████████████| 456 kB 159 kB/s
+     |████████████████████████████████| 456 kB 162 kB/s
 Requirement already satisfied: Flask>=0.8 in /usr/local/lib/python3.8/dist-packages (from Flask-Bootstrap) (1.1.2)
 Collecting dominate
   Downloading dominate-2.5.1-py2.py3-none-any.whl (29 kB)
 Collecting visitor
   Downloading visitor-0.1.3.tar.gz (3.3 kB)
-Requirement already satisfied: Werkzeug>=0.15 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->Flask-Bootstrap) (1.0.1)
-Requirement already satisfied: Jinja2>=2.10.1 in /usr/lib/python3/dist-packages (from Flask>=0.8->Flask-Bootstrap) (2.10.1)
 Requirement already satisfied: itsdangerous>=0.24 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->Flask-Bootstrap) (1.1.0)
-Requirement already satisfied: click>=5.1 in /usr/lib/python3/dist-packages (from Flask>=0.8->Flask-Bootstrap) (7.0)
+Requirement already satisfied: Werkzeug>=0.15 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->Flask-Bootstrap) (1.0.1)
+Requirement already satisfied: click>=5.1 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->Flask-Bootstrap) (7.1.2)
+Requirement already satisfied: Jinja2>=2.10.1 in /usr/local/lib/python3.8/dist-packages (from Flask>=0.8->Flask-Bootstrap) (2.11.2)
+Requirement already satisfied: MarkupSafe>=0.23 in /usr/local/lib/python3.8/dist-packages (from Jinja2>=2.10.1->Flask>=0.8->Flask-Bootstrap) (1.1.1)
 Building wheels for collected packages: Flask-Bootstrap, visitor
   Building wheel for Flask-Bootstrap (setup.py) ... done
-  Created wheel for Flask-Bootstrap: filename=Flask_Bootstrap-3.3.7.1-py3-none-any.whl size=460123 sha256=50218628f54ca1e38e27ba16eb61f81b568677ff82ad7566df024d458cd0500d
+  Created wheel for Flask-Bootstrap: filename=Flask_Bootstrap-3.3.7.1-py3-none-any.whl size=460123 sha256=07f778ab91133256b2668573ee9419349b2199d4059eed3f0ee441daa8b6ac2a
   Stored in directory: /root/.cache/pip/wheels/f2/a3/85/fe8b65a65a447c9906e3b7edb7d9e6c74dfa9c8425c3dd3007
   Building wheel for visitor (setup.py) ... done
-  Created wheel for visitor: filename=visitor-0.1.3-py3-none-any.whl size=3931 sha256=c21be597de79994a0b1b4da8484f1c38a103884630f2b6eddba66835f2067e24
+  Created wheel for visitor: filename=visitor-0.1.3-py3-none-any.whl size=3931 sha256=c54aaa97a76a4401354d4f71f049272f367a655cd5cdd4f0ece029dc919892bc
   Stored in directory: /root/.cache/pip/wheels/d3/40/52/5dae7760434a82caf8b8f88323029188b2d4ea3ac1235e550a
 Successfully built Flask-Bootstrap visitor
 Installing collected packages: dominate, visitor, Flask-Bootstrap
 Successfully installed Flask-Bootstrap-3.3.7.1 dominate-2.5.1 visitor-0.1.3
 $
+```
+
+## The Settings File Is Needed for All Flask Sites
+
+Get a copy of `gitignored/Site/Site/settings.py` from another host, i.e., `jane`.
+
+Run these commands on barbara for joomoowebsites.com and groja.com:
+
+```
+gojmg                                 # /var/www/joomoowebsites.com/htdocs/joomoowebsites.com/gitignored/Site/
+toAva joomoowebsites_config.py
+
+gogrg                           # /var/www/groja.com/htdocs/groja.com/gitignored/Site/
+toAva groja_config.py
+cd ../..
+l db/
+cd  db/
+lsAva
+toAva NameEmail*
+govw
 ```
 
 Running `run.sh` for both sites shows they are now operational.

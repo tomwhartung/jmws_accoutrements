@@ -6,7 +6,7 @@ Installing apache on ava.
 # Process - The Big Picture
 
 - [x] 1. Install Apache
-- [ ] 2. Fix Configuration Files
+- [x] 2. Fix Configuration Files
 - [ ] 3. Setup SSL - later...
 
 ## References
@@ -52,12 +52,10 @@ Use files on ava as starting points
 
 - 1. Create a tar file to help copy files from ava to barbara
 - 2. Update files in top-level directory
-- 3. Add site-specific config files from ava, updating them as needed for barbara
-- 4. Rename unused files as done at the end of `1e-jane-needed_for_all_sites.md`
-- 5. Test and ensure all sites work ok.
+- 3. Add site-specific config files from barbara, updating them as needed for ava
+  - 3.1. Remove all `*UNUSED*` config files - enough is enough
+  - 3.2. Test and ensure all sites work ok.
 - 6. Ensure all current versions are checked into RCS
-- 7. Clean up the files as appropriate, e.g., deleting obsolete comments, etc.
-- 8. Check all final versions into RCS
 
 ## Step 1: Tar File From ava
 
@@ -233,11 +231,14 @@ $ l *UNUSED*
 $ cd -
 ```
 
-Then edit the remaining files, changing all occurrences of `barbara\.` to `ava.`  There should be precisely one occurrence in each file.
+Then edit the remaining files, changing all occurrences of `barbara\.` to `ava.`
+There should be precisely one occurrence in each file.
+Also, check each file into RCS.
 
 ```
-$ vi 0*.conf
-$
+vi 0*.conf
+rd 0*.conf
+ci -l 0*.conf      # "Changed the ServerName or ServerAlias - as appropriate - from barbara to ava."
 ```
 
 Link only the non-ssl using, "skid row," `0[124568]0*.conf` files in `sites-available` to `sites-enabled`:
@@ -265,147 +266,50 @@ lrwxrwxrwx 1 root root 37 Jun 18 17:25 150-wsgi.test.conf -> ../sites-available/
 $
 ```
 
-Test the config files.
+Enable vhosts, test the config files, and restart apache2:
 
 ```
-$ apache2ctl configtest
-AH00526: Syntax error on line 33 of /etc/apache2/sites-enabled/010-artsyvisions.com.conf:
-Invalid command 'WSGIDaemonProcess', perhaps misspelled or defined by a module not included in the server configuration
-Action 'configtest' failed.
-The Apache error log may have more information.
-```
-
-This is an easy fix: https://stackoverflow.com/questions/20627327/invalid-command-wsgiscriptalias-perhaps-misspelled-or-defined-by-a-module-not#20627328
-
-Might as well enable vhosts while we're at it.
-
-```
-$ apt-get install libapache2-mod-wsgi
-$ a2enmod wsgi
 $ a2enmod vhost_alias
 $ apache2ctl configtest
 Syntax OK
+$ systemctl restart apache2
 $
 ```
 
-Restart apache2:
-
-```
-systemctl restart apache2
-```
-
-Now getting a 500 error.
-Oops, I thought that python2 stuff I saw while isntalling mod-wsgi looked suspicious.
-
-Fix: https://stackoverflow.com/questions/14927345/importerror-no-module-named-django-core-wsgi-apache-virtualenv-aws-wsgi#22477904
-
-```
-apt-get remove libapache2-mod-python libapache2-mod-wsgi
-apt-get install libapache2-mod-wsgi-py3
-systemctl restart apache2
-```
-
-Sites starting to render, but the django sites have no style.
-
-### Run `collectstatic.sh` for Each django Site
+## Step 4. Run `collectstatic.sh` for Each django Site
 
 Run `collectstatic.sh` as follows:
 
 ```
-goavs                  # /var/www/artsyvisions.com/htdocs/artsyvisions.com/Site
-cd bin
+goavsb                  # /var/www/artsyvisions.com/htdocs/artsyvisions.com/Site/bin
 ./collectstatic.sh
 
-gosss                  # /var/www/seeourminds.com/htdocs/seeourminds.com/Site
-cd bin
+gosmsb                  # /var/www/seeourminds.com/htdocs/seeourminds.com/Site/bin
 ./collectstatic.sh
 
-goths                  # /var/www/tomhartung.com/htdocs/tomhartung.com/Site
-cd bin
+gothsb                  # /var/www/tomhartung.com/htdocs/tomhartung.com/Site/bin
 ./collectstatic.sh
-```
 
-### Update the `*-tomwhartung.conf` Files
-
-Get the new `*-tomwhartung.conf` files from jane, and update them for barbara.
-
-On jane:
-
-```
-cp 08* ~/tmp
-cd ~/tmp
-toBarbara 08*
-```
-
-On barbara:
-
-```
-goeaa          # /etc/apache2/sites-available
-$ rd 08*
-rcsdiff: RCS/080-tomwhartung.com.conf,v: No such file or directory
-rcsdiff: RCS/082-tomwhartung.com-redirect.conf,v: No such file or directory
-rcsdiff: RCS/084-tomwhartung.com-le-ssl.conf,v: No such file or directory
-$ mv ~tomh/tmp/08* .
-mv: overwrite './080-tomwhartung.com.conf'? y
-mv: overwrite './082-tomwhartung.com-redirect.conf'? y
-mv: overwrite './084-tomwhartung.com-le-ssl.conf'? y
-chown root:root 08*
-$ vi 08*
-```
-
-Change all occurrences of `jane\.` to `barbara.`
-
-Then enable the site, reload apache2, and run `collectstatic.sh`.
-
-```
-a2ensite 080-tomwhartung.com
-systemctl reload apache2
-```
-
-```
-gotws                  # /var/www/tomwhartung.com/htdocs/tomwhartung.com/Site
-cd bin
+gotwsb                  # /var/www/tomhartung.com/htdocs/tomhartung.com/Site/bin
 ./collectstatic.sh
 ```
 
-## Step 4: Checkin, Cleanup, and Checkin Again
+## Step 5. Restart Apache and Test
 
-### Check in the Working Versions
-
-Check in all site-specific config files.
-
-```
-goeaa                     # /etc/apache2/sites-available
-l 0[124568]*.conf
-rd 0[124568]*.conf
-ci -l 0[12456]*.conf    # "Changed for use on barbara instead of ava."
-rd 08*.conf
-ci -l 08*.conf          # "Initial version copied from jane."
-```
-
-### Cleanup and Retest
-
-- Remove old comments from the trial-and-error days
-- Do not change any configuration commands
-
-```
-vi 0[124568]*.conf
-```
-
-Restart apache and ensure each site still loads
+Restart apache and ensure each site loads.
 
 ```
 systemctl reload apache2
 ```
 
-Assuming no configuration was changed, everything should still work!
+Access each site as http://ava.[site_name].com from the My Sites index page in `/var/www`.
 
-### Check in the Final Working Versions
+Ensure all site-specific config files are checked in.
 
 ```
-goeaa                     # /etc/apache2/sites-available
-l 0[124568]*.conf
-rd 0[124568]*.conf
-ci -l 0[124568]*.conf    # "Removed old comments that I have deemed unneeded."
+goeaa                   # /etc/apache2/sites-available
+l 0*.conf
+rd 0*.conf
+ci -l 0*.conf           # "Changed for use on ava instead of barbara."
 ```
 

@@ -1,17 +1,13 @@
 
-# 3d-barbara-apache.md
+# 4e-ava-apache.md
 
-Installing apache on barbara.
-
-**NOTE:** Not worrying about ssl **working** at this juncture, because the site must be live for that.
-
-We **do** want to set it up to use SSL, though!
+Installing apache on ava.
 
 # Process - The Big Picture
 
 - [x] 1. Install Apache
-- [x] 2. Fix Configuration Files
-- [x] 3. Setup SSL - Later, see `3e-barbara-apache-ssl.md`
+- [ ] 2. Fix Configuration Files
+- [ ] 3. Setup SSL - later...
 
 ## References
 
@@ -44,7 +40,7 @@ We **do** want to set it up to use SSL, though!
 apt-get update
 apt-get upgrade -y
 apt install apache2
-apt-get install libapache2-mod-wsgi-py3
+apt install libapache2-mod-wsgi-py3
 cd /etc/apache2/conf
 ```
 
@@ -54,30 +50,43 @@ Overview:
 
 Use files on ava as starting points
 
-- 0. Create a tar file to help copy files from ava to barbara
-- 1. Update files in top-level directory
-- 2. Add site-specific config files from ava, updating them as needed for barbara
-- 3. Rename unused files as done at the end of `1e-jane-needed_for_all_sites.md`
-- 4. Test and ensure all sites work ok.
-- 5. Ensure all current versions are checked into RCS
-- 6. Clean up the files as appropriate, e.g., deleting obsolete comments, etc.
-- 7. Check all final versions into RCS
+- 1. Create a tar file to help copy files from ava to barbara
+- 2. Update files in top-level directory
+- 3. Add site-specific config files from ava, updating them as needed for barbara
+- 4. Rename unused files as done at the end of `1e-jane-needed_for_all_sites.md`
+- 5. Test and ensure all sites work ok.
+- 6. Ensure all current versions are checked into RCS
+- 7. Clean up the files as appropriate, e.g., deleting obsolete comments, etc.
+- 8. Check all final versions into RCS
 
 ## Step 1: Tar File From ava
 
-Copy the files from ava in one fell swoop.
+Copy the files from barbara in one fell swoop.
+
+On barbara:
+
+```
+cd /etc/apache2
+tar -cvzf  config_for_ava.tgz apache2.conf envvars sites-available/*.conf
+. . .
+. . .
+. . .
+mv config_for_ava.tgz /tmp
+cd /tmp
+toAva config_for_ava.tgz
+```
 
 On ava:
 
 ```
-cd /etc/apache2
-tar -cvzf  config_for_barbara.tgz apache2.conf envvars sites-available/*.conf
-. . .
-. . .
-. . .
-mv config_for_barbara.tgz /tmp
-cd /tmp
-toBarbara config_for_barbara.tgz
+cd
+l
+mkdir unpack
+cd  unpack
+mv /tmp/config_for_ava.tgz .
+l
+tar -xvzf config_for_ava.tgz
+l
 ```
 
 ## Step 2: Top-level Configuration Files
@@ -86,7 +95,7 @@ toBarbara config_for_barbara.tgz
 
 Get updates made for previous installs by looking for "CusTOMizations" in /ubuntu-16.04/etc/apache2
 
-On barbara:
+On ava:
 
 ```
 cd /etc/apache2/
@@ -120,11 +129,11 @@ ci -l 000-default.conf default-ssl.conf        # 'Installed version.'
 rd *.conf
 ```
 
-Note that old config files for each site are in /ubuntu-16.04/etc/apache2/sites-available .
+We are using the config files for each site that we copied from barbara.
 
 ### Look for Changes Made by the Maintainers
 
-First, though, see whether the maintainers have made any changes to the installed `*default*.conf` server config files:
+Quickly checking to see whether the maintainers made any changes to the installed `*default*.conf` server config files since we did barbara:
 
 ```
 $ diff ~/unpack/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
@@ -150,13 +159,18 @@ $ diff ~/unpack/sites-available/default-ssl.conf /etc/apache2/sites-available/de
 $
 ```
 
-**These are changes we want to keep:** so just copy the old config files into the new directory.
+Didn't think so.  **Just copy the old config files into the new directory.**
+
+Note: this is why we use `vhost_combined`:
+
+- https://chrisk.io/apache2-vhost-combined-log-files/
+
+First copy the `*default*.conf` files:
 
 ```
-cp ~/unpack/sites-available/000-default.conf .
-cp ~/unpack/sites-available/default-ssl.conf  .
+cp ~/unpack/sites-available/*default*.conf  .
 rd *.conf
-ci -l *.conf                    # "Updated to the version of this default file I am more likely to use."
+ci -l *.conf                    # "Updated to the version of this default file I am more likely to use, cos dats how I roll."
 ```
 
 Also copy and check in the wsgi test file.
@@ -166,12 +180,12 @@ cp  ~/unpack/sites-available/150-wsgi.test.conf .
 ci -l 150-wsgi.test.conf                         # "Adding a wsgi test file that might come in handy someday when troubleshooting."
 ```
 
-### Copy and Rename the Files, Change the hostname, and Test
+### Copy the Site-Specific Files, Change the hostname, and Test
 
-Copy the site files used on ava, rename a few of them, change the hostname, and test the sites.
+Copy the site files used on barbara, rename a few of them, change the hostname, and test the sites.
 
 ```
-$ ~/unpack/sites-available/*.com*
+$ l ~/unpack/sites-available/*.com*
 total 144
 -rw-r--r-- 1 root root 3578 Dec 29  2018 /root/unpack/sites-available/010-artsyvisions.com.conf
 -rw-r--r-- 1 root root 3687 Dec 29  2018 /root/unpack/sites-available/012-artsyvisions.com-redirect.conf
@@ -183,41 +197,61 @@ total 144
 $ cp ~/unpack/sites-available/*.com* .
 ```
 
-Rename files that we do not use, adding `UNUSED` to the name.
+Check in the files before changing any of them.
 
 ```
-mv 014-artsyvisions.com-self_signed-ssl.conf 014-artsyvisions.com-ss_snakeoil-ssl-UNUSED.conf
-mv 024-groja.com-self_signed-ssl.conf 024-groja.com-ss_snakeoil-ssl-UNUSED.conf
-l *self*   # make sure we got them all
-
-mv 016-artsyvisions.com-le-ssl-redirect.conf 016-artsyvisions.com-le-ssl-redirect-UNUSED.conf
-mv 026-groja.com-le-ssl-redirect.conf 026-groja.com-le-ssl-redirect-UNUSED.conf
-mv 046-joomoowebsites.com-le-ssl-redirect.conf 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf
-mv 056-seeourminds.com-le-ssl-redirect.conf 056-seeourminds.com-le-ssl-redirect-UNUSED.conf
-mv 066-tomhartung.com-le-ssl-redirect.conf 066-tomhartung.com-le-ssl-redirect-UNUSED.conf
-l *ssl-redirect*   # make sure we got them all
+ci -l 0*.conf        # "Apache config file copied from barbara 2020-07-01."
 ```
 
-Check in the files before changing any of them.  Don't worry about the `*tomwhartung*` for now, those will come from jane.
+Remove all `*UNUSED*` files and mark the corresponding RCS files as obsolete.
 
 ```
-ci -l 0[12456]*.conf        # "Apache config file copied from ava 2020-06-24."
+$ rm  *UNUSED*
+rm: remove regular file '016-artsyvisions.com-le-ssl-redirect-UNUSED.conf'? y
+rm: remove regular file '026-groja.com-le-ssl-redirect-UNUSED.conf'? y
+rm: remove regular file '046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf'? y
+rm: remove regular file '056-seeourminds.com-le-ssl-redirect-UNUSED.conf'? y
+rm: remove regular file '066-tomhartung.com-le-ssl-redirect-UNUSED.conf'? y
+$ cd RCS
+$ l *UNUSED*
+-r--r--r-- 1 root root 3766 Jul  1 12:52 016-artsyvisions.com-le-ssl-redirect-UNUSED.conf,v
+-r--r--r-- 1 root root 2412 Jul  1 12:52 026-groja.com-le-ssl-redirect-UNUSED.conf,v
+-r--r--r-- 1 root root 2466 Jul  1 12:53 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf,v
+-r--r--r-- 1 root root 4042 Jul  1 12:53 056-seeourminds.com-le-ssl-redirect-UNUSED.conf,v
+-r--r--r-- 1 root root 3730 Jul  1 12:53 066-tomhartung.com-le-ssl-redirect-UNUSED.conf,v
+$ mv 016-artsyvisions.com-le-ssl-redirect-UNUSED.conf,v 016-artsyvisions.com-le-ssl-redirect-UNUSED.conf,o
+$ mv 026-groja.com-le-ssl-redirect-UNUSED.conf,v 026-groja.com-le-ssl-redirect-UNUSED.conf,o
+$ mv 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf,v 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf,o
+$ mv 056-seeourminds.com-le-ssl-redirect-UNUSED.conf,v 056-seeourminds.com-le-ssl-redirect-UNUSED.conf,o
+$ mv 066-tomhartung.com-le-ssl-redirect-UNUSED.conf,v 066-tomhartung.com-le-ssl-redirect-UNUSED.conf,o
+$ l *UNUSED*
+-r--r--r-- 1 root root 3766 Jul  1 12:52 016-artsyvisions.com-le-ssl-redirect-UNUSED.conf,o
+-r--r--r-- 1 root root 2412 Jul  1 12:52 026-groja.com-le-ssl-redirect-UNUSED.conf,o
+-r--r--r-- 1 root root 2466 Jul  1 12:53 046-joomoowebsites.com-le-ssl-redirect-UNUSED.conf,o
+-r--r--r-- 1 root root 4042 Jul  1 12:53 056-seeourminds.com-le-ssl-redirect-UNUSED.conf,o
+-r--r--r-- 1 root root 3730 Jul  1 12:53 066-tomhartung.com-le-ssl-redirect-UNUSED.conf,o
+$ cd -
 ```
 
-Change all occurrences of `ava\.` to `barbara.`  There should be precisely one occurrence in each file.
+Then edit the remaining files, changing all occurrences of `barbara\.` to `ava.`  There should be precisely one occurrence in each file.
 
 ```
-$ vi 0[12456]*.conf
+$ vi 0*.conf
 $
 ```
 
-Link only the non-ssl using, "skid row," `0[12456]0*.conf` files in `sites-available` to `sites-enabled`:
+Link only the non-ssl using, "skid row," `0[124568]0*.conf` files in `sites-available` to `sites-enabled`:
+
+**Note: we do not want to link the `000-default.conf` file!**  It may be linked by default.
 
 ```
 $ cd /etc/apache2/sites-enabled
-$ l ../sites-available/0[12456]0*.conf
-$ ln -s ../sites-available/0[12456]0*.conf .
-ln: failed to create symbolic link './000-default.conf': File exists
+$ l
+total 0
+lrwxrwxrwx 1 root root 35 Jul  1 12:17 000-default.conf -> ../sites-available/000-default.conf
+$ rm 000-default.conf
+$ l ../sites-available/0[124568]0*.conf
+$ ln -s ../sites-available/0[124568]0*.conf .
 $ l
 total 0
 lrwxrwxrwx 1 root root 35 Jun 18 14:36 000-default.conf -> ../sites-available/000-default.conf

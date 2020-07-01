@@ -287,5 +287,5 @@ Running `run.sh` for both sites shows they are now operational.
 
 Apache2 is also needed for all sites, but all that is in a different file.
 
-For information about installing apache2 on barbara, see `3d-barbara-apache.md`.
+For information about installing apache2 on barbara, see `4e-ava-apache.md`.
 

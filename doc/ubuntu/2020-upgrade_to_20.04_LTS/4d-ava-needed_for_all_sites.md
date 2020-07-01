@@ -283,6 +283,36 @@ govw
 
 Running `run.sh` for both sites shows they are now operational.
 
+# Check All Settings Files Into RCS
+
+Now that the sites work locally, be sure to check all settings files into RCS.
+
+```
+goavg
+mkdir RCS
+ci -l settings.py    # "Initial version comes from barbara."
+
+gogrg
+mkdir RCS
+ci -l settings.py    # "Initial version comes from barbara."
+
+gojmg
+mkdir RCS
+ci -l settings.py    # "Initial version comes from barbara."
+
+gosmg
+mkdir RCS
+ci -l settings.py    # "Initial version comes from barbara."
+
+gothg
+mkdir RCS
+ci -l settings.py    # "Initial version comes from barbara."
+
+gotwg
+mkdir RCS
+ci -l settings.py    # "Initial version comes from barbara."
+```
+
 # Apache2
 
 Apache2 is also needed for all sites, but all that is in a different file.

@@ -85,89 +85,111 @@ letsencrypt renew --dry-run
 
 This process was successful on barbara.  For details, see `3e-barbara-apache-ssl.md`.
 
-- [ ] 1. Install certbot packages
-  - `apt list certbot python3-certbot-apache`
-- [ ] 2. Put all of the `/etc/letsencrypt` directory on barbara into a tar file
-- [ ] 3. Copy the tar file to barbara and unpack it
+- [x] 1. Install certbot packages
+- [x] 2. Put all of the `/etc/letsencrypt` directory on barbara into a tar file
+- [x] 3. Copy the tar file to barbara and unpack it
 - [ ] 4. Enable mod_ssl on ava
   - `a2enmod ssl`
-- [x] 5. Switch over the apache config files
-    - [x] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
-          - `a2dissite ...`
-    - [x] 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-avalaible/`
-          - `a2ensite ...`
-    - [x] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-avalaible/`
-          - `a2ensite ...`
-    - [x] 5.4. Check apache Config and Oops Twice
-    - [x] 5.5. Restart apache
-- [x] 6. Switch server to barbara
-    - [x] 6.1. Tail apache access and error log files on ava and barbara
+- [ ] 5. Switch over the apache config files
+    - [ ] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-available/`
+    - [ ] 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-available/`
+    - [ ] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-available/`
+    - [ ] 5.4. Check apache Config and Oops Twice
+    - [ ] 5.5. Restart apache
+- [ ] 6. Switch server to barbara
+    - [ ] 6.1. Tail apache access and error log files on ava and barbara
           - `tapa` and `tape` aliases
-    - [x] 6.2. Update tp-link router at `192.168.1.1`
+    - [ ] 6.2. Update tp-link router at `192.168.1.1`
           - Be sure to document changes made so we can un-do them if necessary
-    - [x] 6.3. Update `/etc/hosts` and `/var/www/index.html` on jane
-    - [x] 6.4. Test sites in browser
+    - [ ] 6.3. Update `/etc/hosts` and `/var/www/inde .html` on jane
+    - [ ] 6.4. Test sites in browser
           - Check https, which should work
           - Check http, which should redirect to https
-- [x] 7. Decide whether to keep barbara the server or fall back to ava and regroup
-- [x] 8. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
+- [ ] 7. Decide whether to keep barbara the server or fall back to ava and regroup
+- [ ] 8. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
 - [ ] 9. Troubleshooting tomwhartung.com
 
 ## Steps, Commands, and Notes
 
-Ok, here we go!  Time to put this behind us and get on to new improved nightmares!!
+Following the steps with increased confidence, having run through this process, successfully for the most part, on barbara.
 
-### Install Certbot Packages
+### 1. Install Certbot Packages
+
+On ava:
 
 ```
 $ apt list certbot python3-certbot-apache
+Listing... Done
+certbot/focal,focal 0.40.0-1 all
+python3-certbot-apache/focal,focal 0.39.0-1 all
 $ apt install certbot python3-certbot-apache
+. . .
+. . .
+. . .
+$ apt list certbot python3-certbot-apache
+Listing... Done
+certbot/focal,focal,now 0.40.0-1 all [installed]
+python3-certbot-apache/focal,focal,now 0.39.0-1 all [installed]
 $ cd /etc
 $ ll letsencrypt
+total 20
+drwxr-xr-x   2 root root  4096 Jul  2 11:19 .
+drwxr-xr-x 136 root root 12288 Jul  2 11:19 ..
+-rw-r--r--   1 root root   121 May 26  2018 cli.ini
 $ cat  letsencrypt/cli.ini
 # Because we are using logrotate for greater flexibility, disable the
 # internal certbot logrotation.
-max-log-backups = 0$
+max-log-backups = 0$                      # sic - the file is missing a newline at the end
 ```
 
-Note that the only file installed, `cli.ini`, matches the one installed on ava.
+Note that the only file installed, `cli.ini`, matches the one installed on barbara.
 
-On ava:
+On barbara:
 
 ```
 $ cd /etc
 $ cat letsencrypt/cli.ini
 # Because we are using logrotate for greater flexibility, disable the
 # internal certbot logrotation.
-max-log-backups = 0$
+max-log-backups = 0$                      # sic - the file is missing a newline at the end
 ```
 
-The trailing `$` is the prompt.
+### 2. Put the `/etc/letsencrypt` Directory on barbara Into a Tar File
 
-### Put all of the `/etc/letsencrypt` directory on ava into a tar file
-
-On ava:
-
-```
-cd /etc
-tar -cvzf /tmp/letsencrypt-for_barbara-2020_06_26.tgz letsencrypt/
-chown tomh:tomh /tmp/letsencrypt-for_barbara-2020_06_26.tgz
-toBarbara letsencrypt-for_barbara-2020_06_26.tgz
-```
-
-### Copy the tar file to barbara and unpack it
+Put all of the `/etc/letsencrypt` directory on barbara into a tar file.
 
 On barbara:
 
 ```
 cd /etc
-mkdir unpack
-cd unpack
-mv /tmp/letsencrypt-for_barbara-2020_06_26.tgz .
-tar -xvzf letsencrypt-for_barbara-2020_06_26.tgz
-cd ..
+tar -cvzf /tmp/letsencrypt-for_ava-2020_06_26.tgz letsencrypt/
+chown tomh:tomh /tmp/letsencrypt-for_ava-2020_06_26.tgz
+```
+
+### 3. Copy the Tar File to ava and Unpack It
+
+On barbara:
+
+```
+cd /tmp
+toAva letsencrypt-for_ava-2020_06_26.tgz
+```
+
+On ava:
+
+```
+cd ~/unpack/
+ll
+rm -fr *
+mv /tmp/letsencrypt-for_ava.tgz .
+ll
+tar -xvzf letsencrypt-for_ava.tgz
+cd /etc
+ll letsencrypt/
+diff  letsencrypt/cli.ini ~/unpack/letsencrypt/cli.ini
 mv letsencrypt letsencrypt-installed
-mv unpack/letsencrypt .
+mv ~/unpack/letsencrypt .
+ll letsencrypt
 ```
 
 ### Enable mod_ssl on barbara
@@ -199,15 +221,15 @@ Ya know, eff `a2dissite ...` and `a2ensite ...`!
 I purposely assigned names to the sites-available files that would make it easy to do links,
 which is all those programs do anyway.
 
-#### 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`
+#### 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-available/`
 
 ```
 goeae     # /etc/apache2/sites-enabled
 rm -f *.conf
 ```
 
-#### 5.2. Enable the `0?2-*` files in `/etc/apache2/sites-avalaible/`
-#### 5.3. Enable the `0?4-*` files in `/etc/apache2/sites-avalaible/`
+#### 5.2. Enable the `0?2-*` files in `/etc/apache2/sites-available/`
+#### 5.3. Enable the `0?4-*` files in `/etc/apache2/sites-available/`
 
 Seriously, eff dem `a2*` commands!  I can do it my way with just one!!
 

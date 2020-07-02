@@ -1,17 +1,15 @@
 
-# 3e-barbara-apache-ssl.md
+# 4f-ava-apache-ssl.md
 
-Switching the server over to barbara and implementing ssl.
+Implementing ava as a backup server, so it needs to be able to run ssl.
 
 # Setup SSL
 
-We want to use the same certificates we are using on ava, now on barbara.
+We want to use the same certificates we are using on barbara.
 
-- These files are all in `/etc/letsencrypt`
+- All letsencrypt files are in `/etc/letsencrypt`
 
 ## References
-
-The reference below is like 10 years old and this SSL stuff was giving me nightmares recently so let's dig a little deeper.
 
 - (1) Formely I thought this was "the life-saving reference," but now I am not so sure:
   - https://serverfault.com/questions/209409/moving-ssl-certificate-from-one-apache-server-to-another
@@ -45,106 +43,37 @@ The reference below is like 10 years old and this SSL stuff was giving me nightm
 
 ## Observations
 
-It's clear there is more than what references (1) and (2) propose, i.e., just copying the files.
+### "New" commands:
 
-Sample investigative commands from reference (3) show discrepancies between what they say and what I am seeing.
-
-```
-apache2ctl -S
-apt-get install mod_ssl     # "E: Unable to locate package mod_ssl" - interesting
-```
-
-Reference (4) points out:
-
-- Apache conf files want to the file in `/etc/letsencrypt/options-ssl-apache.conf` - not mentioned in (1) or (2), oops
-  - Include /etc/letsencrypt/options-ssl-apache.conf
-- Apache conf files point to "files" in `/etc/letsencrypt/live/*/` - but these are links, oops
-  - SSLCertificateFile    /etc/letsencrypt/live/*/fullchain.pem
-  - SSLCertificateKeyFile /etc/letsencrypt/live/*/privkey.pem
-
-E.g., for groja.com:
+Reference (7) has some sample commands for managing apache:
 
 ```
-$ l /etc/letsencrypt/live/groja.com/*
--rw-r--r-- 1 root root 543 May 24  2017 /etc/letsencrypt/live/groja.com/README
-lrwxrwxrwx 1 root root  34 May 13 03:20 /etc/letsencrypt/live/groja.com/cert.pem -> ../../archive/groja.com/cert19.pem
-lrwxrwxrwx 1 root root  35 May 13 03:20 /etc/letsencrypt/live/groja.com/chain.pem -> ../../archive/groja.com/chain19.pem
-lrwxrwxrwx 1 root root  39 May 13 03:20 /etc/letsencrypt/live/groja.com/fullchain.pem -> ../../archive/groja.com/fullchain19.pem
-lrwxrwxrwx 1 root root  37 May 13 03:20 /etc/letsencrypt/live/groja.com/privkey.pem -> ../../archive/groja.com/privkey19.pem
+systemctl restart apache2        # what the references suggest running to restart apache
+systemctl start apache2.service
+systemctl stop apache2.service
+systemctl reload apache2.service
+systemctl status apache2.service
 ```
 
-So we will need the `archive` directory.
-
-Reference (4) also points out that the `renewal` directory has important config files:
+Another "new" command:
 
 ```
-$ l renewal/*.conf
--rw-r--r-- 1 root root 539 May 13 03:20 renewal/artsyvisions.com.conf
--rw-r--r-- 1 root root 504 May 13 03:20 renewal/groja.com.conf
--rw-r--r-- 1 root root 549 May 15 22:47 renewal/joomoowebsites.com.conf
--rw-r--r-- 1 root root 529 May 14 03:17 renewal/tomhartung.com.conf
--rw-r--r-- 1 root root 554 May 13 22:39 renewal/www.seeourminds.com.conf
--rw-r--r-- 1 root root 554 May 14 03:18 renewal/www.tomwhartung.com.conf
-$
+apache2ctl -S               # shows the status of virtual hosts, etc.
+apache2ctl configtest       # test the syntax in the config files
 ```
 
-There is also a `renewal-hooks` directory that we will need to copy.
+### Need the Entire `/etc/letsencrypt` Directory Tree
 
-Reference (4) also points out that there is a crontab, but theirs is different from what I have.
+It's clear from setting up barbara that we need the entire `/etc/letsencrypt` directory tree.
+For details behind this reasoning, see `3e-barbara-apache-ssl.md`.
 
-```
-$ cd /etc/letsencrypt
-$ crontab -l
-#
-# Check the Let's Encrypt certificates for expiration every day at 3:15 AM.
-#
-15 3 * * * /usr/bin/certbot renew --quiet
-$ crontab -l > crontab-ssl
-$ pwd
-/etc/letsencrypt
-$ l
-total 60
--rw-r--r--  1 root root    64 Jan 28  2019 .updated-options-ssl-apache-conf-digest.txt
-drwx------  6 root root  4096 Jan 28  2019 accounts
-drwx------ 10 root root  4096 May 28  2017 archive
--rw-r--r--  1 root root   121 Nov  7  2018 cli.ini
--rw-r--r--  1 root root   122 Jun 25 21:16 crontab-ssl
-drwxr-xr-x  2 root root 12288 May 15 22:47 csr
-drwx------  2 root root 12288 May 15 22:47 keys
-drwx------ 10 root root  4096 May 28  2017 live
--rw-r--r--  1 root root  1619 Jan 28  2019 options-ssl-apache.conf
-drwxr-xr-x  3 root root  4096 Jun 25 13:42 renewal
-drwxr-xr-x  5 root root  4096 Oct 29  2017 renewal-hooks
-$
-```
+### Installing Required `certbot` Packages
 
-We may want to recreate that on barbara.
+Reference (5) points out we need to install two certbot packages, `certbot` and `python3-certbot-apache`.
 
-Reference (4) also points out certbot has a cronjob that does the renewal:
+### Renewal crontab and Testing
 
-```
-$ cat /etc/cron.d/certbot
-# /etc/cron.d/certbot: crontab entries for the certbot package
-#
-# Upstream recommends attempting renewal twice a day
-#
-# Eventually, this will be an opportunity to validate certificates
-# haven't been revoked, etc.  Renewal will only occur if expiration
-# is within 30 days.
-#
-# Important Note!  This cronjob will NOT be executed if you are
-# running systemd as your init system.  If you are running systemd,
-# the cronjob.timer function takes precedence over this cronjob.  For
-# more details, see the systemd.timer manpage, or use systemctl show
-# certbot.timer.
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-
-0 */12 * * * root test -x /usr/bin/certbot -a \! -d /run/systemd/system && perl -e 'sleep int(rand(43200))' && certbot -q renew
-$
-```
-
-**We are apparently doing both on ava, which may not be necessary.**
+Reference (4) points out that there is a crontab, but the one installed with certbot seems to do just fine.
 
 Reference (4) also points out we can test the renewal:
 
@@ -152,62 +81,15 @@ Reference (4) also points out we can test the renewal:
 letsencrypt renew --dry-run
 ```
 
-Reference (5) points out we need to install certbot packages:
+## Process
 
-On ava:
+This process was successful on barbara.  For details, see `3e-barbara-apache-ssl.md`.
 
-```
-$ apt list certbot python3-certbot-apache
-Listing... Done
-certbot/xenial,xenial,now 0.31.0-1+ubuntu16.04.1+certbot+1 all [installed,automatic]
-python3-certbot-apache/xenial,xenial,now 0.31.0-1+ubuntu16.04.1+certbot+1 all [installed]
-$
-```
-
-On barbara:
-
-```
-$ apt list certbot python3-certbot-apache
-Listing... Done
-certbot/focal 0.40.0-1 all
-python3-certbot-apache/focal 0.39.0-1 all
-$
-```
-
-Reference (7) has some sample commands for managing apache:
-
-```
-systemctl start apache2.service
-systemctl stop apache2.service
-systemctl restart apache2.service
-systemctl reload apache2.service
-systemctl status apache2.service
-```
-
-Reference (7) says we need to open firewall ports, and can use `curl` to verify it's working:
-
-```
-ufw allow 80/tcp comment 'accept Apache'
-ufw allow 443/tcp comment 'accept HTTPS connections'
-
-ufw status                     # "Verify it"
-
-curl -I http://10.105.28.158   # Test server
-```
-
-Much of the rest of reference (7) rehashes what I know about virtual hosts, etc.
-
-## Plan
-
-If the plan doesn't work, we can always switch the server back to ava and "regroup."
-
-**The sequence of these steps may need to be modified somewhat.**
-
-- [x] 1. Install certbot packages
+- [ ] 1. Install certbot packages
   - `apt list certbot python3-certbot-apache`
-- [x] 2. Put all of the `/etc/letsencrypt` directory on ava into a tar file
-- [x] 3. Copy the tar file to barbara and unpack it
-- [x] 4. Enable mod_ssl on barbara
+- [ ] 2. Put all of the `/etc/letsencrypt` directory on barbara into a tar file
+- [ ] 3. Copy the tar file to barbara and unpack it
+- [ ] 4. Enable mod_ssl on ava
   - `a2enmod ssl`
 - [x] 5. Switch over the apache config files
     - [x] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-avalaible/`

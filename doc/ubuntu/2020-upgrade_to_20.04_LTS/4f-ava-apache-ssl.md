@@ -88,14 +88,11 @@ This process was successful on barbara.  For details, see `3e-barbara-apache-ssl
 - [x] 1. Install certbot packages
 - [x] 2. Put all of the `/etc/letsencrypt` directory on barbara into a tar file
 - [x] 3. Copy the tar file to barbara and unpack it
-- [ ] 4. Enable mod_ssl on ava
-  - `a2enmod ssl`
-- [ ] 5. Switch over the apache config files
-    - [ ] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-available/`
-    - [ ] 5.2. Enable the `0[124568]2-*` files in `/etc/apache2/sites-available/`
-    - [ ] 5.3. Enable the `0[124568]4-*` files in `/etc/apache2/sites-available/`
-    - [ ] 5.4. Check apache Config and Oops Twice
-    - [ ] 5.5. Restart apache
+- [x] 4. Enable mod_ssl on ava
+- [x] 5. Switch over the apache config files
+    - [x] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-available/`
+    - [x] 5.2. Enable the `0?[24]-*` files in `/etc/apache2/sites-available/`
+    - [x] 5.3. Check apache Config and Restart Apache
 - [ ] 6. Switch server to barbara
     - [ ] 6.1. Tail apache access and error log files on ava and barbara
           - `tapa` and `tape` aliases
@@ -166,7 +163,7 @@ tar -cvzf /tmp/letsencrypt-for_ava-2020_06_26.tgz letsencrypt/
 chown tomh:tomh /tmp/letsencrypt-for_ava-2020_06_26.tgz
 ```
 
-### 3. Copy the Tar File to ava and Unpack It
+### 3. Copy the Tar File to ava, and Unpack and Install It
 
 On barbara:
 
@@ -192,7 +189,7 @@ mv ~/unpack/letsencrypt .
 ll letsencrypt
 ```
 
-### Enable mod_ssl on barbara
+### 4. Enable mod_ssl on barbara
 
 For grins, restart apache and test sites before enabling the module.
 
@@ -208,18 +205,15 @@ Enabling module ssl.
 See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
 To activate the new configuration, you need to run:
   systemctl restart apache2
+$ systemctl restart apache2
 $
 ```
 
 The sites still work after running `systemctl restart apache2`.
-Fortunately, ye olde `service apache2 restart` still works as well, because that's what I'm used to running.
 
-### Switch over the apache config files
+### 5. Switch Over the Apache Config Files
 
-Ya know, eff `a2dissite ...` and `a2ensite ...`!
-
-I purposely assigned names to the sites-available files that would make it easy to do links,
-which is all those programs do anyway.
+Use `ln -s` instead of `a2dissite ...` and `a2ensite ...`!
 
 #### 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-available/`
 
@@ -228,59 +222,25 @@ goeae     # /etc/apache2/sites-enabled
 rm -f *.conf
 ```
 
-#### 5.2. Enable the `0?2-*` files in `/etc/apache2/sites-available/`
-#### 5.3. Enable the `0?4-*` files in `/etc/apache2/sites-available/`
-
-Seriously, eff dem `a2*` commands!  I can do it my way with just one!!
+#### 5.2. Enable the `0?[24]-*` files in `/etc/apache2/sites-available/`
 
 ```
+l ../sites-available/0?[24]*.conf
 ln -s  ../sites-available/0?[24]*.conf
 ```
 
 Voila!
 
-#### 5.4. Check apache Config and Oops Twice
-
-Not sure about this, interesting but oh well.
-
-```
-apache2ctl configtest
-```
-```
-gotwt           # /var/www/tomwhartung.com/htdocs/tomwhartung.com
-mkdir documents
-cd  documents
-cp /var/www/tomhartung.com/htdocs/tomhartung.com/documents/index.html .
-```
-
-Oops again.
-
-```
-apache2ctl configtest
-goeaa
-vi 084-tomwhartung.com-le-ssl.conf
-rd 084-tomwhartung.com-le-ssl.conf
-ci -l 084-tomwhartung.com-le-ssl.conf     # "Added 'www.' prefix to match the way letsencrypt is set up."
-```
-
-[x] **Be sure to migrate this change to the version of the file on jane.**
+#### 5.3. Check Apache Config and Restart Apache
 
 ```
 $ apache2ctl configtest
 Syntax OK
+$ systemctl restart apache2
 $
 ```
 
-YES!!!!
-
-#### 5.5. Restart apache
-
-```
-service apache2 restart     # --OR--
-systemctl restart apache2
-```
-
-### Switch server to barbara
+### 5. Switch server to barbara
 
 #### 6.1. Tail apache access and error log files on ava and barbara
 

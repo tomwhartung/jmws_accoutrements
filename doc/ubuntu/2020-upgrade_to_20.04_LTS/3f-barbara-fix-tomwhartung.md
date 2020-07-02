@@ -3,17 +3,15 @@
 
 Figure out how to fix tomwhartung.com .
 
-# SSL Issue?
+# Magically Fixed?
 
-Because the site works fine on jane, which does not use SSL,
-but fails on barbara, which does use SSL, the issue is probably SSL.
+While setting up and testing using ava as a backup server, I made some changes to the `08*.conf` apache config,
+specifically updating the `ServerName` and `ServerAlias` parameters to match the other config files.
 
-## The Most Likely Reason SSL is Failing
+This caused ava to work better than barbara was working - two out of four test production urls worked ok instead of none -
+and then when I tried barbara again all four of the production urls worked ok.
 
-The most likely reason the other sites work and tomwhartung.com does not is
-because I switched tomwhartung.com from using WP to using django.
+Interesting!
 
-# Possible Fix: New Certificate
-
-Assuming the issue is SSL, an obvious possible fix is to generate a new certificate.
+So it turns out this fix is no longer needed.
 

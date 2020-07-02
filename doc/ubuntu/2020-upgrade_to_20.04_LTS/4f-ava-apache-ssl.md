@@ -93,18 +93,23 @@ This process was successful on barbara.  For details, see `3e-barbara-apache-ssl
     - [x] 5.1. Disable the `0[124568]0-*` files in `/etc/apache2/sites-available/`
     - [x] 5.2. Enable the `0?[24]-*` files in `/etc/apache2/sites-available/`
     - [x] 5.3. Check apache Config and Restart Apache
-- [ ] 6. Switch server to barbara
-    - [ ] 6.1. Tail apache access and error log files on ava and barbara
+- [x] 6. Switch server to barbara
+    - [x] 6.1. Tail apache access and error log files on ava and barbara
           - `tapa` and `tape` aliases
-    - [ ] 6.2. Update tp-link router at `192.168.1.1`
+    - [x] 6.2. Update tp-link router at `192.168.1.1`
           - Be sure to document changes made so we can un-do them if necessary
-    - [ ] 6.3. Update `/etc/hosts` and `/var/www/inde .html` on jane
-    - [ ] 6.4. Test sites in browser
-          - Check https, which should work
-          - Check http, which should redirect to https
-- [ ] 7. Decide whether to keep barbara the server or fall back to ava and regroup
-- [ ] 8. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
-- [ ] 9. Troubleshooting tomwhartung.com
+    - [x] 6.3. Update `/etc/hosts` and `/var/www/inde .html` on jane
+    - [x] 6.4. Tail log files
+    - [x] 6.5. Test sites in browser
+          - Check Production sites using https, which should work
+          - Check Production sites using http, which should redirect to https
+- [x] 7. Switch Server Back to barbara
+    - [x] 7.1. Update tp-link router at `192.168.1.1`
+    - [x] 7.2. Test sites in browser
+- [x] 8. Switch Server Back to ava
+- [x] 9. Switch Server Back to barbara
+
+- [ ] 10. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
 
 ## Steps, Commands, and Notes
 
@@ -240,18 +245,72 @@ $ systemctl restart apache2
 $
 ```
 
-### 5. Switch server to barbara
+### 6. Switch server to barbara
 
-#### 6.1. Tail apache access and error log files on ava and barbara
+#### 6.1. Tail Apache Logs on ava and barbara
 
-On barbara and ava, four windows total.
+Tail apache access and error log files on ava and barbara.
+
+On barbara and ava, open four tabs in two windows.
 
 ```
-tapa  # In one window
+tapa  # In one tab
 tape  # In another
 ```
 
 #### 6.2. Update tp-link router at `192.168.1.1`
+
+Process:
+
+1. Access http://192.168.1.1/ and sign in
+2. Menu -> Advanced -> NAT -> Virtual Server
+3. barbara -> Inactivate
+4. barbara -> Edit (Pencil) -> Change both port parameters to 82
+5. barbara-ssl -> Inactivate
+6. barbara-ssl -> Edit (Pencil) -> Change both port parameters to 444
+7. ava -> Edit (Pencil) -> Change both port parameters to 80
+8. ava -> Activate
+9. ava-ssl -> Edit (Pencil) -> Change both port parameters to 443
+10. ava-ssl -> Activate
+
+#### 6.3. Update `/etc/hosts`
+
+Update `/etc/hosts` on ava to reflect the `www.*` and [no-prefix] sites are all now on ava, `192.168.0.117`.
+
+#### 6.4. Log Files
+
+- [x] Seeing activity in the logfiles on ava.
+- [x] Seeing **NO** activity in the logfiles on barbara.
+
+Good.
+
+#### 6.5. Test Production Sites in Browser
+
+All www.* and [no prefix.]* sites work ok except tomwhartung.com , which shows some improvement.
+
+- http://www.tomwhartung.com/ - redirects to artsyvisions.com
+  - Nothing fishy in log files - looks like user requested to go to artsyvisions.com
+- http://tomwhartung.com/ - works ok!
+- https://www.tomwhartung.com/ - "Warning: Potential Security Risk Ahead"
+  - **See excerpt from log file below**
+- https://tomwhartung.com/ - works ok!
+
+Excerpt from log file for request to https://www.tomwhartung.com/ , which gives a "Warning: Potential Security Risk Ahead" screen
+
+```
+[Thu Jul 02 12:57:33.140961 2020] [ssl:info] [pid 63754:tid 139932257453824] [client 206.124.10.54:26081] AH02008: SSL library error 1 in handshake (server www.artsyvisions.com:443)
+[Thu Jul 02 12:57:33.141019 2020] [ssl:info] [pid 63754:tid 139932257453824] SSL Library Error: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate (SSL alert number 42)
+```
+
+### 7. Switch Server Back to barbara
+
+The results of switching the server to ava are unexpected.
+
+**Note that now we have an error code and message.**
+
+Switch the server back to barbara to see whether the results there match what we have seen on ava.
+
+#### 7.1. Update tp-link router at `192.168.1.1`
 
 Process:
 
@@ -266,60 +325,34 @@ Process:
 9. barbara-ssl -> Edit (Pencil) -> Change both port parameters to 443
 10. barbara-ssl -> Activate
 
-#### 6.3. Update `/etc/hosts` and `/var/www/index.html` on jane
+#### 7.2. Test Production Sites in Browser
 
-Update `/etc/hosts` and `/var/www/index.html` on jane to reflect the `www.*` and [no-prefix] sites are all now on barbara, `192.168.0.116`.
+- http://www.tomwhartung.com/ - works ok
+- http://tomwhartung.com/ - works ok
+- https://www.tomwhartung.com/ - works ok
+- https://tomwhartung.com/ - works ok
 
-#### 6.4. Test sites in browser
+All work ok.  Interesting.
 
-All sites work ok except tomwhartung.com , which redirects to artsyvisions.com.  Rats.
+**Apparently fixing the `ServerName` and `ServerAlias` parameters in the `08*-tomwhartung*.conf` files fixed the issues we were having?**
 
-#### 6.5. Log Files
+But what about ava, where we now get a security error.  Try it again, I say!
 
-- [x] Seeing activity in the logfiles on barbara.
-- [x] Seeing **NO** activity in the logfiles on ava.
+### 8. Switch Server Back to ava
 
-Nice.
+Tried all four urls from browsers running on both ava and bette, and **got the same mixed results as I got in step 6.5.**
 
-### 7. Decide whether to keep barbara the server or fall back to ava and regroup
+Hmm.
 
-Since I do not have anything for tomwhartung.com yet, I say it's not a biggie, but try to fix it asap.
+- Stick with using barbara as the server for now
+- **Fix issues on ava if and when we need to**
 
-### 8. If necessary, create crontab on barbara, or check to see if certbot has one - **?????**
+Maybe the issues will fix themselves, or we won't have to use ava as a backup.
 
-I do not think it is necessary, because the certbot cronjob is there.
+### 9. Switch Server Back to barbara
 
-```
-$ cat /etc/cron.d/certbot
-# /etc/cron.d/certbot: crontab entries for the certbot package
-#
-# Upstream recommends attempting renewal twice a day
-#
-# Eventually, this will be an opportunity to validate certificates
-# haven't been revoked, etc.  Renewal will only occur if expiration
-# is within 30 days.
-#
-# Important Note!  This cronjob will NOT be executed if you are
-# running systemd as your init system.  If you are running systemd,
-# the cronjob.timer function takes precedence over this cronjob.  For
-# more details, see the systemd.timer manpage, or use systemctl show
-# certbot.timer.
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+And hope that we don't need to use ava as the backup anytime soon.
 
-0 */12 * * * root test -x /usr/bin/certbot -a \! -d /run/systemd/system && perl -e 'sleep int(rand(43200))' && certbot -q renew
-$
-```
-
-This must have been installed when I installed the certbot packages in Step 2.
-
-**Hope it does what I think it does.**
-
-### 9. Troubleshooting tomwhartung.com
-
-Found a misconfiguration for STATIC_FILES in settings.py, but fixing it did not help.
-
-I suspect it has something to do with ssl.
-
-To be continued in `3f-barbara-fix-tomwhartung.md`.
+- [x] Switch the enabled apache config files back to using the `0?0*.conf` files
+- [x] Switch the hosts file back to using `hosts-wwww_is_barbara`
 

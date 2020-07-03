@@ -56,14 +56,14 @@ For high-level details about each site, see the **"Additional Goals"** section.
 - [x] 1. Get all sites running locally on jane
 - [x] 2. Make changes listed in the **"Essential Tasks"** section
 - [x] 3. Get all sites running under apache -- but don't worry about SSL yet - **new backup**
-- [ ] 4. Server shuffle:
-  - [ ] 4.1 Start using bette for music
-  - [ ] 4.2 Install Ubuntu server 20.04 Focal Fossa on barbara and make it the server
-  - [ ] 4.3 Start using jane for tv surfing
-- [ ] 5. Install Kubuntu Focal Fossa 20.04 on ava
-  - [ ] 5.1 Get all sites running
-  - [ ] 5.2 Get all sites running under apache -- but don't worry about SSL yet - **newer backup**
-  - [ ] 5.3 Start using it for new development
+- [x] 4. Server shuffle:
+  - [x] 4.1 Start using bette for music
+  - [x] 4.2 Install Ubuntu server 20.04 Focal Fossa on barbara and make it the server
+  - [x] 4.3 Start using jane for tv surfing
+- [x] 5. Install Kubuntu Focal Fossa 20.04 on ava
+  - [x] 5.1 Get all sites running
+  - [x] 5.2 Get all sites running under apache -- but don't worry about SSL yet - **newer backup**
+  - [x] 5.3 Start using it for new development
 - [ ] 6. Make changes listed in the **"Additional Goals"** section
 
 # Essential Tasks - Before Making Barbara the Server

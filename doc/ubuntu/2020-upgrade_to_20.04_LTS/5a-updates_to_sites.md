@@ -1,42 +1,11 @@
 
-# 1d-jane-upgrade_all_sites-overview.md
+# 5a-updates_to_sites.md
 
-Get all sites working on jane, now running 20.04, with the latest stable versions of underlying software:
+Continuation of process originally defined in `1d-jane-upgrade_all_sites-overview.md`.
 
-- Python
-- Flask
-- Django
+# Checklist
 
-Find detailed descriptions of steps taken in `1e-jane-needed_for_all_sites.md`.
-
-# Checklists
-
-These checklists contain the sites I am supporting, and that need to be updated.
-
-## Checklist: Basic Functionality
-
-Tracking the progress in getting the home pages of these sites to render without errors or warnings.
-
-- [x] ArtsyVisions.com
-- [x] Groja.com
-- [x] JooMooWebSites.com
-- [x] SeeOurMinds.com
-- [x] TomHartung.com
-- [x] TomWHartung.com
-
-## Checklist: Essential Tasks
-
-Tracking the progress in making essential updates to the content on these sites.
-These changes include security updates and essential review items.
-
-- [x] ArtsyVisions.com
-- [x] Groja.com
-- [x] JooMooWebSites.com
-- [x] SeeOurMinds.com
-- [x] TomHartung.com
-- [x] TomWHartung.com
-
-For high-level details about each site, see the **"Essential Tasks"** section.
+Checklist of the sites I am running, to make it easy to track my progress.
 
 ## Checklist: Additional Updates to Content
 
@@ -49,47 +18,9 @@ Checklist to track the progress in getting the content reviewed and updated on t
 - [x] TomHartung.com
 - [ ] TomWHartung.com
 
-For high-level details about each site, see the **"Additional Goals"** section.
+# Updates to Make to Sites
 
-# The Main Process of Processes
-
-- [x] 1. Get all sites running locally on jane
-- [x] 2. Make changes listed in the **"Essential Tasks"** section
-- [x] 3. Get all sites running under apache -- but don't worry about SSL yet - **new backup**
-- [x] 4. Server shuffle:
-  - [x] 4.1 Start using bette for music
-  - [x] 4.2 Install Ubuntu server 20.04 Focal Fossa on barbara and make it the server
-  - [x] 4.3 Start using jane for tv surfing
-- [x] 5. Install Kubuntu Focal Fossa 20.04 on ava
-  - [x] 5.1 Get all sites running
-  - [x] 5.2 Get all sites running under apache -- but don't worry about SSL yet - **newer backup**
-  - [x] 5.3 Start using it for new development
-- [ ] 6. Make changes listed in the **"Additional Goals"** section
-
-# Essential Tasks - Before Making Barbara the Server
-
-Make these essential changes before updating barbara to be the server:
-
-- [x] 1. ArtsyVisions.com - Django and Materialize
-    - [x] Content ok for now
-- [x] 2. TomHartung.com - Django and MUI-CSS
-    - [x] Content ok for now
-- [x] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
-    - [x] Fix security alert: https://github.com/tomwhartung/seeourminds.com/network/alert/Site/content/static/content/js/jquery-3.3.1.min.js/jquery/open
-- [x] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
-    - [x] Fix security alert: https://github.com/tomwhartung/groja.com/network/alert/Site/static/js/jquery-3.3.1.min.js/jquery/open
-    - [x] Content ok for now
-- [x] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
-    - [x] Will update content later
-- [x] 6. TomWHartung.com - ~~Wordpress~~ -> Django and Material Design Bootstrap [MDB]
-    - [x] Replace the WP version of TomWHartung.com with a new, single-page Django site
-    - [x] Will update content later
-
-Each site has its own file in this directory, e.g., `2a-artsyvisions.md`, containing details about what I want to change.
-
-# Additional Goals - After Making Barbara the Server
-
-Once barbara is the server and we have ava for development, also make the following changes:
+Once barbara is the server and we have ava for development, make the following changes:
 
 - [ ] 1. ArtsyVisions.com - Django and Materialize
     - [ ] Review social networking icons
@@ -98,10 +29,12 @@ Once barbara is the server and we have ava for development, also make the follow
 - [ ] 2. TomHartung.com - Django and MUI-CSS
     - [ ] Should already be ok
 - [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+    - [ ] Upgrade MDB to latest version
     - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
     - [ ] Review for anything glaring, but it should be ok already
 - [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
+    - [ ] Upgrade MDB to latest version
     - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
     - [ ] Set the price for portraits at $500 each
@@ -113,20 +46,24 @@ Once barbara is the server and we have ava for development, also make the follow
     - [ ] Stick to content that says what I have for sale, and what's in progress and coming soon
     - [ ] **Do not duplicate what's on TomWHartung.com**
 - [ ] 6. TomWHartung.com - ~~Wordpress~~ -> Django and Material Design Bootstrap [MDB]
+    - [ ] Upgrade MDB to latest version
     - [ ] Create new content on TomWHartung.com with a new menu and articles
     - [ ] Stick to content that says who I am and what I do, e.g., Download spreadsheets, article about my FFM results
     - [ ] **Do not duplicate what's on JooMooWebSites.com**
 
-Each site has its own file in this directory, e.g., `2a-artsyvisions.md`, containing details about what I want to change.
+# Actual Steps Taken
 
-# Plan for Upgrading
+Sites have their own site-specific file in this directory, e.g., `5b-groja.md`, containing details about what is changing.
 
-Current plans are very fuzzy.  Here are some ideas I am considering:
+# Plans for Updating
 
-- Thinking I can install the stable versions I want to use globally and not worry about setenv and all
-- If an off-brand Material Design CSS library is no longer supported, switch to MDB
+If an off-brand Material Design CSS library is no longer supported, switch to MDB.
 
-Here is a list of sites and the sequence in which I am thinking I will upgrade them
+Here is a list of sites and the sequence in which I am thinking I will upgrade them.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+This list needs review.
 
 - Upgrade the **no-brainer** ones first:
   - These require only making sure they work with the latest versions of the underlying software:
@@ -150,19 +87,4 @@ Here is a list of sites and the sequence in which I am thinking I will upgrade t
   - TomWHartung.com - Starting over from scratch!
     - Replace the WP version of TomWHartung.com with a new, minimal Flask version,
     - New content should be aimed at selling my books and promoting my social networking sites
-
-# Actual Steps Taken
-
-Find details for installing underlying software used by more than one site, e.g., installing django and flask, in:
-
-- `1e-jane-needed_for_all_sites.md`
-
-Find details for each site in the `2*.md` files in this directory:
-
-- `2a-artsyvisions.md`
-- `2b-tomhartung.md`
-- `2c-seeourminds.md`
-- `2d-groja.md`
-- `2e-joomoowebsites.md`
-- `2f-tomwhartung.md`
 

@@ -22,23 +22,31 @@ Checklist to track the progress in getting the content reviewed and updated on t
 
 Once barbara is the server and we have ava for development, make the following changes:
 
-- [ ] 1. ArtsyVisions.com - Django and Materialize
-    - [ ] Review social networking icons
-    - [ ] Remove free spiritual portrait offer
-    - [ ] Review for anything glaring, but it should be ok already
-- [ ] 2. TomHartung.com - Django and MUI-CSS
+- [ ] 1. TomHartung.com - Django and MUI-CSS
     - [ ] Should already be ok
-- [ ] 3. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+- [ ] 2. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
     - [ ] Upgrade MDB to latest version
     - [ ] Review social networking icons
+    - [ ] Disable saving results on the server
+        - [ ] Test the 4-question version of the quiz to ensure saving results is properly disabled
+        - [ ] Ensure site no longer mentions saving results is an option
+        - [ ] Test the **88-question version** of the quiz
     - [ ] Remove free spiritual portrait offer
+    - [ ] Copy portraits that need to be added from bette to ava
     - [ ] Review for anything glaring, but it should be ok already
-- [ ] 4. Groja.com - Flask and Material Design Bootstrap [MDB]
+- [ ] 3. Groja.com - Flask and Material Design Bootstrap [MDB]
     - [ ] Upgrade MDB to latest version
     - [ ] Review social networking icons
     - [ ] Remove free spiritual portrait offer
     - [ ] Set the price for portraits at $500 each
-    - [ ] Reexamine conversions to ensure they work and to prevent spam
+    - [ ] Reexamine conversions
+        - [ ] disable any that are unused
+        - [ ] ensure the remaining conversions work ok
+        - [ ] ensure spam is prevented
+- [ ] 4. ArtsyVisions.com - Django and Materialize
+    - [ ] Review social networking icons
+    - [ ] Remove free spiritual portrait offer
+    - [ ] Review for anything glaring
     - [ ] Should already be ok
 - [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
     - [ ] Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books

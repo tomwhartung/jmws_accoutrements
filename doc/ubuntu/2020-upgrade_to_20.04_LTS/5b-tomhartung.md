@@ -1,5 +1,5 @@
 
-# 2b-tomhartung.md
+# 5b-tomhartung.md
 
 Updating TomHartung.com .
 
@@ -9,9 +9,9 @@ This site is OK technically and I was able to run it locally by installing djang
 
 # Content Updates
 
-The content on this site is OK as-is.
+[x] Find a copy of the essay online, and add a link to it to the About page.
 
 # Review
 
-Quickly review the site to ensure all the pages still work ok.
+[x] Quickly review the site to ensure all the pages still work ok.
 

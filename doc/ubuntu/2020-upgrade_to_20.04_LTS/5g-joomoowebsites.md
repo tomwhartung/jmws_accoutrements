@@ -1,5 +1,5 @@
 
-# 2c-joomoowebsites.md
+# 5g-joomoowebsites.md
 
 Ideas for content to put on the new, improved, joomoowebsites.com .
 
@@ -7,8 +7,8 @@ Ideas for content to put on the new, improved, joomoowebsites.com .
 
 Switch to MDB?
 
-1. Review currently available Material Design packages
-2. Decide whether to try a new one or switch to Material Design Bootstrap
+- [ ] 1. Review currently available Material Design packages
+- [ ] 2. Decide whether to try a new one or switch to Material Design Bootstrap
 
 # Content Updates
 

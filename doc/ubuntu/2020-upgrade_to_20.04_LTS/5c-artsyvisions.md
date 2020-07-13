@@ -1,5 +1,5 @@
 
-# 2a-artsyvisions.md
+# 5c-artsyvisions.md
 
 Updating ArtsyVisions.com .
 
@@ -9,9 +9,9 @@ This site is OK technically and I was able to run it locally by installing djang
 
 # Content Updates
 
-Remove free spiritual portrait offer.
+- [x] Remove free spiritual portrait offer.
 
 # Review
 
-Ensure social media icons link to correct accounts.
+- [ ] Ensure social media icons link to correct accounts.
 

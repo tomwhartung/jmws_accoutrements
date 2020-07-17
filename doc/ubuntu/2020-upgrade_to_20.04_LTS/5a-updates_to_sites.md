@@ -22,9 +22,15 @@ Checklist to track the progress in getting the content reviewed and updated on t
 
 Once barbara is the server and we have ava for development, make the following changes:
 
-- [ ] 1. TomHartung.com - Django and MUI-CSS
-    - [ ] Should already be ok
-- [ ] 2. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
+- [x] 1. TomHartung.com - Django and MUI-CSS
+    - [x] Should already be ok
+- [ ] 2. ArtsyVisions.com - Django and Materialize
+    - [x] Review social networking icons
+    - [x] Remove free spiritual portrait offer
+    - [ ] Review for anything glaring
+- [ ] 3. Groja.com - Flask and Material Design Bootstrap [MDB]
+    - See `5d-groja.md`
+- [ ] 4. SeeOurMinds.com - Django and Material Design Bootstrap [MDB]
     - [ ] Upgrade MDB to latest version
     - [ ] Review social networking icons
     - [ ] Disable saving results on the server
@@ -34,20 +40,6 @@ Once barbara is the server and we have ava for development, make the following c
     - [ ] Remove free spiritual portrait offer
     - [ ] Copy portraits that need to be added from bette to ava
     - [ ] Review for anything glaring, but it should be ok already
-- [ ] 3. Groja.com - Flask and Material Design Bootstrap [MDB]
-    - [ ] Upgrade MDB to latest version
-    - [ ] Review social networking icons
-    - [ ] Remove free spiritual portrait offer
-    - [ ] Set the price for portraits at $500 each
-    - [ ] Reexamine conversions
-        - [ ] disable any that are unused
-        - [ ] ensure the remaining conversions work ok
-        - [ ] ensure spam is prevented
-- [ ] 4. ArtsyVisions.com - Django and Materialize
-    - [ ] Review social networking icons
-    - [ ] Remove free spiritual portrait offer
-    - [ ] Review for anything glaring
-    - [ ] Should already be ok
 - [ ] 5. JooMooWebSites.com - Flask and Material Design Lite [MDL]
     - [ ] Update content on JooMooWebSites.com, replacing freelancer stuff with content aimed at selling my books
     - [ ] Consider switching to Material Design Bootstrap [MDB]

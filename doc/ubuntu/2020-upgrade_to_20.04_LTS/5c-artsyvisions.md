@@ -13,5 +13,5 @@ This site is OK technically and I was able to run it locally by installing djang
 
 # Review
 
-- [ ] Ensure social media icons link to correct accounts.
+- [x] Ensure social media icons link to correct accounts.
 

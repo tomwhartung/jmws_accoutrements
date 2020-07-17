@@ -1,21 +1,27 @@
 
 # 5a-groja.md
 
-Continuing to update Groja.com .
+Updating Groja.com so it is just exactly perfect.
 
 # Installing Additional Required Packages
 
-Postgres may be needed I am not totally sure, but will look into this later.
+Postgres may be needed, or does the site use sqlite?
 
-Or the site might use sqlite?  Need to make sure, but I am anxious to do my server shuffle.
+- [ ] Determine whether site uses postgres, sqlite, or ???
+- [ ] Install any additional required packages
+- [ ] Fix `avmn` conversion, and others as necessary
+- [ ] Check for and remove free spiritual portrait offer, if present
 
-# Content Updates
+# Review and Content Updates
 
-The content on this site is OK as-is.
-
-# Review
-
-Review conversions with an eye to prevent spam.
-
-Ensure social media icons link to correct accounts.
+- [ ] Ensure social media icons link to same accounts as artsyvisions
+- [ ] Upgrade MDB to latest version
+- [ ] Review conversions
+    - [ ] Disable any that are unused
+    - [ ] Ensure the remaining conversions work ok
+    - [ ] Delete any conversions that are obsolete
+    - [ ] Try to prevent spam - got some but not getting it any more
+- [ ] Set list price for a spiritual portrait to $500
+- [ ] Review about page and update as appropriate
+- [ ] Review for anything glaring
 

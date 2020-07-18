@@ -33,3 +33,7 @@ Trying the suggestion in (2) -- note that the Rendering backend is **now set in 
 
 Ratsaroni.
 
+## Bottom Line
+
+I can live without the animations, but still, rats.
+

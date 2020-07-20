@@ -9,9 +9,11 @@ This site is OK technically and I was able to run it locally by installing djang
 
 # Content Updates
 
-- [x] Remove free spiritual portrait offer.
+- [x] Remove free spiritual portrait offer from Home and all Vision pages
+- [x] Change name of newsletter from "Monthly" to "Intermittent"
 
 # Review
 
 - [x] Ensure social media icons link to correct accounts.
+- [x] Review for anything glaring
 

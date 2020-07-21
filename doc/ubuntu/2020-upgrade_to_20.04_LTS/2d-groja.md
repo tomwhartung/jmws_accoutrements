@@ -58,7 +58,15 @@ Fixed by copying link tag used for font Awesome from seeourminds.com .
 recommends for using with MDB 4 - and it did not work.**
 That is just an FYI, something to think about when we get to working on that site.
 
-# Continued
+# Conversions Broken
 
-These updates are continued in `5a-groja.md`.
+Conversions, such as signing up for the email newsletter at this URL:
+
+- https://groja.com/conversion/avmn
+
+Do not work on the new server!
+
+## To Be Continued
+
+These updates are continued in `5d-groja.md`!
 

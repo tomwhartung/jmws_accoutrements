@@ -6,9 +6,9 @@ Updating Groja.com so it is just exactly perfect.
 # Fixing Conversions
 
 - [x] Error: `ModuleNotFoundError: No module named 'flask_wtf'`
-- [ ] New Conversion: `conversions/avin`
-    - [ ] It is now the **Intermittent** instead of the ~~Monthly~~ Newsletter
-    - [ ] Keep `conversions/avmn` because many pages on seeourminds.com still use it!
+- [x] New Conversion: `conversions/avin`
+    - [x] It is now the **Intermittent** instead of the ~~Monthly~~ Newsletter
+    - [x] Keep `conversions/avmn` because many pages on seeourminds.com still use it!
 
 ## Fixing the `ModuleNotFoundError` Error
 
@@ -64,6 +64,133 @@ Run the two commands below on:
 ```
 pip install flask-wtf
 pip install email_validator
+```
+
+# Testing Conversions
+
+## Checking the Database
+
+Reference:
+
+- (1) https://www.sqlitetutorial.net/sqlite-tutorial/sqlite-show-tables/
+- (2) https://www.sqlitetutorial.net/sqlite-tutorial/sqlite-describe-table/
+- (3) https://www.sqlitetutorial.net/sqlite-dump/
+
+Interestingly, I am unable to quickly find a reference for "how to install sqlite on ubuntu 20.04 focal fossa".
+
+### Installing Sqlite3
+
+The references above reference Sqlite3, but the command is not available:
+
+```
+$ which sqlite3
+$ which sqlite
+$
+```
+
+Also, running `apt-list` shows we need to install `sqlite3` specifically, rather than just `sqlite`:
+
+```
+$ apt list 'sqlite'
+Listing... Done
+sqlite/focal 2.8.17-15fakesync1build1 amd64
+$ apt list 'sqlite3'
+$ apt install 'sqlite3'
+Listing... Done
+sqlite3/focal-updates,focal-security 3.31.1-4ubuntu0.1 amd64
+sqlite3/focal-updates,focal-security 3.31.1-4ubuntu0.1 i386
+$ apt install sqlite3
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  sqlite3-doc
+The following NEW packages will be installed:
+  sqlite3
+0 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.
+Need to get 860 kB of archives.
+After this operation, 2,803 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 sqlite3 amd64 3.31.1-4ubuntu0.1 [860 kB]
+Fetched 860 kB in 12s (71.4 kB/s)
+Selecting previously unselected package sqlite3.
+(Reading database ... 235004 files and directories currently installed.)
+Preparing to unpack .../sqlite3_3.31.1-4ubuntu0.1_amd64.deb ...
+Unpacking sqlite3 (3.31.1-4ubuntu0.1) ...
+Setting up sqlite3 (3.31.1-4ubuntu0.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+$
+```
+
+```
+$ which sqlite
+$ which sqlite3
+/usr/bin/sqlite3
+$
+```
+
+### Examining the Contents of the Db
+
+Following the tutorial in the references above:
+
+```
+$ sqlite3 NameEmail.db
+SQLite version 3.31.1 2020-01-27 19:55:54
+Enter ".help" for usage hints.
+sqlite> .tables
+NameEmail
+sqlite> .table
+NameEmail
+sqlite> pragma table_info('NameEmail');
+0|id|INTEGER|0||1
+1|name|TEXT|0||0
+2|email|TEXT|0||0
+3|site|TEXT|0|'groja.com'|0
+4|active|INTEGER|0|1|0
+5|date_added|TEXT|0|CURRENT_TIMESTAMP|0
+6|date_changed|TEXT|0|CURRENT_TIMESTAMP|0
+7|consulting|INTEGER|0|0|0
+8|newsletter|INTEGER|0|0|0
+9|portrait|INTEGER|0|0|0
+sqlite> .output NameEmail-dump.sql
+sqlite> .dump
+sqlite> .exit
+tomh@ava: /var/www/groja.com/htdocs/groja.com/gitignored/db
+$ more NameEmail-dump.sql
+$
+```
+
+### Updating the Other Hosts
+
+Install sqlite3 on these other servers:
+
+- [x] bette
+- [x] barbara
+- [x] jane
+
+```
+apt install sqlite3 sqlite3-doc
+```
+
+Run the commands below to examine the current state of the DB:
+
+```
+$ sqlite3 NameEmail.db
+sqlite> .tables
+NameEmail
+sqlite> .table
+NameEmail
+sqlite> pragma table_info('NameEmail');
+. . .
+. . .
+. . .
+sqlite> .output NameEmail-dump.sql
+sqlite> .dump
+sqlite> .exit
+$ more NameEmail-dump.sql
+. . .
+. . .
+. . .
+$
 ```
 
 

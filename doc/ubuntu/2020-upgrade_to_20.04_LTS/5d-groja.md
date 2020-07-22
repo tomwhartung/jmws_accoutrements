@@ -5,10 +5,22 @@ Updating Groja.com so it is just exactly perfect.
 
 # Fixing Conversions
 
-- [x] Error: `ModuleNotFoundError: No module named 'flask_wtf'`
-- [x] New Conversion: `conversions/avin`
+- [x] Fix this error: `ModuleNotFoundError: No module named 'flask_wtf'`
+- [x] New conversion: `conversions/avin`
     - [x] It is now the **Intermittent** instead of the ~~Monthly~~ Newsletter
+        - [ ] Rename all occurrences from the ~~Monthly~~ to the **Intermittent** Newsletter
     - [x] Keep `conversions/avmn` because many pages on seeourminds.com still use it!
+    - [x] Remove unused conversions
+- [x] Test remaining conversions
+    - [x] Install any additional required packages
+    - [ ] Test new `avin` conversion
+       - [ ] `conversions/avin`
+    - [ ] Test old `avmn` conversion
+       - [ ] `conversions/avmn`
+    - [ ] Test other conversions
+       - [ ] `http://127.0.0.1:5000/conversions/get_your_portrait`
+       - [ ] `http://127.0.0.1:5000/conversions/politicians_challenge`
+       - [ ] `http://127.0.0.1:5000/conversions/seeourminds`
 
 ## Fixing the `ModuleNotFoundError` Error
 
@@ -57,8 +69,8 @@ Worked ok after restarting the server, yay!
 
 Run the two commands below on:
 
-- [x] jane
 - [x] bette
+- [x] jane
 - [x] barbara
 
 ```
@@ -70,11 +82,12 @@ pip install email_validator
 
 ## Checking the Database
 
-Reference:
+References:
 
-- (1) https://www.sqlitetutorial.net/sqlite-tutorial/sqlite-show-tables/
-- (2) https://www.sqlitetutorial.net/sqlite-tutorial/sqlite-describe-table/
-- (3) https://www.sqlitetutorial.net/sqlite-dump/
+- (1) https://www.sqlitetutorial.net/
+- (2) https://www.sqlitetutorial.net/sqlite-tutorial/sqlite-show-tables/
+- (3) https://www.sqlitetutorial.net/sqlite-tutorial/sqlite-describe-table/
+- (4) https://www.sqlitetutorial.net/sqlite-dump/
 
 Interestingly, I am unable to quickly find a reference for "how to install sqlite on ubuntu 20.04 focal fossa".
 
@@ -164,8 +177,8 @@ $
 Install sqlite3 on these other servers:
 
 - [x] bette
-- [x] barbara
 - [x] jane
+- [x] barbara
 
 ```
 apt install sqlite3 sqlite3-doc
@@ -193,26 +206,93 @@ $ more NameEmail-dump.sql
 $
 ```
 
+## Fixing the `ConnectionRefusedError` Error
 
-# Installing Additional Required Packages
+Testing the `avin` conversion, I get the following error:
 
-Postgres may be needed, or does the site use sqlite?
+- ConnectionRefusedError: [Errno 111] Connection refused
 
-- [ ] Determine whether site uses postgres, sqlite, or ???
-- [ ] Install any additional required packages
-- [ ] Fix `avmn` conversion, and others as necessary
-- [ ] Check for and remove free spiritual portrait offer, if present
+Reference:
 
-# Review and Content Updates
+- https://stackoverflow.com/questions/24709800/python-smtplib-why-is-the-connection-refused
 
-- [ ] Ensure social media icons link to same accounts as artsyvisions
-- [ ] Upgrade MDB to latest version
-- [ ] Review conversions
-    - [ ] Disable any that are unused
-    - [ ] Ensure the remaining conversions work ok
-    - [ ] Delete any conversions that are obsolete
-    - [ ] Try to prevent spam - got some but not getting it any more
-- [ ] Set list price for a spiritual portrait to $500
-- [ ] Review about page and update as appropriate
-- [ ] Review for anything glaring
+### Install `sendmail`
+
+Try installing sendmail:
+
+```
+$ apt list sendmail
+Listing... Done
+sendmail/focal,focal 8.15.2-18 all
+root@ava: ~
+$ apt install sendmail
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  liblockfile-bin liblockfile1 libsigsegv2 lockfile-progs m4 procmail sendmail-base sendmail-bin sendmail-cf sensible-mda
+Suggested packages:
+  m4-doc sendmail-doc rmail logcheck resolvconf sasl2-bin
+The following NEW packages will be installed:
+  liblockfile-bin liblockfile1 libsigsegv2 lockfile-progs m4 procmail sendmail sendmail-base sendmail-bin sendmail-cf sensible-mda
+0 upgraded, 11 newly installed, 0 to remove and 4 not upgraded.
+Need to get 1,107 kB of archives.
+After this operation, 4,914 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+. . .
+. . .
+. . .
+I am creating a safe, default sendmail.mc for you and you can
+run sendmailconfig later if you need to change the defaults.
+. . .
+. . .
+. . .
+To enable sendmail SASL2 support at a later date, invoke "/usr/share/sendmail/update_auth"
+. . .
+. . .
+. . .
+*** *** *** WARNING *** WARNING *** WARNING *** WARNING *** *** ***
+
+Everything you need to support STARTTLS (encrypted mail transmission
+and user authentication via certificates) is installed and configured
+but is *NOT* being used.
+
+To enable sendmail to use STARTTLS, you need to:
+1) Add this line to /etc/mail/sendmail.mc and optionally
+   to /etc/mail/submit.mc:
+  include(`/etc/mail/tls/starttls.m4')dnl
+2) Run sendmailconfig
+3) Restart sendmail
+. . .
+. . .
+. . .
+WARNING: local host name (ava) is not qualified; see cf/README: WHO AM I?
+WARNING: Group writable directory /var
+. . .
+. . .
+. . .
+$ apt install sendmail-doc
+. . .
+. . .
+. . .
+$
+```
+
+### Updating the Other Hosts
+
+- [x] Install sendmail and sendmail-doc on these other servers:
+    - [x] bette - sendmail was already installed
+    - [x] jane
+    - [x] barbara
+
+```
+apt install sendmail sendmail-doc
+```
+
+### Test the Other Hosts
+
+- [ ] Test one or more of the conversions on each of these other servers:
+    - [ ] bette - sendmail was already installed
+    - [ ] jane
+    - [ ] barbara
 

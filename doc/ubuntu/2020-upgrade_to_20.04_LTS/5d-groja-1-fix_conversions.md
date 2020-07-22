@@ -6,21 +6,28 @@ Updating Groja.com so it is just exactly perfect.
 # Fixing Conversions
 
 - [x] Fix this error: `ModuleNotFoundError: No module named 'flask_wtf'`
-- [x] New conversion: `conversions/avin`
+- [x] New conversion: `conversion/avin`
     - [x] It is now the **Intermittent** instead of the ~~Monthly~~ Newsletter
-        - [ ] Rename all occurrences from the ~~Monthly~~ to the **Intermittent** Newsletter
-    - [x] Keep `conversions/avmn` because many pages on seeourminds.com still use it!
+        - [x] Rename all occurrences from the ~~Monthly~~ to the **Intermittent** Newsletter
+    - [x] Keep `conversion/avmn` because many pages on seeourminds.com still use it!
     - [x] Remove unused conversions
+        - [x] Remove code from `groja.py`
+        - [x] Remove templates from `conversion/` and `thanks/` directories
 - [x] Test remaining conversions
     - [x] Install any additional required packages
-    - [ ] Test new `avin` conversion
-       - [ ] `conversions/avin`
-    - [ ] Test old `avmn` conversion
-       - [ ] `conversions/avmn`
-    - [ ] Test other conversions
-       - [ ] `http://127.0.0.1:5000/conversions/get_your_portrait`
-       - [ ] `http://127.0.0.1:5000/conversions/politicians_challenge`
-       - [ ] `http://127.0.0.1:5000/conversions/seeourminds`
+    - [x] Test new `avin` conversion
+       - [x] `http://127.0.0.1:5000/conversion/avin`
+       - [x] Ensure it updates db
+       - [x] Ensure it sends email
+    - [x] Test old `avmn` conversion
+       - [x] `http://127.0.0.1:5000/conversion/avmn`
+    - [x] Test each of these other conversions at least once on ava
+       - [x] `http://127.0.0.1:5000/conversion/get_your_portrait`
+       - [x] `http://127.0.0.1:5000/conversion/politicians_challenge`
+       - [x] `http://127.0.0.1:5000/conversion/seeourminds`
+- [ ] Cleanup DB
+
+Details and sub-processes for each of these steps appear below.
 
 ## Fixing the `ModuleNotFoundError` Error
 
@@ -216,15 +223,16 @@ Reference:
 
 - https://stackoverflow.com/questions/24709800/python-smtplib-why-is-the-connection-refused
 
-### Install `sendmail`
+### Install `sendmail` **OR NOT**
 
-Try installing sendmail:
+I am leaving this in here, but note that **installing `postfix` causes `sendmail` to be REMOVED** -- presumably -- see below.
+
+Install sendmail **OR NOT** -- see below:
 
 ```
 $ apt list sendmail
 Listing... Done
 sendmail/focal,focal 8.15.2-18 all
-root@ava: ~
 $ apt install sendmail
 Reading package lists... Done
 Building dependency tree
@@ -278,21 +286,152 @@ $ apt install sendmail-doc
 $
 ```
 
-### Updating the Other Hosts
+## Fixing Emails
 
-- [x] Install sendmail and sendmail-doc on these other servers:
+Testing the `avin` conversion, there are no errors and it seems to work ok, but it does not send the emails.
+
+Looking up how to use sendmail on the commandline revealed this reference:
+
+- https://stackoverflow.com/questions/49206701/how-to-send-an-email-using-sendmail-command
+
+I did not install postfix, so that could be the problem.
+
+### Install `postfix`
+
+Install postfix - I am fine with using the default version:
+
+```
+$ apt list postfix
+Listing... Done
+postfix/focal-updates 3.4.13-0ubuntu1 amd64
+N: There is 1 additional version. Please use the '-a' switch to see it
+root@ava: ~
+$ apt list -a postfix
+Listing... Done
+postfix/focal-updates 3.4.13-0ubuntu1 amd64
+postfix/focal 3.4.10-1ubuntu1 amd64
+$ apt install postfix
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  liblockfile-bin liblockfile1 libsigsegv2 linux-headers-5.4.0-39 linux-headers-5.4.0-39-generic linux-image-5.4.0-39-generic linux-modules-5.4.0-39-generic
+  linux-modules-extra-5.4.0-39-generic lockfile-progs m4 sendmail-base sendmail-cf sensible-mda
+Use 'apt autoremove' to remove them.
+Suggested packages:
+  postfix-mysql postfix-pgsql postfix-ldap postfix-pcre postfix-lmdb postfix-sqlite sasl2-bin | dovecot-common resolvconf postfix-cdb postfix-doc
+The following packages will be REMOVED:
+  sendmail sendmail-bin
+The following NEW packages will be installed:
+  postfix
+0 upgraded, 1 newly installed, 2 to remove and 0 not upgraded.
+Need to get 1,198 kB of archives.
+After this operation, 2,375 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 postfix amd64 3.4.13-0ubuntu1 [1,198 kB]
+Fetched 1,198 kB in 10s (118 kB/s)
+Preconfiguring packages ...
+(Reading database ... 273018 files and directories currently installed.)
+Removing sendmail (8.15.2-18) ...
+dpkg: sendmail-bin: dependency problems, but removing anyway as you requested:
+ sensible-mda depends on sendmail-bin | mail-transport-agent; however:
+  Package sendmail-bin is to be removed.
+  Package mail-transport-agent is not installed.
+  Package sendmail-bin which provides mail-transport-agent is to be removed.
+ sensible-mda depends on sendmail-bin | mail-transport-agent; however:
+  Package sendmail-bin is to be removed.
+  Package mail-transport-agent is not installed.
+  Package sendmail-bin which provides mail-transport-agent is to be removed.
+
+Removing sendmail-bin (8.15.2-18) ...
+Selecting previously unselected package postfix.
+(Reading database ... 272964 files and directories currently installed.)
+Preparing to unpack .../postfix_3.4.13-0ubuntu1_amd64.deb ...
+Unpacking postfix (3.4.13-0ubuntu1) ...
+Setting up postfix (3.4.13-0ubuntu1) ...
+Adding group `postfix' (GID 135) ...
+Done.
+Adding system user `postfix' (UID 126) ...
+Adding new user `postfix' (UID 126) with group `postfix' ...
+Not creating home directory `/var/spool/postfix'.
+Creating /etc/postfix/dynamicmaps.cf
+Adding group `postdrop' (GID 136) ...
+Done.
+setting myhostname: ava
+setting alias maps
+setting alias database
+changing /etc/mailname to ava.groja.com
+setting myorigin
+setting destinations: $myhostname, ava.groja.com, ava, localhost.localdomain, localhost
+setting relayhost:
+setting mynetworks: 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+setting mailbox_command
+setting mailbox_size_limit: 0
+setting recipient_delimiter: +
+setting inet_interfaces: all
+setting inet_protocols: all
+WARNING: /etc/aliases exists, but does not have a root alias.
+
+Postfix (main.cf) is now set up with a default configuration.  If you need to
+make changes, edit /etc/postfix/main.cf (and others) as needed.  To view
+Postfix configuration values, see postconf(1).
+
+After modifying main.cf, be sure to run 'systemctl reload postfix'.
+
+Running newaliases
+Created symlink /etc/systemd/system/multi-user.target.wants/postfix.service → /lib/systemd/system/postfix.service.
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for systemd (245.4-4ubuntu3.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for rsyslog (8.2001.0-1ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+$
+```
+
+Note that the `sendmail` command is still there, even though it was supposedly **REMOVED**:
+
+```
+$ which sendmail
+/usr/sbin/sendmail
+$
+```
+
+## Updating the Other Hosts
+
+- [x] Install `sendmail` on these other servers -- **OR NOT**:
+- [x] Install `postfix` on these other servers:
     - [x] bette - sendmail was already installed
     - [x] jane
     - [x] barbara
 
 ```
-apt install sendmail sendmail-doc
+## apt install sendmail sendmail-doc    ## **OR NOT**
+apt install postfix
+###
+### For Postfix Configuration
+### -> Choose "Internet Site"
+### -> Enter [ava|jane|bette|barbara].groja.com - as appropriate
+###
 ```
 
-### Test the Other Hosts
+## Testing the Other Hosts
 
 - [ ] Test one or more of the conversions on each of these other servers:
-    - [ ] bette - sendmail was already installed
+    - [ ] bette
     - [ ] jane
-    - [ ] barbara
+- [ ] Test **ALL** of these conversions **at least once** on barbara
+    - [ ] `http://groja.com/conversion/get_your_portrait`
+    - [ ] `http://groja.com/conversion/politicians_challenge`
+    - [ ] `http://groja.com/conversion/seeourminds`
+
+## Cleanup DB
+
+Remove unneeded entries:
+
+- [ ] Entries used for testing
+- [ ] Entries from evil suck-ass spammers
+
+Reference:
+
+- https://www.sqlitetutorial.net/
 

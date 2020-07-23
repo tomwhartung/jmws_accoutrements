@@ -10,11 +10,12 @@ Updating Groja.com so it is just exactly perfect.
     - [x] It is now the **Intermittent** instead of the ~~Monthly~~ Newsletter
         - [x] Rename all occurrences from the ~~Monthly~~ to the **Intermittent** Newsletter
     - [x] Keep `conversion/avmn` because many pages on seeourminds.com still use it!
-    - [x] Remove unused conversions
+    - [x] Remove unused conversions: joomoowebsites, etc.
         - [x] Remove code from `groja.py`
         - [x] Remove templates from `conversion/` and `thanks/` directories
-- [x] Test remaining conversions
-    - [x] Install any additional required packages
+- [x] Test all conversions
+    - [x] Install additional required packages
+    - [x] Fix the permissions on the DB
     - [x] Test new `avin` conversion
        - [x] `http://127.0.0.1:5000/conversion/avin`
        - [x] Ensure it updates db
@@ -25,6 +26,12 @@ Updating Groja.com so it is just exactly perfect.
        - [x] `http://127.0.0.1:5000/conversion/get_your_portrait`
        - [x] `http://127.0.0.1:5000/conversion/politicians_challenge`
        - [x] `http://127.0.0.1:5000/conversion/seeourminds`
+    - [x] Test each of these other conversions at least once in production on barbara
+       - [x] `http://groja.com/conversion/avin`
+       - [x] `http://groja.com/conversion/avmn`
+       - [x] `http://groja.com/conversion/get_your_portrait`
+       - [x] `http://groja.com/conversion/politicians_challenge`
+       - [x] `http://groja.com/conversion/seeourminds`
 - [ ] Cleanup DB
 
 Details and sub-processes for each of these steps appear below.
@@ -395,14 +402,31 @@ $ which sendmail
 /usr/sbin/sendmail
 $
 ```
+### Fix to Run Under Apache2
+
+To get the conversions to work when running under apache2, we need to fix the permissions on the DB.
+
+```
+gogrg   # /var/www/groja.com/htdocs/groja.com/gitignored/Site
+cd ../db/
+ll
+sudo chgrp www-data . *
+chmod 775 . *_DB
+chmod 664 *.*  *_DB/*
+ll
+```
 
 ## Updating the Other Hosts
 
-- [x] Install `sendmail` on these other servers -- **OR NOT**:
+- [x] ~~Install `sendmail` on these other servers~~ -- **OR NOT**:
 - [x] Install `postfix` on these other servers:
     - [x] bette - sendmail was already installed
     - [x] jane
     - [x] barbara
+- [ ] Fix permissions on these other servers:
+    - [ ] bette - not running apache but fix permissions nonetheless
+    - [ ] jane
+    - [ ] barbara
 
 ```
 ## apt install sendmail sendmail-doc    ## **OR NOT**
@@ -412,17 +436,29 @@ apt install postfix
 ### -> Choose "Internet Site"
 ### -> Enter [ava|jane|bette|barbara].groja.com - as appropriate
 ###
+gogrg   # /var/www/groja.com/htdocs/groja.com/gitignored/Site
+cd ../db/
+ll
+sudo chgrp www-data .this_dir_intentionally_left_empty
+sudo chgrp www-data . * *_DB
+sudo chgrp www-data *_DB/*.*
+chmod 770 . *_DB
+chmod 660 *.*  *_DB/*.*
+ll
+ll *_DB
 ```
 
 ## Testing the Other Hosts
 
-- [ ] Test one or more of the conversions on each of these other servers:
-    - [ ] bette
-    - [ ] jane
-- [ ] Test **ALL** of these conversions **at least once** on barbara
-    - [ ] `http://groja.com/conversion/get_your_portrait`
-    - [ ] `http://groja.com/conversion/politicians_challenge`
-    - [ ] `http://groja.com/conversion/seeourminds`
+- [x] Test one or more of the conversions on each of these other servers:
+    - [x] bette - Run the local server to test
+    - [x] jane - Test using apache
+- [x] Use apache to test **ALL** of these conversions **at least once** on barbara
+    - [x] `http://groja.com/conversion/avin`
+    - [x] `http://groja.com/conversion/avmn`
+    - [x] `http://groja.com/conversion/get_your_portrait`
+    - [x] `http://groja.com/conversion/politicians_challenge`
+    - [x] `http://groja.com/conversion/seeourminds`
 
 ## Cleanup DB
 

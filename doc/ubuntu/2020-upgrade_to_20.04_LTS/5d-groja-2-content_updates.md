@@ -7,7 +7,7 @@ Continuing to update Groja.com so it is just exactly perfect.
 
 ## Content Updates and Review - Checklist
 
-- [ ] Upgrade MDB to latest version
+- [ ] Upgrade MDB to latest version: MDB 5 alpha
 - [ ] Check for and remove free spiritual portrait offer, if present
     - [ ] Check the "Making Money?!?" card on the About page
 - [x] Ensure social media icons link to same accounts as artsyvisions
@@ -23,11 +23,43 @@ Processes and details appear below.
 
 ## Content Updates - Process and Details
 
-### Upgrade MDB to Latest Version
+Download, install, and test.
 
-Reference:
+### Upgrade MDB to Latest Version: MDB 5 Alpha
 
-Download and install.
+References:
+
+- From Email:
+  - https://mdbootstrap.us16.list-manage.com/track/click?u=461480655ccce528d909d3f42&id=cb39f7716f&e=a65ba5c397
+- Takes me to (redirects):
+  - https://mdbootstrap.com/docs/standard/?utm_campaing=MDB5&utm_medium=news&mc_cid=b025dc7b85&mc_eid=a65ba5c397
+- Get Started (button):
+  - https://mdbootstrap.com/docs/standard/getting-started/installation/
+- From README.txt file:
+  - https://mdbootstrap.com/docs/standard/
+
+#### Do I Want to Do This?
+
+- They have dropped jQuery
+- They want me to use MDB CLI, which requires NPM
+
+Welllll, let's give it a try.
+
+#### Proposed Steps:
+
+- 1. Download MDB-UI-KIT-Free-1.0.0-alpha4.zip and unpack
+- 2. Copy files into `static` directory
+   - 2.1. css/*
+   - 2.2. js/*
+- 3. Quickly test site
+
+Thinking I will install Node and NPM tomorrow.
+
+- 4. If everything looks ok, commit
+- 5. If it looks messed up, revert
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 ### Check for and Remove Free Spiritual Portrait Offer, If Present
 

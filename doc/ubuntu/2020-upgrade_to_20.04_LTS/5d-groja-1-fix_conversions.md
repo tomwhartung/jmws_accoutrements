@@ -32,7 +32,7 @@ Updating Groja.com so it is just exactly perfect.
        - [x] `http://groja.com/conversion/get_your_portrait`
        - [x] `http://groja.com/conversion/politicians_challenge`
        - [x] `http://groja.com/conversion/seeourminds`
-- [ ] Cleanup DB
+- [x] Cleanup DB
 
 Details and sub-processes for each of these steps appear below.
 
@@ -423,10 +423,10 @@ ll
     - [x] bette - sendmail was already installed
     - [x] jane
     - [x] barbara
-- [ ] Fix permissions on these other servers:
-    - [ ] bette - not running apache but fix permissions nonetheless
-    - [ ] jane
-    - [ ] barbara
+- [x] Fix permissions on these other servers:
+    - [x] bette - not running apache but fix permissions nonetheless
+    - [x] jane
+    - [x] barbara
 
 ```
 ## apt install sendmail sendmail-doc    ## **OR NOT**
@@ -464,10 +464,96 @@ ll *_DB
 
 Remove unneeded entries:
 
-- [ ] Entries used for testing
-- [ ] Entries from evil suck-ass spammers
+- [x] Entries used for testing
+- [x] Entries from evil suck-ass spammers
 
 Reference:
 
 - https://www.sqlitetutorial.net/
+
+### Commands Used to Clean Things Up
+
+Run the commands below to examine the current state of the DB:
+
+```
+$ gogrg   # /var/www/groja.com/htdocs/groja.com/gitignored/Site
+$ cd ../db/
+$ sqlite3 NameEmail.db
+sqlite> .dump
+sqlite> .exit
+$
+```
+
+Syntax of sqlite commands relevant to this task:
+
+```
+SELECT column_list FROM table;
+SELECT * FROM table WHERE search_condition;
+
+SELECT DISTINCT column_list
+  FROM table_list JOIN table ON join_condition
+  WHERE row_filter
+  ORDER BY column
+  LIMIT count OFFSET offset
+  GROUP BY column
+  HAVING group_filter;
+
+DELETE FROM table WHERE search_condition;
+
+UPDATE table
+SET column_1 = new_value_1,
+    column_2 = new_value_2
+WHERE
+    search_condition
+ORDER column_or_expression
+LIMIT row_count OFFSET offset;
+```
+
+Looks to me as though it's just like MySql.
+
+Commands to run in `sqlite>`
+
+```
+sqlite> select * from NameEmail;
+sqlite> select * from NameEmail where id > 7;
+. . .
+. . .
+. . .
+sqlite> delete from NameEmail where id > 7;
+sqlite> select * from NameEmail where id = 6;
+6|Tom Tester|tomwh@example.com|groja.com|1|2018-06-27 18:39:42|2018-06-27 18:39:42|0|0|1
+sqlite> delete from NameEmail where id = 6;
+sqlite> select * from NameEmail where id = 1;
+1|Joe|joe@joe.com|groja.com|1|2017-03-05 21:39:23|2017-03-05 21:39:23|0|0|0
+sqlite> delete from NameEmail where id = 1;
+sqlite> .dump
+. . .
+. . .
+. . .
+sqlite> select * from NameEmail where id = 7;
+7|Librarian|tomwh@example.com|groja.com|1|2018-10-09 19:47:17|2018-10-09 19:47:17|1|1|1
+sqlite> update NameEmail set NAME = "Tom H." where id = 7;
+sqlite> select * from NameEmail where id = 7;
+7|Tom H.|tomwh@example.com|groja.com|1|2018-10-09 19:47:17|2018-10-09 19:47:17|1|1|1
+sqlite> .output NameEmail-dump.sql
+sqlite> .dump
+. . .
+. . .
+. . .
+sqlite> .exit
+```
+
+Copy relevant files to the other servers.
+
+```
+gogrg   # /var/www/groja.com/htdocs/groja.com/gitignored/Site
+cd ../db/
+toEmAll NameEmail*
+cd TEST_DB
+toEmAll NameEmail*
+cd ../PRODUCTION_DB
+toEmAll NameEmail*
+```
+
+And we're done!  With conversions, anyway.
 

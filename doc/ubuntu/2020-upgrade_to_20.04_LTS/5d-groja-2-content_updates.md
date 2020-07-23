@@ -3,13 +3,49 @@
 
 Continuing to update Groja.com so it is just exactly perfect.
 
-# Review and Content Updates
+# Content Updates and Review
 
+## Content Updates and Review - Checklist
+
+- [ ] Upgrade MDB to latest version
 - [ ] Check for and remove free spiritual portrait offer, if present
     - [ ] Check the "Making Money?!?" card on the About page
-- [ ] Ensure social media icons link to same accounts as artsyvisions
-- [ ] Upgrade MDB to latest version
+- [x] Ensure social media icons link to same accounts as artsyvisions
 - [ ] Set list price for a spiritual portrait to $500
+    - [ ] A price of $10 appears on the `get_your_portrait` conversion page
+        - http://127.0.0.1:5000/conversion/get_your_portrait`
+    - [ ] Check for other occurrences of the price
+
 - [ ] Review About page and update as appropriate
 - [ ] Review entire site for anything glaring
+
+Processes and details appear below.
+
+## Content Updates - Process and Details
+
+### Upgrade MDB to Latest Version
+
+Reference:
+
+Download and install.
+
+### Check for and Remove Free Spiritual Portrait Offer, If Present
+
+### Check the "Making Money?!?" card on the About page
+
+### Set list price for a spiritual portrait to $500
+
+#### Fix the `get_your_portrait` conversion page
+
+- http://127.0.0.1:5000/conversion/get_your_portrait`
+
+Continued in next section!
+
+## Review - Process and Details
+
+### Check for Other Occurrences of the Price
+
+### Review About Page and Update as Appropriate
+
+### Review Entire Site for Anything Glaring
 

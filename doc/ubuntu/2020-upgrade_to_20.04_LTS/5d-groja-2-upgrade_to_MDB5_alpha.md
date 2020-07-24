@@ -1,31 +1,32 @@
 
-# 5d-groja-2-content_updates.md
+# 5d-groja-2-upgrade_to_MDB5_alpha.md
 
 Continuing to update Groja.com so it is just exactly perfect.
 
 # Content Updates and Review
 
-## Content Updates and Review - Checklist
+## Update to Use MDB5 Alpha - Checklist
 
 - [ ] Upgrade MDB to latest version: MDB 5 alpha
-- [ ] Check for and remove free spiritual portrait offer, if present
-    - [ ] Check the "Making Money?!?" card on the About page
+    - [x] 1. Download MDB-UI-KIT-Free-1.0.0-alpha4.zip and unpack
+    - [x] 2. Install Node, NPM, and MDB CLI
+    - [x] 3. Copy files into `static` directory
+       - [x] 3.1. css/*
+       - [x] 3.2. js/*
+    - [ ] 4. Update `base.html` template to look like the downloaded version of `index.html`
+    - [ ] 5. Quickly test site and correct any glaring aberrations
+    - [ ] 6. Keep an eye out for aberrations while performing subsequent steps
 - [x] Ensure social media icons link to same accounts as artsyvisions
-- [ ] Set list price for a spiritual portrait to $500
-    - [ ] A price of $10 appears on the `get_your_portrait` conversion page
-        - http://127.0.0.1:5000/conversion/get_your_portrait`
-    - [ ] Check for other occurrences of the price
-
-- [ ] Review About page and update as appropriate
-- [ ] Review entire site for anything glaring
+- [ ] Content Updates and Review
+    - See `5d-groja-3-content_updates.md`
 
 Processes and details appear below.
 
-## Content Updates - Process and Details
+## Update to Use MDB5 Alpha - Process
 
-Download, install, and test.
+Upgrade MDB to Latest Version: MDB 5 Alpha:
 
-### Upgrade MDB to Latest Version: MDB 5 Alpha
+- Download, install, and test.
 
 References:
 
@@ -82,6 +83,10 @@ NPM:
 Watched the Quick Start Video at:
 
 - https://mdbootstrap.com/docs/standard/getting-started/quick-start/
+
+A shorter 2-minute version of the Quick Start Video is here:
+
+- https://mdbootstrap.com/cli/
 
 In it, they show how to use MDB CLI to:
 
@@ -200,42 +205,72 @@ $
 
 Wow that is a lot of packages!  Fortunately it did not take very long.
 
-Now install MDB CLI:
+This page has the commands, which can be tricky to get from the videos.
+
+- https://mdbootstrap.com/cli/quick-start/
+
+Now install MDB CLI and login:
 
 ```
+$ npm install -g mdb
++ mdb@0.1.0
+added 2 packages from 1 contributor in 2.963s
+$ which  mdb                      # Oops
+$ npm install -g mdb-cli
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+/usr/local/bin/mdb -> /usr/local/lib/node_modules/mdb-cli/index.js
+
+> core-js@2.6.11 postinstall /usr/local/lib/node_modules/mdb-cli/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+root@ava: ~
+$ which mdb
+/usr/local/bin/mdb
+$ mdb login
+? Enter your MDB username tomwhartung
+? Enter your MDB password **********
+┌─────────┬────────┬────────────────────┐
+│ (index) │ Status │      Message       │
+├─────────┼────────┼────────────────────┤
+│    0    │   0    │ 'Login successful' │
+└─────────┴────────┴────────────────────┘
+$ mdb list
+┌─────────┬────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────┐
+│ (index) │                  Product Name                  │                             Available                              │
+├─────────┼────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+│    0    │                'MDB eCommerce'                 │ 'No ( https://mdbootstrap.com/products/jquery-ecommerce-ui-kit/ )' │
+│    1    │       'Material Design for Bootstrap 5'        │                               'Yes'                                │
+│    2    │              'MDB PRO (Angular)'               │       'No ( https://mdbootstrap.com/products/angular-pro/ )'       │
+│    3    │ 'Material Design for Bootstrap Pro (Angular)'  │     'No ( https://mdbootstrap.com/products/angular-ui-kit/ )'      │
+│    4    │  'Material Design for Bootstrap 4 (Angular)'   │                               'Yes'                                │
+│    5    │               'MDB PRO (React)'                │        'No ( https://mdbootstrap.com/products/react-pro/ )'        │
+│    6    │  'Material Design for Bootstrap Pro (React)'   │      'No ( https://mdbootstrap.com/products/react-ui-kit/ )'       │
+│    7    │   'Material Design for Bootstrap 4 (React)'    │                               'Yes'                                │
+│    8    │   'Material Design for Bootstrap Pro (Vue)'    │       'No ( https://mdbootstrap.com/products/vue-ui-kit/ )'        │
+│    9    │                'MDB PRO (Vue)'                 │         'No ( https://mdbootstrap.com/products/vue-pro/ )'         │
+│   10    │    'Material Design for Bootstrap 4 (Vue)'     │                               'Yes'                                │
+│   11    │    'MDB PRO (jQuery [standard Bootstrap])'     │      'No ( https://mdbootstrap.com/products/bootstrap-pro/ )'      │
+│   12    │ 'Material Design for Bootstrap 4 Pro (jQuery)' │      'No ( https://mdbootstrap.com/products/jquery-ui-kit/ )'      │
+│   13    │   'Material Design for Bootstrap 4 (jQuery)'   │                               'Yes'                                │
+└─────────┴────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────┘
+$
 ```
 
-#### Proposed Steps:
+Note that we will want to use this one later:
 
-- [x] 1. Download MDB-UI-KIT-Free-1.0.0-alpha4.zip and unpack
-- [x] 2. Install Node, NPM, and MDB CLI
-- [x] 3. Copy files into `static` directory
-   - [x] 3.1. css/*
-   - [x] 3.2. js/*
-- [ ] 4. Update base.html` template to look like the downloaded version of `index.html`
-- [ ] 5. Quickly test site and correct any glaring aberrations.
-- [ ] 6. Keep an eye out for aberrations while performing subsequent steps
+```
+│    1    │       'Material Design for Bootstrap 5'        │                               'Yes'                                │
+```
+
+Possible commands we can now run include:
+
+```
+mdb init
+mdb publish
+```
+
+This may be useful later, but we don't need to create a template or publish a site just now.
 
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-### Check for and Remove Free Spiritual Portrait Offer, If Present
-
-### Check the "Making Money?!?" card on the About page
-
-### Set list price for a spiritual portrait to $500
-
-#### Fix the `get_your_portrait` conversion page
-
-- http://127.0.0.1:5000/conversion/get_your_portrait`
-
-Continued in next section!
-
-## Review - Process and Details
-
-### Check for Other Occurrences of the Price
-
-### Review About Page and Update as Appropriate
-
-### Review Entire Site for Anything Glaring
-
+ Update `base.html` template to look like the downloaded version of `index.html`

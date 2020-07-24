@@ -105,20 +105,116 @@ Use apt to install Node, NPM, and MDB CLI.
 
 #### Installing Node, NPM, and MDB CLI
 
-Use `apt` as follows:
+Use `apt install` as follows:
+
+```
+$ apt install nodejs npm
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  gyp libc-ares2 libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer libnode-dev libnode64 libpython2-stdlib libpython2.7-minimal
+  libpython2.7-stdlib libssl-dev libuv1-dev node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex node-ansi-styles node-ansistyles node-aproba
+  node-archy node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules node-builtins node-cacache node-call-limit node-camelcase node-caseless node-chalk
+  node-chownr node-ci-info node-cli-boxes node-cliui node-clone node-co node-color-convert node-color-name node-colors node-columnify node-combined-stream
+  node-concat-map node-concat-stream node-config-chain node-configstore node-console-control-strings node-copy-concurrently node-core-util-is node-cross-spawn
+  node-crypto-random-string node-cyclist node-dashdash node-debug node-decamelize node-decompress-response node-deep-extend node-defaults
+  node-define-properties node-delayed-stream node-delegates node-detect-indent node-detect-newline node-dot-prop node-duplexer3 node-duplexify node-ecc-jsbn
+  node-editor node-encoding node-end-of-stream node-err-code node-errno node-es6-promise node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun node-get-caller-file node-get-stream node-getpass node-glob node-got node-graceful-fs node-gyp
+  node-har-schema node-har-validator node-has-flag node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode node-hosted-git-info
+  node-http-signature node-iconv-lite node-iferr node-import-lazy node-imurmurhash node-inflight node-inherits node-ini node-invert-kv node-ip node-ip-regex
+  node-is-npm node-is-obj node-is-object node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream node-is-typedarray node-isarray node-isexe
+  node-isstream node-isurl node-jsbn node-json-parse-better-errors node-json-schema node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime node-mime-types
+  node-mimic-fn node-mimic-response node-minimatch node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms node-mute-stream node-nopt
+  node-normalize-package-data node-npm-bundled node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan node-oauth-sign node-object-assign
+  node-once node-opener node-os-locale node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise node-p-limit node-p-locate node-p-timeout
+  node-package-json node-parallel-transform node-path-exists node-path-is-absolute node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump node-pumpify
+  node-punycode node-qs node-qw node-rc node-read node-read-package-json node-readable-stream node-registry-auth-token node-registry-url node-request
+  node-require-directory node-require-main-filename node-resolve node-resolve-from node-retry node-rimraf node-run-queue node-safe-buffer node-semver
+  node-semver-diff node-set-blocking node-sha node-shebang-command node-shebang-regex node-signal-exit node-slash node-slide node-sorted-object
+  node-spdx-correct node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids node-sshpk node-ssri node-stream-each node-stream-iterate
+  node-stream-shift node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi node-strip-eof node-strip-json-comments node-supports-color
+  node-tar node-term-size node-text-table node-through node-through2 node-timed-out node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename node-unique-string node-unpipe node-uri-js node-url-parse-lax node-url-to-options
+  node-util-deprecate node-uuid node-validate-npm-package-license node-validate-npm-package-name node-verror node-wcwidth.js node-which node-which-module
+  node-wide-align node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser nodejs-doc python-pkg-resources python2 python2-minimal python2.7 python2.7-minimal
+Suggested packages:
+  libssl-doc python-setuptools python2-doc python-tk python2.7-doc binfmt-support
+The following NEW packages will be installed:
+  gyp libc-ares2 libjs-inherits libjs-is-typedarray libjs-psl libjs-typedarray-to-buffer libnode-dev libnode64 libpython2-stdlib libpython2.7-minimal
+  libpython2.7-stdlib libssl-dev libuv1-dev node-abbrev node-ajv node-ansi node-ansi-align node-ansi-regex node-ansi-styles node-ansistyles node-aproba
+  node-archy node-are-we-there-yet node-asap node-asn1 node-assert-plus node-asynckit node-aws-sign2 node-aws4 node-balanced-match node-bcrypt-pbkdf node-bl
+  node-bluebird node-boxen node-brace-expansion node-builtin-modules node-builtins node-cacache node-call-limit node-camelcase node-caseless node-chalk
+  node-chownr node-ci-info node-cli-boxes node-cliui node-clone node-co node-color-convert node-color-name node-colors node-columnify node-combined-stream
+  node-concat-map node-concat-stream node-config-chain node-configstore node-console-control-strings node-copy-concurrently node-core-util-is node-cross-spawn
+  node-crypto-random-string node-cyclist node-dashdash node-debug node-decamelize node-decompress-response node-deep-extend node-defaults
+  node-define-properties node-delayed-stream node-delegates node-detect-indent node-detect-newline node-dot-prop node-duplexer3 node-duplexify node-ecc-jsbn
+  node-editor node-encoding node-end-of-stream node-err-code node-errno node-es6-promise node-escape-string-regexp node-execa node-extend node-extsprintf
+  node-fast-deep-equal node-find-up node-flush-write-stream node-forever-agent node-form-data node-from2 node-fs-vacuum node-fs-write-stream-atomic
+  node-fs.realpath node-function-bind node-gauge node-genfun node-get-caller-file node-get-stream node-getpass node-glob node-got node-graceful-fs node-gyp
+  node-har-schema node-har-validator node-has-flag node-has-symbol-support-x node-has-to-string-tag-x node-has-unicode node-hosted-git-info
+  node-http-signature node-iconv-lite node-iferr node-import-lazy node-imurmurhash node-inflight node-inherits node-ini node-invert-kv node-ip node-ip-regex
+  node-is-npm node-is-obj node-is-object node-is-path-inside node-is-plain-obj node-is-retry-allowed node-is-stream node-is-typedarray node-isarray node-isexe
+  node-isstream node-isurl node-jsbn node-json-parse-better-errors node-json-schema node-json-schema-traverse node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream node-jsprim node-latest-version node-lazy-property node-lcid node-libnpx
+  node-locate-path node-lockfile node-lodash node-lodash-packages node-lowercase-keys node-lru-cache node-make-dir node-mem node-mime node-mime-types
+  node-mimic-fn node-mimic-response node-minimatch node-minimist node-mississippi node-mkdirp node-move-concurrently node-ms node-mute-stream node-nopt
+  node-normalize-package-data node-npm-bundled node-npm-package-arg node-npm-run-path node-npmlog node-number-is-nan node-oauth-sign node-object-assign
+  node-once node-opener node-os-locale node-os-tmpdir node-osenv node-p-cancelable node-p-finally node-p-is-promise node-p-limit node-p-locate node-p-timeout
+  node-package-json node-parallel-transform node-path-exists node-path-is-absolute node-path-is-inside node-performance-now node-pify node-prepend-http
+  node-process-nextick-args node-promise-inflight node-promise-retry node-promzard node-proto-list node-prr node-pseudomap node-psl node-pump node-pumpify
+  node-punycode node-qs node-qw node-rc node-read node-read-package-json node-readable-stream node-registry-auth-token node-registry-url node-request
+  node-require-directory node-require-main-filename node-resolve node-resolve-from node-retry node-rimraf node-run-queue node-safe-buffer node-semver
+  node-semver-diff node-set-blocking node-sha node-shebang-command node-shebang-regex node-signal-exit node-slash node-slide node-sorted-object
+  node-spdx-correct node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids node-sshpk node-ssri node-stream-each node-stream-iterate
+  node-stream-shift node-strict-uri-encode node-string-decoder node-string-width node-strip-ansi node-strip-eof node-strip-json-comments node-supports-color
+  node-tar node-term-size node-text-table node-through node-through2 node-timed-out node-tough-cookie node-tunnel-agent node-tweetnacl node-typedarray
+  node-typedarray-to-buffer node-uid-number node-unique-filename node-unique-string node-unpipe node-uri-js node-url-parse-lax node-url-to-options
+  node-util-deprecate node-uuid node-validate-npm-package-license node-validate-npm-package-name node-verror node-wcwidth.js node-which node-which-module
+  node-wide-align node-widest-line node-wrap-ansi node-wrappy node-write-file-atomic node-xdg-basedir node-xtend node-y18n node-yallist node-yargs
+  node-yargs-parser nodejs nodejs-doc npm python-pkg-resources python2 python2-minimal python2.7 python2.7-minimal
+0 upgraded, 297 newly installed, 0 to remove and 0 not upgraded.
+Need to get 12.6 MB/16.5 MB of archives.
+After this operation, 83.9 MB of additional disk space will be used.
+Do you want to continue? [Y/n]
+. . .
+. . .
+. . .
+$ which node
+/usr/bin/node
+$ node --version
+v10.19.0
+$ which npm
+/usr/bin/npm
+$ npm --version
+6.14.4
+$
+```
+
+Wow that is a lot of packages!  Fortunately it did not take very long.
+
+Now install MDB CLI:
 
 ```
 ```
 
 #### Proposed Steps:
 
-- 1. Download MDB-UI-KIT-Free-1.0.0-alpha4.zip and unpack
-- 2. Copy files into `static` directory
-   - 2.1. css/*
-   - 2.2. js/*
-- 3. Quickly test site
-- 4. If everything looks ok, commit
-- 5. If it looks messed up, revert
+- [x] 1. Download MDB-UI-KIT-Free-1.0.0-alpha4.zip and unpack
+- [x] 2. Install Node, NPM, and MDB CLI
+- [x] 3. Copy files into `static` directory
+   - [x] 3.1. css/*
+   - [x] 3.2. js/*
+- [ ] 4. Update base.html` template to look like the downloaded version of `index.html`
+- [ ] 5. Quickly test site and correct any glaring aberrations.
+- [ ] 6. Keep an eye out for aberrations while performing subsequent steps
 
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

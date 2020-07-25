@@ -47,38 +47,14 @@ References:
   - https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
   - Using apt is the first and easiest
 
-#### Do I Want to Do This?
-
-I love MDB but:
+### MDB has Changed!
 
 - They have dropped jQuery
 - They want me to use MDB CLI, which requires NPM
 
-Looking at the site using the default version (no MDB CLI, Node, or NPM) looks almost acceptable.
-Some things are just missing, and could probably be easily "resurrected."
-
-#### Do I Want to Install Node and NPM?
-
-Installing the default versions of node and NPM is easily done using `apt`.
-
-#### Checking Versions
-
-Node:
-
-- Version to be installed by apt: 10.19.0
-  - 10.x: Maintenance LTS release from 2018-04-24, supported through 2021-04-01
-- Latest stable version according to wikipedia: 14.6.0, released 3 days ago
-
-The Installation Guide recommends installing "Node LTS (12.x.x recommended)."
-
-- 12.x: Active LTS release from 2019-10-22, supported through 2022-04-01
-
-NPM:
-
-- Version to be installed by apt: 6.14.4
-- Latest stable version according to wikipedia: 6.14.7, released 3 days ago
-
 #### Quick Start Video Notes
+
+Why do they want me to install Node and NPM?
 
 Watched the Quick Start Video at:
 
@@ -100,15 +76,37 @@ In it, they show how to use MDB CLI to:
 There's nothing to lose by installing MDB CLI et. al., because it's a no-brainer now that I know how,
 and I probably won't even use it anyway.
 
-#### Decision
+### Installing Node, NPM, and MDB CLI
 
-Use apt to install Node, NPM, and MDB CLI.
+Using `apt` to install Node, NPM, and MDB CLI.
 
 - I might not use them now, but they will be useful when I do other sites
 
-**If I have issues using them for the other sites, remember to install a newer version of node.js .**
+**If there are issues using them for the other sites, remember to install a newer version of node.js .**
 
-#### Installing Node, NPM, and MDB CLI
+#### Checking Versions
+
+Node:
+
+- Version to be installed by apt: 10.19.0
+  - 10.x: Maintenance LTS release from 2018-04-24, supported through 2021-04-01
+- Latest stable version according to wikipedia: 14.6.0, released 3 days ago
+
+The Installation Guide recommends installing "Node LTS (12.x.x recommended)."
+
+- 12.x: Active LTS release from 2019-10-22, supported through 2022-04-01
+
+NPM:
+
+- Version to be installed by apt: 6.14.4
+- Latest stable version according to wikipedia: 6.14.7, released 3 days ago
+
+Installing the default versions of node and NPM is **easy** using `apt`.
+
+**Using these versions caused a Warning when I installed `mdb-cli`.**
+See below for details.
+
+### Installation Details
 
 Use `apt install` as follows:
 
@@ -224,7 +222,6 @@ npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not r
 > node -e "try{require('./postinstall')}catch(e){}"
 
 
-root@ava: ~
 $ which mdb
 /usr/local/bin/mdb
 $ mdb login
@@ -257,7 +254,11 @@ $ mdb list
 $
 ```
 
-Note that we will want to use this one later:
+Notes:
+
+- (1) The **Warning** says we are using an old version of core-js
+- (2) At this time I do not plan to be using `mdb-cli`, at least not much
+- (3) However, we will probably want to use this one later:
 
 ```
 │    1    │       'Material Design for Bootstrap 5'        │                               'Yes'                                │
@@ -272,5 +273,18 @@ mdb publish
 
 This may be useful later, but we don't need to create a template or publish a site just now.
 
+### Copy New Files Into `static` Directory
 
- Update `base.html` template to look like the downloaded version of `index.html`
+Copy the `css/*` and `js/* files into the `static` directory
+
+Saving copies of the old code in: `static/css-old` and `static/js-old` for now, just in case.
+
+### Update `base.html` Template
+
+Update the `base.html` template to look like the downloaded version of `index.html`
+
+Update `base.html` template to look like the downloaded version of `index.html`
+
+Menus look totes effed up, need to fix those first.
+
+

@@ -11,11 +11,12 @@ Continuing to update Groja.com so it is just exactly perfect.
     - [x] 1. Download MDB-UI-KIT-Free-1.0.0-alpha4.zip and unpack
     - [x] 2. Install Node, NPM, and MDB CLI
     - [x] 3. Copy files into `static` directory
-       - [x] 3.1. css/*
-       - [x] 3.2. js/*
-    - [ ] 4. Update `base.html` template to look like the downloaded version of `index.html`
-    - [ ] 5. Quickly test site and correct any glaring aberrations
-    - [ ] 6. Keep an eye out for aberrations while performing subsequent steps
+        - [x] 3.1. css/*
+        - [x] 3.2. js/*
+    - [x] 4. Update `base.html` template to look like the downloaded version of `index.html`
+    - [x] 5. Quickly test site and correct any glaring aberrations
+        - [x] 5.1. Fix the menus
+    - [ ] 6. Keep an eye out for other aberrations while updating content
 - [x] Ensure social media icons link to same accounts as artsyvisions
 - [ ] Content Updates and Review
     - See `5d-groja-3-content_updates.md`
@@ -283,8 +284,9 @@ Saving copies of the old code in: `static/css-old` and `static/js-old` for now, 
 
 Update the `base.html` template to look like the downloaded version of `index.html`
 
-Update `base.html` template to look like the downloaded version of `index.html`
-
 Menus look totes effed up, need to fix those first.
 
+#### Fix the Menus
+
+Fix the nav bar in the `base.html` template.
 

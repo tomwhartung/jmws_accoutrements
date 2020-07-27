@@ -42,7 +42,7 @@ For high-level details about each site, see the **"Essential Tasks"** section.
 
 Checklist to track the progress in getting the content reviewed and updated on these sites.
 
-- [ ] ArtsyVisions.com
+- [x] ArtsyVisions.com
 - [ ] Groja.com
 - [ ] JooMooWebSites.com
 - [ ] SeeOurMinds.com

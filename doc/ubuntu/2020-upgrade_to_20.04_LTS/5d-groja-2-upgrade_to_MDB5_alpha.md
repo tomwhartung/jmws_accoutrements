@@ -7,7 +7,7 @@ Continuing to update Groja.com so it is just exactly perfect.
 
 ## Update to Use MDB5 Alpha - Checklist
 
-- [ ] Upgrade MDB to latest version: MDB 5 alpha
+- [x] Upgrade MDB to latest version: MDB 5 alpha
     - [x] 1. Download MDB-UI-KIT-Free-1.0.0-alpha4.zip and unpack
     - [x] 2. Install Node, NPM, and MDB CLI
     - [x] 3. Copy files into `static` directory

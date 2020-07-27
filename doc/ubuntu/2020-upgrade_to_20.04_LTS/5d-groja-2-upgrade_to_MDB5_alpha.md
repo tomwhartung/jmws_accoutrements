@@ -18,7 +18,7 @@ Continuing to update Groja.com so it is just exactly perfect.
         - [x] 5.1. Fix the menus
     - [ ] 6. Keep an eye out for other aberrations while updating content
 - [x] Ensure social media icons link to same accounts as artsyvisions
-- [ ] Content Updates and Review
+- [x] Content Updates and Review
     - See `5d-groja-3-content_updates.md`
 
 Processes and details appear below.
@@ -276,17 +276,21 @@ This may be useful later, but we don't need to create a template or publish a si
 
 ### Copy New Files Into `static` Directory
 
-Copy the `css/*` and `js/* files into the `static` directory
-
-Saving copies of the old code in: `static/css-old` and `static/js-old` for now, just in case.
+- [x] Copy the `css/*` and `js/* files into the `static` directory
 
 ### Update `base.html` Template
 
 Update the `base.html` template to look like the downloaded version of `index.html`
 
-Menus look totes effed up, need to fix those first.
+- [x] Menus look totes effed up, need to fix those first.
 
-#### Fix the Menus
+### Fix the Menus
 
-Fix the nav bar in the `base.html` template.
+- [x] Fix the nav bar in the `base.html` template.
+
+### Update `home.html` Template
+
+Update the `home.html` template so it looks like the MDB4 home page.
+
+- [x] Menus look totes effed up, need to fix those first.
 

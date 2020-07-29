@@ -3,7 +3,13 @@
 
 Continuing to update SeeOurMinds.com .
 
+# Upgrade to MDB5
+
+For hints about how to do this, see `6-mdb5_tips_and_tricks.md`.
+
 # CSS Issue
+
+Hopefully upgrading to MDB5 will resolve this issue.
 
 The content of the `blockquote` tags look just like that of the `p` tags.
 Something is not right here.
@@ -14,7 +20,8 @@ Example: Nixon's page:
 
 # Content Updates
 
-Remove free spiritual portrait offer.
+- [ ] Remove free spiritual portrait offer
+- [ ] Consider adding a search box
 
 # Review
 

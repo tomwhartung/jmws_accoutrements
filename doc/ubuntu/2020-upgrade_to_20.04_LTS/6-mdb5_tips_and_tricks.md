@@ -13,6 +13,16 @@ For more masking effects see:
 
 - https://mdbootstrap.com/docs/standard/content-styles/masks/
 
+## Shadows
+
+The MDB4 `z-depth-1-half`, etc. classes are gone.
+
+Now use the `shadow-1`, `shadow-1-strong`, ... `shadow-5`, `shadow-5-strong` classes.
+
+For more hover effects see:
+
+- https://mdbootstrap.com/docs/standard/content-styles/hover-effects/
+
 ## Hoverability
 
 The MDB4 `hoverable` class is gone.

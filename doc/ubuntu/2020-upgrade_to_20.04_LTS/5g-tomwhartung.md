@@ -45,18 +45,25 @@ This is something I will need to think about.
 - Strive for having a minimalist blog
   - Once created, I typically never update those things
   - There will be new content on the other sites, e.g., seeourminds.com
-- One idea: explain each of these:
-  - Characterologist
-  - Programmer
-  - Writer
-  - Artist
+- First idea:
+  - BRIEFLY explain how fractals are the perfect way to display FFM personality traits
+- One idea
+  - Single post explaining each of these:
+    - Characterologist
+    - Programmer
+    - Writer
+    - Artist
+  - Why these appeal to me based on my FFM traits
+  - BRIEFLY: how I have been each of these all my life
 - Another idea:
   - The Good: why my personality makes me well-suited for drawing personalities
   - The Bad: why my personality makes me ill-suited for social networking
   - The Ugly: why I will need to use social networking to get people to understand my art
-- Another idea:
-  - Maybe do both
-  - Maybe do each idea in a single article
+  - Maybe do each idea in a single article?
+- Yet another idea:
+  -
+- Also:
+  - Link to Medium articles
 
 ## Original Ideas - Deprecated
 

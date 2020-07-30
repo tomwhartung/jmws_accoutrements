@@ -7,6 +7,71 @@ Continuing to update SeeOurMinds.com .
 
 For hints about how to do this, see `6-mdb5_tips_and_tricks.md`.
 
+## Choose: Download or Use MDB CLI
+
+The MDB CLI files have a more recent date:
+
+- Mdb cli: 7/30
+- Downloaded: 7/20
+
+### Comparing File Listings
+
+Comparing lists of downloaded files to those from MDB CLI:
+
+```
+$ l unpack/License.pdf mdb-cli/MDB5-Free/License.pdf
+-rw-r--r-- 1 tomh tomh 147944 Jul 30  2020 mdb-cli/MDB5-Free/License.pdf
+-rw-r--r-- 1 tomh tomh 147944 Jul 20 09:58 unpack/License.pdf
+$ diff unpack/MDB-UI-KIT-Free-1.0.0-alpha4-files.txt mdb-cli/MDB5-Free/MDB5-Free-files.txt
+2c2
+< MDB-UI-KIT-Free-1.0.0-alpha4-files.txt
+---
+> MDB5-Free-files.txt
+59c59
+< src/js/free/dropdown.js
+---
+> src/js/free/animate.js
+71d70
+< src/js/mdb/util/keycodes.js
+156a156,157
+> src/scss/free/_animate-extended.scss
+> src/scss/free/_animate.scss
+158d158
+< src/scss/free/_breadcrumb.scss
+165d164
+< src/scss/free/_footer.scss
+167d165
+< src/scss/free/_images.scss
+186a185
+> src/scss/free/forms/_form-outline.scss
+tomh@ava: /var/www/seeourminds.com/htdocs/seeourminds.com
+$
+```
+
+The mdb-cli files could indeed be a bit more up-to-date, and it makes sense that the download file could lag behind it.
+
+### `.mdb` Hidden File
+
+Not shown above, the mdb-cli files include a hidden file:
+
+```
+$ cat mdb-cli/MDB5-Free/.mdb
+{
+  "packageName": "MDB5-Free"
+}$
+```
+
+Presumably I can use the mdb cli to updates these at some future time.
+
+### Using the Mdb Cli Files
+
+It looks like it would be best to use the mdb cli files.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Copy in Code
+
+
 # CSS Issue
 
 Hopefully upgrading to MDB5 will resolve this issue.

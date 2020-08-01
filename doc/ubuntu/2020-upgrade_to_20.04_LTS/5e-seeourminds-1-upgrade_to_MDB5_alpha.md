@@ -120,10 +120,21 @@ gc 'Adding the MDB5 src files in static/content/src/ .'
 
 Using `static/content/index-mdb5_template.html` as a model, update the `templates/content/base.html` template.
 
-- [ ] Paste menu code from site into `base.html`
+- [x] Paste menu code from site into `base.html`
 - [ ] Update menu code to work with my items
 
 ### Fixing the Issues
+
+#### Fixing the Menu
+
+Pasted in the code from the mdb site and it did not work at first.
+
+Had some vexing issues but figured out the issue, which was quite stupid.
+It turned out that I'd forgotten to add the django template code enabling it to find the `mdb.min.css` file.  D'oh!
+
+Once I worked through my stupid issue, updating the menu code from the mdb template to contain my options is straightforward.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 #### Fontawesome Issue
 
@@ -161,4 +172,6 @@ Added `SameSite=None` and `SameSite=Secure` to the link tag, and the warning mes
 
 Note that the warning does show up on Groja.com , I just didn't notice it.
 And from what I can tell, it is fontawesome's "fault."
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

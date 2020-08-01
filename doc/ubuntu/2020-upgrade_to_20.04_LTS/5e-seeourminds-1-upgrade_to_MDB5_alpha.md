@@ -120,3 +120,45 @@ gc 'Adding the MDB5 src files in static/content/src/ .'
 
 Using `static/content/index-mdb5_template.html` as a model, update the `templates/content/base.html` template.
 
+- [ ] Paste menu code from site into `base.html`
+- [ ] Update menu code to work with my items
+
+### Fixing the Issues
+
+#### Fontawesome Issue
+
+**THIS FIX DOES NOT WORK, WT ACTUAL EFF?!?!?**
+
+It seems to work because the warning goes away after reloading, only to reappear when I change content in the page.
+
+**IT IS VERRRRRRRY FRUSTRATINGGGGG**
+
+#### MAYBE TRY TO FIX THIS LATER
+
+Chrome dev tools gives this warning in the dev tools console when using my fontawesome link tag:
+
+- "A cookie associated with a cross-site resource at http://fontawesome.com/ was set without the `SameSite` attribute. A future release of Chrome will only deliver cookies with cross-site requests if they are set with `SameSite=None` and `Secure`. You can review cookies in developer tools under Application>Storage>Cookies and see more details at https://www.chromestatus.com/feature/5088147346030592 and https://www.chromestatus.com/feature/5633521622188032."
+
+It does not give a warning when using the fontawesome link tag that came with the MDB5 sample index.html file,
+but the MDB5 sample file gives the same warning when using my fontawesome link tag.
+
+Found a solution here:
+
+- https://stackoverflow.com/questions/58270663/samesite-warning-chrome-77
+
+Adding this code inside my fontawesome tag fixes the issue - **OR SO I THOUGHT:**
+
+```
+response.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
+```
+
+Also tried this fix, as suggested by the error message, **TO NO AVAIL:**
+
+Added `SameSite=None` and `SameSite=Secure` to the link tag, and the warning message goes away,
+**ONLY TO REAPPEAR WHEN I CHANGE CONTENT ON THE PAGE.**
+
+- The warning is probably not what is causing my menu problems, but **I need to eliminate it to be sure.**
+
+Note that the warning does show up on Groja.com , I just didn't notice it.
+And from what I can tell, it is fontawesome's "fault."
+

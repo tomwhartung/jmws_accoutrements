@@ -134,17 +134,7 @@ It turned out that I'd forgotten to add the django template code enabling it to 
 
 Once I worked through my stupid issue, updating the menu code from the mdb template to contain my options is straightforward.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 #### Fontawesome Issue
-
-**THIS FIX DOES NOT WORK, WT ACTUAL EFF?!?!?**
-
-It seems to work because the warning goes away after reloading, only to reappear when I change content in the page.
-
-**IT IS VERRRRRRRY FRUSTRATINGGGGG**
-
-#### MAYBE TRY TO FIX THIS LATER
 
 Chrome dev tools gives this warning in the dev tools console when using my fontawesome link tag:
 
@@ -153,11 +143,26 @@ Chrome dev tools gives this warning in the dev tools console when using my fonta
 It does not give a warning when using the fontawesome link tag that came with the MDB5 sample index.html file,
 but the MDB5 sample file gives the same warning when using my fontawesome link tag.
 
-Found a solution here:
+##### Maybe Try to Fix This Later
+
+Tried a few things, but they didn't work.
+
+- The stupid problems I was having with the menu were unrelated to this
+- It's just a warning
+- Maybe try to fix this later
+
+Note that the warning also shows up on Groja.com , I just didn't notice it.
+And from what I can tell, it is fontawesome's "fault."
+
+##### Tried a Few Things
+
+Found a possible solution here:
 
 - https://stackoverflow.com/questions/58270663/samesite-warning-chrome-77
 
-Adding this code inside my fontawesome tag fixes the issue - **OR SO I THOUGHT:**
+I thought that adding this code inside my fontawesome tag fixed the issue,
+but it seems like maybe the warning just goes away sometimes after reloads,
+unless I change some of the markup.
 
 ```
 response.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
@@ -168,10 +173,6 @@ Also tried this fix, as suggested by the error message, **TO NO AVAIL:**
 Added `SameSite=None` and `SameSite=Secure` to the link tag, and the warning message goes away,
 **ONLY TO REAPPEAR WHEN I CHANGE CONTENT ON THE PAGE.**
 
-- The warning is probably not what is causing my menu problems, but **I need to eliminate it to be sure.**
+Oh well.
 
-Note that the warning does show up on Groja.com , I just didn't notice it.
-And from what I can tell, it is fontawesome's "fault."
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

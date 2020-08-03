@@ -175,4 +175,59 @@ Oh well.
 
 # Update the Django `home.html` Template
 
+## Masking Issue
+
+It took some time to get the mask to work on the home page.
+
+- 1. It would not work no matter what I would try
+   - Even pasting code from the site into the mdb index.html template did not work
+- 2. Copying the mdb css files from groja.com made it work ok, yay!
+- 3. Was ready to ask about this in the mdb forum, but noticed that MDB5 beta is out
+- 4. Tried to use mdb cli to update - see below - but that did not update the css files (*)
+- 5. Downloaded the mdb5 beta package, copied the css files in, and it worked!!
+
+(*) Tried using mdb cli to update css files:
+
+```
+$ mdb update
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+/usr/local/bin/mdb -> /usr/local/lib/node_modules/mdb-cli/index.js
++ mdb-cli@1.1.34
+updated 2 packages in 25.281s
+┌─────────┬────────┬───────────┐
+│ (index) │ Status │  Message  │
+├─────────┼────────┼───────────┤
+│    0    │   0    │ 'Success' │
+└─────────┴────────┴───────────┘
+$
+```
+
+### Masking Issue Fix
+
+This did not change the css files, however.
+Maybe they got "updated" some place else and need to be installed somehow?
+
+Downloading the beta version and copying in the files is what finally worked!
+
+```
+gosmss         # /var/www/seeourminds.com/htdocs/seeourminds.com/Site/content/static/content
+l   /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/css/
+l css
+cp  /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/css/*
+l   /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/js
+l js
+cp   /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/js/* js
+cp  /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/index.html index-mdb5_template-current.html
+gs .
+ga .mdb
+gc 'Running mdb cli updated the .mdb file but did not update my css files.'
+ga css/mdb.min.css*
+gc 'Updating css/mdb.min.css* to the beta versions downloaded from the site.'
+ga js/mdb.min.js*
+gc 'Updating the js/mdb.min.js* files to the beta versions downloaded from the site.'
+ga index-mdb5_template-current.html
+gc 'Adding the new version of the mdb5 index.html template file as index-mdb5_template-current.html .'
+g mv index-mdb5_template.html index-mdb5_template-alpha_exp.html .'
+gc 'Renaming the alpha version of the mdb5 index.html template file, which I have updated a time or two, from index-mdb5_template.html to index-mdb5_template-alpha_exp.html .'
+```
 

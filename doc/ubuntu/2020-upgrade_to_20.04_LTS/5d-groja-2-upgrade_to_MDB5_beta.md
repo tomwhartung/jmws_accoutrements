@@ -1,9 +1,21 @@
 
-# 5d-groja-2-upgrade_to_MDB5_alpha.md
+# 5d-groja-2-upgrade_to_MDB5_beta.md
 
 Continuing to update Groja.com so it is just exactly perfect.
 
 # Content Updates and Review
+
+## Update to Use MDB5 Beta
+
+How I wound up updating to use the mdb5 beta release:
+
+- Had an masking issue updating seeourminds.com
+- Almost posted to their forum
+- Checked for a new release
+- Learned that the beta version is out
+- Updated to the latest code
+- This fixed the masking issue on seeourminds.com
+- Decided to update groja.com to the new version
 
 ## Update to Use MDB5 Alpha - Checklist
 

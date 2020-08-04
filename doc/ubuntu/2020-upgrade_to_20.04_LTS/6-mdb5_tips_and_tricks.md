@@ -33,3 +33,10 @@ For more hover effects see:
 
 - https://mdbootstrap.com/docs/standard/content-styles/hover-effects/
 
+## Forms
+
+Css classes for forms have changed someone.
+
+- Each input tag should be in a div with `class="form-outline"` instead of `"md-form"`
+- `label` tags should now have `class="form-label"` set
+

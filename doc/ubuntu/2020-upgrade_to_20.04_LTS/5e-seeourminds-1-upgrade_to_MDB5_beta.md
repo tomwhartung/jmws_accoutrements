@@ -231,3 +231,14 @@ g mv index-mdb5_template.html index-mdb5_template-alpha_exp.html .'
 gc 'Renaming the alpha version of the mdb5 index.html template file, which I have updated a time or two, from index-mdb5_template.html to index-mdb5_template-alpha_exp.html .'
 ```
 
+## Rest of Home Page
+
+- Fixed mdb5 classes in the form
+- Had to add some hacky extra rows to the above-the-fold area
+  - Thinking this might be due to using the beta release
+- Adjusted margins in elements above-the-fold
+- Fixed shadows in the cards in the below-the-fold area
+  - The `hover-shadow` class does not seem to be working
+  - Thinking this might be due to using the beta release
+
+

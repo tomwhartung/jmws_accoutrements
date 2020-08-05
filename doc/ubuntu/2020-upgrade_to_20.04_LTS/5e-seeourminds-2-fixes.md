@@ -5,6 +5,9 @@ Continuing to update SeeOurMinds.com .
 
 # Fixes
 
+- [ ] CSS Issue
+- [ ] Subscribe Form on Home Page
+
 ## CSS Issue
 
 Hopefully upgrading to MDB5 will resolve this issue.
@@ -16,18 +19,32 @@ Example: Nixon's page:
 
 - http://127.0.0.1:8001/image/5040-politicians-us_presidents-1900s/5062/
 
+## Subscribe Form on Home Page
+
+Filling in a name and email in the subscribe form on the home page opens the groja.com conversion page, but it has errors.
+
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-# Content Updates
+# Review and Revise Content
 
-- [ ] Remove free spiritual portrait offer
+- [x] Ensure social media icons link to correct accounts
+- [x] Home page: remove free spiritual portrait offer
+- [x] Home page: review and edit content of cards
 - [ ] Consider adding a search box
-
-# Review
 
 ## Check the Icons
 
-Ensure social media icons link to correct accounts.
+Copy the icon list from groja.com to ensure the social media icons link to correct accounts.
+
+## Review Home Page
+
+Remove the free spiritual portrait offer, if it is present.
+
+Some of the cards near the bottom need to be updated to the new situation.
+
+## Quiz: Remove Save on Server Option
+
+Not really interested in saving these.  Just display the results and leave it at that.  That's how the others work.
 
 ## Test the Quiz
 

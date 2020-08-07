@@ -306,3 +306,10 @@ Update the `home.html` template so it looks like the MDB4 home page.
 
 - [x] Menus look totes effed up, need to fix those first.
 
+### Update Rest of Site
+
+Fix shadowing and hover classes on the rest of the site.
+
+- [x] About page
+- [x] Legal pages
+

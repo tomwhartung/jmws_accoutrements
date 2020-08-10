@@ -241,4 +241,9 @@ gc 'Renaming the alpha version of the mdb5 index.html template file, which I hav
   - The `hover-shadow` class does not seem to be working
   - Thinking this might be due to using the beta release
 
+## Rest of Site
+
+- [ ] Gallery pages
+- [ ] Quiz pages
+- [x] Legal pages
 

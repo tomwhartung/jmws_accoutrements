@@ -25,9 +25,26 @@ For more hover effects see:
 
 ## Hoverability
 
-The MDB4 `hoverable` class is gone.
+The MDB4 `hoverable` and `z-depth-*` classes are gone.
 
-Now use the `hover-shadow` class.
+Now use the `hover-shadow` and `shadow-*` classes.
+
+- **Note:** the `hover-shadow` and `shadow-*` classes must be in different, i.e., nested, `div` elements
+- I like to use `hover-shadow` on the outer `div` and `shadow-*` on the inner `div`
+
+For example:
+
+```
+<div class="card hover-shadow m-2">
+ <div class="shadow-5">
+  <div class="card-body">
+   . . .
+   . . .
+   . . .
+  </div><!-- .card-body -->
+ </div><!-- .shadow-* -->
+</div><!-- .card -->
+```
 
 For more hover effects see:
 

@@ -244,6 +244,6 @@ gc 'Renaming the alpha version of the mdb5 index.html template file, which I hav
 ## Rest of Site
 
 - [x] Gallery pages
-- [ ] Quiz pages
+- [x] Quiz pages
 - [x] Legal pages
 

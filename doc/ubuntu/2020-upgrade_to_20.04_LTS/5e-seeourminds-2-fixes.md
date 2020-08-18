@@ -30,7 +30,14 @@ Filling in a name and email in the subscribe form on the home page opens the gro
 - [x] Ensure social media icons link to correct accounts
 - [x] Home page: remove free spiritual portrait offer
 - [x] Home page: review and edit content of cards
-- [ ] Consider adding a search box
+- [x] Gallery page: fix the More and Less links
+- [x] Quiz: remove save results on server option
+- [x] Test quiz
+- [ ] Legal: remove or refine ("maybe-ize?") anything about saving the results on the server
+    - [ ] Questionnaire Disclaimer - surely something is there
+    - [ ] Privacy Policy & Terms - something might be there
+    - [ ] Based on what is found, check other sites
+- [ ] Navigation: consider adding a search box
 
 ## Check the Icons
 

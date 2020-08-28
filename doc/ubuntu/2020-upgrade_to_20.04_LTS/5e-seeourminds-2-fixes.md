@@ -33,10 +33,15 @@ Filling in a name and email in the subscribe form on the home page opens the gro
 - [x] Gallery page: fix the More and Less links
 - [x] Quiz: remove save results on server option
 - [x] Test quiz
-- [ ] Legal: remove or refine ("maybe-ize?") anything about saving the results on the server
-    - [ ] Questionnaire Disclaimer - surely something is there
-    - [ ] Privacy Policy & Terms - something might be there
-    - [ ] Based on what is found, check other sites
+- [x] Clean up recently-added gallery pages that remain un-done!
+    - [x] Post content from vpp book for Kamala
+    - [x] Post content from vpp book for Joe
+    - [x] Post content from vpp book for Mike
+    - [x] Post content from vpp book for Donald
+- [x] Legal: remove or refine ("maybe-ize?") anything about saving the results on the server
+    - [x] Questionnaire Disclaimer - surely something is there
+    - [x] Privacy Policy & Terms - something might be there
+    - [x] Based on what is found, check other sites
 - [ ] Navigation: consider adding a search box
 
 ## Check the Icons

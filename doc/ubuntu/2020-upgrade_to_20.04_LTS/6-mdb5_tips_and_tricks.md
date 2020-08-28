@@ -32,7 +32,7 @@ Now use the `hover-shadow` and `shadow-*` classes.
 - **Note:** the `hover-shadow` and `shadow-*` classes must be in different, i.e., nested, `div` elements
 - I like to use `hover-shadow` on the outer `div` and `shadow-*` on the inner `div`
 
-For example:
+An example from groja.com:
 
 ```
 <div class="card hover-shadow m-2">
@@ -44,6 +44,22 @@ For example:
   </div><!-- .card-body -->
  </div><!-- .shadow-* -->
 </div><!-- .card -->
+```
+
+An example from the gallery page on seeourminds.com:
+
+```
+ <div class="col-md-8 col-lg-7 col-xl-6">
+  <div class="card hover-shadow m-2">
+   <div class="shadow-1-strong">
+    <div class="card-body px-4">
+    . . .
+    . . .
+    . . .
+    </div><!-- .card-body -->
+   </div><!-- .shadow-*  -->
+  </div><!-- .card -->
+ </div><!-- .col-* -->
 ```
 
 For more hover effects see:

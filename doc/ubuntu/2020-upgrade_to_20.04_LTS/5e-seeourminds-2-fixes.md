@@ -3,9 +3,13 @@
 
 Continuing to update SeeOurMinds.com .
 
+This is a list of fixes and enhancements that I am working on.
+
 # Fixes
 
 - [ ] CSS Issue
+  - See fix in `6-mdb5_tips_and_tricks.md`
+  - See list of files in `5e-seeourminds-1-upgrade_to_MDB5_beta.md`
 - [ ] Subscribe Form on Home Page
 
 ## CSS Issue
@@ -23,9 +27,9 @@ Example: Nixon's page:
 
 Filling in a name and email in the subscribe form on the home page opens the groja.com conversion page, but it has errors.
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Enhancements
 
-# Review and Revise Content
+## Review and Revise Content
 
 - [x] Ensure social media icons link to correct accounts
 - [x] Home page: remove free spiritual portrait offer
@@ -46,19 +50,22 @@ Filling in a name and email in the subscribe form on the home page opens the gro
 
 ## Check the Icons
 
-Copy the icon list from groja.com to ensure the social media icons link to correct accounts.
+- [x] Copy the icon list from groja.com to ensure the social media icons link to correct accounts.
 
 ## Review Home Page
 
-Remove the free spiritual portrait offer, if it is present.
-
-Some of the cards near the bottom need to be updated to the new situation.
+- [x] Remove the free spiritual portrait offer, if it is present.
+- [x] Some of the cards near the bottom need to be updated to the new situation.
 
 ## Quiz: Remove Save on Server Option
 
 Not really interested in saving these.  Just display the results and leave it at that.  That's how the others work.
 
+- [x] Quiz: Remove Save on Server Option
+
 ## Test the Quiz
 
 **I made several very minor updates to class Score in `models.py`, so we need to re-test the quiz to make sure it still works.**
+
+- [x] Test the Quiz
 

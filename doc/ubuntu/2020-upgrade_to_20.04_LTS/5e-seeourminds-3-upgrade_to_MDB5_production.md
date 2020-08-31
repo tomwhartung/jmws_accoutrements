@@ -107,9 +107,39 @@ more js/mdb.min.js
 
 Both versions show `Version: FREE 1.0.0` in both `css/mdb.min.css` and `js/mdb.min.js`.
 
-## Choose: Download or MDB CLI Version
+## Deciding to Use Download Version
 
 I am picking the download version, because I am more used to that sort of process.
 
 **MOREOVER,** based on the options displayed by the `mdb help` command it appears to me that mdb cli is tailored towards publishing sites on their site.
+
+# Using the Downloaded Version
+
+Ran the following commands to perform the upgrade:
+
+```
+cd css
+l
+l /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/mdb5/Free-1.0.0/css/
+cp  /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/mdb5/Free-1.0.0/css/* .
+l
+cd ../js
+l /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/mdb5/Free-1.0.0/js
+l
+l /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/mdb5/Free-1.0.0/js
+cp  /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/mdb5/Free-1.0.0/js/* .
+cd ../src
+l
+cf
+rm -fr js/ scss/
+l /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/mdb5/Free-1.0.0/src/
+cp -r /var/www/seeourminds.com/htdocs/seeourminds.com/unpack/mdb5/Free-1.0.0/src/* .
+```
+
+Ran a quick test of the site and decided to commit the files:
+
+```
+ga static/content/css static/content/js static/content/src/
+gc 'Updated static css, js, and src files to MDB5 production version.'
+```
 

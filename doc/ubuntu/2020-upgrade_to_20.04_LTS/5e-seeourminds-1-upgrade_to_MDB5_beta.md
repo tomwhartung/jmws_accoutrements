@@ -1,5 +1,5 @@
 
-# 5e-seeourminds-1-upgrade_to_MDB5_alpha.md
+# 5e-seeourminds-1-upgrade_to_MDB5_beta.md
 
 Continuing to update SeeOurMinds.com .
 
@@ -243,7 +243,28 @@ gc 'Renaming the alpha version of the mdb5 index.html template file, which I hav
 
 ## Rest of Site
 
-- [x] Gallery pages
 - [x] Quiz pages
 - [x] Legal pages
+- [x] Gallery pages
+    - [x] Templates
+    - [x] Check blockquote tags in these files, and update (*) as necessary:
+        - [x] 0800-real-famous-world-famous.json
+        - [x] 1410-fictional-tv-game_of_thrones-house_stark.json
+        - [x] 1420-fictional-tv-game_of_thrones-house_baratheon.json
+        - [x] 1430-fictional-tv-game_of_thrones-house_lannister.json
+        - [x] 1440-fictional-tv-game_of_thrones-house_tyrell.json
+        - [x] 1470-fictional-tv-game_of_thrones-no_house.json
+        - [x] 1490-fictional-tv-game_of_thrones-other_houses.json
+        - [x] 2400-fictional-tv-sopranos.json
+        - [x] 2500-fictional-tv-twin_peaks-laura_and_friends.json
+        - [x] 2800-fictional-tv-cheers-sam_and_diane.json
+        - [x] 2810-fictional-tv-cheers-the_crew.json
+        - [x] 2820-fictional-tv-cheers-customers.json
+        - [x] 3310-fictional-tv-true_detective-1.json
+        - [x] 3320-fictional-tv-true_detective-2.json
+        - [x] 4900-politicians-founding_fathers.json
+        - [x] 5000-politicians-us_presidents-1700s-1800s.json
+        - [x] 5040-politicians-us_presidents-1900s.json
+
+(*) Ensure all blockquote tags have `class='blockquote'` attribute set
 

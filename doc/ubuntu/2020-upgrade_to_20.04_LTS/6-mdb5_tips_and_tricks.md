@@ -73,3 +73,11 @@ Css classes for forms have changed someone.
 - Each input tag should be in a div with `class="form-outline"` instead of `"md-form"`
 - `label` tags should now have `class="form-label"` set
 
+## Blockquotes
+
+- Add `class='blockquote'` to all blockquote tags
+  - This increases the font size, making the quote stand out
+- Note: Also added a few styles to `seeourminds.css` to:
+  - Give them a border on the left
+  - Add a little margin and padding to make them look better
+

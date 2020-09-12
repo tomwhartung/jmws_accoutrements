@@ -10,7 +10,7 @@ This is a list of fixes and enhancements that I am working on.
 - [x] CSS Issue
   - See fix in `6-mdb5_tips_and_tricks.md`
   - See list of files in `5e-seeourminds-1-upgrade_to_MDB5_beta.md`
-- [ ] Subscribe Form on Home Page
+- [ ] Fix subscribe form on Home page
   - Values entered in form on SeeOurMinds need to be entered into form on Groja.com
   - OR -
   - Subscribe person and take them to the Thanks page
@@ -52,12 +52,12 @@ Filling in a name and email in the subscribe form on the home page opens the gro
 
 ## Enhancements Needed
 
-- [ ] Quiz: Add number of questions answered to quiz results page
-- [ ] Navigation: Add a search box
-- [ ] GoT Gallery: Add an ad for my book to every GoT page in the gallery
+- [x] Quiz: Add number of questions answered to quiz results page
+- [ ] Navigation: Add search box to header
+- [ ] GoT Gallery: Add an ad for GoT book to every GoT page in the gallery
     - [ ] GoT Gallery pages
     - [ ] GoT Image pages
-- [ ] Politicians' Galleries: Ensure **ALL** are under Real People
+- [x] Politicians' Galleries: Ensure **ALL** are under Real People
 
 ## Check the Icons
 

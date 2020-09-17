@@ -53,11 +53,11 @@ Filling in a name and email in the subscribe form on the home page opens the gro
 ## Enhancements Needed
 
 - [x] Quiz: Add number of questions answered to quiz results page
+- [x] Politicians' Galleries: Ensure **ALL** are under Real People
 - [ ] Navigation: Add search box to header
 - [ ] GoT Gallery: Add an ad for GoT book to every GoT page in the gallery
     - [ ] GoT Gallery pages
     - [ ] GoT Image pages
-- [x] Politicians' Galleries: Ensure **ALL** are under Real People
 
 ## Check the Icons
 

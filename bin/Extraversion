@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Extraversion: show the Extraversion scores saved in one or more *-score_values.csv files
+# ----------------------------------------------------------------------------------------
+#
+
+for FILE in $*; do
+   head -1 $FILE
+   grep '^Extraversion' $FILE
+   grep '^E.: ' $FILE | sort
+   echo
+done
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Neuroticism: show the Neuroticism scores saved in one or more *-score_values.csv files
+# --------------------------------------------------------------------------------------
+#
+
+for FILE in $*; do
+   head -1 $FILE
+   grep '^Neuroticism' $FILE
+   grep '^N.: ' $FILE | sort
+   echo
+done
+

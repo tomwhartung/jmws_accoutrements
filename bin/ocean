@@ -5,12 +5,13 @@
 #
 
 for FILE in $*; do
-   head -1 $FILE
-   grep Openness $FILE
-   grep Conscientiousness $FILE
-   grep Extraversion $FILE
-   grep Agreeableness $FILE
-   grep Neuroticism $FILE
    echo
+   head -1 $FILE | awk -F',' '{printf "\t%s\n", $1;}'
+   echo '---------------------------------------'
+   grep Openness $FILE | awk -F',' '{printf "%s:\t    %d%% - %s\n", $1, $4, $5;}'
+   grep Conscientiousness $FILE | awk -F',' '{printf "%s: %2d%% - %s\n", $1, $4, $5;}'
+   grep Extraversion $FILE | awk -F',' '{printf "%s:\t    %d%% - %s\n", $1, $4, $5;}'
+   grep Agreeableness $FILE | awk -F',' '{printf "%s:\t    %d%% - %s\n", $1, $4, $5;}'
+   grep Neuroticism $FILE | awk -F',' '{printf "%s:\t    %d%% - %s\n", $1, $4, $5;}'
 done
 

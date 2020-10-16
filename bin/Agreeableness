@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Agreeableness: show the Agreeableness scores saved in one or more *-score_values.csv files
+# ------------------------------------------------------------------------------------------
+#
+
+for FILE in $*; do
+   head -1 $FILE
+   grep '^Agreeableness' $FILE
+   grep '^A.: ' $FILE | sort
+   echo
+done
+

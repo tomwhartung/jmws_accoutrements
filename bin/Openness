@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Openness: show the Openness scores saved in one or more *-score_values.csv files
+# --------------------------------------------------------------------------------
+#
+
+for FILE in $*; do
+   head -1 $FILE
+   grep '^Openness' $FILE
+   grep '^O.: ' $FILE | sort
+   echo
+done
+

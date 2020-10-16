@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Conscientiousness: show the Conscientiousness scores saved in one or more *-score_values.csv files
+# --------------------------------------------------------------------------------------------------
+#
+
+for FILE in $*; do
+   head -1 $FILE
+   grep '^Conscientiousness' $FILE
+   grep '^C.: ' $FILE | sort
+   echo
+done
+

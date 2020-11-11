@@ -1,83 +1,38 @@
 
-# 6-mdb5_tips_and_tricks.md
+# 1-references.md
 
-Tips learned about MDB5 while updating the sites to use it.
+Sites with reviews of hosting providers recommended for python-based sites.
 
-## Masks
+Ideally, one with a free tier would be nice, especially for the sites on the back burner right now.
 
-The MDB4 `mask rgba-black-strong` classes used on the home page of groja.com no longer work the same.
+# Part 1: Lists and Reviews
 
-Now use code such as `class="mask" style="background-color: rgba(0, 0, 0, 0.6);"`.
+Interestingly, at first blush there seems to be very little overlap.
 
-For more masking effects see:
+- Includes the providers I have been thinking about
+  - https://djangostars.com/blog/top-django-compatible-hosting-services/
+- Start with free hosting, then scale up as necessary - sounds good!
+  - https://marginhound.com/free-python-hosting-a-guide-to-finding-it-using-it-for-small-projects-and-scaling-up/
+- Displayed at the top of the list of search results
+  - These include a section on "Why You Don’t Want Free Python Hosting:"
+  - I *suspect* these guys are into affiliate marketing
+    - And therefore free hosting earns them $0.00 in commision!
+  - https://www.hostingadvice.com/how-to/best-python-hosting/
+  - https://www.hostingadvice.com/how-to/best-django-hosting/
+- Following the initial list is a longer section diving into each one -- presumably, at least
+  - https://hostingtribunal.com/best/django-hosting/
+- Mentions google cloud, initially my top choice, having seen their presentation, at the end:
+  - https://geekflare.com/python-hosting-platform/
 
-- https://mdbootstrap.com/docs/standard/content-styles/masks/
+There are probably more, but that's a good start.
 
-## Shadows
+# Part 2: Providers
 
-The MDB4 `z-depth-1-half`, etc. classes are gone.
+These are providers I would look at.
 
-Now use the `shadow-1`, `shadow-1-strong`, ... `shadow-5`, `shadow-5-strong` classes.
-
-For more hover effects see:
-
-- https://mdbootstrap.com/docs/standard/content-styles/hover-effects/
-
-## Hoverability
-
-The MDB4 `hoverable` and `z-depth-*` classes are gone.
-
-Now use the `hover-shadow` and `shadow-*` classes.
-
-- **Note:** the `hover-shadow` and `shadow-*` classes must be in different, i.e., nested, `div` elements
-- I like to use `hover-shadow` on the outer `div` and `shadow-*` on the inner `div`
-
-An example from groja.com:
-
-```
-<div class="card hover-shadow m-2">
- <div class="shadow-5">
-  <div class="card-body">
-   . . .
-   . . .
-   . . .
-  </div><!-- .card-body -->
- </div><!-- .shadow-* -->
-</div><!-- .card -->
-```
-
-An example from the gallery page on seeourminds.com:
-
-```
- <div class="col-md-8 col-lg-7 col-xl-6">
-  <div class="card hover-shadow m-2">
-   <div class="shadow-1-strong">
-    <div class="card-body px-4">
-    . . .
-    . . .
-    . . .
-    </div><!-- .card-body -->
-   </div><!-- .shadow-*  -->
-  </div><!-- .card -->
- </div><!-- .col-* -->
-```
-
-For more hover effects see:
-
-- https://mdbootstrap.com/docs/standard/content-styles/hover-effects/
-
-## Forms
-
-Css classes for forms have changed someone.
-
-- Each input tag should be in a div with `class="form-outline"` instead of `"md-form"`
-- `label` tags should now have `class="form-label"` set
-
-## Blockquotes
-
-- Add `class='blockquote'` to all blockquote tags
-  - This increases the font size, making the quote stand out
-- Note: Also added a few styles to `seeourminds.css` to:
-  - Give them a border on the left
-  - Add a little margin and padding to make them look better
+- AWS - Amazon Web Services
+  - https://aws.amazon.com/getting-started/hands-on/deploy-python-application/
+- Python Anywhere
+  - Mentioned in multiple lists in Part 1
+  - https://www.pythonanywhere.com
 

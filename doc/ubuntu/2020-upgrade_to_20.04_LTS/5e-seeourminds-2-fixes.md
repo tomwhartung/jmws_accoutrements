@@ -56,8 +56,9 @@ Filling in a name and email in the subscribe form on the home page opens the gro
 - [x] Politicians' Galleries: Ensure **ALL** are under Real People
 - [ ] Navigation: Add search box to header
 - [ ] GoT Gallery: Add an ad for GoT book to every GoT page in the gallery
-    - [ ] GoT Gallery pages
+    - [x] GoT Gallery pages
     - [ ] GoT Image pages
+- [x] Gallery Image pages: remove "Image:" from title, or move it to the end
 
 ## Check the Icons
 

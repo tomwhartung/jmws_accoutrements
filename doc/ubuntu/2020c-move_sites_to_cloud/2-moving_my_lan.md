@@ -39,7 +39,7 @@ Moving host `ava` from the asus wireless router to the TP-Link router, **so we c
 1. Create new connection in Settings -> Connections
 - Wired - forethought - tp-link
   - Update IP address to 192.168.1.117
-  - Update gateway to 192.168.0.1
+  - Update gateway to 192.168.1.1
 2. .ssh changes - guessing here
   2.1. Rename `~/.ssh/known_hosts` on `barbara` to `~/.ssh/known_hosts-2020_11_14`
   2.2. Rename `~/.ssh/known_hosts` on `ava` to `~/.ssh/known_hosts-2020_11_14`

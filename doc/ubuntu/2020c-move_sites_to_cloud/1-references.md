@@ -24,7 +24,7 @@ Interestingly, at first blush there seems to be very little overlap.
 7. Displayed at the top of the list of search results
    - These include a section on "Why You Don’t Want Free Python Hosting"
      - Note the extremely SEO-enhancing domain name, hostingadvice.com
-     - I *suspect* these guys are into affiliate marketing and so free hosting earns them $0.00 in commision!
+     - I **suspect** these guys are into affiliate marketing and so free hosting earns them $0.00 in commision!
      - So take their recommendations with a grain of capitalistic salt
    - https://www.hostingadvice.com/how-to/best-python-hosting/
    - https://www.hostingadvice.com/how-to/best-django-hosting/

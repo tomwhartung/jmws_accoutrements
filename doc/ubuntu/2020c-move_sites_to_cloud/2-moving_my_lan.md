@@ -32,6 +32,21 @@ Sources:
 
 - (0) - Linux host -> `/etc/hosts` `ifconfig` and Settings -> Connections
 
+# Update Existing LAN - Move `ava` to TP-Link
+
+Moving host `ava` from the asus wireless router to the TP-Link router, **so we can use it to access `barbara`**.
+
+1. Create new connection in Settings -> Connections
+- Wired - forethought - tp-link
+  - Update IP address to 192.168.1.117
+  - Update gateway to 192.168.0.1
+2. .ssh changes - guessing here
+  2.1. Rename `~/.ssh/known_hosts` on `barbara` to `~/.ssh/known_hosts-2020_11_14`
+  2.2. Rename `~/.ssh/known_hosts` on `ava` to `~/.ssh/known_hosts-2020_11_14`
+3. Switch cable
+4. Switch to new "Wired - forethought - tp-link" connection
+5. Test access to `barbara`
+
 # New LAN - Xfinity.com
 
 Notes pertaining to how my lan is set up for using xfinity's connection.

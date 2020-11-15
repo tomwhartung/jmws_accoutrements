@@ -53,6 +53,24 @@ Notes pertaining to how my lan is set up for using xfinity's connection.
 
 I want this to be as similar as possible to what I am using now.
 
+## Updating Asus Router
+
+Need to change the configuration on the Asus Router to work with the Xfinity modem/router.
+
+### 1. Update LAN IP Addresses
+
+- Current IP of Asus router is 10.0.0.1
+- Current IP of Xfinity modem/router is 10.0.0.1
+
+**Need to change IP of Asus router to 10.0.0.2 .**
+
+[x] 1. Change IP of Asus router to 10.0.0.2
+    [x] 1.1. Asus Config -> Advanced Settings -> LAN
+    [x] 1.2. LAN IP tab -> IP Address field -> 10.0.0.2
+    [x] 1.3. Apply
+
+**Now access Asus router at 10.0.0.2 .**
+
 ## Shared Values -- Wireless, DHCP
 
 These values are shared by **new connections**.

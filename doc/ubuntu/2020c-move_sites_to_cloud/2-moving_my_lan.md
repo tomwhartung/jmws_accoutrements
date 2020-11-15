@@ -164,13 +164,13 @@ We really just need static IP on the hosts.  **I think.**
 
 ## Static IP on `bette`
 
-Give `bette` a static IP address on the new network.
+Give `bette` a static wired IP address on the new network.
 
-### Create new connection on `bette`
+### Create new Connection on `bette`
 
 - Settings -> Network -> Connections -> + (new)
 - Select Wired Ethernet and Click on Create
-  - Connection Name: Wired-xfinity-static
+  - Connection Name: Wired-xfinity-asus-static
   - IPv4 Tab:
     - Method: Manual
     - DNS Servers: 75.75.75.75
@@ -183,13 +183,13 @@ Seems to work OK!
 
 ## Static IP on `jane`
 
-Give `jane` a static IP address on the new network.
+Give `jane` a static wired IP address on the new network.
 
-### Create new connection on `jane`
+### Create new Connection on `jane`
 
 - Settings -> Network -> Connections -> + (new)
 - Select Wired Ethernet and Click on Create
-  - Connection Name: Wired-xfinity-static
+  - Connection Name: Wired-xfinity-asus-static
   - IPv4 Tab:
     - Method: Manual
     - DNS Servers: 75.75.75.75
@@ -217,6 +217,25 @@ Update `/etc/hosts` and `.ssh/*` files on `bette` and `jane`.
 ### Fix `.ssh/*` Files
 
 Remove `~/.ssh/known_hosts` files on `bette` and `jane`.
+
+## Static IP on `lauren`
+
+Give `lauren` a static wireless IP address on the new network.
+
+### Change the Connection on `lauren`
+
+- Settings -> Network -> Wireless -> tomsasus -> '>' icon
+  - Click on Settings Button
+  - IPv4 Settings Tab:
+    - Method: Manual
+    - DNS Servers: 75.75.75.75
+    - Edit values under Addresses
+      - Address: 10.0.**1**.110
+      - Netmask: 255.0.0.0 -- filled in automatically
+      - Gateway: 10.0.**1**.2 -- Use the new Asus IP!
+
+Seems to work OK!
+
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

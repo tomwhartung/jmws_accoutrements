@@ -204,8 +204,21 @@ Seems to work OK!
 
 Update `/etc/hosts` and `.ssh/*` files on `bette` and `jane`.
 
+### Fix `/etc/hosts` Files
 
-?????????????????????????????????????????????
+[x] 1. Fix entries for `bette` in `/etc/hosts` on `jane`
+    -  Change `10.0.0.112` to `10.0.1.112`
+    -  Also fix `lauren`: change `10.0.0.110` to `10.0.1.110`
+[x] 2. Fix entries for `jane` in `/etc/hosts` on `bette`
+    -  Change `10.0.0.113` to `10.0.1.113`
+    -  Also fix `lauren`: change `10.0.0.110` to `10.0.1.110`
+[x] 3. Fix entries for `jane` in `/etc/hosts` on `bette`
+
+### Fix `.ssh/*` Files
+
+Remove `~/.ssh/known_hosts` files on `bette` and `jane`.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 # Notes From Yesterday
 

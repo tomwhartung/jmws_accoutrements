@@ -234,6 +234,31 @@ Give `lauren` a static wireless IP address on the new network.
       - Netmask: 255.0.0.0 -- filled in automatically
       - Gateway: 10.0.**1**.2 -- Use the new Asus IP!
 
+Update `/etc/hosts` and remove the `~/.ssh/known_hosts` file.
+
+Seems to work OK!
+
+## Static IP on `ava`
+
+Give `ava` a static wireless IP address on the new network.
+
+### Create new Connection on `ava`
+
+- Settings -> Network -> Connections -> + (new)
+- Select Wired Ethernet and Click on Create
+  - Connection Name: Wired-xfinity-asus-static
+  - IPv4 Tab:
+    - Method: Manual
+    - DNS Servers: 75.75.75.75
+    - Click on "+ Add"
+      - Address: 10.0.1.117
+      - Netmask: 255.0.0.0 -- filled in automatically
+      - Gateway: 10.0.**1**.2 -- Use the new Asus IP!
+
+Update `/etc/hosts` and remove the `~/.ssh/known_hosts` file.
+
+Also update `/etc/hosts` on `bette`, `jane`, and `lauren`.
+
 Seems to work OK!
 
 

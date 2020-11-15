@@ -181,6 +181,30 @@ Give `bette` a static IP address on the new network.
 
 Seems to work OK!
 
+## Static IP on `jane`
+
+Give `jane` a static IP address on the new network.
+
+### Create new connection on `jane`
+
+- Settings -> Network -> Connections -> + (new)
+- Select Wired Ethernet and Click on Create
+  - Connection Name: Wired-xfinity-static
+  - IPv4 Tab:
+    - Method: Manual
+    - DNS Servers: 75.75.75.75
+    - Click on "+ Add"
+      - Address: 10.0.1.113
+      - Netmask: 255.0.0.0 -- filled in automatically
+      - Gateway: 10.0.**1**.2 -- Use the new Asus IP!
+
+Seems to work OK!
+
+## Update System Files
+
+Update `/etc/hosts` and `.ssh/*` files on `bette` and `jane`.
+
+
 ?????????????????????????????????????????????
 
 # Notes From Yesterday

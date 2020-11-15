@@ -67,9 +67,58 @@ Need to change the configuration on the Asus Router to work with the Xfinity mod
 [x] 1. Change IP of Asus router to 10.0.0.2
     [x] 1.1. Asus Config -> Advanced Settings -> LAN
     [x] 1.2. LAN IP tab -> IP Address field -> 10.0.0.2
-    [x] 1.3. Apply
+    [x] 1.3. Click on Apply
 
 **Now access Asus router at 10.0.0.2 .**
+
+### 2. Update WAN IP Addresses
+
+- Current WAN IP Settings:
+  - IP Address: 192.168.1.2
+  - Subnet Mask: 255.255.255.0
+  - Default Gateway: 192.168.1.1
+
+**Need to change these to use Xfinity router at 10.0.0.1 .**
+
+- New WAN IP Settings:
+  - IP Address: 10.0.0.2
+  - Subnet Mask: 255.255.255.0
+  - Default Gateway: 10.0.0.1
+
+[x] 2. Update WAN IP of Asus router to 10.0.0.2
+    [x] 2.1. Asus Config -> Advanced Settings -> WAN
+    [x] 2.2. Internet connection tab -> IP Address field -> 10.0.0.2
+    [x] 2.3. Internet connection tab -> Default Gateway field -> 10.0.0.1
+
+**DO NOT CLICK ON APPLY QUITE YET!!**
+
+### 3. Update WAN DNS Addresses
+
+- Current WAN DNS Settings:
+  - DNS Server1: 192.168.30.2
+  - DNS Server2: 192.168.31.2
+
+**Need to change these to use Xfinity name servers at 75.75.75.75 .**
+
+- New WAN DNS Settings:
+  - DNS Server1: 75.75.75.75
+    - Should be ok
+  - DNS Server2: 2001:558:feed::1
+    - Will this work?
+
+[x] 3. Change DNS Servers on Asus router to 75.75.75.75
+    [x] 3.1. Asus Config -> Advanced Settings -> WAN
+    [x] 3.2. Internet connection tab -> DNS Server1 field -> 75.75.75.75
+    [x] 3.3. Internet connection tab -> DNS Server2 field -> 2001:558:feed::1
+    [x] 3.4. Click on Apply
+
+Check:
+
+- On command line:
+  - `ping 10.0.0.2`
+  - `ping 10.0.0.1`
+  - `ping google.com`
+- In xfinty phone app
 
 ## Shared Values -- Wireless, DHCP
 

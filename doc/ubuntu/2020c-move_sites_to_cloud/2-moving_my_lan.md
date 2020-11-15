@@ -120,9 +120,9 @@ Check:
   [x] `ping google.com`
 [x] In xfinty phone app
 
-### 4. Troubleshooting
+### 4. Trying DHCP
 
-Trying a few things:
+Try setting up the Asus to use DHCP to get its IP address.
 
 - Asus router -> General -> Network Map -> Internet status: Disconnected
   - Click on Disconnected
@@ -157,6 +157,33 @@ Trying a few things:
 Asus -> General -> Network Map -> **Internet status: Connected!**
 
 Xfinity phone app shows new device named **Asus-13**
+
+**I think it will be ok to allow the Xfinity modem to set the IP of the Asus dynamically.**
+
+We really just need static IP on the hosts.  **I think.**
+
+## Static IP on `bette`
+
+Give `bette` a static IP address on the new network.
+
+### Create new connection on `bette`
+
+- Settings -> Network -> Connections -> + (new)
+- Select Wired Ethernet and Click on Create
+  - Connection Name: Wired-xfinity-static
+  - IPv4 Tab:
+    - Method: Manual
+    - DNS Servers: 75.75.75.75
+    - Click on "+ Add"
+      - Address: 10.0.1.112
+      - Netmask: 255.0.0.0 -- filled in automatically
+      - Gateway: 10.0.**1**.2 -- Use the new Asus IP!
+
+Seems to work OK!
+
+?????????????????????????????????????????????
+
+# Notes From Yesterday
 
 ## Shared Values -- Wireless, DHCP
 

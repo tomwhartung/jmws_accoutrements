@@ -114,11 +114,49 @@ Need to change the configuration on the Asus Router to work with the Xfinity mod
 
 Check:
 
-- On command line:
-  - `ping 10.0.0.2`
-  - `ping 10.0.0.1`
-  - `ping google.com`
-- In xfinty phone app
+[x] On command line:
+  [x] `ping 10.0.0.2`
+  [ ] `ping 10.0.0.1`
+  [x] `ping google.com`
+[x] In xfinty phone app
+
+### 4. Troubleshooting
+
+Trying a few things:
+
+- Asus router -> General -> Network Map -> Internet status: Disconnected
+  - Click on Disconnected
+  - Spins then skips Step 1 and advances to ...
+  - Step 2 Internet Setup
+    - Static IP is selected
+    - Change to Automatic IP (DHCP)
+    - Click on Next
+    - Host Name(optional) field:
+      - Fill in Asus
+    - DNS Server1 field:
+      - Already set to 75.75.75.75
+    - Click on Next
+    - Spins then **backs up** to ...
+  - Step 1 Check Connection
+    - Says step 1 of 2 is to Turn off the Cable/DSL modem
+    - Now says to click next to use new router IP address: 10.0.1.2
+    - Reboots and redirects to 10.0.1.2
+  - Step 3 Router Setup
+    - Keep previous wireless settings tomsasus/pwd
+    - Click on Apply
+  - Completed Network Configuration Summary
+    - Wireless - unchanged
+    - WAN
+      - WAN Connection Type - Automatic IP
+      - WAN IP - 10.0.9.188
+    - LAN
+      - LAN IP - 10.0.1.2
+      - MAC C8:60:00:AB:B6:D4
+    - Click on Next
+
+Asus -> General -> Network Map -> **Internet status: Connected!**
+
+Xfinity phone app shows new device named **Asus-13**
 
 ## Shared Values -- Wireless, DHCP
 
@@ -150,6 +188,11 @@ Sources:
 
 - (3) Linux host -> `ifconfig`
 - (4) Xfinty app -> Connect (Devices or X Devices Not Connected->Device) -> Device Details -> IP Address (way at the bottom)
+
+
+?????????????????????????????????????????????
+
+I do not recall trying static IP on wireless.
 
 ## Shared Values -- Wireless, Static IP
 

@@ -273,16 +273,17 @@ These values are shared by **new connections**.
 - WAN IP Address (1): 107.2.247.79
 - DNS Mode (2): DHCPv4
 - Primary DNS (2): 75.75.75.75
-- Secondary DNS (2): 2001:558:feed::1
+- Secondary DNS (3): 75.75.76.76
 - Netmask (1): 255.255.255.0
-- Gateway (1)(3): 10.0.0.1 ??
-- broadcast (3): 10.0.0.255
+- Gateway (1)(4): 10.0.0.1 ??
+- broadcast (4): 10.0.0.255
 
 Sources:
 
 - (1) - Xfinty app -> My Network -> Advanced Settings -> LAN & WAN
 - (2) - Xfinty app -> My Network -> Advanced Settings -> DNS Server
-- (3) - Linux host -> `ifconfig`
+- (3) From Blu-Ray DVD player
+- (4) Linux host -> `ifconfig`
 
 ## Hosts and Their Automatic IP Addresses
 
@@ -309,16 +310,17 @@ These values are shared by **new connections**.
 - WAN IP Address (1): 107.2.247.79
 - DNS Mode (2): DHCPv4
 - Primary DNS (2): 75.75.75.75
-- Secondary DNS (2): 2001:558:feed::1
+- Secondary DNS (3): 75.75.76.76
 - Netmask (1): 255.255.255.0
-- Gateway (1), (3): 10.0.0.1
-- broadcast (3): 10.0.0.255
+- Gateway (1)(4): 10.0.0.1
+- broadcast (4): 10.0.0.255
 
 Sources:
 
 - (1) Xfinty app -> My Network -> Advanced Settings -> LAN & WAN
 - (2) Xfinty app -> My Network -> Advanced Settings -> DNS Server
-- (3) Linux host -> `ifconfig`
+- (3) From Blu-Ray DVD player
+- (4) Linux host -> `ifconfig`
 
 ## Hosts and Their Static IP Addresses
 

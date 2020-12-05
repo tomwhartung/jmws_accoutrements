@@ -82,10 +82,10 @@ set +x
 
 if [ "$this_hostname" == "ava" -o "$this_hostname" == "barbara" ]; then
    export tar_file_host='ava'
-   export remote_thumb_host='barbara'
+   export remote_thumb_host='ava'
 else
    export tar_file_host='jane'
-   export remote_thumb_host='barbara'
+   export remote_thumb_host='ava'
 fi
 
 copy_to_tar_file_host $tar_file_fullname

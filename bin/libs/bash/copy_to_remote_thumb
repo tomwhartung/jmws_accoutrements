@@ -23,7 +23,10 @@ echo "  remote_thumb_host: ${remote_thumb_host}"
 
 backup_drive_name=ext4Thumb
 backup_directory_name=usr_local_tar
-backup_file_directory=/mnt/disks/${backup_drive_name}/${backup_directory_name}/
+
+## backup_file_directory=/mnt/disks/${backup_drive_name}/${backup_directory_name}/
+backup_file_directory=/media/tomh/${backup_drive_name}/${backup_directory_name}/
+
 dest_sum_command="md5sum"
 
 if [ "$this_hostname" == "$remote_thumb_host" ]; then

@@ -116,6 +116,7 @@ else
    dest_username=''
 fi
 
+echo
 check_for_directory $dest_hostname $dest_directory > /dev/null
 check_ret_val=$?
 
@@ -130,7 +131,6 @@ if [ $check_ret_val -ne 0 ]; then
          exit 11
       fi
    else
-      echo 
       echo "Creating directory \"$dest_directory\" on host \"$dest_hostname\""
       ssh ${dest_username}${dest_hostname} mkdir -p $dest_directory
    fi

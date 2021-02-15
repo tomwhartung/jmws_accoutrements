@@ -3,5 +3,5 @@
 # up: find out what's up, process-wise
 # ------------------------------------
 #
-ps -aef | grep $1
+ps -aef | grep $1 | grep -v $$
 

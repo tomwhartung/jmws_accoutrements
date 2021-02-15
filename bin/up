@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# up: find out what's up, process-wise
+# ------------------------------------
+#
+ps -aef | grep $1
+

@@ -4,7 +4,15 @@
 Just the quotes from the book *The New Art - The New Life* within the book (of the same name, containing all of his writings),
 with comments on a very few of them.
 
-For original source material, and quotes from other works in the collection, see doc/mondrian-links_and_quotes.md in the seeourminds.com repo.
+# Redundancy Alert!
+
+For original source material, and quotes from other works in the collection, see:
+
+- `doc/mondrian-links_and_quotes.md` in the `seeourminds.com` repo.
+
+Most, if not all, of these quotes also appear in:
+
+- `quotes/art/mondrian-links_and_quotes.md` in the `always_reading_books` repo.
 
 # Quotes
 

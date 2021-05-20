@@ -4,7 +4,11 @@
 Just the quotes from the book *The New Art - The New Life* within the book (of the same name, containing all of his writings),
 with comments on a very few of them.
 
-# Redundancy Alert!
+# Redundancy Alerts!
+
+To see these quotes along some annotations, see:
+
+- `3-new_art_new_life-QUOTES-ANNOTATED_WITH_THEMES.md` in this directory.
 
 For original source material, and quotes from other works in the collection, see:
 

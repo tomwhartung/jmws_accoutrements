@@ -18,6 +18,8 @@ Most, if not all, of these quotes also appear in:
 
 - `quotes/art/mondrian-links_and_quotes.md` in the `always_reading_books` repo.
 
+**It would be nice to keep all of these files up to date with any additions!**
+
 # Quotes
 
 ## Introduction to The New Art - The New Life (1932)

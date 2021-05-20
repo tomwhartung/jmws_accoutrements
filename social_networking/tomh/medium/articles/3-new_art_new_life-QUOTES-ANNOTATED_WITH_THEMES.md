@@ -18,6 +18,8 @@ Most, if not all, of these quotes also appear in:
 
 - `quotes/art/mondrian-links_and_quotes.md` in the `always_reading_books` repo.
 
+**It would be nice to keep all of these files up to date with any additions!**
+
 # Original Was in French
 
 Written in French, this "book" remained unpublished in his lifetime.

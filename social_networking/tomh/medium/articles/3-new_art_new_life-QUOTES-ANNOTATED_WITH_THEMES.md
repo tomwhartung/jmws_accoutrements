@@ -376,11 +376,11 @@ because they have obviously worked in the past, else we wouldn't be here.
 
 You need to get to his discussion of high morality near the end before you can understand where he is going here.
 
-> If evil is synonymous with abolition and thus with suffering, and
-> good is synonymous with creation and thus with joy, then in real life good and evil destroy each other.
+> If evil is synonymous with abolition and thus with suffering, and good is synonymous with creation and thus with joy,
+> then in real life good and evil destroy each other.
 >
-> But in concrete life good and evil oppose each other.
-> And it is also a characteristic of life's beauty and misery that we can escape neither one.
+> But in concrete life good and evil oppose each other.  And it is also a characteristic of life's beauty and misery that
+> we can escape neither one.
 (p. 260)
 
 ----------
@@ -400,22 +400,45 @@ When we die, what is gone?  What remains here on earth?  Who are we, really?
 ----------
 
 - **General/Best**
+- **Diversity**
 - **Liberty**
 - **Purified Forms**
+- **Opposites and the Importance of Equilibrium**
+- **High Universal Morality**
+- **Equivalent Mutual Relationships**
 
 We can see what we really are internally, only by stripping away the external.
+
+> Nothing is more unfortunate for life than the concealment of reality: truth.  Since life is truth, life is then concealed.
+> To conceal the true content of life, even of practical life, is to retreat into a particular form, is to become separated from
+> life, to enclose oneself.  Oscillating between life and death in the obscurity of existence, we naturally enclose ourselves in
+> groups, in small, more or less homogeneous circles of the same social condition.  Through sensitivity or selfishness, it is
+> logical that we try to avoid the clashes and conflicts that abound in life.  It is understandable to frequent only one's
+> "friends," to live with "pals," and to be as little as possible concerned with humanity outside our small chosen circle.
+> That is why we enjoy ourselves as much as we can, eating, drinking, feeling, and thinking according to our particular taste
+> and nature.  Thus we cling to warmth and avoid cold; we read only what is agreeable to us, sympathetic in thought and feeling.
+> Finally, it is logical that we do not want to concern ourselves with troublesome political or economic situations and problems.
+> All this is very "human," if it derives spontaneously from one's own in- [page break] stinct and intuition for "living."  But
+> if it is a calculated attitude intended to conceal the true state of things, then it is ostrich policy.
+>
+> Let us not forget that this narrow egoism is not the egoism by which we evolve.  By enclosing ourselves within the small circle
+> of what is agreeable to us, we unjustly separate ourselves from others, from universal life and all its beauties, which then
+> remain concealed.
+>
+> But in reality there is danger everywhere, which if not combated leads to ruin.
+>
+> But like all particular forms, the little circles of our life destroy themselves.  And once again life pitilessly thrusts
+> us out of the warmth into the cold.
+>
+> Disoriented, facing concealed opposition, we feel unhappy.  But we "learn" and are forced to fight.  Fromthe struggle finally
+> comes victory: a new form of life that is more open.
+(pp. 260-261)
+
+Highlights from the above paragraphs:
 
 > Nothing is more unfortunate for life than the concealment of reality: truth.
 > Since life is truth, life is then concealed.
 (p. 260)
-
-----------
-
-- **Diversity**
-- **Liberty**
-- **Opposites and the Importance of Equilibrium**
-- **High Universal Morality**
-- **Equivalent Mutual Relationships**
 
 > By enclosing ourselves within the small circle of what is agreeable to us, we unjustly separate ourselves from others,
 > from universal life and all its beauties, which then remain concealed.

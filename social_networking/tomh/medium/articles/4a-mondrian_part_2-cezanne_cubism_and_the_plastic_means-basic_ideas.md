@@ -1,5 +1,5 @@
 
-# 4a-mondrian-cezannes_compositions-plastic_means-basic_ideas.md
+# 4a-mondrian_part_2-cezanne_cubism_and_the_plastic_means-basic_ideas.md
 
 Basic ideas, and kind of an outline, for a new article on medium.
 

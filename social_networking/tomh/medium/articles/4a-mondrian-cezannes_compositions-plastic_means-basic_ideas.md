@@ -1,13 +1,13 @@
 
 # 4a-mondrian-cezannes_compositions-plastic_means-basic_ideas.md
 
-Outline for a new article on medium.
+Basic ideas, and kind of an outline, for a new article on medium.
 
 # Title
 
 Proposed title for this article:
 
-- The Prophetic Vision of Piet Mondrian, Part 2: Cezanne and the Plastic Means
+- The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cezanne, and the Plastic Means
 
 For reference, the title of the first article in the series was:
 
@@ -15,22 +15,27 @@ For reference, the title of the first article in the series was:
 
 This title may be a bit long, but whatevs....
 
+# Goal
+
+**Try to keep it short and sweet -- and focused on Mondrian's use of the term "plastic."**
+
 # Basic Ideas -- Kind of an Outline
 
-Some ideas are fleshed out better than others.
+Some ideas are fleshed out better than others, meaning that some sentences could maybe be used as-is.
 
 ## Introduction
 
 This is part 2, for part 1 see [link].
 
-This part focuses on what Mondrian means by the word "plastic."
+This article focuses on what Piet Mondrian means by the word "plastic," because that is essential to understanding Mondrian's writings.
 
 ## Plastic Means Versus Plastic Material
 
 The New Art -- The New Life, The Collected Writings of Piet Mondrian, is a book edited and translated by Henry Holtzman and Martin S. James.
 It was first published in 1986.
 
-In the past I've checked out copies of this book from the library, and read the articles that had interesting-sounding titles.
+In the book the writings appear in chronological order.
+In the past I've checked out copies of this book from the library, and read the articles somewhat randomly, picking those that had interesting-sounding titles.
 
 Recently I obtained my very own copy of this book, and decided to take a more methodical approach, reading the articles in chronological order.
 
@@ -38,13 +43,25 @@ The articles in this book frequently use the term "plastic."
 
 Indeed, he calls his work Neo-Plasticism, and this term appears in the title of many of his articles.
 
-## Cezanne, Cubism, and The New Plastic
+It is clear from the context that when Mondrian uses the word "plastic" he is not referring to the ubiquitous material appearing in many of today's products.
 
-Mondrian frequently mentions cubism and the "plastic means."
+Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images.
 
-So I started reading the Cubist Epoch by Douglas Cooper, 1971.
+But until recently, I was never really sure what he meant by the term.
 
-This book in turn frequently mentions Cezanne, so I checked seven books about him out from the library.
+This is one of the reasons I decided to read these articles in the proper sequence.
+
+## Cubism and Cezanne
+
+In their introductory articles, the editors and translators discuss how Cubism influenced Mondrian's early work.
+
+- Quote from the article by Holtzman?
+- Quote from the article by James?
+
+I never really understood Cubism, so at one point I started reading the Cubist Epoch by Douglas Cooper, 1971.
+
+It turns out that this book frequently mentions Cezanne, so I checked seven books about him out from the library.
+
 [Mention curbside holds, and the fact that two people had to carry them out to me in my car?]
 
 One of these books finally showed me exactly what is meant by "The Plastic Means."
@@ -59,19 +76,27 @@ Most significantly, this book compares Cezanne's paintings with photographs of h
 
 These comparisons are incredibly valuable for those seeking to understand why Cezanne is considered the father of Modern Art.
 
-## De Stijl
+## Mondrian's Use of the Word
 
-This article reflects the content of Part 1 of The Complete Works of Mondrian [check title].
+In the first section of the article featured in the title of his Collected Works, The New Art -- The New Life: The Culture of Pure Relationships, Mondrian
+uses the term repeatedly, with the assumption that the reader understands
 
-This part of the book, which comprises [check: 1/3, 1/2, etc.] of the book consists of the articles he wrote for the magazine founded and run [check] by Theo Van Doesburg.
+This is arguably Mondrian's most enlightening article because draws parallels between his art and society at large.
 
-Summarize the content of this part, highlighting unique articles.
+- Societal Equilibrium
+- High Universal Morality -- Peace on Earth
 
-- Early expository [??] articles
-- Dialog
-- Trialog
-- Articles about other art forms such as music, architecture, and literature
-  - Modern-day industrial music
+He uses the term "plastic" 15 times in the first 12 paragraphs.
+
+- "plastic means:" 7 occurrences
+- "plastic expression:" 5 occurrences
+- "plastic value:" 3 occurrences
 
 ## Conclusion
+
+It's difficult to find a definition of the word "plastic" that corresponds to Mondrian's use of the word.
+
+Indeed, the index to the book Vision in Motion by L. Moholy-Nagy (1961) lists 19 occurrences of the term, but only the first mimics Mondrian's use of the term, while the other 18 references are to the material.
+
+If you are interested in the language of composition in general, and in reading Mondrian's writings in particular, I highly recommend finding a copy of Erle Loran's book!
 

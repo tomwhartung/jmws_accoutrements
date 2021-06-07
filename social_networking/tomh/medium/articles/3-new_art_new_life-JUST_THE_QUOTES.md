@@ -193,7 +193,7 @@ Written over a period of three years, based on ideas developed over the previous
 > But like all particular forms, the little circles of our life destroy themselves.  And once again life pitilessly thrusts
 > us out of the warmth into the cold.
 >
-> Disoriented, facing concealed opposition, we feel unhappy.  But we "learn" and are forced to fight.  Fromthe struggle finally
+> Disoriented, facing concealed opposition, we feel unhappy.  But we "learn" and are forced to fight.  From the struggle finally
 > comes victory: a new form of life that is more open.
 (pp. 260-261)
 

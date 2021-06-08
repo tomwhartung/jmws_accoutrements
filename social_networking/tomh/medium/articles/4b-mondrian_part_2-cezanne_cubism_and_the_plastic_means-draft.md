@@ -40,16 +40,27 @@ Context makes it somewhat clear that he uses the word "plastic" to refer to the 
 For example, one of the chapters in this first book is entitled "The New Plastic as Abstract-Real Painting: Plastic Means and Composition."
 
 One of the reasons I decided to read these articles in the proper sequence was that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
+Naturally, if one wants to learn something, it makes sense to start at the beginning.
 
-But he never really defines the term, and until recently, I was never really 100% sure what he meant by the it.
+Unfortunately, he never really defines the term, and until recently, I was never really 100% sure what he meant by the it.
 Although I had a sense of what he meant, it would be difficult to try to explain it to somene.
+
+It became clear that I had to back up to and learn about the artists who inspired Mondrian: Paul Cezanne and the Cubists.
 
 ## Cubism and Cezanne
 
 In their introductory articles, the editors and translators discuss how Cubism influenced Mondrian's early work.
 
-- Quote from the article by Holtzman?
-- Quote from the article by James?
+In his introductory article "Piet Mondrian: The Man and His Work" Harry Holtzman writes:
+
+Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious
+construction of the picure-plane, as the dynamic rhythm of its composition of forms in space.  [p. 8.]
+
+In his introductory article "Piet Mondrian: Art and Theory to 1917" Martin S. James writes:
+
+Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne
+Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
+particular forms disappear almost completely in the whole.  [p. 14.]
 
 I never really understood Cubism, so at one point I started reading the Cubist Epoch by Douglas Cooper, 1971.
 

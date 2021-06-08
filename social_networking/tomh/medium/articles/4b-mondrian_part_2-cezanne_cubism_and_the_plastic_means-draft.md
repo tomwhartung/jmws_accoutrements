@@ -62,19 +62,36 @@ Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Short
 Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
 particular forms disappear almost completely in the whole.  [p. 14.]
 
-I never really understood Cubism, so at one point I started reading the Cubist Epoch by Douglas Cooper, 1971.
+As I continued reading Mondrian's Collected Works, he continued to use the word "plastic" and would occasionally refer to Cubism.
+I never really understood Cubism, so at one point I started reading Douglas Cooper's book The Cubist Epoch, published in 1971.
 
-It turns out that this book frequently mentions Cezanne, so I checked seven books about him out from the library.
+As I learned about Cubism, I started thinking that it would be a great style to adopt for the next phase of my own Art project, which entails visualizing personalities.
+Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his
+General Description of the Types.
 
-[Mention curbside holds, and the fact that two people had to carry them out to me in my car?]
+I am basing the next phase of this project on the Big Five "OCEAN" personality traits, and have been researching those in parallel with my studies of Art History.
+Learning about and looking at how the various Cubist artists and their paintings evolved over time, I started thinking this style would be a great way to express these personality traits!
 
-One of these books finally showed me exactly what is meant by "The Plastic Means."
+So I quickly became interested in and inspired by the Cubists.
+And it turns out these artists and their work were in turn inspired by Paul Cézanne.
+Indeed, Cooper's book mentions him with about the same frequency as Mondrian mentions the "plastic means!"
+
+After reading a few chapters of The Cubist Epoch I eventually caved in to my curiosity, and found and checked out seven books about Cézanne out from the Denver Public Library.
+This was during the Coronovirus pandemic in 2020, so I had to put the books on hold and arrange to pick them via their curbside holds service.
+These books are large and printed on high-quality paper, so they're very heavy and it took two people had to carry them all out to my car!
+
+It was in one of these books that I finally learned exactly what Mondrian meant by the term "Plastic Means."
 
 ## The Plastic Means
 
-Section III in the book Cezanne's Composistions, by Earle Loran, 1943 is named An Illustrated Glossary, and defines this term.
+Most of the books about Cézanne that I found were either biographical in nature, or expounded on his place in Art History, or both.
+As is evident from its title, the book Cézanne's Compositions: Analysis of His Form With Diagrams and Photographs of His Motifs by Earle Loran did not fit into this mold.
 
-It turns out, my guess regarding what the term means was fuzzy, but close.
+And it was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
+To say that I was excited is a bit of an understatement!
+
+Section III in the book -- which is divided into sections rather than chapters -- is named An Illustrated Glossary, and it defines this term early on.
+It turns out that, although my guess regarding what the term means was fuzzy, I was pretty close!
 
 Most significantly, this book compares Cezanne's paintings with photographs of his motifs.
 

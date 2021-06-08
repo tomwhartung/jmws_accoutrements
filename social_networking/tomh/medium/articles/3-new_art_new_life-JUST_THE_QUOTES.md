@@ -1,7 +1,7 @@
 
-# 3-new_art_new_life-quotes.md
+# 3-new_art_new_life-JUST_THE_QUOTES.md
 
-Just the quotes from the book *The New Art - The New Life* within the book (of the same name, containing all of his writings),
+Just the quotes from the book *The New Art - The New Life* within the book *The New Art - The New Life: The Collected Writings of Piet Mondrian,*
 with comments on a very few of them.
 
 # Redundancy Alerts!
@@ -10,15 +10,11 @@ To see these quotes along some annotations, see:
 
 - `3-new_art_new_life-QUOTES-ANNOTATED_WITH_THEMES.md` in this directory.
 
-For original source material, and quotes from other works in the collection, see:
-
-- `doc/mondrian-links_and_quotes.md` in the `seeourminds.com` repo.
-
 Most, if not all, of these quotes also appear in:
 
-- `quotes/art/mondrian-links_and_quotes.md` in the `always_reading_books` repo.
+- `quotes/art/the_collected_writings_of_piet_mondrian-holtzman-james.md` in the `always_reading_books` repo.
 
-**It would be nice to keep all of these files up to date with any additions!**
+**The `the_collected_writings_of_piet_mondrian-holtzman-james.md` file is the definitive source for quotes from this book.**
 
 # Quotes
 

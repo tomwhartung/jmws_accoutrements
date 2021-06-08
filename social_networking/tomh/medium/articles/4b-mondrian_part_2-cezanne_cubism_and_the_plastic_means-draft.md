@@ -84,14 +84,22 @@ It was in one of these books that I finally learned exactly what Mondrian meant 
 
 ## The Plastic Means
 
-Most of the books about Cézanne that I found were either biographical in nature, or expounded on his place in Art History, or both.
-As is evident from its title, the book Cézanne's Compositions: Analysis of His Form With Diagrams and Photographs of His Motifs by Earle Loran did not fit into this mold.
+Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art History, or both.
 
+As is evident from its title, the book Cézanne's Compositions: Analysis of His Form With Diagrams and Photographs of His Motifs by Earle Loran did not fit into this mold.
 And it was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
+
 To say that I was excited is a bit of an understatement!
 
 Section III in the book -- which is divided into sections rather than chapters -- is named An Illustrated Glossary, and it defines this term early on.
-It turns out that, although my guess regarding what the term means was fuzzy, I was pretty close!
+One typically finds a glossary of terms near the end of a book, but Loran starts his definitions on page 17 of 136.
+
+Spanning a mere 8 pages, the Illustrated Glossary contains 22 diagrams.
+Although they are just sketches in black-and-white, these illustrations are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
+
+It turns out that, although my guess regarding what the term "Plastic Means" means was fuzzy, I was pretty close!
+
+-------- So far, so good. -------
 
 Most significantly, this book compares Cezanne's paintings with photographs of his motifs.
 

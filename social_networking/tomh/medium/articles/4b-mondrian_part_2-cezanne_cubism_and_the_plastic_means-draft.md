@@ -15,7 +15,7 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 
 - Image:
 
-![`../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg`]
+![../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg]
 (https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg)
 
 - Source: [art.com](https://www.art.com/products/p48743274440-sa-i10967078/piet-mondrian-composition-2-1922.htm)

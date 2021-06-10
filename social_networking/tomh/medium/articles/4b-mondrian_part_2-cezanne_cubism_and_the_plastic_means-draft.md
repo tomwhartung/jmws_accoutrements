@@ -15,86 +15,88 @@ This article focuses on what Piet Mondrian means by the word "plastic," because 
 
 ## Mondrian's Collected Writings
 
-The New Art -- The New Life, The Collected Writings of Piet Mondrian, is a book edited and translated by Henry Holtzman and Martin S. James first published in 1986.
+*The New Art -- The New Life, The Collected Writings of Piet Mondrian,* is a book edited and translated by Henry Holtzman and Martin S. James first published in 1986.
 Holtzman and James divide their book into three parts, and in it Mondrian's writings appear in chronological order.
 
-One of these works is The New Art -- The New Life: The Culture of Pure Relationships, which Mondrian first completed in December, 1931.
+One of these pieces is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December, 1931.
 It is arguably Mondrian's most enlightening work because it draws parallels between his art and society at large.
 This explains its use in the title of his Collected Writings.
 
 In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.
-Recently I obtained my very own copy of this book, and decided to take a more methodical approach, reading the articles in the sequence in which he wrote them.
+Recently I obtained my very own copy of this book, and decided to take a more methodical approach, reading the articles in the sequence in which he wrote them, and even reading the introductory material by the editors as well.
 
 ## Plastic Means Versus Plastic Material
 
 Throughout his writings Mondrian frequently uses the term "plastic."
 Indeed, he refers to the style of his work as the "New Plastic" or "Neo-Plasticism," and this term appears in the title of many of his articles.
 
-In fact, Mondrian called his first book, which was published as a collection of essays, "The New Plastic in Painting."
+In fact, Mondrian called his first book, which was published as a collection of essays, *The New Plastic in Painting.*
 He began writing it in 1914 and it appeared in twelve installments in the first issues of the journal De Stijl, between October 1917 and October 1918.
 
-While reading his collected writings, I have found the term "plastic" to be a consistent stumbling block.
+While reading his collected writings, I have found the term "plastic" to be a constant mental stumbling block.
 It is clear from the context that when Mondrian uses the word he is not referring to the ubiquitous material used to make many of today's products.
 
-Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images.
-For example, one of the chapters in this first book is entitled "The New Plastic as Abstract-Real Painting: Plastic Means and Composition."
+Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images -- the way he molds reality into shapes of his own choosing.
+For example, one of the chapters in his *New Plastic in Painting* is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
 
-One of the reasons I decided to read these articles in the proper sequence was that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
+One of the reasons I decided to read these articles in the proper sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
 Naturally, if one wants to learn something, it makes sense to start at the beginning.
 
-Unfortunately, he never really defines the term, and until recently, I was never really 100% sure what he meant by the it.
-Although I had a sense of what he meant, it would be difficult to try to explain it to somene.
+Unfortunately, he never really defines the term, and although I had a hunch, I was never really 100% sure what he meant by the it.
+Although I had a sense of what he meant, it would be impossible for me to explain it to somene with confidence.
 
-It became clear that I had to back up to and learn about the artists who inspired Mondrian: Paul Cezanne and the Cubists.
+As I went through his articles and essays, it became clear that I needed to back up to and learn about the artists who inspired Mondrian: Paul Cézanne and the Cubists.
 
-## Cubism and Cezanne
+## Cubism and Cézanne
 
-In their introductory articles, the editors and translators discuss how Cubism influenced Mondrian's early work.
+In their introductory pieces, the editors and translators discuss how Cubism influenced Mondrian's early work.
 
-In his introductory article "Piet Mondrian: The Man and His Work" Harry Holtzman writes:
+In his essay *Piet Mondrian: The Man and His Work* Harry Holtzman writes:
 
-Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious
-construction of the picure-plane, as the dynamic rhythm of its composition of forms in space.  [p. 8.]
+> Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious
+> construction of the picure-plane, as the dynamic rhythm of its composition of forms in space.  [p. 8.]
 
-In his introductory article "Piet Mondrian: Art and Theory to 1917" Martin S. James writes:
+In his essay *Piet Mondrian: Art and Theory to 1917* Martin S. James writes:
 
-Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne
-Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
-particular forms disappear almost completely in the whole.  [p. 14.]
+> Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne
+> Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
+> particular forms disappear almost completely in the whole.  [p. 14.]
 
 As I continued reading Mondrian's Collected Works, he continued to use the word "plastic" and would occasionally refer to Cubism.
-I never really understood Cubism, so at one point I started reading Douglas Cooper's book The Cubist Epoch, published in 1971.
+I never really understood Cubism either, so at one point I started reading Douglas Cooper's book *The Cubist Epoch,* published in 1971.
 
 As I learned about Cubism, I started thinking that it would be a great style to adopt for the next phase of my own Art project, which entails visualizing personalities.
 Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his
-General Description of the Types.
+*General Description of the Types.*
 
-I am basing the next phase of this project on the Big Five "OCEAN" personality traits, and have been researching those in parallel with my studies of Art History.
-Learning about and looking at how the various Cubist artists and their paintings evolved over time, I started thinking this style would be a great way to express these personality traits!
+I am basing the next phase of this project on the Big Five "OCEAN" personality traits, and have been researching those in parallel with my studies of Art history.
+Learning about and looking at how the various Cubist artists and their paintings evolved over time, I started thinking this style, which is more nuanced than Mondrian's work,
+would be a great way to express these personality traits, which are more nuanced than Jung's personality types!
 
-So I quickly became interested in and inspired by the Cubists.
-And it turns out these artists and their work were in turn inspired by Paul Cézanne.
-Indeed, Cooper's book mentions him with about the same frequency as Mondrian mentions the "plastic means!"
+As I became interested in and inspired by the Cubists, I learned that these artists and their work were in turn inspired by Paul Cézanne's paintings.
+Indeed, *The Cubist Epoch* mentions him with about the same frequency as Mondrian mentions the "plastic means!"
 
-After reading a few chapters of The Cubist Epoch I eventually caved in to my curiosity, and found and checked out seven books about Cézanne out from the Denver Public Library.
-This was during the Coronovirus pandemic in 2020, so I had to put the books on hold and arrange to pick them via their curbside holds service.
-These books are large and printed on high-quality paper, so they're very heavy and it took two people had to carry them all out to my car!
+After reading a few chapters of *The Cubist Epoch* I eventually caved in to this curiosity, and searched for books about Cézanne in the Denver Public Library.
+This was during the Coronovirus pandemic in 2020, so I had to put the seven books I found on hold and arrange to pick them via their curbside holds service.
+
+These books are large and printed on high-quality paper, so they're very heavy.
+When I went to pick them up it took two people to carry them all out to my car!
 
 It was in one of these books that I finally learned exactly what Mondrian meant by the term "Plastic Means."
 
 ## The Plastic Means
 
-Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art History, or both.
+Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 
-As is evident from its title, the book Cézanne's Compositions: Analysis of His Form With Diagrams and Photographs of His Motifs by Earle Loran did not fit into this mold.
+One of the books, *Cézanne's Compositions: Analysis of His Form With Diagrams and Photographs of His Motifs* by Erle Loran, did not fit into this mold.
 And it was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
 
 To say that I was excited is a bit of an understatement!
 
-Section III in the book -- which is divided into sections rather than chapters -- is named An Illustrated Glossary, and it defines this term early on.
-One typically finds a glossary of terms near the end of a book, but Loran starts his definitions on page 17 of 136.
+Section III in the book -- which is divided into sections rather than chapters -- is named *An Illustrated Glossary,* and it defines this term early on.
+One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning of his book, on page 17 of 136.
 
-Spanning a mere 8 pages, the Illustrated Glossary contains 22 diagrams.
+Spanning a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams.
 Although they are just sketches in black-and-white, these illustrations are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
 
 It turns out that, although my guess regarding what the term "Plastic Means" means was fuzzy, I was pretty close!

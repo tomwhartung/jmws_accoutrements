@@ -13,7 +13,11 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 
 # The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cézanne, and the Plastic Means
 
-- Image: [`../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg)
+- Image:
+
+![`../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg`]
+(https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg)
+
 - Source: [art.com](https://www.art.com/products/p48743274440-sa-i10967078/piet-mondrian-composition-2-1922.htm)
 
 
@@ -125,7 +129,11 @@ Although they are just sketches in black-and-white, these illustrations are inva
 
 It turns out that, although my guess regarding what the term "Plastic Means" means was fuzzy, I was pretty close!
 
-- Image: [`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg)
+- Image:
+
+![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg`]
+(https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg)
+
 - Source: Cézanne's Composition by Erle Loran, p. 17.
 
 -------- So far, so good. -------

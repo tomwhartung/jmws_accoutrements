@@ -5,16 +5,19 @@ Time to take the basic ideas I have for this new article on medium and turn them
 
 **Try to keep it short and sweet -- and focused on Mondrian's use of the term "plastic."**
 
+LOL as if!  But try!!
+
 # Images
 
 Images referenced are in the directory `../images/` and the names are prefixed by `mondrian_part_2-`.
 
-# The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cezanne, and the Plastic Means
+# The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cézanne, and the Plastic Means
 
-- Image: `../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg`
+- Image: [`../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg)
 - Source: [art.com](https://www.art.com/products/p48743274440-sa-i10967078/piet-mondrian-composition-2-1922.htm)
 
-## Introduction [perhaps implied rather than stated]
+
+## [Introduction -- preferably implied rather than stated]
 
 This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
 For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5)
@@ -109,7 +112,7 @@ It was in one of these books that I finally learned exactly what Mondrian meant 
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 
-One of the books, *Cézanne's Compositions: Analysis of His Form With Diagrams and Photographs of His Motifs* by Erle Loran, did not fit into this mold.
+One of the books, *Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs* by Erle Loran, did not fit into this mold.
 And it was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
 
 To say that I was excited is a bit of an understatement!
@@ -122,14 +125,14 @@ Although they are just sketches in black-and-white, these illustrations are inva
 
 It turns out that, although my guess regarding what the term "Plastic Means" means was fuzzy, I was pretty close!
 
-- Image: `../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg`
+- Image: [`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg)
 - Source: Cézanne's Composition by Erle Loran, p. 17.
 
 -------- So far, so good. -------
 
-Most significantly, this book compares Cezanne's paintings with photographs of his motifs.
+Most significantly, this book compares Cézanne's paintings with photographs of his motifs.
 
-These comparisons are incredibly valuable for those seeking to understand why Cezanne is considered the father of Modern Art.
+These comparisons are incredibly valuable for those seeking to understand why Cézanne is considered the father of Modern Art.
 
 ## Mondrian's Use of the Word
 

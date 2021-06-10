@@ -128,9 +128,15 @@ Although they are just sketches in black-and-white, these illustrations are inva
 
 It turns out that, although my guess regarding what the term "Plastic Means" means was fuzzy, I was pretty close!
 
-- Image:
+- Image (cropped and scaled):
 
 ![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg)
+
+- Source: Cézanne's Composition by Erle Loran, p. 17.
+
+- Image (cropped):
+
+![`../images/mondrian_part_2-plastic_means-p_17-cropped-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg)
 
 - Source: Cézanne's Composition by Erle Loran, p. 17.
 

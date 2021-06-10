@@ -5,11 +5,32 @@ Time to take the basic ideas I have for this new article on medium and turn them
 
 **Try to keep it short and sweet -- and focused on Mondrian's use of the term "plastic."**
 
+# Images
+
+Images referenced are in the directory `../images/` and the names are prefixed by `mondrian_part_2-`.
 
 # The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cezanne, and the Plastic Means
 
+- Image: `../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg`
+- Source: [art.com](https://www.art.com/products/p48743274440-sa-i10967078/piet-mondrian-composition-2-1922.htm)
+
+## Introduction [perhaps implied rather than stated]
+
 This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
 For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5)
+
+The image above is a poster of a painting typical of Mondrian's distinctive style, which he called *Neo-Plasticism* or *The New Plastic.*
+You can buy a poster of images like this from the site [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200,
+or find originals similar to it on the site [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.
+
+Mondrian lived humbly, and according to the Chronology in his *Collected Writings,* times had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
+This book quotes a letter he wrote to Arnold Saalborn around 1910 in which he states:
+
+> But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is,
+> a more conventional manner of painting -- so I have to work twice as much [p. 19].
+
+The fact that Mondrian's paintings now sell for amounts that most of us will never be able to afford is proof that his vision was truly prophetic.
+In trying to understand his vision, I've spent a considerable amount of time reading his *Collected Writings,* which are quite challenging to read.
 
 This article focuses on what Piet Mondrian means by the word "plastic," because that is essential to understanding Mondrian's writings.
 
@@ -100,6 +121,9 @@ Spanning a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams.
 Although they are just sketches in black-and-white, these illustrations are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
 
 It turns out that, although my guess regarding what the term "Plastic Means" means was fuzzy, I was pretty close!
+
+- Image: `../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg`
+- Source: Cézanne's Composition by Erle Loran, p. 17.
 
 -------- So far, so good. -------
 

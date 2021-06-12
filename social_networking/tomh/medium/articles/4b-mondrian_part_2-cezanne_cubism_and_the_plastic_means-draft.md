@@ -120,25 +120,31 @@ And it was in this book, published in 1943, that I finally found a formal defini
 
 To say that I was excited is a bit of an understatement!
 
-Section III in the book -- which is divided into sections rather than chapters -- is named *An Illustrated Glossary,* and it defines this term early on.
-One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning of his book, on page 17 of 136.
+Loran's book is divided into sections rather than chapters, and Section III, of a total of XV, is named *An Illustrated Glossary.*
+One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning of his book, on page 17 of a total of 136.
 
-Spanning a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams.
-Although they are just sketches in black-and-white, these illustrations are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
+Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term early on.
+Although they are just sketches in black-and-white, these diagrams are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
 
-It turns out that, although my guess regarding what the term "Plastic Means" means was fuzzy, I was pretty close!
+It turns out that, although my guess regarding the meaning of the term "Plastic Means" as being the *compositon of a painting* was fuzzy, I was pretty close!
 
-- Image (cropped and scaled):
+- Image:
 
-![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg)
-
-- Source: Cézanne's Composition by Erle Loran, p. 17.
-
-- Image (cropped):
-
-![`../images/mondrian_part_2-plastic_means-p_17-cropped-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-1.jpg)
+![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
 
 - Source: Cézanne's Composition by Erle Loran, p. 17.
+
+In the glossary for his book, Loran calls this image "Diagram II" and he uses it to define the terms *negative space* and *the plastic means or plastic form.*
+It shows a sketch of the subject matter for Cézannes 1987 painting *House and Farm at Jas de Bouffan* in an imaginary three-dimensional picture box.
+
+- Image:
+
+![`../images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg)
+
+- Source: https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887
+
+Given this sketch and Cézanne's rendering of the motif, we can see that the *plastic means* is essentially the way a painter interprets or projects three-dimensional subject matter onto the two dimensions of the picture plane.
+
 
 -------- So far, so good. -------
 

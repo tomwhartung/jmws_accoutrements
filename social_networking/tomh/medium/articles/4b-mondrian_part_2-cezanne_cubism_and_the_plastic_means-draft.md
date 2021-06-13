@@ -15,9 +15,9 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 
 - Image:
 
-![../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg)
+![../images/mondrian_part_2-mondrian-composition-2-1922-art.com.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg)
 
-- Source: [art.com](https://www.art.com/products/p48743274440-sa-i10967078/piet-mondrian-composition-2-1922.htm)
+- Source: [wikiart.org](https://www.wikiart.org/en/piet-mondrian/composition-2-1922)
 
 
 ## [Introduction -- implied rather than stated]
@@ -31,18 +31,18 @@ It is typical of Mondrian's distinctive style, which he called *Neo-Plasticism* 
 You can buy a poster of images like this from the site [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200,
 or find originals similar to it on the site [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.
 
-The fact that Mondrian's paintings now sell for amounts that most of us will never be able to afford is proof that his vision was truly prophetic.
+The fact that Mondrian's paintings, which are now around 100 years old, sell for amounts that most of us will never be able to afford is proof that his vision was truly prophetic.
 In trying to understand his art, I've spent a considerable amount of time reading his *Collected Writings,* which are quite challenging to read.
 
-And although Mondrian's work is valuable today, he lived humbly.
-According to the Chronology in his *Collected Writings,* times had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
+Although Mondrian's work is valuable today, he lived humbly.
+According to the *Chronology* in his *Collected Writings,* at times he had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
 
 Also in his *Collected Writings* is this quote, from a letter he wrote to Arnold Saalborn around 1910:
 
 > But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is,
 > a more conventional manner of painting -- so I have to work twice as much [p. 19].
 
-In this article I focus on how I eventually learned what Piet Mondrian means by the word *plastic,* because that is essential to understanding Mondrian's writings.
+In this article I focus on what Piet Mondrian means by the word *plastic,* because that is essential to understanding Mondrian's writings, and on how I eventually learned what he means by the word.
 
 ## Piet Mondrian's *Collected Writings*
 
@@ -85,7 +85,7 @@ The word appears with a qualifier in each of these occurrences:
 - "plastic expression" occurs 5 times
 - "plastic value" occurs 3 times
 
-For example, He uses the word with all three of these qualifiers in the eighth paragraph:
+For example, he uses the word with all three of these qualifiers in the eighth paragraph:
 
 > But the new art differs from the art of the past also from the viewpoint of relationships.
 > If purely plastic expression is created by "the relationships" of line, plane surface, and color in their purely plastic values, then these means *exist only through their relationships.*
@@ -94,7 +94,7 @@ For example, He uses the word with all three of these qualifiers in the eighth p
 One of the reasons I decided to read his writings in chronological sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
 Naturally, if one wants to learn something, it makes sense to start at the beginning.
 
-Unfortunately, he never really defines the term, and although I had a hunch, I was never really 100% sure what he meant by the it.
+Unfortunately, he never really defines the term, and although I had a hunch that it had something to do with composition, I was never really 100% sure what he meant by the it.
 Although I had a sense of what he meant, it would be impossible for me to explain it to somene with confidence.
 
 As I went through his articles and essays, it became clear that I needed to back up to and learn about the artists who inspired Mondrian: Paul Cézanne and the Cubists.
@@ -125,7 +125,7 @@ Mondrian's work -- which is based on opposites of color and form -- served as a 
 
 Isabel Briggs-Myers codified Jung's work and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator), which people can use to find their four-letter type.
 I am proud to be an INFP!
-Courses and books explaining these four-letter types are popular, and posts referencing them are easy to find on social media sites like twitter, pinterest, reddit, and tumblr.
+Courses and books explaining these four-letter types are popular, and posts with hashtags referencing them are easy to find on social media sites like twitter, pinterest, reddit, and tumblr.
 
 Recently I decided to base the next phase of this project on the Big Five "OCEAN" personality traits, and have been researching those in parallel with my studies of Art history.
 Learning about and looking at how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's work --
@@ -150,7 +150,7 @@ It was in one of these books that I finally learned exactly what Mondrian meant 
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 
-One of the books, *Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs* by Erle Loran, did not fit into this mold.
+However, one of the books, *Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs* by Erle Loran, did not fit into this mold.
 And it was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
 
 To say that I was excited is a bit of an understatement!
@@ -159,9 +159,9 @@ Loran's book is divided into sections rather than chapters, and Section III, of 
 One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning of his book, on page 17 of a total of 136.
 
 Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term early on.
-Although they are just sketches in black-and-white, these diagrams are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
+And although they are just sketches in black-and-white, these diagrams are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
 
-It turns out that, although my guess regarding the meaning of the term "Plastic Means" as being the *compositon of a painting* was fuzzy, I was pretty close!
+It turns out that, although my guess regarding the meaning of the term "plastic means" as being the *compositon of a painting* was fuzzy, I was pretty close!
 
 - Image:
 
@@ -169,8 +169,8 @@ It turns out that, although my guess regarding the meaning of the term "Plastic 
 
 - Source: Cézanne's Composition by Erle Loran, p. 17.
 
-In the glossary for his book, Loran calls this image "Diagram II" and he uses it to define the terms *negative space* and *the plastic means or plastic form.*
-It shows a sketch of the subject matter for Cézannes 1987 painting *House and Farm at Jas de Bouffan* in an imaginary three-dimensional picture box.
+Loran calls this image "Diagram II" and he uses it to define the terms *negative space* and *the plastic means or plastic form.*
+It shows a sketch of the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan* in an imaginary three-dimensional picture box.
 
 - Image:
 

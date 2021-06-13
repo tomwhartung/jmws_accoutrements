@@ -20,51 +20,76 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 - Source: [art.com](https://www.art.com/products/p48743274440-sa-i10967078/piet-mondrian-composition-2-1922.htm)
 
 
-## [Introduction -- preferably implied rather than stated]
+## [Introduction -- implied rather than stated]
 
 This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
 For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5)
 
-The image above is a poster of a painting typical of Mondrian's distinctive style, which he called *Neo-Plasticism* or *The New Plastic.*
+The image above is a poster of a painting Mondrian completed in 1922 entitled *Composition 2.*
+It is typical of Mondrian's distinctive style, which he called *Neo-Plasticism* or *The New Plastic.*
+
 You can buy a poster of images like this from the site [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200,
 or find originals similar to it on the site [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.
 
-Mondrian lived humbly, and according to the Chronology in his *Collected Writings,* times had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
-This book quotes a letter he wrote to Arnold Saalborn around 1910 in which he states:
+The fact that Mondrian's paintings now sell for amounts that most of us will never be able to afford is proof that his vision was truly prophetic.
+In trying to understand his art, I've spent a considerable amount of time reading his *Collected Writings,* which are quite challenging to read.
+
+And although Mondrian's work is valuable today, he lived humbly.
+According to the Chronology in his *Collected Writings,* times had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
+
+Also in his *Collected Writings* is this quote, from a letter he wrote to Arnold Saalborn around 1910:
 
 > But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is,
 > a more conventional manner of painting -- so I have to work twice as much [p. 19].
 
-The fact that Mondrian's paintings now sell for amounts that most of us will never be able to afford is proof that his vision was truly prophetic.
-In trying to understand his vision, I've spent a considerable amount of time reading his *Collected Writings,* which are quite challenging to read.
+In this article I focus on how I eventually learned what Piet Mondrian means by the word *plastic,* because that is essential to understanding Mondrian's writings.
 
-This article focuses on what Piet Mondrian means by the word "plastic," because that is essential to understanding Mondrian's writings.
-
-## Mondrian's Collected Writings
+## Piet Mondrian's *Collected Writings*
 
 *The New Art -- The New Life, The Collected Writings of Piet Mondrian,* is a book edited and translated by Henry Holtzman and Martin S. James first published in 1986.
 Holtzman and James divide their book into three parts, and in it Mondrian's writings appear in chronological order.
 
-One of these pieces is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December, 1931.
-It is arguably Mondrian's most enlightening work because it draws parallels between his art and society at large.
-This explains its use in the title of his Collected Writings.
+Part I, *The De Stijl Years: 1917-24,* covers his writings for the journal *De Stijl.*
+Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote while still in continental Europe, after he and *De Stijl* parted ways.
+And Part III, *England and the United States: 1938-1944,* includes the articles and essays he wrote after leaving continental Europe due to the impending war.
+
+One of the pieces in this book is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December, 1931.
+It appears in Part II of the book and is one of Mondrian's most enlightening works, because it draws parallels between his art and society at large, which explains its use in the title of his Collected Writings.
+In a letter dated August 6, 1931 he called it a "little work into which I have compressed all that I believe and hope for" [p. 245].
 
 In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.
-Recently I obtained my very own copy of this book, and decided to take a more methodical approach, reading the articles in the sequence in which he wrote them, and even reading the introductory material by the editors as well.
+Recently I obtained my very own copy of this book, and decided to take a more methodical approach, starting with read the introductory material by the editors and reading the articles in chronological order.
 
 ## Plastic Means Versus Plastic Material
 
 Throughout his writings Mondrian frequently uses the term "plastic."
-Indeed, he refers to the style of his work as the "New Plastic" or "Neo-Plasticism," and this term appears in the title of many of his articles.
+He refers to the style of his work as the "New Plastic" or "Neo-Plasticism," and this term appears in the title of many of his articles.
 
-In fact, Mondrian called his first book, which was published as a collection of essays, *The New Plastic in Painting.*
-He began writing it in 1914 and it appeared in twelve installments in the first issues of the journal De Stijl, between October 1917 and October 1918.
+In fact, Mondrian called his first book -- which was published as a collection of essays in *De Stijl* -- *The New Plastic in Painting.*
+He began writing it in 1914, and it appeared in twelve installments in the first issues of the journal *De Stijl,* between October 1917 and October 1918.
 
 While reading his collected writings, I have found the term "plastic" to be a constant mental stumbling block.
 It is clear from the context that when Mondrian uses the word he is not referring to the ubiquitous material used to make many of today's products.
 
 Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images -- the way he molds reality into shapes of his own choosing.
-For example, one of the chapters in his *New Plastic in Painting* is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
+For example, one of the chapters in the *New Plastic in Painting* series of articles is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
+
+## Plastic This, Plastic That
+
+In the first twelve paragraphs of his "little work" *The New Art -- The New Life: The Culture of Pure Relationships,* Mondrian uses the term repeatedly.
+
+
+- Societal Equilibrium
+- High Universal Morality -- Peace on Earth
+
+He uses the term "plastic" 15 times in the first 12 paragraphs.
+
+- "plastic means:" 7 occurrences
+- "plastic expression:" 5 occurrences
+- "plastic value:" 3 occurrences
+
+with the assumption that the reader understands
+
 
 One of the reasons I decided to read these articles in the proper sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
 Naturally, if one wants to learn something, it makes sense to start at the beginning.
@@ -151,21 +176,6 @@ Given this sketch and Cézanne's rendering of the motif, we can see that the *pl
 Most significantly, this book compares Cézanne's paintings with photographs of his motifs.
 
 These comparisons are incredibly valuable for those seeking to understand why Cézanne is considered the father of Modern Art.
-
-## Mondrian's Use of the Word
-
-In the first section of the article featured in the title of his Collected Works, The New Art -- The New Life: The Culture of Pure Relationships, Mondrian
-uses the term repeatedly, with the assumption that the reader understands
-
-
-- Societal Equilibrium
-- High Universal Morality -- Peace on Earth
-
-He uses the term "plastic" 15 times in the first 12 paragraphs.
-
-- "plastic means:" 7 occurrences
-- "plastic expression:" 5 occurrences
-- "plastic value:" 3 occurrences
 
 ## Conclusion
 

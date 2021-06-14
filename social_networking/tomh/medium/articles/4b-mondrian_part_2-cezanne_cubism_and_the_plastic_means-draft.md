@@ -22,7 +22,7 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 ## [Introduction -- implied rather than stated]
 
 This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
-For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5)
+For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5).
 
 The image above is a poster of a painting Mondrian completed in 1922 entitled *Composition 2.*
 It is typical of Mondrian's distinctive style, which he called *Neo-Plasticism* or *The New Plastic.*
@@ -49,18 +49,19 @@ In this article I focus on what Piet Mondrian means by the word *plastic,* becau
 Holtzman and James divide their book into three parts, and in it Mondrian's writings appear in chronological order.
 
 Part I, *The De Stijl Years: 1917-24,* covers his writings for the journal *De Stijl.*
-Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote while still in continental Europe, after he and *De Stijl* parted ways.
+Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote after he and *De Stijl* parted ways but was still in continental Europe.
 And Part III, *England and the United States: 1938-1944,* includes the articles and essays he wrote after leaving continental Europe due to the impending war.
 
 One of the pieces in this book is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December, 1931.
-It appears in Part II of the book and is one of Mondrian's most enlightening works, because it draws parallels between his art and society at large, which explains its use in the title of his *Collected Writings.*
+It appears in Part II of the book and is one of Mondrian's most enlightening works, because it draws parallels between his art and society at large.
+This explains its use in the title of his *Collected Writings.*
 
 In a letter dated August 6, 1931 he called the piece a "little work into which I have compressed all that I believe and hope for" [p. 245].
 And in this "little work" he discusses concepts such as "equivalent relationships" [e.g., p. 248, p. 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
 Near the end of the piece he predicts that his art, and that by others, can and will eventually lead to "high universal morality -- the true content of love, friendship, brotherhood, and all their synonyms" [p. 271].
 
 In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.
-Recently I obtained my very own copy of this book, and decided to take a more methodical approach, starting with read the introductory material by the editors and reading the articles in chronological order.
+Recently I obtained my very own copy of this book, and decided to take a more methodical approach, starting with the introductory material by the editors and reading the articles in chronological order.
 
 ## Plastic Means Versus Plastic Material
 
@@ -71,7 +72,7 @@ In fact, Mondrian called his first book -- which was published as a collection o
 He began writing it in 1914, and it appeared in twelve installments in the journal between October 1917 and October 1918.
 
 While reading his *Collected Writings,* I have found the term "plastic" to be a constant mental stumbling block.
-It is clear from the context that when Mondrian uses the word he is not referring to the ubiquitous plastic material used to make many of today's products.
+It is clear from the context that when Mondrian uses the word he is *not* referring to the ubiquitous plastic material used to make many of today's products.
 
 Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images -- the way he molds reality into shapes of his own choosing.
 For example, one of the chapters in the *New Plastic in Painting* series of articles is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
@@ -95,9 +96,9 @@ For example, he uses the word with all three of these qualifiers in the eighth p
 One of the reasons I decided to read his writings in chronological sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
 Naturally, if one wants to learn something, it makes sense to start at the beginning!
 
-Unfortunately, as far as I can tell he never really defines the term.
+Unfortunately -- as far as I can tell, anyway -- he never really defines the term.
 And although I had a hunch that it had something to do with composition, I was never really 100% sure what he meant by the it.
-Moreover, despite the fact that I had a sense of what he meant, I would not be able to explain it to somene with confidence.
+Importantly, despite the fact that I had a sense of what he meant, I would not be able to explain it to somene with confidence.
 
 As I went through his articles and essays, it became more and more clear that I needed to back up to and learn about the artists who inspired Mondrian: Paul Cézanne and the Cubists.
 
@@ -114,12 +115,12 @@ This painting by Picasso, entitled *Harlequin* and completed in 1918, is a good 
 
 - Source: [wikiart.org](https://www.wikiart.org/en/paintings-by-style/cubism?select=featured)
 
-In his essay *Piet Mondrian: The Man and His Work,* Harry Holtzman writes:
+In his essay *Piet Mondrian: The Man and His Work,* editor and translator Harry Holtzman writes:
 
 > Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious
 > construction of the picure-plane, as the dynamic rhythm of its composition of forms in space.  [p. 8.]
 
-And in his essay *Piet Mondrian: Art and Theory to 1917,* Martin S. James writes:
+And in his essay *Piet Mondrian: Art and Theory to 1917,* editor and translator Martin S. James writes:
 
 > Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne
 > Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
@@ -134,11 +135,11 @@ As I learned about Cubism, I started thinking that it would be a great style to 
 Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his
 *General Description of the Types.*
 
-Isabel Briggs-Myers codified Jung's work and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator), which people can use to find their four-letter type.
-I learned about the MBTI (r) in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and am proud to be an INFP!
+Isabel Briggs-Myers codified Jung's work and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator), which people can use to find their four-letter personality type.
+I first learned about the MBTI (r) in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and am proud to be an INFP!
 Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags referencing them are easy to find on social media sites like twitter, pinterest, reddit, and tumblr.
 
-Recently I decided to base the next phase of this project on the Big Five "OCEAN" personality traits, and have been researching those in parallel with my studies of Art history.
+Recently I decided to base the next phase of this project on the Big Five "OCEAN" personality traits, and have been researching that model of personality in parallel with my studies of Art history.
 Learning about and looking at how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism --
 would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
 
@@ -161,16 +162,17 @@ It was in one of these books that I finally learned exactly what Mondrian meant 
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 
-However, one of the books, *Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs* by Erle Loran, did not fit into this mold.
+However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)*
+by Erle Loran, did not fit into this mold.
 And it was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
 
 To say that I was excited is a bit of an understatement!
 
-Loran's book is divided into sections rather than chapters, and Section III, of a total of XV, is named *An Illustrated Glossary.*
-One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 of a total of 136.
+Loran's book is divided into sections rather than chapters, and Section III of XV, is named *An Illustrated Glossary.*
+One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 of 136.
 
 Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term right away.
-And although they are just sketches in black-and-white, these diagrams are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
+The sketches are in black-and-white, but these diagrams are invaluable for someone wanting to understand the terms he uses in the remainder of the book.
 
 It turns out that, although my guess regarding the meaning of the term "plastic means" as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
 
@@ -181,7 +183,7 @@ It turns out that, although my guess regarding the meaning of the term "plastic 
 - Source: Cézanne's Composition by Erle Loran, p. 17.
 
 Loran calls this image "Diagram II" and he uses it to define the terms *negative space* and *the plastic means or plastic form.*
-It shows a sketch of the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan* in an imaginary three-dimensional picture box.
+It shows a sketch of the motif of one of Cézanne's painting.
 
 This is Loran's definition in its entirety:
 
@@ -194,9 +196,12 @@ This is Loran's definition in its entirety:
 > line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane.
 > Hence plastic qualities are not only three-dimensional, but two-dimensional as well.  [p. 18, emphasis in original as italics].
 
-And this is the key idea from this definition:
+That is a bit much; here is the key idea from this definition:
 
 > Thus line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane [p. 18].
+
+The sketch above shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan.*
+Here is an image of the actual painting:
 
 - Image:
 

@@ -104,6 +104,15 @@ As I went through his articles and essays, it became more and more clear that I 
 ## Cubism
 
 In their introductory pieces, the editors and translators of the *Collected Writings* discuss how Cubism influenced Mondrian's early work.
+Pablo Picasso and Georges Braque were the progenitors of the style.
+
+This painting by Picasso, entitled *Harlequin* and completed in 1918, is a good example of a Cubist painting.
+
+- Image:
+
+![../images/mondrian_part_2-harlequin-1918.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-harlequin-1918.jpg)
+
+- Source: [wikiart.org](https://www.wikiart.org/en/paintings-by-style/cubism?select=featured)
 
 In his essay *Piet Mondrian: The Man and His Work,* Harry Holtzman writes:
 

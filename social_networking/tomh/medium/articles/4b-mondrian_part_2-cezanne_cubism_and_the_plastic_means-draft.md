@@ -130,14 +130,15 @@ And in his essay *Piet Mondrian: Art and Theory to 1917,* editor and translator 
 > Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
 > particular forms disappear almost completely in the whole.  [p. 14.]
 
-I never really understood Cubism either, but it turns out that when it comes to understanding these paintings, a little information can go a long way.
+I never really understood Cubism, but had an idea that it was somewhat complicated.
+It turns out that when it comes to understanding these paintings, a little information can go a long way.
 
 At one point I put Mondrian's book aside and started reading Douglas Cooper's book *[The Cubist Epoch](https://www.goodreads.com/book/show/552681.The_Cubist_Epoch),* published in 1971.
 Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote [The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations) which
 was published in 1913.
 
 In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance" [p. 8].
-This concisely explains the fractured appearance of these works: Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects in a single image.
+This explains very concisely why these works appear so fractured: Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects in a single image.
 
 At one point, Apollinaire explains Cubism by comparing the paintings to music:
 

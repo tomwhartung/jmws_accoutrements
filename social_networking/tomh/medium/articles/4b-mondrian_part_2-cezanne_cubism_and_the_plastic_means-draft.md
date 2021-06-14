@@ -89,13 +89,13 @@ The word appears with a qualifier in each of these occurrences:
 - "plastic expression" occurs 5 times
 - "plastic value" occurs 3 times
 
-I believe the counts from this short passage are representative of the relative frequency with which he uses these qualifiers.
-That is, my impression is that he mentions the "plastic means" more frequently than he does the other phrases.
+I believe the counts from these twelve paragraphs are representative of the relative frequency with which he uses these qualifiers in the rest of the book.
+That is, my impression is that he mentions the "plastic means" more frequently than he does any of the other phrases.
 
 For context, following is an example from the eighth paragraph of *The New Art -- The New Life* in which he uses the word "plastic" with all three of these qualifiers:
 
 > If purely *plastic expression* is created by "the relationships" of line, plane surface, and color in their purely *plastic values,* then these means exist only through their relationships.
-> Therefore, relationships are just as important as the *plastic means.*  [p. 246, emphasis added].
+> Therefore, relationships are just as important as the *plastic means.*  [p. 246, emphasis added to highlight the word in question].
 
 One of the reasons I decided to read his writings in chronological sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
 Naturally, if one wants to learn something, it makes sense to start at the beginning!
@@ -130,8 +130,24 @@ And in his essay *Piet Mondrian: Art and Theory to 1917,* editor and translator 
 > Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
 > particular forms disappear almost completely in the whole.  [p. 14.]
 
-As I continued reading Mondrian's *Collected Works,* he continued to use the word "plastic," and would occasionally refer to Cubism.
-I never really understood Cubism either, so at one point I put Mondrian's book aside and started reading Douglas Cooper's book *The Cubist Epoch,* published in 1971.
+I never really understood Cubism either, but it turns out that when it comes to understanding these paintings, a little information can go a long way.
+
+At one point I put Mondrian's book aside and started reading Douglas Cooper's book *[The Cubist Epoch](https://www.goodreads.com/book/show/552681.The_Cubist_Epoch),* published in 1971.
+Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote [The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations) which
+was published in 1913.
+
+In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance" [p. 8].
+This concisely explains the fractured appearance of these works: Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects in a single image.
+
+At one point, Apollinaire explains Cubism by comparing the paintings to music:
+
+> When he listens to a concert, the music-lover experiences joyful feelings which are different from the joy experienced when he hears natural sounds like the murmur of a stream,
+> the roar of a waterfall, the wind soughing through a forest, or the harmonies of human speech, based on reason and not on aesthetics.
+> Similarly, the new painters will provide their admirers with artistic sensations created only by the harmony of contrasting hues of light [p. 12].
+
+A bit later he asserts that the Cubist style permits the artists "to give the object proportions appropriate to the *degree of plasticity* he desires" [p. 16, emphasis added].
+
+There's that word again!
 
 ## My Interest in All This
 

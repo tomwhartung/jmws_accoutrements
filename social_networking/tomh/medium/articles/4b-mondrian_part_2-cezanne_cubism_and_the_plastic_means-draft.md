@@ -246,19 +246,25 @@ Here is an image of the actual painting:
 
 - Source: https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887
 
-Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one.
+Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII on page 52.
 Unfortunately, these two photographs are not the best.
-Moreover, it should be enough to say that in these photographs the house does not look like it is ready to tip over!
+Moreover, it should be enough to say that in the photographs the house does not look like it is ready to tip over!
 
-Given Loran's sketch and definition, and Cézanne's rendering of the motif, we can see that the *plastic means* is essentially the way a painter interprets or projects three-dimensional subject
-matter onto the two dimensions of the picture plane.
+Given Loran's sketch, definition, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can see that the "plastic means" is essentially
+the way a painter interprets or projects three-dimensional subject matter onto the two dimensions of the picture plane.
 
 
 -------- So far, so good. -------
 
 Most significantly, this book compares Cézanne's paintings with photographs of his motifs.
 
+- Sainte Victoire
+
 These comparisons are incredibly valuable for those seeking to understand why Cézanne is considered the father of Modern Art.
+
+## Plasticism - Malleability
+
+- digital works more malleable than analog/film/plastic material
 
 ## Conclusion
 

@@ -3,9 +3,9 @@
 
 Time to take the basic ideas I have for this new article on medium and turn them into a draft.
 
-**Try to keep it short and sweet -- and focused on Mondrian's use of the term "plastic."**
+**Try to keep it short and sweet -- and focused on explaining the term "plastic."**
 
-LOL as if!  But try!!
+#### LOL as if!  But try to stay on track!!
 
 # Images
 
@@ -21,6 +21,9 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 
 ## [Introduction -- implied rather than stated]
 
+There are two kinds of art: mimetic or representational and cathartic or expressionist.
+The difference between them is how the artist uses the plastic means.
+
 This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
 For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5).
 
@@ -30,34 +33,36 @@ It is typical of Mondrian's distinctive style, which he called *[NeoPlasticism](
 You can buy a poster of an image like this from the site [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200,
 and find originals similar to it on the site [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.
 
-The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for amounts that most of us will never be able to afford is proof that his vision was truly prophetic.
-In trying to understand his art, I've spent a considerable amount of time reading his *Collected Writings,* which are quite challenging to read.
+The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for amounts that most of us will never see in our lifetime is proof that his vision was truly prophetic.
+In trying to understand his art, I've spent a considerable amount of time reading his *Collected Writings* -- which are quite challenging to understand.
 
 Although Mondrian's work is valuable today, he lived humbly.
 According to the *Chronology* in his *Collected Writings,* at times he had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
 
-The following quote also appears in his *Collected Writings.*  It comes from a letter he wrote to Arnold Saalborn around 1910:
+The following quote is from a letter he wrote to Arnold Saalborn around 1910 that appears in his *Collected Writings:*
 
 > But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is,
 > a more conventional manner of painting -- so I have to work twice as much [p. 19].
 
-The focus of this article is on the meaning by the word *plastic* in this context, because that is essential to understanding Mondrian's writings.
+The focus of this article is on what Mondrian meant by the word *plastic,* because that term appears frequently in his writings and is essential to understanding them.
 
 ## Piet Mondrian's *Collected Writings*
 
-*The New Art -- The New Life, The Collected Writings of Piet Mondrian,* is a book edited and translated by Henry Holtzman and Martin S. James first published in 1986.
-Holtzman and James divide their book into three parts, and in it Mondrian's writings appear in chronological order.
+*[The New Art -- The New Life, The Collected Writings of Piet Mondrian](https://www.goodreads.com/book/show/13291.The_New_Art_the_New_Life),*
+is a book edited and translated by [Henry Holtzman](https://en.wikipedia.org/wiki/Harry_Holtzman) and [Martin S. James](https://en.wikipedia.org/wiki/Martin_S._James)
+and first published in 1986.
+Mondrian's writings appear in the book in chronological order, and the authors divide the book into three parts.
 
 Part I, *The De Stijl Years: 1917-24,* covers his writings for the journal *De Stijl.*
 Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote after he and *De Stijl* parted ways but was still in continental Europe.
 And Part III, *England and the United States: 1938-1944,* includes the articles and essays he wrote after leaving continental Europe due to the impending war.
 
 One of the pieces in this book is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December, 1931.
-It appears in Part II of the book and the authors refer to it in the title of his *Collected Writings* because it because it draws parallels between his art and society at large.
-This makes it one of Mondrian's most enlightening works.
+It appears in Part II of the book and the authors refer to it in the title of his *Collected Writings* because it is one of the best articles in it.
+It is undoubtedly one of Mondrian's most enlightening works because it draws parallels between his art and society at large.
 
-In a letter dated August 6, 1931 Mondrian called the piece a "little work into which I have compressed all that I believe and hope for" [p. 245].
-And in this "little work" he discusses concepts such as "equivalent relationships" [e.g., p. 248, p. 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
+Mondrian calls the piece a "little work into which I have compressed all that I believe and hope for" [p. 245] in a letter to Alfred Roth dated August 6, 1931.
+In this "little work" he discusses concepts such as "equivalent relationships" [e.g., p. 248, p. 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
 Near the end of the piece he predicts that his art, and that by others, can and will eventually lead to "high universal morality -- the true content of love, friendship, brotherhood, and all their synonyms" [p. 271].
 
 In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.
@@ -92,7 +97,7 @@ The word appears with a qualifier in each of these occurrences:
 I believe the counts from these twelve paragraphs are representative of the relative frequency with which he uses these qualifiers in the rest of the book.
 That is, my impression is that he mentions the "plastic means" more frequently than he does any of the other phrases.
 
-For context, following is an example from the eighth paragraph of *The New Art -- The New Life* in which he uses the word "plastic" with all three of these qualifiers:
+For example, in the eighth paragraph of *The New Art -- The New Life* he uses the word "plastic" with all three of these qualifiers:
 
 > If purely *plastic expression* is created by "the relationships" of line, plane surface, and color in their purely *plastic values,* then these means exist only through their relationships.
 > Therefore, relationships are just as important as the *plastic means.*  [p. 246, emphasis added to highlight the word in question].
@@ -101,8 +106,12 @@ One of the reasons I decided to read his writings in chronological sequence is t
 Naturally, if one wants to learn something, it makes sense to start at the beginning!
 
 Unfortunately -- as far as I can tell, anyway -- he never really defines the term.
-And although I had a hunch that it had something to do with composition, I was never really 100% sure what he meant by it.
-Most importantly, despite the fact that I had a sense of what he meant, I would want to be more more comfortable with the term before trying to explain it to somene with confidence.
+The closest thing to a definition I have found so far is this circular definition appearing in his 1930 essay *Cubism and Neo-Plastic:*
+
+> By pure plastic we mean the plastic of relationships alone, expressed by line and color also alone, that is to say, without any limited form.
+
+Although it obviously has something to do with composition, I was never really 100% sure what he meant by it.
+Most importantly, despite having a sense of what he meant, it would be nice to be sufficiently comfortable with the term that I could explain it to somone.
 
 As I went through his articles and essays, it became more and more clear that I needed to back up to and learn about the artists who inspired Mondrian: Paul Cézanne and the Cubists.
 
@@ -131,11 +140,11 @@ And in his essay *Piet Mondrian: Art and Theory to 1917,* editor and translator 
 > particular forms disappear almost completely in the whole.  [p. 14.]
 
 I never really understood Cubism, but had an idea that it was somewhat complicated.
-It turns out that when it comes to understanding these paintings, a little information can go a long way.
+It turns out that when it comes to understanding these paintings, a little information from the right source can go a long way.
 
 At one point I put Mondrian's book aside and started reading Douglas Cooper's book *[The Cubist Epoch](https://www.goodreads.com/book/show/552681.The_Cubist_Epoch),* published in 1971.
-Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote [The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations) which
-was published in 1913.
+Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote *[The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations)*
+which was published in 1913.
 
 In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance" [p. 8].
 This explains very concisely why these works appear so fractured: Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects in a single image.

@@ -58,7 +58,7 @@ Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote after he and 
 And Part III, *England and the United States: 1938-1944,* includes the articles and essays he wrote after leaving continental Europe due to the impending war.
 
 One of the pieces in this book is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December, 1931.
-It appears in Part II of the book and the authors refer to it in the title of his *Collected Writings* because it is one of the best articles in it.
+It appears in Part II of the book and the authors refer to it in the title of his *Collected Writings* because it is one of Mondrian's best pieces.
 It is undoubtedly one of Mondrian's most enlightening works because it draws parallels between his art and society at large.
 
 Mondrian calls the piece a "little work into which I have compressed all that I believe and hope for" [p. 245] in a letter to Alfred Roth dated August 6, 1931.
@@ -128,12 +128,12 @@ For those unfamiliar with Cubism, Picasso's *Harlequin* of 1918, is an excellent
 
 - Source: [wikiart.org](https://www.wikiart.org/en/paintings-by-style/cubism?select=featured)
 
-In his essay *Piet Mondrian: The Man and His Work,* Harry Holtzman writes:
+In his essay *Piet Mondrian: The Man and His Work,* coauthor Harry Holtzman writes:
 
 > Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious
 > construction of the picure-plane, as the dynamic rhythm of its composition of forms in space.  [p. 8.]
 
-And in his essay *Piet Mondrian: Art and Theory to 1917,* Martin James writes:
+And in his essay *Piet Mondrian: Art and Theory to 1917,* coauthor Martin James writes:
 
 > Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne
 > Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
@@ -190,7 +190,7 @@ When I went to pick them up it took two people to carry them all out to my car!
 
 It was in one of these books that I finally found a definition of the term "plastic means."
 
-## The Plastic Means
+## The Plastic Means Defined
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 
@@ -207,6 +207,8 @@ One typically finds a glossary of terms near the end of a book, but Loran's defi
 
 Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term right away.
 The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means," which he uses in the remainder of the book.
+
+## The Plastic Means Illustrated
 
 It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
 
@@ -237,8 +239,9 @@ Here is the key idea from this definition:
 
 > Thus line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane [p. 18].
 
-The sketch above shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan.*
-Here is an image of the actual painting:
+The sketch above shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan,* which is "the Cézanne family's country estate" [p. 53].
+
+This image is of Cézanne's painting of the motif:
 
 - Image:
 
@@ -246,12 +249,17 @@ Here is an image of the actual painting:
 
 - Source: https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887
 
-Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII on page 52.
-Unfortunately, these two photographs are not the best.
-Moreover, it should be enough to say that in the photographs the house does not look like it is ready to tip over!
+Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII, *Problems of Perspective* on page 52.
+The two photographs of this motif are not the best, and Loran admits they "make the disappointing and prosaic truth clear enough" [p. 53].
 
-Given Loran's sketch, definition, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can see that the "plastic means" is essentially
-the way a painter interprets or projects three-dimensional subject matter onto the two dimensions of the picture plane.
+Most importantly, in the photographs the house does not look like it is ready to tip over!
+Loran writes that this "leftward-leaning axis of the house may be understood as a distortion that increases the tension of the house in relation to the four sides of the frame" [p. 53].
+
+To my eyes, this tipping of the axes makes the painting come alive, while Loran asserts it "always suggested to me the setting for a melodramatic scene in a Dostoievski novel".
+He goes on to claim "the window shapes, giving a somewhat haunted or deserted aspect to the scene, also contribute to the dramatic effect" [p. 53].
+
+Given Loran's sketch, his definition of the plastic means, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can start to understand
+the "plastic means" as essentially the way a painter interprets or projects three-dimensional subject matter onto the two dimensions of the picture plane.
 
 
 -------- So far, so good. -------

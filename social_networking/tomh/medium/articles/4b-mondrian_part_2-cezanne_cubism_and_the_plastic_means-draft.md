@@ -275,15 +275,19 @@ One does not really need to read the text to get a full appreciation for why Cé
 
 -------- So far, so good. -------
 
-Most significantly, this book compares Cézanne's paintings with photographs of his motifs.
-
-- Sainte Victoire
-
-These comparisons are incredibly valuable for those seeking to understand why Cézanne is considered the father of Modern Art.
+##
 
 ## Plasticism - Malleability
 
 - digital works more malleable than analog/film/plastic material
+
+## Cubism Inspired, Cubism Adjacent
+
+[Possibly off-topic, but thinking about including something about Mondrian being included in Cooper's book, and also mentioning Duchamp and the Orphists, as being others who were not Cubists, but were inspired about them.]
+
+## Digital Plasticity
+
+[Possibly off-topic, but thinking about mentioning plasticity today: cell phone cameras, Star Wars, GoT, etc. maybe?]
 
 ## Conclusion
 

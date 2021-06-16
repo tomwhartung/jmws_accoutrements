@@ -205,22 +205,6 @@ To say that I was excited is a bit of an understatement!
 Loran's book is divided into sections rather than chapters, and Section III of XV, is named *An Illustrated Glossary.*
 One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 of 136.
 
-Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term right away.
-The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means," which he uses in the remainder of the book.
-
-## The Plastic Means Illustrated
-
-It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
-
-- Image:
-
-![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
-
-- Source: Cézanne's Composition by Erle Loran, p. 17.
-
-Loran calls this image "Diagram II" and he uses it to define the terms "negative space" and "the plastic means or plastic form."
-It shows a sketch of the motif of one of Cézanne's painting.
-
 This is Loran's definition in its entirety:
 
 > THE PLASTIC MEANS or PLASTIC FORM are terms used often in the present study, and are given a connotation different from that made
@@ -239,9 +223,21 @@ Here is the key idea from this definition:
 
 > Thus line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane [p. 18].
 
-The sketch above shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan,* which is "the Cézanne family's country estate" [p. 53].
+Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term right away.
+The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means," which he uses in the remainder of the book.
 
-This image is of Cézanne's painting of the motif:
+## The Plastic Means Illustrated
+
+It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
+
+- Image:
+
+![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
+
+- Source: Cézanne's Composition by Erle Loran, p. 17.
+
+This image is "Diagram II" in Loran's definition, and he uses it to define the terms "negative space" and "the plastic means or plastic form."
+The sketch above shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan,* which is "the Cézanne family's country estate" [p. 53].
 
 - Image:
 
@@ -249,17 +245,32 @@ This image is of Cézanne's painting of the motif:
 
 - Source: https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887
 
+This image is of Cézanne's painting of the motif, which he refers to as Plate VII in his definition.
+
 Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII, *Problems of Perspective* on page 52.
 The two photographs of this motif are not the best, and Loran admits they "make the disappointing and prosaic truth clear enough" [p. 53].
 
 Most importantly, in the photographs the house does not look like it is ready to tip over!
 Loran writes that this "leftward-leaning axis of the house may be understood as a distortion that increases the tension of the house in relation to the four sides of the frame" [p. 53].
 
-To my eyes, this tipping of the axes makes the painting come alive, while Loran asserts it "always suggested to me the setting for a melodramatic scene in a Dostoievski novel".
+To my eyes, this tipping of the axes makes the painting come alive.
+For Loran, it "has always suggested to me the setting for a melodramatic scene in a Dostoievski novel".
 He goes on to claim "the window shapes, giving a somewhat haunted or deserted aspect to the scene, also contribute to the dramatic effect" [p. 53].
 
-Given Loran's sketch, his definition of the plastic means, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can start to understand
+The author describes how the shapes take the viewer's eyes on a circular, clockwise path from the bottom of the image, to the house on the left and its roof, and finally to the smaller buildings on the right.
+He concludes his analysis by writing "the real drama in the painting derives from the plastic forces" [p. 54] that control our attention.
+
+Given Loran's definition of the plastic means, his sketch of the picture box, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can start to understand
 the "plastic means" as essentially the way a painter interprets or projects three-dimensional subject matter onto the two dimensions of the picture plane.
+
+Having had a sense that this was what Mondrian means by the term "plastic means," upon reading this book -- and most importantly seeing the images in it -- I finally started feeling like I really understood the term.
+
+## Paintings and Photographs of the Motifs
+
+The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings juxtaposed with sketches and text that analyze his compositions.
+When possible -- that is, when the paintings are of landscapes rather than portraits -- Loran includes photographs of the motifs in the paintings.
+
+One does not really need to read the text to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
 
 -------- So far, so good. -------

@@ -273,6 +273,31 @@ When possible -- that is, when the paintings are of landscapes rather than portr
 One does not really need to read the text to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
 
+
+- Image:
+
+![`../images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg)
+
+- Source: Cézanne's Composition by Erle Loran, p. 60.
+
+
+
+- Image:
+
+![`../images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg)
+
+- Source: Cézanne's Composition by Erle Loran, p. 60.
+
+
+
+- Image:
+
+![`../images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg)
+
+- Source: Cézanne's Composition by Erle Loran, p. 60.
+
+
+
 -------- So far, so good. -------
 
 ##

@@ -314,6 +314,10 @@ One does not really need to read the text to get a full appreciation for why Cé
 
 [Possibly off-topic, but thinking about mentioning plasticity today: cell phone cameras, Star Wars, GoT, etc. maybe?]
 
+## Mimesis and Representation versus Catharsis and Expression
+
+Two different kinds of art.
+
 ## Conclusion
 
 It's difficult to find a definition of the word "plastic" that corresponds to Mondrian's use of the word.

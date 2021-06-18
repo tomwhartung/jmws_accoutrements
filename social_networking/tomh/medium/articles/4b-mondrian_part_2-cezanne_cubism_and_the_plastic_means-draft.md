@@ -276,15 +276,7 @@ One does not really need to read the text to get a full appreciation for why Cé
 
 - Image:
 
-![`../images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg)
-
-- Source: Cézanne's Composition by Erle Loran, p. 60.
-
-
-
-- Image:
-
-![`../images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg)
+![`../images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg)
 
 - Source: Cézanne's Composition by Erle Loran, p. 60.
 
@@ -325,4 +317,23 @@ It's difficult to find a definition of the word "plastic" that corresponds to Mo
 Indeed, the index to the book Vision in Motion by L. Moholy-Nagy (1961) lists 19 occurrences of the term, but only the first mimics Mondrian's use of the term, while the other 18 references are to the material.
 
 If you are interested in the language of composition in general, and in reading Mondrian's writings in particular, I highly recommend finding a copy of Erle Loran's book!
+
+
+-------- delete me, you wuss. -------
+
+- Image:
+
+![`../images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg)
+
+- Source: Cézanne's Composition by Erle Loran, p. 60.
+
+
+
+- Image:
+
+![`../images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg)
+
+- Source: Cézanne's Composition by Erle Loran, p. 60.
+
+
 

@@ -198,13 +198,13 @@ It was in one of these books that I finally found a definition of the term "plas
 ## The Plastic Means Defined
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
-
 However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)*
 by Erle Loran, did not fit into this mold.
-This book costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), but if you create a account
-you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1)!
 
-It was in this book, published in 1943, that I finally found a formal definition of "the plastic means."
+This book is apparently out of print and costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457).
+However, if you create a account you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1).
+
+It was in Loran's book, published in 1943, that I finally found a formal definition of "the plastic means."
 To say that I was excited is a bit of an understatement!
 
 Loran's book is divided into sections rather than chapters, and Section III (of XV), is named *An Illustrated Glossary.*
@@ -215,10 +215,10 @@ The diagrams are fairly simple sketches in black-and-white, but they are invalua
 
 Following is the entirety of Loran's definition of the term, which appears early in the *Illustrated Glossary:*
 
-> THE PLASTIC MEANS or PLASTIC FORM are terms used often in the present study, and are given a connotation different from that made
-> familiar in art criticism and art history in general.  The traditional connotation implies sculptural roundness as achieved through
-> light-and-shade modeling and chiaroscuro.  In this book the term *sculptural effect* is used when roundness is implied.  On the contrary,
-> the term *plastic means* connotes three-dimensional space in general.  Diagram II is intended as a compendium of the plastic field for
+> THE PLASTIC MEANS or PLASTIC FORM are terms used often in the present study, and are given a connotation different from that made familiar in
+> art criticism and art history in general.  The traditional connotation implies sculptural roundness as achieved through light-and-shade modeling
+> and chiaroscuro.  In this book the term *sculptural effect* is used when roundness is implied.  On the contrary, the term *plastic means*
+> connotes three-dimensional space in general.  Diagram II [the "picture box" below] is intended as a compendium of the plastic field for
 > Cezanne's picture shown in Plate VII.  All the diagrams in the Glossary deal with various aspects of the plastic means.  The sum of all
 > the diagrams for Plates I and X constitute the analysis of the plastic means that Cezanne has used in creating these paintings.  Thus
 > line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane.
@@ -228,20 +228,20 @@ Following is the entirety of Loran's definition of the term, which appears early
 
 ![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
 
-- Source: Cézanne's Composition by Erle Loran, p. 17.
+- Source: [Cézanne's Composition by Erle Loran,](https://archive.org/details/cezannescomposit0000lora_f9b1) p. 17.
 
-This image is "Diagram II" in Loran's definition, and in addition to using it to define "the plastic means or plastic form" he also uses it to define the term "negative space."
-Diagram II shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan,* which is "the Cézanne family's country estate" [p. 53].
+The "picture box" above is "Diagram II" in Loran's definition, and it shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan.*
+The house is "the Cézanne family's country estate," and a black-and-white reproduction of it appears as Plate VII, also mentioned in his definition, on page 53.
+
+Following is a copy of the painting in color.
 
 - Image:
 
 ![`../images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg)
 
-- Source: https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887
+- Source: [wikiart.org](https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887)
 
-This image is of Cézanne's painting of the motif, which he refers to as Plate VII in his definition.
-
-Loran's full definition is a bit much, and although he claims that his definition differs from "the traditional connotation," it looks to be relevant nonetheless.
+Loran's full definition is a bit much, and although he claims that it differs from "the traditional connotation," it looks to be relevant nonetheless.
 Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like his use of the term does not constitute "the traditional connotation."
 So it looks like we are on the right track!
 

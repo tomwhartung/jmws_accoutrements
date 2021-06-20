@@ -195,16 +195,17 @@ When I went to pick them up it took two people to carry them all out to my car!
 
 It was in one of these books that I finally found a definition of the term "plastic means."
 
-## The Plastic Means Defined
+## The Plastic Means: Defined and Illustrated
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)*
 by Erle Loran, did not fit into this mold.
 
-This book is apparently out of print and costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457).
-However, if you create a account you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1).
+This book was published in 1943.
+It is apparently out of print and costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), but
+you can create a account and read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1).
 
-It was in Loran's book, published in 1943, that I finally found a formal definition of "the plastic means."
+It was in Loran's book that I finally found a formal definition of "the plastic means."
 To say that I was excited is a bit of an understatement!
 
 Loran's book is divided into sections rather than chapters, and Section III (of XV), is named *An Illustrated Glossary.*
@@ -213,7 +214,7 @@ One typically finds a glossary of terms near the end of a book, but Loran's defi
 Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams.
 The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means."
 
-Following is the entirety of Loran's definition of the term, which appears early in the *Illustrated Glossary:*
+Following is Loran's definition of *the plastic means or plastic form,* which appears early in the *Illustrated Glossary:*
 
 > THE PLASTIC MEANS or PLASTIC FORM are terms used often in the present study, and are given a connotation different from that made familiar in
 > art criticism and art history in general.  The traditional connotation implies sculptural roundness as achieved through light-and-shade modeling
@@ -230,7 +231,7 @@ Following is the entirety of Loran's definition of the term, which appears early
 
 - Source: [Cézanne's Composition by Erle Loran,](https://archive.org/details/cezannescomposit0000lora_f9b1) p. 17.
 
-The "picture box" above is "Diagram II" in Loran's definition, and it shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan.*
+The sketch of the "picture box" above is the "Diagram II" Loran refers to in his definition, and it shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan.*
 The house is "the Cézanne family's country estate," and a black-and-white reproduction of it appears as Plate VII, also mentioned in his definition, on page 53.
 
 Following is a copy of the painting in color.
@@ -241,7 +242,7 @@ Following is a copy of the painting in color.
 
 - Source: [wikiart.org](https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887)
 
-Loran's full definition is a bit much, and although he claims that it differs from "the traditional connotation," it looks to be relevant nonetheless.
+Loran's full definition is a bit much, and although he claims that it differs from "the traditional connotation," it looks to be relevant to Mondrian's use of the term nonetheless.
 Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like his use of the term does not constitute "the traditional connotation."
 So it looks like we are on the right track!
 
@@ -254,7 +255,7 @@ It turns out that, although my guess regarding the meaning of the term as being,
 ## The Plastic Means Illustrated
 
 Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII, *Problems of Perspective* on page 52.
-The two photographs of this motif are not the best, and Loran admits they "make the disappointing and prosaic truth clear enough" [p. 53].
+The two photographs of this motif included in Loran's book are not the best, and he admits they "make the disappointing and prosaic truth clear enough" [p. 53].
 
 Most importantly, in the photographs the house does not look like it is ready to tip over!
 Loran writes that this "leftward-leaning axis of the house may be understood as a distortion that increases the tension of the house in relation to the four sides of the frame" [p. 53].
@@ -263,29 +264,31 @@ To my eyes, this tipping of the axes makes the painting come alive.
 For Loran, it "has always suggested to me the setting for a melodramatic scene in a Dostoievski novel".
 He goes on to claim "the window shapes, giving a somewhat haunted or deserted aspect to the scene, also contribute to the dramatic effect" [p. 53].
 
-The author describes how the shapes take the viewer's eyes on a circular, clockwise path from the bottom of the image, to the house on the left and its roof, and finally to the smaller buildings on the right.
+The author describes how the shapes take the viewer's eyes on a circular, clockwise path from the bottom of the image, to the house on the left and then up to its roof, and finally to the smaller buildings on the right.
 He concludes his analysis by writing "the real drama in the painting derives from the plastic forces" [p. 54] that control our attention.
 
-Given Loran's definition of the plastic means, his sketch of the picture box, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can start to understand
+Given Loran's definition of the plastic means, his sketch of the picture box in Diagram II, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can start to understand
 the "plastic means" as essentially the way a painter interprets or projects three-dimensional subject matter onto the two dimensions of the picture plane.
 
 Having had a sense that this was what Mondrian means by the term "plastic means," upon reading this book -- and most importantly seeing the images in it -- I finally started feeling like I really understood the term.
 
-## Paintings and Photographs of the Motifs
+## More Paintings and Photographs of the Motifs
 
 The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings juxtaposed with sketches and text that analyze his compositions.
 When possible -- that is, when the paintings are of landscapes rather than portraits -- Loran includes photographs of the motifs in the paintings.
 
 One does not really need to read the text to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
-
+Following are two images from page 60 of Loran's book: a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarray Called Bibemus](paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp)*
+in black-and-white, and a black-and-white photograph of the motif by Loran.
 
 - Image:
 
 ![`../images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg)
 
-- Source: Cézanne's Composition by Erle Loran, p. 60.
+- Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, p. 60.
 
+Seeing these images side-by-side is extremely enlightening!
 
 
 - Image:

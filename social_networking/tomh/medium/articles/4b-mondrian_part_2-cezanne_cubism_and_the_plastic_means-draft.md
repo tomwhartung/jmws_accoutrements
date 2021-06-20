@@ -289,7 +289,18 @@ in black-and-white, and a black-and-white photograph of the motif by Loran.
 - Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, p. 60.
 
 Seeing these images side-by-side is extremely enlightening!
+In describing these images, Loran writes:
 
+> Cézanne has more than doubled the size of the Sainte Victoire.  The illusion of magnificent height which Cézanne has achieved through thes measurable
+> *plastic means* is akin to the exaggerated sense of its height that one has on actually seeing it -- as I had when I first discovered the motif.  But
+> the photograph of the motif utterly fails to suggest the grandeur, the massiveness, of this luminous white mountain....
+> Cézanne's painting, as compared with the [photograph of the] motif, illustrates graphically what should be understood and taught more widely as the
+> basic mechanics of drawing and composition, the *fundamental plastic means of expression.* [p. 60, emphasis added].
+
+Loran goes on to assert that "Cézanne's picture, however, becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].
+His use of the term *plastic* in these comparisons of the painting and his photograph really leave no doubt as to what he means by the term.
+
+Cézanne painted the Sainte Victoire from many perspectives, but this version is the only one of his paintings to appear in color in Loran's book.
 
 - Image:
 
@@ -297,19 +308,23 @@ Seeing these images side-by-side is extremely enlightening!
 
 - Source: Cézanne's Composition by Erle Loran, p. 60.
 
+In his analysis of this painting Loran includes a lot about the colors Cézanne uses.
+That discussion is beyond the scope of this article, but I would like to encourage anyone interested in Cézanne's use of color in this and other compositions to find a copy of the book and dive in!
 
+## Plasticism and Malleability
+
+At this point I finally feel as though I could explain *the plastic means* to someone -- albeit perhaps in halting terms along with a bit of hand-waving -- and a lot more easily if I could refer to these images!
+What the *plastic means* and *plastic material* share is the concept of *malleability.*
+
+Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.
+It's easy to see why manufacturers often prefer plastic to more traditional and less malleable materials like wood or steel.
+
+Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, often foregoing representation entirely, and calling the resultant style *Neo-Plasticism.*
 
 -------- So far, so good. -------
 
-##
+## XXX
 
-## Plasticism - Malleability
-
-- digital works more malleable than analog/film/plastic material
-
-## Cubism Inspired, Cubism Adjacent
-
-[Possibly off-topic, but thinking about including something about Mondrian being included in Cooper's book, and also mentioning Duchamp and the Orphists, as being others who were not Cubists, but were inspired about them.]
 
 ## Digital Plasticity
 
@@ -330,6 +345,10 @@ If you are interested in the language of composition in general, and in reading 
 
 -------- delete me, you wuss. -------
 
+## Cubism Inspired, Cubism Adjacent
+
+[Possibly off-topic, but thinking about including something about Mondrian being included in Cooper's book, and also mentioning Duchamp and the Orphists, as being others who were not Cubists, but were inspired about them.]
+
 - Image:
 
 ![`../images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg)
@@ -337,12 +356,9 @@ If you are interested in the language of composition in general, and in reading 
 - Source: Cézanne's Composition by Erle Loran, p. 60.
 
 
-
 - Image:
 
 ![`../images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg)
 
 - Source: Cézanne's Composition by Erle Loran, p. 60.
-
-
 

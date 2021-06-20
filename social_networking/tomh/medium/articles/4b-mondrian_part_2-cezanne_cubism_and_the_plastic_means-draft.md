@@ -199,11 +199,7 @@ It was in one of these books that I finally found a definition of the term "plas
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)*
-by Erle Loran, did not fit into this mold.
-
-This book was published in 1943.
-It is apparently out of print and costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), but
-you can create a account and read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1).
+written by Erle Loran and published in 1943, did not fit into this mold.
 
 It was in Loran's book that I finally found a formal definition of "the plastic means."
 To say that I was excited is a bit of an understatement!
@@ -277,10 +273,10 @@ Having had a sense that this was what Mondrian means by the term "plastic means,
 The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings juxtaposed with sketches and text that analyze his compositions.
 When possible -- that is, when the paintings are of landscapes rather than portraits -- Loran includes photographs of the motifs in the paintings.
 
-One does not really need to read the text to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
-
 Following are two images from page 60 of Loran's book: a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarray Called Bibemus](paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp)*
 in black-and-white, and a black-and-white photograph of the motif by Loran.
+Given these images, one does not really need to read Loran's analysis to get a full appreciation for why Cézanne is widely heralded as the
+[Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
 - Image:
 
@@ -291,16 +287,19 @@ in black-and-white, and a black-and-white photograph of the motif by Loran.
 Seeing these images side-by-side is extremely enlightening!
 In describing these images, Loran writes:
 
-> Cézanne has more than doubled the size of the Sainte Victoire.  The illusion of magnificent height which Cézanne has achieved through thes measurable
+> Cézanne has more than doubled the size of the Sainte Victoire.  The illusion of magnificent height which Cézanne has achieved through these measurable
 > *plastic means* is akin to the exaggerated sense of its height that one has on actually seeing it -- as I had when I first discovered the motif.  But
 > the photograph of the motif utterly fails to suggest the grandeur, the massiveness, of this luminous white mountain....
 > Cézanne's painting, as compared with the [photograph of the] motif, illustrates graphically what should be understood and taught more widely as the
 > basic mechanics of drawing and composition, the *fundamental plastic means of expression.* [p. 60, emphasis added].
 
-Loran goes on to assert that "Cézanne's picture, however, becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].
+Loran goes on to assert that the painting "becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].
 His use of the term *plastic* in these comparisons of the painting and his photograph really leave no doubt as to what he means by the term.
 
-Cézanne painted the Sainte Victoire from many perspectives, but this version is the only one of his paintings to appear in color in Loran's book.
+Cézanne created a [series of paintings of the Sainte Victoire ](https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)), and Loran includes a few of these in his book.
+In each case he includes a photograph of the motif showing how Cézanne's interpretation differed from a scientific perspective of the mountain.
+
+This version from the quarry is the only one of Cézanne's paintings to appear in color in Loran's book, however, and he uses it to conduct an extended analysis of the artist's use of color.
 
 - Image:
 
@@ -308,8 +307,12 @@ Cézanne painted the Sainte Victoire from many perspectives, but this version is
 
 - Source: Cézanne's Composition by Erle Loran, p. 60.
 
-In his analysis of this painting Loran includes a lot about the colors Cézanne uses.
-That discussion is beyond the scope of this article, but I would like to encourage anyone interested in Cézanne's use of color in this and other compositions to find a copy of the book and dive in!
+In his analysis of this painting Loran writes that "Cézanne's uniqueness and perhaps his historical greatness is found in his power to synthesize abstraction and reality" [p. 63].
+A discussion of that analysis is beyond the scope of this article, but I would like to encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of the book!
+
+Published in 1943, *Cézanne's Composition* is apparently out of print.
+Although it costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457),
+you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1), simply by creating a free account on the site.
 
 ## Plasticism and Malleability
 
@@ -320,6 +323,7 @@ Plastic bags are handy precisely because they can take on any shape needed to ho
 It's easy to see why manufacturers often prefer plastic to more traditional and less malleable materials like wood or steel.
 
 Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, often foregoing representation entirely, and calling the resultant style *Neo-Plasticism.*
+
 
 -------- So far, so good. -------
 

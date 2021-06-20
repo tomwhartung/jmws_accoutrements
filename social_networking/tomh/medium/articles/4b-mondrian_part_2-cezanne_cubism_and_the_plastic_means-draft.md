@@ -21,8 +21,11 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 
 ## [Introduction -- implied rather than stated]
 
-There are two kinds of art: mimetic or representational and cathartic or expressionist.
-The difference between them is how the artist uses the plastic means.
+There are two kinds of art: mimetic and cathartic.
+The difference between them is the way and the extent to which the artist uses the *plastic means.*
+
+Mimetic art is representational, and the artist seeks to mimic reality.
+Cathartic art is expressionist, and the artist seeks to express how they feel about reality.
 
 This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
 For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5).
@@ -32,9 +35,7 @@ It is typical of Mondrian's distinctive style, which he called *[NeoPlasticism](
 
 You can buy a poster of an image like this from the site [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200,
 and find originals similar to it on the site [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.
-
 The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for amounts that most of us will never see in our lifetime is proof that his vision was truly prophetic.
-In trying to understand his art, I've spent a considerable amount of time reading his *Collected Writings* -- which are quite challenging to understand.
 
 Although Mondrian's work is valuable today, he lived humbly.
 According to the *Chronology* in his *Collected Writings,* at times he had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
@@ -44,7 +45,11 @@ The following quote is from a letter he wrote to Arnold Saalborn around 1910 tha
 > But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is,
 > a more conventional manner of painting -- so I have to work twice as much [p. 19].
 
-The focus of this article is on what Mondrian meant by the word *plastic,* because that term appears frequently in his writings and is essential to understanding them.
+In trying to understand Mondrian's art, I've spent a considerable amount of time reading his *Collected Writings* -- which can be quite challenging to understand.
+One of the reasons it can be difficult to understand his writings is that he frequently uses the word *plastic,* in expressions such as *plastic means,* *plastic expression,* and *plastic value.*
+
+The focus of this article is on how I learned what Mondrian meant by the word *plastic.*
+This required learning about Cubism, which inspired Mondrian's unique style, and Paul Cézanne, who in turn inspired the Cubists.
 
 ## Piet Mondrian's *Collected Writings*
 

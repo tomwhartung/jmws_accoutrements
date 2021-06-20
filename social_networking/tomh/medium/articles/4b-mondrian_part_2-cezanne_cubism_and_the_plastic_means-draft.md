@@ -204,11 +204,14 @@ by Erle Loran, did not fit into this mold.
 This book costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), but if you create a account
 you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1)!
 
-It was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
+It was in this book, published in 1943, that I finally found a formal definition of "the plastic means."
 To say that I was excited is a bit of an understatement!
 
 Loran's book is divided into sections rather than chapters, and Section III (of XV), is named *An Illustrated Glossary.*
 One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 (of 136).
+
+Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams.
+The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means."
 
 Following is the entirety of Loran's definition of the term, which appears early in the *Illustrated Glossary:*
 
@@ -221,29 +224,14 @@ Following is the entirety of Loran's definition of the term, which appears early
 > line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane.
 > Hence plastic qualities are not only three-dimensional, but two-dimensional as well.  [p. 18, emphasis in original as italics].
 
-That is a bit much, and although he claims that his definition differs from "the traditional connotation," it looks to be relevant nonetheless.
-Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like his use of the term does not constitute "the traditional connotation."
-So it looks like we are on the right track!
-
-Here is the key idea from this definition:
-
-> Thus line, plane, volume, color, texture, and so on, are the *plastic means used to build and organize the total space in the picture plane* [p. 18, emphasis added].
-
-Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term right away.
-The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means," which he uses in the remainder of the book.
-
-## The Plastic Means Illustrated
-
-It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
-
 - Image:
 
 ![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
 
 - Source: Cézanne's Composition by Erle Loran, p. 17.
 
-This image is "Diagram II" in Loran's definition, and he uses it to define the terms "negative space" and "the plastic means or plastic form."
-The sketch above shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan,* which is "the Cézanne family's country estate" [p. 53].
+This image is "Diagram II" in Loran's definition, and in addition to using it to define "the plastic means or plastic form" he also uses it to define the term "negative space."
+Diagram II shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan,* which is "the Cézanne family's country estate" [p. 53].
 
 - Image:
 
@@ -252,6 +240,18 @@ The sketch above shows the motif for Cézannes 1897 painting *House and Farm at 
 - Source: https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887
 
 This image is of Cézanne's painting of the motif, which he refers to as Plate VII in his definition.
+
+Loran's full definition is a bit much, and although he claims that his definition differs from "the traditional connotation," it looks to be relevant nonetheless.
+Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like his use of the term does not constitute "the traditional connotation."
+So it looks like we are on the right track!
+
+Here is the key idea from this definition:
+
+> Thus line, plane, volume, color, texture, and so on, are the *plastic means used to build and organize the total space in the picture plane* [p. 18, emphasis added].
+
+It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
+
+## The Plastic Means Illustrated
 
 Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII, *Problems of Perspective* on page 52.
 The two photographs of this motif are not the best, and Loran admits they "make the disappointing and prosaic truth clear enough" [p. 53].

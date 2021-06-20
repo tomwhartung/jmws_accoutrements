@@ -121,9 +121,8 @@ As I went through his articles and essays, it became more and more clear that I 
 ## Cubism
 
 In their introductory pieces, Holtzman and James discuss how Cubism influenced Mondrian's early work.
-Pablo Picasso and Georges Braque were the progenitors of the style.
 
-For those unfamiliar with Cubism, Picasso's *Harlequin* of 1918, is an excellent example.
+For those unfamiliar with Cubism, Pablo Picasso and Georges Braque were the progenitors of the style, and this image, Picasso's *Harlequin* of 1918, is an excellent example of a Cubist painting.
 
 - Image:
 
@@ -131,12 +130,12 @@ For those unfamiliar with Cubism, Picasso's *Harlequin* of 1918, is an excellent
 
 - Source: [wikiart.org](https://www.wikiart.org/en/paintings-by-style/cubism?select=featured)
 
-In his essay *Piet Mondrian: The Man and His Work,* coauthor Harry Holtzman writes:
+In an essay entitled *Piet Mondrian: The Man and His Work,* coauthor Harry Holtzman introduces the *Collected Works,* by writing:
 
 > Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious
 > construction of the picure-plane, as the dynamic rhythm of its composition of forms in space.  [p. 8.]
 
-And in his essay *Piet Mondrian: Art and Theory to 1917,* coauthor Martin James writes:
+And in his introductory essay *Piet Mondrian: Art and Theory to 1917,* coauthor of the *Collected Works* Martin James writes:
 
 > Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne
 > Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
@@ -145,18 +144,20 @@ And in his essay *Piet Mondrian: Art and Theory to 1917,* coauthor Martin James 
 I never really understood Cubism, but it turns out that when it comes to understanding these paintings, a little information from the right source can go a long way.
 
 At one point I put Mondrian's book aside and started reading Douglas Cooper's book *[The Cubist Epoch](https://www.goodreads.com/book/show/552681.The_Cubist_Epoch),* published in 1971.
-Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote *[The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations)*
-which he wrote between 1905 and 1912 and had published in 1913.
+Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote and published *[The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations)*
+between 1905 and 1913.
 
-In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance" [p. 8].
-This explains very concisely why these works appear so fractured: Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view from different points in time of their subjects in a single image.
-Realizing that painters found themselves in competition with photographers and filmmakers helps explain their interest in this sort of style.
+In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance" [p. 8 of the 2004 translation by Peter Read].
+This explains very concisely why these paintings appear so fractured: Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects
+from different points in time, all in a single image.
+
+Realizing that in the early 1900s painters found themselves in competition with photographers and filmmakers helps explain their interest in this sort of style.
 
 At one point, Apollinaire explains Cubism by comparing the paintings to music:
 
 > When he listens to a concert, the music-lover experiences joyful feelings which are different from the joy experienced when he hears natural sounds like the murmur of a stream,
 > the roar of a waterfall, the wind soughing through a forest, or the harmonies of human speech, based on reason and not on aesthetics.
-> Similarly, the new painters will provide their admirers with artistic sensations created only by the harmony of contrasting hues of light [p. 12].
+> Similarly, the new painters will provide their admirers with artistic sensations created only by the harmony of contrasting hues of light [p. 12 of the 2004 translation by Peter Read].
 
 A bit later he asserts that the Cubist style permits the artists "to give the object proportions appropriate to the *degree of plasticity* he desires" [p. 16, emphasis added].
 
@@ -165,12 +166,13 @@ There's that word again!
 ## My Interest in All This
 
 As I learned about Cubism, I started thinking that it would be a great style to adopt for the next phase of my own Art Project, which entails visualizing personalities.
+
 Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his
 *[General Description of the Types](http://psychclassics.yorku.ca/Jung/types.htm).*
-
-Isabel Briggs-Myers codified Jung's work in this area of psychology and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator),
+In the early-to-mid 1900s Isabel Briggs-Myers codified Jung's work in this area of psychology and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator),
 which people can use to find their four-letter personality type.
-I first learned about the MBTI (r) in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and am proud to be an INFP!
+
+I first learned about the MBTI in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and learning that I am an INFP turned out to be life-altering!
 Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags such as #intj and #enfp that reference them are
 easy to find on social media sites such as twitter, pinterest, reddit, and tumblr.
 
@@ -205,26 +207,27 @@ you can read it for free on [archive.org](https://archive.org/details/cezannesco
 It was in this book, published in 1943, that I finally found a formal definition of "The Plastic Means."
 To say that I was excited is a bit of an understatement!
 
-Loran's book is divided into sections rather than chapters, and Section III of XV, is named *An Illustrated Glossary.*
-One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 of 136.
+Loran's book is divided into sections rather than chapters, and Section III (of XV), is named *An Illustrated Glossary.*
+One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 (of 136).
 
-This is Loran's definition in its entirety:
+Following is the entirety of Loran's definition of the term, which appears early in the *Illustrated Glossary:*
 
 > THE PLASTIC MEANS or PLASTIC FORM are terms used often in the present study, and are given a connotation different from that made
 > familiar in art criticism and art history in general.  The traditional connotation implies sculptural roundness as achieved through
 > light-and-shade modeling and chiaroscuro.  In this book the term *sculptural effect* is used when roundness is implied.  On the contrary,
-> the term *plastic means* connotes three-dimensional space in general.  Diagram II is indended as a compendium of the plastic field for
+> the term *plastic means* connotes three-dimensional space in general.  Diagram II is intended as a compendium of the plastic field for
 > Cezanne's picture shown in Plate VII.  All the diagrams in the Glossary deal with various aspects of the plastic means.  The sum of all
 > the diagrams for Plates I and X constitute the analysis of the plastic means that Cezanne has used in creating these paintings.  Thus
 > line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane.
 > Hence plastic qualities are not only three-dimensional, but two-dimensional as well.  [p. 18, emphasis in original as italics].
 
-That is a bit much, and he claims that his definition differs from "the traditional connotation," but it is helpful nonetheless.
-Moreover, I am unable to say whether Mondrian's use of the term constitutes "the traditional connotation," so I am grateful for any insight I can find.
+That is a bit much, and although he claims that his definition differs from "the traditional connotation," it looks to be relevant nonetheless.
+Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like his use of the term does not constitute "the traditional connotation."
+So it looks like we are on the right track!
 
 Here is the key idea from this definition:
 
-> Thus line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane [p. 18].
+> Thus line, plane, volume, color, texture, and so on, are the *plastic means used to build and organize the total space in the picture plane* [p. 18, emphasis added].
 
 Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams, and it defines this term right away.
 The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means," which he uses in the remainder of the book.

@@ -5,10 +5,7 @@ Saving the text for this article in case I somehow lose what I post to medium, o
 
 # The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cézanne, and the Plastic Means
 
-- Image:
-
-![../images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg)
-
+- Image: ![../images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg)
 - Alt Text: A painting of rectangular forms in white, black, and primary colors, typical of Piet Mondrian's Neo-Plastic style.
 - Source: [wikiart.org](https://www.wikiart.org/en/piet-mondrian/composition-2-1922)
 
@@ -102,50 +99,33 @@ As I went through his articles and essays, it became more and more clear that I 
 
 In their introductory pieces, Holtzman and James discuss how Cubism influenced Mondrian's early work.
 
-For those unfamiliar with Cubism, Pablo Picasso and Georges Braque were, along with Cézanne, the progenitors of the style.
-This image, Picasso's *Harlequin* of 1918, is an excellent example of a Cubist painting.
+For those unfamiliar with Cubism, Pablo Picasso and Georges Braque were, along with Cézanne, the progenitors of the style.  This image, Picasso's *Harlequin* of 1918, is an excellent example of a Cubist painting.
 
-- Image:
-
-![../images/mondrian_part_2-harlequin-1918.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-harlequin-1918.jpg)
-
+- Image: ![../images/mondrian_part_2-harlequin-1918.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-harlequin-1918.jpg)
+- Alt Text: The painting Harlequin by Pablo Picasso shows a figure with a guitar. The figure and the guitar are fractured, with various parts depicted from different viewpoints.
 - Source: [wikiart.org](https://www.wikiart.org/en/paintings-by-style/cubism?select=featured)
 
 In an essay entitled *Piet Mondrian: The Man and His Work,* coauthor Harry Holtzman introduces the *Collected Works,* by writing:
 
-> Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious
-> construction of the picure-plane, as the dynamic rhythm of its composition of forms in space.  [p. 8.]
+> Mondrian saw Cubism as the new awareness of the intrinsic means of plastic expression, as the destruction of the naturalistic and the mimetic, as the conscious construction of the picture-plane, as the dynamic rhythm of its composition of forms in space [p. 8.]
 
-And in his introductory essay *Piet Mondrian: Art and Theory to 1917,* coauthor of the *Collected Works* Martin James writes:
+And in his introductory essay *Piet Mondrian: Art and Theory to 1917,* coauthor of the *Collected Works* Martin S. James writes:
 
-> Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne
-> Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
-> particular forms disappear almost completely in the whole.  [p. 14.]
+> Cubism, Mondrian repeatedly stressed, opened the way for the New Plastic.  Shortly after seeing examples of early Cubist work by Picasso and Braque at the Monderne Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where particular forms disappear almost completely in the whole [p. 14].
 
-To be honest, despite being a life-long student of Art History, I never really understood Cubism.
-As it turns out, when it comes to understanding these paintings, a little information from the right source can go a long way.
+To be honest, despite being a life-long student of Art History, I never really understood Cubism.  As it turns out, when it comes to understanding these paintings, a little information from the right source can go a long way.  The paintings may look a bit "crazy," but it turns out there is a method to their "madness!"
 
-The paintings may seem to be a bit "crazy," but it turns out there is a method to their "madness!"
+At one point I put Mondrian's book aside and started reading Douglas Cooper's book *[The Cubist Epoch](https://www.goodreads.com/book/show/552681.The_Cubist_Epoch),* published in 1971.  Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote and published *[The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations)* between 1905 and 1913.
 
-At one point I put Mondrian's book aside and started reading Douglas Cooper's book *[The Cubist Epoch](https://www.goodreads.com/book/show/552681.The_Cubist_Epoch),* published in 1971.
-Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote and published *[The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations)*
-between 1905 and 1913.
+In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance" [p. 8 of the 2004 translation by Peter Read and published by the University of California Press].  This explains very concisely why these paintings appear so fractured and "crazy:" Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects from different points in time, all in a single image.
 
-In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance"
-[p. 8 of the 2004 translation by Peter Read and published by the University of California Press].
-This explains very concisely why these paintings appear so fractured and "crazy:" Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects
-from different points in time, all in a single image.
+Realizing that in the early 1900s painters were in competition with photographers and filmmakers -- artists for whom scientific perspective was a no-brainer -- helps explain their interest in this sort of style.
 
-Realizing that in the early 1900s painters found themselves in competition with photographers and filmmakers helps explain their interest in this sort of style.
+At one point, Apollinaire explains Cubism by drawing an analogy between the paintings and music:
 
-At one point, Apollinaire explains Cubism by comparing the paintings to music:
+> When he listens to a concert, the music-lover experiences joyful feelings which are different from the joy experienced when he hears natural sounds like the murmur of a stream, the roar of a waterfall, the wind soughing through a forest, or the harmonies of human speech, based on reason and not on aesthetics.  Similarly, the new painters will provide their admirers with artistic sensations created only by the harmony of contrasting hues of light [p. 12 of Peter Read's translation].
 
-> When he listens to a concert, the music-lover experiences joyful feelings which are different from the joy experienced when he hears natural sounds like the murmur of a stream,
-> the roar of a waterfall, the wind soughing through a forest, or the harmonies of human speech, based on reason and not on aesthetics.
-> Similarly, the new painters will provide their admirers with artistic sensations created only by the harmony of contrasting hues of light [p. 12 of the 2004 translation by Peter Read].
-
-In other words, a musician seeking to mimic nature and create representational works would produce sounds corresponding to those we hear in nature.
-Instead, most musicians seek catharsis and want to express themselves, so they play instruments built specifically for the sole purpose of playing melodies based on pure notes.
+In other words, a musician seeking to mimic nature and create representational works would produce sounds corresponding to those we hear in nature.  Instead, most musicians seek catharsis and want to express themselves, so they play instruments built specifically for the sole purpose of playing melodies based on pure notes.
 
 In this light, the Cubists were just trying to catch up with musicians by doing their own thing and expressing their inner vision.
 
@@ -157,22 +137,13 @@ There's that word again!
 
 As I learned about Cubism, I started thinking that it would be a great style to adopt for the next phase of my own Art Project, which entails visualizing personalities.
 
-Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his
-*[General Description of the Types](http://psychclassics.yorku.ca/Jung/types.htm).*
-In the early-to-mid 1900s Isabel Briggs-Myers codified Jung's work in this area of psychology and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator),
-which people can use to find their four-letter personality type.
+Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his *[General Description of the Types](http://psychclassics.yorku.ca/Jung/types.htm).* In the early-to-mid 1900s Isabel Briggs-Myers codified Jung's work in this area of psychology and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator), which people can use to find their four-letter personality type.
 
-I first learned about the MBTI in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and learning that I am an INFP turned out to be life-altering!
-Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags such as #intj and #enfp that reference them are
-easy to find on social media sites such as twitter, pinterest, reddit, and tumblr.
+I first learned about the MBTI in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and learning that I am an INFP turned out to be life-altering!  Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags such as #intj and #enfp that reference them are easy to find on social media sites such as twitter, pinterest, reddit, and tumblr.
 
-INFP stands for Introverted, iNtuitive, Feeling, and Perceptive.
-I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP, but pursuing that idea will have to wait.
+INFP stands for Introverted, iNtuitive, Feeling, and Perceptive.  I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP.  As Interesting as it may be, pursuing that idea will have to wait.
 
-Recently I decided to base the next phase of my visualizing personalities on the Big Five "OCEAN" personality traits, and have been researching that model of personality
-in parallel with my studies of Mondrian and Cubism.
-Reading *The Cubist Epoch* and learning about how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism --
-would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
+Recently I decided to base the next phase of my visualizing personalities on the Big Five "OCEAN" personality traits, and have been researching that model of personality in parallel with my studies of Mondrian and Cubism.  Reading *The Cubist Epoch* and learning about how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism -- would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
 
 So taking this detour into understanding Cubism has been inspiring!
 

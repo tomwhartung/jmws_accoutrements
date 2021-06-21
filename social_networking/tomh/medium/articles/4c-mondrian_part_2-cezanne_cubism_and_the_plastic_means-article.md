@@ -44,73 +44,57 @@ It was in a book about Cézanne's compositions that I finally found a definition
 
 ## Piet Mondrian's *Collected Writings*
 
-*[The New Art -- The New Life, The Collected Writings of Piet Mondrian](https://www.goodreads.com/book/show/13291.The_New_Art_the_New_Life)*
-is a book edited and translated by [Henry Holtzman](https://en.wikipedia.org/wiki/Harry_Holtzman) and [Martin S. James](https://en.wikipedia.org/wiki/Martin_S._James).
-Mondrian's writings appear in the book in chronological order, which was first published in 1986.
+*[The New Art -- The New Life, The Collected Writings of Piet Mondrian](https://www.goodreads.com/book/show/13291.The_New_Art_the_New_Life)* is a book edited and translated by [Henry Holtzman](https://en.wikipedia.org/wiki/Harry_Holtzman) and [Martin S. James](https://en.wikipedia.org/wiki/Martin_S._James).  Mondrian's writings appear in the book in chronological order, which was first published in 1986.
 
 The authors divide the book into three parts.
 
-- Part I, *The De Stijl Years: 1917-24,* covers his writings for the journal *De Stijl.*
-- Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote after he and *De Stijl* parted ways but was still in continental Europe.
-- Part III, *England and the United States: 1938-1944,* includes the articles and essays he wrote after leaving continental Europe due to the impending war.
+-- Part I, *The De Stijl Years: 1917-24,* covers his writings for the journal *De Stijl.*
+-- Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote after he and *De Stijl* parted ways but was still in continental Europe.
+-- Part III, *England and the United States: 1938-1944,* includes the articles and essays he wrote after leaving continental Europe due to the impending war.
 
-One of the pieces in this book is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December, 1931.
-It appears in Part II of the book and the authors undoubtedly refer to it in the title of his *Collected Writings* because it draws parallels between his art and society at large, making it one of his most enlightening pieces.
+One of the pieces in this book is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December of 1931.  It appears in Part II of the book and the authors undoubtedly refer to it in the title of his *Collected Writings* because it draws parallels between his art and society at large, making it one of his most comprehensive and enlightening pieces.
 
-Mondrian calls the piece a "little work into which I have compressed all that I believe and hope for" [p. 245] in a letter to Alfred Roth dated August 6, 1931.
-In this "little work" he discusses concepts such as "equivalent relationships" [e.g., p. 248, p. 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
+Mondrian calls the piece a "little work into which I have compressed all that I believe and hope for" [p. 245] in a letter to Alfred Roth dated August 6, 1931.  In this "little work" he discusses concepts such as "equivalent relationships" [e.g., pp. 248, 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
 
 Near the end of the piece he predicts that his art, and that by others, can and will eventually lead to "high universal morality -- the true content of love, friendship, brotherhood, and all their synonyms" [p. 271].
 
-In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.
-Recently I obtained my very own copy of this book, and decided to take a more methodical approach, starting with the introductory material by the authors and reading the articles in chronological order.
+In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.  Recently I obtained my very own copy of this book, and decided to take a more methodical approach, starting with the introductory material by the authors and reading the articles in chronological order.
 
-At this point I've finished all of Part I, which spans 183 pages -- almost half of the book's total of 410 pages -- and bits and pieces of Parts II and III.
+As I write this article, I've finished all of Part I -- which spans 183 pages, about half of the book's total of 410 pages -- and have read some of the articles in Parts II and III.
 
 ## Plastic Means Versus Plastic Material
 
-Throughout his writings Mondrian frequently uses the term "plastic."
-As mentioned above, he refers to the style of his work as the "New Plastic" or "Neo-Plasticism," and this term appears in the title of many of his articles.
+Throughout his writings Mondrian frequently uses the term "plastic." As mentioned above, he refers to the style of his work as the "New Plastic" or "Neo-Plasticism," and this term appears in the title of many of his articles.
 
-In fact, Mondrian called his first book -- which was published as a collection of essays in the journal *De Stijl* -- *The New Plastic in Painting.*
-He began writing it in 1914, and it appeared in twelve installments in the journal between October 1917 and October 1918.
+In fact, Mondrian called his first book -- which was published as a collection of essays in the journal *De Stijl* -- *The New Plastic in Painting.* He began writing it in 1914, and it appeared in twelve installments in the journal between October 1917 and October 1918.
 
-While reading his *Collected Writings,* I have found the term "plastic" to be a constant mental stumbling block.
-It is clear from the context that when Mondrian uses the word he is *not* referring to the ubiquitous plastic material used to make many of today's products.
+While reading his *Collected Writings,* I have found the term "plastic" to be a constant mental stumbling block.  It is clear from the context that when Mondrian uses the word he is **not** referring to the ubiquitous plastic material used to make many of today's products.
 
-Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images -- the way he molds reality into shapes of his own choosing.
-For example, one of the chapters in this first series of articles, *New Plastic in Painting,* is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
+Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images -- the way he molds reality into shapes of his own choosing.  For example, one of the chapters in this first series of articles, *New Plastic in Painting,* is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
 
-The [wikipedia page for Neoplasticism](https://en.wikipedia.org/wiki/Neoplasticism) hints at this idea, stating that "every artist manipulates reality to produce an aesthetically pleasing, artfully pleasing whole."
-This gives us a sense of what he meant by the term, but it would be nice to see an actual definition of it and not have to wonder and guess.
+The [wikipedia page for Neoplasticism](https://en.wikipedia.org/wiki/Neoplasticism) hints at this idea, stating that "every artist manipulates reality to produce an aesthetically pleasing, artfully pleasing whole." This gives us a sense of what he meant by the term, but it would be nice to see an actual definition of it and not have to wonder and guess.
 
 ## Plastic This, Plastic That
 
-In the first twelve paragraphs of his "little work" *The New Art -- The New Life: The Culture of Pure Relationships,* Mondrian uses the term fifteen times!
-In each of these occurrences the word appears with a qualifier:
+In the first twelve paragraphs of *The New Art -- The New Life: The Culture of Pure Relationships,* Mondrian uses the term fifteen times!  In each of these occurrences the word appears with a qualifier:
 
-- "plastic means" occurs 7 times
-- "plastic expression" occurs 5 times
-- "plastic value" occurs 3 times
+-- "plastic means" occurs 7 times
+-- "plastic expression" occurs 5 times
+-- "plastic value" occurs 3 times
 
-I believe the counts from these twelve paragraphs are representative of the relative frequency with which he uses these short phrases in the rest of the book.
-That is, my impression is that he mentions the "plastic means" more frequently than he does any of the other pairs.
+I believe the counts from these twelve paragraphs are representative of the relative frequency with which he uses these short phrases in the rest of the book.  That is, my impression is that he mentions the "plastic means" more frequently than he does any of the other pairs.
 
 In this example, from the eighth paragraph of *The New Art -- The New Life,* he uses the word "plastic" with all three of these qualifiers:
 
-> If purely *plastic expression* is created by "the relationships" of line, plane surface, and color in their purely *plastic values,* then these means exist only through their relationships.
-> Therefore, relationships are just as important as the *plastic means.*  [p. 246, the quotes appear in the original, but I added the italics to highlight the word in question].
+> If purely *plastic expression* is created by "the relationships" of line, plane surface, and color in their purely *plastic values,* then these means exist only through their relationships.  Therefore, relationships are just as important as the *plastic means*  [p. 246, the quotes appear in the original, but I added the italics to highlight the word in question].
 
-One of the reasons I decided to read his writings in chronological sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
-Naturally, if one wants to learn something, it makes sense to start at the beginning!
+One of the reasons I decided to read his writings in chronological sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.  Naturally, if one wants to learn something, it makes sense to start at the beginning!
 
-Unfortunately -- as far as I can tell from reading a bit more than the first half of the book, anyway -- he never really defines the term.
-The closest thing to a definition I have found so far is this circular definition appearing in his 1930 essay *Cubism and Neo-Plastic:*
+Unfortunately -- as far as I can tell from reading a bit more than the first half of the book, anyway -- he never really defines the term.  The closest thing to a definition I have found so far is this circular definition appearing in his 1930 essay *Cubism and Neo-Plastic:*
 
-> By pure plastic we mean the plastic of relationships alone, expressed by line and color also alone, that is to say, without any limited form.  [p. 237].
+> By pure plastic we mean the plastic of relationships alone, expressed by line and color also alone, that is to say, without any limited form  [p. 237].
 
-Again, although it obviously has something to do with composition, I was never really 100% sure what he meant by it.
-Moreover, despite having a sense of what he meant, it would be nice to be sufficiently comfortable with the term to be able to confidently and competently explain it to somone.
+Again, although it obviously has something to do with composition, I was never really 100% sure what he meant by it.  Moreover, despite having a sense of what he meant, it would be nice to be sufficiently comfortable with the term to be able to confidently and competently explain it to someone.
 
 As I went through his articles and essays, it became more and more clear that I needed to back up to and learn about the artists who inspired Mondrian: the Cubists and their progenitor, Paul Cézanne.
 

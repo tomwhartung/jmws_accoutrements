@@ -6,7 +6,8 @@ Saving the text for this article in case I somehow lose what I post to medium, o
 # The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cézanne, and the Plastic Means
 
 - Image: ![../images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg)
-- Alt Text: A painting of rectangular forms in white, black, and primary colors, typical of Piet Mondrian's Neo-Plastic style.
+- Alt text: A painting of rectangular forms in white, black, and primary colors, typical of Piet Mondrian's Neo-Plastic style.
+- Caption: 
 - Source: [wikiart.org](https://www.wikiart.org/en/piet-mondrian/composition-2-1922)
 
 ## [Introduction -- implied rather than stated!]
@@ -102,7 +103,8 @@ In their introductory pieces, Holtzman and James discuss how Cubism influenced M
 For those unfamiliar with Cubism, Pablo Picasso and Georges Braque were, along with Cézanne, the progenitors of the style.  This image, Picasso's *Harlequin* of 1918, is an excellent example of a Cubist painting.
 
 - Image: ![../images/mondrian_part_2-harlequin-1918.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-harlequin-1918.jpg)
-- Alt Text: The painting Harlequin by Pablo Picasso shows a figure with a guitar. The figure and the guitar are fractured, with various parts depicted from different viewpoints.
+- Alt text: The painting Harlequin by Pablo Picasso shows a figure with a guitar. The figure and the guitar are fractured, with various parts depicted from different viewpoints.
+- Caption: 
 - Source: [wikiart.org](https://www.wikiart.org/en/paintings-by-style/cubism?select=featured)
 
 In an essay entitled *Piet Mondrian: The Man and His Work,* coauthor Harry Holtzman introduces the *Collected Works,* by writing:
@@ -137,123 +139,94 @@ There's that word again!
 
 As I learned about Cubism, I started thinking that it would be a great style to adopt for the next phase of my own Art Project, which entails visualizing personalities.
 
-Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his *[General Description of the Types](http://psychclassics.yorku.ca/Jung/types.htm).* In the early-to-mid 1900s Isabel Briggs-Myers codified Jung's work in this area of psychology and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator), which people can use to find their four-letter personality type.
+Mondrian's work -- which is based on opposites of color and form -- served as a major inspiration for the first phase of this project, which depicts the opposites Carl Jung describes in his *[General Description of the Types](http://psychclassics.yorku.ca/Jung/types.htm).* In the early-to-mid 1900s Isabel Briggs-Myers codified Jung's work in this area of psychology and created the Myers Briggs Type Indicator or [MBTI (r)](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator), which people can use to learn their four-letter personality type.
 
 I first learned about the MBTI in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and learning that I am an INFP turned out to be life-altering!  Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags such as #intj and #enfp that reference them are easy to find on social media sites such as twitter, pinterest, reddit, and tumblr.
 
 INFP stands for Introverted, iNtuitive, Feeling, and Perceptive.  I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP.  As Interesting as it may be, pursuing that idea will have to wait.
 
-Recently I decided to base the next phase of my visualizing personalities on the Big Five "OCEAN" personality traits, and have been researching that model of personality in parallel with my studies of Mondrian and Cubism.  Reading *The Cubist Epoch* and learning about how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism -- would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
+Recently I decided to base the next phase of my visualizing personalities on the [Big Five "OCEAN" personality traits](https://en.wikipedia.org/wiki/Big_Five_personality_traits), and have been researching that model of personality in parallel with my studies of Mondrian and Cubism.  Reading *The Cubist Epoch* and learning about how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism -- would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
 
 So taking this detour into understanding Cubism has been inspiring!
 
 ## The Cubists' Inspiration: Paul Cézanne
 
-As I became increasingly interested in and inspired by the Cubists, I learned that these artists and their work were in turn inspired by the work of Paul Cézanne.
-Indeed, *The Cubist Epoch* mentions him with about the same frequency as Mondrian mentions the "plastic means!"
+As I became increasingly interested in and inspired by the Cubists, I learned that these artists and their work were in turn inspired by the work of Paul Cézanne.  Indeed, *The Cubist Epoch* mentions him with about the same frequency as Mondrian mentions the "plastic means!"
 
-After reading a few chapters of Cooper's book I eventually caved in to this curiosity, and searched for books about Cézanne in the Denver Public Library (DPL).
-This was during the Coronovirus pandemic in 2020, so I had to put the seven books I found on hold and arrange to pick them via the DPL's curbside holds service.
+After reading a few chapters of Cooper's book I eventually caved in to this curiosity, and searched for books about Cézanne in the Denver Public Library (DPL).  This was during the Coronovirus pandemic in 2020, so I had to put the seven books I found on hold and arrange to pick them via the DPL's curbside holds service.
 
-These books are large and printed on high-quality paper, so they're very heavy.
-When I went to pick them up it took two people to carry them all out to my car!
+These books are large and printed on high-quality paper, so they're very heavy.  When I went to pick them up it took two people to carry them all out to my car!
 
-It was in one of these books that I finally found a definition of the term "plastic means."
+It was in one of these books that I finally found a definition of the term *plastic means.*
 
-## The Plastic Means: Defined and Illustrated!
+## The Plastic Means: Defined With Illustrations!
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
 
-However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)*
-written by Erle Loran and published in 1943, did not fit into this mold.
-It was in Loran's book that I finally found a formal definition of "the plastic means."
+However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)* written by Erle Loran and published in 1943, did not fit into this mold.  It was in Loran's book that I finally found a formal definition of the "plastic means."
+
 To say that I was excited is a bit of an understatement!
 
-Loran's book is divided into sections rather than chapters, and Section III (of XV), is named *An Illustrated Glossary.*
-One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 (of 136).
+Loran's book is divided into sections rather than chapters, and Section III (of XV), is named *An Illustrated Glossary.* One typically finds a glossary of terms near the end of a book, but Loran's definitions come near the beginning: on page 17 (of 136).
 
-Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams.
-The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means."
+Although it spans a mere 8 pages, Loran's *Illustrated Glossary* contains 22 diagrams.  The diagrams are fairly simple sketches in black-and-white, but they are invaluable for someone wanting to understand terms such as "plastic means."
 
 Following is Loran's definition of *the plastic means or plastic form,* which appears early in the *Illustrated Glossary:*
 
-> THE PLASTIC MEANS or PLASTIC FORM are terms used often in the present study, and are given a connotation different from that made familiar in
-> art criticism and art history in general.  The traditional connotation implies sculptural roundness as achieved through light-and-shade modeling
-> and chiaroscuro.  In this book the term *sculptural effect* is used when roundness is implied.  On the contrary, the term *plastic means*
-> connotes three-dimensional space in general.  Diagram II [the "picture box" below] is intended as a compendium of the plastic field for
-> Cezanne's picture shown in Plate VII.  All the diagrams in the Glossary deal with various aspects of the plastic means.  The sum of all
-> the diagrams for Plates I and X constitute the analysis of the plastic means that Cezanne has used in creating these paintings.  Thus
-> line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane.
-> Hence plastic qualities are not only three-dimensional, but two-dimensional as well.  [p. 18, emphasis in original as italics].
+> THE PLASTIC MEANS or PLASTIC FORM are terms used often in the present study, and are given a connotation different from that made familiar in art criticism and art history in general.  The traditional connotation implies sculptural roundness as achieved through light-and-shade modeling and chiaroscuro.  In this book the term *sculptural effect* is used when roundness is implied.  On the contrary, the term *plastic means* connotes three-dimensional space in general.  Diagram II [the "picture box" below] is intended as a compendium of the plastic field for Cezanne's picture shown in Plate VII.  All the diagrams in the Glossary deal with various aspects of the plastic means.  The sum of all the diagrams for Plates I and X constitute the analysis of the plastic means that Cezanne has used in creating these paintings.  Thus line, plane, volume, color, texture, and so on, are the plastic means used to build and organize the total space in the picture plane.  Hence plastic qualities are not only three-dimensional, but two-dimensional as well.  [p. 18, emphasis in original as italics].
 
-- Image:
-
-![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
-
+- Image: ![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
+- Alt text: A "picture box" showing how the scientific perspective of a house and farm could be constructed from the three-dimensional motif.
+- Caption: 
 - Source: [Cézanne's Composition by Erle Loran,](https://archive.org/details/cezannescomposit0000lora_f9b1) p. 17.
 
-The sketch of the "picture box" above is the "Diagram II" Loran refers to in his definition, and it shows the motif for Cézanne's 1897 painting *House and Farm at Jas de Bouffan.*
-This house is "the Cézanne family's country estate," and a black-and-white reproduction of it appears on page 53 as Plate VII, which is also mentioned in his definition.
+The sketch of the "picture box" above is the "Diagram II" Loran refers to in his definition, and it shows the motif for Cézanne's 1897 painting *House and Farm at Jas de Bouffan.* This house is "the Cézanne family's country estate," and a black-and-white reproduction of it appears on page 53 as Plate VII, which is also mentioned in his definition.
 
 Following is a copy of the painting in color.
 
-- Image:
-
-![`../images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg)
-
+- Image: ![`../images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg)
+- Alt text: A copy in color of the painting of a house and farm in the French countryside. In this painting the house is leaning to the left.
+- Caption: 
 - Source: [wikiart.org](https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887)
 
-Loran's full definition is a bit much, and although he claims that it differs from "the traditional connotation," it looks to be relevant to Mondrian's use of the term nonetheless.
-Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like Mondrian's use of the term does not constitute "the traditional connotation."
-So it looks like we are on the right track!
+Loran's full definition is a bit much, and although he claims that it differs from "the traditional connotation," it looks to be relevant to Mondrian's use of the term nonetheless.  Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like Mondrian's use of the term does not constitute "the traditional connotation." So it looks like we are on the right track!
 
 This sentence, from near the end of his definition, contains the key idea we're looking for:
 
 > Thus line, plane, volume, color, texture, and so on, are the *plastic means used to build and organize the total space in the picture plane* [p. 18, emphasis added].
 
-It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
+It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "composition of a painting" was fuzzy, I was pretty close!
 
 ## The Plastic Means Versus Scientific Perspective
 
-Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII, *Problems of Perspective* on page 52.
-The two photographs of this motif included in Loran's book are not the best, and he admits they "make the disappointing and prosaic truth clear enough" [p. 53].
+Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in Section VII, *Problems of Perspective* on page 52.  The two photographs of this motif included in Loran's book are not the best, and he admits they "make the disappointing and prosaic truth clear enough" [p. 53].
 
-Most importantly, in the photographs the house does not look like it is ready to tip over!
-Loran writes that this "leftward-leaning axis of the house may be understood as a distortion that increases the tension of the house in relation to the four sides of the frame" [p. 53].
+Most importantly, in the photographs the house does not look like it is ready to tip over!  Loran writes that this "leftward-leaning axis of the house may be understood as a distortion that increases the tension of the house in relation to the four sides of the frame" [p. 53].
 
 To my eyes, this tipping of the axes makes the painting come alive.  It seems funny somehow!
 
-For Loran, it "has always suggested to me the setting for a melodramatic scene in a Dostoievski novel".
-He goes on to claim "the window shapes, giving a somewhat haunted or deserted aspect to the scene, also contribute to the dramatic effect" [p. 53].
+For Loran, it "has always suggested to me the setting for a melodramatic scene in a Dostoievski novel".  He goes on to claim "the window shapes, giving a somewhat haunted or deserted aspect to the scene, also contribute to the dramatic effect" [p. 53].
 
-Apparently where Loran is disposed to see scenes from *Notes From Underground* and *Crime and Punishment,* I'm more influenced by shows like *Parks and Recreation,* *Friends,* and *The Office.*
+Apparently where Loran is disposed to see scenes from books like *Notes From Underground* and *Crime and Punishment,* my inner vision is more influenced by shows like *Parks and Recreation,* *Friends,* and *The Office.*
 
-The author describes how the shapes take the viewer's eyes on a circular, clockwise path from the bottom of the image, to the house on the left and then up to its roof, and finally to the smaller buildings on the right.
-He concludes his analysis by writing "the real drama in the painting derives from the plastic forces" [p. 54] that control our attention.
+The author describes how the shapes take the viewer's eyes on a circular, clockwise path from the bottom of the image, to the house on the left and then up to its roof, and finally to the smaller buildings on the right.  He concludes his analysis by writing "the real drama in the painting derives from the plastic forces" [p. 54] that control our attention.
 
-Given Loran's definition of the plastic means, his sketch of the picture box in Diagram II, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can start to understand
-the "plastic means" as essentially the way a painter interprets or projects three-dimensional subject matter onto the two dimensions of the picture plane.
+Given Loran's definition of the plastic means, his sketch of the picture box in Diagram II, Cézanne's rendering of the motif, and the fact that the house is not actually leaning in real life, we can start to understand the "plastic means" as essentially the way a painter interprets and chooses to project three-dimensional subject matter onto the two dimensions of the picture plane.
 
-Having had a sense that this was what Mondrian means by the term "plastic means," upon reading this book -- and most importantly seeing the images in it -- I finally started feeling like I really understood the term.
+Having had a sense that this was what Mondrian means by the term "plastic means," upon reading this book -- and most importantly after seeing the images in it -- I finally started feeling like I really understood the term.
 
 ## More Paintings and Photographs of the Motifs
 
-The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings juxtaposed with sketches and text that analyze his compositions.
-When possible -- that is, when the paintings are of landscapes rather than portraits -- Loran includes photographs of the motifs in the paintings.
+The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings juxtaposed with sketches and text that analyze his compositions.  When possible -- that is, when the paintings are of landscapes rather than portraits -- Loran includes photographs of the motifs in the paintings.
 
-Following are two images from page 60 of Loran's book: a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarray Called Bibemus](paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp)*
-in black-and-white, and a black-and-white photograph of the motif by Loran.
-Given these images, one does not really need to read Loran's analysis to get a full appreciation for why Cézanne is widely heralded as the
-[Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
+Following are two images from page 60 of Loran's book: a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarry Called Bibemus](http://paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp)* in black-and-white, and a black-and-white photograph of the motif by Loran.  Given these images, one does not really need to read Loran's analysis to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
-- Image:
-
-![`../images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg)
-
+- Image: ![`../images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg)
+- Alt text: A combo image showing the painting of the Sainte Victoire mountain by Cézanne next to a photograph of the same mountain. The mountain in the painting is much larger and more pronounced than it is in the photograph.
+- Caption: 
 - Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, p. 60.
 
-Seeing these images side-by-side is extremely enlightening!
-In describing these images, Loran writes:
+Seeing these images side-by-side is extremely enlightening!  In describing these images, Loran writes:
 
 > Cézanne has more than doubled the size of the Sainte Victoire.  The illusion of magnificent height which Cézanne has achieved through these measurable
 > *plastic means* is akin to the exaggerated sense of its height that one has on actually seeing it -- as I had when I first discovered the motif.  But

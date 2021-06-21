@@ -131,7 +131,7 @@ Moreover, despite having a sense of what he meant, it would be nice to be suffic
 
 As I went through his articles and essays, it became more and more clear that I needed to back up to and learn about the artists who inspired Mondrian: the Cubists and their progenitor, Paul Cézanne.
 
-## Cubism
+## Mondrian's Inspiration: Cubism
 
 In their introductory pieces, Holtzman and James discuss how Cubism influenced Mondrian's early work.
 
@@ -180,9 +180,9 @@ At one point, Apollinaire explains Cubism by comparing the paintings to music:
 In other words, a musician seeking to mimic nature and create representational works would produce sounds corresponding to those we hear in nature.
 Instead, most musicians seek catharsis and want to express themselves, so they play instruments built specifically for the sole purpose of playing melodies based on pure notes.
 
-In this light, the Cubists were just trying to catch up with musicians by doing their own thing.
+In this light, the Cubists were just trying to catch up with musicians by doing their own thing and expressing their inner vision.
 
-A bit later Apollinaire asserts that the Cubist style permits the artists "to give the object proportions appropriate to the *degree of plasticity* he desires" [p. 16, emphasis added].
+A bit later in *The Cubist Painters* Apollinaire asserts that the Cubist style permits the artists "to give the object proportions appropriate to the *degree of plasticity* he desires" [p. 16, emphasis added].
 
 There's that word again!
 
@@ -199,31 +199,35 @@ I first learned about the MBTI in the 1980s -- right around the time I learned a
 Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags such as #intj and #enfp that reference them are
 easy to find on social media sites such as twitter, pinterest, reddit, and tumblr.
 
-Recently I decided to base the next phase of this project on the Big Five "OCEAN" personality traits, and have been researching that model of personality in parallel with my studies of Mondrian and Cubism.
+INFP stands for Introverted, iNtuitive, Feeling, and Perceptive.
+I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP, but pursuing that idea will have to wait.
+
+Recently I decided to base the next phase of my visualizing personalities on the Big Five "OCEAN" personality traits, and have been researching that model of personality
+in parallel with my studies of Mondrian and Cubism.
 Reading *The Cubist Epoch* and learning about how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism --
 would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
 
 So taking this detour into understanding Cubism has been inspiring!
 
-## Cézanne
+## The Cubists' Inspiration: Paul Cézanne
 
-As I became increasingly interested in and inspired by the Cubists, I learned that these artists and their work were in turn inspired by Paul Cézanne's paintings.
+As I became increasingly interested in and inspired by the Cubists, I learned that these artists and their work were in turn inspired by the work of Paul Cézanne.
 Indeed, *The Cubist Epoch* mentions him with about the same frequency as Mondrian mentions the "plastic means!"
 
-After reading a few chapters of Cooper's book I eventually caved in to this curiosity, and searched for books about Cézanne in the Denver Public Library.
-This was during the Coronovirus pandemic in 2020, so I had to put the seven books I found on hold and arrange to pick them via their curbside holds service.
+After reading a few chapters of Cooper's book I eventually caved in to this curiosity, and searched for books about Cézanne in the Denver Public Library (DPL).
+This was during the Coronovirus pandemic in 2020, so I had to put the seven books I found on hold and arrange to pick them via the DPL's curbside holds service.
 
 These books are large and printed on high-quality paper, so they're very heavy.
 When I went to pick them up it took two people to carry them all out to my car!
 
 It was in one of these books that I finally found a definition of the term "plastic means."
 
-## The Plastic Means: Defined and Illustrated
+## The Plastic Means: Defined and Illustrated!
 
 Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
+
 However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)*
 written by Erle Loran and published in 1943, did not fit into this mold.
-
 It was in Loran's book that I finally found a formal definition of "the plastic means."
 To say that I was excited is a bit of an understatement!
 
@@ -250,8 +254,8 @@ Following is Loran's definition of *the plastic means or plastic form,* which ap
 
 - Source: [Cézanne's Composition by Erle Loran,](https://archive.org/details/cezannescomposit0000lora_f9b1) p. 17.
 
-The sketch of the "picture box" above is the "Diagram II" Loran refers to in his definition, and it shows the motif for Cézannes 1897 painting *House and Farm at Jas de Bouffan.*
-The house is "the Cézanne family's country estate," and a black-and-white reproduction of it appears as Plate VII, also mentioned in his definition, on page 53.
+The sketch of the "picture box" above is the "Diagram II" Loran refers to in his definition, and it shows the motif for Cézanne's 1897 painting *House and Farm at Jas de Bouffan.*
+This house is "the Cézanne family's country estate," and a black-and-white reproduction of it appears on page 53 as Plate VII, which is also mentioned in his definition.
 
 Following is a copy of the painting in color.
 
@@ -262,16 +266,16 @@ Following is a copy of the painting in color.
 - Source: [wikiart.org](https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887)
 
 Loran's full definition is a bit much, and although he claims that it differs from "the traditional connotation," it looks to be relevant to Mondrian's use of the term nonetheless.
-Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like his use of the term does not constitute "the traditional connotation."
+Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like Mondrian's use of the term does not constitute "the traditional connotation."
 So it looks like we are on the right track!
 
-Here is the key idea from this definition:
+This sentence, from near the end of his definition, contains the key idea we're looking for:
 
 > Thus line, plane, volume, color, texture, and so on, are the *plastic means used to build and organize the total space in the picture plane* [p. 18, emphasis added].
 
 It turns out that, although my guess regarding the meaning of the term as being, kinda sorta, the "compositon of a painting" was fuzzy, I was pretty close!
 
-## The Plastic Means Illustrated
+## The Plastic Means Versus Scientific Perspective
 
 Loran's book includes photographs of Cézanne's motifs, and there are two photographs of this one in section VII, *Problems of Perspective* on page 52.
 The two photographs of this motif included in Loran's book are not the best, and he admits they "make the disappointing and prosaic truth clear enough" [p. 53].
@@ -279,9 +283,12 @@ The two photographs of this motif included in Loran's book are not the best, and
 Most importantly, in the photographs the house does not look like it is ready to tip over!
 Loran writes that this "leftward-leaning axis of the house may be understood as a distortion that increases the tension of the house in relation to the four sides of the frame" [p. 53].
 
-To my eyes, this tipping of the axes makes the painting come alive.
+To my eyes, this tipping of the axes makes the painting come alive.  It seems funny somehow!
+
 For Loran, it "has always suggested to me the setting for a melodramatic scene in a Dostoievski novel".
 He goes on to claim "the window shapes, giving a somewhat haunted or deserted aspect to the scene, also contribute to the dramatic effect" [p. 53].
+
+Apparently where Loran is disposed to see scenes from *Notes From Underground* and *Crime and Punishment,* I'm more influenced by shows like *Parks and Recreation,* *Friends,* and *The Office.*
 
 The author describes how the shapes take the viewer's eyes on a circular, clockwise path from the bottom of the image, to the house on the left and then up to its roof, and finally to the smaller buildings on the right.
 He concludes his analysis by writing "the real drama in the painting derives from the plastic forces" [p. 54] that control our attention.
@@ -317,12 +324,12 @@ In describing these images, Loran writes:
 > basic mechanics of drawing and composition, the *fundamental plastic means of expression.* [p. 60, emphasis added].
 
 Loran goes on to assert that the painting "becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].
-His use of the term *plastic* in these comparisons of the painting and his photograph really leave no doubt as to what he means by the term.
+His use of the term *plastic* in these comparisons of the painting and his photograph really leave no doubt as to what he means by the term!
 
-Cézanne created a [series of paintings of the Sainte Victoire ](https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)), and Loran includes a few of these in his book.
+Cézanne created a [series of paintings of the Sainte Victoire](https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)), and Loran includes a few of these in his book.
 In each case he includes a photograph of the motif showing how Cézanne's interpretation differed from a scientific perspective of the mountain.
 
-This version from the quarry is the only one of Cézanne's paintings to appear in color in Loran's book, however, and he uses it to conduct an extended analysis of the artist's use of color.
+This version from the quarry is the only one of Cézanne's paintings to appear in color in Loran's book, and he uses it to conduct an extended analysis of the artist's use of color.
 
 - Image:
 
@@ -331,7 +338,7 @@ This version from the quarry is the only one of Cézanne's paintings to appear i
 - Source: Cézanne's Composition by Erle Loran, p. 60.
 
 In his analysis of this painting Loran writes that "Cézanne's uniqueness and perhaps his historical greatness is found in his power to synthesize abstraction and reality" [p. 63].
-A discussion of that analysis is beyond the scope of this article, but I would like to encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of the book!
+A full discussion of his analysis is far beyond the scope of this article, but I encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of the book!
 
 Published in 1943, *Cézanne's Composition* is apparently out of print.
 Although it costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457),
@@ -343,7 +350,7 @@ At this point I finally feel as though I could explain *the plastic means* to so
 What the *plastic means* and *plastic material* share is the concept of *malleability.*
 
 Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.
-It's easy to see why manufacturers often prefer plastic to more traditional and less malleable materials like wood or steel.
+It's easy to see why manufacturers often prefer plastic to the more traditional and less malleable materials like wood or steel.
 
 Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, often foregoing representation entirely, and calling the resultant style *Neo-Plasticism.*
 

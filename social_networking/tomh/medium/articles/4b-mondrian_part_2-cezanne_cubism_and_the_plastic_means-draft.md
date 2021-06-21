@@ -24,8 +24,13 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 There are two kinds of art: mimetic and cathartic.
 The difference between them is the way and the extent to which the artist uses the *plastic means.*
 
+I learned about these two types of art only recently, in a class at [edx.org](https://edx.org) entitled [Art and Design in the Digital Age](https://learning.edx.org/course/course-v1:IsraelX+DIGITALARTx+1T2021/home).
+The class is quite enlightening, and I recommend it to anyone who enjoys learning about the history of art.
+
 Mimetic art is representational, and the artist seeks to mimic reality.
 Cathartic art is expressionist, and the artist seeks to express how they feel about reality.
+
+## Part 2 of a Series
 
 This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
 For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5).
@@ -35,27 +40,32 @@ It is typical of Mondrian's distinctive style, which he called *[NeoPlasticism](
 
 You can buy a poster of an image like this from the site [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200,
 and find originals similar to it on the site [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.
-The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for amounts that most of us will never see in our lifetime is proof that his vision was truly prophetic.
+The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for such large amounts is proof that his vision was truly prophetic.
 
 Although Mondrian's work is valuable today, he lived humbly.
-According to the *Chronology* in his *Collected Writings,* at times he had to supplement "his small income by painting watercolors of flowers" [1922, p. xxii].
+According to the *Chronology* in his *Collected Writings,* at times he had to supplement "his small income by painting watercolors of flowers" [p. xxii, 1922].
 
-The following quote is from a letter he wrote to Arnold Saalborn around 1910 that appears in his *Collected Writings:*
+Also from his *Collected Writings* is this quote, from a letter he wrote to Arnold Saalborn around 1910:
 
 > But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is,
 > a more conventional manner of painting -- so I have to work twice as much [p. 19].
 
-In trying to understand Mondrian's art, I've spent a considerable amount of time reading his *Collected Writings* -- which can be quite challenging to understand.
+In trying to understand Mondrian's art, I've spent a considerable amount of time reading his *Collected Writings* -- parts of which can be quite challenging to understand.
 One of the reasons it can be difficult to understand his writings is that he frequently uses the word *plastic,* in expressions such as *plastic means,* *plastic expression,* and *plastic value.*
 
 The focus of this article is on how I learned what Mondrian meant by the word *plastic.*
-This required learning about Cubism, which inspired Mondrian's unique style, and Paul Cézanne, who in turn inspired the Cubists.
+
+This quest first lead to learning about Cubism, which inspired Mondrian's unique style.
+That in turn lead to learning about Paul Cézanne, who in turn inspired the Cubists.
+It was in a book about Cézanne's compositions that I finally found a definition of *the plastic means.*
 
 ## Piet Mondrian's *Collected Writings*
 
 *[The New Art -- The New Life, The Collected Writings of Piet Mondrian](https://www.goodreads.com/book/show/13291.The_New_Art_the_New_Life)*
-is a book edited and translated by [Henry Holtzman](https://en.wikipedia.org/wiki/Harry_Holtzman) and [Martin S. James](https://en.wikipedia.org/wiki/Martin_S._James), and first published in 1986.
-Mondrian's writings appear in the book in chronological order, and the authors divide the book into three parts.
+is a book edited and translated by [Henry Holtzman](https://en.wikipedia.org/wiki/Harry_Holtzman) and [Martin S. James](https://en.wikipedia.org/wiki/Martin_S._James).
+Mondrian's writings appear in the book in chronological order, which was first published in 1986.
+
+The authors divide the book into three parts.
 
 - Part I, *The De Stijl Years: 1917-24,* covers his writings for the journal *De Stijl.*
 - Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote after he and *De Stijl* parted ways but was still in continental Europe.
@@ -66,10 +76,13 @@ It appears in Part II of the book and the authors undoubtedly refer to it in the
 
 Mondrian calls the piece a "little work into which I have compressed all that I believe and hope for" [p. 245] in a letter to Alfred Roth dated August 6, 1931.
 In this "little work" he discusses concepts such as "equivalent relationships" [e.g., p. 248, p. 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
+
 Near the end of the piece he predicts that his art, and that by others, can and will eventually lead to "high universal morality -- the true content of love, friendship, brotherhood, and all their synonyms" [p. 271].
 
 In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.
 Recently I obtained my very own copy of this book, and decided to take a more methodical approach, starting with the introductory material by the authors and reading the articles in chronological order.
+
+At this point I've finished all of Part I, which spans 183 pages -- almost half of the book's total of 410 pages -- and bits and pieces of Parts II and III.
 
 ## Plastic Means Versus Plastic Material
 
@@ -83,46 +96,47 @@ While reading his *Collected Writings,* I have found the term "plastic" to be a 
 It is clear from the context that when Mondrian uses the word he is *not* referring to the ubiquitous plastic material used to make many of today's products.
 
 Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images -- the way he molds reality into shapes of his own choosing.
-For example, one of the chapters in the *New Plastic in Painting* series of articles is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
+For example, one of the chapters in this first series of articles, *New Plastic in Painting,* is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
 
 The [wikipedia page for Neoplasticism](https://en.wikipedia.org/wiki/Neoplasticism) hints at this idea, stating that "every artist manipulates reality to produce an aesthetically pleasing, artfully pleasing whole."
 This gives us a sense of what he meant by the term, but it would be nice to see an actual definition of it and not have to wonder and guess.
 
 ## Plastic This, Plastic That
 
-In the first twelve paragraphs of his "little work" *The New Art -- The New Life: The Culture of Pure Relationships,* Mondrian uses the term fifteen times.
+In the first twelve paragraphs of his "little work" *The New Art -- The New Life: The Culture of Pure Relationships,* Mondrian uses the term fifteen times!
 In each of these occurrences the word appears with a qualifier:
 
 - "plastic means" occurs 7 times
 - "plastic expression" occurs 5 times
 - "plastic value" occurs 3 times
 
-I believe the counts from these twelve paragraphs are representative of the relative frequency with which he uses these qualifiers in the rest of the book.
-That is, my impression is that he mentions the "plastic means" more frequently than he does any of the other phrases.
+I believe the counts from these twelve paragraphs are representative of the relative frequency with which he uses these short phrases in the rest of the book.
+That is, my impression is that he mentions the "plastic means" more frequently than he does any of the other pairs.
 
-For example, in the eighth paragraph of *The New Art -- The New Life* he uses the word "plastic" with all three of these qualifiers:
+In this example, from the eighth paragraph of *The New Art -- The New Life,* he uses the word "plastic" with all three of these qualifiers:
 
 > If purely *plastic expression* is created by "the relationships" of line, plane surface, and color in their purely *plastic values,* then these means exist only through their relationships.
-> Therefore, relationships are just as important as the *plastic means.*  [p. 246, the quotes appear in the original, but emphasis was added to highlight the word in question].
+> Therefore, relationships are just as important as the *plastic means.*  [p. 246, the quotes appear in the original, but I added the italics to highlight the word in question].
 
 One of the reasons I decided to read his writings in chronological sequence is that I was hoping to find a definition of the term, or at least learn to be more comfortable with it when I encountered it.
 Naturally, if one wants to learn something, it makes sense to start at the beginning!
 
-Unfortunately -- as far as I can tell from reading more than the first half of the book, anyway -- he never really defines the term.
+Unfortunately -- as far as I can tell from reading a bit more than the first half of the book, anyway -- he never really defines the term.
 The closest thing to a definition I have found so far is this circular definition appearing in his 1930 essay *Cubism and Neo-Plastic:*
 
 > By pure plastic we mean the plastic of relationships alone, expressed by line and color also alone, that is to say, without any limited form.  [p. 237].
 
-Although it obviously has something to do with composition, I was never really 100% sure what he meant by it.
-Moreover, despite having a sense of what he meant, it would be nice to be sufficiently comfortable with the term that I could explain it to somone.
+Again, although it obviously has something to do with composition, I was never really 100% sure what he meant by it.
+Moreover, despite having a sense of what he meant, it would be nice to be sufficiently comfortable with the term to be able to confidently and competently explain it to somone.
 
-As I went through his articles and essays, it became more and more clear that I needed to back up to and learn about the artists who inspired Mondrian: the Cubists and ultimately Paul Cézanne.
+As I went through his articles and essays, it became more and more clear that I needed to back up to and learn about the artists who inspired Mondrian: the Cubists and their progenitor, Paul Cézanne.
 
 ## Cubism
 
 In their introductory pieces, Holtzman and James discuss how Cubism influenced Mondrian's early work.
 
-For those unfamiliar with Cubism, Pablo Picasso and Georges Braque were the progenitors of the style, and this image, Picasso's *Harlequin* of 1918, is an excellent example of a Cubist painting.
+For those unfamiliar with Cubism, Pablo Picasso and Georges Braque were, along with Cézanne, the progenitors of the style.
+This image, Picasso's *Harlequin* of 1918, is an excellent example of a Cubist painting.
 
 - Image:
 
@@ -141,14 +155,18 @@ And in his introductory essay *Piet Mondrian: Art and Theory to 1917,* coauthor 
 > Kunstkring in late 1911, he settled in Paris.  His analytical Cubist "compositions" of 1912-13 in grays and browns were based on a favorite motif, the tree, where
 > particular forms disappear almost completely in the whole.  [p. 14.]
 
-I never really understood Cubism, but it turns out that when it comes to understanding these paintings, a little information from the right source can go a long way.
+To be honest, despite being a life-long student of Art History, I never really understood Cubism.
+As it turns out, when it comes to understanding these paintings, a little information from the right source can go a long way.
+
+The paintings may seem to be a bit "crazy," but it turns out there is a method to their "madness!"
 
 At one point I put Mondrian's book aside and started reading Douglas Cooper's book *[The Cubist Epoch](https://www.goodreads.com/book/show/552681.The_Cubist_Epoch),* published in 1971.
 Cooper's book in turn frequently refers to the poet Guillaume Apollinaire, who wrote and published *[The Cubist Painters, Aesthetic Meditations](https://en.wikipedia.org/wiki/The_Cubist_Painters,_Aesthetic_Meditations)*
 between 1905 and 1913.
 
-In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance" [p. 8 of the 2004 translation by Peter Read].
-This explains very concisely why these paintings appear so fractured: Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects
+In this short book Apollinaire claims the goal of the Cubist painters is to "encompass past, present and future in a single glance"
+[p. 8 of the 2004 translation by Peter Read and published by the University of California Press].
+This explains very concisely why these paintings appear so fractured and "crazy:" Picasso, Braque, and the other Cubists deliberately sought to capture multiple points-of-view of their subjects
 from different points in time, all in a single image.
 
 Realizing that in the early 1900s painters found themselves in competition with photographers and filmmakers helps explain their interest in this sort of style.
@@ -159,7 +177,12 @@ At one point, Apollinaire explains Cubism by comparing the paintings to music:
 > the roar of a waterfall, the wind soughing through a forest, or the harmonies of human speech, based on reason and not on aesthetics.
 > Similarly, the new painters will provide their admirers with artistic sensations created only by the harmony of contrasting hues of light [p. 12 of the 2004 translation by Peter Read].
 
-A bit later he asserts that the Cubist style permits the artists "to give the object proportions appropriate to the *degree of plasticity* he desires" [p. 16, emphasis added].
+In other words, a musician seeking to mimic nature and create representational works would produce sounds corresponding to those we hear in nature.
+Instead, most musicians seek catharsis and want to express themselves, so they play instruments built specifically for the sole purpose of playing melodies based on pure notes.
+
+In this light, the Cubists were just trying to catch up with musicians by doing their own thing.
+
+A bit later Apollinaire asserts that the Cubist style permits the artists "to give the object proportions appropriate to the *degree of plasticity* he desires" [p. 16, emphasis added].
 
 There's that word again!
 

@@ -1,15 +1,7 @@
 
-# 4b-mondrian_part_2-cezanne_cubism_and_the_plastic_means-draft.md
+# 4c-mondrian_part_2-cezanne_cubism_and_the_plastic_means-article.md
 
-Time to take the basic ideas I have for this new article on medium and turn them into a draft.
-
-**Try to keep it short and sweet -- and focused on explaining the term "plastic."**
-
-#### LOL as if!  But try to stay on track!!
-
-# Images
-
-Images referenced are in the directory `../images/` and the names are prefixed by `mondrian_part_2-`.
+Saving the text for this article in case I somehow lose what I post to medium, or want access to the text for some other reason, as yet unforeseen.
 
 # The Prophetic Vision of Piet Mondrian, Part 2: Cubism, Cézanne, and the Plastic Means
 
@@ -17,46 +9,37 @@ Images referenced are in the directory `../images/` and the names are prefixed b
 
 ![../images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg)
 
+- Alt Text: A painting of rectangular forms in white, black, and primary colors, typical of Piet Mondrian's Neo-Plastic style.
 - Source: [wikiart.org](https://www.wikiart.org/en/piet-mondrian/composition-2-1922)
 
-## [Introduction -- implied rather than stated]
+## [Introduction -- implied rather than stated!]
 
-There are two kinds of art: mimetic and cathartic.
-The difference between them is the way and the extent to which the artist uses the *plastic means.*
+There are two kinds of art: mimetic and cathartic.  The difference between them is the way and the extent to which the artist uses the *plastic means.*
 
-I learned about these two types of art only recently, in a class at [edx.org](https://edx.org) entitled [Art and Design in the Digital Age](https://learning.edx.org/course/course-v1:IsraelX+DIGITALARTx+1T2021/home).
-The class is quite enlightening, and I recommend it to anyone who enjoys learning about the history of art.
+I learned about these two types of art only recently, in a class at [edx.org](https://edx.org) entitled [Art and Design in the Digital Age](https://learning.edx.org/course/course-v1:IsraelX+DIGITALARTx+1T2021/home).  The class is quite enlightening, and I recommend it to anyone who would enjoy learning about how today's digital works fit in the overall history of art.
 
-Mimetic art is representational, and the artist seeks to mimic reality.
-Cathartic art is expressionist, and the artist seeks to express how they feel about reality.
+Mimetic art is representational, and mimetic artists seek to mimic reality.  Cathartic art is expressionist, and cathartic artists seek to express how they feel.
 
 ## Part 2 of a Series
 
-This is part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.
-For part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5).
+This is Part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.  For Part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5).
 
-The image above is a poster of a painting Mondrian completed in 1922 entitled *Composition 2.*
-It is typical of Mondrian's distinctive style, which he called *[NeoPlasticism](https://en.wikipedia.org/wiki/Neoplasticism)* or *The New Plastic.*
+The image above is a poster of a painting Mondrian completed in 1922 entitled *Composition 2.* It is typical of Mondrian's distinctive style, which he called *[NeoPlasticism](https://en.wikipedia.org/wiki/Neoplasticism)* or *The New Plastic.*
 
-You can buy a poster of an image like this from the site [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200,
-and find originals similar to it on the site [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.
-The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for such large amounts is proof that his vision was truly prophetic.
+You can buy a poster of an image like this on [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200, and find originals similar to it on [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.  The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for such large amounts is proof that his vision was truly prophetic.
 
-Although Mondrian's work is valuable today, he lived humbly.
-According to the *Chronology* in his *Collected Writings,* at times he had to supplement "his small income by painting watercolors of flowers" [p. xxii, 1922].
+Although Mondrian's work is valuable today, he lived humbly.  According to the *Chronology* in his *Collected Writings,* at times he had to supplement "his small income by painting watercolors of flowers" [p. xxii, 1922].
 
 Also from his *Collected Writings* is this quote, from a letter he wrote to Arnold Saalborn around 1910:
 
-> But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is,
-> a more conventional manner of painting -- so I have to work twice as much [p. 19].
+> But since I do not earn much with "my kind of work," I also have to devote a great deal of time to work for the mass, that is, a more conventional manner of painting -- so I have to work twice as much [p. 19].
 
-In trying to understand Mondrian's art, I've spent a considerable amount of time reading his *Collected Writings* -- parts of which can be quite challenging to understand.
-One of the reasons it can be difficult to understand his writings is that he frequently uses the word *plastic,* in expressions such as *plastic means,* *plastic expression,* and *plastic value.*
+In trying to understand Mondrian's art, I've spent a considerable amount of time reading his *Collected Writings* -- parts of which can be quite challenging to understand.  One of the reasons it can be difficult to understand his writings is that he frequently uses the word *plastic,* in expressions such as *plastic means,* *plastic expression,* and *plastic value.*
 
 The focus of this article is on how I learned what Mondrian meant by the word *plastic.*
 
-This quest first lead to learning about Cubism, which inspired Mondrian's unique style.
-That in turn lead to learning about Paul Cézanne, who in turn inspired the Cubists.
+This quest first lead to learning about Cubism, which inspired Mondrian's unique style.  That in turn lead to learning about Paul Cézanne, who in turn inspired the Cubists.
+
 It was in a book about Cézanne's compositions that I finally found a definition of *the plastic means.*
 
 ## Piet Mondrian's *Collected Writings*

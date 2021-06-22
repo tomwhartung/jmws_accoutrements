@@ -221,7 +221,7 @@ The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings jux
 
 Following are two images from page 60 of Loran's book: a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarry Called Bibemus](http://paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp)* in black-and-white, and a black-and-white photograph of the motif by Loran.  Given these images, one does not really need to read Loran's analysis to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
-- Image: ![`../images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2)
+- Image: ![`../images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2.jpg)
 - Alt text: A combo image showing the painting of the Sainte Victoire mountain by Cézanne next to a photograph of the same mountain. The mountain in the painting is much larger and more pronounced than it is in the photograph.
 - Caption: Cézanne's painting The Sainte Victoire, Seen From the Quarry Called Bibemus juxtaposed with a photograph of the motif. Source: Cézanne's Composition by Erle Loran, p. 60.
 - Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, p. 60.

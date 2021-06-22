@@ -245,34 +245,36 @@ Published in 1943, *Cézanne's Composition* is apparently out of print.  Althoug
 
 At this point I finally feel as though I could certainly explain *the plastic means* to people -- albeit perhaps in halting terms along with a bit of hand-waving.  And it would be a lot easier to explain the idea if I could refer to these images!
 
-## Plasticity: Malleability
+## Plasticity, Malleability, Mimicry, and Understanding
 
-Loran's and Mondrian's term *the plastic means* and the *plastic material* that is ubiquitous in our modern day lifes share the concept of *malleability.* Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.  And it's easy to see why manufacturers often prefer plastic to the much less malleable traditional materials like wood or steel.
+Loran's and Mondrian's term *the plastic means,* and the *plastic material* that is ubiquitous in our modern day lifes, share the concept of *malleability.*
 
-Before reading Loran's book, my idea of the plastic means included a feeling of artificiality -- something the artist made up out of thin air.
-After reading *Cézanne's Composition,* my concept of the term more closely resembles the idea of distortion -- a distortion inspired by the artist's perception and understanding of the scene.
-In that respect, the photograph is the more artificial version and Cézanne's painting is closer to reality -- the way we would feel about and remember the scene.
+Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.  And it's easy to see why manufacturers often prefer plastic to traditional materials like wood or steel, which are much less malleable.
+
+Before reading Loran's book, my idea of the plastic means as being the process of composing an image included a feeling of artificiality -- something the artist made up out of thin air.
+After reading *Cézanne's Composition,* my concept of the term more closely resembles the idea of distortion -- a distortion inspired by the artist's inner perception and understanding of the scene.
+In this respect, the photograph can be considered to be the more artificial version, making Cézanne's painting closer to reality, because his images reflect the way we would feel about and remember the scene.
 
 This new understanding of *the plastic means* is enhanced by having learned about the different types of art: mimesis versus catharsis, representation versus expression.
 
 My interest in Art History began with a class at [Virginia Commonwealth University](http://vcu.edu) in the History of Photography in the mid 1980s.
-At the time I wondered, why would someone learn to paint when they can use a camera to capture the scene?
+At the time I wondered, why would someone learn to paint when it's so much easier to use a camera to capture the scene?
+
 Understanding *the plastic means* and learning how to use it to express one's inner vision is the obvious answer to that question!
 
 ## Today's Digital Plasticity
 
-Scientific perspective in our pockets!
+Today virtually all of us have the ability to create images in our pockets!
+The scientific perspective artists struggled for centuries to achieve is widely available at the click of a button.
 
-[Possibly off-topic, but thinking about mentioning plasticity today: cell phone cameras, Star Wars, GoT, etc. maybe?]
+At the same time, artists can use digital tools such as Photoshop and the open source GNU Image Processing (GIMP) program to manipulate their images in unprecedented ways.
+Movie makers can use CGI tools to construct alternate realities that make Cézanne's distortions look like child's play.
 
-
+One could say that Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, but the reality is *the plastic means* continue to evolve, and where they will take us next is anyone's guess!
 
 -------- So far, so good. -------
 
-
-Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, often foregoing representation entirely, and called the resultant style *Neo-Plasticism.*
-
-## Conclusion
+## Unused Ideas, Add or Discard:
 
 Irony: film is plastic.
 
@@ -280,25 +282,4 @@ It's difficult to find a definition of the word "plastic" that corresponds to Mo
 
 If you are interested in the language of composition in general, and in reading Mondrian's writings in particular, I highly recommend finding a copy of Erle Loran's book!
 
-
--------- delete me, you wuss. -------
-
-Indeed, the index to the book Vision in Motion by L. Moholy-Nagy (1961) lists 19 occurrences of the term, but only the first mimics Mondrian's use of the term, while the other 18 references are to the material.
-
-## Cubism Inspired, Cubism Adjacent
-
-[Possibly off-topic, but thinking about including something about Mondrian being included in Cooper's book, and also mentioning Duchamp and the Orphists, as being others who were not Cubists, but were inspired about them.]
-
-- Image:
-
-![`../images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-bw-p_60-scaled-1.jpg)
-
-- Source: Cézanne's Composition by Erle Loran, p. 60.
-
-
-- Image:
-
-![`../images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-photo-bw-p_60-scaled-1.jpg)
-
-- Source: Cézanne's Composition by Erle Loran, p. 60.
 

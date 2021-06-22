@@ -223,45 +223,33 @@ Following are two images from page 60 of Loran's book: a copy of Cézanne's pain
 
 - Image: ![`../images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both-bw-p_60-scaled-2-cropped-1.jpg)
 - Alt text: A combo image showing the painting of the Sainte Victoire mountain by Cézanne next to a photograph of the same mountain. The mountain in the painting is much larger and more pronounced than it is in the photograph.
-- Caption: 
+- Caption: Cézanne's painting The Sainte Victoire, Seen From the Quarry Called Bibemus juxtaposed with a photograph of the motif. Source: Cézanne's Composition by Erle Loran, p. 60.
 - Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, p. 60.
 
 Seeing these images side-by-side is extremely enlightening!  In describing these images, Loran writes:
 
-> Cézanne has more than doubled the size of the Sainte Victoire.  The illusion of magnificent height which Cézanne has achieved through these measurable
-> *plastic means* is akin to the exaggerated sense of its height that one has on actually seeing it -- as I had when I first discovered the motif.  But
-> the photograph of the motif utterly fails to suggest the grandeur, the massiveness, of this luminous white mountain....
-> Cézanne's painting, as compared with the [photograph of the] motif, illustrates graphically what should be understood and taught more widely as the
-> basic mechanics of drawing and composition, the *fundamental plastic means of expression.* [p. 60, emphasis added].
+> Cézanne has more than doubled the size of the Sainte Victoire.  The illusion of magnificent height which Cézanne has achieved through these measurable *plastic means* is akin to the exaggerated sense of its height that one has on actually seeing it -- as I had when I first discovered the motif.  But the photograph of the motif utterly fails to suggest the grandeur, the massiveness, of this luminous white mountain....  Cézanne's painting, as compared with the [photograph of the] motif, illustrates graphically what should be understood and taught more widely as the basic mechanics of drawing and composition, the *fundamental plastic means of expression.* [p. 60, emphasis added].
 
-Loran goes on to assert that the painting "becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].
-His use of the term *plastic* in these comparisons of the painting and his photograph really leave no doubt as to what he means by the term!
+Loran goes on to assert that the painting "becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].  His use of the term *plastic* in these comparisons of the painting and his photograph really leaves no doubt as to what he means by the term!
 
-Cézanne created a [series of paintings of the Sainte Victoire](https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)), and Loran includes a few of these in his book.
-In each case he includes a photograph of the motif showing how Cézanne's interpretation differed from a scientific perspective of the mountain.
+Cézanne created a [series of paintings of the Sainte Victoire](https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)), and Loran includes a few of these in his book.  In each case he includes a photograph of the motif showing how Cézanne's interpretation differed from a scientific perspective of the mountain.
 
 This version from the quarry is the only one of Cézanne's paintings to appear in color in Loran's book, and he uses it to conduct an extended analysis of the artist's use of color.
 
-- Image:
-
-![`../images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg)
-
+- Image: ![`../images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg)
+- Alt text: 
+- Caption: 
 - Source: Cézanne's Composition by Erle Loran, p. 60.
 
-In his analysis of this painting Loran writes that "Cézanne's uniqueness and perhaps his historical greatness is found in his power to synthesize abstraction and reality" [p. 63].
-A full discussion of his analysis is far beyond the scope of this article, but I encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of the book!
+In his analysis of this painting Loran writes that "Cézanne's uniqueness and perhaps his historical greatness is found in his power to synthesize abstraction and reality" [p. 63].  A full discussion of his analysis is far beyond the scope of this article, but I encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of the book!
 
-Published in 1943, *Cézanne's Composition* is apparently out of print.
-Although it costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457),
-you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1), simply by creating a free account on the site.
+Published in 1943, *Cézanne's Composition* is apparently out of print.  Although it costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1), simply by creating a free account on the site.
 
 ## Plasticism and Malleability
 
-At this point I finally feel as though I could explain *the plastic means* to someone -- albeit perhaps in halting terms along with a bit of hand-waving -- and a lot more easily if I could refer to these images!
-What the *plastic means* and *plastic material* share is the concept of *malleability.*
+At this point I finally feel as though I could explain *the plastic means* to someone -- albeit perhaps in halting terms along with a bit of hand-waving -- and a lot more easily if I could refer to these images!  What the *plastic means* and *plastic material* share is the concept of *malleability.*
 
-Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.
-It's easy to see why manufacturers often prefer plastic to the more traditional and less malleable materials like wood or steel.
+Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.  It's easy to see why manufacturers often prefer plastic to the more traditional and less malleable materials like wood or steel.
 
 Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, often foregoing representation entirely, and calling the resultant style *Neo-Plasticism.*
 

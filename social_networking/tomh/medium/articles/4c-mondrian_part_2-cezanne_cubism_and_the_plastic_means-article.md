@@ -56,7 +56,7 @@ Mondrian calls the piece a "little work into which I have compressed all that I 
 
 Near the end of the piece he predicts that his art, and that by others, can and will eventually lead to "high universal morality -- the true content of love, friendship, brotherhood, and all their synonyms" [p. 271].
 
-In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.  Recently I obtained my very own copy of this book, and decided to take a more methodical approach, starting with the introductory material by the authors and reading the articles in chronological order.
+In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.  Recently I obtained my very own copy of this book and decided to take a more methodical approach, starting with the introductory material by the authors and reading the articles in chronological order.
 
 As I write this article, I've finished all of Part I -- which spans 183 pages, about half of the book's total of 410 pages -- and have read some of the articles in Parts II and III.
 
@@ -245,32 +245,29 @@ Published in 1943, *Cézanne's Composition* is apparently out of print.  Althoug
 
 At this point I finally feel as though I could certainly explain *the plastic means* to people -- albeit perhaps in halting terms along with a bit of hand-waving.  And it would be a lot easier to explain the idea if I could refer to these images!
 
-## Plasticity, Malleability, Mimicry, and Understanding
+## Plasticity, Malleability, Mimicry, and Expression
 
-Loran's and Mondrian's term *the plastic means,* and the *plastic material* that is ubiquitous in our modern day lifes, share the concept of *malleability.*
+Loran's and Mondrian's term *the plastic means,* and the plastic material that is ubiquitous in our modern-day lifes, both share *malleability.*
 
-Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.  And it's easy to see why manufacturers often prefer plastic to traditional materials like wood or steel, which are much less malleable.
+Plastic bags are handy precisely because they can take on any shape needed to hold our items.  And it's easy to see why manufacturers often prefer plastic to traditional materials like wood or steel, which are much less malleable.
 
-Before reading Loran's book, my idea of the plastic means as being the process of composing an image included a feeling of artificiality -- something the artist made up out of thin air.
-After reading *Cézanne's Composition,* my concept of the term more closely resembles the idea of distortion -- a distortion inspired by the artist's inner perception and understanding of the scene.
-In this respect, the photograph can be considered to be the more artificial version, making Cézanne's painting closer to reality, because his images reflect the way we would feel about and remember the scene.
+Before reading *Cézanne's Composition,* my idea of the plastic means as being the process of composing an image included a feeling of artificiality -- something the artist made up out of thin air.  This is surely because I was seeing it in the context of Mondrian's Neo-Plasticism, and many of his abstract images are indeed products of his imagination.
 
-This new understanding of *the plastic means* is enhanced by having learned about the different types of art: mimesis versus catharsis, representation versus expression.
+After reading Loran's book, my concept of the term more closely resembles the idea of distortion -- a distortion inspired by the artist's inner perception and understanding of the scene.  In this respect, Loran's photograph of the motif can be considered to be the more artificial version, making Cézanne's painting closer to reality, because the painter's images reflect the way most people would feel about and remember the scene.
 
-My interest in Art History began with a class at [Virginia Commonwealth University](http://vcu.edu) in the History of Photography in the mid 1980s.
-At the time I wondered, why would someone learn to paint when it's so much easier to use a camera to capture the scene?
+This new understanding of *the plastic means* is enhanced by having learned about the different types of art: mimesis versus catharsis; representation versus expression.
 
-Understanding *the plastic means* and learning how to use it to express one's inner vision is the obvious answer to that question!
+My interest in Art History began with a class at [Virginia Commonwealth University](http://vcu.edu) in the History of Photography in the mid 1980s.  At the time I wondered, why would someone bother to learn how to paint when it's so much easier to use a camera to capture the scene?
+
+Understanding *the plastic means,* and learning how to use it to express one's inner vision, rather than mimic something everyone can already see, is the obvious answer to that question!
 
 ## Today's Digital Plasticity
 
-Today virtually all of us have the ability to create images in our pockets!
-The scientific perspective artists struggled for centuries to achieve is widely available at the click of a button.
+Today virtually all of us have the ability to create images in our pockets!  The scientific perspective artists struggled for centuries to achieve is widely available at the click of a button on our cell phones.
 
-At the same time, artists can use digital tools such as Photoshop and the open source GNU Image Processing (GIMP) program to manipulate their images in unprecedented ways.
-Movie makers can use CGI tools to construct alternate realities that make Cézanne's distortions look like child's play.
+At the same time, artists can use digital tools such as Photoshop and the open-source GNU Image Processing (GIMP) program to manipulate their images in unprecedented ways.  And moviemakers can use CGI tools to construct alternate realities that make Cézanne's distortions look like child's play.
 
-One could say that Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, but the reality is *the plastic means* continue to evolve, and where they will take us next is anyone's guess!
+One could say that Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, but the reality is *the plastic means* continue to evolve, and where they will take us next -- Augmented Reality, Virtual Reality, holodecks such as those on Star Trek -- is anyone's guess!
 
 -------- So far, so good. -------
 

@@ -62,7 +62,7 @@ As I write this article, I've finished all of Part I -- which spans 183 pages, a
 
 ## Plastic Means Versus Plastic Material
 
-Throughout his writings Mondrian frequently uses the term "plastic." As mentioned above, he refers to the style of his work as the "New Plastic" or "Neo-Plasticism," and this term appears in the title of many of his articles.
+Throughout his writings, Mondrian frequently uses the term "plastic." As mentioned above, he refers to the style of his work as the "New Plastic" or "Neo-Plasticism," and this term appears in the title of many of his articles.
 
 In fact, Mondrian called his first book -- which was published as a collection of essays in the journal *De Stijl* -- *The New Plastic in Painting.* He began writing it in 1914, and it appeared in twelve installments in the journal between October 1917 and October 1918.
 
@@ -143,7 +143,7 @@ Mondrian's work -- which is based on opposites of color and form -- served as a 
 
 I first learned about the MBTI in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and learning that I am an INFP turned out to be life-altering!  Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags such as #intj and #enfp that reference them are easy to find on social media sites such as twitter, pinterest, reddit, and tumblr.
 
-INFP stands for Introverted, iNtuitive, Feeling, and Perceptive.  I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP.  As Interesting as it may be, pursuing that idea will have to wait.
+INFP stands for Introverted, iNtuitive, Feeling (more emotional than logical), and Perceptive. I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP. As interesting as this idea may be, this is not the place to pursue it.
 
 Recently I decided to base the next phase of my visualizing personalities on the [Big Five "OCEAN" personality traits](https://en.wikipedia.org/wiki/Big_Five_personality_traits), and have been researching that model of personality in parallel with my studies of Mondrian and Cubism.  Reading *The Cubist Epoch* and learning about how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism -- would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
 
@@ -153,7 +153,7 @@ So taking this detour into understanding Cubism has been inspiring!
 
 As I became increasingly interested in and inspired by the Cubists, I learned that these artists and their work were in turn inspired by the work of Paul Cézanne.  Indeed, *The Cubist Epoch* mentions him with about the same frequency as Mondrian mentions the "plastic means!"
 
-After reading a few chapters of Cooper's book I eventually caved in to this curiosity, and searched for books about Cézanne in the Denver Public Library (DPL).  This was during the Coronovirus pandemic in 2020, so I had to put the seven books I found on hold and arrange to pick them via the DPL's curbside holds service.
+After reading a few chapters of Cooper's book I eventually caved in to this curiosity and searched for books about Cézanne in the Denver Public Library (DPL).  This was during the Coronovirus pandemic in 2020, so I had to put the seven books I found on hold and arrange to pick them via the DPL's curbside holds service.
 
 These books are large and printed on high-quality paper, so they're very heavy.  When I went to pick them up it took two people to carry them all out to my car!
 
@@ -207,7 +207,7 @@ To my eyes, this tipping of the axes makes the painting come alive.  It seems fu
 
 For Loran, it "has always suggested to me the setting for a melodramatic scene in a Dostoievski novel".  He goes on to claim "the window shapes, giving a somewhat haunted or deserted aspect to the scene, also contribute to the dramatic effect" [p. 53].
 
-Apparently where Loran is disposed to see scenes from books like *Notes From Underground* and *Crime and Punishment,* my inner vision is more influenced by shows like *Parks and Recreation,* *Friends,* and *The Office.*
+Apparently, where Loran is disposed to see scenes from books like *Notes From Underground* and *Crime and Punishment,* my inner vision is more influenced by shows like *Parks and Recreation,* *Friends,* and *The Office.*
 
 The author describes how the shapes take the viewer's eyes on a circular, clockwise path from the bottom of the image, to the house on the left and then up to its roof, and finally to the smaller buildings on the right.  He concludes his analysis by writing "the real drama in the painting derives from the plastic forces" [p. 54] that control our attention.
 
@@ -222,50 +222,55 @@ The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings jux
 Following are two images from page 60 of Loran's book: a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarry Called Bibemus](http://paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp)* in black-and-white, and a black-and-white photograph of the motif by Loran.  Given these images, one does not really need to read Loran's analysis to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
 - Image: ![`../images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2.jpg)
-- Alt text: A combo image showing the painting of the Sainte Victoire mountain by Cézanne next to a photograph of the same mountain. The mountain in the painting is much larger and more pronounced than it is in the photograph.
-- Caption: Cézanne's painting The Sainte Victoire, Seen From the Quarry Called Bibemus juxtaposed with a photograph of the motif. Source: Cézanne's Composition by Erle Loran, p. 60.
-- Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, p. 60.
+- Alt text: A combo image showing a photograph of the Sainte Victoire mountain by Erle Loran above the painting by Cézanne of the same mountain. The mountain in the painting is much larger and more pronounced than it is in the photograph, and it expresses the way Cézanne saw the mountain.
+- Caption: A combo image showing a photograph of the motif used in Cézanne's painting The Sainte Victoire, Seen From the Quarry Called Bibemus, positioned above a black-and-white copy of the painting.  Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, p. 60.
 
-Seeing these images side-by-side is extremely enlightening!  In describing these images, Loran writes:
+Seeing these images together is extremely enlightening!  In describing these images, Loran writes:
 
 > Cézanne has more than doubled the size of the Sainte Victoire.  The illusion of magnificent height which Cézanne has achieved through these measurable *plastic means* is akin to the exaggerated sense of its height that one has on actually seeing it -- as I had when I first discovered the motif.  But the photograph of the motif utterly fails to suggest the grandeur, the massiveness, of this luminous white mountain....  Cézanne's painting, as compared with the [photograph of the] motif, illustrates graphically what should be understood and taught more widely as the basic mechanics of drawing and composition, the *fundamental plastic means of expression.* [p. 60, emphasis added].
 
-Loran goes on to assert that the painting "becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].  His use of the term *plastic* in these comparisons of the painting and his photograph really leaves no doubt as to what he means by the term!
+Loran goes on to assert that the painting "becomes a new reality achieved by purely plastic means, by color and form alone" [p. 61].  His use of the term *plastic* in these comparisons of the painting and his photograph really leaves no doubt as to what he -- and no doubt Mondrian as well -- mean by the term!
 
-Cézanne created a [series of paintings of the Sainte Victoire](https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)), and Loran includes a few of these in his book.  In each case he includes a photograph of the motif showing how Cézanne's interpretation differed from a scientific perspective of the mountain.
+Cézanne created a [series of paintings of the Sainte Victoire](https://en.wikipedia.org/wiki/Mont_Sainte-Victoire_(C%C3%A9zanne)), and Loran includes a few more of these in his book.  In each case he includes a photograph of the motif that shows how Cézanne's interpretation differed from a scientific perspective of the mountain.
 
-This version from the quarry is the only one of Cézanne's paintings to appear in color in Loran's book, and he uses it to conduct an extended analysis of the artist's use of color.
+This version from the quarry is the only one of Cézanne's paintings to appear in color in Loran's book, and he refers to it in his extended analysis of the artist's use of color.
 
 - Image: ![`../images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-painting-color-p_62-scaled-1.jpg)
-- Alt text: 
-- Caption: 
-- Source: Cézanne's Composition by Erle Loran, p. 60.
+- Alt text: A copy of Cézanne's painting of The Sainte Victoire, Seen From the Quarry Called Bibemus in color, showing the complementary color scheme of the warm orange of the cliffs, tied together by the network of cool green in the trees, and with the whitish colors of the mountain and cool blue of the sky in the background.
+- Caption: A copy of Cézanne's painting of The Sainte Victoire, Seen From the Quarry Called Bibemus in color.  Loran's analysis describes the "simple complementary color scheme, which is a theme founded on the warm and cool contrast of orange against green and blue."  Source: [Cézanne's Composition](https://archive.org/details/cezannescomposit0000lora_f9b1) by Erle Loran, pp. 62-63.
 
-In his analysis of this painting Loran writes that "Cézanne's uniqueness and perhaps his historical greatness is found in his power to synthesize abstraction and reality" [p. 63].  A full discussion of his analysis is far beyond the scope of this article, but I encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of the book!
+In his analysis of this painting Loran writes that "Cézanne's uniqueness and perhaps his historical greatness is found in his power to synthesize abstraction and reality" [p. 63].  A full discussion of his analysis is far beyond the scope of this article, but I encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of Loran's book!
 
-Published in 1943, *Cézanne's Composition* is apparently out of print.  Although it costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1), simply by creating a free account on the site.
+Published in 1943, *Cézanne's Composition* is apparently out of print.  Although it costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1) by creating a free account on the site.
+
+At this point I finally feel as though I could certainly explain *the plastic means* to people -- albeit perhaps in halting terms along with a bit of hand-waving.  And it would be a lot easier to explain the idea if I could refer to these images!
 
 ## Plasticity: Malleability
 
-At this point I finally feel as though I could explain *the plastic means* to someone -- albeit perhaps in halting terms along with a bit of hand-waving -- and a lot more easily if I could refer to these images!  What the *plastic means* and *plastic material* share is the concept of *malleability.*
+Loran's and Mondrian's term *the plastic means* and the *plastic material* that is ubiquitous in our modern day lifes share the concept of *malleability.* Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.  And it's easy to see why manufacturers often prefer plastic to the much less malleable traditional materials like wood or steel.
 
-Plastic bags are handy precisely because they can take on any shape needed to hold our purchases.  It's easy to see why manufacturers often prefer plastic to the more traditional and less malleable materials like wood or steel.
+Before reading Loran's book, my idea of the plastic means included a feeling of artificiality -- something the artist made up out of thin air.
+After reading *Cézanne's Composition,* my concept of the term more closely resembles the idea of distortion -- a distortion inspired by the artist's perception and understanding of the scene.
+In that respect, the photograph is the more artificial version and Cézanne's painting is closer to reality -- the way we would feel about and remember the scene.
 
-Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, often foregoing representation entirely, and calling the resultant style *Neo-Plasticism.*
+This new understanding of *the plastic means* is enhanced by having learned about the different types of art: mimesis versus catharsis, representation versus expression.
 
--------- So far, so good. -------
+My interest in Art History began with a class at [Virginia Commonwealth University](http://vcu.edu) in the History of Photography in the mid 1980s.
+At the time I wondered, why would someone learn to paint when they can use a camera to capture the scene?
+Understanding *the plastic means* and learning how to use it to express one's inner vision is the obvious answer to that question!
 
-
-## Mimesis and Representation versus Catharsis and Expression
-
-Revisit these two different kinds of art in light of the word "plastic."
-
-## Digital Plasticity
+## Today's Digital Plasticity
 
 Scientific perspective in our pockets!
 
 [Possibly off-topic, but thinking about mentioning plasticity today: cell phone cameras, Star Wars, GoT, etc. maybe?]
 
+
+
+-------- So far, so good. -------
+
+
+Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, often foregoing representation entirely, and called the resultant style *Neo-Plasticism.*
 
 ## Conclusion
 

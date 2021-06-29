@@ -269,14 +269,17 @@ At the same time, artists can use digital tools such as Photoshop and the open-s
 
 One could say that Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, but the reality is *the plastic means* continue to evolve, and where they will take us next -- Augmented Reality, Virtual Reality, holodecks such as those on Star Trek -- is anyone's guess!
 
--------- So far, so good. -------
+## Mimesis and Catharthsis Exist on a Continuum
 
-## Unused Ideas, Add or Discard:
+A big difference between Carl Jung's Archetypes and the Big Five "OCEAN" Personality Traits -- both mentioned earlier in the section entitled *My Interest in All This* -- is that Jung's model of personality is black-and-white: you're either Introverted or Extraverted, iNtuitive or Sensing, Feeling or Thinking, and Judging or Perceiving.  In contrast, the Big Five model acknowledges that personality traits fall on a continuum, more like IQ tests, with the majority of people being more average and falling in between the extremes.
 
-Irony: film is plastic.
+It's important to realize that this also applies to the qualities of mimesis and catharsis.  Just as Cézanne's art is more representational than the Cubists', Picasso's art is more representational than Mondrian's.
 
-It's difficult to find a definition of the word "plastic" that corresponds to Mondrian's use of the word.
+In this scheme, don't forget that time is a crucial factor.  Someone creating paintings like Piet Mondrian's or Jackson Pollack's in this day and age would rightfully be considered more mimetic than cathartic.
 
-If you are interested in the language of composition in general, and in reading Mondrian's writings in particular, I highly recommend finding a copy of Erle Loran's book!
+Similarly, although the Beatles started off as a cover band, their highly original later work inspired a whole generation of rock musicians.  One could make similar assertions about a wide range of musicians and their bands, from Robert Johnson and Miles Davis, to Fleetwood Mac and the Grateful Dead -- and beyond.
 
+In an episode of *The Office,* Angela explains to Dwight why she dislikes jazz: "Why don't they just play the right notes?" Dwight nods in agreement because she has a point.
+
+It's a safe bet she has no Cubist or Abstract paintings on her walls -- because the straight-laced Angela's taste in visual art would surely reflect this same lack of understanding of the value of expression, catharsis, improvization, and the plastic means!
 

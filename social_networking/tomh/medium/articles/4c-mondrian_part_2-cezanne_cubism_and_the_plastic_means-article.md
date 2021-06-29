@@ -7,7 +7,7 @@ Saving the text for this article in case I somehow lose what I post to medium, o
 
 - Image: ![../images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-mondrian-composition-2-1922-wikiart.org.jpg)
 - Alt text: A painting of rectangular forms in white, black, and primary colors, typical of Piet Mondrian's Neo-Plastic style.
-- Caption: 
+- Caption: Composition 2 by Piet Mondrian, 1922.
 - Source: [wikiart.org](https://www.wikiart.org/en/piet-mondrian/composition-2-1922)
 
 ## [Introduction -- implied rather than stated!]
@@ -22,7 +22,7 @@ Mimetic art is representational, and mimetic artists seek to mimic reality.  Cat
 
 This is Part 2 of a series of articles about the work of the Dutch painter Piet Mondrian, 1872-1944.  For Part 1 see [The Prophetic Vision of Piet Mondrian, Part 1: Equilibrium in Art and Life](https://medium.com/@tomwhartung/the-prophetic-vision-of-piet-mondrian-part-1-equilibrium-in-art-and-life-c2b7ba006fd5).
 
-The image above is a poster of a painting Mondrian completed in 1922 entitled *Composition 2.* It is typical of Mondrian's distinctive style, which he called *[NeoPlasticism](https://en.wikipedia.org/wiki/Neoplasticism)* or *The New Plastic.*
+The image at the top of this article is a poster of a painting Mondrian completed in 1922 entitled *Composition 2.* It is typical of Mondrian's distinctive style, which he called *[NeoPlasticism](https://en.wikipedia.org/wiki/Neoplasticism)* or *The New Plastic.*
 
 You can buy a poster of an image like this on [art.com](https://www.art.com/gallery/id--a7/piet-mondrian-posters.htm) for around $100 to $200, and find originals similar to it on [sothebys.com](https://www.sothebys.com/en/artists/piet-mondrian) for around $2,000,000 to over $30,000,000.  The fact that Mondrian's Neoplastic paintings, which are now around 100 years old, sell for such large amounts is proof that his vision was truly prophetic.
 
@@ -52,9 +52,9 @@ The authors divide the book into three parts.
 
 One of the pieces in this book is *The New Art -- The New Life: The Culture of Pure Relationships,* which Mondrian first completed in December of 1931.  It appears in Part II of the book and the authors undoubtedly refer to it in the title of his *Collected Writings* because it draws parallels between his art and society at large, making it one of his most comprehensive and enlightening pieces.
 
-Mondrian calls the piece a "little work into which I have compressed all that I believe and hope for" [p. 245] in a letter to Alfred Roth dated August 6, 1931.  In this "little work" he discusses concepts such as "equivalent relationships" [e.g., pp. 248, 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
+In a letter to Alfred Roth dated August 6, 1931, Mondrian calls the piece a "little work into which I have compressed all that I believe and hope for" [p. 245].  In this "little work" he discusses concepts such as "equivalent relationships" [e.g., pp. 248, 251], "individual liberty" and "independent existence" [p. 255], and "freedom from the oppression of particular form" [p. 263].
 
-Near the end of the piece he predicts that his art, and that by others, can and will eventually lead to "high universal morality -- the true content of love, friendship, brotherhood, and all their synonyms" [p. 271].
+Near the end of the piece he predicts that his art, along with work by other artists, can and will eventually lead to "high universal morality -- the true content of love, friendship, brotherhood, and all their synonyms" [p. 271].
 
 In the past I've checked out copies of this book from the library, and read the articles and essays somewhat randomly, picking out those with the most interesting-sounding titles.  Recently I obtained my very own copy of this book and decided to take a more methodical approach, starting with the introductory material by the authors and reading the articles in chronological order.
 
@@ -66,11 +66,11 @@ Throughout his writings, Mondrian frequently uses the term "plastic." As mention
 
 In fact, Mondrian called his first book -- which was published as a collection of essays in the journal *De Stijl* -- *The New Plastic in Painting.* He began writing it in 1914, and it appeared in twelve installments in the journal between October 1917 and October 1918.
 
-While reading his *Collected Writings,* I have found the term "plastic" to be a constant mental stumbling block.  It is clear from the context that when Mondrian uses the word he is **not** referring to the ubiquitous plastic material used to make many of today's products.
+While reading his *Collected Writings,* I have found the term "plastic" to be a constant mental stumbling block.  It is clear from the context that when Mondrian uses the word he is **not** referring to the now-ubiquitous plastic material used to make many of today's products.
 
 Context makes it somewhat clear that he uses the word "plastic" to refer to the way he constructs and composes his images -- the way he molds reality into shapes of his own choosing.  For example, one of the chapters in this first series of articles, *New Plastic in Painting,* is entitled *The New Plastic as Abstract-Real Painting: Plastic Means and Composition.*
 
-The [wikipedia page for Neoplasticism](https://en.wikipedia.org/wiki/Neoplasticism) hints at this idea, stating that "every artist manipulates reality to produce an aesthetically pleasing, artfully pleasing whole." This gives us a sense of what he meant by the term, but it would be nice to see an actual definition of it and not have to wonder and guess.
+The [wikipedia page for Neoplasticism](https://en.wikipedia.org/wiki/Neoplasticism) hints at this idea, stating that "every artist manipulates reality to produce an aesthetically pleasing, artfully pleasing whole." This gives us a sense of what he meant by the term "plastic," but it would be nice to see an actual definition of it and not have to wonder and guess.
 
 ## Plastic This, Plastic That
 
@@ -127,7 +127,7 @@ At one point, Apollinaire explains Cubism by drawing an analogy between the pain
 
 > When he listens to a concert, the music-lover experiences joyful feelings which are different from the joy experienced when he hears natural sounds like the murmur of a stream, the roar of a waterfall, the wind soughing through a forest, or the harmonies of human speech, based on reason and not on aesthetics.  Similarly, the new painters will provide their admirers with artistic sensations created only by the harmony of contrasting hues of light [p. 12 of Peter Read's translation].
 
-In other words, a musician seeking to mimic nature and create representational works would produce sounds corresponding to those we hear in nature.  Instead, most musicians seek catharsis and want to express themselves, so they play instruments built specifically for the sole purpose of playing melodies based on pure notes.
+In other words, a musician seeking to mimic nature and create representational works would produce sounds corresponding to those we hear in nature.  Instead, most musicians seek catharsis and want to express themselves, so they play instruments built specifically for playing melodies based on pure notes.
 
 In this light, the Cubists were just trying to catch up with musicians by doing their own thing and expressing their inner vision.
 
@@ -143,7 +143,7 @@ Mondrian's work -- which is based on opposites of color and form -- served as a 
 
 I first learned about the MBTI in the 1980s -- right around the time I learned about Modern Art and Mondrian -- and learning that I am an INFP turned out to be life-altering!  Today, high schools and colleges teach courses explaining these four-letter types, books about them are popular, and posts with hashtags such as #intj and #enfp that reference them are easy to find on social media sites such as twitter, pinterest, reddit, and tumblr.
 
-INFP stands for Introverted, iNtuitive, Feeling (more emotional than logical), and Perceptive. I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP. As interesting as this idea may be, this is not the place to pursue it.
+INFP stands for Introverted, iNtuitive, Feeling (i.e., more emotional than logical), and Perceptive. I feel a strong connection to Piet Mondrian, and suspect he is, like me, an INFP. As interesting as this idea may be, this is not the place to pursue it.
 
 Recently I decided to base the next phase of my visualizing personalities on the [Big Five "OCEAN" personality traits](https://en.wikipedia.org/wiki/Big_Five_personality_traits), and have been researching that model of personality in parallel with my studies of Mondrian and Cubism.  Reading *The Cubist Epoch* and learning about how the various Cubist artists and their paintings evolved over time, I started thinking this style -- which is more nuanced than Mondrian's Neo-Plasticism -- would be a great way to express these personality traits, which are more nuanced than Jung's personality types.
 
@@ -161,7 +161,7 @@ It was in one of these books that I finally found a definition of the term *plas
 
 ## The Plastic Means: Defined With Illustrations!
 
-Most of the books about Cézanne that I found were either biographical in nature, or used critiques to expound on his place in Art history, or both.
+Most of the books about Cézanne that I found were either biographical in nature, or used critiques of his paintings to expound on his place in Art History, or both.
 
 However, one of the books, *[Cézanne's Composition: Analysis of His Form With Diagrams and Photographs of His Motifs](https://www.goodreads.com/book/show/1199387.C_zanne_s_Composition)* written by Erle Loran and published in 1943, did not fit into this mold.  It was in Loran's book that I finally found a formal definition of the "plastic means."
 
@@ -186,12 +186,12 @@ Following is a copy of the painting in color.
 
 - Image: ![`../images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-cezanne-house_and_farm_at_jas_de_bouffan-1887.jpg)
 - Alt text: A copy in color of the painting of a house and farm in the French countryside. In this painting the house is leaning to the left.
-- Caption: 
+- Caption: House and Farm at Jas de Bouffan by Paul Cézanne, 1897.
 - Source: [wikiart.org](https://www.wikiart.org/en/paul-cezanne/house-and-farm-at-jas-de-bouffan-1887)
 
 Loran's full definition is a bit much, and although he claims that it differs from "the traditional connotation," it looks to be relevant to Mondrian's use of the term nonetheless.  Importantly, because Mondrian was not a sculptor, and the paintings we're interested in do not contain rounded shapes, it sounds like Mondrian's use of the term does not constitute "the traditional connotation." So it looks like we are on the right track!
 
-This sentence, from near the end of his definition, contains the key idea we're looking for:
+This sentence, from near the end of his definition, contains the key idea I have been looking for:
 
 > Thus line, plane, volume, color, texture, and so on, are the *plastic means used to build and organize the total space in the picture plane* [p. 18, emphasis added].
 
@@ -219,7 +219,7 @@ Having had a sense that this was what Mondrian means by the term "plastic means,
 
 The bulk of *Cézanne's Composition* contains plates of Cézanne's paintings juxtaposed with sketches and text that analyze his compositions.  When possible -- that is, when the paintings are of landscapes rather than portraits -- Loran includes photographs of the motifs in the paintings.
 
-Following are two images from page 60 of Loran's book: a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarry Called Bibemus](http://paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp)* in black-and-white, and a black-and-white photograph of the motif by Loran.  Given these images, one does not really need to read Loran's analysis to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
+Following are two images from page 60 of Loran's book: a black-and-white photograph of the motif by Loran, and a copy of Cézanne's painting *[The Sainte Victoire, Seen From the Quarry Called Bibemus](http://paulcezanne.org/mont-sainte-victoire-seen-from-the-bibemus-quarry.jsp),* also in black-and-white.  Given these images, one does not really need to read Loran's analysis to get a full appreciation for why Cézanne is widely heralded as the [Father of Modern Art](https://smithsonianassociates.org/ticketing/tickets/cezanne-father-of-modern-art).
 
 - Image: ![`../images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-sainte_victoire-both_vert-bw-p_60-scaled-2-cropped-2.jpg)
 - Alt text: A combo image showing a photograph of the Sainte Victoire mountain by Erle Loran above the painting by Cézanne of the same mountain. The mountain in the painting is much larger and more pronounced than it is in the photograph, and it expresses the way Cézanne saw the mountain.
@@ -241,7 +241,7 @@ This version from the quarry is the only one of Cézanne's paintings to appear i
 
 In his analysis of this painting Loran writes that "Cézanne's uniqueness and perhaps his historical greatness is found in his power to synthesize abstraction and reality" [p. 63].  A full discussion of his analysis is far beyond the scope of this article, but I encourage anyone interested in a deep dive into Cézanne's use of color to find a copy of Loran's book!
 
-Published in 1943, *Cézanne's Composition* is apparently out of print.  Although it costs $75-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1) by creating a free account on the site.
+Published in 1943, *Cézanne's Composition* is apparently out of print.  Although it costs $60-100 on [amazon.com](https://www.amazon.com/C%C3%A9zannes-Composition-Analysis-Diagrams-Photographs/dp/0520248457), you can read it for free on [archive.org](https://archive.org/details/cezannescomposit0000lora_f9b1) by creating a free account on the site.
 
 At this point I finally feel as though I could certainly explain *the plastic means* to people -- albeit perhaps in halting terms along with a bit of hand-waving.  And it would be a lot easier to explain the idea if I could refer to these images!
 

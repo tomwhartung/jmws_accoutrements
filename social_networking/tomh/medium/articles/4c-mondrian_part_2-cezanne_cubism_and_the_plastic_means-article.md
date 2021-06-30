@@ -46,7 +46,7 @@ It was in a book about Cézanne's compositions that I finally found a definition
 
 The authors divide the book into three parts.
 
--- Part I, *The De Stijl Years: 1917-24,* covers his writings for the journal *De Stijl.*
+-- Part I, *The De Stijl Years: 1917-1924,* covers his writings for the journal *De Stijl.*
 -- Part II, *After De Stijl: 1924-1938,* contains the pieces he wrote after he and *De Stijl* parted ways but was still in continental Europe.
 -- Part III, *England and the United States: 1938-1944,* includes the articles and essays he wrote after leaving continental Europe due to the impending war.
 
@@ -104,7 +104,7 @@ For those unfamiliar with Cubism, Pablo Picasso and Georges Braque were, along w
 
 - Image: ![../images/mondrian_part_2-harlequin-1918.jpg](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-harlequin-1918.jpg)
 - Alt text: The painting Harlequin by Pablo Picasso shows a figure with a guitar. The figure and the guitar are fractured, with various parts depicted from different viewpoints.
-- Caption: 
+- Caption: Harlequin by Pablo Picasso, 1918.
 - Source: [wikiart.org](https://www.wikiart.org/en/paintings-by-style/cubism?select=featured)
 
 In an essay entitled *Piet Mondrian: The Man and His Work,* coauthor Harry Holtzman introduces the *Collected Works,* by writing:
@@ -177,7 +177,7 @@ Following is Loran's definition of *the plastic means or plastic form,* which ap
 
 - Image: ![`../images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg`](https://github.com/tomwhartung/jmws_accoutrements/blob/master/social_networking/tomh/medium/images/mondrian_part_2-plastic_means-p_17-cropped-scaled-2.jpg)
 - Alt text: A "picture box" showing how the scientific perspective of a house and farm could be constructed from the three-dimensional motif.
-- Caption: 
+- Caption: Loran's "Diagram II" showing a "picture box" containing the motif for the painting House and Farm at Jas de Bouffan.
 - Source: [Cézanne's Composition by Erle Loran,](https://archive.org/details/cezannescomposit0000lora_f9b1) p. 17.
 
 The sketch of the "picture box" above is the "Diagram II" Loran refers to in his definition, and it shows the motif for Cézanne's 1897 painting *House and Farm at Jas de Bouffan.* This house is "the Cézanne family's country estate," and a black-and-white reproduction of it appears on page 53 as Plate VII, which is also mentioned in his definition.
@@ -265,13 +265,13 @@ Understanding *the plastic means,* and learning how to use it to express one's i
 
 Today virtually all of us have the ability to create images in our pockets!  The scientific perspective artists struggled for centuries to achieve is widely available at the click of a button on our cell phones.
 
-At the same time, artists can use digital tools such as Photoshop and the open-source GNU Image Processing (GIMP) program to manipulate their images in unprecedented ways.  And moviemakers can use CGI tools to construct alternate realities that make Cézanne's distortions look like child's play.
+At the same time, artists can use digital tools such as Photoshop and the open-source GNU Image Processing (GIMP) program to manipulate their images in unprecedented ways.  And moviemakers can use CGI tools to imaginary construct alternate realities -- such as those in *Star Wars* and *Game of Thrones* -- that make Cézanne's distortions look like child's play.
 
 One could say that Piet Mondrian took what Cézanne and the Cubists started to its logical conclusion, but the reality is *the plastic means* continue to evolve, and where they will take us next -- Augmented Reality, Virtual Reality, holodecks such as those on Star Trek -- is anyone's guess!
 
-## Mimesis and Catharthsis Exist on a Continuum
+## The Representational-Expressionist Continuum
 
-A big difference between Carl Jung's Archetypes and the Big Five "OCEAN" Personality Traits -- both mentioned earlier in the section entitled *My Interest in All This* -- is that Jung's model of personality is black-and-white: you're either Introverted or Extraverted, iNtuitive or Sensing, Feeling or Thinking, and Judging or Perceiving.  In contrast, the Big Five model acknowledges that personality traits fall on a continuum, more like IQ tests, with the majority of people being more average and falling in between the extremes.
+A big difference between Carl Jung's Archetypes and the Big Five "OCEAN" Personality Traits -- both mentioned earlier in the section entitled *My Interest in All This* -- is that Jung's model of personality is either-this-or-that: you're either Introverted or Extraverted, iNtuitive or Sensing, Feeling or Thinking, and Judging or Perceiving.  In contrast, the Big Five model acknowledges that personality traits fall on a continuum, like IQ tests, with the majority of people being more average and falling in between the extremes.
 
 It's important to realize that this also applies to the qualities of mimesis and catharsis.  Just as Cézanne's art is more representational than the Cubists', Picasso's art is more representational than Mondrian's.
 
@@ -279,7 +279,15 @@ In this scheme, don't forget that time is a crucial factor.  Someone creating pa
 
 Similarly, although the Beatles started off as a cover band, their highly original later work inspired a whole generation of rock musicians.  One could make similar assertions about a wide range of musicians and their bands, from Robert Johnson and Miles Davis, to Fleetwood Mac and the Grateful Dead -- and beyond.
 
-In an episode of *The Office,* Angela explains to Dwight why she dislikes jazz: "Why don't they just play the right notes?" Dwight nods in agreement because she has a point.
+In an episode of *The Office,* Angela explains to Dwight why she dislikes jazz: "Why don't they just play the right notes?" and Dwight of course agrees with her point.
 
-It's a safe bet she has no Cubist or Abstract paintings on her walls -- because the straight-laced Angela's taste in visual art would surely reflect this same lack of understanding of the value of expression, catharsis, improvization, and the plastic means!
+It's a safe bet the straight-laced Angela has no Cubist or Abstract paintings on her walls -- because her taste in visual art would surely reflect this same lack of understanding and appreciation of the value of expression, catharsis, improvization, and the plastic means!
+
+---
+
+Understanding Mondrian's term "the plastic means" is just one key to understanding his often cryptic writings. Another one of his rather puzzling and frequently used terms is "equilibrium."
+
+While researching ways for taking my Visualizing Personalities project to the next level, I found a short book by Paul Klee that sheds some light on this. At this time I'm hoping to make that a basis for Part 3 of this series.
+
+Until then, studying all these painters has helped inspire an interest in French, so: au revoir!
 

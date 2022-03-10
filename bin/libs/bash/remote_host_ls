@@ -31,6 +31,8 @@ elif [ $1 == "jane" ]; then
    ls_hostname="jane"
 elif [[ $1 == "lauren" ]]; then
    ls_hostname="lauren"
+elif [[ $1 == "mary" ]]; then
+   ls_hostname="mary"
 elif [[ $1 == "rita" ]]; then
    ls_hostname="rita"
 elif [ $1 == "veronica" ]; then
@@ -38,7 +40,7 @@ elif [ $1 == "veronica" ]; then
 else
    syntax
    echo "On which host are you trying to list files?"
-   echo "This script can only list files on ava, barbara, bette, humphrey, jane, lauren, rita, or veronica."
+   echo "This script can only list files on ava, barbara, bette, humphrey, jane, lauren, mary, rita, or veronica."
    exit 22
 fi
 
@@ -48,11 +50,11 @@ this_directory=$(pwd)
 ls_directory=$this_directory
 this_hostname=$(hostname)
 
-if [ "$this_hostname" == "rita.local" ]; then
+if [ "$this_hostname" == "mary.local" -o "$this_hostname" == "rita.local" ]; then
    ls_directory=$(echo $this_directory | perl -pe 's&^/Users/&/home/&;')
 fi
 
-if [ "$ls_hostname" == "rita" ]; then
+if [ "$ls_hostname" == "mary" -o "$ls_hostname" == "rita" ]; then
    ls_directory=$(echo $this_directory | perl -pe 's&^/home/&/Users/&;')
 fi
 

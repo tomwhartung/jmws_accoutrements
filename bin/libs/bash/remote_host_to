@@ -94,9 +94,9 @@ rm /tmp/remote_host_to-ping_output.$$
 #
 current_directory=$(pwd)
 
-if [ $this_hostname == "rita.local" ]; then
+if [ $this_hostname == "mary.local" -o $this_hostname == "rita.local" ]; then
    dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
-elif [ $dest_hostname == "rita" ]; then
+elif [ $dest_hostname == "mary" -o $dest_hostname == "rita" ]; then
    dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
 elif [ $dest_hostname == 'shell.dim.com' ]; then
    if [ $current_directory == '/usr/local/tar' ]; then
@@ -147,13 +147,13 @@ fi
 #  Set the sum command:
 #  --------------------
 #
-if [ "$this_hostname" == "rita.local" ]; then
+if [ "$this_hostname" == "mary.local" -o "$this_hostname" == "rita.local" ]; then
    this_sum_command="md5 -q"
 else
    this_sum_command="md5sum"
 fi
 
-if [ "$dest_hostname" == "rita" ]; then
+if [ "$dest_hostname" == "mary" -o "$dest_hostname" == "rita" ]; then
    dest_sum_command="md5 -q"
 else
    dest_sum_command="md5sum"

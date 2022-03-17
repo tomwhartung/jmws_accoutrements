@@ -77,9 +77,9 @@ rm /tmp/remote_host_diff-ping_output.$$
 #
 current_directory=$(pwd)
 
-if [ $this_hostname == "rita.local" ]; then
+if [ $this_hostname == "mary.local" -o $this_hostname == "rita.local" ]; then
    dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
-elif [ $dest_hostname == "rita" ]; then
+elif [ $dest_hostname == "mary" -o $dest_hostname == "rita" ]; then
    dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
 else
    dest_directory=$current_directory

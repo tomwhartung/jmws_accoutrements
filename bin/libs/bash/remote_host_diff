@@ -79,8 +79,10 @@ current_directory=$(pwd)
 
 if [ $this_hostname == "mary.local" -o $this_hostname == "rita.local" ]; then
    dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
+   dest_directory=$(echo $current_directory | perl -pe 's&^/art/&/var/art/&;')
 elif [ $dest_hostname == "mary" -o $dest_hostname == "rita" ]; then
    dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
+   dest_directory=$(echo $current_directory | perl -pe 's&^/art/&/var/art/&;')
 else
    dest_directory=$current_directory
 fi

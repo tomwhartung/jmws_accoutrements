@@ -52,7 +52,7 @@ this_hostname=$(hostname)
 
 if [ "$this_hostname" == "mary.local" -o "$this_hostname" == "rita.local" ]; then
    ls_directory=$(echo $this_directory | perl -pe 's&^/Users/&/home/&;')
-   ls_directory=$(echo $this_directory | perl -pe 's&^/art/&/var/art/&;')
+   ls_directory=$(echo $this_directory | perl -pe 's&^/var/art/&/art/&;')
 fi
 
 if [ "$ls_hostname" == "mary" -o "$ls_hostname" == "rita" ]; then

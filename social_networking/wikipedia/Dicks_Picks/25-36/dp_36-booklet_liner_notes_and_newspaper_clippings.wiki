@@ -9,9 +9,7 @@ The booklet starts off with seven pages of liner notes and contains two newspape
 
 The liner notes were written by [[Owsley "Bear" Stanley]] on 9/26/05 and are entitled "Notes: on sound, my theories and my techniques".  Accompanied by a few small black-and-white photographs of the band members, the essay is true to its title, offering a detailed description of how Bear, the band's soundman, set up the [[Public address system|public address systems]] the band used in its shows along with why he used these techniques.
 
-Technical details fill these notes, and the author demonstrates an appreciation of the acoustics of the venues and the brains of the people in the audience.  For example, at one point Stanley writes that:
-
-"This is simple physics.  Sound travels through air at a speed of one foot/millisecond, and human ears are set 1/2 foot apart, giving us a discrimination of 1/2 millisecond max in arrival of sound in each ear.  It is this sense for arrival time (phase/delay) which is used to determine direction."
+Technical details fill these notes, and the author demonstrates an appreciation of the acoustics of the venues and the brains of the people in the audience.  For example, at one point Stanley writes that "This is simple physics.  Sound travels through air at a speed of one foot/millisecond, and human ears are set 1/2 foot apart, giving us a discrimination of 1/2 millisecond max in arrival of sound in each ear.  It is this sense for arrival time (phase/delay) which is used to determine direction."
 
 Sound engineers may appreciate these technical details more than most people, but Bear is apparently writing for an audience of regular fans.  He closes his piece by writing he "hope[s] all this chatter is of some interest&mdash;or better, use&mdash;to you, the reader of these notes.  I also hope you enjoy this album."<ref>Booklet included with Dick's Picks Volume 36, &copy; 1972, 2005.</ref>
 
@@ -21,5 +19,5 @@ The booklet includes two newspaper clippings, but does not reveal when or where 
 
 The first clipping features a review by Jonathan Takiff entitled "Grateful Dead leaves 'em alive, thankful".  Writing that "Fifteen, 25, 40-minute jams pass without a time sense because there is no waste, no sense of repetition", the tone of the piece is very positive and the author demonstrates a solid understanding of the band, its music and fans, and the overall scene.
 
-The second clipping features a review by Ralph P. Bobb entitled " 'Dead' make Phila. more bearable".  Asking [[Rhetorical question|rhetorically]] "What makes Greatful Dead [sic] concerts so enjoyable?" the author explains that "The Dead is one group which can experiment with their music during a live concert and make it sound like a polished product."<ref>Booklet included with Dick's Picks Volume 36, &copy; 1972, 2005.</ref>
+The second clipping features a review by Ralph P. Bobb entitled " 'Dead' make Phila. more bearable".  Asking [[Rhetorical question|rhetorically]] "What makes Greatful [sic] Dead concerts so enjoyable?" the author explains that "The Dead is one group which can experiment with their music during a live concert and make it sound like a polished product."<ref>Booklet included with Dick's Picks Volume 36, &copy; 1972, 2005.</ref>
 

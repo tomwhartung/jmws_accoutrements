@@ -96,27 +96,29 @@ rm /tmp/remote_host_to-ping_output.$$
 current_directory=$(pwd)
 
 if [[ $this_hostname = "mary.local" || $this_hostname = "rita.local" ]] ; then
-   echo "remote_host_to: this_hostname is a Mac, fixing dest_directory as appropriate"
-   echo "remote_host_to before: current_directory = \"${current_directory}\""
+   ## echo
+   ## echo "remote_host_to: this_hostname is a Mac, fixing dest_directory as appropriate"
+   ## echo "remote_host_to before: current_directory = \"${current_directory}\""
    if [[ $current_directory =~ ^/Users/ ]] ; then
-      dest_directory=$(echo $current_directory | perl -pe 's&/Users/&/home/&;')
+      dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
    elif [[ $current_directory =~ ^/var/art/ ]] ; then
       dest_directory=$(echo $current_directory | perl -pe 's&^/var/art/&/art/&;')
    else
       dest_directory=${current_directory}
    fi
-   echo "remote_host_to after: dest_directory = \"${dest_directory}\""
+   ## echo "remote_host_to after: dest_directory = \"${dest_directory}\""
 elif [[ $dest_hostname = "mary" || $dest_hostname = "rita" ]]; then
-   echo "remote_host_to: dest_hostname is a Mac, fixing dest_directory as appropriate"
-   echo "remote_host_to before: current_directory = \"${current_directory}\""
+   ## echo
+   ## echo "remote_host_to: dest_hostname is a Mac, fixing dest_directory as appropriate"
+   ## echo "remote_host_to before: current_directory = \"${current_directory}\""
    if [[ $current_directory =~ ^/home/ ]] ; then
       dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
-   elif [[ $current_directory =~ ^/var/art/ ]] ; then
+   elif [[ $current_directory =~ ^/art/ ]] ; then
       dest_directory=$(echo $current_directory | perl -pe 's&^/art/&/var/art/&;')
    else
       dest_directory=${current_directory}
    fi
-   echo "remote_host_to after: dest_directory= \"${dest_directory}\""
+   ## echo "remote_host_to after: dest_directory= \"${dest_directory}\""
 elif [[ $dest_hostname = 'shell.dim.com' ]]; then
    if [[ $current_directory = '/usr/local/tar' ]]; then
       dest_directory=/vortex/home/t/tomh/tar

@@ -50,14 +50,30 @@ this_directory=$(pwd)
 ls_directory=$this_directory
 this_hostname=$(hostname)
 
-if [ "$this_hostname" == "mary.local" -o "$this_hostname" == "rita.local" ]; then
-   ls_directory=$(echo $this_directory | perl -pe 's&^/Users/&/home/&;')
-   ls_directory=$(echo $this_directory | perl -pe 's&^/var/art/&/art/&;')
+#
+#  Modify if necessary (/home vs. /Users) and check destination directory
+#  ----------------------------------------------------------------------
+#  Using '[[ ... ]] ' instead of '[ ... ]' so we can use regexes, ||, and maybe more:
+#     https://stackoverflow.com/questions/3427872/whats-the-difference-between-and-in-bash
+#
+if [[ "$this_hostname" == "mary.local" || "$this_hostname" == "rita.local" ]]; then
+   if [[ $this_directory =~ ^/Users/ ]] ; then
+      ls_directory=$(echo $this_directory | perl -pe 's&^/Users/&/home/&;')
+   elif [[ $this_directory =~ ^/var/art/ ]] ; then
+      ls_directory=$(echo $this_directory | perl -pe 's&^/var/art/&/art/&;')
+   else
+      dest_directory=${this_directory}
+   fi
 fi
 
-if [ "$ls_hostname" == "mary" -o "$ls_hostname" == "rita" ]; then
-   ls_directory=$(echo $this_directory | perl -pe 's&^/home/&/Users/&;')
-   ls_directory=$(echo $this_directory | perl -pe 's&^/art/&/var/art/&;')
+if [[ "$ls_hostname" == "mary" || "$ls_hostname" == "rita" ]]; then
+   if [[ $this_directory =~ ^/Users/ ]] ; then
+      ls_directory=$(echo $this_directory | perl -pe 's&^/home/&/Users/&;')
+   elif [[ $this_directory =~ ^/art/ ]] ; then
+      ls_directory=$(echo $this_directory | perl -pe 's&^/art/&/var/art/&;')
+   else
+      dest_directory=${this_directory}
+   fi
 fi
 
 ## echo "this_directory = \"$this_directory\""

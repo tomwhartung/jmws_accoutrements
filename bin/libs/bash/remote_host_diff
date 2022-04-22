@@ -74,15 +74,27 @@ rm /tmp/remote_host_diff-ping_output.$$
 #
 #  Set destination directory, modifying it if necessary (/home vs. /Users)
 #  ----------------------------------------------------------------------
+#  Using '[[ ... ]] ' instead of '[ ... ]' so we can use regexes, ||, and maybe more:
+#     https://stackoverflow.com/questions/3427872/whats-the-difference-between-and-in-bash
 #
 current_directory=$(pwd)
 
-if [ $this_hostname == "mary.local" -o $this_hostname == "rita.local" ]; then
-   dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
-   dest_directory=$(echo $current_directory | perl -pe 's&^/var/art/&/art/&;')
-elif [ $dest_hostname == "mary" -o $dest_hostname == "rita" ]; then
-   dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
-   dest_directory=$(echo $current_directory | perl -pe 's&^/art/&/var/art/&;')
+if [[ $this_hostname = "mary.local" || $this_hostname = "rita.local" ]]; then
+   if [[ $current_directory =~ ^/Users/ ]] ; then
+      dest_directory=$(echo $current_directory | perl -pe 's&^/Users/&/home/&;')
+   elif [[ $current_directory =~ ^/var/art/ ]] ; then
+      dest_directory=$(echo $current_directory | perl -pe 's&^/var/art/&/art/&;')
+   else
+      dest_directory=${current_directory}
+   fi
+elif [[ $dest_hostname = "mary" || $dest_hostname = "rita" ]]; then
+   if [[ $current_directory =~ ^/home/ ]] ; then
+      dest_directory=$(echo $current_directory | perl -pe 's&^/home/&/Users/&;')
+   elif [[ $current_directory =~ ^/art/ ]] ; then
+      dest_directory=$(echo $current_directory | perl -pe 's&^/art/&/var/art/&;')
+   else
+      dest_directory=${current_directory}
+   fi
 else
    dest_directory=$current_directory
 fi

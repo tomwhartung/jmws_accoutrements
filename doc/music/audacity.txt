@@ -33,11 +33,14 @@ Ctl-B - Give a track name to the current selction
 
 Adjusting the Input Level:
 --------------------------
-1. Start with System Settings -> Sound
-   Ensure it is set to Unamplified
+0. Make sure it is listening to and recording the turntable:
+   Edit -> Preferences, Devices - Recording - Device: HDA Intel PCH: CX20590 Analog (hw:0,0)
+1. Start with KDE System Settings (Ctl-Alt-S) -> Multimedia -> Audio Volume
+   Ensure it is set to Unamplified (?? old advice ??)
    It seems to migrate upwards slightly, weird
 2. Play the album and adjust the microphone's input level
-   For the Bob Marley albums I am doing, around 0.35-0.40 is looking good...
+   2022-08-13: Unable to set record volume in audacity, so setting it in the KDE System Settings instead
+   Old: For the Bob Marley albums I am doing, around 0.35-0.40 is looking good...
 3. Ensure there is no clipping
    Look for Red lines in the meter toolbar -- these indicate the recording has been clipped at some point
    See reference for location of meter toolbar and the relevance of the Red lines

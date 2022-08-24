@@ -31,6 +31,15 @@ Ctl-3 - Zoom out
 Ctl-E - Zoom to selection
 Ctl-B - Give a track name to the current selction
 
+Running the Program:
+--------------------
+Use the shell script "audacity" in /home/tomh/bin to run the current version of audacity.
+
+o The version included with Ubuntu is 2.3.3.
+o Version 3.1.3 is available for downloading, and is installed in /usr/bin/audacity-linux-3.1.3-x86_64.AppImage .
+
+To run version 3.1.3, run the "audacity" script on the command line.
+
 Adjusting the Input Level:
 --------------------------
 0. Make sure it is listening to and recording the turntable:

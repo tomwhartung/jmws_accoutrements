@@ -40,7 +40,7 @@ such as `.bash_aliases`, etc.
 Make the directory look like `/root` on `jane`.
 
 
-# Get Network to Work: Static IP, ssh, hosts file etc.
+# Get Network to Work: Static IP, hosts file, ssh etc.
 
 - Network
   - Static IP: 10.0.0.121
@@ -66,11 +66,17 @@ Make the directory look like `/root` on `jane`.
   - Add `~/.ssh/*` files copied from jane
 
 
+# Fix Issues
+
+- Remove and re-install firefox because of snap error
+
+
+# Find Sanity, as Best We Can
 
 - Install google-chrome-stable
-  - http://ubuntuhandbook.org/index.php/2020/04/google-chrome-ubuntu-20-04-official-repository/
-- System settings
-  - Adjust as necessary
-- Konsole settings
-  - Adjust as necessary
+  - Apparently we must do this manually now?
+  - Download file and run `apt install`
+
+- Adjust System settings as necessary
+- Adjust Konsole settings as necessary
 

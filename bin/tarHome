@@ -12,11 +12,11 @@ this_sum_command="md5sum"
 dest_sum_command="md5sum"
 
 if [ $this_hostname == "ava" ]; then
-   more_dirs="Downloads Pictures technical"
+   more_dirs="Downloads Pictures backup technical"
 elif [ $this_hostname == "barbara" ]; then
-   more_dirs=""
+   more_dirs="Downloads Pictures personal "
 elif [ $this_hostname == "bette" ]; then
-   more_dirs="Downloads Pictures jobsearch marketing personal technical"
+   more_dirs="Downloads Pictures backup jobsearch marketing personal technical"
 elif [ $this_hostname == "humphrey" ]; then
    more_dirs="iot"
 elif [ $this_hostname == "jane" ]; then
@@ -34,9 +34,8 @@ else
    exit 1
 fi
 
-## all_to_backup="."
-files_to_backup=".bashrc* .bash_aliases* .gitconfig r* .vimrc "
-dirs_to_backup=".config .kde .ssh .vim .xscreensaver backup bin $more_dirs RCS"
+files_to_backup=".bashrc* .bash_aliases* .gitconfig r* .vimrc .xscreensaver*"
+dirs_to_backup=".config .kde .ssh .vim .xscreensaver bin $more_dirs RCS"
 all_to_backup="$files_to_backup $dirs_to_backup"
 
 echo "files_to_backup: \"$files_to_backup\""

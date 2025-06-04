@@ -20,7 +20,7 @@ This turned out to be a little tricky.
 
 # Run the install
 
-Boot of the USB and run the installation process.
+Boot off the *2023-32B* USB drive and run the installation process.
 
 Use the version that includes vim, rcs, and git.
 

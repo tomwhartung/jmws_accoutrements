@@ -7,37 +7,28 @@ PATH=/var/www/jmws_accoutrements/bin/libs/bash:${PATH}
 this_hostname=$(hostname)
 dest_file_directory="/usr/local/tar"
 
-mail_dirs=""
 more_dirs=""
 this_sum_command="md5sum"
 dest_sum_command="md5sum"
 
 if [ $this_hostname == "ava" ]; then
    more_dirs="Downloads Pictures technical"
-   mail_dirs=".thunderbird"
 elif [ $this_hostname == "barbara" ]; then
    more_dirs=""
-   mail_dirs=".thunderbird"
 elif [ $this_hostname == "bette" ]; then
    more_dirs="Downloads Pictures jobsearch marketing personal technical"
-   mail_dirs=".thunderbird"
 elif [ $this_hostname == "humphrey" ]; then
    more_dirs="iot"
-   mail_dirs=""
 elif [ $this_hostname == "jane" ]; then
    more_dirs="Downloads jobsearch marketing personal technical"
-   mail_dirs=".thunderbird"
 elif [ $this_hostname == "lauren" ]; then
    more_dirs="Downloads personal technical"
-   mail_dirs=""
 elif [ $this_hostname == "rita.local" ]; then
    more_dirs="Documents Pictures jobsearch my_joomla personal technical"
-   mail_dirs=""
    this_sum_command="md5 -q"
    dest_sum_command="md5sum"
 elif [ $this_hostname == "veronica" ]; then
    more_dirs="personal technical"
-   mail_dirs=""
 else
    echo "Oops we are not set up to backup home directories on $this_hostname, sorry!!"
    exit 1
@@ -45,7 +36,7 @@ fi
 
 ## all_to_backup="."
 files_to_backup=".bashrc* .bash_aliases* .gitconfig r* .vimrc "
-dirs_to_backup=".config .kde .ssh .vim .xscreensaver $mail_dirs backup bin $more_dirs RCS"
+dirs_to_backup=".config .kde .ssh .vim .xscreensaver backup bin $more_dirs RCS"
 all_to_backup="$files_to_backup $dirs_to_backup"
 
 echo "files_to_backup: \"$files_to_backup\""

@@ -8,7 +8,7 @@ Installing 24.04 from scratch on barbara
 
 See `1-prepare_for_fresh_install.md` in this directory.
 
-## Saving Files in /home/tomh
+## Saving Files Currently in /home/tomh
 
 Most of the files we will need are in `barbara-home_tomh-2025_06_03.tgz`
 
@@ -17,6 +17,11 @@ Try saving the entire `/home/tomh` directory on the *2023-32A* thumb drive:
 - Created a`.tgz` file but it was too big to save on the thumb drive
 - Had to delete all `~/tmp` and `~/.cache` files to get this to work
   - For details, see `3b-home_tomh-barbara-disk_usage.md` in this directory
+
+## Saving Files Currently in /etc
+
+- Add `/etc/fstab` and `/etc/hosts` to the *2023-32A* thumb drive
+
 
 # Run the install
 
@@ -31,6 +36,10 @@ Use the version that includes vim, rcs, and git.
 Populate the `/home/tomh` directory with selected files and directories from the `tarHome` file:
 
 - `barbara-home_tomh-2025_06_03`
+  - Unpack in a temp directory and copy what we need from there
+    - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`,  `.vimrc`, etc.
+
+If necessary, get more files from the `home` directory copied to the thumb drive.
 
 ## Root User's Home Directory
 
@@ -43,11 +52,10 @@ Make the directory look like `/root` on `jane`.
 # Get Network to Work: Static IP, hosts file, ssh etc.
 
 - Network
-  - Static IP: 10.0.0.121
-- Fix `/etc/hosts`
-  - Use a copy of the one on jane
-  - Check in to rcs before making more changes
-- Install using `apt install`:
+  - Static IP: 10.0.0.116
+- Copy `/etc/hosts` from the thumb drive
+  - Check it in to rcs before making more changes
+- Install the following packages using `apt install`:
   - net-tools, openssh, openssh-server, ifupdown
 - Configure git
   - Copy .gitconfig from another host, OR run:
@@ -58,12 +66,7 @@ Make the directory look like `/root` on `jane`.
   - `apt-get upgrade -y`
   - 'apt install xscreensaver*'
   - 'apt install *fortune*'
-- Install `/home/tomh` from jane's most recent tar file
-  - Unpack in a temp directory and copy what we need from there
-    - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`,  `.vimrc`, etc.
-- Get ssh to work
-  - Run `ssh-keygen`
-  - Add `~/.ssh/*` files copied from jane
+- Ensure ssh works
 
 
 # Fix Issues

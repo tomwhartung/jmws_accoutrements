@@ -45,7 +45,7 @@ Checklist to track the progress in getting the content reviewed and updated on t
 - [x] ArtsyVisions.com
 - [x] Groja.com
 - [ ] JooMooWebSites.com
-- [ ] SeeOurMinds.com
+- [x] SeeOurMinds.com
 - [x] TomHartung.com
 - [ ] TomWHartung.com
 

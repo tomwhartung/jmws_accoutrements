@@ -29,7 +29,7 @@ Doing the upgrade:
   - `do-release-upgrade`
   - Started at around 6:45 PM
 
-While running the process, it stopped and displayed some messages.
+**While running the process, it stopped and displayed some messages.**
 
 - For details, see the next section
 
@@ -56,20 +56,44 @@ While running the process, it stopped and displayed some messages.
 
 > Encfs security information
 
-> According to a security audit by Taylor Hornby (Defuse Security), the current implementation of Encfs is vulnerable or potentially vulnerable to multiple types of  attacks. For example, an attacker with read/write access to encrypted data might lower the decryption complexity for subsequently encrypted data without this being  noticed by a legitimate user, or might use timing analysis to deduce information.  Until these issues are resolved, encfs should not be considered a safe home for sensitive data in scenarios where such attacks are possible. 13 169
+> According to a security audit by Taylor Hornby (Defuse Security), the current implementation of Encfs is vulnerable or potentially vulnerable to multiple types of  attacks. For example, an attacker with read/write access to encrypted data might lower the decryption complexity for subsequently encrypted data without this being  noticed by a legitimate user, or might use timing analysis to deduce information.  Until these issues are resolved, encfs should not be considered a safe home for sensitive data in scenarios where such attacks are possible.
 
 ### Action taken:
 
-- Killed xscreensaver, but did not see an instance of xlockmore running
 - Pressed <Enter> to continue
 
-## Message about 
+## Message about Firefox snap
 
-> Upgrade to the firefox snap  Starting in Ubuntu 22.04, all new releases of firefox are only available to Ubuntu users through the snap package.  This package update will transition your system over to the snap by installing it.  It is recommended to close all open firefox windows before proceeding to the upgrade. 13
+> Upgrade to the firefox snap
+
+> Starting in Ubuntu 22.04, all new releases of firefox are only available to Ubuntu users through the snap package.  This package update will transition your system over to the snap by installing it.  It is recommended to close all open firefox windows before proceeding to the upgrade. 13
 
 ### Action taken:
 
-- Killed xscreensaver
 - Pressed <Enter> to continue
 
+## Message about `/etc/sysctl.conf`
+
+Got this message about a change I had made to `/etc/sysctl.conf`:
+
+```
+Configuration file '/etc/sysctl.conf'
+ ==> Modified (by you or by a script) since installation.
+ ==> Package distributor has shipped an updated version.
+   What would you like to do about it ?  Your options are:
+    Y or I  : install the package maintainer's version
+    N or O  : keep your currently-installed version
+      D     : show the differences between the versions
+      Z     : start a shell to examine the situation
+ The default action is to keep your current version.
+*** sysctl.conf (Y/I/N/O/D/Z) [default=N] ? Y
+```
+
+- I did indeed change this file, and both the before and after versions are checked into RCS
+- If I want or need to make the change again, see `2-sysctl.conf-rcsdiff_output.md` in this directory
+
+### Action taken:
+
+- Chose "Y", to "install the package maintainer's version"
+- Pressed <Enter> to continue
 

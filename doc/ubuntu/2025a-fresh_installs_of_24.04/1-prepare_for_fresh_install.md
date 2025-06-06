@@ -3,8 +3,8 @@
 
 Installing 24.04 from scratch on:
 
-- [ ] martha (NEW!)
-- [ ] barbara
+- [X] martha (NEW!)
+- [X] barbara
 - [ ] ava
 
 

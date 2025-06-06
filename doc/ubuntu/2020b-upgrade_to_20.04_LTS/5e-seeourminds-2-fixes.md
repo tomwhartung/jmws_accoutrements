@@ -53,6 +53,9 @@ Filling in a name and email in the subscribe form on the home page opens the gro
 ## Enhancements Needed
 
 - [x] Quiz: Add number of questions answered to quiz results page
+- [ ] Quiz: Add requirements for people who want a portrait
+    - [ ] Must enter the name they want for the portrait
+    - [ ] Must answer at least 44 questions
 - [x] Politicians' Galleries: Ensure **ALL** are under Real People
 - [ ] Navigation: Add search box to header
 - [ ] GoT Gallery: Add an ad for GoT book to every GoT page in the gallery

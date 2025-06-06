@@ -1,5 +1,5 @@
 
-# 1-prepare_for_fresh_install.md
+# 1-prepare_for_fresh_installs.md
 
 Installing 24.04 from scratch on:
 

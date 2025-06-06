@@ -143,14 +143,21 @@ Konsole -> Settings:
   - Use a browser to log into github, get ssh command argument, and run `git clone`
 
 
-# Fix Issues
-
-See below.
-
-
 # Find Sanity Part II
 
 Finish up finding sanity in the new version, as best we can.
+
+- Must set Konsole Keyboard Shortcuts in **Both** System Settings and Konsole Keyboard Shortcuts
+  - My old shortcuts (Shift+Ctrl+T and Shift+Ctrl+N) do not seem to work in 24.04!  Rats!!
+  - System Settings -> Workspace
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+  - Konsole -> Settings -> Configure Keyboard Shortcuts
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+
+
+# Fix Issues
 
 ## When install is nearly complete
 
@@ -159,7 +166,8 @@ Finish up finding sanity in the new version, as best we can.
 ## WTF Is up With Switching Workspaces With Shift-Ctrl-Arrow_keys??
 
 - When (if?) get Ctrl-Alt-Arrow keys shortcut to switch desktops working:
-  - System Settings -> Workspace -> Workspace Behavior:
-    - Workspace Behavior -> Screen Edges
-      - Switch desktop on edge: Only When Moving Windows
+  - Use this as a work-around:
+    - System Settings -> Workspace -> Workspace Behavior -> Screen Edges
+      - Switch desktop on edge: Only When Moving Windows **OR** Always Enabled
+  - Figure out which one is preferred and make other hosts match
 

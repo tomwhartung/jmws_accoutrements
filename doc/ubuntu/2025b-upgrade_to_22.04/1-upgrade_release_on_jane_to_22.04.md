@@ -1,14 +1,15 @@
 
 # 1-upgrade_jane.md
 
-Jane has a lot of stuff on there (e.g., my sites and React, etc.), so we don't want to do a fresh install
+Jane has a lot of stuff on there (e.g., my sites and React, etc.), so we don't want to do a fresh install.
 
 
 # Upgrade Jane
 
 - Upgrading to 22.04 should be straightforward and safe
-- Consider upgrading to 24.04
-  - Note that we can hold off on doing this for a year or two
+- Hold off on upgrading to 24.04 for now
+  - Let things "settle" and see how it goes for a while
+  - Note that we do not need to do this for a year or two, and a lot can happen in the meantime
 
 
 # Preparations

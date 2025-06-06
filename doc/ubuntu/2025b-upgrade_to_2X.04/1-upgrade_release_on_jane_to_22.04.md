@@ -28,13 +28,14 @@ Doing the upgrade:
 - [X] Run the command:
   - `do-release-upgrade`
   - Started at around 6:45 PM
-
-**While running the process, it stopped and displayed some messages.**
-
-- For details, see the next section
+  - Finished about an hour later
 
 
 # Messages
+
+**While running the process, it stopped and displayed some messages.**
+
+Following are some details about these messages:
 
 ## Message about xscreensaver and xlockmore
 
@@ -96,4 +97,53 @@ Configuration file '/etc/sysctl.conf'
 
 - Chose "Y", to "install the package maintainer's version"
 - Pressed <Enter> to continue
+
+- Pressed <Enter> to continue
+
+## Message about the window switcher
+
+Saw a pop up message from the system (NOT from the upgrade process) about the window switcher being broken.
+It said I should contact my distribution manager (or something) about this.
+
+### Action taken:
+
+The message disappeared before I could copy or otherwise respond to it.
+
+- No action taken
+
+## Message about obsolete packages
+
+```
+Remove obsolete packages?
+
+
+158 packages are going to be removed.
+
+Removing the packages can take several hours.
+
+ Continue [yN]  Details [d]y
+```
+
+### Action taken:
+
+- Typed "Y" and pressed <Enter> to continue
+
+## Message about the process being complete
+
+Including this for the sake of completeness:
+
+```
+System upgrade is complete.
+
+Restart required
+
+To finish the upgrade, a restart is required.
+If you select 'y' the system will be restarted.
+
+Continue [yN] Y
+```
+
+### Action taken:
+
+- Typed "Y" and pressed <Enter> to continue
 

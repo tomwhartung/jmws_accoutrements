@@ -6,7 +6,7 @@ Installing 24.04 from scratch on new host martha.
 
 # Preparations
 
-See `1-prepare_for_fresh_install.md` in this directory.
+See `1-prepare_for_fresh_installs.md` in this directory.
 
 # New Linux Host: martha
 
@@ -73,10 +73,35 @@ Make the directory look like `/root` on `jane`.
 
 # Find Sanity, as Best We Can
 
+## Install Chrome
 - Install google-chrome-stable
-  - Apparently we must do this manually now?
-  - Download file and run `apt install`
+  - Reference:
+    - https://ubuntuhandbook.org/index.php/2024/04/install-google-chrome-ubuntu-24-04-lts/
+  - Apparently it's best to do this manually now?
+    - See quote below (from the link above) about the automatic method being *"deprecated"*
+
+> *Download & install the .deb package via the steps above automatically setup the Google Chrome repository for your system. However it’s outdated and **deprecated** due to security and policy change!*
+
+  - Download file and run `apt install <*.deb file name>` as root
+    - The following Note/Warning appeared at the end of the `apt` command output
+    - A search yielded this solution:
+      - https://askubuntu.com/questions/908800/what-does-this-apt-error-message-download-is-performed-unsandboxed-as-root
+      - So I ran the two commands immediately below the Note/Warning, that were recommended by that page, as root
+
+> N: Download is performed unsandboxed as root as file '/root/Downloads/google-chrome-stable_current_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+
+```
+chown -Rv _apt:root /var/cache/apt/archives/partial/
+chmod -Rv 700 /var/cache/apt/archives/partial/
+```
+
+## Fine Tuning Shortcuts etc.
 
 - Adjust System settings as necessary
 - Adjust Konsole settings as necessary
+
+
+# Finish Up
+
+- Uninstall firefox because one browser is enough on this host
 

@@ -1,5 +1,5 @@
 
-# 1-upgrade_jane.md
+# 1-upgrade_jane_to_22.04.md
 
 Jane has a lot of stuff on there (e.g., my sites and React, etc.), so we don't want to do a fresh install.
 
@@ -10,7 +10,16 @@ Jane has a lot of stuff on there (e.g., my sites and React, etc.), so we don't w
 - Hold off on upgrading to 24.04 for now
   - Let things "settle" and see how it goes for a while
   - Note that we do not need to do this for a year or two, and a lot can happen in the meantime
+- Ran through all this from Thu 6/5/2025 through Fri 6/6/2025
+  - See details below the dash-equals-dash line
 
+# Result
+
+As of Sat 6/21/2025 jane seems to be running ok.
+
+- **Thinking it will be ok to upgrade to 24.04 now**
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 # Preparations
 

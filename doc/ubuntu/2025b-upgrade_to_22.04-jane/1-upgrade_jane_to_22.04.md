@@ -15,9 +15,24 @@ Jane has a lot of stuff on there (e.g., my sites and React, etc.), so we don't w
 
 # Result
 
-As of Sat 6/21/2025 jane seems to be running ok.
+As of Sat 6/21/2025 jane seems to be running ok, except that the video flickers sometimes.
 
-- **Thinking it will be ok to upgrade to 24.04 now**
+Also, there's not much point in having one linux box running a different version from all the rest, unless there's a reason (e.g, with bette).
+
+** *Plan A:* **
+
+- **Thinking that now would be a good time to upgrade to 24.04**
+- The worst that could happen is I'd have to do a fresh install
+
+** *Plan B:* **
+
+- **If the upgrade totally fails somehow, run a fresh install**
+- See `../2026a-fresh_install_of_26.04-jane/1-install_26.04-jane.md`
+  - Review the analysis of jane's disk partitions
+  - Adapt the *Suggested Process* to work for 24.04 instead
+    - Hint: this will be trivial
+
+It's always nice to have a *Plan B!*
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

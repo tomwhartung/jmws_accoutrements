@@ -37,7 +37,7 @@ else
 fi
 
 files_to_backup=".bashrc* .bash_aliases* .gitconfig r* .vimrc .xscreensaver*"
-dirs_to_backup=".config .kde .ssh .vim .xscreensaver bin $more_dirs RCS"
+dirs_to_backup=".config .ssh .xscreensaver bin $more_dirs RCS"
 all_to_backup="$files_to_backup $dirs_to_backup"
 
 echo "files_to_backup: \"$files_to_backup\""

@@ -14,7 +14,7 @@ dest_sum_command="md5sum"
 if [ $this_hostname == "ava" ]; then
    more_dirs="Downloads Pictures backup technical"
 elif [ $this_hostname == "barbara" ]; then
-   more_dirs="Downloads Pictures personal "
+   more_dirs="Downloads Pictures personal technical"
 elif [ $this_hostname == "bette" ]; then
    more_dirs="Downloads Pictures backup jobsearch marketing personal technical"
 elif [ $this_hostname == "humphrey" ]; then

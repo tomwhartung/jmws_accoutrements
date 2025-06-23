@@ -95,6 +95,25 @@ chown -Rv _apt:root /var/cache/apt/archives/partial/
 chmod -Rv 700 /var/cache/apt/archives/partial/
 ```
 
+## Install Waveform Etc.
+
+- [X] Install Tracktion download manager
+  - Got the Note/Warning quoted below
+    - Frankly I don't think running it unsandboxed is a big deal
+  - Note that it is similar to the one above, but this one concerns the *Downloads* directory
+    - Oh rats, I see now that the one above was also for the *Downloads* directory
+    - Try running the slightly different commands immediately below the Note/Warning, because `~root/Downloads` seems like the logical place to be installing downloaded `.deb` files
+    - Note that I changed the `700` to `770` in the second command, so that `root` can continue to copy files into their `Downloads` directory!
+- [ ] Install all of the Tracktion software I have purchased
+
+> N: Download is performed unsandboxed as root as file '/root/Downloads/tracktion_download_manager_v1.5.3.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+
+```
+chown -Rv _apt:root /root/Downloads
+chmod -Rv 770 /root/Downloads
+```
+
+
 ## Fine Tuning Shortcuts etc.
 
 - Adjust System settings as necessary
@@ -103,5 +122,5 @@ chmod -Rv 700 /var/cache/apt/archives/partial/
 
 # Finish Up
 
-- Uninstall firefox because one browser is enough on this host
+- Consider uninstalling firefox because one browser is enough on this host
 

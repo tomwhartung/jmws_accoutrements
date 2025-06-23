@@ -36,8 +36,12 @@ else
    exit 1
 fi
 
+#
+#  2025-06-22: Removed .config from dirs_to_backup because that is where Tracktion puts its Waveform files
+#     I do not remember ever using any of these .config files after a fresh install
+## dirs_to_backup=".config .ssh .xscreensaver bin $more_dirs RCS"
+dirs_to_backup=".ssh .xscreensaver bin $more_dirs RCS"
 files_to_backup=".bashrc* .bash_aliases* .gitconfig r* .vimrc .xscreensaver*"
-dirs_to_backup=".config .ssh .xscreensaver bin $more_dirs RCS"
 all_to_backup="$files_to_backup $dirs_to_backup"
 
 echo "files_to_backup: \"$files_to_backup\""

@@ -12,21 +12,23 @@ this_sum_command="md5sum"
 dest_sum_command="md5sum"
 
 if [ $this_hostname == "ava" ]; then
-   more_dirs="Downloads Pictures backup technical"
+   more_dirs="Downloads Music Pictures backup technical"
 elif [ $this_hostname == "barbara" ]; then
-   more_dirs="Downloads Pictures personal technical"
+   more_dirs="Downloads Music Pictures personal technical"
 elif [ $this_hostname == "bette" ]; then
-   more_dirs="Downloads Pictures backup jobsearch marketing personal technical"
-elif [ $this_hostname == "humphrey" ]; then
-   more_dirs="iot"
+   more_dirs="Downloads Music Pictures backup jobsearch marketing personal technical"
 elif [ $this_hostname == "jane" ]; then
-   more_dirs="Downloads jobsearch marketing personal technical"
+   more_dirs="Downloads Music jobsearch marketing personal technical"
 elif [ $this_hostname == "lauren" ]; then
-   more_dirs="Downloads personal technical"
+   more_dirs="Downloads Music personal technical"
+elif [ $this_hostname == "martha" ]; then
+   more_dirs="Downloads Music personal technical"
 elif [ $this_hostname == "rita.local" ]; then
    more_dirs="Documents Pictures jobsearch my_joomla personal technical"
    this_sum_command="md5 -q"
    dest_sum_command="md5sum"
+elif [ $this_hostname == "humphrey" ]; then
+   more_dirs="iot"
 elif [ $this_hostname == "veronica" ]; then
    more_dirs="personal technical"
 else

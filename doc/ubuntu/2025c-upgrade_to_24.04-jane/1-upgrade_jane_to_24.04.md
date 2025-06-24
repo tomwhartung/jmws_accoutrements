@@ -41,5 +41,8 @@ Doing the upgrade:
 
 While running the process, it stopped and displayed some messages.
 These messages, and how I responded to them, are in a separate file named
-**`2-TBD`** in this directory.
+
+- **`2-upgrade-messages_and_responses.md`**
+
+in this directory.
 

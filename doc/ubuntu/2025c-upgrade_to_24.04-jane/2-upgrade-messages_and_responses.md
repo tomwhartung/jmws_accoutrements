@@ -5,6 +5,7 @@ During the upgrade, the following messages appeared.
 Along with each message, I list how I responded.
 
 
+
 ## Message: "Third party sources disabled"
 
 ```
@@ -22,6 +23,7 @@ To continue please press [ENTER]
 ### Action Taken:
 
 -> Pressed [ENTER]
+
 
 
 ## Message: "Do you want to start the upgrade?"
@@ -50,6 +52,7 @@ finished, the process cannot be canceled.
 -> Entered 'y'
 
 
+
 ## Message: "xscreensaver and xlockmore must be restarted before upgrading"
 
 ```
@@ -67,6 +70,7 @@ be restarted or stopped before continuing this upgrade, to avoid locking your us
 - Found an `xscreensaver` and killed it
 - Unable to find an `` process so not worrying about it
 - Pressed [ENTER] to proceed
+
 
 
 ## Message: "Upgrade to the Thunderbird Snap"
@@ -88,6 +92,7 @@ It is recommended to close all open thunderbird windows before proceeding to the
 ### Action Taken:
 
 -> I am not using Thunderbird so I just pressed [ENTER] to proceed
+
 
 
 ## Message: "Configuration file '/etc/apache2/apache2.conf' "
@@ -112,6 +117,7 @@ Configuration file '/etc/apache2/apache2.conf'
 -> Ensured the most recent version is checked in
 -> Entered "D" to see the differences, it looks like they just deleted the `# vim:` line at the end of the file
 -> Entered "Y" to **install the package maintainer's version**
+
 
 
 ## Message: "Configuration file '/etc/apache2/sites-available/000-default.conf' "
@@ -191,6 +197,7 @@ Configuration file '/etc/apache2/sites-available/000-default.conf'
 ```
 
 
+
 ## Message: "Configuration file '/etc/apache2/sites-available/default-ssl.conf' "
 
 ```
@@ -217,6 +224,70 @@ Configuration file '/etc/apache2/sites-available/default-ssl.conf'
 -> **If we decide to run apache again, we can come back to all this**
 
 
+
+## Message: "Configuration file '/etc/fwupd/fwupd.conf' "
+
+```
+Configuration file '/etc/fwupd/fwupd.conf'
+ ==> File on system created by you or by a script.
+ ==> File also in package provided by package maintainer.
+   What would you like to do about it ?  Your options are:
+    Y or I  : install the package maintainer's version
+    N or O  : keep your currently-installed version
+      D     : show the differences between the versions
+      Z     : start a shell to examine the situation
+ The default action is to keep your current version.
+*** fwupd.conf (Y/I/N/O/D/Z) [default=N] ? Y
+```
+
+### Action Taken:
+
+-> Did not see a corresponding file in RCS (nor any `RCS` subdirectory whatsoever)
+-> Entered "D", examined the differences, and did not see anything that looked like my changes
+-> Entered "Y" to **install the package maintainer's version**
+
+
+
+## Message: "Remove obsolete packages?"
+
+```
+Remove obsolete packages?
+
+
+270 packages are going to be removed.
+
+Removing the packages can take several hours.
+
+ Continue [yN]  Details [d] y
+```
+
+### Action Taken:
+
+-> Entered "y"
+
+
+
+## Message: "System upgrade is complete."
+
+```
+System upgrade is complete.
+
+Restart required
+
+To finish the upgrade, a restart is required.
+If you select 'y' the system will be restarted.
+
+Continue [yN] y
+
+```
+
+### Action Taken:
+
+-> Entered "y"
+
+
+
+
 ## Message:
 
 ```
@@ -228,6 +299,7 @@ Configuration file '/etc/apache2/sites-available/default-ssl.conf'
 
 
 
+
 ## Message:
 
 ```
@@ -236,6 +308,7 @@ Configuration file '/etc/apache2/sites-available/default-ssl.conf'
 ### Action Taken:
 
 -> 
+
 
 
 

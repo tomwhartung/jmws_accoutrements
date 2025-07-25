@@ -5,13 +5,13 @@ RE-installing Ubuntu 24.04 from scratch on new host martha.
 
 # Backstory
 
-1. It had been a while since messing with ubuntu installs and I forgot that I prefer Kubuntu (KDE)
+1. It had been a while since I have worked with ubuntu installs and I forgot that I prefer Kubuntu (KDE)
 1. So I wound up installing Ubuntu 24.04 LTS and was all like WTF, oh yeah, oops!
 1. So I installed Kubuntu 24.04 LTS instead
 1. I am finding that with Kubuntu 24.04, the screen saver doesn't time out and sleep the way I want it to
-  - This is happening on barbara, too, but I think in a different way.  Hmm.
+    - This is happening on barbara, too, but I think in a different way.  Hmm.
 1. So I have decided to go back to Ubuntu after all
-  - Ultimately, at least for the time being, the idea is to do only music stuff on martha
+    - Ultimately, at least for the time being, the idea is to do only music stuff on martha
 
 These are the steps I'm taking, for possible future reference, or at least to keep me focused and provide an internal dialog as I go along
 
@@ -21,7 +21,7 @@ Following the process at https://ubuntu.com/tutorials/install-ubuntu-desktop#1-o
 
 1. Downloaded `ubuntu-24.04.2-desktop-amd64.iso` from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 1. Used **Startup Disk Creator** to create a bootable USB stick on my 2023-32B thumb drive
-  - The docs now recommend using balenaEtcher, but I already have **Startup Disk Creator** installed on ava, so I am using that
+    - The docs now recommend using balenaEtcher, but I already have **Startup Disk Creator** installed on ava, so I am using that
 1. Booted martha from the USB stick and ran through the installation procedure
 1. 
 

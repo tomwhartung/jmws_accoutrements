@@ -1,0 +1,146 @@
+
+# 1-REinstall_24.04-martha.md
+
+RE-installing Ubuntu 24.04 from scratch on new host martha.
+
+# Backstory
+
+- 1. It had been a while since messing with ubuntu installs and I forgot that I prefer Kubuntu (KDE)
+- 1. So I wound up installing Ubuntu 24.04 LTS and was all like WTF, oh yeah, oops!
+- 1. So I installed Kubuntu 24.04 LTS instead
+- 1. I am finding that with Kubuntu 24.04, the screen saver doesn't time out and sleep the way I want it to
+  - This is happening on barbara, too, but I think in a different way.  Hmm.
+- 1. So I have decided to go back to Ubuntu after all
+  - Ultimately, at least for the time being, the idea is to do only music stuff on martha
+
+These are the steps I'm taking, for possible future reference, or at least to keep me focused and provide an internal dialog as I go along
+
+# Preparations
+
+Following the process at https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview (for the most part) On ava:
+
+- 1. Downloaded `ubuntu-24.04.2-desktop-amd64.iso` from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
+- 1. Used **Startup Disk Creator** to create a bootable USB stick on my 2023-32B thumb drive
+  - The docs now recommend using balenaEtcher, but I already have **Startup Disk Creator** installed on ava so I am using that
+- 1. 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# New Linux Host: martha
+
+Figure out how to get the computer to boot off the thumb drive:
+
+1. Windows 10: Settings -> Recovery -> reboot from here
+2. Press F2 continuously
+
+This turned out to be a little tricky.
+
+
+# Run the install
+
+Boot off the *2023-32B* USB drive and run the installation process.
+
+Use the version that includes vim, rcs, and git.
+
+# Home Directories
+
+## tomh's Home Directory
+
+Populate the `/home/tomh` directory with selected files and directories from the `tarHome` file created for jane:
+
+- `jane-home_tomh-2025_05_29.tgz`
+
+## Root User's Home Directory
+
+Set up `/root` by copying files (`.bashrc`, etc) from jane to `/root` as necessary and reconstructing links to files in `~tomh`,
+such as `.bash_aliases`, etc.
+
+Make the directory look like `/root` on `jane`.
+
+
+# Get Network to Work: Static IP, hosts file, ssh etc.
+
+- Network
+  - Static IP: 10.0.0.121
+- Fix `/etc/hosts`
+  - Use a copy of the one on jane
+  - Check in to rcs before making more changes
+- Install using `apt install`:
+  - net-tools, openssh, openssh-server, ifupdown
+- Configure git
+  - Copy .gitconfig from another host, OR run:
+    - `git config --global user.email "tomwhartung@gmail.com"`
+    - `git config --global user.name "Tom Hartung"`
+- Install using Discover OR run:
+  - `apt-get update`
+  - `apt-get upgrade -y`
+  - 'apt install xscreensaver*'
+  - 'apt install *fortune*'
+- Install `/home/tomh` from jane's most recent tar file
+  - Unpack in a temp directory and copy what we need from there
+    - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`,  `.vimrc`, etc.
+- Get ssh to work
+  - Run `ssh-keygen`
+  - Add `~/.ssh/*` files copied from jane
+
+
+# Fix Issues
+
+- Remove and re-install firefox because of snap error
+
+
+# Find Sanity, as Best We Can
+
+## Install Chrome
+- Install google-chrome-stable
+  - Reference:
+    - https://ubuntuhandbook.org/index.php/2024/04/install-google-chrome-ubuntu-24-04-lts/
+  - Apparently it's best to do this manually now?
+    - See quote below (from the link above) about the automatic method being *"deprecated"*
+
+> *Download & install the .deb package via the steps above automatically setup the Google Chrome repository for your system. However it’s outdated and **deprecated** due to security and policy change!*
+
+  - Download file and run `apt install <*.deb file name>` as root
+    - The following Note/Warning appeared at the end of the `apt` command output
+    - A search yielded this solution:
+      - https://askubuntu.com/questions/908800/what-does-this-apt-error-message-download-is-performed-unsandboxed-as-root
+      - So I ran the two commands immediately below the Note/Warning, that were recommended by that page, as root
+
+> N: Download is performed unsandboxed as root as file '/root/Downloads/google-chrome-stable_current_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+
+```
+chown -Rv _apt:root /var/cache/apt/archives/partial/
+chmod -Rv 700 /var/cache/apt/archives/partial/
+```
+
+## Install Waveform Etc.
+
+- [X] Install Tracktion download manager
+  - Got the Note/Warning quoted below
+    - Frankly I don't think running it unsandboxed is a big deal
+  - Note that it is similar to the one above, but this one concerns the *Downloads* directory
+    - Oh rats, I see now that the one above was also for the *Downloads* directory
+    - Try running the slightly different commands immediately below the Note/Warning, because `~root/Downloads` seems like the logical place to be installing downloaded `.deb` files
+    - Note that I changed the `700` to `770` in the second command, so that `root` can continue to copy files into their `Downloads` directory!
+- [ ] Install all of the Tracktion software I have purchased
+
+> N: Download is performed unsandboxed as root as file '/root/Downloads/tracktion_download_manager_v1.5.3.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+
+```
+chown -Rv _apt:root /root/Downloads
+chmod -Rv 770 /root/Downloads
+```
+
+
+## Fine Tuning Shortcuts etc.
+
+- Adjust System settings as necessary
+- Adjust Konsole settings as necessary
+
+
+# Finish Up
+
+- Consider uninstalling firefox because one browser is enough on this host
+

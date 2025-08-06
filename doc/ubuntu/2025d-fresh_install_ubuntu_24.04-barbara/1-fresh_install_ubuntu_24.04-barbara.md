@@ -25,20 +25,22 @@ Following the process at https://ubuntu.com/tutorials/install-ubuntu-desktop#1-o
 
 ## Saving Files Currently in /home/tomh
 
-Most of the files we will need are in `barbara-home_tomh-2025_06_03.tgz`
+Find my personal files on the **`2023-32A`** drive in the **`for_barbara-24.04b-ubuntu`** directory.
+
+Most of the files we will need are in the **`barbara-home_tomh-2025_06_03.tgz` backup tar file.
 
 - Saved a copy of that on the `2023-32A` drive in `for_barbara-24.04b-ubuntu/usr_local_tar`
 
 Save the entire `/home/tomh` directory on the `2023-32A` thumb drive:
 
 - Tried to copy `/home/tomh/`, but it was "too big" to save on the thumb drive
-  - There was room left (according to the `df` command) so I suspect it had to do with there being so many small files
-  - On linux it runs out of inode space, on FAT, well, I'm not sure
-- Delete all `~/.cache` files then created a`.tgz` file and saved *that* on the thumb drive
+  - There was room left - according to the `df` command - so I suspect it had to do with there being so many small files
+  - On linux sometimes it runs out of inode space; on FAT, well, I'm not sure, but it's probably a similar deal
+- Deleted all `~/.cache` files then created a`.tgz` file and saved *that* on the thumb drive in `for_barbara-24.04b-ubuntu/home/tomh`
 
 ## Saving Files Currently in /etc
 
-- Add `/etc/fstab` and `/etc/hosts` to the *2023-32A* thumb drive
+- Copied `/etc/fstab` and `/etc/hosts` to the *`2023-32A`* thumb drive in `for_barbara-24.04b-ubuntu/etc`
 
 
 # Fresh install of Ubuntu Linux 24.04 on barbara
@@ -66,6 +68,10 @@ Use the Extended Version that includes "offline-friendly selection of office too
 ## Basic Install
 
 Started at around 9:20 PM on 2025-08-05 ...
+
+... noticed it was finished by 10:20 PM ...
+
+... and now the *real* fun begins!
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

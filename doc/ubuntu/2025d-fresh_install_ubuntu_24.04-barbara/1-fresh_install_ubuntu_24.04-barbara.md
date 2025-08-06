@@ -1,7 +1,7 @@
 
-# 1-REinstall_24.04-barbara.md
+# 1-fresh_install_ubuntu_24.04-barbara.md
 
-RE-installing Ubuntu 24.04 from scratch on new host barbara.
+Installing Ubuntu 24.04 from scratch on barbara.
 
 # Backstory
 

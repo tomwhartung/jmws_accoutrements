@@ -81,19 +81,60 @@ Started at around 9:20 PM on 2025-08-05 ...
 
 # CusTOMizations
 
-## Menu icon -> Settings
+## Overview
+
+Find the details for each of these steps in its corresponding section below:
+
+- 1. Review Settings
+- 1. Install Essential Packages
+- 1. Copy `fstab`	and `hosts` files to `/etc`
+- 1. Populate `/home/tomh` directory
+- 1. Populate `/root` Directory
+- 1. Setup `/art` Files Disk
+- 1. Setup Startup Programs
+- 1. Reboot and Check Progress
+- ==================
+- ==================
+- 1. **Finding Sanity and Fixing Issues**
+  **- TBD...**
+- ==================
+- ==================
+
+## Review Settings
+
+Review Settings: Menu icon -> Settings
+
+See what's there and change them when it makes sense:
 
 - System -> Secure Shell -> Turned on
 - System -> Date & Time -> Switched from 24-hour to AM/PM
 - System -> Software Updates -> Running this, to install all latest updates
+- Network - set up static IP
+  - IPv4 tab
+    - Method: Manual
+    - DNS Servers: 75.75.75.75,75.75.76.76
+    - Address: 10.0.1.116 | Netmask: 255.0.0.0 | Gateway: 10.0.1.2
+- Privacy & Security - turn all that shit off
+- Multitasking - Workspaces
+- Appearance - Background
+- Ubuntu Desktop
+  - Desktop Icons - move to Top Left
+  - Dock - Icon size: 24 looks good (for now anyway)
+  - Dock - move to Bottom
+  - Enhanced Tiling - turn it off (for now anyway)
+- Power
+  - Power Saving -> Screen Blank: Never
+  - Power Saving -> Automatic Suspend: Off
+- ==================
+- ==================
+- **Keyboard - Keyboard Shortcuts**
+  **- TBD...**
+- ==================
+- ==================
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+## Install Essential Packages
 
-
-# Installing Essential Packages
-
-Install as root:
+Open terminal and install as root:
 
 ```
 apt-get update
@@ -104,22 +145,32 @@ apt install openssh-server
 apt install ifupdown
 apt install 'xscreensaver*'
 apt install '*fortune*'
+apt install konsole
 ```
 
+## Copy `fstab`	and `hosts` files to `/etc`
 
-# Home Directories
+- [X] 1. Create `RCS` dir in `/etc`
+- [X] 1. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
+- [X] 1. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_barbara-24.04b-ubuntu/etc`
+- [X] 1. Move these files to `/etc/fstab` and `/etc/hosts`
+- [X] 1. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive
+  - Fix any descrepancies as necessary
+
+## Populate `/home/tomh` Directory
 
 ## tomh's Home Directory
 
-- Check `.bashrc` into RCS
-- Unpack `barbara-home_tomh-2025_06_03.tgz` in a temp directory (`~/unpack`)
-- Copy what we need from there into `/home/tomh`
-  - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`, `.ssh`, `.vimrc`, etc.
+- [X] Check `.bashrc` into RCS
+- [X] Unpack `barbara-home_tomh-2025_06_03.tgz` into a new directory named `~/Home_tomh-old/unpack-use_1st-tarHome_file`
+- [X] Copy what we need from there into `/home/tomh`
+  - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`, `.ssh`, `.vimrc`, `r*`, `bin`, `technical`, etc.
 
 If necessary, get more files from the `home` directory copied to the thumb drive.
 
 ## Root User's Home Directory
 
+## Populate `/root` Directory
 Set up `/root`:
 
 - Copy `.bashrc` from the thumb drive to `/root`
@@ -127,6 +178,26 @@ Set up `/root`:
 
 Make the directory look like `/root` on `jane`.
 
+## Setup `/art` Files Disk
+
+- 1. Ensure `/etc/fstab` file is updated with external disk info
+- 1. Plugin /art files disk
+
+## Setup Startup Programs
+
+- 1. Click on **Show Apps** icon in lower right corner
+- 1. Click on **Startup Applications** icon in the list that appears
+- 1. Add `/usr/bin/xscreensaver` to the list
+- 1. Add `/usr/bin/konsole` to the list
+
+## Reboot and Check Progress
+
+- Ensure the disk partitions are mounted ok
+- Ensure xscreensaver and konsole are running on startup
+
+## Finding Sanity and Fixing Issues
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 # Finding Sanity Part I
 

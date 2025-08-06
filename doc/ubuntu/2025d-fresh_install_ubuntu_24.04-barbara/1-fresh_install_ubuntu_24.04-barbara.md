@@ -15,73 +15,62 @@ Installing Ubuntu 24.04 from scratch on barbara.
 
 # Preparations
 
+## Preparing the bootable thumb drive
+
 Following the process at https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview (for the most part) On ava:
 
 1. Downloaded `ubuntu-24.04.2-desktop-amd64.iso` from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 1. Used **Startup Disk Creator** to create a bootable USB stick on my 2023-32B thumb drive
     - The docs now recommend using balenaEtcher, but I already have **Startup Disk Creator** installed on ava, so I am using that
-1. Booted barbara from the USB stick and ran through the installation procedure
-
-**Following are some notes from earlier instals**:
-
-- Edit these steps as we go to keep focused on the task.
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-**Following are some notes from earlier**:
-
-# Fresh install of 24.04 Ubuntu Linux on barbara
-Figure out how to get the computer to boot off the thumb drive:
-# Run the install
-Boot off the *2023-32B* USB drive and run the installation process.
-Use the version that includes vim, rcs, and git.
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-**Following was copy and pasted from `../2025a-fresh_installs_of_24.04/3a-install_24.04-barbara.md`,**
- because I will no doubt want to to much the same thing. 
-
-# 3a-install_24.04-barbara.md
-
-Installing 24.04 from scratch on barbara
-
-
-# Preparations
-
-See `1-prepare_for_fresh_install.md` in this directory.
 
 ## Saving Files Currently in /home/tomh
 
 Most of the files we will need are in `barbara-home_tomh-2025_06_03.tgz`
 
-Save the entire `/home/tomh` directory on the **2023-32A** thumb drive:
+- Saved a copy of that on the `2023-32A` drive in `for_barbara-24.04b-ubuntu/usr_local_tar`
 
-- Created a`.tgz` file but it was too big to save on the thumb drive
-- Had to delete all `~/tmp` and `~/.cache` files to get this to work
-  - For details, see `3b-home_tomh-barbara-disk_usage.md` in this directory
+Save the entire `/home/tomh` directory on the `2023-32A` thumb drive:
+
+- Tried to copy `/home/tomh/`, but it was "too big" to save on the thumb drive
+  - There was room left (according to the `df` command) so I suspect it had to do with there being so many small files
+  - On linux it runs out of inode space, on FAT, well, I'm not sure
+- Delete all `~/.cache` files then created a`.tgz` file and saved *that* on the thumb drive
 
 ## Saving Files Currently in /etc
 
 - Add `/etc/fstab` and `/etc/hosts` to the *2023-32A* thumb drive
 
 
-# Run the install
+# Fresh install of Ubuntu Linux 24.04 on barbara
 
-Boot off the *2023-32B* USB drive USB and run the installation process.
+## Starting With These Initial Options
 
-## Install Options
+Boot off the *2023-32B* USB thumb drive and run the installation process: **Try or Install Ubuntu**
 
-Use the version that includes vim and git.
-This is the version I installed on martha and it saved a few steps.
+Use the Extended Version that includes "offline-friendly selection of office tools, utilities, and web browser."
 
-- I think this is the **"Normal"** version
-- I don't think we will need *Element*, *VMs*, or *Krita*
+## Other Options Selected During the Process:
 
-Other options selected:
+- [X] *"Install third-party software for graphics and Wi-Fi Hardware"* - check!
+  - *"Including but not limited to NVIDIA drivers and similar"*
+- [X] *"Download and install support for additional media formats* - check!
+  - *"Including but not limited to MP3, MP4, MOV and similar"*
 
-- *Customize:* Installing the **"Normal"** version on barbara
+- [X] *"Erase disk and install Ubuntu"*
+  - *"Start from scratch or your selected disk"*
+  - Advanced features: None - options include LVM and encryption, and some *"Experimental"* options
+
+- [X] NOTE: changing password!  This ex-server is now behind multiple firewalls!!
+- [X] **Unchecked** the *"Require my password to log in"* box!
+
+## Basic Install
+
+Started at around 9:20 PM on 2025-08-05 ...
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 - *Partitions:* Choosing Erase Disk
-- *Users:* Be sure to check the *"Log in automatically"* box!
 
 
 # Installing Essential Packages

@@ -1,9 +1,9 @@
 
-# 1-REinstall_24.04-martha.md
+# 1-REinstall_ubuntu_24.04-martha.md
 
 RE-installing Ubuntu 24.04 from scratch on new host martha.
 
-# Backstory
+# Backstory: Why It's a RE-install
 
 1. It had been a while since I have worked with ubuntu installs and I forgot that I prefer Kubuntu (KDE)
 1. So I wound up installing Ubuntu 24.04 LTS and was all like WTF, oh yeah, oops!

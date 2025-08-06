@@ -1,0 +1,215 @@
+
+# 1-REinstall_24.04-barbara.md
+
+RE-installing Ubuntu 24.04 from scratch on new host barbara.
+
+# Backstory
+
+1. I installed Kubuntu 24.04 LTS on barbara
+1. I am finding that with Kubuntu 24.04, the screen saver or (probably) something else (but what?) forces me to enter my password
+1. barbara has very minimal memory, because I bought it to be a headless web server, with no windowing
+   - Now I want to use it for minimal light surfing
+   - And **maybe** use it in the near future for listening to music - *if* it has enough memory to do so - so may want to try that
+1. Hence I have decided to install just plain Ubuntu
+
+
+# Preparations
+
+Following the process at https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview (for the most part) On ava:
+
+1. Downloaded `ubuntu-24.04.2-desktop-amd64.iso` from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
+1. Used **Startup Disk Creator** to create a bootable USB stick on my 2023-32B thumb drive
+    - The docs now recommend using balenaEtcher, but I already have **Startup Disk Creator** installed on ava, so I am using that
+1. Booted barbara from the USB stick and ran through the installation procedure
+
+**Following are some notes from earlier instals**:
+
+- Edit these steps as we go to keep focused on the task.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+**Following are some notes from earlier**:
+
+# Fresh install of 24.04 Ubuntu Linux on barbara
+Figure out how to get the computer to boot off the thumb drive:
+# Run the install
+Boot off the *2023-32B* USB drive and run the installation process.
+Use the version that includes vim, rcs, and git.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+**Following was copy and pasted from `../2025a-fresh_installs_of_24.04/3a-install_24.04-barbara.md`,**
+ because I will no doubt want to to much the same thing. 
+
+# 3a-install_24.04-barbara.md
+
+Installing 24.04 from scratch on barbara
+
+
+# Preparations
+
+See `1-prepare_for_fresh_install.md` in this directory.
+
+## Saving Files Currently in /home/tomh
+
+Most of the files we will need are in `barbara-home_tomh-2025_06_03.tgz`
+
+Save the entire `/home/tomh` directory on the **2023-32A** thumb drive:
+
+- Created a`.tgz` file but it was too big to save on the thumb drive
+- Had to delete all `~/tmp` and `~/.cache` files to get this to work
+  - For details, see `3b-home_tomh-barbara-disk_usage.md` in this directory
+
+## Saving Files Currently in /etc
+
+- Add `/etc/fstab` and `/etc/hosts` to the *2023-32A* thumb drive
+
+
+# Run the install
+
+Boot off the *2023-32B* USB drive USB and run the installation process.
+
+## Install Options
+
+Use the version that includes vim and git.
+This is the version I installed on martha and it saved a few steps.
+
+- I think this is the **"Normal"** version
+- I don't think we will need *Element*, *VMs*, or *Krita*
+
+Other options selected:
+
+- *Customize:* Installing the **"Normal"** version on barbara
+- *Partitions:* Choosing Erase Disk
+- *Users:* Be sure to check the *"Log in automatically"* box!
+
+
+# Installing Essential Packages
+
+Install as root:
+
+```
+apt-get update
+apt-get upgrade -y
+apt install rcs
+apt install net-tools
+apt install openssh-server
+apt install ifupdown
+apt install 'xscreensaver*'
+apt install '*fortune*'
+```
+
+
+# Home Directories
+
+## tomh's Home Directory
+
+- Check `.bashrc` into RCS
+- Unpack `barbara-home_tomh-2025_06_03.tgz` in a temp directory (`~/unpack`)
+- Copy what we need from there into `/home/tomh`
+  - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`, `.ssh`, `.vimrc`, etc.
+
+If necessary, get more files from the `home` directory copied to the thumb drive.
+
+## Root User's Home Directory
+
+Set up `/root`:
+
+- Copy `.bashrc` from the thumb drive to `/root`
+- Reconstruct links to files in `~tomh`, such as `.bash_aliases`, etc.
+
+Make the directory look like `/root` on `jane`.
+
+
+# Finding Sanity Part I
+
+## Browser
+
+On barbara we want to use Chrome **only**.
+
+- Install google-chrome-stable
+  - Use Firefox to download file and run `apt install` as root user
+
+## Important Settings
+
+System Settings:
+
+- KDE Wallet: when it pops up and asks, click the top button to use the old style
+
+- Workspace Options:
+  - Workspace Behavior -> Screen Edges
+    - Uncheck top three
+    - Switch desktop on edge: Only When Moving Windows
+  - Workspace Behavior -> Screen Locking
+    - Uncheck top two checkboxes
+  - Workspace Behavior -> Virtual Desktops
+  - Shortcuts -> Custom Shortcuts
+    - Launch Chrome, Konsole, Settings
+  - Startup and Shutdown -> Autostart
+    - Add konsole and xscreensaver
+
+- Hardware Options:
+  - Energy Settings - not yet sure what's ideal here...
+    - Uncheck top two check boxes
+
+Konsole -> Settings:
+
+- Configure Konsole:
+  - Profiles
+    - New: tomh-exp
+      - Set as Default
+      - Edit:
+        - Mouse -> Text Interaction -> Word characters: '_' only
+- Configure Keyboard Shortcuts:
+  - Move tab to the Left: Shift-Ctrl-Left arrow
+  - Move tab to the Reft: Shift-Ctrl-Reft arrow
+  - WTF Shift-Ctrl-T and Shift-Ctrl-N don't work?!?
+    - Set up Ctrl-Alt-T and Ctrl-Alt-N in both Konsole settings and System Settings->Shortcuts
+
+## Get Network to Work: Static IP, hosts file, ssh, git etc.
+
+- Network
+  - Static IP: 10.0.0.116
+- Copy `/etc/hosts` from the thumb drive
+  - Check it in to rcs before making more changes
+- Configure git
+  - Copy .gitconfig from another host, OR run:
+    - `git config --global user.email "tomwhartung@gmail.com"`
+    - `git config --global user.name "Tom Hartung"`
+- Ensure ssh works
+  - Need to generate new keys: `ssh-keygen`
+  - Replace old pub key with new one in `authorized_hosts` on all other hosts
+  - Remove `.ssh/known_hosts` file from all other hosts
+  - Log in to each host from each host to make new `known_hosts` files and ensure they all work
+- Need to pull `jmws_accountrements` code for some ssh scripts to work
+  - Use a browser to log into github, get ssh command argument, and run `git clone`
+
+
+# Find Sanity Part II
+
+Finish up finding sanity in the new version, as best we can.
+
+- Must set Konsole Keyboard Shortcuts in **Both** System Settings and Konsole Keyboard Shortcuts
+  - My old shortcuts (Shift+Ctrl+T and Shift+Ctrl+N) do not seem to work in 24.04!  Rats!!
+  - System Settings -> Workspace
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+  - Konsole -> Settings -> Configure Keyboard Shortcuts
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+
+
+# Fix Issues
+
+## When install is nearly complete
+
+- Uninstall Firefox
+
+## WTF Is up With Switching Workspaces With Shift-Ctrl-Arrow_keys??
+
+- When (if?) get Ctrl-Alt-Arrow keys shortcut to switch desktops working:
+  - Use this as a work-around:
+    - System Settings -> Workspace -> Workspace Behavior -> Screen Edges
+      - Switch desktop on edge: Only When Moving Windows **OR** Always Enabled
+  - Figure out which one is preferred and make other hosts match
+

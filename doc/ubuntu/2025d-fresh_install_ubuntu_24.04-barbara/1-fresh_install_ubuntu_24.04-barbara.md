@@ -43,7 +43,7 @@ Save the entire `/home/tomh` directory on the `2023-32A` thumb drive:
 - Copied `/etc/fstab` and `/etc/hosts` to the *`2023-32A`* thumb drive in `for_barbara-24.04b-ubuntu/etc`
 
 
-# Fresh install of Ubuntu Linux 24.04 on barbara
+# Fresh Install of Ubuntu Linux 24.04 on barbara
 
 ## Starting With These Initial Options
 
@@ -73,10 +73,22 @@ Started at around 9:20 PM on 2025-08-05 ...
 
 ... and now the *real* fun begins!
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+## More Options
 
-- *Partitions:* Choosing Erase Disk
+- [X] Not going for "Pro"
+- [X] **"Yes, share system data with the Ubuntu team"** - why the fuck not??  I won't be doing much here on barbara
+
+
+# CusTOMizations
+
+## Menu icon -> Settings
+
+- System -> Secure Shell -> Turned on
+- System -> Date & Time -> Switched from 24-hour to AM/PM
+- System -> Software Updates -> Running this, to install all latest updates
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 # Installing Essential Packages

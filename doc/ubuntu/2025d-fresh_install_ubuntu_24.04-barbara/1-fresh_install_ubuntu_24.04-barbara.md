@@ -85,19 +85,18 @@ Started at around 9:20 PM on 2025-08-05 ...
 
 Find the details for each of these steps in its corresponding section below:
 
-- 1. Review Settings
-- 1. Install Essential Packages
-- 1. Copy `fstab`	and `hosts` files to `/etc`
-- 1. Populate `/home/tomh` directory
-- 1. Populate `/root` Directory
-- 1. Setup `/art` Files Disk
-- 1. Setup Startup Programs
-- 1. Reboot and Check Progress
+1. Review Settings
+1. Install Essential Packages
+1. Copy `fstab`	and `hosts` files to `/etc`
+1. Populate `/home/tomh` directory
+1. Populate `/root` Directory
+1. Setup `/art` Files Disk
+1. Setup Startup Programs
+1. Reboot and Check Progress
+
 - ==================
-- ==================
-- 1. **Finding Sanity and Fixing Issues**
+1. **Finding Sanity and Fixing Issues**
   **- TBD...**
-- ==================
 - ==================
 
 ## Review Settings
@@ -125,12 +124,6 @@ See what's there and change them when it makes sense:
 - Power
   - Power Saving -> Screen Blank: Never
   - Power Saving -> Automatic Suspend: Off
-- ==================
-- ==================
-- **Keyboard - Keyboard Shortcuts**
-  **- TBD...**
-- ==================
-- ==================
 
 ## Install Essential Packages
 
@@ -151,19 +144,19 @@ apt install konsole
 ## Copy `fstab`	and `hosts` files to `/etc`
 
 - [X] 1. Create `RCS` dir in `/etc`
-- [X] 1. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
-- [X] 1. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_barbara-24.04b-ubuntu/etc`
-- [X] 1. Move these files to `/etc/fstab` and `/etc/hosts`
-- [X] 1. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive
+- [X] 2. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
+- [X] 3. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_barbara-24.04b-ubuntu/etc`
+- [X] 4. Move these files to `/etc/fstab` and `/etc/hosts`
+- [X] 5. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive
   - Fix any descrepancies as necessary
 
 ## Populate `/home/tomh` Directory
 
 ## tomh's Home Directory
 
-- [X] Check `.bashrc` into RCS
-- [X] Unpack `barbara-home_tomh-2025_06_03.tgz` into a new directory named `~/Home_tomh-old/unpack-use_1st-tarHome_file`
-- [X] Copy what we need from there into `/home/tomh`
+- [X] 1. Check `.bashrc` into RCS
+- [X] 2. Unpack `barbara-home_tomh-2025_06_03.tgz` into a new directory named `~/Home_tomh-old/unpack-use_1st-tarHome_file`
+- [X] 3. Copy what we need from there into `/home/tomh`
   - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`, `.ssh`, `.vimrc`, `r*`, `bin`, `technical`, etc.
 
 If necessary, get more files from the `home` directory copied to the thumb drive.
@@ -180,15 +173,15 @@ Make the directory look like `/root` on `jane`.
 
 ## Setup `/art` Files Disk
 
-- 1. Ensure `/etc/fstab` file is updated with external disk info
-- 1. Plugin /art files disk
+1. Ensure `/etc/fstab` file is updated with external disk info
+1. Plugin /art files disk
 
 ## Setup Startup Programs
 
-- 1. Click on **Show Apps** icon in lower right corner
-- 1. Click on **Startup Applications** icon in the list that appears
-- 1. Add `/usr/bin/xscreensaver` to the list
-- 1. Add `/usr/bin/konsole` to the list
+1. Click on **Show Apps** icon in lower right corner
+1. Click on **Startup Applications** icon in the list that appears
+1. Add `/usr/bin/xscreensaver` to the list
+1. Add `/usr/bin/konsole` to the list
 
 ## Reboot and Check Progress
 
@@ -196,6 +189,31 @@ Make the directory look like `/root` on `jane`.
 - Ensure xscreensaver and konsole are running on startup
 
 ## Finding Sanity and Fixing Issues
+
+### More Settings: Menu icon -> Settings
+
+- Keyboard -> Keyboard Shortcuts
+  - Launchers - Calculator: Ctrl+Alt+M
+  - Launchers - Web Browser: Ctrl+Alt+F
+  - Launchers - Settings: Ctrl+Alt+S
+  - Navigation - Switch to workspace X: Ctrl-FX
+
+### Downloading `jmws_accoutrements` repo
+
+1. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
+1. Log in to github and get ssh link for `jmws_accoutrements` repo
+1. As tomh, run `git clone ...` command in the `/var/www` directory
+
+### Get `ssh` Commands to Work
+
+Follow these steps to ensure ssh works on barbara for all other hosts:
+
+1. Need to generate new keys: `ssh-keygen`
+1. Replace old pub key with new one in `authorized_hosts` on all other hosts
+1. Remove `.ssh/known_hosts` file from all other hosts
+1. Log in to each host from each host to make new `known_hosts` files and ensure they all work
+1. As a final test, create a test file on barbara in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
+
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -243,24 +261,6 @@ Konsole -> Settings:
   - Move tab to the Reft: Shift-Ctrl-Reft arrow
   - WTF Shift-Ctrl-T and Shift-Ctrl-N don't work?!?
     - Set up Ctrl-Alt-T and Ctrl-Alt-N in both Konsole settings and System Settings->Shortcuts
-
-## Get Network to Work: Static IP, hosts file, ssh, git etc.
-
-- Network
-  - Static IP: 10.0.0.116
-- Copy `/etc/hosts` from the thumb drive
-  - Check it in to rcs before making more changes
-- Configure git
-  - Copy .gitconfig from another host, OR run:
-    - `git config --global user.email "tomwhartung@gmail.com"`
-    - `git config --global user.name "Tom Hartung"`
-- Ensure ssh works
-  - Need to generate new keys: `ssh-keygen`
-  - Replace old pub key with new one in `authorized_hosts` on all other hosts
-  - Remove `.ssh/known_hosts` file from all other hosts
-  - Log in to each host from each host to make new `known_hosts` files and ensure they all work
-- Need to pull `jmws_accountrements` code for some ssh scripts to work
-  - Use a browser to log into github, get ssh command argument, and run `git clone`
 
 
 # Find Sanity Part II

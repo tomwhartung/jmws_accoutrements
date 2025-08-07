@@ -221,8 +221,49 @@ Let's try using Firefox **only** on barbara, for now.
 
 - Leaving instructions for installing Chrome below, in case we decide to use it.
 
+## Unresolved `xscreensaver` Issue
+
+- The `xscreensaver` app doesn't run with Wayland
+- Ubuntu 24.04 runs Wayland
+- `xscreensaver` says to switch to x11
+- I'd rather stick with Wayland
+- Disabling `xscreensaver` for now...
+- Instead, try just blanking after XX minutes:
+  - Settings -> Power -> Power Saving -> Screen Blank
+
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+# Fine-tuning Konsole -> Settings:
+
+- Configure Konsole:
+  - Profiles
+    - New: tomh-exp
+      - Set as Default
+      - Edit:
+        - Mouse -> Text Interaction -> Word characters: '_' only
+- Configure Keyboard Shortcuts:
+  - Move tab to the Left: Shift-Ctrl-Left arrow
+  - Move tab to the Reft: Shift-Ctrl-Reft arrow
+  - WTF Shift-Ctrl-T and Shift-Ctrl-N don't work?!?
+    - Set up Ctrl-Alt-T and Ctrl-Alt-N in both Konsole settings and System Settings->Shortcuts
+
+
+## Finish up finding sanity in the new version, as best we can.
+
+- Must set Konsole Keyboard Shortcuts in **Both** System Settings and Konsole Keyboard Shortcuts
+  - My old shortcuts (Shift+Ctrl+T and Shift+Ctrl+N) do not seem to work in 24.04!  Rats!!
+  - System Settings -> Workspace
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+  - Konsole -> Settings -> Configure Keyboard Shortcuts
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+
+**These are KDE/Kubuntu Settings, which may or may not be availiable in Gnome/Ubuntu.**
+
+Adapt these steps as necessary and appropriate, when there's time.
 
 ## Important Settings
 
@@ -247,36 +288,9 @@ System Settings:
     - Uncheck top two check boxes
 
 
-# Fine-tuniing Konsole -> Settings:
-
-- Configure Konsole:
-  - Profiles
-    - New: tomh-exp
-      - Set as Default
-      - Edit:
-        - Mouse -> Text Interaction -> Word characters: '_' only
-- Configure Keyboard Shortcuts:
-  - Move tab to the Left: Shift-Ctrl-Left arrow
-  - Move tab to the Reft: Shift-Ctrl-Reft arrow
-  - WTF Shift-Ctrl-T and Shift-Ctrl-N don't work?!?
-    - Set up Ctrl-Alt-T and Ctrl-Alt-N in both Konsole settings and System Settings->Shortcuts
-
-
-Finish up finding sanity in the new version, as best we can.
-
-- Must set Konsole Keyboard Shortcuts in **Both** System Settings and Konsole Keyboard Shortcuts
-  - My old shortcuts (Shift+Ctrl+T and Shift+Ctrl+N) do not seem to work in 24.04!  Rats!!
-  - System Settings -> Workspace
-    - Set New Tab Shortcut to Alt+Shift+T
-    - Set New Window Shortcut to Alt+Shift+N
-  - Konsole -> Settings -> Configure Keyboard Shortcuts
-    - Set New Tab Shortcut to Alt+Shift+T
-    - Set New Window Shortcut to Alt+Shift+N
-
-
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-# Issues to Maybe Fix Later
+# Issue(s) to Maybe Fix Later
 
 ## Browser
 

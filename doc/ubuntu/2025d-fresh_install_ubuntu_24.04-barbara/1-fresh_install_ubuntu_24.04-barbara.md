@@ -188,9 +188,10 @@ Make the directory look like `/root` on `jane`.
 - Ensure the disk partitions are mounted ok
 - Ensure xscreensaver and konsole are running on startup
 
-## Finding Sanity and Fixing Issues
 
-### More Settings: Menu icon -> Settings
+# Finding Sanity and Fixing Issues
+
+## More Settings: Menu icon -> Settings
 
 - Keyboard -> Keyboard Shortcuts
   - Launchers - Calculator: Ctrl+Alt+M
@@ -198,13 +199,13 @@ Make the directory look like `/root` on `jane`.
   - Launchers - Settings: Ctrl+Alt+S
   - Navigation - Switch to workspace X: Ctrl-FX
 
-### Downloading `jmws_accoutrements` repo
+## Downloading `jmws_accoutrements` repo
 
 1. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
 1. Log in to github and get ssh link for `jmws_accoutrements` repo
 1. As tomh, run `git clone ...` command in the `/var/www` directory
 
-### Get `ssh` Commands to Work
+## Get `ssh` Commands to Work
 
 Follow these steps to ensure ssh works on barbara for all other hosts:
 
@@ -214,17 +215,14 @@ Follow these steps to ensure ssh works on barbara for all other hosts:
 1. Log in to each host from each host to make new `known_hosts` files and ensure they all work
 1. As a final test, create a test file on barbara in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
 
-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-# Finding Sanity Part I
-
 ## Browser
 
-On barbara we want to use Chrome **only**.
+Let's try using Firefox **only** on barbara, for now.
 
-- Install google-chrome-stable
-  - Use Firefox to download file and run `apt install` as root user
+- Leaving instructions for installing Chrome below, in case we decide to use it.
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 ## Important Settings
 
@@ -248,7 +246,8 @@ System Settings:
   - Energy Settings - not yet sure what's ideal here...
     - Uncheck top two check boxes
 
-Konsole -> Settings:
+
+# Fine-tuniing Konsole -> Settings:
 
 - Configure Konsole:
   - Profiles
@@ -263,8 +262,6 @@ Konsole -> Settings:
     - Set up Ctrl-Alt-T and Ctrl-Alt-N in both Konsole settings and System Settings->Shortcuts
 
 
-# Find Sanity Part II
-
 Finish up finding sanity in the new version, as best we can.
 
 - Must set Konsole Keyboard Shortcuts in **Both** System Settings and Konsole Keyboard Shortcuts
@@ -277,9 +274,18 @@ Finish up finding sanity in the new version, as best we can.
     - Set New Window Shortcut to Alt+Shift+N
 
 
-# Fix Issues
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-## When install is nearly complete
+# Issues to Maybe Fix Later
+
+## Browser
+
+On barbara we want to use Chrome **only**.
+
+- Install google-chrome-stable
+  - Use Firefox to download file and run `apt install` as root user
+
+## When Comfortable Using Chrome **Only**
 
 - Uninstall Firefox
 

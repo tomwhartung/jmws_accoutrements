@@ -188,9 +188,10 @@ Make the directory look like `/root` on `jane`.
 - Ensure the disk partitions are mounted ok
 - Ensure xscreensaver and konsole are running on startup
 
-## Finding Sanity and Fixing Issues
 
-### More Settings: Menu icon -> Settings
+# Finding Sanity and Fixing Issues
+
+## More Settings: Menu icon -> Settings
 
 - Keyboard -> Keyboard Shortcuts
   - Launchers - Calculator: Ctrl+Alt+M
@@ -198,13 +199,13 @@ Make the directory look like `/root` on `jane`.
   - Launchers - Settings: Ctrl+Alt+S
   - Navigation - Switch to workspace X: Ctrl-FX
 
-### Downloading `jmws_accoutrements` repo
+## Downloading `jmws_accoutrements` repo
 
 1. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
 1. Log in to github and get ssh link for `jmws_accoutrements` repo
 1. As tomh, run `git clone ...` command in the `/var/www` directory
 
-### Get `ssh` Commands to Work
+## Get `ssh` Commands to Work
 
 Follow these steps to ensure ssh works on barbara for all other hosts:
 
@@ -214,17 +215,55 @@ Follow these steps to ensure ssh works on barbara for all other hosts:
 1. Log in to each host from each host to make new `known_hosts` files and ensure they all work
 1. As a final test, create a test file on barbara in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
 
+## Browser
+
+Let's try using Firefox **only** on barbara, for now.
+
+- Leaving instructions for installing Chrome below, in case we decide to use it.
+
+## Unresolved `xscreensaver` Issue
+
+- The `xscreensaver` app doesn't run with Wayland
+- Ubuntu 24.04 runs Wayland
+- `xscreensaver` says to switch to x11
+- I'd rather stick with Wayland
+- Disabling `xscreensaver` for now...
+- Instead, try just blanking after XX minutes:
+  - Settings -> Power -> Power Saving -> Screen Blank
+
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-# Finding Sanity Part I
 
-## Browser
+# Fine-tuning Konsole -> Settings:
 
-On barbara we want to use Chrome **only**.
+- Configure Konsole:
+  - Profiles
+    - New: tomh-exp
+      - Set as Default
+      - Edit:
+        - Mouse -> Text Interaction -> Word characters: '_' only
+- Configure Keyboard Shortcuts:
+  - Move tab to the Left: Shift-Ctrl-Left arrow
+  - Move tab to the Reft: Shift-Ctrl-Reft arrow
+  - WTF Shift-Ctrl-T and Shift-Ctrl-N don't work?!?
+    - Set up Ctrl-Alt-T and Ctrl-Alt-N in both Konsole settings and System Settings->Shortcuts
 
-- Install google-chrome-stable
-  - Use Firefox to download file and run `apt install` as root user
+
+## Finish up finding sanity in the new version, as best we can.
+
+- Must set Konsole Keyboard Shortcuts in **Both** System Settings and Konsole Keyboard Shortcuts
+  - My old shortcuts (Shift+Ctrl+T and Shift+Ctrl+N) do not seem to work in 24.04!  Rats!!
+  - System Settings -> Workspace
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+  - Konsole -> Settings -> Configure Keyboard Shortcuts
+    - Set New Tab Shortcut to Alt+Shift+T
+    - Set New Window Shortcut to Alt+Shift+N
+
+**These are KDE/Kubuntu Settings, which may or may not be availiable in Gnome/Ubuntu.**
+
+Adapt these steps as necessary and appropriate, when there's time.
 
 ## Important Settings
 
@@ -248,38 +287,19 @@ System Settings:
   - Energy Settings - not yet sure what's ideal here...
     - Uncheck top two check boxes
 
-Konsole -> Settings:
 
-- Configure Konsole:
-  - Profiles
-    - New: tomh-exp
-      - Set as Default
-      - Edit:
-        - Mouse -> Text Interaction -> Word characters: '_' only
-- Configure Keyboard Shortcuts:
-  - Move tab to the Left: Shift-Ctrl-Left arrow
-  - Move tab to the Reft: Shift-Ctrl-Reft arrow
-  - WTF Shift-Ctrl-T and Shift-Ctrl-N don't work?!?
-    - Set up Ctrl-Alt-T and Ctrl-Alt-N in both Konsole settings and System Settings->Shortcuts
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+# Issue(s) to Maybe Fix Later
 
-# Find Sanity Part II
+## Browser
 
-Finish up finding sanity in the new version, as best we can.
+On barbara we want to use Chrome **only**.
 
-- Must set Konsole Keyboard Shortcuts in **Both** System Settings and Konsole Keyboard Shortcuts
-  - My old shortcuts (Shift+Ctrl+T and Shift+Ctrl+N) do not seem to work in 24.04!  Rats!!
-  - System Settings -> Workspace
-    - Set New Tab Shortcut to Alt+Shift+T
-    - Set New Window Shortcut to Alt+Shift+N
-  - Konsole -> Settings -> Configure Keyboard Shortcuts
-    - Set New Tab Shortcut to Alt+Shift+T
-    - Set New Window Shortcut to Alt+Shift+N
+- Install google-chrome-stable
+  - Use Firefox to download file and run `apt install` as root user
 
-
-# Fix Issues
-
-## When install is nearly complete
+## When Comfortable Using Chrome **Only**
 
 - Uninstall Firefox
 

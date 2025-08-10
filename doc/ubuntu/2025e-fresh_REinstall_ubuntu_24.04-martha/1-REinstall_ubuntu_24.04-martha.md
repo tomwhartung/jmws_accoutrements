@@ -128,6 +128,25 @@ Review Settings: Menu icon -> Settings
 - Konsole
 - Forced to reboot
 
+## WTF `sudo` Does Not Work?!?
+
+This page says to boot off a "Live CD":
+
+- [https://askubuntu.com/questions/354315/permission-denied-for-all-sudo-comands](https://askubuntu.com/questions/354315/permission-denied-for-all-sudo-comands)
+
+This is not easy on this box!
+
+- Need to press Esc slowly but steadily to get to BIOS
+- Trying this: **BIOS -> Settings -> Boot -> GO2BIOS -> Enabled**
+  - "Allows you to enter BIOS setup directly by pressing the Power button for 4 sec upon bootup.
+  
+Maybe that will help??
+
+In the meantime, **setting "UEFT USB Key:UEFI: USB DISK, Partition 2" 1st in the Boot Priority**
+
+This doesn't seem to "stick" but maybe I can boot into the "Live CD" at least once.
+
+
 ## Install Essential Packages - Command Line
 
 Open terminal and install as root:

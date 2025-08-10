@@ -112,12 +112,14 @@ Did several steps: reviewed some settings and installed a few packages, rebooted
 Find the details for each of these steps in its corresponding section below:
 
 1. Update and Reboot - Command Line
-1. Install Essential Packages - Settings -> Software Updates
 1. Install Essential Packages - Command Line
+1. Run the "Partial Upgrade" - Settings -> Software Updates
 1. Review Settings
+1. Install Additional Package - Settings -> Software Updates
 1. Copy `fstab` and `hosts` files to `/etc`
-1. Populate `/home/tomh` directory
-1. Populate `/root` Directory
+1. Populate tomh and root Home Directories
+   - Populate `/home/tomh` directory
+   - Populate `/root` Directory
 1. Setup `/art` Files Disk
 1. Setup Startup Programs
 1. Reboot and Check Progress
@@ -150,6 +152,13 @@ apt install ifupdown
 reboot
 ```
 
+## Run the "Partial Upgrade" - Settings -> Software Updates
+
+- [X] System -> Software Updates -> Running this, to install all latest updates
+   - "Partial upgrade*
+
+Reboot and check root access!
+
 ## Review Settings
 
 Review Settings: Menu icon -> Settings
@@ -169,13 +178,6 @@ Review Settings: Menu icon -> Settings
    - Power Saving -> Screen Blank: Never
    - Power Saving -> Automatic Suspend: Off
 
-## Run the "Partial Upgrade" - Settings -> Software Updates
-
-- [X] System -> Software Updates -> Running this, to install all latest updates
-   - "Partial upgrade*
-
-Reboot and check root access!
-
 ## Install Additional Package - Settings -> Software Updates
 
 I wonder if installing OBS screwed up the `sudo` command last time?
@@ -191,6 +193,8 @@ su -
 sudo su -
 ```
 
+**So far, so good!  Continue to test `sudo` at regular intervals, though!  *It's ok to be a little paranoid!!* **
+
 ## Copy `fstab` and `hosts` files to `/etc`
 
 - [X] 1. Create `RCS` dir in `/etc`
@@ -201,9 +205,9 @@ sudo su -
   - Fix any descrepancies as necessary
 
 
-## Populate `/home/tomh` Directory
+## Populate tomh and root Home Directories
 
-## tomh's Home Directory
+### Populate `/home/tomh` Directory
 
 - [ ] 1. Check `.bashrc` into RCS
 - [ ] 2. Unpack `martha-home_tomh-2025_07_31.tgz` into a new directory named `~/Home_tomh-old/unpack-use_1st-tarHome_file`
@@ -212,9 +216,8 @@ sudo su -
 
 If necessary, get more files from the `home` directory copied to the thumb drive.
 
-## Root User's Home Directory
+### Populate `/root` Directory
 
-## Populate `/root` Directory
 Set up `/root`:
 
 - Copy `.bashrc` from the thumb drive to `/root`

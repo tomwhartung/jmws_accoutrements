@@ -15,81 +15,239 @@ RE-installing Ubuntu 24.04 from scratch on new host martha.
 
 These are the steps I'm taking, for possible future reference, or at least to keep me focused and provide an internal dialog as I go along
 
+
+
+
+
 # Preparations
+
+## Create Bootable USB Drive
 
 Following the process at https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview (for the most part) On ava:
 
 1. Downloaded `ubuntu-24.04.2-desktop-amd64.iso` from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 1. Used **Startup Disk Creator** to create a bootable USB stick on my 2023-32B thumb drive
     - The docs now recommend using balenaEtcher, but I already have **Startup Disk Creator** installed on ava, so I am using that
-1. Booted martha from the USB stick and ran through the installation procedure
-1. 
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+## Saved Files Currently in /home/tomh
 
-# New Linux Host: martha
+Find my personal files on the **`2023-32A`** drive in the **`for_martha-24.04a-ubuntu`** directory.
 
-Figure out how to get the computer to boot off the thumb drive:
+Most of the files we will need are in the **`martha-home_tomh-2025_06_03.tgz` backup tar file.
 
-1. Windows 10: Settings -> Recovery -> reboot from here
-2. Press F2 continuously
+- Saved a copy of that on the `2023-32A` drive in `for_martha-24.04a-ubuntu/usr_local_tar`
 
-This turned out to be a little tricky.
+Save the entire `/home/tomh` directory on the `2023-32A` thumb drive:
+
+- Tried to copy `/home/tomh/`, but it was "too big" to save on the thumb drive
+  - There was room left - according to the `df` command - so I suspect it had to do with there being so many small files
+  - On linux sometimes it runs out of inode space; on FAT, well, I'm not sure, but it's probably a similar deal
+- Deleted all `~/.cache` files then created a`.tgz` file and saved *that* on the thumb drive in `for_martha-24.04a-ubuntu/home/tomh`
+
+## Saving Files Currently in /etc
+
+- Copied `/etc/fstab` and `/etc/hosts` to the *`2023-32A`* thumb drive in `for_martha-24.04a-ubuntu/etc`
 
 
-# Run the install
+# Fresh Install of Ubuntu Linux 24.04 on martha
 
-Boot off the *2023-32B* USB drive and run the installation process.
+Booted martha from the USB stick and ran through the installation procedure.
 
-Use the version that includes vim, rcs, and git.
+## Starting With These Initial Options
 
-# Home Directories
+Running the installation process: **Try or Install Ubuntu**
+
+Use the Extended Version that includes "offline-friendly selection of office tools, utilities, and web browser."
+
+## Other Options Selected During the Process:
+
+- [X] *"Install third-party software for graphics and Wi-Fi Hardware"* - check!
+  - *"Including but not limited to NVIDIA drivers and similar"*
+- [X] *"Download and install support for additional media formats* - check!
+  - *"Including but not limited to MP3, MP4, MOV and similar"*
+
+- [X] *"Erase disk and install Ubuntu"*
+  - *"Start from scratch or your selected disk"*
+  - Advanced features: None - options include LVM and encryption, and some *"Experimental"* options
+
+- [X] NOTE: changing password!  This ex-server is now behind multiple firewalls!!
+- [X] **Unchecked** the *"Require my password to log in"* box!
+
+## Basic Install
+
+Started at around 7:10 PM on 2025-08-09 ...
+
+... noticed it was finished by 7:20 PM ...
+
+... and now the *real* fun begins!
+
+## More Options
+
+- [X] Not going for "Pro"
+- [X] **"Yes, share system data with the Ubuntu team"** - why the fuck not??  I won't be doing much here on barbara
+
+
+# CusTOMizations
+
+## Overview
+
+Find the details for each of these steps in its corresponding section below:
+
+1. Review Settings
+1. Install Essential Packages
+1. Copy `fstab` and `hosts` files to `/etc`
+1. Populate `/home/tomh` directory
+1. Populate `/root` Directory
+1. Setup `/art` Files Disk
+1. Setup Startup Programs
+1. Reboot and Check Progress
+
+- ==================
+1. **Finding Sanity and Fixing Issues**
+  **- TBD...**
+- ==================
+
+## Review Settings
+
+Review Settings: Menu icon -> Settings
+
+See what's there and change them when it makes sense:
+
+- System -> Secure Shell -> Turned on
+- System -> Date & Time -> Switched from 24-hour to AM/PM
+- System -> Software Updates -> Running this, to install all latest updates
+- Network - set up static IP
+  - IPv4 tab
+    - Method: Manual
+    - DNS Servers: 75.75.75.75,75.75.76.76
+    - Address: 10.0.1.121 | Netmask: 255.0.0.0 | Gateway: 10.0.1.2
+- Privacy & Security - turn all that shit off
+- Multitasking - Workspaces
+- Appearance - Background
+- Ubuntu Desktop
+  - Desktop Icons - move to Top Left
+  - Dock - Icon size: 24 looks good (for now anyway)
+  - Dock - move to Bottom
+  - Enhanced Tiling - turn it off (for now anyway)
+- Power
+  - Power Saving -> Screen Blank: Never
+  - Power Saving -> Automatic Suspend: Off
+
+## Install Essential Packages
+
+Open terminal and install as root:
+
+```
+apt-get update
+apt-get upgrade -y
+apt install rcs
+apt install konsole
+apt install openssh-server
+apt install net-tools
+apt install ifupdown
+```
+
+## Copy `fstab` and `hosts` files to `/etc`
+
+- [ ] 1. Create `RCS` dir in `/etc`
+- [ ] 2. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
+- [ ] 3. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_martha-24.04a-ubuntu/etc`
+- [ ] 4. Move these files to `/etc/fstab` and `/etc/hosts`
+- [ ] 5. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive
+  - Fix any descrepancies as necessary
+
+## Populate `/home/tomh` Directory
 
 ## tomh's Home Directory
 
-Populate the `/home/tomh` directory with selected files and directories from the `tarHome` file created for jane:
+- [ ] 1. Check `.bashrc` into RCS
+- [ ] 2. Unpack `martha-home_tomh-2025_06_03.tgz` into a new directory named `~/Home_tomh-old/unpack-use_1st-tarHome_file`
+- [ ] 3. Copy what we need from there into `/home/tomh`
+  - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`, `.ssh`, `.vimrc`, `r*`, `bin`, `technical`, etc.
 
-- `jane-home_tomh-2025_05_29.tgz`
+If necessary, get more files from the `home` directory copied to the thumb drive.
 
 ## Root User's Home Directory
 
-Set up `/root` by copying files (`.bashrc`, etc) from jane to `/root` as necessary and reconstructing links to files in `~tomh`,
-such as `.bash_aliases`, etc.
+## Populate `/root` Directory
+Set up `/root`:
+
+- Copy `.bashrc` from the thumb drive to `/root`
+- Reconstruct links to files in `~tomh`, such as `.bash_aliases`, etc.
 
 Make the directory look like `/root` on `jane`.
 
+## Setup `/art` Files Disk
 
-# Get Network to Work: Static IP, hosts file, ssh etc.
+1. Ensure `/etc/fstab` file is updated with external disk info
+1. Plugin /art files disk
 
-- Network
-  - Static IP: 10.0.0.121
-- Fix `/etc/hosts`
-  - Use a copy of the one on jane
-  - Check in to rcs before making more changes
-- Install using `apt install`:
-  - net-tools, openssh, openssh-server, ifupdown
-- Configure git
-  - Copy .gitconfig from another host, OR run:
-    - `git config --global user.email "tomwhartung@gmail.com"`
-    - `git config --global user.name "Tom Hartung"`
-- Install using Discover OR run:
-  - `apt-get update`
-  - `apt-get upgrade -y`
-  - 'apt install xscreensaver*'
-  - 'apt install *fortune*'
-- Install `/home/tomh` from jane's most recent tar file
-  - Unpack in a temp directory and copy what we need from there
-    - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`,  `.vimrc`, etc.
-- Get ssh to work
-  - Run `ssh-keygen`
-  - Add `~/.ssh/*` files copied from jane
+## Setup Startup Programs
+
+1. Click on **Show Apps** icon in lower right corner
+1. Click on **Startup Applications** icon in the list that appears
+1. Add `/usr/bin/konsole` to the list
+
+## Reboot and Check Progress
+
+- Ensure the disk partitions are mounted ok
+
+
+# Finding Sanity and Fixing Issues
+
+## More Settings: Menu icon -> Settings
+
+- Keyboard -> Keyboard Shortcuts
+  - Launchers - Calculator: Ctrl+Alt+M
+  - Launchers - Web Browser: Ctrl+Alt+F
+  - Launchers - Settings: Ctrl+Alt+S
+  - Navigation - Switch to workspace X: Ctrl-FX
+
+## Downloading `jmws_accoutrements` repo
+
+1. Configure git: copy .gitconfig from another host, OR run:
+   - `git config --global user.email "tomwhartung@gmail.com"`
+   - `git config --global user.name "Tom Hartung"`
+1. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
+1. Log in to github and get ssh link for `jmws_accoutrements` repo
+1. As tomh, run `git clone ...` command in the `/var/www` directory
+
+## Get `ssh` Commands to Work
+
+Follow these steps to ensure ssh works on martha for all other hosts:
+
+1. Need to generate new keys: `ssh-keygen`
+1. Replace old pub key with new one in `authorized_hosts` on all other hosts
+1. Remove `.ssh/known_hosts` file from all other hosts
+1. Log in to each host from each host to make new `known_hosts` files and ensure they all work
+1. As a final test, create a test file on martha in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
+
+## Browser
+
+Let's try using **both** Firefox and Chrome on martha, for now.
+
+- See the instructions for installing Chrome below, for when we decide to start using it.
+
+## `xscreensaver` Issue
+
+Boo, `xscreensaver` does not run with wayland!
+
+### For Possible Future Reference
+
+If they ever fix that issue, we can do these steps to use it:
+
+apt install 'xscreensaver*'
+apt install '*fortune*'
+1. Add `/usr/bin/xscreensaver` to the list
+- Ensure xscreensaver and konsole are running on startup
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 
 
 # Fix Issues
-
-- Remove and re-install firefox because of snap error
 
 
 # Find Sanity, as Best We Can
@@ -118,7 +276,7 @@ chmod -Rv 700 /var/cache/apt/archives/partial/
 
 ## Install Waveform Etc.
 
-- [X] Install Tracktion download manager
+- [ ] Install Tracktion download manager
   - Got the Note/Warning quoted below
     - Frankly I don't think running it unsandboxed is a big deal
   - Note that it is similar to the one above, but this one concerns the *Downloads* directory

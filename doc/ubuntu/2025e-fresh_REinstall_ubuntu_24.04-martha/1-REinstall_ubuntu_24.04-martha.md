@@ -96,7 +96,14 @@ Did several steps: reviewed some settings and installed a few packages, rebooted
 - In the meantime, **setting "UEFT USB Key:UEFI: USB DISK, Partition 2" 1st in the Boot Priority**
 - This doesn't seem to "stick" but maybe I can boot into the "Live CD" at least once.
 - **Starting over from scratch!!**
-- **This time try `sudo` before doing anything else!!**
+
+## **This time do the following before doing anything else:**
+
+[X] **Try `sudo`!!**
+[X] **Set a root password in case `sudo` breaks again!!**
+[X] **Run `apt` on the command line to update the system!!**
+[X] **reboot the system and check `sudo` and root access again!!**
+
 
 # CusTOMizations
 
@@ -119,6 +126,41 @@ Find the details for each of these steps in its corresponding section below:
   **- TBD...**
 - ==================
 
+## Install Essential Packages - Command Line
+
+Open terminal and install as root:
+
+```
+su - root
+apt-get update
+apt-get upgrade -y
+reboot
+```
+
+```
+sudo su -
+apt install rcs
+apt install konsole
+apt install openssh-server
+apt install net-tools
+apt install ifupdown
+reboot
+```
+
+## Install Essential Packages - Settings -> Software Updates
+
+I wonder if one of these screwed up the `sudo` command?
+
+- OBS
+- Konsole
+- Reboot
+- Test root access - *yes, I am paranoid now*
+
+```
+su -
+sudo su -
+```
+
 ## Review Settings
 
 Review Settings: Menu icon -> Settings
@@ -137,26 +179,6 @@ Review Settings: Menu icon -> Settings
    - Power Mode -> Power Saver
    - Power Saving -> Screen Blank: Never
    - Power Saving -> Automatic Suspend: Off
-
-## Install Essential Packages - Settings -> Software Updates
-
-- OBS
-- Konsole
-- Forced to reboot
-
-## Install Essential Packages - Command Line
-
-Open terminal and install as root:
-
-```
-apt-get update
-apt-get upgrade -y
-apt install rcs
-apt install konsole
-apt install openssh-server
-apt install net-tools
-apt install ifupdown
-```
 
 ## Copy `fstab` and `hosts` files to `/etc`
 

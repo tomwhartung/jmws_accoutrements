@@ -88,10 +88,10 @@ Started at around 7:10 PM on 2025-08-09 ...
 
 Find the details for each of these steps in its corresponding section below:
 
-1. Install Essential Packages - Settings -> Software Updates
 1. Review Settings
-1. Copy `fstab` and `hosts` files to `/etc`
+1. Install Essential Packages - Settings -> Software Updates
 1. Install Essential Packages - Command Line
+1. Copy `fstab` and `hosts` files to `/etc`
 1. Populate `/home/tomh` directory
 1. Populate `/root` Directory
 1. Setup `/art` Files Disk
@@ -106,8 +106,6 @@ Find the details for each of these steps in its corresponding section below:
 ## Review Settings
 
 Review Settings: Menu icon -> Settings
-
-See what's there and change them when it makes sense:
 
 [X] System -> Secure Shell -> Turned on
 [X] System -> Date & Time -> Switched from 24-hour to AM/PM
@@ -128,16 +126,7 @@ See what's there and change them when it makes sense:
 
 - OBS
 - Konsole
-
-
-## Copy `fstab` and `hosts` files to `/etc`
-
-- [ ] 1. Create `RCS` dir in `/etc`
-- [ ] 2. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
-- [ ] 3. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_martha-24.04c-ubuntu/etc`
-- [ ] 4. Move these files to `/etc/fstab` and `/etc/hosts`
-- [ ] 5. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive
-  - Fix any descrepancies as necessary
+- Forced to reboot
 
 ## Install Essential Packages - Command Line
 
@@ -152,6 +141,16 @@ apt install openssh-server
 apt install net-tools
 apt install ifupdown
 ```
+
+## Copy `fstab` and `hosts` files to `/etc`
+
+- [ ] 1. Create `RCS` dir in `/etc`
+- [ ] 2. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
+- [ ] 3. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_martha-24.04c-ubuntu/etc`
+- [ ] 4. Move these files to `/etc/fstab` and `/etc/hosts`
+- [ ] 5. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive
+  - Fix any descrepancies as necessary
+
 
 ## Populate `/home/tomh` Directory
 
@@ -190,9 +189,9 @@ Make the directory look like `/root` on `jane`.
 - Ensure the disk partitions are mounted ok
 
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-DO THESE THINGS LATER
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+- DO THESE THINGS LATER
+- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 # Finding Sanity and Fixing Issues

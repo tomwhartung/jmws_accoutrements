@@ -99,10 +99,10 @@ Did several steps: reviewed some settings and installed a few packages, rebooted
 
 ## **This time do the following before doing anything else:**
 
-[X] **Try `sudo`!!**
-[X] **Set a root password in case `sudo` breaks again!!**
-[X] **Run `apt` on the command line to update the system!!**
-[X] **reboot the system and check `sudo` and root access again!!**
+- [X] **Try `sudo`!!**
+- [X] **Set a root password in case `sudo` breaks again!!**
+- [X] **Run `apt` on the command line to update the system!!**
+- [X] **reboot the system and check `sudo` and root access again!!**
 
 
 # CusTOMizations
@@ -111,9 +111,10 @@ Did several steps: reviewed some settings and installed a few packages, rebooted
 
 Find the details for each of these steps in its corresponding section below:
 
-1. Review Settings
+1. Update and Reboot - Command Line
 1. Install Essential Packages - Settings -> Software Updates
 1. Install Essential Packages - Command Line
+1. Review Settings
 1. Copy `fstab` and `hosts` files to `/etc`
 1. Populate `/home/tomh` directory
 1. Populate `/root` Directory
@@ -126,7 +127,7 @@ Find the details for each of these steps in its corresponding section below:
   **- TBD...**
 - ==================
 
-## Install Essential Packages - Command Line
+## Update and Reboot - Command Line
 
 Open terminal and install as root:
 
@@ -136,6 +137,8 @@ apt-get update
 apt-get upgrade -y
 reboot
 ```
+
+## Install Essential Packages - Command Line
 
 ```
 sudo su -
@@ -147,43 +150,51 @@ apt install ifupdown
 reboot
 ```
 
-## Install Essential Packages - Settings -> Software Updates
+## Review Settings
 
-I wonder if one of these screwed up the `sudo` command?
+Review Settings: Menu icon -> Settings
 
-- OBS
-- Konsole
-- Reboot
-- Test root access - *yes, I am paranoid now*
+- [X] System -> Secure Shell -> Turned on already
+   - This time this is already turned on, maybe because I've already installed `openssh`?
+   - Maybe turning it on before installing `openssh` - as done last time - caused the issue with `sudo`
+- [X] System -> Date & Time -> Switched from 24-hour to AM/PM
+- [X] Wi-Fi - IPv4 tab - set up static IP
+   - Method: Manual
+   - Address: 10.0.1.121 | Netmask: 255.0.0.0 | Gateway: 10.0.1.2
+   - DNS Servers: 75.75.75.75,75.75.76.76
+- [X] Privacy & Security
+   - Screen Lock: turn all that shit off
+- [X] Multitasking - Workspaces
+- [X] Power
+   - Power Saving -> Screen Blank: Never
+   - Power Saving -> Automatic Suspend: Off
+
+## Run the "Partial Upgrade" - Settings -> Software Updates
+
+- [X] System -> Software Updates -> Running this, to install all latest updates
+   - "Partial upgrade*
+
+Reboot and check root access!
+
+## Install Additional Package - Settings -> Software Updates
+
+I wonder if installing OBS screwed up the `sudo` command last time?
+It is something I did not do on barbara!  *Paranoid, suspicious and superstitious, now I am!!*
+
+- [X] App Center [Orange Icon)
+   - OBS
+
+Reboot and test root access:
 
 ```
 su -
 sudo su -
 ```
 
-## Review Settings
-
-Review Settings: Menu icon -> Settings
-
-[ ] System -> Secure Shell -> Turned on
-[ ] System -> Date & Time -> Switched from 24-hour to AM/PM
-[ ] System -> Software Updates -> Running this, to install all latest updates
-[ ] Wi-Fi - IPv4 tab - set up static IP
-   - Method: Manual
-   - DNS Servers: 75.75.75.75,75.75.76.76
-   - Address: 10.0.1.121 | Netmask: 255.0.0.0 | Gateway: 10.0.1.2
-[ ] Privacy & Security
-   - Screen Lock: turn all that shit off
-[ ] Multitasking - Workspaces
-[ ] Power
-   - Power Mode -> Power Saver
-   - Power Saving -> Screen Blank: Never
-   - Power Saving -> Automatic Suspend: Off
-
 ## Copy `fstab` and `hosts` files to `/etc`
 
-- [ ] 1. Create `RCS` dir in `/etc`
-- [ ] 2. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
+- [X] 1. Create `RCS` dir in `/etc`
+- [X] 2. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
 - [ ] 3. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_martha-24.04c-ubuntu/etc`
 - [ ] 4. Move these files to `/etc/fstab` and `/etc/hosts`
 - [ ] 5. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive

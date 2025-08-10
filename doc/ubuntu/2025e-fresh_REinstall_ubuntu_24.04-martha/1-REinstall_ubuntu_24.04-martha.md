@@ -82,6 +82,22 @@ Started at around 7:10 PM on 2025-08-09 ...
 - [X] **"Yes, share system data with the Ubuntu team"** - why the fuck not??  I won't be doing much here on barbara
 
 
+# First Time Failed!
+
+Did several steps: reviewed some settings and installed a few packages, rebooted, then WTAF `sudo` Does Not Work?!?  It worked fine on barbara!!
+
+- This page says to boot off a "Live CD":
+  - [https://askubuntu.com/questions/354315/permission-denied-for-all-sudo-comands](https://askubuntu.com/questions/354315/permission-denied-for-all-sudo-comands)
+- **This is not easy on this box!**
+- Need to press Esc slowly but steadily to get to BIOS
+- Trying this: **BIOS -> Settings -> Boot -> GO2BIOS -> Enabled**
+  - "Allows you to enter BIOS setup directly by pressing the Power button for 4 sec upon bootup.
+- Maybe that will help??
+- In the meantime, **setting "UEFT USB Key:UEFI: USB DISK, Partition 2" 1st in the Boot Priority**
+- This doesn't seem to "stick" but maybe I can boot into the "Live CD" at least once.
+- **Starting over from scratch!!**
+- **This time try `sudo` before doing anything else!!**
+
 # CusTOMizations
 
 ## Overview
@@ -107,17 +123,17 @@ Find the details for each of these steps in its corresponding section below:
 
 Review Settings: Menu icon -> Settings
 
-[X] System -> Secure Shell -> Turned on
-[X] System -> Date & Time -> Switched from 24-hour to AM/PM
-[X] System -> Software Updates -> Running this, to install all latest updates
-[X] Wi-Fi - IPv4 tab - set up static IP
+[ ] System -> Secure Shell -> Turned on
+[ ] System -> Date & Time -> Switched from 24-hour to AM/PM
+[ ] System -> Software Updates -> Running this, to install all latest updates
+[ ] Wi-Fi - IPv4 tab - set up static IP
    - Method: Manual
    - DNS Servers: 75.75.75.75,75.75.76.76
    - Address: 10.0.1.121 | Netmask: 255.0.0.0 | Gateway: 10.0.1.2
-[X] Privacy & Security
+[ ] Privacy & Security
    - Screen Lock: turn all that shit off
-[X] Multitasking - Workspaces
-[X] Power
+[ ] Multitasking - Workspaces
+[ ] Power
    - Power Mode -> Power Saver
    - Power Saving -> Screen Blank: Never
    - Power Saving -> Automatic Suspend: Off
@@ -127,25 +143,6 @@ Review Settings: Menu icon -> Settings
 - OBS
 - Konsole
 - Forced to reboot
-
-## WTF `sudo` Does Not Work?!?
-
-This page says to boot off a "Live CD":
-
-- [https://askubuntu.com/questions/354315/permission-denied-for-all-sudo-comands](https://askubuntu.com/questions/354315/permission-denied-for-all-sudo-comands)
-
-This is not easy on this box!
-
-- Need to press Esc slowly but steadily to get to BIOS
-- Trying this: **BIOS -> Settings -> Boot -> GO2BIOS -> Enabled**
-  - "Allows you to enter BIOS setup directly by pressing the Power button for 4 sec upon bootup.
-  
-Maybe that will help??
-
-In the meantime, **setting "UEFT USB Key:UEFI: USB DISK, Partition 2" 1st in the Boot Priority**
-
-This doesn't seem to "stick" but maybe I can boot into the "Live CD" at least once.
-
 
 ## Install Essential Packages - Command Line
 

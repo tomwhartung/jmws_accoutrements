@@ -111,18 +111,22 @@ Did several steps: reviewed some settings and installed a few packages, rebooted
 
 Find the details for each of these steps in its corresponding section below:
 
-1. Update and Reboot - Command Line
-1. Install Essential Packages - Command Line
-1. Run the "Partial Upgrade" - Settings -> Software Updates
-1. Review Settings
-1. Install Additional Package - Settings -> Software Updates
-1. Copy `fstab` and `hosts` files to `/etc`
-1. Populate tomh and root Home Directories
+- [X] 1. Update and Reboot - Command Line
+- [X] 2. Install Essential Packages - Command Line
+- [X] 3. Run the "Partial Upgrade" - Settings -> Software Updates
+- [X] 4. Review Settings
+- [X] 5. Install Additional Package - Settings -> Software Updates
+- [ ] 6. Copy `fstab` and `hosts` files to `/etc`
+- [X] 7. Reboot and Check Progress
+- [X] 8. Setup `/art` Files Disk
+- [ ] 9. Populate tomh and root Home Directories
    - Populate `/home/tomh` directory
    - Populate `/root` Directory
-1. Setup `/art` Files Disk
-1. Setup Startup Programs
-1. Reboot and Check Progress
+- [ ] 10. Setup `/art` Files Disk
+- [ ] 10. Reboot and Check Progress
+- [ ] Download `jmws_accoutrements` repo
+- [ ] Get `ssh` Commands to Work
+- [ ] 1. Setup Startup Programs
 
 - ==================
 1. **Finding Sanity and Fixing Issues**
@@ -145,6 +149,7 @@ reboot
 ```
 sudo su -
 apt install rcs
+apt install vim
 apt install konsole
 apt install openssh-server
 apt install net-tools
@@ -199,36 +204,75 @@ sudo su -
 
 - [X] 1. Create `RCS` dir in `/etc`
 - [X] 2. Check installed versions of `/etc/fstab` and `/etc/hosts` into RCS
-- [ ] 3. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_martha-24.04c-ubuntu/etc`
-- [ ] 4. Move these files to `/etc/fstab` and `/etc/hosts`
-- [ ] 5. Use `rcsdiff` command to verify that installed version doesn't contain statements not in the versions from the thumb drive
-  - Fix any descrepancies as necessary
+- [X] 3. Find `etc/fstab` and `etc/hosts` on the *`2023-32A`* thumb drive in `for_martha-24.04c-ubuntu/etc`
+- [X] 4. Move these files to `/etc/fstab-new` and `/etc/hosts-new`
+- [X] 5. Identify customizations in the versions of the `fstab` and `hosts` files from the thumb drive
+- [X] 6. Add the customizations to the installed versions of the `fstab` and `hosts` files
+- [X] 7. Use `rcsdiff` command to verify that all customizations were added to the installed versions of the `fstab` and `hosts` files
+- [X] 8. Reboot, test, and fix any descrepancies as necessary
 
+## Reboot and Check Progress
+
+- Ensure the disk partitions are mounted ok
+
+## Setup `/art` Files Disk
+
+- [X] 1. Ensure `/etc/fstab` file is updated with external disk info
+- [X] 2. Plugin `/art` files disk
+- [X] 3. Create `/art` directory and `chown` it to `tomh:tomh`
+- [X] 4. Link `/mnt/disks/FATALLART/* to `/art` directory
 
 ## Populate tomh and root Home Directories
 
 ### Populate `/home/tomh` Directory
 
-- [ ] 1. Check `.bashrc` into RCS
-- [ ] 2. Unpack `martha-home_tomh-2025_07_31.tgz` into a new directory named `~/Home_tomh-old/unpack-use_1st-tarHome_file`
-- [ ] 3. Copy what we need from there into `/home/tomh`
-  - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`, `.ssh`, `.vimrc`, `r*`, `bin`, `technical`, etc.
+We have two sources of files: the `tarHome` file and a copy of most of the files individually.
 
-If necessary, get more files from the `home` directory copied to the thumb drive.
+Guidelines:
+
+- Use a bare minimum of files
+- Prefer using the copies from the `tarHome` backup to using the copies of the individual files
+- Move rather than copy the files
+
+- [X] 1. Check installed version of `.bashrc` into RCS
+- [X] 2. Copy, unpack, and remove `martha-home_tomh-2025_07_31.tgz` into a new directory named `~/Home_tomh-old/use_1st-unpack_tarHome_file`
+- [X] 3. Move and unpack `martha-home_tomh-2025_07_31.tgz` into a new directory named `~/Home_tomh-old/use_2nd-copy_of_home_dir_on_kubuntu
+- [X] 4. Move the following files and directories from `use_1st-unpack_tarHome_file` into `/home/tomh`
+  - `.bashrc`, `.bash_aliases`, `.bash_aliases-*`
+  - `bin`, `.gitconfig`, `r*`, `.vimrc`, `technical/email`
+  - `.ssh/*`, then remove any files that are obviously unneeded
+  - `personal/backgrounds`
+
+Ok grabbing those is good enough for now.
 
 ### Populate `/root` Directory
 
-Set up `/root`:
+Set up `/root` by making the directory look like `/root` on `martha` (before the install) or `jane`.
 
-- Copy `.bashrc` from the thumb drive to `/root`
-- Reconstruct links to files in `~tomh`, such as `.bash_aliases`, etc.
+- [X] 1. Check installed version of `.bashrc` into RCS
+- [X] 2. Copy `.bashrc` from the thumb drive to `/root`
+- [X] 3. Run `rcsdiff .bashrc` to ensure the only thing different is the `"CusTOMizations"` section of the file
+- [X] 4. Reconstruct links to files in `~tomh`: `.bash_aliases`, `.bash_aliases-martha`, `.vimrc`
+- [X] 5. Run `. ~/.bashrc` to fix the prompt and otherwise test these changes
 
-Make the directory look like `/root` on `jane`.
+## Download `jmws_accoutrements` repo
 
-## Setup `/art` Files Disk
+1. Configure git: copy .gitconfig from another host, OR run:
+   - `git config --global user.email "tomwhartung@gmail.com"`
+   - `git config --global user.name "Tom Hartung"`
+1. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
+1. Log in to github and get ssh link for `jmws_accoutrements` repo
+1. As tomh, run `git clone ...` command in the `/var/www` directory
 
-1. Ensure `/etc/fstab` file is updated with external disk info
-1. Plugin /art files disk
+## Get `ssh` Commands to Work
+
+Follow these steps to ensure ssh works on martha for all other hosts:
+
+1. Need to generate new keys: `ssh-keygen`
+1. Replace old pub key with new one in `authorized_hosts` on all other hosts
+1. Remove `.ssh/known_hosts` file from all other hosts
+1. Log in to each host from each host to make new `known_hosts` files and ensure they all work
+1. As a final test, create a test file on martha in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
 
 ## Setup Startup Programs
 
@@ -263,30 +307,16 @@ Make the directory look like `/root` on `jane`.
   - Launchers - Settings: Ctrl+Alt+S
   - Navigation - Switch to workspace X: Ctrl-FX
 
-## Downloading `jmws_accoutrements` repo
-
-1. Configure git: copy .gitconfig from another host, OR run:
-   - `git config --global user.email "tomwhartung@gmail.com"`
-   - `git config --global user.name "Tom Hartung"`
-1. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
-1. Log in to github and get ssh link for `jmws_accoutrements` repo
-1. As tomh, run `git clone ...` command in the `/var/www` directory
-
-## Get `ssh` Commands to Work
-
-Follow these steps to ensure ssh works on martha for all other hosts:
-
-1. Need to generate new keys: `ssh-keygen`
-1. Replace old pub key with new one in `authorized_hosts` on all other hosts
-1. Remove `.ssh/known_hosts` file from all other hosts
-1. Log in to each host from each host to make new `known_hosts` files and ensure they all work
-1. As a final test, create a test file on martha in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
-
 ## Browser
 
 Let's try using **both** Firefox and Chrome on martha, for now.
 
 - See the instructions for installing Chrome below, for when we decide to start using it.
+
+
+# Unresolvable Issues
+
+There are some things we just can'd do anymore, bummer.
 
 ## `xscreensaver` Issue
 

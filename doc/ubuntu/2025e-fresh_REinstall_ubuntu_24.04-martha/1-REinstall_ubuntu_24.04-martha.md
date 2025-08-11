@@ -119,19 +119,17 @@ Find the details for each of these steps in its corresponding section below:
 - [ ] 6. Copy `fstab` and `hosts` files to `/etc`
 - [X] 7. Reboot and Check Progress
 - [X] 8. Setup `/art` Files Disk
-- [ ] 9. Populate tomh and root Home Directories
+- [X] 9. Populate tomh and root Home Directories
    - Populate `/home/tomh` directory
    - Populate `/root` Directory
-- [ ] 10. Setup `/art` Files Disk
-- [ ] 10. Reboot and Check Progress
-- [ ] Download `jmws_accoutrements` repo
-- [ ] Get `ssh` Commands to Work
-- [ ] 1. Setup Startup Programs
-
-- ==================
-1. **Finding Sanity and Fixing Issues**
-  **- TBD...**
-- ==================
+- [X] 10. Setup `/art` Files Disk
+- [X] 11. Reboot and Check Progress
+- [X] 12. Download `jmws_accoutrements` repo
+- [X] 13. Setup Startup Programs
+- [X] 14. Get `ssh` Commands to Work
+- [X] 15. Browser(s)
+- [ ] 16. Reboot and Check Progress
+- [ ] 17. Fixing Issues and Finding Sanity
 
 ## Update and Reboot - Command Line
 
@@ -151,6 +149,7 @@ sudo su -
 apt install rcs
 apt install vim
 apt install konsole
+apt install git
 apt install openssh-server
 apt install net-tools
 apt install ifupdown
@@ -252,33 +251,55 @@ Set up `/root` by making the directory look like `/root` on `martha` (before the
 - [X] 1. Check installed version of `.bashrc` into RCS
 - [X] 2. Copy `.bashrc` from the thumb drive to `/root`
 - [X] 3. Run `rcsdiff .bashrc` to ensure the only thing different is the `"CusTOMizations"` section of the file
-- [X] 4. Reconstruct links to files in `~tomh`: `.bash_aliases`, `.bash_aliases-martha`, `.vimrc`
+- [X] 4. Reconstruct links to files in `~tomh`: `.bash_aliases`, `.bash_aliases-martha`, `.vimrc`, `~/bin`
 - [X] 5. Run `. ~/.bashrc` to fix the prompt and otherwise test these changes
+- [X] 6. Test `rd` by running `cd ; rd .bashrc`
 
 ## Download `jmws_accoutrements` repo
 
-1. Configure git: copy .gitconfig from another host, OR run:
+- [X] 1. Configure git: copy .gitconfig from another host, OR run:
    - `git config --global user.email "tomwhartung@gmail.com"`
    - `git config --global user.name "Tom Hartung"`
-1. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
-1. Log in to github and get ssh link for `jmws_accoutrements` repo
-1. As tomh, run `git clone ...` command in the `/var/www` directory
+- [X] 2. As root, create `/var/www` directory and `chown` it to `tomh:tomh`
+- [X] 3. Log in to github.com in Firefox and get the ssh link for `jmws_accoutrements` repo
+- [X] 4. As tomh, run `git clone ...` command in the `/var/www` directory
+- [X] 5. Test `listFiles` by running the `lf ...` command in a directory that has files and subdirectories
+
+## Setup Startup Programs
+
+- [X] 1. Click on **Show Apps** icon in lower right corner
+- [X] 2. Click on **Startup Applications** icon in the list that appears
+- [X] 3. Add `/usr/bin/konsole` to the list
 
 ## Get `ssh` Commands to Work
 
 Follow these steps to ensure ssh works on martha for all other hosts:
 
-1. Need to generate new keys: `ssh-keygen`
-1. Replace old pub key with new one in `authorized_hosts` on all other hosts
-1. Remove `.ssh/known_hosts` file from all other hosts
-1. Log in to each host from each host to make new `known_hosts` files and ensure they all work
-1. As a final test, create a test file on martha in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
+- [X] 1. Need to generate new keys:
+   - As tomh, run `ssh-keygen`
+- [X] 1. Copy the new `~/.ssh/id_ed25591.pub` key to the thumb drive
+- [X] 1. On ava, barbara, bette, and jane: edit the `~/.ssh/authorized_hosts` file and replace the old pub key for martha with the new one
+- [X] 1. Remove `.ssh/known_hosts` file from martha and all other hosts
+- [X] 1. Log in to ava, barbara, bette, and jane from martha to make new `known_hosts` files and ensure they all work
+   - Once logged into each, ssh back to martha, to ensure the connection works both ways **without entering a password**
+   - Had an issue **and I fixed it** yay me!
+   - When going from martha to barbara, it wanted me to enter a password!
+   - Oops: I just installed ubuntu 24.04 on barbara, but martha still had barbara's old key in its `authorized_keys` file
+   - Updated the `authorized_keys` file on martha with barbara's new post-install key, and voila!!
+- [X] 1. Log in to each host from each host to complete making the new `known_hosts` files and ensure they all work
+- [X] 1. As a final test, create a test file on martha in `~/tmp` and use `toTheLinuxHosts` to scp it to all the others
 
-## Setup Startup Programs
+## Browser(s)
 
-1. Click on **Show Apps** icon in lower right corner
-1. Click on **Startup Applications** icon in the list that appears
-1. Add `/usr/bin/konsole` to the list
+### Setup
+
+- Firefox -> hamburger menu -> Settings -> General -> Startup -> Open previous windows and tabs
+
+### Install Chrome?
+
+Let's try using **both** Firefox **and** Chrome on martha, for now.
+
+See the instructions for installing Chrome below, for when we decide to start using it.
 
 ## Reboot and Check Progress
 
@@ -286,11 +307,11 @@ Follow these steps to ensure ssh works on martha for all other hosts:
 
 
 - -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-- DO THESE THINGS LATER
+- DO THE FOLLOWING THINGS LATER:
 - -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
-# Finding Sanity and Fixing Issues
+# Fixing Issues and Finding Sanity
 
 ## More Settings: Menu icon -> Settings
 
@@ -307,34 +328,9 @@ Follow these steps to ensure ssh works on martha for all other hosts:
   - Launchers - Settings: Ctrl+Alt+S
   - Navigation - Switch to workspace X: Ctrl-FX
 
-## Browser
-
-Let's try using **both** Firefox and Chrome on martha, for now.
-
-- See the instructions for installing Chrome below, for when we decide to start using it.
-
-
-# Unresolvable Issues
-
-There are some things we just can'd do anymore, bummer.
-
-## `xscreensaver` Issue
-
-Boo, `xscreensaver` does not run with wayland!
-
-### For Possible Future Reference
-
-If they ever fix that issue, we can do these steps to use it:
-
-apt install 'xscreensaver*'
-apt install '*fortune*'
-1. Add `/usr/bin/xscreensaver` to the list
-- Ensure xscreensaver and konsole are running on startup
-
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 
 
 # Fix Issues
@@ -391,5 +387,27 @@ chmod -Rv 770 /root/Downloads
 
 # Finish Up
 
-- Consider uninstalling firefox because one browser is enough on this host
+- Maybe consider uninstalling Firefox??
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+# Abandon Wayland?
+
+There are some things we just can'd do anymore, bummer.
+**However, there is a workaround,** if we want to use it.
+
+## `xscreensaver` Issue
+
+Boo, `xscreensaver` does not run with wayland!
+
+- Apparently, reverting back to x11 (I think it is) will fix this
+
+### For Possible Future Reference
+
+If they ever fix that issue, we can do these steps to use it:
+
+apt install 'xscreensaver*'
+apt install '*fortune*'
+1. Add `/usr/bin/xscreensaver` to the list
+- Ensure xscreensaver and konsole are running on startup

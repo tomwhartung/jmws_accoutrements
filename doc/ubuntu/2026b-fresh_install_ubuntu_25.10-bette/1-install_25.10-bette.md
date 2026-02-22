@@ -21,14 +21,24 @@ Time to install 25.10 on bette.
 
 # IMPORTANT
 
+
+## Save Important Files and Info About `bette`
+
+- [ ] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_bette`
+- [ ] Save network configuration for static on `bette` to the `2023-32A` thumb drive
+
+
+## Wait a Few Days!
+
 **BEFORE OVERWRITING `BETTE`, be sure to spend a few days ensuring `barbara` can play mp3s the way we want it to!**
 
 
-# About Bette's Disk Partitions
+# A Note Concerning Bette's Disk Partitions
 
 Currently `bette` has a lot of spare disk partitions.
 
 - **We no longer need these, so we will create a new partition table with just one partition!!**
+
 
 # Installation Process - Specific Steps
 

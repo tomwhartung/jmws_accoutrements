@@ -5,10 +5,10 @@ Time to install 25.10 on barbara.
 
 # Why?
 
-- Poor `barbara` has very little memory (2G, maybe 3?) and now even crashes a lot even when I have just 6-7-8 tabs open in Firefox
+- Poor `barbara` has very little memory (2G, but shows 3-4) and now even crashes a lot even when I have just 6-7-8 tabs open in Firefox
 - All I do with `bette` these days is listen to mp3s
-- I listen to mp3s every morning on `rita`, a Mac Mini from 2008 (32-bit) that has only 2G memory
-- I want to use `bette` upstairs for playing with Tracktion
+- I listen to mp3s every morning on `rita`, a Mac Mini from 2008 (32-bit) that has only 2G memory, and it works fine
+- I want to use `bette` upstairs for playing with Tracktion, etc.
 
 # Goals - Big Picture
 
@@ -47,9 +47,18 @@ Time to install 25.10 on barbara.
   - `/etc`
   - `/home/tomh`
 - [ ] Get network going
-  - Steps TBD
+  - Wired, Manual Config - IPv4:
+    - Identity - Name: "Wired Quantum Fiber"; MTU: automatic
+    - IP: 10.0.1.116
+    - Netmask: 255.0.0.0
+    - Gateway: 10.0.1.2
+    - Default Route: 10.0.1.2
+    - DNS: 192.168.0.1, 205.171.2.25
+  - IPv6: Disable
 - [ ] Get ssh working
-  - Steps TBD
+  - Refer to `2026-big_picture-all_linux_hosts.md`
+- [ ] Additional steps - 
+  - Refer to `2026-big_picture-all_linux_hosts.md`
 
 
 ## Listen to Music on `barbara`

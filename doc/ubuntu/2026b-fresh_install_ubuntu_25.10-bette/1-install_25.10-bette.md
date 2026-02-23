@@ -19,11 +19,13 @@ Time to install 25.10 on bette.
 1. Customize `barbara` for listening to mp3s, using the `/art/*` external disk currently used on `bette`
 
 
-# IMPORTANT
+
+# IMPORTANT TODOs BEFORE WHIPING OUT BETTE'S DISK
 
 
-## Save Important Files and Info About `bette`
+## Review Files in `/home/tomh`, Saving Important Files, and Network Config Info About `bette`
 
+- [ ] Review files in `/home/tomh`, and copy any that are not already in `/home/tomh` on `jane` over to there
 - [ ] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_bette`
 - [ ] Save network configuration for static on `bette` to the `2023-32A` thumb drive
 
@@ -60,14 +62,25 @@ Currently `bette` has a lot of spare disk partitions.
   - `/etc`
   - `/home/tomh`
 - [ ] Get network going
-  - Steps TBD
+  - Wireless, Manual Config - IPv4:
+    - Identity - Name: "Wireless Quantum Fiber"; MTU: automatic
+    - SSID: tomsasus
+    - Mode: Infrastructure
+    - Wi-Fi Security: WPA/WPA2 Personal
+    - IP: 10.0.1.112
+    - Netmask: 255.255.255.0
+    - Gateway: 10.0.1.2
+    - Default Route: 10.0.1.2
+    - DNS: 192.168.0.1, 205.171.2.25
+  - IPv6: Disable
+
 - [ ] Get ssh working
-  - Steps TBD
+  - Refer to `2026-big_picture-all_linux_hosts.md`
 
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-# Possible template for use next year:
+# Possible ideas for things that will need to be done this time:
 
 # Preparations
 

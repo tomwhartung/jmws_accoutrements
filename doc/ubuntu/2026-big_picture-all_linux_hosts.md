@@ -9,6 +9,15 @@ Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 
 ### `jane` 2013 - 16G Memory, 500G Internal Disk, Laptop
 
+
+|External Disks|Size|Used|Percent|
+|--------------|:--:|:--:|------:|
+|Before:||||
+|`/mnt/disks/art`|1500G|647G|51%|
+|`/mnt/disks/FATART`|500G|193G|40%|
+||||
+|After:|**SAME**|||
+
 - Main general purpose host with complete `home` directory, synced with `ava``s
 - Downloading and ripping mp3s
 - Uploading and organizing Sony-ZV1 video files
@@ -17,6 +26,11 @@ Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 
 ### `ava` 2016 - 8G Memory, 500G Internal Disk, Desktop
 
+- External Disks:
+  - Before:
+    - `/mnt/disks/art` - 1500G 510G 40%
+    - `/mnt/disks/FATART` - 500G 193G 42%
+  - After: **SAME**
 - Spare general purpose host with complete `home` directory, synced with `jane``s
 - Maintain and keep budget up-to-date
 - Maintains a backup of all `/art` files on an external disk, EXCEPT Sony-ZV1 and OBS video files (*)
@@ -24,6 +38,13 @@ Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 
 ### `barbara` 2016 - 2G Memory, 250G Internal Disk, Desktop
 
+- External Disks:
+  - Before:
+    - 
+    - 
+  - After - formerly on `bette`:
+    - 
+    - 
 - For listening to mp3s *only*
 - Maintains a backup of all `/art` files on an external disk, EXCEPT Sony-ZV1 and OBS video files (*)
 
@@ -31,12 +52,22 @@ Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 
 ### `bette` 2011 - 8G Memory, 500G Internal Disk, Laptop, **Portable**
 
+- External Disks:
+  - Before:
+    - 
+    - 
+  - After - **NONE** - moved to `barbara`
 - For portability and playing around with Tracktion *only* - at least to start
 - Does **NOT** maintain a backup of **ANY** `/art` files on an external disk, **in order to facilitate portability**
 - Possibly for occasional social networking using firefox
 
 ### `martha` 2023 - 16G Memory, 500G Internal Disk, Desktop
 
+- External Disks:
+  - Before:
+    - 
+    - 
+  - After: **SAME**
 - For playing around with Tracktion and ???
 - Maintains a backup of all `/art` files on an external disk, INCLUDING Sony-ZV1 and OBS video files (*)
 - Possibly for occasional social networking using firefox, or possibly chrome

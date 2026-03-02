@@ -31,8 +31,8 @@ Time to install 25.10 on barbara.
 
 ## Save Important Files and Info About `barbara`
 
-- [X] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_barbara`
 - [X] Save network configuration for static on `barbara` - **see below**
+- [X] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_barbara`
 
 
 ## Install Ubuntu 25.10 on `barbara`
@@ -66,6 +66,17 @@ Time to install 25.10 on barbara.
       - Default Route: 10.0.1.2
       - DNS: 192.168.0.1, 205.171.2.25
     - IPv6: Disable
+
+### Steps Common to Upgrades on Multiple Linux Hosts
+
+Copied the steps in these sections to identically-named sections in `../2026-big_picture-all_linux_hosts.md` -
+because we will be running these multiple times in the near future - but left the original checklists here for posterity:
+
+- [ ] Update Essential Files From Previous Install
+- [ ] Install Essential Packages
+- [ ] Set Essential Keyboard Shortcuts
+- [ ] Networking - `ssh`
+- [ ] Github; Clone the `jmws_accoutrements` Repo
 
 ### Update Essential Files From Previous Install
 
@@ -119,20 +130,27 @@ Find old files on the `2023-32A` thumb drive in `for_25.10_on_barbara` and use t
     - *Else you will get a nasty error message*
   - [X] Log in to each host from each host, to make a new `known_hosts` file on each one and ensure they all work
 
-### Github Close `jmws_accoutrements`
+### Github; Clone the `jmws_accoutrements` Repo
 
 - [X] Update ssh key for `barbara` on github.com
   - [X] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
     - [X] Delete the old ssh key for `barbara`
     - [X] Add the new ssh key, that was created above, as `barbara-ubuntu-25.10`
+- [X] Make a subdirectory in `/var` named `/var/www` and change the owner of it to `tomh`:
+  - [X] As the `root` user run: `cd /var; mkdir www; chown tomh:tomh www`
+- [X] Clone the `jmws_accoutrements` repo:
+  - [X] As the `tomh` user run: `cd /var/www; git clone [ssh url from github for the repository]`
+    - We probably want to run `git clone git@github.com:tomwhartung/jmws_accoutrements.git`, but check github to be sure
 
-## Listen to Music on `barbara`
+## Steps Unique to Upgrading `barbara`
 
-- [ ] Start by using Rhythmbox
+### Listen to Music on `barbara`
+
+- [X] Start by using Rhythmbox
   - [X] Link `/art/music/songs/mp3` to `~/Music/Rhythmbox`
   - [X] Open the Hamburger Menu -> Preferences -> Music page and set the Library Location to `~/Music/Rhythmbox`
     - **NOTE:** Do this **before** adding anything (e.g., subdirs, links, subdirs with links) to `~/Music`
-  - [ ] Give it a listen!
+  - [X] Give it a listen!
 - [X] Try Clementine
   - [X] Link `/art/music/songs/mp3` to `~/Music/Clementine`
   - [X] Install and pin the `Clementine` mp3 player to the task bar
@@ -145,7 +163,8 @@ Find old files on the `2023-32A` thumb drive in `for_25.10_on_barbara` and use t
   - [X] Install and pin the `Strawberry` mp3 player to the task bar
   - [X] Give it a listen!
 - [X] Ensure we can use freegalmusic.com in Firefox, and bookmark the site
-- [ ] If desired, maybe research and possibly install and use another mp3 player
+- [?] If desired, maybe research and possibly install and use another mp3 player
+  - Actually, I think we are good, at least for now
 
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

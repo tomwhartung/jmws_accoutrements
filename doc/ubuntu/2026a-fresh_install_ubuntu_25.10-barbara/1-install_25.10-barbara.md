@@ -131,19 +131,20 @@ Find old files on the `2023-32A` thumb drive in `for_25.10_on_barbara` and use t
 - [ ] Start by using Rhythmbox
   - [X] Link `/art/music/songs/mp3` to `~/Music/Rhythmbox`
   - [X] Open the Hamburger Menu -> Preferences -> Music page and set the Library Location to `~/Music/Rhythmbox`
+    - **NOTE:** Do this **before** adding anything (e.g., subdirs, links, subdirs with links) to `~/Music`
   - [ ] Give it a listen!
-- [ ] Try Clementine
+- [X] Try Clementine
   - [X] Link `/art/music/songs/mp3` to `~/Music/Clementine`
   - [X] Install and pin the `Clementine` mp3 player to the task bar
   - [X] Open the Tools -> Preferences -> Music Library page and add `~/Music/Clementine` to the library
   - [X] Run Tools -> Do a full library rescan
-  - [ ] Give it a listen!
-- [ ] Try Strawberry
+  - [X] Give it a listen!
+- [X] Try Strawberry
   - [X] Link `/art/music/songs/mp3` to `~/Music/Strawberry`
   - [X] Install and pin the `Strawberry` mp3 player to the task bar
   - [X] Install and pin the `Strawberry` mp3 player to the task bar
-  - [ ] Give it a listen!
-- [ ] Ensure we can use freegalmusic.com in Firefox, and bookmark the site
+  - [X] Give it a listen!
+- [X] Ensure we can use freegalmusic.com in Firefox, and bookmark the site
 - [ ] If desired, maybe research and possibly install and use another mp3 player
 
 

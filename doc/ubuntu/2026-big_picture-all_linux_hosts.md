@@ -3,11 +3,13 @@
 
 Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 
-# Purpose of Each Host
+# About Each Linux Host
 
-## Wired
+## Wired Hosts
 
 ### `jane` 2013 - 16G Memory, 500G Internal Disk, Laptop
+
+Named for [Jane Russell](https://en.wikipedia.org/wiki/Jane_Russell).
 
 |When|External Disks|Size|Used|Percent|Remaining|
 |----|--------------|:--:|:--:|------:|:-------:|
@@ -24,6 +26,8 @@ Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 
 ### `ava` 2016 - 8G Memory, 500G Internal Disk, Desktop
 
+Named for [Ava Gardner](https://en.wikipedia.org/wiki/Ava_Gardner).
+
 |When|External Disks|Size|Used|Percent|Remaining|
 |----|--------------|:--:|:--:|------:|:-------:|
 |Before:|`/mnt/disks/art`|1400G|510G|40%|795G|
@@ -39,6 +43,7 @@ Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 
 ### `barbara` 2016 - 2G Memory, 250G Internal Disk, Desktop
 
+Named for [Bette Davis]().
 
 |When|External Disks|Size|Used|Percent|Remaining|
 |----|--------------|:--:|:--:|------:|:-------:|
@@ -51,22 +56,26 @@ Time to start installing Ubuntu 26.04 on all, or at least most, linux hosts.
 - For listening to mp3s *only*
 - Maintains a backup of all `/art` files on an external disk, EXCEPT Sony-ZV1 and OBS video files (*)
 
-## Wireless
+## Wireless Hosts
 
 ### `bette` 2011 - 8G Memory, 500G Internal Disk, Laptop, **Portable**
+
+Named for [Bette Davis](https://en.wikipedia.org/wiki/Bette_Davis).
 
 |When|External Disks|Size|Used|Percent|Remaining|
 |----|--------------|:--:|:--:|------:|:-------:|
 |Before:|`/mnt/disks/art`|1400G|507G|39%|798G|
 |Before:|`/mnt/disks/FATART`|466G|194G|42%|273G|
 |||||
-|After:|moved to `barbara`|**NONE**||||
+|After:|**moved to `barbara`**|**NONE**||||
 
 - For portability and playing around with Tracktion *only* - at least to start
 - Does **NOT** maintain a backup of **ANY** `/art` files on an external disk, **in order to facilitate portability**
 - Possibly for occasional social networking using firefox
 
 ### `martha` 2023 - 16G Memory, 500G Internal Disk, Desktop
+
+Named for [Martha Vickers](https://en.wikipedia.org/wiki/Martha_Vickers).
 
 |When|External Disks|Size|Used|Percent|Remaining|
 |----|--------------|:--:|:--:|------:|:-------:|
@@ -85,6 +94,7 @@ These Sony-ZV1 and OBS files are big, and I plan to create a lot of them over th
 So I don't need a lot of backups, and moreover I will also be working with these files on `dorothy` the PC and `mary` the Mac.
 This need to work with them  on non-Linux hosts requires keeping extra copies of them on **FAT thumb drives,**
 for easily moving them to and from those hosts in addition to the Linux LAN.
+
 
 # Goals - Big Picture
 
@@ -111,6 +121,11 @@ Having these is also known as acheiving *"Sanity"*.
 Need to set these up early in the process.
 
 - Details TBD, as I do the first few of them... 
+
+## Config Files
+
+- `~/.gitconfig`
+- `~/.vimrc`
 
 ## `~/.bash*` and `ssh`
 

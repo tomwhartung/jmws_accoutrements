@@ -42,13 +42,23 @@ Currently `bette` has a lot of spare disk partitions.
 - **We no longer need these, so we will create a new partition table with just one partition!!**
 
 
-# Installation Process - Specific Steps
+# Preparation
 
 ## Create a Bootable USB Drive
 
 1. [X] Download the Ubuntu 25.10 bootable USB drive image from [ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 2. [X] Follow the steps on this page to use the *Disks* program to create the bootable USB drive
    - [documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop)
+
+## Save Important and Customized Files to the USB Drive
+
+Use the `2023-32A` thumb drive for saving anything important we will need on the new install.
+
+- **For details, see the section *Preparation* in the file `../2026-big_picture-all_linux_hosts.md`
+- Since we are planning to use `bette` only for playing music, and maybe making videos, at this time we should only need a bare minimum of files there to start.
+
+
+# Installation Process - Specific Steps
 
 ## Install Ubuntu 25.10 on `bette`
 

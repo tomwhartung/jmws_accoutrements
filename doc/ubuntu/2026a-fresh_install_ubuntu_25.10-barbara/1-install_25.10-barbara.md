@@ -167,10 +167,6 @@ Find old files on the `2023-32A` thumb drive in `for_25.10_on_barbara` and use t
   - Actually, I think we are good, at least for now
 
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# When Done, Move as Many of the Steps Above as Possible to `2026-big_picture-all_linux_hosts.md`
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 
 ### Once We Are Comfortable With Listening to Music on `barbara`
 
@@ -179,10 +175,23 @@ Find old files on the `2023-32A` thumb drive in `for_25.10_on_barbara` and use t
 - [ ] Swap out the `FATALLART` external drive - *it is now a spare!*
   - Update `/etc/fstab` so it is no longer automounted
 
+
 ## 
 
 - [ ] Additional steps - 
-  - Refer to `2026-big_picture-all_linux_hosts.md`
+  - Remember to coordinate steps common to all hosts with those in `2026-big_picture-all_linux_hosts.md`
+
+## Keyboard Shortcuts
+
+These are kinda TBD right now, but I will probably want to do something similar eventually:
+
+Define these in the Settings app:
+
+- Ctrl-Alt-C: Chrome
+- Ctrl-Alt-F: Firefox
+- Ctrl-Alt-K: Konsole
+- Ctrl-Alt-S: Settings
+
 
 ## Is That All There Is?
 

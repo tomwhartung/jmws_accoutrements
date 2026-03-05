@@ -100,7 +100,8 @@ for easily moving them to and from those hosts in addition to the Linux LAN.
 
 Upgrade all hosts to Ubuntu 26.04
 
-- [ ] Upgrade `barbara` and `bette` to 25.10 **right away**
+- [X] Upgrade `barbara` to 25.10 **right away**
+- [ ] Upgrade `bette` to 25.10 **right away**
 - [ ] Upgrade `barbara` and `bette` to 26.04 when it comes out on **2026-04-23**
 - [ ] Upgrade `martha` and `ava` to 26.04 when comfortable with using 26.04 on `barbara` and `bette`
 - [ ] Upgrade `jane` to 26.04 last - because it is my main Linux host that I use daily and it still has some development stuff on it...
@@ -114,16 +115,47 @@ Upgrade all hosts to Ubuntu 26.04
 
 # Preparation
 
-Some of the specifics for this step may depend on the host.
+## Create a Bootable USB Drive - Only Once for All Hosts
 
-- [ ] Save network configuration for static hosts
+1. [X] Download the Ubuntu 25.10 bootable USB drive image from [ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
+2. [X] Follow the steps on this page to use the *Disks* program to create the bootable USB drive on the `2023-32B` thumb drive
+   - [documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop)
+
+## Save Network Info and Important Files - Host-Specific Steps
+
+These steps may depend, to a varying extent, on the specific host - in which case make notes to that effect in the file for that host.
+
+- [ ] Save network configuration for static connection
 - [ ] Save important files in `/etc`, `/root` and `/home/tomh` to the `2023-32A` thumb drive
   - [ ] `/etc/fstab` and `/etc/hosts`
   - [ ] For `/root`:
     - [ ] Save a list of already-existing links to files and directories in `~tomh`
-    - [ ] Identify any files that have customizations, e.g., `.bashrc`
+    - [ ] Identify any files that have customizations, e.g., `.bashrc`, and save those customizations
   - [ ] For `/home/tomh`, much will depend on how we will be using the host
     - [ ] `.bash_aliases*`, `.bashrc`, `.ssh/`, `.gitconfig`, `.vimrc`, `d.e`, `Pictures/`, `r*`, etc.
+
+
+# Installing Ubuntu 25.10
+
+Much of this is quite straightforward, answering several easy no-brainer questions that do not require further comment.
+
+## Running the Install
+
+Following is a list of steps, for possible future reference, when it's been a while since the last time I did this:
+
+- [ ] Use the USB drive to boot the PC
+  - [ ] May need to mess with the BIOS to get it to boot from the USB drive
+- [ ] Running the install *on 2026-02-27 at 5:50 PM*
+  - [ ] Answer easy no-brainer questions
+  - [ ] Start with **Extended Selection**
+  - [ ] Yes **Install recommended proprietary software**
+  - [ ] **Erase disk and install Ubuntu**
+     - Dual-boot installs were cool back in the day, but I do not see myself wanting to do those any longer
+  - [ ] **No encryption**
+  - [ ] **Create your account**:
+    - [ ] My name, computer's name, my user id, password;
+    - [ ] ** *Uncheck* Require my password to log in**
+  - [ ] Install **started at 5:58 PM** and **finished before 6:13 PM**
 
 
 # Bare Bones Essentials Common to All Hosts

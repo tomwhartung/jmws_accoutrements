@@ -6,7 +6,7 @@ Time to install 25.10 on bette.
 # Why?
 
 - I want to use `barbara` for listening to mp3s
-- I want to use `bette` upstairs for playing with Tracktion
+- This will allow me to use `bette` upstairs for playing music with Tracktion and working on movies
 
 # Goals - Big Picture
 
@@ -17,23 +17,6 @@ Time to install 25.10 on bette.
 
 1. Follow the process they give on [ubuntu.com](https://ubuntu.com).
 1. Customize `barbara` for listening to mp3s, using the `/art/*` external disk currently used on `bette`
-
-
-
-# IMPORTANT TODOs BEFORE WHIPING OUT BETTE'S DISK
-
-
-## Review Files in `/home/tomh`, Saving Important Files, and Network Config Info About `bette`
-
-- [ ] Review files in `/home/tomh`, and copy any that are not already in `/home/tomh` on `jane` over to there
-- [ ] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_bette`
-- [ ] Save network configuration for static on `bette` to the `2023-32A` thumb drive
-
-
-## Wait a Few Days!
-
-**BEFORE OVERWRITING `BETTE`, be sure to spend a few days ensuring `barbara` can play mp3s the way we want it to!**
-
 
 # A Note Concerning Bette's Disk Partitions
 
@@ -68,44 +51,71 @@ Use the `2023-32A` thumb drive for saving anything important we will need on the
 
 ## Acheive Sanity Using Ubuntu 25.10 on `bette`
 
-- [ ] Find old files on the `2023-32A` thumb drive in `for_25.10_on_bette`
+### Find old files on the `2023-32A` thumb drive in `for_25.10_on_bette`
   - `/etc`
   - `/home/tomh`
-- [ ] Get network going
-  - Wireless, Manual Config - IPv4:
-    - Identity - Name: "Wireless Quantum Fiber"; MTU: automatic
+  - [ ] For details, see *Update Essential Files From Previous Install* in the file `../2026-big_picture-all_linux_hosts.md`
+- [ ] Set background image: `~/Pictures/joan_miro_wall_01.jpg`
+
+### Get Network Going
+
+Following are the settings from the previous (Kubuntu) install; the format of Ubuntu's settings may differ slightly
+
+- Connection name: "Wireless Quantum Fiber"
+  - General configuration tab:
+    - [X] Automatically connect to this network when it is available
+		- Wi-Fi tab:
     - SSID: tomsasus
     - Mode: Infrastructure
-    - Wi-Fi Security: WPA/WPA2 Personal
+    - Restrict to device: wlp7s0 (74:E5:0B:36:4E:90)
+    - MTU: Automatic
+  - Wi-Fi Security tab:
+    - WPA/WPA2 Personal
+  - IPv4 tab:
+    - Method: Manual
+    - DNS: 192.168.0.1, 205.171.2.25
     - IP: 10.0.1.112
     - Netmask: 255.255.255.0
     - Gateway: 10.0.1.2
     - Default Route: 10.0.1.2
-    - DNS: 192.168.0.1, 205.171.2.25
-  - IPv6: Disable
+  - IPv6 tab:
+    - Method: Automatic - i.e., Disable
 
 - [ ] Get ssh working
   - Refer to `2026-big_picture-all_linux_hosts.md`
 
+### Steps Common to Upgrades on Multiple Linux Hosts
 
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+For details see the following sections in `../2026-big_picture-all_linux_hosts.md`:
 
-# Possible ideas for things that will need to be done this time:
+- [ ] Install Essential Packages
+- [ ] Networking - `ssh`
+- [ ] Github; Clone the `jmws_accoutrements` Repo
+- [ ] Set Essential Keyboard Shortcuts
 
-# Preparations
 
-- [ ] Update `tarHome` to backup most relevant files for adding to new install
-- [ ] Run `tarHome` on jane to be sure we have the latest
-- [ ] Review the procedure here:
-  - https://documentation.ubuntu.com/server/how-to/software/upgrade-your-release/index.html
+# Steps to Do Later?
 
-Extra steps taken, because they seem to make sense to me:
+## Keyboard Shortcuts
 
-- [ ] Closed chrome windows and tabs that I no longer "need"
-- [ ] Rebooted and exited Chrome, leaving only a couple of Konsole windows open
+Because each host will have slightly different roles and slightly different software installed on them,
+**these are kinda TBD right now,** but I will probably want to do something similar eventually:
 
-Doing the install:
+Previously I have been defining these in the Settings app:
 
-[ ] TBD
+- Ctrl-Alt-C: Chrome
+- Ctrl-Alt-F: Firefox
+- Ctrl-Alt-K: Konsole
+- Ctrl-Alt-S: Settings
 
+We may want to change the commands on this list, and - depending on which commands make the list -
+use different key combinations for them.
+
+# Is That All There Is?
+
+Isn't that enough??  I kind of hope so!!!
+
+- [ ] **Try to keep things minimal because:**
+  - **26.04 will be out on 2026-04-23**
+  - **25.10 will expire on 2026-07-09**
 

@@ -8,12 +8,12 @@ Time to install 25.10 on barbara.
 - Poor `barbara` has very little memory (2G, but shows 3-4) and now even crashes a lot even when I have just 6-7-8 tabs open in Firefox
 - All I do with `bette` these days is listen to mp3s
 - I listen to mp3s every morning on `rita`, a Mac Mini from 2008 (32-bit) that has only 2G memory, and it works fine
-- I want to use `bette` upstairs for playing with Tracktion, etc.
+- I want to use `bette` upstairs for playing music with Tracktion, etc.
 
 # Goals - Big Picture
 
 - Use `barbara` for listening to mp3s instead of `bette`
-- Use `bette` for playing music via Tracktion upstairs
+- Use `bette` for playing music using Tracktion and making movies upstairs
 
 # Overview of Installation Process - Big Picture
 
@@ -22,33 +22,25 @@ Time to install 25.10 on barbara.
 
 # Installation Process - Specific Steps
 
-## Create a Bootable USB Drive
+For details, see the process given in
+[*2026-big_picture-all_linux_hosts.md*](https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/2026-big_picture-all_linux_hosts.md).
 
-1. [X] Download the Ubuntu 25.10 bootable USB drive image from [ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
-2. [X] Follow the steps on this page to use the *Disks* program to create the bootable USB drive
-   - [documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop)
+## Preparation
 
+### Part 1: Create a Bootable USB Drive
 
-## Save Important Files and Info About `barbara`
+[X] Create a Bootable USB Drive - see *2026-big_picture-all_linux_hosts.md*
+
+## Part 2: Save Important Files and Info About `barbara`
 
 - [X] Save network configuration for static on `barbara` - **see below**
 - [X] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_barbara`
 
-
 ## Install Ubuntu 25.10 on `barbara`
 
-- [X] Use the USB drive to boot `barbara`
-- [X] Running the install *on 2026-02-27 at 5:50 PM*
-  - [X] Answer easy no-brainer questions
-  - [X] Start with **Extended Selection**
-  - [X] Yes **Install recommended proprietary software**
-  - [X] **Erase disk and install Ubuntu**
-  - [X] **No encryption**
-  - [X] **Create your account**:
-    - [X] My name, computer's name, my user id, password;
-    - [X] ** *Uncheck* Require my password to log in**
-  - [X] Install **started at 5:58 PM** and **finished before 6:13 PM**
-
+- [X] Following the process given in *2026-big_picture-all_linux_hosts.md* under *Installing Ubuntu 25.10*
+- [X] Starting to run the install wizard *on 2026-02-27 at 5:50 PM*
+- [X] Install **started at 5:58 PM** and **finished before 6:13 PM**
 
 ## Achieve Sanity Using Ubuntu 25.10 on `barbara`
 
@@ -176,26 +168,36 @@ Find old files on the `2023-32A` thumb drive in `for_25.10_on_barbara` and use t
   - Update `/etc/fstab` so it is no longer automounted
 
 
-## 
+## Steps I Did Not Anticipate
 
-- [ ] Additional steps - 
-  - Remember to coordinate steps common to all hosts with those in `2026-big_picture-all_linux_hosts.md`
+Following are a few additional steps I found I needed to do after the install:
+
+- [X] Had to update `tarHome`
+  - In the long run, we may really need this script:
+    - For `ava` and `jane` - because those will [presumably] be the only hosts on which we have "full" `/home/tomh` directories
+    - -> Will have to see how this goes
+
+# Steps to Do Later?
 
 ## Keyboard Shortcuts
 
-These are kinda TBD right now, but I will probably want to do something similar eventually:
+Because each host will have slightly different roles and slightly different software installed on them,
+**these are kinda TBD right now,** but I will probably want to do something similar eventually:
 
-Define these in the Settings app:
+Previously I have been defining these in the Settings app:
 
 - Ctrl-Alt-C: Chrome
 - Ctrl-Alt-F: Firefox
 - Ctrl-Alt-K: Konsole
 - Ctrl-Alt-S: Settings
 
+We may want to change the commands on this list, and - depending on which commands make the list -
+use different key combinations for them.
 
-## Is That All There Is?
 
-Isn't that enough??  I kind of hope so!!!
+# Is That All There Is?
+
+Isn't that enough??  I kind of hope so!  Because I really need to be more on the ball about keeping these hosts up-to-date!!
 
 - [ ] **Try to keep things minimal because:**
   - **26.04 will be out on 2026-04-23**

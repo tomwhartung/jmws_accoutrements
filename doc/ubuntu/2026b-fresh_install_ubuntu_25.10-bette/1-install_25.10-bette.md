@@ -27,29 +27,48 @@ Currently `bette` has a lot of spare disk partitions.
 
 # Preparation
 
-## Create a Bootable USB Drive
+Since we are planning to use `bette` only for playing music, and maybe making videos, at this time we should only need a bare minimum of files there to start.
 
-1. [X] Download the Ubuntu 25.10 bootable USB drive image from [ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
-2. [X] Follow the steps on this page to use the *Disks* program to create the bootable USB drive
-   - [documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop)
+## Part 1: Create a Bootable USB Drive
 
-## Save Important and Customized Files to the USB Drive
+[X] Create a Bootable USB Drive - see *2026-big_picture-all_linux_hosts.md*
 
-Use the `2023-32A` thumb drive for saving anything important we will need on the new install.
+## Part 2: Save Important Files and Info About `barbara`
 
-- **For details, see the section *Preparation* in the file `../2026-big_picture-all_linux_hosts.md`
-- Since we are planning to use `bette` only for playing music, and maybe making videos, at this time we should only need a bare minimum of files there to start.
+- [X] Save network configuration for static on `barbara` - **see below**
+- [X] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_barbara`
 
 
 # Installation Process - Specific Steps
 
 ## Install Ubuntu 25.10 on `bette`
 
-- [ ] Use the USB drive to boot `bette`
-- [ ] Run the install
+- [X] Use the USB drive to boot `bette`
+  - Accessing BIOS - to get it to boot from the USB drive - might be tricky
+  - Sony VAIO laptop Model PCG-71913L, 2011-09; product name VPCEH2LGX; Factory ID CS20 (from bottom of pc)
+  - Found and downloaded User Guide from:
+    [https://helpguide.sony.net/ammig/VPCEG2_EH2_EJ2_EL2_EK_series/EN/contents/01/01/01/01.html](helpguide.sony.net/ammig/VPCEG2_EH2_EJ2_EL2_EK_series/EN/...)
+  - Saved a copy of User Guide in this directory
+  - From p. 134 of 368: **press F11 key repeatedly to boot from the USB drive**
+  - W00t w00t we're rollin'!
+- [X] Run the install
+  - Copied and pasted the following checklist from *`2026-big_picture-all_linux_hosts.md`*:
+- [X] Use the USB drive to boot the PC
+  - [X] May need to mess with the BIOS to get it to boot from the USB drive
+    - **True Dat: Needed to RTFM and press F11 repeatedly to boot from USB thumb drive**
+- [X] Running the install *on 2026-02-27 at 8:55 PM*
+  - [X] Answer easy no-brainer questions
+  - [X] Start with **Extended Selection**
+  - [X] Yes **Install recommended proprietary software**
+  - [X] **Erase disk and install Ubuntu**
+     - Dual-boot installs were cool back in the day, but I do not see myself wanting to do those any longer
+  - [X] **No encryption**
+  - [X] **Create your account**:
+    - [X] My name, computer's name, my user id, password;
+    - [X] ** *Uncheck* Require my password to log in**
+  - [X] Install **started at 9:10 PM** and **finished at 9:26 PM**
 
-
-## Acheive Sanity Using Ubuntu 25.10 on `bette`
+## Achieve Sanity Using Ubuntu 25.10 on `bette`
 
 ### Find old files on the `2023-32A` thumb drive in `for_25.10_on_bette`
   - `/etc`
@@ -61,7 +80,7 @@ Use the `2023-32A` thumb drive for saving anything important we will need on the
 
 Following are the settings from the previous (Kubuntu) install; the format of Ubuntu's settings may differ slightly
 
-- Connection name: "Wireless Quantum Fiber"
+- Connection name: "Wireless Quantum Fiber via tomsasus"
   - General configuration tab:
     - [X] Automatically connect to this network when it is available
 		- Wi-Fi tab:

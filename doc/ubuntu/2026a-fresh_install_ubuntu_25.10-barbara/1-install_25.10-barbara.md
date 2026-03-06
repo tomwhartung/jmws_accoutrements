@@ -20,14 +20,10 @@ Time to install 25.10 on barbara.
 1. Follow the process they give on [ubuntu.com](https://ubuntu.com).
 1. Customize `barbara` for listening to mp3s, using the `/art/*` external disk currently used on `bette`
 
-# Installation Process - Specific Steps
 
-For details, see the process given in
-[*2026-big_picture-all_linux_hosts.md*](https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/2026-big_picture-all_linux_hosts.md).
+# Preparation
 
-## Preparation
-
-### Part 1: Create a Bootable USB Drive
+## Part 1: Create a Bootable USB Drive
 
 [X] Create a Bootable USB Drive - see *2026-big_picture-all_linux_hosts.md*
 
@@ -35,6 +31,12 @@ For details, see the process given in
 
 - [X] Save network configuration for static on `barbara` - **see below**
 - [X] Save important files in `/etc` and `/home/tomh` to the `2023-32A` thumb drive in subdirectories of `for_25.10_on_barbara`
+
+
+# Installation Process - Specific Steps
+
+For details, see the process given in
+[*2026-big_picture-all_linux_hosts.md*](https://github.com/tomwhartung/jmws_accoutrements/blob/master/doc/ubuntu/2026-big_picture-all_linux_hosts.md).
 
 ## Install Ubuntu 25.10 on `barbara`
 

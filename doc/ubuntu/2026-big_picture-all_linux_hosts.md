@@ -115,13 +115,13 @@ Upgrade all hosts to Ubuntu 26.04
 
 # Preparation
 
-## Create a Bootable USB Drive - Only Once for All Hosts
+## Part 1 - Create a Bootable USB Drive - Only Once for All Hosts
 
 1. [X] Download the Ubuntu 25.10 bootable USB drive image from [ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 2. [X] Follow the steps on this page to use the *Disks* program to create the bootable USB drive on the `2023-32B` thumb drive
    - [documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop)
 
-## Save Network Info and Important Files - Host-Specific Steps
+## Part 2 - Save Network Info and Important Files - Host-Specific Steps
 
 These steps may depend, to a varying extent, on the specific host - in which case make notes to that effect in the file for that host.
 
@@ -141,11 +141,13 @@ Much of this is quite straightforward, answering several easy no-brainer questio
 
 ## Running the Install
 
-Following is a list of steps, for possible future reference, when it's been a while since the last time I did this:
+Following is a list of steps, for future reference, even when it's simple, but has been a while since the last time I did this:
+
+Suggestion: *copy and paste this checklist into the file we are using to log what I do during the installation.*
 
 - [ ] Use the USB drive to boot the PC
   - [ ] May need to mess with the BIOS to get it to boot from the USB drive
-- [ ] Running the install *on 2026-02-27 at 5:50 PM*
+- [ ] Running the install **on [note the date and time here]**
   - [ ] Answer easy no-brainer questions
   - [ ] Start with **Extended Selection**
   - [ ] Yes **Install recommended proprietary software**
@@ -155,21 +157,41 @@ Following is a list of steps, for possible future reference, when it's been a wh
   - [ ] **Create your account**:
     - [ ] My name, computer's name, my user id, password;
     - [ ] ** *Uncheck* Require my password to log in**
-  - [ ] Install **started at 5:58 PM** and **finished before 6:13 PM**
+  - [ ] Install **started at [note the date and time here]** and **finished at [note the date and time here]**
 
 
 # Bare Bones Essentials Common to All Hosts
 
 Having these is also known as acheiving *"Sanity"*.
 
-### Update Essential Files From Previous Install
+## Set Essential Keyboard Shortcuts
+
+In reality I use these all the time and quickly go crazy without them.
+
+- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts
+  - [ ] Ctrl+F1 - Switch to Workspace 1
+  - [ ] Ctrl+F2 - Switch to Workspace 2
+  - [ ] Ctrl+F3 - Switch to Workspace 3
+  - [ ] Ctrl+F4 - Switch to Workspace 4
+
+## Install Essential Packages
+
+- [ ] Use the Command Line or the Software Updater to update the installed packages to their latest versions
+  - [ ] Using the Command Line:
+    - [ ] Open a terminal window and run `sudo su -` so we can run additional install commands as root
+    - [ ] Run `apt-get update` to identify the updated versions that apt can install
+    - [ ] Run `apt-get upgrade` to download and install these updated versions
+  - [ ] Using the Software Updater: *(TBD)*
+     **TBD: This is probably what I will want to show people in the video**
+    - [ ] Pin the Software Updater to the dock
+    - [ ] Run the Software Updater to install updates made since 25.10 was released
+- [ ] If not already done, open a terminal window and run `sudo su -` so we can run additional install commands as root
+- [ ] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
+
+## Update Essential Files From Previous Install
 
 Find old files on the `2023-32A` thumb drive in the `for_...` directory and use them to update the new install.
 
-- [ ] Files in `/etc`
-  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
-  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
-  - [ ] Add CusTOMizations from versions on the `2023-32A` thumb drive
 - [ ] Files in `/home/tomh`
   - [ ] Open a terminal window
   - [ ] Check in the installed version of `.bashrc`:
@@ -177,6 +199,8 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
   - [ ] Copy over all the files from `/home/tomh` on the `2023-32A` thumb drive
   - [ ] Run `rcsdiff` to ensure that overwriting `.bashrc` did not wipe out any needed updates to the file:
     - [ ] `rcsdiff .bashrc`       # only CusTOMizations should show up
+  - [ ] Set background to one of the files in `~/Pictures`
+    - Settings -> Appearance -> Background -> + Add Picture
 - [ ] Files in `/root`
   - [ ] Open a terminal window and run `sudo su -` so we can **run these commands as root**
   - [ ] Link the following files from `~tomh` to `/root`:
@@ -187,23 +211,12 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
   - [ ] Check in the installed version of `.bashrc`:
     - [ ] Run `cd ; ci -l .bashrc` with the *not-a-log* message *"Installed version."*
     - [ ] Add the CusTOMizations from the `2023-32A` thumb drive
+- [ ] Files in `/etc`
+  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
+  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
+  - [ ] Add CusTOMizations from versions on the `2023-32A` thumb drive
 
-### Install Essential Packages
-
-- [ ] Pin the Software Updater to the dock
-- [ ] Run the Software Updater to install updates made since 25.10 was released
-- [ ] Open a terminal window and run `sudo su -` so we can run additional install commands as root
-- [ ] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
-
-### Set Essential Keyboard Shortcuts
-
-- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts
-  - [ ] Ctrl+F1 - Switch to Workspace 1
-  - [ ] Ctrl+F2 - Switch to Workspace 2
-  - [ ] Ctrl+F3 - Switch to Workspace 3
-  - [ ] Ctrl+F4 - Switch to Workspace 4
-
-### Networking - `ssh`
+## Networking - `ssh`
 
 - [ ] Get ssh working
   - [ ] Copy old `~/.ssh` directory into the new `/home/tomh` directory
@@ -217,7 +230,7 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
     - *Else you will get a nasty error message*
   - [ ] Log in to each host from each host, to make a new `known_hosts` file on each one and ensure they all work
 
-### Github; Clone the `jmws_accoutrements` Repo
+## Github; Clone the `jmws_accoutrements` Repo
 
 - [ ] Update ssh key for *[hostname]* on github.com
   - [ ] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
@@ -229,16 +242,18 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
   - [ ] As the `tomh` user run: `cd /var/www; git clone [ssh url from github for the repository]`
     - We probably want to run `git clone git@github.com:tomwhartung/jmws_accoutrements.git`, but check github to be sure
 
-### Populate `~/bin`
+## Populate `~/bin`
 
-Once ssh is working, push the files in `~/bin` from one of the other linux hosts over to the newly-upgraded host:
+Hopefully `~/bin` was populated from files on the thumb drive.
+
+If however we forgot to put them on there, then once ssh is working, push the files in `~/bin` from one of the other linux hosts over to the newly-upgraded host.
 
 
 ## Optional, Nice-to-Have Apps
 
 - `chrome`
   - On `jane` and `ava` to start, and maybe `martha` (or others) later
-  - Chrome is nice to have, but remember: **it is a pain to keep it update-to-date!**
+  - Chrome is nice to have, but remember: **it is a pain to keep it update-to-date on ubuntu** because we have to do it manually.
 
 ## Keyboard Shortcuts
 

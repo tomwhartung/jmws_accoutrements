@@ -12,17 +12,17 @@ this_sum_command="md5sum"
 dest_sum_command="md5sum"
 
 if [ $this_hostname == "ava" ]; then
-   more_dirs="Downloads Music Pictures jobsearch marketing technical work"
+   more_dirs="Downloads Music jobsearch marketing technical work"
 elif [ $this_hostname == "barbara" ]; then
-   more_dirs="Downloads Music Pictures"
+   more_dirs="Downloads Music "
 elif [ $this_hostname == "bette" ]; then
-   more_dirs="Pictures marketing personal technical"
+   more_dirs="Downloads Music personal technical"
 elif [ $this_hostname == "jane" ]; then
-   more_dirs="Downloads jobsearch jobsearch marketing personal technical work"
+   more_dirs="Downloads Music jobsearch marketing personal technical work"
 elif [ $this_hostname == "martha" ]; then
    more_dirs="Downloads Music personal technical"
 elif [ $this_hostname == "rita.local" ]; then
-   more_dirs="Documents Pictures jobsearch my_joomla personal technical"
+   more_dirs="Documents jobsearch my_joomla personal technical"
    this_sum_command="md5 -q"
    dest_sum_command="md5sum"
 else
@@ -33,8 +33,8 @@ fi
 #
 #  2025-06-22: Removed .config from dirs_to_backup because that is where Tracktion puts its Waveform files
 #     I do not remember ever using any of these .config files after a fresh install
-## dirs_to_backup=".config .ssh .xscreensaver bin $more_dirs RCS"
-dirs_to_backup=".ssh bin $more_dirs RCS"
+#
+dirs_to_backup=".ssh bin $more_dirs Pictures RCS"
 files_to_backup=".bashrc* .bash_aliases* .gitconfig r* .vimrc "
 all_to_backup="$files_to_backup $dirs_to_backup"
 

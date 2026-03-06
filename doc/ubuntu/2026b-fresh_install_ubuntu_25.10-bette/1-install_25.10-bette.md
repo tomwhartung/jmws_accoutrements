@@ -73,8 +73,8 @@ Since we are planning to use `bette` only for playing music, and maybe making vi
 ### Find old files on the `2023-32A` thumb drive in `for_25.10_on_bette`
   - `/etc`
   - `/home/tomh`
-  - [ ] For details, see *Update Essential Files From Previous Install* in the file `../2026-big_picture-all_linux_hosts.md`
-- [ ] Set background image: `~/Pictures/joan_miro_wall_01.jpg`
+  - [X] For details, see *Update Essential Files From Previous Install* in the file `../2026-big_picture-all_linux_hosts.md`
+- [X] Set background image: `~/Pictures/joan_miro_wall_01.jpg`
 
 ### Get Network Going
 
@@ -100,22 +100,22 @@ Following are the settings from the previous (Kubuntu) install; the format of Ub
   - IPv6 tab:
     - Method: Automatic - i.e., Disable
 
-- [ ] Get ssh working
+- [X] Get ssh working
   - Refer to `2026-big_picture-all_linux_hosts.md`
 
 ### Steps Common to Upgrades on Multiple Linux Hosts
 
 For details see the following sections in `../2026-big_picture-all_linux_hosts.md`:
 
-- [ ] Install Essential Packages
-- [ ] Networking - `ssh`
-- [ ] Github; Clone the `jmws_accoutrements` Repo
-- [ ] Set Essential Keyboard Shortcuts
+- [X] Set Essential Keyboard Shortcuts
+- [X] Install Essential Packages
+- [X] Networking - `ssh`
+- [X] Github; Clone the `jmws_accoutrements` Repo
 
 
 # Steps to Do Later?
 
-## Keyboard Shortcuts
+## Set More Keyboard Shortcuts
 
 Because each host will have slightly different roles and slightly different software installed on them,
 **these are kinda TBD right now,** but I will probably want to do something similar eventually:

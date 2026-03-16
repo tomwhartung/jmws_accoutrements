@@ -257,12 +257,17 @@ If however we forgot to put them on there, then once ssh is working, push the fi
 
 ## Keyboard Shortcuts
 
-This is kinda TBD right now...:
-
 Define these in the Settings app:
 
+- Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Launchers
+  - Ctrl-Alt-M: Launch calculator (for **M**ath)
+  - Ctrl-Alt-F: Launch web browser (**F**irefox)
+  - Ctrl-Alt-S: **S**ettings
+- Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
+  - Ctrl-Alt-K: **K**onsole - `/usr/bin/konsole`
+
+### Maybe Later:
+
 - Ctrl-Alt-C: Chrome
-- Ctrl-Alt-F: Firefox
-- Ctrl-Alt-K: Konsole
-- Ctrl-Alt-S: Settings
+  - **Note** that so far we have not installed Chrome yet on `barbara`, `bette`, or `martha`
 

@@ -248,13 +248,6 @@ Hopefully `~/bin` was populated from files on the thumb drive.
 
 If however we forgot to put them on there, then once ssh is working, push the files in `~/bin` from one of the other linux hosts over to the newly-upgraded host.
 
-
-## Optional, Nice-to-Have Apps
-
-- `chrome`
-  - On `jane` and `ava` to start, and maybe `martha` (or others) later
-  - Chrome is nice to have, but remember: **it is a pain to keep it update-to-date on ubuntu** because we have to do it manually.
-
 ## Keyboard Shortcuts
 
 Define these in the Settings app:
@@ -266,8 +259,33 @@ Define these in the Settings app:
 - Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
   - Ctrl-Alt-K: **K**onsole - `/usr/bin/konsole`
 
-### Maybe Later:
+## Konsole Sanity
 
-- Ctrl-Alt-C: Chrome
+Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
+
+- 1. Profiles page -> "+ New" Button 
+  - 1.1. General page -> General Settings tab
+    - [Fill in a name:] tomh
+    - [Check the box:] Default profile
+    - [Verify Command:] `/bin/bash`
+    - [Terminal bell mode:] Ignore Bell Events
+    - Click "OK" button at bottom of page to close General page dialog
+  - 1.2. Mouse page -> Text interaction tab
+    - Word characters: "_" [I.e., Underline character *only*]
+    - Click "OK" button at bottom of page to close Mouse page dialog
+  - 1.3. Click "OK" button at bottom of page to close Configure dialog box
+- 2. Test mouse double-click select setting
+  - 2.1. Close all terminal windows and tabs
+  - 2.2. Go to any directory with > 1 level, e.g., `/art/music/songs/mp3`
+  - 2.3. Double-click on a word in the directory name to test the click-and-drag select setting
+
+## Optional, Nice-to-Have Apps
+
+- `chrome`
   - **Note** that so far we have not installed Chrome yet on `barbara`, `bette`, or `martha`
+  - We will eventually want to install it on `jane` and `ava` - and maybe `martha` (and others) later
+  - Chrome is nice to have, but remember: **it is a pain to keep it update-to-date on ubuntu** because we have to do it manually.
+  - If we install chrome, set up a shortcut for it:
+    - Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
+      - Ctrl-Alt-C: Chrome
 

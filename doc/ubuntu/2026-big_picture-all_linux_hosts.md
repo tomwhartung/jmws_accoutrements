@@ -168,11 +168,14 @@ Having these is also known as acheiving *"Sanity"*.
 
 In reality I use these all the time and quickly go crazy without them.
 
-- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts
-  - [ ] Ctrl+F1 - Switch to Workspace 1
-  - [ ] Ctrl+F2 - Switch to Workspace 2
-  - [ ] Ctrl+F3 - Switch to Workspace 3
-  - [ ] Ctrl+F4 - Switch to Workspace 4
+- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
+  - Navigation
+    - [ ] Alt+[Left Arrow] - Switch to workspace on the left
+    - [ ] Alt+[Right Arrow] - Switch to workspace on the right
+    - [ ] Alt+F1 - Switch to Workspace 1
+    - [ ] Alt+F2 - Switch to Workspace 2
+    - [ ] Alt+F3 - Switch to Workspace 3
+    - [ ] Alt+F4 - Switch to Workspace 4
 
 ## Install Essential Packages
 
@@ -263,7 +266,7 @@ Define these in the Settings app:
 
 Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
 
-- 1. Profiles page -> "+ New" Button 
+- 1. Profiles page -> "+ New" Button
   - 1.1. General page -> General Settings tab
     - [Fill in a name:] tomh
     - [Check the box:] Default profile

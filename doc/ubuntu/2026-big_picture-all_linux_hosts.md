@@ -266,21 +266,97 @@ Define these in the Settings app:
 
 Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
 
-- 1. Profiles page -> "+ New" Button
-  - 1.1. General page -> General Settings tab
+- 1. Create a new profile so we can update some options:
+  - Profiles page -> "+ New" Button
+  - General page -> General Settings tab
     - [Fill in a name:] tomh
     - [Check the box:] Default profile
     - [Verify Command:] `/bin/bash`
     - [Terminal bell mode:] Ignore Bell Events
-    - Click "OK" button at bottom of page to close General page dialog
-  - 1.2. Mouse page -> Text interaction tab
+  - Click "OK" button at bottom of page to close General page dialog
+- 2. Fix mouse click-and-drag word delimiters
+  - Konsole window Hamburger Menu -> Edit Current Profile ...
+  - Mouse page -> Text interaction tab
     - Word characters: "_" [I.e., Underline character *only*]
     - Click "OK" button at bottom of page to close Mouse page dialog
-  - 1.3. Click "OK" button at bottom of page to close Configure dialog box
-- 2. Test mouse double-click select setting
-  - 2.1. Close all terminal windows and tabs
-  - 2.2. Go to any directory with > 1 level, e.g., `/art/music/songs/mp3`
-  - 2.3. Double-click on a word in the directory name to test the click-and-drag select setting
+  - Click "OK" button at bottom of page to close Configure dialog box
+  - Test mouse double-click select setting
+    - Close all konsole windows and tabs - to ensure we are using the new settings
+    - Open a new konsole window
+    - Go to any directory with more than one level, e.g., `/art/music/songs/mp3`
+    - Double-click on a word in the directory name to test the click-and-drag select setting
+- 3. Adjust font size
+  - Konsole window Hamburger Menu -> Edit Current Profile ...
+  - Appearance page -> Color scheme & font tab
+    - Find the "Font:" row near the bottom of the page
+    - Click Choose...
+    - Change the Size to "9", or whatever works
+  - Click "OK" button at the bottom of the dialog box to close it
+  - Click "OK" button at the bottom of the page to close the Edit Profile dialog box
+
+
+# More Apps
+
+## Debian Installs or Snaps?
+
+The producer of Ubuntu, Canonical, supports two ways of downloading and updating software packages:
+
+o The traditional way, using debian packages:
+  o [https://en.wikipedia.org/wiki/Deb_(file_format)](https://en.wikipedia.org/wiki/Deb_(file_format))
+o Their new way, using snaps:
+  o [https://en.wikipedia.org/wiki/Snap_(software)](https://en.wikipedia.org/wiki/Snap_(software))
+
+For a comparison of the two, see [snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs](https://snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs)
+
+For a list of differences, see the **Summary of differences** at the end of this page:
+[snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs](https://snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs)
+
+### Which Version to Use, Debian or Snaps?
+
+- I kind of lean towards debian packages:
+  - It feels safer
+  - It uses less disk space because dependencies are shared
+- But it seems like Canonical wants us to use snaps:
+  - It seems to be more *"bleeding edge"*
+  - It looks to be more flexible
+  - It uses less disk space because dependencies are shared
+
+Let's try out some of each, and take notes about the results, with an eye towards being able to recommend one or the other in certain circumstances.
+
+At this point, I would say:
+
+- It feels like debian packages are better for users who want a more mature, reliable software update system
+- It feels like snaps are better for software developers who want to experiment and be able to control multiple versions of some packages
+
+### Notes Concerning Debian vs. Snaps
+
+Use this section to record some of my observations while I experiment with snaps vs. debian packages.
+
+- Firefox is available via snaps *only*
+- On 2026-04-02 I was using the *Manage* option in the *App Center* to try to update Firefox, and got this message:
+  - *"Something went wrong."*
+    - *"We're sorry, but we're not sure what the error is"*
+    - *"OK"* button
+  - -> Rebooting seems to have fixed the issue
+  - **This sort of thing makes me feel like snaps are kinda flakey**
+
+
+## Audio-Visual Apps
+
+Install these on `bette` and `martha`, and optionally install them on `ava` or `jane`.
+
+- [X] VLC
+  - Snap version currently installed on both `bette` and `martha`
+  - Debian version doesn't have an icon, wtf?
+  - When using the App Center, be aware of which one we are installing
+- [ ] OBS
+  - Maybe install snap version on `martha`?
+  - Maybe install deb version on `bette`?
+  - Decide which is better
+- [ ] Audacity
+  - Maybe install snap version on `martha`
+  - Maybe install deb version on `bette`
+  - Decide which is better
 
 ## Optional, Nice-to-Have Apps
 

@@ -12,8 +12,8 @@ In the short term we want to upgrade `barbara` and `bette` to Ubuntu 25.10
 
 Ultimately we want to upgrade all hosts to Ubuntu 26.04
 
-- [ ] Upgrade `ava` to 26.04 soon after it comes out on **2026-04-23**
 - [ ] Upgrade `martha` to 26.04 soon after it comes out on **2026-04-23**
+- [ ] Upgrade `ava` to 26.04 soon after it comes out on **2026-04-23**
   - Don't worry about doing a video of either of these upgrades
 - [ ] Upgrade `barbara` to 26.04 when comfortable with using 26.04 on `ava` and `martha`
 - [ ] Upgrade `bette` to 26.04 when comfortable with using 26.04 on `ava` and `martha`

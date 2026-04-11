@@ -303,7 +303,7 @@ The producer of Ubuntu, Canonical, supports two ways of downloading and updating
 
 o The traditional way, using debian packages:
   o [https://en.wikipedia.org/wiki/Deb_(file_format)](https://en.wikipedia.org/wiki/Deb_(file_format))
-o Their new way, using snaps:
+o Canonical's new way, using snap packages:
   o [https://en.wikipedia.org/wiki/Snap_(software)](https://en.wikipedia.org/wiki/Snap_(software))
 
 For a comparison of the two, see [snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs](https://snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs)
@@ -343,20 +343,34 @@ Use this section to record some of my observations while I experiment with snaps
 
 ## Audio-Visual Apps
 
-Install these on `bette` and `martha`, and optionally install them on `ava` or `jane`.
+For now, install these on `bette` and `martha` -- and optionally maybe eventually install them on `ava` or `jane`.
+
+When both snap and debian packages are available:
+
+- Install the snap package version on `martha`
+  - Mnemonic: it's a newer computer, so use the newer method
+- Install the deb package version on `bette`
+  - Mnemonic: it's an older computer, so use the  older method
+
+Decide which method I like better.
+
+### Checklist
 
 - [X] VLC
-  - Snap version currently installed on both `bette` and `martha`
   - Debian version doesn't have an icon, wtf?
-  - When using the App Center, be aware of which one we are installing
-- [ ] OBS
-  - Maybe install snap version on `martha`?
-  - Maybe install deb version on `bette`?
-  - Decide which is better
-- [ ] Audacity
-  - Maybe install snap version on `martha`
-  - Maybe install deb version on `bette`
-  - Decide which is better
+  - [X] Install the snap package version on `martha`
+  - [X] Install the debian package version on `bette`
+- [X] OBS
+  - [X] Install the snap package version on `martha`
+  - [X] Install the debian package version on `bette`
+- [X] Audacity
+  - [X] Install the snap package version on `martha`
+  - [X] Install the debian package version on `bette`
+
+## Tracktion
+
+Download the Tracktion Download Manager from [tracktion.com](tracktion.com) and use that to install the app.
+
 
 ## Optional, Nice-to-Have Apps
 

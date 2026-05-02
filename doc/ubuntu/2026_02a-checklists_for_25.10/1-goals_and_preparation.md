@@ -1,5 +1,5 @@
 
-# 2025-checklists/1-goals_and_preparation.md
+# 2026_02a-checklists_for_25.10/1-goals_and_preparation.md
 
 Time to start thinking about installing Ubuntu 26.04 on all linux hosts.
 

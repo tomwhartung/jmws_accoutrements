@@ -1,9 +1,7 @@
 
-# 4a-more_apps-25.10-bette_and_martha.md
+# 7-discussion-debian_packages_vs_snaps.md
 
-# More Apps
-
-## Debian Installs or Snaps?
+# Debian Installs or Snaps?
 
 The producer of Ubuntu, Canonical, supports two ways of downloading and updating software packages:
 
@@ -17,7 +15,7 @@ For a comparison of the two, see [snapcraft.io/blog/a-technical-comparison-betwe
 For a list of differences, see the **Summary of differences** at the end of this page:
 [snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs](https://snapcraft.io/blog/a-technical-comparison-between-snaps-and-debs)
 
-### Which Version to Use, Debian or Snaps?
+## Which Version to Use, Debian or Snaps?
 
 - I kind of lean towards debian packages:
   - It feels safer
@@ -27,24 +25,30 @@ For a list of differences, see the **Summary of differences** at the end of this
   - It looks to be more flexible
   - It uses less disk space because dependencies are shared
 
-Let's try out some of each, and take notes about the results, with an eye towards being able to recommend one or the other in certain circumstances.
+When both snap and debian packages are available:
+
+- Let's try out some of each, and take notes about the results
+- Keep an eye out towards being able to recommend one or the other in certain circumstances
 
 At this point, I would say:
 
 - It feels like debian packages are better for users who want a more mature, reliable software update system
 - It feels like snaps are better for software developers who want to experiment and be able to control multiple versions of some packages
 
-### Notes Concerning Debian vs. Snaps
+## Notes Concerning Debian vs. Snaps
 
 Use this section to record some of my observations while I experiment with snaps vs. debian packages.
 
 - Firefox is available via snaps *only*
+  - I believe I saw that the same is true of Chromium, and I'm thinking of trying that out
+  - Keeping Chrome up-to-date (manually) has been kind of a hassle on `jane` since I switched that over
 - On 2026-04-02 I was using the *Manage* option in the *App Center* to try to update Firefox, and got this message:
   - *"Something went wrong."*
     - *"We're sorry, but we're not sure what the error is"*
     - *"OK"* button
   - -> Rebooting seems to have fixed the issue
   - **This sort of thing makes me feel like snaps are kinda flakey**
+- Snaps get updated in the background, so they seem like less hassle
 
 
 ## Audio-Visual Apps
@@ -63,7 +67,7 @@ Decide which method I like better.
 ### Checklist
 
 - [X] VLC
-  - Debian version doesn't have an icon, wtf?
+  - Debian version [in 25.10] doesn't have an icon, wtf?
   - [X] Install the snap package version on `martha`
   - [X] Install the debian package version on `bette`
 - [X] OBS
@@ -80,7 +84,7 @@ Download the Tracktion Download Manager from [tracktion.com](tracktion.com) and 
 
 ## Optional, Nice-to-Have Apps
 
-- `chrome`
+- `chrome` - or `chromium`?
   - **Note** that so far we have not installed Chrome yet on `barbara`, `bette`, or `martha`
   - We will eventually want to install it on `jane` and `ava` - and maybe `martha` (and others) later
   - Chrome is nice to have, but remember: **it is a pain to keep it update-to-date on ubuntu** because we have to do it manually.

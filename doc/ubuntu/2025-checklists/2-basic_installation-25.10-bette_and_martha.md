@@ -1,5 +1,5 @@
 
-# 3a-installation-25.10-all_linux_hosts.md
+# 2025-checklists/2-installation-25.10-all_linux_hosts.md
 
 # Installing Ubuntu 25.10
 

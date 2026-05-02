@@ -1,7 +1,9 @@
 
-# 1-list_of_linux_hosts
+# 2026-all_linux_hosts/1-list_of_linux_hosts
 
-List of the linux hosts on my LAN.
+List of the linux hosts on my LAN as of Spring 2026.
+
+**Now that Ubuntu 26.04 is out, I will be upgrading each of these to 26.04 LTS in the coming days and weeks.**
 
 # About Each Linux Host
 

@@ -9,8 +9,8 @@ Much of this is quite straightforward, answering several easy no-brainer questio
 
 Following is a list of steps, for future reference, even when it's simple, but has been a while since the last time I did this:
 
-Suggestion: *copy and paste this checklist into the file we are using to log what I do during the installation.*
-
+- [ ] Shutdown the PC
+- [ ] Disconnect all external USB storage drives
 - [ ] Use the USB drive to boot the PC
   - [ ] May need to mess with the BIOS to get it to boot from the USB drive
 - [ ] Running the install **on [note the date and time here]**

@@ -1,5 +1,5 @@
 
-# 5-bare_bones_essentials.md
+# 5-bare_bones_essentials-bare_bones_essentials.md
 
 # Bare Bones Essentials Common to All Hosts
 

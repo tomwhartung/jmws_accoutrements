@@ -24,16 +24,16 @@ Decide which method I like better.
 
 ### Checklist
 
-- [X] VLC
+- [ ] VLC
   - Debian version [in 25.10] doesn't have an icon, wtf?
-  - [X] Install the snap package version on `martha`
-  - [X] Install the debian package version on `bette`
-- [X] OBS
-  - [X] Install the snap package version on `martha`
-  - [X] Install the debian package version on `bette`
-- [X] Audacity
-  - [X] Install the snap package version on `martha`
-  - [X] Install the debian package version on `bette`
+  - [ ] Install the snap package version on `martha`
+  - [ ] Install the debian package version on `bette`
+- [ ] OBS
+  - [ ] Install the snap package version on `martha`
+  - [ ] Install the debian package version on `bette`
+- [ ] Audacity
+  - [ ] Install the snap package version on `martha`
+  - [ ] Install the debian package version on `bette`
 
 ## Tracktion
 

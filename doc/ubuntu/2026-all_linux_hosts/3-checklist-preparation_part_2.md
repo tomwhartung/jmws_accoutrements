@@ -20,6 +20,6 @@ Then, when doing the install, note any particularities in the file for that host
   - [ ] For `/root`:
     - [ ] Save a list of already-existing links to files and directories in `~tomh`
     - [ ] Identify any files that have customizations, e.g., `.bashrc`, and save those customizations
-  - [ ] For `/home/tomh`, much will depend on how we will be using the host
+  - [ ] For files `/home/tomh`, much will depend on how we will be using the host
     - [ ] `.bash_aliases*`, `.bashrc`, `.ssh/`, `.gitconfig`, `.vimrc`, `d.e`, `Pictures/`, `r*`, etc.
 

@@ -1,7 +1,7 @@
 
-# 5-checklist-bare_bones_essentials.md
+# 4-checklist-bare_bones_essentials.md
 
-This version of `5-checklist-bare_bones_essentials.md` reflects the steps I performed to install **Ubuntu 26.04** on `martha` on **2026-05-??**.
+This version of `4-checklist-bare_bones_essentials.md` reflects the steps I am performing to install **Ubuntu 26.04** on `martha` on **2026-05-??**.
 
 
 # Bare Bones Essentials Common to All Hosts
@@ -20,6 +20,8 @@ In reality I use these all the time and quickly go crazy without them.
     - [ ] Alt+F2 - Switch to Workspace 2
     - [ ] Alt+F3 - Switch to Workspace 3
     - [ ] Alt+F4 - Switch to Workspace 4
+    - [ ] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
+    - [ ] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
 
 ## Install Essential Packages
 

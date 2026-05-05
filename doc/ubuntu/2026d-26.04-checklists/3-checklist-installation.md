@@ -1,5 +1,8 @@
 
-# 4-checklist-installation.md
+# 3-checklist-installation.md
+
+This version of `3-checklist-installation.md` reflects the steps I am performing to install **Ubuntu 26.04** on `[hostname]` on **2026-05-??**.
+
 
 # Installing Ubuntu 26.04
 

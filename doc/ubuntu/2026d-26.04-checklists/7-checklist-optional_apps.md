@@ -1,5 +1,8 @@
 
-# 8-checklist-optional_apps.md
+# 7-checklist-optional_apps.md
+
+This version of `7-checklist-optional_apps.md` reflects the steps I am performing to install **Ubuntu 26.04** on `[hostname]` on **2026-05-??**.
+
 
 # Optional Apps
 

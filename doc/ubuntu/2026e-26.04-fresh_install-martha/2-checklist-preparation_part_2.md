@@ -1,7 +1,7 @@
 
-# 3-checklist-preparation_part_2.md
+# 2-checklist-preparation_part_2.md
 
-This version of `3-checklist-preparation_part_2.md` reflects the steps I performed to install **Ubuntu 26.04** on `martha` on **2026-05-??**.
+This version of `2-checklist-preparation_part_2.md` reflects the steps I am performing to install **Ubuntu 26.04** on `martha` on **2026-05-??**.
 
 
 # Preparation
@@ -18,6 +18,17 @@ Copy the steps in this checklist to a file specific to the host currently being 
 Then, when doing the install, note any particularities in the file for that host, for possible future reference.
 
 - [ ] Save network configuration for static connection
+  - [ ] **Ubuntu, wi-fi**
+    - [ ] Settings -> WiFi -> Visible Networks -> tomsasus -> [Gear Icon]
+      - [ ] Details tab: Connect automatically; Make available to other users
+      - [ ] Identity tab: SSID: tomsasus
+      - [ ] IPv4 tab:
+        - [ ] IPv4 Method section: Manual
+        - [ ] Addresses section: Address: 10.0.1.121; Netmask: 255.255.255.0; Gateway: 10.0.1.2
+        - [ ] DNS section: 192.168.0.1,205.171.2.25
+      - [ ] Security tab:
+  - [X] **Ubuntu, wired**
+    - [X] N/A
 - [ ] Save important files in `/etc`, `/root` and `/home/tomh` to the `2023-32A` thumb drive
   - [ ] `/etc/fstab` and `/etc/hosts`
   - [ ] For `/root`:

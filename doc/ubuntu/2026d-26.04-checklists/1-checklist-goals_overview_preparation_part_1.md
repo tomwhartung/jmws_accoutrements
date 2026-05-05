@@ -1,19 +1,22 @@
 
-# 2026-all_linux_hosts/2-checklist-goals_overview_preparation_part_1.md
+# 1-checklist-goals_overview_preparation_part_1.md
 
 Time to start installing Ubuntu 26.04 on all linux hosts.
+
+This and the other `*-checklist-*` files in this directory contain steps that I am performing specifically on `[hostname]`.
+
 
 # Goals - Big Picture
 
 Here is the proposed sequence we want to use for upgrading all linux hosts to Ubuntu 26.04:
 
-- [ ] Upgrade `martha` to 26.04 soon after it comes out on **2026-04-23**
-- [ ] Upgrade `ava` to 26.04 soon after it comes out on **2026-04-23**
-  - Don't worry about doing a video of either of these upgrades
+- [ ] Upgrade `martha` to 26.04 soon after it comes out on 2026-04-23
+- [ ] Upgrade `barbara` to 26.04 soon after it comes out on 2026-04-23
+- [ ] Upgrade `ava` to 26.04 when comfortable with using 26.04 on `barbara` and `martha`
+  - Don't worry about doing a video of any of these upgrades
   - **Do** consider making a video of the `xscreensaver` before switching over
-- [ ] Upgrade `barbara` to 26.04 when comfortable with using 26.04 on `ava` and `martha`
 - [ ] Upgrade `bette` to 26.04 when comfortable with using 26.04 on `ava` and `martha`
-  - Consider doing a video of this upgrade
+  - Consider making a video of this upgrade
 - [ ] Upgrade `jane` to 26.04 last - because it is my main Linux host that I use daily and it still has some development stuff on it...
   - Consider doing a video of this upgrade
   - Maybe consider making this a dual-boot host so we can keep our old development stuff on there for a little while longer

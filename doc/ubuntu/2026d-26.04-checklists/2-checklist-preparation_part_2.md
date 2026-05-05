@@ -1,12 +1,16 @@
 
-# 2026-all_linux_hosts/3-checklist-preparation_part_2.md
+# 2-checklist-preparation_part_2.md
+
+This version of `2-checklist-preparation_part_2.md` reflects the steps I am performing to install **Ubuntu 26.04** on `[hostname]` on **2026-05-??**.
+
+
+# Preparation
 
 Before the install we need to save some important files and information off on thumb drives and
 the like for use after the install.
 
-# Preparation
-
 We need to do this for all hosts, but specifics may vary.
+
 
 ## Save Network Info and Important Files
 

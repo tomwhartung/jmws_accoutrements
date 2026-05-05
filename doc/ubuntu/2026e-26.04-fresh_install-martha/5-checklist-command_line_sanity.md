@@ -1,7 +1,7 @@
 
-# 6-checklist-command_line_sanity.md.md
+# 5-checklist-command_line_sanity.md.md
 
-This version of `6-checklist-command_line_sanity.md` reflects the steps I performed to install **Ubuntu 26.04** on `martha` on **2026-05-??**.
+This version of `5-checklist-command_line_sanity.md` reflects the steps I am performing to install **Ubuntu 26.04** on `martha` on **2026-05-??**.
 
 
 # Basic Command Line Functionality

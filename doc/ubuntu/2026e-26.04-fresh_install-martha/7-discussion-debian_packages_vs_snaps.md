@@ -1,1 +1,0 @@
-../2026-all_linux_hosts/7-discussion-debian_packages_vs_snaps.md

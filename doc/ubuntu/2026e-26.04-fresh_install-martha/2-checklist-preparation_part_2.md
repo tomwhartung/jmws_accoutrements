@@ -30,19 +30,31 @@ Save network configuration for static connection:
     - [X] Security tab:
       - [X] Security: wPA & WPA2 Personal
       - [X] Password:
-- [X] **Ubuntu, wired**
-  - [X] N/A
+- [-] **Ubuntu, wired**
+  - [-] N/A
 
-Save important files in `/etc` and `/root` to appropriately-named directories on the `2023-32A` thumb drive:
+Save important information about the current filesystems' partitions to the `2023-32A` thumb drive:
+
+```
+cd /media/tomh
+mkdir 2023-32A/for_26.04-X-martha
+cd 2023-32A/for_26.04-X-martha
+l /art > LINKS-art.txt
+df | grep '/dev/sd' | sort > df-grep-sort.txt
+mkdir -p etc home/tomh root
+```
+
+Save important files in `/etc` and `/root` to the `2023-32A` thumb drive:
 
 - [X] Files in `/etc`:
   - [X] Copy `/etc/fstab` and `/etc/hosts` to the thumb drive
 - [X] Files in `/root`:
+  - [X] Copy `~root/.bashrc` to the root directory on the thumb drive
   - [X] Create `LINKS.txt` - use `ls -al` and `cat` to save a list of already-existing links to files and directories in `~tomh`
   - [X] Identify any files that have customizations, e.g., `.bashrc`, and save those customizations
     - [X] **Note:** we rarely do this so don't be surprised if there are no files that need to be saved in this step!
 
-Save important files in `/home/tomh` to an appropriately-named directory on the `2023-32A` thumb drive:
+Save important files in `/home/tomh` to the `2023-32A` thumb drive:
 
 - Hosts `barbara`, `bette`, and `martha` should have very few files in `~tomh`
   - At best we want only the files needed to make ssh work
@@ -51,12 +63,14 @@ Save important files in `/home/tomh` to an appropriately-named directory on the 
   - These are mostly files accumulated over the years that are no longer needed, but still nice to have
 
 - [X] Files in `/home/tomh`
-  - [X] All linux hosts - `barbara`, `bette`, and `martha` *should* have *only* these files and directories
-    - [X] Copy directories `bin/`, `.ssh/`, and `Pictures/` to the thumb drive
-    - [X] Copy files `.bash_aliases*`, `.bashrc`, `.gitconfig`, `.vimrc`, `d.e`, `r*`, etc. to the thumb drive
-    - [X] Create `LINKS.txt` - use `ls -al` and `cat` to save a list of already-existing links  in `~tomh` to files and directories on external disks
-  - [X] We keep these anachronistic directories in `/home/tomh` on `ava` and `jane` *only* - pretty much for just sentimental reasons
-    - [N/A] Copy directories `marketing/`, `personal/`, `technical/`, and `work/` to the thumb drive
-
-- [X] **On `martha`** we are experimenting with using links to keep the very few files we want here in these directories on a **thumb drive**
+  - [X] All linux hosts should have these files and directories
+    - [X] Furthermore, `barbara`, `bette`, and `martha` *should* have *only* these files and directories:
+      - [X] Copy directories `bin/`, `.ssh/`, and `Pictures/` to the thumb drive
+      - [X] Copy files `.bash_aliases*`, `.bashrc`, `.gitconfig`, `.vimrc`, `d.e`, `r*`, etc. to the thumb drive
+      - [X] Create `LINKS.txt` - use `ls -al` and `cat` to save a list of already-existing links  in `~tomh` to files and directories on external disks
+  - [-] **Optional:** Clean out and copy the `~/Downloads/` directory to the thumb drive
+  - [-] On hosts `ava` and `jane` *only* - we keep these anachronistic directories in `/home/tomh`, pretty much just for sentimental reasons
+    - [-] Copy directories `~/jobsearch/`, `~/marketing/`, `~/personal/`, `~/technical/`, and `~/work/` to the thumb drive
+    - [X] **On `martha`** we are experimenting with using links to keep the very few files we want here in these directories on a **thumb drive**
+    - [X] We **may** want to **experiment** with doing this on other hosts, especially where we are working with **`av`** files, such as **`bette`**
 

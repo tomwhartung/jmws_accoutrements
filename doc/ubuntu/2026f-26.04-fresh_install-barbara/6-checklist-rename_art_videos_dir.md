@@ -1,7 +1,7 @@
 
 # 6-checklist-rename_art_videos_dir.md
 
-This version of `6-checklist-rename_art_videos_dir.md` reflects the steps I am performing to install **Ubuntu 26.04** on `[hostname]` on **2026-05-??**.
+This version of `6-checklist-rename_art_videos_dir.md` reflects the steps I am performing to install **Ubuntu 26.04** on `barbara` on **2026-05-06**.
 
 
 # Goal - Big Picture

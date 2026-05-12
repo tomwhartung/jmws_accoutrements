@@ -4,9 +4,24 @@
 This version of `4-checklist-bare_bones_essentials.md` reflects the steps I am performing to install **Ubuntu 26.04** on `[hostname]` on **2026-05-??**.
 
 
+## First Steps
+
+Booting into 26.04 the first time we are prompted to make the following decisions:
+
+- [ ] Location Services - Turn on
+  - "*You can change this later in the Settings app*"
+- [ ] Help Improve Ubuntu
+  - [ ] Share system data with the Ubuntu team - Turn on
+  - [ ] Share error reports with the Ubuntu team - Turn on
+- [ ] Choose how Ubuntu looks
+  - Style - Default
+  - Accent Color - Defaults to Orange
+- [ ] Finish
+
+
 # Bare Bones Essentials Common to All Hosts
 
-These are the first steps to acheiving what is known as *"Sanity"*.
+These are the first steps to acheiving what I call *"Sanity"*.
 
 ## Set Essential Keyboard Shortcuts
 

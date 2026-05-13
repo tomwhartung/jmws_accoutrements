@@ -1,7 +1,7 @@
 
 # 3-checklist-installation.md
 
-This version of `3-checklist-installation.md` reflects the steps I am performing to install **Ubuntu 26.04** on `ava` on **2026-05-06**.
+This version of `3-checklist-installation.md` reflects the steps I am performing to install **Ubuntu 26.04** on `barbara` on **2026-05-06**.
 
 
 # Installing Ubuntu 26.04
@@ -12,20 +12,50 @@ Much of this is quite straightforward, answering several easy no-brainer questio
 
 Following is a list of steps, for future reference, even when it's simple, but has been a while since the last time I did this:
 
-- [ ] Shutdown the PC
-- [ ] Disconnect all external USB storage drives
-- [ ] Use the USB drive to boot the PC
-  - [ ] May need to mess with the BIOS to get it to boot from the USB drive
-- [ ] Running the install **on [note the date and time here]**
-  - [ ] Answer easy no-brainer questions
-  - [ ] Start with **Extended Selection**
-  - [ ] Yes **Install recommended proprietary software**
-  - [ ] **Erase disk and install Ubuntu**
-     - Dual-boot installs were cool back in the day, but I do not see myself wanting to do those any longer
-  - [ ] **No encryption**
-  - [ ] **Create your account**:
-    - [ ] My name, computer's name, my user id, password;
-    - [ ] ** *Uncheck* Require my password to log in**
-  - [ ] Install **started at [note the date and time here]** and **finished at [note the date and time here]**
-
+- [X] Shutdown the PC
+- [X] Disconnect all external USB storage drives
+- [X] Plug in the USB drive created in step `1-install_26.04-barbara.md` to boot the PC
+- [X] Use the USB drive to boot the PC
+  - [X] May need to mess with the BIOS to get it to boot from the USB drive
+    - [X] To bring up the BIOS screen: turn it on or reboot then press **F10** repeatedly
+    - [X] Use the **Right Arrow** key to select the "*Storage*" option
+    - [X] Use the **Down Arrow** key to select the "*Boot Order*" option
+    - [X] Use the **Down Arrow** key to select the "*USB Hard Drive*" option
+    - [X] Use the **Enter** key and the up arrow key to move the "*USB Hard Drive*" option to the top of the "*UEFI Boot Sources*" list
+    - [X] Press the **F10** key to Accept this boot order configuration
+    - [X] Use the **Left Arrow** key to select the "*File*" option
+    - [X] Use the **Down Arrow** key (if necessary) to select the "**Save Changes and Exit*" option
+    - [X] Use the **Enter** key to run the "**Save Changes and Exit*" option
+    - [X] Use the **Enter** key again to affirm we "**Are Sure...**" we want to "**Save Changes and Exit*"
+- [X] Select the "**Try or Install Ubuntu**" option in the GRUB menu
+- [X] Press the **Enter** key to "**Try or Install Ubuntu**"
+- [X] Running the install on **2026-05-12** at **10:00 PM**
+  - [X] Answer these easy no-brainer questions
+    - *Choose your language* - English
+    - *Accessibility in Ubuntu* - None
+    - *Select your keyboard layout* - English (US)
+    - *Connect to the internet* - Use wired connection
+    - *What do you want to do with Ubuntu?* - Install Ubuntu
+    - *How would you like to install Ubuntu?* - Ineractive Installation
+    - *What apps would you like to install to start with?* - Extended selection
+    - *Install recommended proprietary software?*
+      - [X] Install third-party software for graphics and Wi-Fi hardware
+      - [ ] Download and install support for additional media formats - *this option is unavailable and greyed-out*
+    - *How do you want to install Ubuntu?* - Erase disk and install Ubuntu
+    - *Encryption and file system* - No encryption
+    - *Create your account*
+      - Your name: Tom H
+      - Your computer's name: ava
+      - Your username: tomh
+      - Password: tomh
+      - Confirm password: tomh
+      - [-] Require my passowrd to log in - **Uncheck**
+      - [-] Use Active Directory - Leave unchecked
+    - *Select your timezone* - Denver
+    - *Review your choices*
+      - Erase disk and install Ubuntu, etc.
+  - [X] Clicking the **Install** button at **10:06 PM**
+  - [X] Install finished at **10:15 PM**
+  - [X] Clicking the **Restart now** button
+  - [X] Please remove the installation medium, then press ENTER:
 

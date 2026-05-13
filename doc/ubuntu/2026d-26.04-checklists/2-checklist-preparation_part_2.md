@@ -74,12 +74,14 @@ Save important files in `/home/tomh` to the `2023-32A` thumb drive.
 - [ ] Files in `/home/tomh`
   - [ ] All linux hosts should have these files and directories
     - [ ] Furthermore, `barbara`, `bette`, and `martha` *should* have *only* these files and directories:
-      - [ ] Copy directories `bin/`, `.ssh/`, and `Pictures/` to the thumb drive
+      - [ ] Copy directories `bin/`, `.ssh/`, `Music/`, `Pictures/`, and `Downloads/` **[Optional (*)]** to the thumb drive
       - [ ] Copy files `.bash_aliases*`, `.bashrc`, `.gitconfig`, `.vimrc`, `d.e`, `r*`, etc. to the thumb drive
       - [ ] Create `LINKS.txt` - use `ls -al` and `cat` to save a list of already-existing links  in `~tomh` to files and directories on external disks
         - [ ] **On `martha`** we are experimenting with using links to keep the very few files we want here in these directories on a **thumb drive**
         - [ ] We **may** want to **experiment** with doing this on other hosts, especially where we are working with **`av`** files, such as **`bette`**
-  - [ ] **Optional:** Clean out and copy the `~/Downloads/` directory to the thumb drive
+  - [ ] **Optional (*):** Clean out and copy the `~/Downloads/` directory to the thumb drive
+  - [ ] **Music hosts only:** run `cd ; tar -cvzf Music-[date].tgz Music/` and copy the `.tgz` file to the thumb drive
+    - This will include links set up from `~/Music/*` directories to the music files in `/art/music`, even though it's easy enough to recreate those
   - [ ] On hosts `ava` and `jane` *only* - we keep these anachronistic directories in `/home/tomh`, pretty much just for sentimental reasons
     - [ ] Copy directories `~/jobsearch/`, `~/marketing/`, `~/personal/`, `~/technical/`, and `~/work/` to the thumb drive
       - [ ] **PRO TIP:** Preserve permissions by creating a `tar` file containing these directories:

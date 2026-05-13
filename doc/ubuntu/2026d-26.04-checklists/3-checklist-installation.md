@@ -52,14 +52,3 @@ Following is a list of steps, for future reference, even when it's simple, but h
   - [ ] Clicking the **Restart now** button
   - [ ] Please remove the installation medium, then press ENTER:
 
-  - [ ] Start with **Extended Selection**
-  - [ ] Yes **Install recommended proprietary software**
-  - [ ] **Erase disk and install Ubuntu**
-     - Dual-boot installs were cool back in the day, but I do not see myself wanting to do those any longer
-  - [ ] **No encryption**
-  - [ ] **Create your account**:
-    - [ ] My name, computer's name, my user id, password;
-    - [ ] ** *Uncheck* Require my password to log in**
-  - [ ] Install **started at [note the date and time here]** and **finished at [note the date and time here]**
-
-

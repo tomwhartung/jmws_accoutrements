@@ -11,11 +11,12 @@ This and the other `*-checklist-*` files in this directory contain steps that I 
 Here is the proposed sequence we want to use for upgrading all linux hosts to Ubuntu 26.04:
 
 - [ ] Upgrade `martha` to 26.04 soon after it comes out on 2026-04-23
+  - Don't worry about doing a video of this upgrade
 - [ ] Upgrade `barbara` to 26.04 soon after it comes out on 2026-04-23
-- [ ] Upgrade `ava` to 26.04 when comfortable with using 26.04 on `barbara` and `martha`
-  - Don't worry about doing a video of any of these upgrades
-  - **Do** consider making a video of the `xscreensaver` before switching over
-- [ ] Upgrade `bette` to 26.04 when comfortable with using 26.04 on `ava` and `martha`
+  - Don't worry about doing a video of this upgrade
+- [ ] Upgrade `ava` to 26.04 soon after it comes out on 2026-04-23
+  - Don't worry about doing a video of this upgrade
+- [ ] Upgrade `bette` to 26.04 when comfortable with using 26.04 on `martha`, `ava`, and `barbara`
   - Consider making a video of this upgrade
 - [ ] Upgrade `jane` to 26.04 last - because it is my main Linux host that I use daily and it still has some development stuff on it...
   - Consider doing a video of this upgrade

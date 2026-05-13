@@ -64,17 +64,19 @@ Save important files in `/home/tomh` to the `2023-32A` thumb drive.
 - Only `ava` and `jane` have a lot of files in `/home/tomh`
   - These are mostly files accumulated over the years that are no longer needed, but still nice to have
 
-- [ ] Files in `/home/tomh`
-  - [ ] All linux hosts should have these files and directories
+- [X] Files in `/home/tomh`
+  - [X] All linux hosts should have these files and directories
     - [-] Furthermore, `barbara`, `bette`, and `martha` *should* have *only* these files and directories:
-      - [ ] Copy directories `bin/`, `.ssh/`, and `Pictures/` to the thumb drive
-      - [ ] Copy files `.bash_aliases*`, `.bashrc`, `.gitconfig`, `.vimrc`, `d.e`, `r*`, etc. to the thumb drive
-      - [ ] Create `LINKS.txt` - use `ls -al` and `cat` to save a list of already-existing links  in `~tomh` to files and directories on external disks
-  - [X] **Optional:** Clean out and copy the `~/Downloads/` directory to the thumb drive
+      - [X] Copy directories `bin/`, `.ssh/`, `Downloads`, and `Pictures/` to the thumb drive
+      - [X] Copy files `.bash_aliases*`, `.bashrc`, `.gitconfig`, `.vimrc`, `d.e`, `r*`, etc. to the thumb drive
+      - [X] Create `LINKS.txt` - use `ls -al` and `cat` to save a list of already-existing links  in `~tomh` to files and directories on external disks
+  - [X] **Done:** Clean out and copy the `~/Downloads/` directory to the thumb drive
+  - [X] **Music hosts only:** run `cd ; tar -cvzf Music-[date].tgz Music/` and copy the `.tgz` file to the thumb drive
+    - This will include links set up from `~/Music/*` directories to the music files in `/art/music`, even though it's easy enough to recreate those
   - [X] On hosts `ava` and `jane` *only* - we keep these anachronistic directories in `/home/tomh`, pretty much just for sentimental reasons
     - [X] Copy directories `~/jobsearch/`, `~/marketing/`, `~/personal/`, `~/technical/`, and `~/work/` to the thumb drive
       - [X] **PRO TIP:** Preserve permissions by creating a `tar` file containing these directories:
-        - `cd ; tar cvzf home_subdirs-2026_05_06.tgz marketing/ personal/ technical/ work/`
+        - [X] `cd ; tar -cvzf home_subdirs-2026_05_12.tgz backup-OLD-DELETE_ME_YOU_WUSS marketing/ personal/ technical/ work/` and `cp` to thumb drive
       + [!] **PARANOID MUCH???** - yeah let's overcome our paranoia and get moving on here by doing both the `cp -r` and the `tar` file!
        + [!] **HEY!!! - Once I start the install and overwrite the disk, there's no goiong back!!**
 

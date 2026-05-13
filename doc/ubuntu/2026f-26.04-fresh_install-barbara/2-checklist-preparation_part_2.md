@@ -71,6 +71,8 @@ Save important files in `/home/tomh` to an appropriately-named directory on the 
       - [X] Copy files `.bash_aliases*`, `.bashrc`, `.gitconfig`, `.vimrc`, `d.e`, `r*`, etc. to the thumb drive
       - [-] Create `LINKS.txt` - use `ls -al` and `cat` to save a list of already-existing links  in `~tomh` to files and directories on external disks
         - N/A - not seeing any of these on `barbara`, **which is to be expected**
+  - [X] **Music hosts only:** run `cd ; tar -cvzf Music-[date].tgz Music/` and copy the `.tgz` file to the thumb drive
+    - This will include links set up from `~/Music/*` directories to the music files in `/art/music`, even though it's easy enough to recreate those
   - [-] **Optional:** Clean out and copy the `~/Downloads/` directory to the thumb drive
   - [-] On hosts `ava` and `jane` *only* - we keep these anachronistic directories in `/home/tomh`, pretty much just for sentimental reasons
     - N/A

@@ -4,7 +4,20 @@
 This version of `4-checklist-bare_bones_essentials.md` reflects the steps I am performing to install **Ubuntu 26.04** on `[hostname]` on **2026-05-??**.
 
 
-## First Steps
+# Bare Bones Essentials Common to All Hosts
+
+These are the first steps to acheiving what I call *"Sanity"*.
+
+Overview:
+
+- 1. First Boot - booting into the install for the first time
+- 1. Add the Terminal App to the Dock
+- 1. Install Essential Packages
+- 1. Update Essential Files From Previous Install
+- 1. Set Essential Keyboard Shortcuts
+- 1. Essential Networking - `ssh`
+
+## First Boot
 
 Booting into 26.04 the first time we are prompted to make the following decisions:
 
@@ -18,25 +31,12 @@ Booting into 26.04 the first time we are prompted to make the following decision
   - Accent Color - Defaults to Orange
 - [ ] Finish
 
+## Add the Terminal App to the Dock
 
-# Bare Bones Essentials Common to All Hosts
-
-These are the first steps to acheiving what I call *"Sanity"*.
-
-## Set Essential Keyboard Shortcuts
-
-In reality I use these all the time and quickly go crazy without them.
-
-- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
-  - Navigation
-    - [ ] Alt+[Left Arrow] - Switch to workspace on the left
-    - [ ] Alt+[Right Arrow] - Switch to workspace on the right
-    - [ ] Alt+F1 - Switch to Workspace 1
-    - [ ] Alt+F2 - Switch to Workspace 2
-    - [ ] Alt+F3 - Switch to Workspace 3
-    - [ ] Alt+F4 - Switch to Workspace 4
-    - [ ] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
-    - [ ] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
+- [ ] Click on the **Apps** icon in the lower left corner
+- [ ] Right-click on the icon for the **Terminal** app and select **Pin to Dock**
+- [ ] Press the **Esc** key
+- [ ] Right-click on the icon for the **Terminal** app ** *in the dock* ** and move it to the **Top of the Dock**
 
 ## Install Essential Packages
 
@@ -56,6 +56,10 @@ In reality I use these all the time and quickly go crazy without them.
 
 Find old files on the `2023-32A` thumb drive in the `for_...` directory and use them to update the new install.
 
+- [ ] Files in `/etc`
+  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
+  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
+  - [ ] Add CusTOMizations from versions on the `2023-32A` thumb drive
 - [ ] Files in `/home/tomh`
   - [ ] Open a terminal window
   - [ ] Check in the installed version of `.bashrc`:
@@ -75,10 +79,21 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
   - [ ] Check in the installed version of `.bashrc`:
     - [ ] Run `cd ; ci -l .bashrc` with the *not-a-log* message *"Installed version."*
     - [ ] Add the CusTOMizations from the `2023-32A` thumb drive
-- [ ] Files in `/etc`
-  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
-  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
-  - [ ] Add CusTOMizations from versions on the `2023-32A` thumb drive
+
+## Set Essential Keyboard Shortcuts
+
+In reality I use these all the time and quickly go crazy without them.
+
+- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
+  - Navigation
+    - [ ] Alt+[Left Arrow] - Switch to workspace on the left
+    - [ ] Alt+[Right Arrow] - Switch to workspace on the right
+    - [ ] Alt+F1 - Switch to Workspace 1
+    - [ ] Alt+F2 - Switch to Workspace 2
+    - [ ] Alt+F3 - Switch to Workspace 3
+    - [ ] Alt+F4 - Switch to Workspace 4
+    - [ ] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
+    - [ ] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
 
 ## Essential Networking - `ssh`
 

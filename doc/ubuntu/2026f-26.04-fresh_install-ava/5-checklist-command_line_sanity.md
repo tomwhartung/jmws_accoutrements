@@ -1,19 +1,12 @@
 
 # 5-checklist-command_line_sanity.md.md
 
-This version of `5-checklist-command_line_sanity.md` reflects the steps I am performing to install **Ubuntu 26.04** on `martha` on **2026-05-??**.
+This version of `5-checklist-command_line_sanity.md` reflects the steps I am performing to install **Ubuntu 26.04** on `[hostname]` on **2026-05-??**.
 
 
 # Basic Command Line Functionality
 
 These steps help us to finish acheiving what I like to call *"Sanity"*.
-
-Overview:
-
-- 1. Clone the `jmws_accoutrements` Repo
-- 1. Populate `~/bin`
-- 1. Keyboard Shortcuts
-- 1. Konsole Sanity
 
 ## Github; Clone the `jmws_accoutrements` Repo
 

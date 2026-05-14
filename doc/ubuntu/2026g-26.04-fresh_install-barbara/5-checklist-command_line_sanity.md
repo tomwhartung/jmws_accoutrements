@@ -8,6 +8,13 @@ This version of `5-checklist-command_line_sanity.md` reflects the steps I am per
 
 These steps help us to finish acheiving what I like to call *"Sanity"*.
 
+Overview:
+
+- 1. Clone the `jmws_accoutrements` Repo
+- 1. Populate `~/bin`
+- 1. Keyboard Shortcuts
+- 1. Konsole Sanity
+
 ## Github; Clone the `jmws_accoutrements` Repo
 
 - [ ] Update ssh key for *[hostname]* on github.com

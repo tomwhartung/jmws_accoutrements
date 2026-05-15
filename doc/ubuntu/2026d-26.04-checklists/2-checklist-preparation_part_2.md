@@ -30,7 +30,7 @@ Save network configuration for static connection:
       - [ ] DNS section: 192.168.0.1,205.171.2.25
     - [ ] Security tab:
 - [ ] **Ubuntu, wired**
-  - [ ] Settings -> Wired section -> [Gear Icon]
+  - [ ] Settings -> Network -> Wired section -> [Gear Icon]
     - [ ] Details tab: Connect automatically
     - [ ] Identity tab
        - Name: "Static wired quantum fiber via asus"

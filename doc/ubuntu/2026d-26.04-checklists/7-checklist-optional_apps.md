@@ -11,6 +11,19 @@ Checklists for installing apps that we want on a limited number of hosts.
 - Be sure to make a note in the in the file for that host of whether we install the debian package or the snap version
   - In particular, make a note of any reasons for picking one over the other, for possible future reference
 
+## Contemplating Chromium
+
+I am thinking seriously about installing `chromium` on all 26.04 hosts.
+
+## Music Apps: `ava` and `barbara`
+
+For now, install these on `ava` and `barbara` -- and optionally maybe eventually install them on `jane`.
+
+- [ ] Clementine
+  - [ ] Details TBD
+- [ ] Strawberry
+  - [ ] Details TBD
+
 ## Audio-Visual Apps: `martha` and `bette`
 
 For now, install these on `martha` and `bette` -- and optionally maybe eventually install them on `ava` or `jane`.
@@ -42,22 +55,7 @@ Decide which method I like better.
 
 Download the Tracktion Download Manager from [tracktion.com](tracktion.com) and use that to install the app.
 
-## Music Apps: `ava` and `barbara`
-
-For now, install these on `ava` and `barbara` -- and optionally maybe eventually install them on `jane`.
-
-- [ ] Strawberry
-- [ ] Clementine
-- [ ] Details TBD
-
 ## Other Optional, Nice-to-Have Apps
 
-- [ ] `chrome` - or `chromium`?
-  - **Note** that so far we have not installed Chrome yet on `barbara`, `bette`, or `martha`
-  - We will eventually want to install it on `jane` and `ava` - and maybe `martha` (and others) later
-  - Chrome is nice to have, but remember: **it is a pain to keep it update-to-date on ubuntu** because we have to do it manually.
-  - Maybe if we install **chromium** (as a snap) instead of chrome it will be less of a pain to keep it update-to-date??
-  - [ ] If we install chrome, set up a shortcut for it:
-    - [ ] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
-      - Ctrl-Alt-C: Chrome
+- [ ] TBD
 

@@ -11,11 +11,13 @@ These are the first steps to acheiving what I call *"Sanity"*.
 Overview:
 
 - 1. First Boot - booting into the install for the first time
-- 1. Add the **Terminal** App to the Dock
+- 1. Add the **Terminal** and **Settings** Apps to the Dock
+- 1. Get the Network Running With the Static IP Address
 - 1. Install Essential Packages
 - 1. Update Essential Files From Previous Install
-- 1. Set up Rhythmbox to Play My MP3s - added for `ava` and `barbara`
 - 1. Set Essential Keyboard Shortcuts
+- 1. Install Clementine and Set It and Rhythmbox up to Play My MP3s
+  - Added because we are doing the install on `ava` and `barbara` before most of the others, and I like to listen to music while doing this work
 - 1. Essential Networking - `ssh`
 
 ## First Boot
@@ -32,81 +34,151 @@ Booting into 26.04 the first time we are prompted to make the following decision
   - Accent Color - Defaults to Orange
 - [X] Finish
 
-## Add the **Terminal** App to the Dock
+## Add the **Terminal** and **Settings** Apps to the Dock
+
+Here we demonstrate two ways to pin an app to the doc.
+
+First, the **Terminal** app:
 
 - [X] Click on the **Apps** icon in the lower left corner
 - [X] Right-click on the icon for the **Terminal** app and select **Pin to Dock**
 - [X] Press the **Esc** key
-- [X] Right-click on the icon for the **Terminal** app ** *in the dock* ** and move it to the **Top of the Dock**
+- [X] Right-click on the icon for the **Terminal** app *in the dock* and move it to the **Top of the Dock**
+
+Second, the **Settings** app:
+
+- [X] Left-click on the **Apps** icon in the lower left corner
+- [X] Left-click on the icon for the **Settings** app to launch it
+- [X] Right-click on the icon for the **Settings** app *in the dock* select **Pin to Dock**
+- [X] Press the **Esc** key
+- [X] Left-click on the icon for the **Settings** app *in the dock* and move it to the **Top of the Dock**
+
+## Get the Network Running With the Static IP Address
+
+- [X] Open a **Terminal** window and try running:
+  - `ping google.com`
+  - If it works, great!  But don't be surprised if it doesn't.
+  - We are going to need to set a **static IP address**, so might as well do it now.
+- [X] Open the **Settings** app and use the values saved in `2-checklist-preparation_part_2.md` to set up *static IP*
+  - [X] Settings -> Network -> Wired section -> [Gear Icon]
+    - [X] Details tab: Connect automatically
+    - [X] Identity tab
+       - Name: "Static wired quantum fiber via asus"
+       - MTU: Automatic
+    - [X] IPv4 tab:
+      - [X] IPv4 Method section: Manual
+      - [X] Addresses section: Address: 10.0.1.117; Netmask: 255.255.255.0; Gateway: 10.0.1.2
+      - [X] DNS section: 192.168.0.1,205.171.2.25
+    - [X] Security tab:
+      - Authentication: MD5
+- [X] Go back to the **Terminal** window opened previously and try running the `ping` command again:
+  - `ping google.com`
+  - **If it doesn't work, review the settings entered and figure out why!  This is super-important, so good luck!!**
 
 ## Install Essential Packages
 
-- [ ] Use the Command Line or the Software Updater to update the installed packages to their latest versions
-  - [ ] Using the Command Line:
-    - [ ] Open a terminal window and run `sudo su -` so we can run additional install commands as root
-    - [ ] Run `apt-get update` to identify the updated versions that apt can install
-    - [ ] Run `apt-get upgrade` to download and install these updated versions
-  - [ ] Using the Software Updater: *(TBD)*
+- [X] Use the Command Line or the Software Updater to update the installed packages to their latest versions
+  - [X] Using the Command Line:
+    - [X] Open a terminal window and run `sudo su -` so we can run additional install commands as root
+    - [X] Run `apt-get update` to identify the updated versions that apt can install
+    - [X] Run `apt-get upgrade` to download and install these updated versions
+  - [-] Using the Software Updater: *(TBD)*
      **TBD: This is probably what I will want to show people in the video**
-    - [ ] Pin the Software Updater to the dock
-    - [ ] Run the Software Updater to install updates made since 25.10 was released
-- [ ] If not already done, open a terminal window and run `sudo su -` so we can run additional install commands as root
-- [ ] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
+    - [-] Pin the Software Updater to the dock
+    - [-] Run the Software Updater to install updates made since 25.10 was released
+- [X] If not already done, open a terminal window and run `sudo su -` so we can run additional install commands as root
+- [X] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
+- [X] Open the **Apps** screen, run the **Konsole** app - or *pin it to the dock* and run it from there
+- [X] Right-click on the icon for the **Konsole** app *in the dock* and move it to between the *Settings* and *Terminal* apps
+- [-] It may be a good idea to reboot the system at this time, *however*
+  - It's ok to wait and reboot after going through the steps in the next section
+  - *Note* that we will *need* to reboot after updating these files, to take advantage of them being present at boot
 
 ## Update Essential Files From Previous Install
 
-Find old files on the `2023-32A` thumb drive in the `for_...` directory and use them to update the new install.
+Find files from the previous install on the `2023-32A` thumb drive in the `for_...` directory and use them to update the new install.
 
-- [ ] Files in `/home/tomh`
-  - [ ] Open a terminal window
-  - [ ] Check in the installed version of `.bashrc`:
-    - [ ] Run `cd ; ci -l .bashrc` and add the *not-a-log* message *"Installed version."*
-  - [ ] Copy over all the files from `/home/tomh` on the `2023-32A` thumb drive
-  - [ ] Run `rcsdiff` to ensure that overwriting `.bashrc` did not wipe out any needed updates to the file:
-    - [ ] `rcsdiff .bashrc`       # only CusTOMizations should show up
-  - [ ] Set background to one of the files in `~/Pictures`
+**Note: Ubuntu 26.04 mounts thumb drives in `/run/media/tomh` (instead of just `/media/tomh`)!!**
+
+- [X] Files in `/home/tomh`
+  - [X] Open a terminal window
+  - [X] Check in the installed version of `.bashrc`:
+    - [X] Run `cd ; ci -l .bashrc` and add the *not-a-log* message *"Installed version."*
+  - [X] Move or copy over all the files from `/home/tomh` on the `2023-32A` thumb drive to the `/home/tomh` directory
+  - [X] Run `rcsdiff` to ensure that overwriting `.bashrc` did not wipe out any needed updates to the file:
+    - [X] `rcsdiff .bashrc`        # only CusTOMizations should show up
+    - [X] This is a good time to clean up CusTOMizations that are no longer relevant
+  - [X] Set background to one of the files in `~/Pictures`
     - Settings -> Appearance -> Background -> + Add Picture
-- [ ] Files in `/root`
-  - [ ] Open a terminal window and run `sudo su -` so we can **run these commands as root**
-  - [ ] Link the following files from `~tomh` to `/root`:
-    - [ ] `ln -s ~tomh/.bash_aliases .`
-    - [ ] `ln -s ~tomh/.bash_aliases-* .`
-    - [ ] `ln -s ~tomh/.vimrc .`
-    - [ ] `ln -s ~tomh/bin .`        # NOTE: these must be copied over before we can link to them
-  - [ ] Check in the installed version of `.bashrc`:
-    - [ ] Run `cd ; ci -l .bashrc` with the *not-a-log* message *"Installed version."*
-    - [ ] Add the CusTOMizations from the `2023-32A` thumb drive
-- [ ] Files in `/etc`
-  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
-  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
-  - [ ] Add CusTOMizations from versions on the `2023-32A` thumb drive
+- [X] Files in `/root`
+  - [X] Open a terminal window and run `sudo su -` so we can **run these commands as root**
+  - [X] Link the following files from `~tomh` to `/root`:
+    - [X] `ln -s ~tomh/.bash_aliases .`
+    - [X] `ln -s ~tomh/.bash_aliases-* .`
+    - [X] `ln -s ~tomh/.vimrc .`
+    - [X] `ln -s ~tomh/bin .`        # NOTE: these must be copied over before we can link to them
+  - [X] Check in the installed version of `.bashrc`:
+    - [X] Run `cd ; ci -l .bashrc` with the *not-a-log* message *"Installed version."*
+    - [X] Add the CusTOMizations from the `2023-32A` thumb drive
+- [X] Files in `/etc`
+  - [X] Open a terminal window and run `sudo su -` so we can run commands as root
+  - [X] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
+  - [X] Add CusTOMizations from versions on the `2023-32A` thumb drive
+    - [!] **!!! Not following this step properly made the PC unbootable !!!**
+    - [!] **Instead of *adding the CusTOMizations*, I *replaced* the `/etc/fstab` file!!! OOPS!!! **
+    - [!] See the subsection immediately below for information on how I fixed this!
+- [X] *Definitely* reboot the system at this time
 
-## Set up Rhythmbox to Play My MP3s
+### YIKES!  IT DOESN'T BOOT BACK UP!!
 
-The following checklist has been moved here from the section "*Update Essential Files From Previous Install*" below,
-because we want to do them right away, so that we can listen to music while we install 26.04 on `barbara`.
+**The reboot failed, and it put me in emergency mode!**
 
-- [ ] Update `fstab` to Auto-mount Our `/art/music` Files
-- [ ] TBD
-- [ ] Link the `/art/music` Files to `~/Music/rhythmbox`
-- [ ] TBD
-- [ ] Run Rhythmbox and Get It to Play the `/art/music` Files Linked to `~/Music/rhythmbox`
-- [ ] TBD
+- I suspect it is a problem in `/etc/fstab`, because that is one of the things I changed
+- Sure enough, running some searches, this popped up as a possible problem
+- Unfortunately, the filesystem is read-only, making it impossible to try to fix `/etc/fstab`
+- Searching for how to fix the read-only aspect specifically, I found this post:
+  - https://stackoverflow.com/questions/383595/repairing-fstab-read-only
+- After a few tries, and based on one of the answers there, I was able to fix the read-only filesystem with this command, yay:
+  - `mount -n -o remount -t ext4 /dev/sda2 /`
+- **It's a good thing I checked the installed version of `/etc/fstab` into RCS!!**
+- Then I ran `cd /etc` and ran `mv fstab fstab-possibly_bad`
+- Then I ran `co -l fstab` to restore the installed version
+
+**This enabled me to boot back into the install!  WHEW!!**
+
+- [X] Then I added just the CusTOMizations to `/etc/fstab`, plugged in my external USB drives, and rebooted
+
+We now return you to our original programming!!
 
 ## Set Essential Keyboard Shortcuts
 
 In reality I use these all the time and quickly go crazy without them.
 
-- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
+- [X] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
   - Navigation
-    - [ ] Alt+[Left Arrow] - Switch to workspace on the left
-    - [ ] Alt+[Right Arrow] - Switch to workspace on the right
-    - [ ] Alt+F1 - Switch to Workspace 1
-    - [ ] Alt+F2 - Switch to Workspace 2
-    - [ ] Alt+F3 - Switch to Workspace 3
-    - [ ] Alt+F4 - Switch to Workspace 4
-    - [ ] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
-    - [ ] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
+    - [X] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
+    - [X] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
+    - [X] Alt+F1 - Switch to Workspace 1
+    - [X] Alt+F2 - Switch to Workspace 2
+    - [X] Alt+F3 - Switch to Workspace 3
+    - [X] Alt+F4 - Switch to Workspace 4
+    - [X] Alt+[Left Arrow] - Switch to workspace on the left
+    - [X] Alt+[Right Arrow] - Switch to workspace on the right
+
+## Install Clementine and Set It and Rhythmbox up to Play My MP3s
+
+The following checklist has been moved here from the section "*Update Essential Files From Previous Install*" below,
+because we want to do them right away, so that we can listen to music while we install 26.04 on `barbara`.
+
+- [ ] Ensure we have `/etc/fstab` configured so that it will auto-mount our `/art/music` files
+- [ ] TBD
+- [ ] Link the `/art/music` Files to `~/Music/rhythmbox`
+- [ ] TBD
+- [ ] Run Rhythmbox and Get It to Play the `/art/music` Files Linked to `~/Music/rhythmbox`
+- [ ] TBD
+- [ ] Install
+- [ ] TBD
+- [ ] TBD
 
 ## Essential Networking - `ssh`
 

@@ -23,7 +23,7 @@ Save network configuration for static connection:
 - [-] **Ubuntu, wi-fi**
   - N/A
 - [X] **Ubuntu, wired**
-  - [X] Settings -> Wired section -> [Gear Icon]
+  - [X] Settings -> Network -> Wired section -> [Gear Icon]
     - [X] Details tab: Connect automatically
     - [X] Identity tab
        - Name: "Static wired quantum fiber via asus"

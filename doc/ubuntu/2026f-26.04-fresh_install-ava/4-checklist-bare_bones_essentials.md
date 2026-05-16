@@ -123,11 +123,13 @@ Find files from the previous install on the `2023-32A` thumb drive in the `for_.
 - [X] Files in `/etc`
   - [X] Open a terminal window and run `sudo su -` so we can run commands as root
   - [X] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
-  - [X] Add CusTOMizations from versions on the `2023-32A` thumb drive
+  - [ ] Add **only the CusTOMizations** from the version of `fstab` on the thumb drive to the installed version of `fstab`
     - [!] **!!! Not following this step properly made the PC unbootable !!!**
     - [!] **Instead of *adding the CusTOMizations*, I *replaced* the `/etc/fstab` file!!! OOPS!!! **
     - [!] See the subsection immediately below for information on how I fixed this!
+  - [ ] Add **only the CusTOMizations** from the version of `hosts` on the thumb drive to the installed version of `hosts`
 - [X] *Definitely* reboot the system at this time
+  - If the PC doesn't boot, it's probably an issue with `/etc/fstab`, so fix that right away
 
 ### YIKES!  IT DOESN'T BOOT BACK UP!!
 

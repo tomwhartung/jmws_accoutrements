@@ -38,57 +38,57 @@ Here we demonstrate two ways to pin an app to the doc.
 
 First, the **Terminal** app:
 
-- [ ] Click on the **Apps** icon in the lower left corner
-- [ ] Right-click on the icon for the **Terminal** app and select **Pin to Dock**
-- [ ] Press the **Esc** key
-- [ ] Right-click on the icon for the **Terminal** app *in the dock* and move it to the **Top of the Dock**
+- [X] Click on the **Apps** icon in the lower left corner
+- [X] Right-click on the icon for the **Terminal** app and select **Pin to Dock**
+- [X] Press the **Esc** key
+- [X] Right-click on the icon for the **Terminal** app *in the dock* and move it to the **Top of the Dock**
 
 Second, the **Settings** app:
 
-- [ ] Left-click on the **Apps** icon in the lower left corner
-- [ ] Left-click on the icon for the **Settings** app to launch it
-- [ ] Right-click on the icon for the **Settings** app *in the dock* select **Pin to Dock**
-- [ ] Press the **Esc** key
-- [ ] Left-click on the icon for the **Settings** app *in the dock* and move it to the **Top of the Dock**
+- [X] Left-click on the **Apps** icon in the lower left corner
+- [X] Left-click on the icon for the **Settings** app to launch it
+- [X] Right-click on the icon for the **Settings** app *in the dock* select **Pin to Dock**
+- [X] Press the **Esc** key
+- [X] Left-click on the icon for the **Settings** app *in the dock* and move it to the **Top of the Dock**
 
 ## Get the Network Running With the Static IP Address
 
-- [ ] Open a **Terminal** window and try running:
+- [X] Open a **Terminal** window and try running:
   - `ping google.com`
   - If it works, great!  But don't be surprised if it doesn't.
   - We are going to need to set a **static IP address**, so might as well do it now.
-- [ ] Open the **Settings** app and use the values saved in `2-checklist-preparation_part_2.md` to set up *static IP*
-  - [ ] Settings -> Network -> Wired section -> [Gear Icon]
-    - [ ] Details tab: Connect automatically
-    - [ ] Identity tab
-       - Name: "Static wired quantum fiber via asus"
+- [X] Open the **Settings** app and use the values saved in `2-checklist-preparation_part_2.md` to set up *static IP*
+  - [X] Settings -> Network -> Wired section -> [Gear Icon]
+    - [X] Details tab: Connect automatically
+    - [X] Identity tab
+       - Name: "Static wireless quantum fiber via tomsasus"
        - MTU: Automatic
-    - [ ] IPv4 tab:
-      - [ ] IPv4 Method section: Manual
-      - [ ] Addresses section: Address: 10.0.1.117; Netmask: 255.255.255.0; Gateway: 10.0.1.2
-      - [ ] DNS section: 192.168.0.1,205.171.2.25
-    - [ ] Security tab:
-      - Authentication: MD5
-- [ ] Go back to the **Terminal** window opened previously and try running the `ping` command again:
+    - [X] IPv4 tab:
+      - [X] IPv4 Method section: Manual
+      - [X] Addresses section: Address: 10.0.1.121; Netmask: 255.255.255.0; Gateway: 10.0.1.2
+      - [X] DNS section: 192.168.0.1,205.171.2.25
+    - [X] Security tab:
+      - Authentication: WPA & WPA2 Personal
+- [X] Go back to the **Terminal** window opened previously and try running the `ping` command again:
   - `ping google.com`
   - **If it doesn't work, review the settings entered and figure out why!  This is super-important, so good luck!!**
 
 ## Install Essential Packages
 
-- [ ] Use the Command Line or the Software Updater to update the installed packages to their latest versions
-  - [ ] Using the Command Line:
-    - [ ] Open a terminal window and run `sudo su -` so we can run additional install commands as root
-    - [ ] Run `apt-get update` to identify the updated versions that apt can install
-    - [ ] Run `apt-get upgrade` to download and install these updated versions
-  - [ ] Using the Software Updater: *(TBD)*
+- [X] Use the Command Line or the Software Updater to update the installed packages to their latest versions
+  - [X] Using the Command Line:
+    - [X] Open a terminal window and run `sudo su -` so we can run additional install commands as root
+    - [X] Run `apt-get update` to identify the updated versions that apt can install
+    - [X] Run `apt-get upgrade` to download and install these updated versions
+  - [-] Using the Software Updater: *(TBD)*
      **TBD: This is probably what I will want to show people in the video**
-    - [ ] Pin the Software Updater to the dock
-    - [ ] Run the Software Updater to install updates made since 25.10 was released
-- [ ] If not already done, open a terminal window and run `sudo su -` so we can run additional install commands as root
-- [ ] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
-- [ ] Open the **Apps** screen, run the **Konsole** app - or *pin it to the dock* and run it from there
-- [ ] Right-click on the icon for the **Konsole** app *in the dock* and move it to between the *Settings* and *Terminal* apps
-- [ ] It may be a good idea to reboot the system at this time, *however*
+    - [-] Pin the Software Updater to the dock
+    - [-] Run the Software Updater to install updates made since 25.10 was released
+- [X] If not already done, open a terminal window and run `sudo su -` so we can run additional install commands as root
+- [X] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
+- [X] Open the **Apps** screen, run the **Konsole** app - or *pin it to the dock* and run it from there
+- [X] Right-click on the icon for the **Konsole** app *in the dock* and move it to between the *Settings* and *Terminal* apps
+- [X] It may be a good idea to reboot the system at this time, *however*
   - It's ok to wait and reboot after going through the steps in the next section
   - *Note* that we will *need* to reboot after updating these files, to take advantage of them being present at boot
 

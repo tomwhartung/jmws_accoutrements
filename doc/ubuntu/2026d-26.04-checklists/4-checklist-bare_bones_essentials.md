@@ -96,10 +96,6 @@ Second, the **Settings** app:
 
 Find old files on the `2023-32A` thumb drive in the `for_...` directory and use them to update the new install.
 
-- [ ] Files in `/etc`
-  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
-  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
-  - [ ] Add CusTOMizations from versions on the `2023-32A` thumb drive
 - [ ] Files in `/home/tomh`
   - [ ] Open a terminal window
   - [ ] Check in the installed version of `.bashrc`:
@@ -120,7 +116,13 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
   - [ ] Check in the installed version of `.bashrc`:
     - [ ] Run `cd ; ci -l .bashrc` with the *not-a-log* message *"Installed version."*
     - [ ] Add the CusTOMizations from the `2023-32A` thumb drive
+- [ ] Files in `/etc`
+  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
+  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
+  - [ ] Add **only the CusTOMizations** from the version of `fstab` on the thumb drive to the installed version of `fstab`
+  - [ ] Add **only the CusTOMizations** from the version of `hosts` on the thumb drive to the installed version of `hosts`
 - [ ] *Definitely* reboot the system at this time
+  - If the PC doesn't boot, it's probably an issue with `/etc/fstab`, so fix that right away
 
 ## Set Essential Keyboard Shortcuts
 

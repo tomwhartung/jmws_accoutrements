@@ -144,16 +144,16 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
 
 In reality I use these all the time and quickly go crazy without them.
 
-- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
+- [X] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
   - Navigation
-    - [ ] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
-    - [ ] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
-    - [ ] Alt+F1 - Switch to Workspace 1
-    - [ ] Alt+F2 - Switch to Workspace 2
-    - [ ] Alt+F3 - Switch to Workspace 3
-    - [ ] Alt+F4 - Switch to Workspace 4
-    - [ ] Alt+[Left Arrow] - Switch to workspace on the left
-    - [ ] Alt+[Right Arrow] - Switch to workspace on the right
+    - [X] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
+    - [X] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
+    - [X] Alt+F1 - Switch to Workspace 1
+    - [X] Alt+F2 - Switch to Workspace 2
+    - [X] Alt+F3 - Switch to Workspace 3
+    - [X] Alt+F4 - Switch to Workspace 4
+    - [X] Alt+[Left Arrow] - Switch to workspace on the left
+    - [X] Alt+[Right Arrow] - Switch to workspace on the right
 
 ## Essential Networking - `ssh`
 

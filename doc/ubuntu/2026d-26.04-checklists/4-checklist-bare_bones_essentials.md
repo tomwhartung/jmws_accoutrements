@@ -97,32 +97,47 @@ Second, the **Settings** app:
 Find old files on the `2023-32A` thumb drive in the `for_...` directory and use them to update the new install.
 
 - [ ] Files in `/home/tomh`
-  - [ ] Open a terminal window
-  - [ ] Check in the installed version of `.bashrc`:
-    - [ ] Run `cd ; ci -l .bashrc` and add the *not-a-log* message *"Installed version."*
-  - [ ] Copy over all the files from `/home/tomh` on the `2023-32A` thumb drive
+  - [ ] Open a konsole window
+  - [ ] Check the installed version of `.bashrc` into RCS:
+    - [ ] Run the following commands:
+      - `cd`
+      - `mkdir RCS`
+      - `ci -l .bashrc`     # add the *not-a-log* message *"Installed version."*
+  - [ ] Move (or copy) the `.bashrc` and `.bash_aliases*` files from `/home/tomh` on the thumb drive to `/home/tomh`
   - [ ] Run `rcsdiff` to ensure that overwriting `.bashrc` did not wipe out any needed updates to the file:
     - [ ] `rcsdiff .bashrc`       # only CusTOMizations should show up
-    - [ ] This is a good time to clean up CusTOMizations that are no longer relevant
+    - [ ] This is a good time to clean up any CusTOMizations that are no longer relevant and hence obsolete
+  - [ ] Move (or copy) the rest of the files from `/home/tomh` on the thumb drive to `/home/tomh`
+    - `.vimrc .gitconfig`
+    - `d.e r*`
+    - `.ssh/` - Use `mv` or `cp -r`
   - [ ] Set background to one of the files in `~/Pictures`
     - Settings -> Appearance -> Background -> + Add Picture
 - [ ] Files in `/root`
-  - [ ] Open a terminal window and run `sudo su -` so we can **run these commands as root**
+  - [ ] Open a konsole window and run `sudo su -` so we can **run these commands as root**
+  - [ ] Check in the installed version of `.bashrc`:
+    - [ ] Run the following commands:
+      - `cd`
+      - `mkdir RCS`
+      - `ci -l .bashrc`     # add the *not-a-log* message *"Installed version."*
+    - [ ] Move (or copy) the `.bashrc` file from `/root` on the thumb drive to add the CusTOMizations
   - [ ] Link the following files from `~tomh` to `/root`:
     - [ ] `ln -s ~tomh/.bash_aliases .`
     - [ ] `ln -s ~tomh/.bash_aliases-* .`
     - [ ] `ln -s ~tomh/.vimrc .`
     - [ ] `ln -s ~tomh/bin .`        # NOTE: these must be copied over before we can link to them
-  - [ ] Check in the installed version of `.bashrc`:
-    - [ ] Run `cd ; ci -l .bashrc` with the *not-a-log* message *"Installed version."*
-    - [ ] Add the CusTOMizations from the `2023-32A` thumb drive
 - [ ] Files in `/etc`
-  - [ ] Open a terminal window and run `sudo su -` so we can run commands as root
-  - [ ] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
+  - [ ] Open a konsole window and run `sudo su -` so we can run commands as root
+  - [ ] Check the installed versions of `/etc/fstab` and `/etc/hosts` into RCS
+    - [ ] Run the following commands:
+      - `cd /etc`
+      - `mkdir RCS`
+      - `ci -l fstab hosts`  # "Installed version."
   - [ ] Add **only the CusTOMizations** from the version of `fstab` on the thumb drive to the installed version of `fstab`
   - [ ] Add **only the CusTOMizations** from the version of `hosts` on the thumb drive to the installed version of `hosts`
+  - [ ] **Be sure to plug in any external disks referenced in the CusTOMizations added to `fstab`** 
 - [ ] *Definitely* reboot the system at this time
-  - If the PC doesn't boot, it's probably an issue with `/etc/fstab`, so fix that right away
+  - If the PC doesn't boot, it's probably because the disks referenced in the CusTOMizations added to `/etc/fstab` are not plugged in
 
 ## Set Essential Keyboard Shortcuts
 

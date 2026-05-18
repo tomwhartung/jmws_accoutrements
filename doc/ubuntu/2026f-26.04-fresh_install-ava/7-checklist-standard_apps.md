@@ -169,21 +169,94 @@ The next step is to start up the apps and link the files we will want to listen 
   - [X] Click on the Tools menu option then click on Do a full library rescan
     - As the scan progresses, watch the percentage displayed in the bottom margin of the app's window
   - [X] Allow Strawberry to process all these mp3 files
-    - Verify that Strawberry shows 27200 total songs in 1869 total albums by 412 total artists
+    - Strawberry shows 27221 total songs, but the total number of albums and artists is unknown
 
 ### Test Rhythmbox, Clementine, and Strawberry
 
 - [X] Test Rythmbox
   - [X] Try to play a song from 30 Days of Dead
   - [X] Fix any issues
+  - [X] Don't worry about setting any preferences in additon to the library location at this time
 
 - [X] Test Clementine
   - [X] Try to play a song from 30 Days of Dead
   - [X] Fix any issues
+  - [X] Don't worry about setting any preferences in additon to the library location at this time
 
 - [X] Test Strawberry
   - [X] Try to play a song from 30 Days of Dead
   - [X] Fix any issues
+  - [X] Fine-tune Strawberry's settings as described in the next section
+
+### Fine-tune Strawberry's Settings
+
+Following are some important Settings we want to set in Strawberry:
+
+#### General Settings
+
+- [X] Behavior Page
+  - [X] Using the menu to add a song will... - Never start playing
+  - [X] Pressing "Previous" in player will... - Restart song, then jump to previous if pressed again
+  - [X] Double clicking a song will... - Add to the queue and Play if there is nothing already playing
+  - [X] Double clicking a song in the playlist will... - Add to the queue
+- [X] Collection Page
+  - [X] Collection: /home/tomh/Music/Strawberry
+  - [X] Perform song EBU R 128 analysys ...
+  - [X] Expire unavailable songs after 1 days
+- [X] Backend Page
+  - [X] Audio Normalization Section
+    - [X] EBU R 128 Loudness Normalization - Check this option
+- [X] Playlist Page
+  - [X] Enable delete files in the right click context menu
+  - [X] When saving a playlist, file paths should be - Absolute
+- [X] Scrobbler Page
+  - [X] Defaults are ok
+- [X] Covers Page
+  - [X] Saving album covers - Save album cuvers in album directory
+- [X] Lyrics Page
+  - [X] Defaults are ok
+- [X] Transcoding Page
+  - [X] Defaults are ok
+- [X] Network Proxy Page
+  - [X] Defaults are ok
+
+#### User Interface Settings
+
+- [X] Appearance Page
+  - [X] Style Section
+    - [X] Style - Fusion
+  - [X] Tabbar colors Section
+    - [X] Select tabbar color: - dark red works well
+  - [X] Background image Section
+    - [X] A Taste of Strawbs
+- [X] Context Page
+  - [X] Defaults are ok
+- [X] Notifications Page
+  - [X] Notification type - Disabled
+- [X] Global Shortcuts Page
+  - [X] None (Default) at this time
+- [X] Moodbar Page
+  - [X] Moodbar style: Happy
+
+#### Streaming Settings
+
+- [X] Defaults are ok
+
+#### Columns
+
+The columns are tedious to adjust, but after some time I've learned this is how I like them:
+
+- 1. Artist
+- 1. Album
+- 1. Disk Number
+- 1. Track Number
+- 1. Title
+- 1. Length
+- 1. Play Count
+- 1. Last Played
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 ## Audio-Visual Apps: `martha` and `bette`
 

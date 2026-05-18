@@ -21,7 +21,7 @@ Following is a list of steps, for future reference, even when it's simple, but h
   - [ ] May need to use the original wired keyboard or mouse or both that came with the PC
     - If you connect your favorite keyboard and mouse to the PC via a USB *wire* then it is *probably* ok to use them
     - The installation program may not be able to access devices connected via Bluetooth
-    - For laptops, this means use the laptop's original keyboard and track pad
+    - For laptops, this means using the laptop's original keyboard and track pad
 - [ ] Running the install on **[note the date here]** at **[note the time here]**
   - [ ] Answer these easy no-brainer questions
     - *Choose your language* - English

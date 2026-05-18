@@ -174,15 +174,84 @@ The next step is to start up the apps and link the files we will want to listen 
 - [ ] Test Rythmbox
   - [ ] Try to play a song from 30 Days of Dead
   - [ ] Fix any issues
+  - [ ] Don't worry about setting any preferences in additon to the library location at this time
 
 - [ ] Test Clementine
   - [ ] Try to play a song from 30 Days of Dead
   - [ ] Fix any issues
+  - [ ] Don't worry about setting any preferences in additon to the library location at this time
 
 - [ ] Test Strawberry
   - [ ] Try to play a song from 30 Days of Dead
   - [ ] Fix any issues
+  - [ ] Fine-tune Strawberry's settings as described in the next section
 
+### Fine-tune Strawberry's Settings
+
+Following are some important Settings we want to set in Strawberry:
+
+#### General Settings
+
+- [ ] Behavior Page
+  - [ ] Using the menu to add a song will... - Never start playing
+  - [ ] Pressing "Previous" in player will... - Restart song, then jump to previous if pressed again
+  - [ ] Double clicking a song will... - Add to the queue and Play if there is nothing already playing
+  - [ ] Double clicking a song in the playlist will... - Add to the queue
+- [ ] Collection Page
+  - [ ] Collection: /home/tomh/Music/Strawberry
+  - [ ] Perform song EBU R 128 analysys ...
+  - [ ] Expire unavailable songs after 1 days
+- [ ] Backend Page
+  - [ ] Audio Normalization Section
+    - [ ] EBU R 128 Loudness Normalization - Check this option
+- [ ] Playlist Page
+  - [ ] Enable delete files in the right click context menu
+  - [ ] When saving a playlist, file paths should be - Absolute
+- [ ] Scrobbler Page
+  - [ ] Defaults are ok
+- [ ] Covers Page
+  - [ ] Saving album covers - Save album cuvers in album directory
+- [ ] Lyrics Page
+  - [ ] Defaults are ok
+- [ ] Transcoding Page
+  - [ ] Defaults are ok
+- [ ] Network Proxy Page
+  - [ ] Defaults are ok
+
+#### User Interface Settings
+
+- [ ] Appearance Page
+  - [ ] Style Section
+    - [ ] Style - Fusion
+  - [ ] Tabbar colors Section
+    - [ ] Select tabbar color: - dark red works well
+  - [ ] Background image Section
+    - [ ] A Taste of Strawbs
+- [ ] Context Page
+  - [ ] Defaults are ok
+- [ ] Notifications Page
+  - [ ] Notification type - Disabled
+- [ ] Global Shortcuts Page
+  - [ ] None (Default) at this time
+- [ ] Moodbar Page
+  - [ ] Moodbar style: Happy
+
+#### Streaming Settings
+
+- [X] Defaults are ok
+
+#### Columns
+
+The columns are tedious to adjust, but after some time I've learned this is how I like them:
+
+- 1. Artist
+- 1. Album
+- 1. Disk Number
+- 1. Track Number
+- 1. Title
+- 1. Length
+- 1. Play Count
+- 1. Last Played
 
 ## Audio-Visual Apps: `martha` and `bette`
 

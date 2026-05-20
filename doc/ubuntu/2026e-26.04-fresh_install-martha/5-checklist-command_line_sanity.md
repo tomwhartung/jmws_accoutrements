@@ -14,69 +14,106 @@ Overview:
 - 1. Populate `~/bin`
 - 1. Keyboard Shortcuts
 - 1. Konsole Sanity
+- 1. **Experimental** - On `martha` Only: Restore Links to Subdirectories Kept on Thumb Drive
 
-## Github; Clone the `jmws_accoutrements` Repo
+## Github: Clone the `jmws_accoutrements` Repo
 
-- [ ] Update ssh key for *[hostname]* on github.com
-  - [ ] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
-    - [ ] Delete the old ssh key for *[hostname]*
-    - [ ] Add the new ssh key, that was created above, as `*[hostname]*-ubuntu-25.10`
-- [ ] Make a subdirectory in `/var` named `/var/www` and change the owner of it to `tomh`:
-  - [ ] As the `root` user run: `cd /var; mkdir www; chown tomh:tomh www`
-- [ ] Clone the `jmws_accoutrements` repo:
-  - [ ] As the `tomh` user run: `cd /var/www; git clone [ssh url from github for the repository]`
+- [X] Update ssh key for `martha` on github.com
+  - [X] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
+    - [X] Add the new ssh key, that was created in `4-checklist-bare_bones_essentials.md`, with the title "*martha-ubuntu-26.04*"
+    - [X] Delete the old ssh key for `martha`
+
+We are not doing these steps on `martha`, because we are experimenting with keeping the github repos on a thumb drive.
+
+- [X] For details, see the section `**Experimental** - On `martha` Only: Restore Links to Subdirectories Kept on Thumb Drive` below.
+
+- [-] Make a subdirectory in `/var` named `/var/www` and change the owner of it to `tomh`:
+  - [-] As the `root` user run: `cd /var; mkdir www; chown tomh:tomh www`
+- [-] Clone the `jmws_accoutrements` repo:
+  - [-] As the `tomh` user run: `cd /var/www; git clone [ssh url from github for the repository]`
     - We probably want to run `git clone git@github.com:tomwhartung/jmws_accoutrements.git`, but check github to be sure
 
 ## Populate `~/bin`
 
-Hopefully `~/bin` was populated from files on the thumb drive.
+We are doing this differently on `martha`, because we are experimenting with keeping selected subdirectories of `/home/tomh` on a thumb drive.
 
-If however we forgot to put them on there, then once ssh is working, push the files in `~/bin` from one of the other
-linux hosts over to the newly-upgraded host.
+- [X] For details, see the section `**Experimental** - On `martha` Only: Restore Links to Subdirectories Kept on Thumb Drive` below.
+
+- [-] Hopefully `~/bin` was populated from files on the thumb drive.
+- [-] If however we forgot to put them on there, then get the files in `~/bin` from one of the other linux hosts
 
 ## Keyboard Shortcuts
 
 Define these in the Settings app:
 
-- [ ] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Launchers
-  - [ ] Ctrl-Alt-M: Launch calculator (for **M**ath)
-  - [ ] Ctrl-Alt-F: Launch web browser (**F**irefox)
-  - [ ] Ctrl-Alt-S: **S**ettings
-- [ ] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
-  - [ ] Ctrl-Alt-K: **K**onsole - `/usr/bin/konsole`
+- [X] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Launchers
+  - [X] Ctrl-Alt-C: Launch **C**alculator
+  - [X] Ctrl-Alt-F: Launch web browser (**F**irefox)
+  - [X] Ctrl-Alt-S: **S**ettings
+- [X] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
+  - [X] Ctrl-Alt-K: **K**onsole - `/usr/bin/konsole`
 
 ## Konsole Sanity
 
 Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
 
 1. Create a new profile so we can update some options:
-- [ ] Profiles page -> "+ New" Button
-- [ ] General page -> General Settings tab
-  - [ ] [Fill in a name:] tomh
-  - [ ] [Check the box:] Default profile
-  - [ ] [Verify Command:] `/bin/bash`
-  - [ ] [Terminal bell mode:] Ignore Bell Events
-- [ ] Click "OK" button at bottom of page to close General page dialog
+- [X] Profiles page -> "+ New" Button
+- [X] General page -> General Settings tab
+  - [X] [Fill in a name:] tomh
+  - [X] [Check the box:] Default profile
+  - [X] [Verify Command:] `/bin/bash`
+  - [X] [Terminal bell mode:] Ignore Bell Events
+- [X] Click "OK" button at bottom of page to close General page dialog
 
 2. Fix mouse click-and-drag word delimiters
-- [ ] Konsole window Hamburger Menu -> Edit Current Profile ...
-- [ ] Mouse page -> Text interaction tab
-  - [ ] Word characters: "_" [I.e., Underline character *only*]
-  - [ ] Click "OK" button at bottom of page to close Mouse page dialog
-- [ ] Click "OK" button at bottom of page to close Configure dialog box
-- [ ] Test mouse double-click select setting
-  - [ ] Close all konsole windows and tabs - to ensure we are using the new settings
-  - [ ] Open a new konsole window
-  - [ ] Go to any directory with more than one level, e.g., `/art/music/songs/mp3`
-  - [ ] Double-click on a word in the directory name to test the click-and-drag select setting
+- [X] Konsole window Hamburger Menu -> Edit Current Profile ...
+- [X] Mouse page -> Text interaction tab
+  - [X] Word characters: "_" [I.e., Underline character *only*]
+  - [X] Click "OK" button at bottom of page to close Mouse page dialog
+- [X] Click "OK" button at bottom of page to close Configure dialog box
+- [X] Test mouse double-click select setting
+  - [X] Close all konsole windows and tabs - to ensure we are using the new settings
+  - [X] Open a new konsole window
+  - [X] Go to any directory with more than one level, e.g., `/art/music/songs/mp3`
+  - [X] Double-click on a word in the directory name to test the click-and-drag select setting
 
 3. Adjust font size
-- [ ] Konsole window Hamburger Menu -> Edit Current Profile ...
-- [ ] Appearance page -> Color scheme & font tab
-  - [ ] Find the "Font:" row near the bottom of the page
-  - [ ] Click Choose...
-  - [ ] Change the Size to "9", or whatever works
-- [ ] Click "OK" button at the bottom of the dialog box to close it
-- [ ] Click "OK" button at the bottom of the page to close the Edit Profile dialog box
+- [X] Konsole window Hamburger Menu -> Edit Current Profile ...
+- [X] Appearance page -> Color scheme & font tab
+  - [X] Find the "Font:" row near the bottom of the page
+  - [X] Click Choose...
+  - [X] Change the Size to "9", or whatever works
+- [X] Click "OK" button at the bottom of the dialog box to close it
+- [X] Click "OK" button at the bottom of the page to close the Edit Profile dialog box
 
+## **Experimental** - On `martha` Only: Restore Links to Subdirectories Kept on Thumb Drive
+
+On `martha` we are trying something kind of new, something that we started doing out of necessity on `mary`:
+
+- Keeping the minimal contents of select subdirectories of `/home/tomh` on a thumb drive
+- Keeping the contents of certain repositories, that belong in `/var/www`, on a thumb drive
+
+- [X] Run the following commands to restore the links to `/home/tomh`:
+
+```
+l /mnt/disks/ext4-2026-64G/home_tomh
+cd
+ln -s /mnt/disks/ext4-2026-64G/home_tomh/* .
+ll
+gote
+```
+
+- [X] Run the following commands to restore the links to `/var/www`:
+
+```
+cd /var
+sudo mkdir www
+sudo chown tomh:tomh www
+cd www
+lsd /mnt/disks/ext4-2026-64G/var_www/*
+ln -s /mnt/disks/ext4-2026-64G/var_www/* .
+gojma
+gp
+```
 

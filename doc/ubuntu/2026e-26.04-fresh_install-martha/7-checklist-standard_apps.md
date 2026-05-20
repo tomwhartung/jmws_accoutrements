@@ -22,7 +22,7 @@ Therefore, **if we install any of these apps on `bette`, we will note that speci
 
 Although I am used to using the command line to install packages - and still use it on occasion - it's really easy to use the App Center app to install these.
 
-- [ ] Move the icon to run the App Center to the top of the Dock
+- [X] Move the icon to run the App Center to the top of the Dock
 
 Additionally, using the App Center makes it easy to see which apps are available as snaps, or debian packages, or both.
 At this time, I am not sure which to prefer, so *it's good to know when we have a choice.*
@@ -60,7 +60,7 @@ Chrome is nice to have, but remember: **it is a pain to keep it update-to-date o
 
 - Let's try installing just Chromium, and install Chrome only if it turns out we need it fir some reason
 - At this time, Chromium is *not avaiable for installation as a debian package*
-- [ ] Use the App Center to install Chromium as a snap
+- [X] Use the App Center to install Chromium as a snap
 
 Apparently Chromium doesn't allow me to log in, making Chrome and Firefox much more worthwhile.
 
@@ -73,21 +73,21 @@ I can see how they might be useful at some point!
 
 ### Set up Rhythmbox, and Install and Set up Clementine and Strawberry
 
-- [ ] In a Konsole window, run these commands as `tomh`:
+- [X] In a Konsole window, run these commands as `tomh`:
   - `cd ~/Music`
   - `ll `
   - `mkdir rhythmbox`      # if it is not already there
   - `mkdir clementine`     # if it is not already there
   - `mkdir strawberry`     # if it is not already there
-- [ ] These directories, and any others under `~/Music`, should be empty
-- [ ] Double check and **ensure there are *no* files or directories in or linked to *any* subdirectories of `~/Music`**
+- [X] These directories, and any others under `~/Music`, should be empty
+- [X] Double check and **ensure there are *no* files or directories in or linked to *any* subdirectories of `~/Music`**
 
-- [ ] Run the App Center
-- [ ] Click on the **Manage** option and install any updates that may be pending
-- [ ] Install Clementine from a Debian package
-  - [ ] Pin the icon to run Clementine to the Dock
-- [ ] Install Strawberry from a Debian package
-  - [ ] Pin the icon to run Strawberry to the Dock
+- [X] Run the App Center
+- [X] Click on the **Manage** option and install any updates that may be pending
+- [X] Install Clementine as a snap
+  - [X] Pin the icon to run Clementine to the Dock
+- [X] Install Strawberry as a snap
+  - [X] Pin the icon to run Strawberry to the Dock
 
 - [ ] In a Konsole window, run these commands as `tomh`:
   - `cd ~/Music`
@@ -114,19 +114,19 @@ At this point, the music libraries in the Rhythmbox, Clementine, and Strawberry 
 
 ### Create Links to Files in `/art`
 
-- [ ] Ensure that `/etc/fstab` is updated so that the external disks containing `/art` and `FATART` files automatically mount when the PC boots
+- [X] Ensure that `/etc/fstab` is updated so that the external disks containing `/art` and `FATART` files automatically mount when the PC boots
   - For details, see the `4-checklist-bare_bones_essentials.md` checklist in this directory
-- [ ] Ensure that the `/art/videos` directory has been renamed to `/art/av`
+- [X] Ensure that the `/art/videos` directory has been renamed to `/art/av`
   - For details, see the `6-checklist-rename_art_videos_dir.md` checklist in this directory
-- [ ] Open a Konsole window and run `sudo su -`
-  - [ ] In this window, run these commands as `root`:
+- [X] Open a Konsole window and run `sudo su -`
+  - [X] In this window, run these commands as `root`:
     - `cd /`
     - `mkdir art`
     - `chown tomh:tomh art`
-- [ ] In a different Konsole window, run these commands as `tomh`:
+- [X] In a different Konsole window, run these commands as `tomh`:
   - `cd /art ; ll `
   - `ll /mnt/disks/art/art`       # this should show the `art` subdirectories, `av`, `books`, `classes`, `classes-jane`, `images`, `music`, and `podcasts`
-  - `ln -s /mnt/disks/art/art .`
+  - `ln -s /mnt/disks/art/art/* .`
   - `ll `
   - `gogd ; ll `        # this should show my collection of Grateful Dead music
 

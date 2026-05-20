@@ -128,7 +128,7 @@ At this point, the music libraries in the Rhythmbox, Clementine, and Strawberry 
 - [X] In a different Konsole window, run these commands as `tomh`:
   - `cd /art ; ll `
   - `ll /mnt/disks/art/art`       # this should show the `art` subdirectories, `av`, `books`, `classes`, `classes-jane`, `images`, `music`, and `podcasts`
-  - `ln -s /mnt/disks/art/art .`
+  - `ln -s /mnt/disks/art/art/* .`
   - `ll `
   - `gogd ; ll `        # this should show my collection of Grateful Dead music
 

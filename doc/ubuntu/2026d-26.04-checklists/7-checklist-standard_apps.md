@@ -234,6 +234,7 @@ Following are some important Settings we want to set in Strawberry:
 - [ ] Global Shortcuts Page
   - [ ] None (Default) at this time
 - [ ] Moodbar Page
+  - [ ] Show a moodbar in the track progress bar
   - [ ] Moodbar style: Happy
 
 #### Streaming Settings

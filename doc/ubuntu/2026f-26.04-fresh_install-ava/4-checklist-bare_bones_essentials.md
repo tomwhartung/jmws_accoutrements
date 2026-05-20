@@ -123,11 +123,11 @@ Find files from the previous install on the `2023-32A` thumb drive in the `for_.
 - [X] Files in `/etc`
   - [X] Open a terminal window and run `sudo su -` so we can run commands as root
   - [X] Check in the installed versions: `cd /etc; ci -l fstab hosts # "Installed version."
-  - [ ] Add **only the CusTOMizations** from the version of `fstab` on the thumb drive to the installed version of `fstab`
+  - [X] Add **only the CusTOMizations** from the version of `fstab` on the thumb drive to the installed version of `fstab`
     - [!] **!!! Not following this step properly made the PC unbootable !!!**
     - [!] **Instead of *adding the CusTOMizations*, I *replaced* the `/etc/fstab` file!!! OOPS!!! **
     - [!] See the subsection immediately below for information on how I fixed this!
-  - [ ] Add **only the CusTOMizations** from the version of `hosts` on the thumb drive to the installed version of `hosts`
+  - [X] Add **only the CusTOMizations** from the version of `hosts` on the thumb drive to the installed version of `hosts`
 - [X] *Definitely* reboot the system at this time
   - If the PC doesn't boot, it's probably an issue with `/etc/fstab`, so fix that right away
 
@@ -167,32 +167,29 @@ In reality I use these all the time and quickly go crazy without them.
     - [X] Alt+[Left Arrow] - Switch to workspace on the left
     - [X] Alt+[Right Arrow] - Switch to workspace on the right
 
-## Install Clementine and Set It and Rhythmbox up to Play My MP3s
+## Install Our Favorite Music Apps and Set Them up to Play My MP3s
 
-The following checklist has been moved here from the section "*Update Essential Files From Previous Install*" below,
-because we want to do them right away, so that we can listen to music while we install 26.04 on `barbara`.
-
-- [ ] Ensure we have `/etc/fstab` configured so that it will auto-mount our `/art/music` files
-- [ ] TBD
-- [ ] Link the `/art/music` Files to `~/Music/rhythmbox`
-- [ ] TBD
-- [ ] Run Rhythmbox and Get It to Play the `/art/music` Files Linked to `~/Music/rhythmbox`
-- [ ] TBD
-- [ ] Install
-- [ ] TBD
-- [ ] TBD
+For the detailed checklist of steps to run to complete this goal, refer to the file `7-checklist-standard_apps.md` in this directory.
 
 ## Essential Networking - `ssh`
 
-- [ ] Get ssh working
-  - [ ] Copy old `~/.ssh` directory into the new `/home/tomh` directory
+- [X] Get ssh working
+  - [X] Copy old `~/.ssh` directory into the new `/home/tomh` directory
     - In particular, we need the old `authorized_keys` file
     - Having the `pubs` subdirectory can help, if we have a problem someday
-  - [ ] Run `ssh-keygen` to generate new keys
-  - [ ] Copy `~/.ssh/id_ed25519.pub` to `~/.ssh/id_ed25519.pub-[hostname]`
-  - [ ] Update `~/.ssh/authorized_keys` on all linux hosts, replacing old public key for [hostname] with the new one
+  - [X] Run `ssh-keygen` to generate new keys
+    - When prompted for a file name or passphrase, just press Enter to accept the default values
+  - [X] Ensure the permissions on the private key `~/.ssh/id_ed25519` are 0600
+    - `ls -l ~/.ssh/id_ed25519`       # should be -rw------- NOT -rw-r--r--
+    - `chmod 600 ~/.ssh/id_ed25519`
+    - `ls -l ~/.ssh/id_ed25519`
+    - These somehow got changed to 644 on `martha`, which caused an ugly error, until I actually read the message and fixed the perms; weird!
+  - [X] Copy `~/.ssh/id_ed25519.pub` to `~/.ssh/id_ed25519.pub-ava`
+  - [X] Copy the file `~/.ssh/id_ed25519.pub-[hostname]` to a thumb drive so we can copy it to all other linux hosts
+  - [X] Move (`mv ...`) the file `~/.ssh/id_ed25519.pub-ava` to the `pubs/` subdirectory for possible future reference
+  - [X] Update `~/.ssh/authorized_keys` on all linux hosts, replacing old public key for [hostname] with the new one
     - *Else you will be asked for a password*
-  - [ ] Remove `.ssh/known_hosts` file from all other hosts
+  - [X] Remove `.ssh/known_hosts` file from all other hosts
     - *Else you will get a nasty error message*
-  - [ ] Log in to each host from each host, to make a new `known_hosts` file on each one and ensure they all work
+  - [X] Log in to each host from each host, to make a new `known_hosts` file on each one and ensure they all work
 

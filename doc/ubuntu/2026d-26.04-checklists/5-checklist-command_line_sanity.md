@@ -17,14 +17,14 @@ Overview:
 
 ## Github; Clone the `jmws_accoutrements` Repo
 
-- [ ] Update ssh key for *[hostname]* on github.com
+- [ ] Update ssh key for `[hostname]` on github.com
   - [ ] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
-    - [ ] Delete the old ssh key for *[hostname]*
-    - [ ] Add the new ssh key, that was created above, as `*[hostname]*-ubuntu-25.10`
+    - [ ] Add the new ssh key, that was created in `4-checklist-bare_bones_essentials.md`, with the title "*[hostname]-ubuntu-26.04*"
+    - [ ] Delete the old ssh key for `[hostname]`
 - [ ] Make a subdirectory in `/var` named `/var/www` and change the owner of it to `tomh`:
   - [ ] As the `root` user run: `cd /var; mkdir www; chown tomh:tomh www`
 - [ ] Clone the `jmws_accoutrements` repo:
-  - [ ] As the `tomh` user run: `cd /var/www; git clone [ssh url from github for the repository]`
+  - [ ] As the user `tomh` run: `cd /var/www; git clone [ssh url from github for the repository]`
     - We probably want to run `git clone git@github.com:tomwhartung/jmws_accoutrements.git`, but check github to be sure
 
 ## Populate `~/bin`
@@ -39,7 +39,7 @@ linux hosts over to the newly-upgraded host.
 Define these in the Settings app:
 
 - [ ] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Launchers
-  - [ ] Ctrl-Alt-M: Launch calculator (for **M**ath)
+  - [ ] Ctrl-Alt-C: Launch **C**alculator
   - [ ] Ctrl-Alt-F: Launch web browser (**F**irefox)
   - [ ] Ctrl-Alt-S: **S**ettings
 - [ ] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
@@ -47,7 +47,7 @@ Define these in the Settings app:
 
 ## Konsole Sanity
 
-Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
+Konsole -> [Hamburger] Menu -> More ... -> Settings -> Manage Profiles
 
 1. Create a new profile so we can update some options:
 - [ ] Profiles page -> "+ New" Button

@@ -161,7 +161,15 @@ In reality I use these all the time and quickly go crazy without them.
     - In particular, we need the old `authorized_keys` file
     - Having the `pubs` subdirectory can help, if we have a problem someday
   - [ ] Run `ssh-keygen` to generate new keys
+    - When prompted for a file name or passphrase, just press Enter to accept the default values
+  - [ ] Ensure the permissions on the private key `~/.ssh/id_ed25519` are 0600
+    - `ls -l ~/.ssh/id_ed25519`       # should be -rw------- NOT -rw-r--r--
+    - `chmod 600 ~/.ssh/id_ed25519`
+    - `ls -l ~/.ssh/id_ed25519`
+    - These somehow got changed to 644 on `martha`, which caused an ugly error, until I actually read the message and fixed the perms; weird!
   - [ ] Copy `~/.ssh/id_ed25519.pub` to `~/.ssh/id_ed25519.pub-[hostname]`
+  - [ ] Copy the file `~/.ssh/id_ed25519.pub-[hostname]` to a thumb drive so we can copy it to all other linux hosts
+  - [ ] Move (`mv ...`) the file `~/.ssh/id_ed25519.pub-[hostname]` to the `pubs/` subdirectory for possible future reference
   - [ ] Update `~/.ssh/authorized_keys` on all linux hosts, replacing old public key for [hostname] with the new one
     - *Else you will be asked for a password*
   - [ ] Remove `.ssh/known_hosts` file from all other hosts

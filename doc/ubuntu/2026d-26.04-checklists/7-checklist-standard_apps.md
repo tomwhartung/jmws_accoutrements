@@ -100,15 +100,18 @@ At this point, it is safe to start up the apps and set the app-specific director
 - [ ] Use the Rhythmbox icon in the Dock to run it
   - [ ] Click on the hamburger menu icon then click on Preferences
   - [ ] Under the Music tab, set the Library Location to file:///home/tomh/Music/rhythmbox
-  - [ ] Under the Music tab, under Library Structure, set the pPreferred format to MPEG Layer 3 Audio
+  - [ ] Under the Music tab, under Library Structure, set the Preferred format to - "*MPEG Layer 3 Audio*"
+  - [ ] Click on Close to close the dialog
 - [ ] Use the Clementine icon in the Dock to run it
   - [ ] Click on the Tools menu option then click on Preferences
   - [ ] In the General section, click on the Music Library menu option
   - [ ] In the Music Library section, click on the *Add new folder* button and add the /home/tomh/Music/clementine directory
+  - [ ] Click on OK to close the dialog
 - [ ] Use the Strawberry icon in the Dock to run it
   - [ ] Click on the Tools menu option then click on Settings
   - [ ] In the General section, click on the Collection menu option
   - [ ] At the top of the Collection page, click on the *Add new folder* button and add the /home/tomh/Music/strawberry directory
+  - [ ] Click on OK to close the dialog
 
 At this point, the music libraries in the Rhythmbox, Clementine, and Strawberry apps should be empty!
 
@@ -234,6 +237,7 @@ Following are some important Settings we want to set in Strawberry:
 - [ ] Global Shortcuts Page
   - [ ] None (Default) at this time
 - [ ] Moodbar Page
+  - [ ] Enabled
   - [ ] Show a moodbar in the track progress bar
   - [ ] Moodbar style: Happy
 

@@ -86,29 +86,38 @@ I can see how they might be useful at some point!
 - [X] Click on the **Manage** option and install any updates that may be pending
 - [X] Install Clementine as a snap
   - [X] Pin the icon to run Clementine to the Dock
-- [X] Install Strawberry as a snap
+    - I tried installing Clementine as a snap, and when I ran it, set the library to `~/Music/clementine`, and told it to scan the entire collection
+    - I do not know why this happened, hmmm...
+    - However, after seeing the message that the Strawberry snap install displayed (see below), I uninstalled the snap and reinstalled it as a debian package
+- [X] Install Strawberry as a **debian package**
+    - I tried installing Strawberry as a snap, and when I ran it, it displayed a long message saying it's best to install the debian package
+    - *Now why, if it's best to install the debian package, do they even allow it to be installed as a snap?*
+      - We wont worry about that, just install it as a debian package
   - [X] Pin the icon to run Strawberry to the Dock
 
-- [ ] In a Konsole window, run these commands as `tomh`:
+- [X] In a Konsole window, run these commands as `tomh`:
   - `cd ~/Music`
   - `ll `
   - `ll *`
-- [ ] Triple check and **ensure there are *no* files or directories in or linked to *any* subdirectories of `~/Music`**
+- [X] Triple check and **ensure there are *no* files or directories in or linked to *any* subdirectories of `~/Music`**
 
 At this point, it is safe to start up the apps and set the app-specific directories that will contain the files we want to listen to.
 
-- [ ] Use the Rhythmbox icon in the Dock to run it
-  - [ ] Click on the hamburger menu icon then click on Preferences
-  - [ ] Under the Music tab, set the Library Location to file:///home/tomh/Music/rhythmbox
-  - [ ] Under the Music tab, under Library Structure, set the pPreferred format to MPEG Layer 3 Audio
-- [ ] Use the Clementine icon in the Dock to run it
-  - [ ] Click on the Tools menu option then click on Preferences
-  - [ ] In the General section, click on the Music Library menu option
-  - [ ] In the Music Library section, click on the *Add new folder* button and add the /home/tomh/Music/clementine directory
-- [ ] Use the Strawberry icon in the Dock to run it
-  - [ ] Click on the Tools menu option then click on Settings
-  - [ ] In the General section, click on the Collection menu option
-  - [ ] At the top of the Collection page, click on the *Add new folder* button and add the /home/tomh/Music/strawberry directory
+- [X] Use the Rhythmbox icon in the Dock to run it
+  - [X] Click on the hamburger menu icon then click on Preferences
+  - [X] Under the Music tab, set the Library Location to file:///home/tomh/Music/rhythmbox
+  - [X] Under the Music tab, under Library Structure, set the Preferred format to - "*MPEG Layer 3 Audio*"
+  - [X] Click on Close to close the dialog
+- [X] Use the Clementine icon in the Dock to run it
+  - [X] Click on the Tools menu option then click on Preferences
+  - [X] In the General section, click on the Music Library menu option
+  - [X] In the Music Library section, click on the *Add new folder* button and add the /home/tomh/Music/clementine directory
+  - [X] Click on OK to close the dialog
+- [X] Use the Strawberry icon in the Dock to run it
+  - [X] Click on the Tools menu option then click on Settings
+  - [X] In the General section, click on the Collection menu option
+  - [X] At the top of the Collection page, click on the *Add new folder* button and add the /home/tomh/Music/strawberry directory
+  - [X] Click on OK to close the dialog
 
 At this point, the music libraries in the Rhythmbox, Clementine, and Strawberry apps should be empty!
 
@@ -139,52 +148,52 @@ Note that the music libraries in the Rhythmbox, Clementine, and Strawberry apps 
 
 The next step is to start up the apps and link the files we will want to listen to into each of the app-specific directories.
 
-- [ ] Add music files to Rhythmbox's library
-  - [ ] In a Konsole window, run these commands as `tomh`:
+- [X] Add music files to Rhythmbox's library
+  - [X] In a Konsole window, run these commands as `tomh`:
     - `cd ~/Music/rhythmbox/`
     - `ll /art/music/songs/mp3`      # this should show the bands in my personal collection of mp3s
     - `ln -s /art/music/songs/mp3 .`
-  - [ ] Allow Rhythmbox to process all these mp3 files
-    - Rhythmbox shows 27200 total songs in 1869 total albums by 412 total artists
+  - [X] Allow Rhythmbox to process all these mp3 files
+    - Rhythmbox shows 27263 total songs in 1874 total albums by 414 total artists
 
-- [ ] Add music files to Clementine's library
-  - [ ] In a Konsole window, run these commands as `tomh`:
+- [X] Add music files to Clementine's library
+  - [X] In a Konsole window, run these commands as `tomh`:
     - `cd ~/Music/clementine/`
     - `ll /art/music/songs/mp3`      # this should show the bands in my personal collection of mp3s
     - `ln -s /art/music/songs/mp3 .`
-  - [ ] Ensure that the totals displayed by Rhythmbox are not changing!
-  - [ ] Click on the Tools menu option then click on Do a full library rescan
+  - [X] Ensure that the totals displayed by Rhythmbox are not changing!
+  - [X] Click on the Tools menu option then click on Do a full library rescan
     - As the scan progresses, watch the percentage displayed in the bottom margin of the app's window
-  - [ ] Allow Clementine to process all these mp3 files
-    - Clementine shows 27223 total songs, but the total number of albums and artists is unknown
+  - [X] Allow Clementine to process all these mp3 files
+    - Clementine shows 27286 total songs, but the total number of albums and artists is unknown
 
 - [ ] Add music files to Strawberry's library
-  - [ ] In a Konsole window, run these commands as `tomh`:
+  - [X] In a Konsole window, run these commands as `tomh`:
     - `cd ~/Music/strawberry/`
     - `ll /art/music/songs/mp3`      # this should show the bands in my personal collection of mp3s
     - `ln -s /art/music/songs/mp3 .`
-  - [ ] Ensure that the totals displayed by Rhythmbox are not changing!
-  - [ ] Click on the Tools menu option then click on Do a full library rescan
+  - [X] Ensure that the totals displayed by Rhythmbox are not changing!
+  - [X] Click on the Tools menu option then click on Do a full library rescan
     - As the scan progresses, watch the percentage displayed in the bottom margin of the app's window
-  - [ ] Allow Strawberry to process all these mp3 files
-    - Verify that Strawberry shows 27200 total songs in 1869 total albums by 412 total artists
+  - [X] Allow Strawberry to process all these mp3 files
+    - Verify that Strawberry shows 27284 total songs
 
 ### Test Rhythmbox, Clementine, and Strawberry
 
-- [ ] Test Rythmbox
-  - [ ] Try to play a song from 30 Days of Dead
-  - [ ] Fix any issues
-  - [ ] Don't worry about setting any preferences in additon to the library location at this time
+- [X] Test Rythmbox
+  - [X] Try to play a song from 30 Days of Dead
+  - [X] Fix any issues
+  - [X] Don't worry about setting any preferences in additon to the library location at this time
 
 - [ ] Test Clementine
   - [ ] Try to play a song from 30 Days of Dead
   - [ ] Fix any issues
   - [ ] Don't worry about setting any preferences in additon to the library location at this time
 
-- [ ] Test Strawberry
-  - [ ] Try to play a song from 30 Days of Dead
-  - [ ] Fix any issues
-  - [ ] Fine-tune Strawberry's settings as described in the next section
+- [X] Test Strawberry
+  - [X] Try to play a song from 30 Days of Dead
+  - [X] Fix any issues
+  - [X] Fine-tune Strawberry's settings as described in the next section
 
 ### Fine-tune Strawberry's Settings
 
@@ -192,50 +201,51 @@ Following are some important Settings we want to set in Strawberry:
 
 #### General Settings
 
-- [ ] Behavior Page
-  - [ ] Using the menu to add a song will... - Never start playing
-  - [ ] Pressing "Previous" in player will... - Restart song, then jump to previous if pressed again
-  - [ ] Double clicking a song will... - Add to the queue and Play if there is nothing already playing
-  - [ ] Double clicking a song in the playlist will... - Add to the queue
-- [ ] Collection Page
-  - [ ] Collection: /home/tomh/Music/Strawberry
-  - [ ] Perform song EBU R 128 analysys ...
-  - [ ] Expire unavailable songs after 1 days
-- [ ] Backend Page
-  - [ ] Audio Normalization Section
-    - [ ] EBU R 128 Loudness Normalization - Check this option
-- [ ] Playlist Page
-  - [ ] Enable delete files in the right click context menu
-  - [ ] When saving a playlist, file paths should be - Absolute
-- [ ] Scrobbler Page
-  - [ ] Defaults are ok
-- [ ] Covers Page
-  - [ ] Saving album covers - Save album cuvers in album directory
-- [ ] Lyrics Page
-  - [ ] Defaults are ok
-- [ ] Transcoding Page
-  - [ ] Defaults are ok
-- [ ] Network Proxy Page
-  - [ ] Defaults are ok
+- [X] Behavior Page
+  - [X] Using the menu to add a song will... - Never start playing
+  - [X] Pressing "Previous" in player will... - Restart song, then jump to previous if pressed again
+  - [X] Double clicking a song will... - Add to the queue and Play if there is nothing already playing
+  - [X] Double clicking a song in the playlist will... - Add to the queue
+- [X] Collection Page
+  - [X] Collection: /home/tomh/Music/Strawberry
+  - [X] Perform song EBU R 128 analysys ...
+  - [X] Expire unavailable songs after 1 days
+- [X] Backend Page
+  - [X] Audio Normalization Section
+    - [X] EBU R 128 Loudness Normalization -> Perform track loudness normaliztion - Check this option
+- [X] Playlist Page
+  - [X] Enable delete files in the right click context menu
+  - [X] When saving a playlist, file paths should be - Absolute
+- [X] Scrobbler Page
+  - [X] Defaults are ok
+- [X] Covers Page
+  - [X] Saving album covers - Save album cuvers in album directory
+- [X] Lyrics Page
+  - [X] Defaults are ok
+- [X] Transcoding Page
+  - [X] Defaults are ok
+- [X] Network Proxy Page
+  - [X] Defaults are ok
 
 #### User Interface Settings
 
-- [ ] Appearance Page
-  - [ ] Style Section
-    - [ ] Style - Fusion
-  - [ ] Tabbar colors Section
-    - [ ] Select tabbar color: - dark red works well
-  - [ ] Background image Section
-    - [ ] A Taste of Strawbs
-- [ ] Context Page
-  - [ ] Defaults are ok
-- [ ] Notifications Page
-  - [ ] Notification type - Disabled
-- [ ] Global Shortcuts Page
-  - [ ] None (Default) at this time
-- [ ] Moodbar Page
-  - [ ] Show a moodbar in the track progress bar
-  - [ ] Moodbar style: Happy
+- [X] Appearance Page
+  - [X] Style Section
+    - [X] Style - Fusion
+  - [X] Tabbar colors Section
+    - [X] Select tabbar color: - dark red works well
+  - [X] Background image Section
+    - [X] A Taste of Strawbs
+- [X] Context Page
+  - [X] Defaults are ok
+- [X] Notifications Page
+  - [X] Notification type - Disabled
+- [X] Global Shortcuts Page
+  - [X] None (Default) at this time
+- [X] Moodbar Page
+  - [X] Enabled
+  - [X] Show a moodbar in the track progress bar
+  - [X] Moodbar style: Happy
 
 #### Streaming Settings
 

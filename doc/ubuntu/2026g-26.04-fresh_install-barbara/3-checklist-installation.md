@@ -48,14 +48,32 @@ Following is a list of steps, for future reference, even when it's simple, but h
             - I think this just made it so I see more errors ...
             - Turned this back off
 
-I won't be able to fix this tonight, so we will have to return to this later.  Rats!
+- This page, that I found when I first started trouble-shooting all this, explains how to update the BOIS on an HP laptop:
+  - https://gist.github.com/eNV25/c8001491dc0440656ff7b0ae18993ba1?permalink_comment_id=4821494
 
-URLs to check out later, when I have more time:
+Updates as of 2026-05-26 - finally had some more time to delve into all this:
 
-- https://support.hp.com/us-en/deviceSearch?q=HP%206000%20SFF&origin=swd
-- https://support.hp.com/us-en/help/hp-pc-hardware-diagnostics#otherDiagContent
-- https://gist.github.com/eNV25/c8001491dc0440656ff7b0ae18993ba1?permalink_comment_id=4821494
+- **This URL: https://support.hp.com/us-en/retired-products says the HP Compaq 6000 Pro Small Form Factor PC is retired**
+  - This could explain why I am having difficulty
+- Tried running `fwupd`, `fwupdmgr` and `fwupdtool esp-list --verbose`, and got this warning
+  - `UEFI ESP partition not detected or configured`
+  - `See https://github.com/fwupd/fwupd/wiki/PluginFlag:esp-not-found for more information.`
+- Tried searching for this error message, and google's AI thingie says it means:
+  - "your system's EFI System Partition (ESP) is either missing, unmounted, or lacks the correct partition type."
+- Delving into that, the ESP is supposed to be in `/boot/esp`, but that is missing from `barbara`
+  - Running `df` shows that `/boot` is in the `/dev/sda2` partition
+- **However:**
+  - I ran the *disks* utility and saw there is a 1M `/dev/sda1` partition on the disk
+  - I swear at one point I saw a page where I could download a new version of the BIOS? (*)
+- But **now** the hp site is telling me this computer is *retired:* https://support.hp.com/us-en/retired-products
+  - That might explain why this URL shows only All-in-One PCs and Towers: https://support.hp.com/us-en/deviceSearch?q=HP%206000%20SFF&origin=swd
+    - (*) Maybe that page where I could download a new version of the BIOS I saw was really for one of those models?
 
+**MOREOVER,** I can just use the Ubuntu that I already have installed (25.10) to upgrade to 26.04.
+
+- So I am thinking about doing that, and probably will do so, soon...
+
+Following are the original checklist's items, for possible future reference ... but it's now looking more and more like I will not do this after all....
 
 - [ ] Running the install on **2026-05-??** at **??:?? PM**
   - [ ] Answer these easy no-brainer questions

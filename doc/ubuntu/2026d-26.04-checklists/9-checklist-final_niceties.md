@@ -8,6 +8,10 @@ This version of `9-checklist-final_niceties.md` reflects the steps I am performi
 
 These are less-important things I think of doing after the install has achieved "*sanity*":
 
+## Settings
+
+Access these settings by clicking on the **Settings** icon, which is grey and looks like a gear inside of a circle.
+
 - [ ] Make the desktop icons small
   - [ ] Settings -> Ubuntu Desktop -> Desktop Icons section -> Size -> Small
 - [ ] Cause adding new desktop icons to appear in the top left corner

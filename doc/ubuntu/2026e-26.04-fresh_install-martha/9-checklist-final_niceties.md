@@ -8,6 +8,10 @@ This version of `9-checklist-final_niceties.md` reflects the steps I am performi
 
 These are less-important things I think of doing after the install has achieved "*sanity*":
 
+## Settings
+
+Access these settings by clicking on the **Settings** icon, which is grey and looks like a gear inside of a circle.
+
 - [X] Enable the appropriate number of workspaces - in most cases this will be four
   - [X] Settings -> Multitasking -> Workspaces section [scroll down a bit] -> Fixed Number of Workspaces -> 4
 - [X] Make the desktop icons small

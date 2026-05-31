@@ -1,5 +1,5 @@
 
-# 3-checklist-installation.md
+# 3a-checklist-installation.md
 
 This version of `3-checklist-installation.md` reflects the steps I am performing to install **Ubuntu 26.04** on `barbara` on **2026-05-17**.
 
@@ -134,14 +134,13 @@ Continue [yN]  Details [d]
 
 - [X] I entered 'd' and captured the details in the file `3-do_release_upgrade-output.txt`
 
+## Abandoning the Original Checklist
 
+Following are the original checklist's items, for reference, but I wound up not doing any of these steps after all.
 
-## Continuing With the Original Checklist
-
-Following are the original checklist's items, for possible future reference ... but it's now looking more and more like I will not do this after all....
-
-- [ ] Running the install on **2026-05-??** at **??:?? PM**
+- [ ] Running the install on **2026-05-30**
   - [ ] Answer these easy no-brainer questions
+    - **It did not ask any of these questions**
     - *Choose your language* - English
     - *Accessibility in Ubuntu* - None
     - *Select your keyboard layout* - English (US)

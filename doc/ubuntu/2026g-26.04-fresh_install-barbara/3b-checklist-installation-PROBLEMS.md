@@ -1,5 +1,5 @@
 
-# 3-checklist-installation-PROBLEMS.md
+# 3b-checklist-installation-PROBLEMS.md
 
 This file details the PROBLEMS I had running the steps to install **Ubuntu 26.04** on `barbara` on **2026-05-17**.
 

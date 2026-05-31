@@ -17,6 +17,8 @@ Overview:
 
 ## Github; Clone the `jmws_accoutrements` Repo
 
+- [X] **All of this looks good after the upgrade!**
+
 - [ ] Update ssh key for *[hostname]* on github.com
   - [ ] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
     - [ ] Delete the old ssh key for *[hostname]*
@@ -29,12 +31,16 @@ Overview:
 
 ## Populate `~/bin`
 
+- [X] **All of this looks good after the upgrade!**
+
 Hopefully `~/bin` was populated from files on the thumb drive.
 
 If however we forgot to put them on there, then once ssh is working, push the files in `~/bin` from one of the other
 linux hosts over to the newly-upgraded host.
 
 ## Keyboard Shortcuts
+
+- [X] **All of this looks good after the upgrade!**
 
 Define these in the Settings app:
 
@@ -46,6 +52,9 @@ Define these in the Settings app:
   - [ ] Ctrl-Alt-K: **K**onsole - `/usr/bin/konsole`
 
 ## Konsole Sanity
+
+- [X] ** *Almost* all of this looks good after the upgrade!**
+- [X] See below for the ones I had to redo
 
 Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
 
@@ -59,16 +68,16 @@ Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
 - [ ] Click "OK" button at bottom of page to close General page dialog
 
 2. Fix mouse click-and-drag word delimiters
-- [ ] Konsole window Hamburger Menu -> Edit Current Profile ...
-- [ ] Mouse page -> Text interaction tab
-  - [ ] Word characters: "_" [I.e., Underline character *only*]
-  - [ ] Click "OK" button at bottom of page to close Mouse page dialog
-- [ ] Click "OK" button at bottom of page to close Configure dialog box
-- [ ] Test mouse double-click select setting
-  - [ ] Close all konsole windows and tabs - to ensure we are using the new settings
-  - [ ] Open a new konsole window
-  - [ ] Go to any directory with more than one level, e.g., `/art/music/songs/mp3`
-  - [ ] Double-click on a word in the directory name to test the click-and-drag select setting
+- [X] Konsole window Hamburger Menu -> Edit Current Profile ...
+- [X] Mouse page -> Text interaction tab
+  - [X] Word characters: "_" [I.e., Underline character *only*]
+  - [X] Click "OK" button at bottom of page to close Mouse page dialog
+- [X] Click "OK" button at bottom of page to close Configure dialog box
+- [X] Test mouse double-click select setting
+  - [X] Close all konsole windows and tabs - to ensure we are using the new settings
+  - [X] Open a new konsole window
+  - [X] Go to any directory with more than one level, e.g., `/art/music/songs/mp3`
+  - [X] Double-click on a word in the directory name to test the click-and-drag select setting
 
 3. Adjust font size
 - [ ] Konsole window Hamburger Menu -> Edit Current Profile ...

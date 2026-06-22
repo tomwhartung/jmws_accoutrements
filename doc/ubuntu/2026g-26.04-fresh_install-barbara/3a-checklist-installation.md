@@ -138,8 +138,8 @@ Continue [yN]  Details [d]
 
 Following are the original checklist's items, for reference, but I wound up not doing any of these steps after all.
 
-- [ ] Running the install on **2026-05-30**
-  - [ ] Answer these easy no-brainer questions
+- [N/A] Running the install on **2026-05-30**
+  - [N/A] Answer these easy no-brainer questions
     - **It did not ask any of these questions**
     - *Choose your language* - English
     - *Accessibility in Ubuntu* - None
@@ -149,8 +149,8 @@ Following are the original checklist's items, for reference, but I wound up not 
     - *How would you like to install Ubuntu?* - Ineractive Installation
     - *What apps would you like to install to start with?* - Extended selection
     - *Install recommended proprietary software?*
-      - [X] Install third-party software for graphics and Wi-Fi hardware
-      - [ ] Download and install support for additional media formats - *this option is unavailable and greyed-out*
+      - [N/A] Install third-party software for graphics and Wi-Fi hardware
+      - [N/A] Download and install support for additional media formats - *this option is unavailable and greyed-out*
     - *How do you want to install Ubuntu?* - Erase disk and install Ubuntu
     - *Encryption and file system* - No encryption
     - *Create your account*
@@ -159,13 +159,13 @@ Following are the original checklist's items, for reference, but I wound up not 
       - Your username: tomh
       - Password: tomh
       - Confirm password: tomh
-      - [ ] Require my passowrd to log in - **Uncheck**
-      - [ ] Use Active Directory - Leave unchecked
+      - [N/A] Require my passowrd to log in - **Uncheck**
+      - [N/A] Use Active Directory - Leave unchecked
     - *Select your timezone* - Denver
     - *Review your choices*
       - Erase disk and install Ubuntu, etc.
-  - [ ] Clicking the **Install** button at **[note the time here]**
-  - [ ] Install finished at **[note the time here]**
-  - [ ] Clicking the **Restart now** button
-  - [ ] Please remove the installation medium, then press ENTER:
+  - [N/A] Clicking the **Install** button at **[note the time here]**
+  - [N/A] Install finished at **[note the time here]**
+  - [N/A] Clicking the **Restart now** button
+  - [N/A] Please remove the installation medium, then press ENTER:
 

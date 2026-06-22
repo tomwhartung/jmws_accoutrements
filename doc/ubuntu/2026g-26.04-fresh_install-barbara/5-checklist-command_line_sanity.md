@@ -19,14 +19,14 @@ Overview:
 
 - [X] **All of this looks good after the upgrade!**
 
-- [ ] Update ssh key for *[hostname]* on github.com
-  - [ ] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
-    - [ ] Delete the old ssh key for *[hostname]*
-    - [ ] Add the new ssh key, that was created above, as `*[hostname]*-ubuntu-25.10`
-- [ ] Make a subdirectory in `/var` named `/var/www` and change the owner of it to `tomh`:
-  - [ ] As the `root` user run: `cd /var; mkdir www; chown tomh:tomh www`
-- [ ] Clone the `jmws_accoutrements` repo:
-  - [ ] As the `tomh` user run: `cd /var/www; git clone [ssh url from github for the repository]`
+- [X] Update ssh key for *[hostname]* on github.com
+  - [X] Access User Menu [photo in upper right corner] -> Settings -> Access -> SSH and GPG keys
+    - [X] Delete the old ssh key for *[hostname]*
+    - [X] Add the new ssh key, that was created above, as `*[hostname]*-ubuntu-25.10`
+- [N/A] Make a subdirectory in `/var` named `/var/www` and change the owner of it to `tomh`:
+  - [N/A] As the `root` user run: `cd /var; mkdir www; chown tomh:tomh www`
+- [N/A] Clone the `jmws_accoutrements` repo:
+  - [N/A] As the `tomh` user run: `cd /var/www; git clone [ssh url from github for the repository]`
     - We probably want to run `git clone git@github.com:tomwhartung/jmws_accoutrements.git`, but check github to be sure
 
 ## Populate `~/bin`
@@ -44,12 +44,12 @@ linux hosts over to the newly-upgraded host.
 
 Define these in the Settings app:
 
-- [ ] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Launchers
-  - [ ] Ctrl-Alt-M: Launch calculator (for **M**ath)
-  - [ ] Ctrl-Alt-F: Launch web browser (**F**irefox)
-  - [ ] Ctrl-Alt-S: **S**ettings
-- [ ] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
-  - [ ] Ctrl-Alt-K: **K**onsole - `/usr/bin/konsole`
+- [N/A] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Launchers
+  - [N/A] Ctrl-Alt-M: Launch calculator (for **M**ath)
+  - [N/A] Ctrl-Alt-F: Launch web browser (**F**irefox)
+  - [N/A] Ctrl-Alt-S: **S**ettings
+- [N/A] Settings -> Keyboard -> Keyboard Shortcuts [At bottom of page] -> Custom shortcuts [At bottom of list]
+  - [N/A] Ctrl-Alt-K: **K**onsole - `/usr/bin/konsole`
 
 ## Konsole Sanity
 
@@ -59,13 +59,13 @@ Define these in the Settings app:
 Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
 
 1. Create a new profile so we can update some options:
-- [ ] Profiles page -> "+ New" Button
-- [ ] General page -> General Settings tab
-  - [ ] [Fill in a name:] tomh
-  - [ ] [Check the box:] Default profile
-  - [ ] [Verify Command:] `/bin/bash`
-  - [ ] [Terminal bell mode:] Ignore Bell Events
-- [ ] Click "OK" button at bottom of page to close General page dialog
+- [N/A] Profiles page -> "+ New" Button
+- [N/A] General page -> General Settings tab
+  - [N/A] [Fill in a name:] tomh
+  - [N/A] [Check the box:] Default profile
+  - [N/A] [Verify Command:] `/bin/bash`
+  - [N/A] [Terminal bell mode:] Ignore Bell Events
+- [N/A] Click "OK" button at bottom of page to close General page dialog
 
 2. Fix mouse click-and-drag word delimiters
 - [X] Konsole window Hamburger Menu -> Edit Current Profile ...
@@ -80,12 +80,24 @@ Konsole -> [Hamburger] Menu -> Settings -> Configure Konsole
   - [X] Double-click on a word in the directory name to test the click-and-drag select setting
 
 3. Adjust font size
-- [ ] Konsole window Hamburger Menu -> Edit Current Profile ...
-- [ ] Appearance page -> Color scheme & font tab
-  - [ ] Find the "Font:" row near the bottom of the page
-  - [ ] Click Choose...
-  - [ ] Change the Size to "9", or whatever works
-- [ ] Click "OK" button at the bottom of the dialog box to close it
-- [ ] Click "OK" button at the bottom of the page to close the Edit Profile dialog box
+- [N/A] Konsole window Hamburger Menu -> Edit Current Profile ...
+- [N/A] Appearance page -> Color scheme & font tab
+  - [N/A] Find the "Font:" row near the bottom of the page
+  - [N/A] Click Choose...
+  - [N/A] Change the Size to "9", or whatever works
+- [N/A] Click "OK" button at the bottom of the dialog box to close it
+- [N/A] Click "OK" button at the bottom of the page to close the Edit Profile dialog box
 
+## Konsole Sanity - Moving Tabs to the Left and Right
+
+Konsole -> [Hamburger] Menu -> Settings -> Configure Keyboard Shortcuts
+
+- [X] Move tab to the left
+  - [X] Click on Ctrl+Alt+Left -> If a dialog box appears asking for permission to change this, Click on Allow
+  - [X] Click on Ctrl+Alt+Left -> Click on Custom -> Click on None -> Press Shift+Ctrl+Left arrow -> Click on Reassign
+- [X] Move tab to the right
+  - [X] Click on Ctrl+Alt+Right -> Click on Custom -> Click on None -> Press Shift+Ctrl+Right arrow -> Click on Reassign
+- [X] Click on OK to close the dialog box
+- [X] Test moving the current tab to the left by pressing Shift+Ctrl+Left Arrow
+- [X] Test moving the current tab to the right by pressing Shift+Ctrl+Right Arrow
 

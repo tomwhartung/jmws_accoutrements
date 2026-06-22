@@ -79,3 +79,16 @@ Konsole -> [Hamburger] Menu -> More ... -> Settings -> Manage Profiles
 - [X] Click "OK" button at the bottom of the dialog box to close it
 - [X] Click "OK" button at the bottom of the page to close the Edit Profile dialog box
 
+## Konsole Sanity - Moving Tabs to the Left and Right
+
+Konsole -> [Hamburger] Menu -> Settings -> Configure Keyboard Shortcuts
+
+- [X] Move tab to the left
+  - [X] Click on Ctrl+Alt+Left -> If a dialog box appears asking for permission to change this, Click on Allow
+  - [X] Click on Ctrl+Alt+Left -> Click on Custom -> Click on None -> Press Shift+Ctrl+Left arrow -> Click on Reassign
+- [X] Move tab to the right
+  - [X] Click on Ctrl+Alt+Right -> Click on Custom -> Click on None -> Press Shift+Ctrl+Right arrow -> Click on Reassign
+- [X] Click on OK to close the dialog box
+- [X] Test moving the current tab to the left by pressing Shift+Ctrl+Left Arrow
+- [X] Test moving the current tab to the right by pressing Shift+Ctrl+Right Arrow
+

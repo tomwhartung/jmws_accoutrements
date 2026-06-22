@@ -4,6 +4,26 @@
 This version of `4-checklist-bare_bones_essentials.md` reflects the steps I am performing to install **Ubuntu 26.04** on `barbara` on **2026-05-30**.
 
 
+# Recap: PROBLEMS With Installing 26.04
+
+Because HP has **retired** this PC **we were unable to install Ubuntu 26.04 from scratch!**
+
+- *Bummer!*
+- However, we were able to upgrade the OS using the `do-release-upgrade` command
+
+For details about all this, see these files in this directory:
+
+- `3a-checklist-installation.md`
+- `3b-checklist-installation-PROBLEMS.md`
+- `3c-do_release_upgrade-output.txt`
+
+Because we did ran `do-release-upgrade` instead of installing Ubuntu 26.04 from scratch, **running many of the steps in this checklist is unnecessary.**
+
+- *However,* this did result in **one rather serious issue!**
+
+For details, see the section *Yikes!  The App Center Doesn't Work!!* below
+
+
 # Bare Bones Essentials Common to All Hosts
 
 These are the first steps to acheiving what I call *"Sanity"*.
@@ -76,40 +96,40 @@ Here we demonstrate two ways to pin an app to the doc.
 
 First, the **Terminal** app:
 
-- [ ] Click on the **Apps** icon in the lower left corner
-- [ ] Right-click on the icon for the **Terminal** app and select **Pin to Dock**
-- [ ] Press the **Esc** key
-- [ ] Right-click on the icon for the **Terminal** app *in the dock* and move it to the **Top of the Dock**
+- [N/A] Click on the **Apps** icon in the lower left corner
+- [N/A] Right-click on the icon for the **Terminal** app and select **Pin to Dock**
+- [N/A] Press the **Esc** key
+- [N/A] Right-click on the icon for the **Terminal** app *in the dock* and move it to the **Top of the Dock**
 
 Second, the **Settings** app:
 
-- [ ] Left-click on the **Apps** icon in the lower left corner
-- [ ] Left-click on the icon for the **Settings** app to launch it
-- [ ] Right-click on the icon for the **Settings** app *in the dock* select **Pin to Dock**
-- [ ] Press the **Esc** key
-- [ ] Left-click on the icon for the **Settings** app *in the dock* and move it to the **Top of the Dock**
+- [N/A] Left-click on the **Apps** icon in the lower left corner
+- [N/A] Left-click on the icon for the **Settings** app to launch it
+- [N/A] Right-click on the icon for the **Settings** app *in the dock* select **Pin to Dock**
+- [N/A] Press the **Esc** key
+- [N/A] Left-click on the icon for the **Settings** app *in the dock* and move it to the **Top of the Dock**
 
 ## Get the Network Running With the Static IP Address
 
 - [X] **All of this looks good after the upgrade!**
 
-- [ ] Open a **Terminal** window and try running:
+- [X] Open a **Terminal** window and try running:
   - `ping google.com`
   - If it works, great!  But don't be surprised if it doesn't.
   - We are going to need to set a **static IP address**, so might as well do it now.
-- [ ] Open the **Settings** app and use the values saved in `2-checklist-preparation_part_2.md` to set up *static IP*
-  - [ ] Settings -> Network -> Wired section -> [Gear Icon]
-    - [ ] Details tab: Connect automatically
-    - [ ] Identity tab
+- [X] Open the **Settings** app and use the values saved in `2-checklist-preparation_part_2.md` to set up *static IP*
+  - [X] Settings -> Network -> Wired section -> [Gear Icon]
+    - [X] Details tab: Connect automatically
+    - [X] Identity tab
        - Name: "Static wired quantum fiber via asus"
        - MTU: Automatic
-    - [ ] IPv4 tab:
-      - [ ] IPv4 Method section: Manual
-      - [ ] Addresses section: Address: 10.0.1.117; Netmask: 255.255.255.0; Gateway: 10.0.1.2
-      - [ ] DNS section: 192.168.0.1,205.171.2.25
-    - [ ] Security tab:
+    - [X] IPv4 tab:
+      - [X] IPv4 Method section: Manual
+      - [X] Addresses section: Address: 10.0.1.117; Netmask: 255.255.255.0; Gateway: 10.0.1.2
+      - [X] DNS section: 192.168.0.1,205.171.2.25
+    - [X] Security tab:
       - Authentication: MD5
-- [ ] Go back to the **Terminal** window opened previously and try running the `ping` command again:
+- [X] Go back to the **Terminal** window opened previously and try running the `ping` command again:
   - `ping google.com`
   - **If it doesn't work, review the settings entered and figure out why!  This is super-important, so good luck!!**
 
@@ -117,20 +137,20 @@ Second, the **Settings** app:
 
 - [X] **All of this looks good after the upgrade!**
 
-- [ ] Use the Command Line or the Software Updater to update the installed packages to their latest versions
-  - [ ] Using the Command Line:
-    - [ ] Open a terminal window and run `sudo su -` so we can run additional install commands as root
-    - [ ] Run `apt-get update` to identify the updated versions that apt can install
-    - [ ] Run `apt-get upgrade` to download and install these updated versions
-  - [ ] Using the Software Updater: *(TBD)*
+- [X] Use the Command Line or the Software Updater to update the installed packages to their latest versions
+  - [X] Using the Command Line:
+    - [X] Open a terminal window and run `sudo su -` so we can run additional install commands as root
+    - [X] Run `apt-get update` to identify the updated versions that apt can install
+    - [X] Run `apt-get upgrade -y` to download and install these updated versions
+  - [N/A] Using the Software Updater: *(TBD)*
      **TBD: This is probably what I will want to show people in the video**
-    - [ ] Pin the Software Updater to the dock
-    - [ ] Run the Software Updater to install updates made since 25.10 was released
-- [ ] If not already done, open a terminal window and run `sudo su -` so we can run additional install commands as root
-- [ ] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
-- [ ] Open the **Apps** screen, run the **Konsole** app - or *pin it to the dock* and run it from there
-- [ ] Right-click on the icon for the **Konsole** app *in the dock* and move it to between the *Settings* and *Terminal* apps
-- [ ] It may be a good idea to reboot the system at this time, *however*
+    - [N/A] Pin the Software Updater to the dock
+    - [N/A] Run the Software Updater to install updates made since 25.10 was released
+- [N/A] If not already done, open a terminal window and run `sudo su -` so we can run additional install commands as root
+- [N/A] Run `apt-get install rcs vim net-tools openssh-server ifupdown git konsole`
+- [N/A] Open the **Apps** screen, run the **Konsole** app - or *pin it to the dock* and run it from there
+- [N/A] Right-click on the icon for the **Konsole** app *in the dock* and move it to between the *Settings* and *Terminal* apps
+- [N/A] It may be a good idea to reboot the system at this time, *however*
   - It's ok to wait and reboot after going through the steps in the next section
   - *Note* that we will *need* to reboot after updating these files, to take advantage of them being present at boot
 
@@ -140,47 +160,47 @@ Second, the **Settings** app:
 
 Find old files on the `2023-32A` thumb drive in the `for_...` directory and use them to update the new install.
 
-- [ ] Files in `/home/tomh`
-  - [ ] Open a konsole window
-  - [ ] Check the installed version of `.bashrc` into RCS:
-    - [ ] Run the following commands:
+- [N/A] Files in `/home/tomh`
+  - [N/A] Open a konsole window
+  - [N/A] Check the installed version of `.bashrc` into RCS:
+    - [N/A] Run the following commands:
       - `cd`
       - `mkdir RCS`
       - `ci -l .bashrc`     # add the *not-a-log* message *"Installed version."*
-  - [ ] Move (or copy) the `.bashrc` and `.bash_aliases*` files from `/home/tomh` on the thumb drive to `/home/tomh`
-  - [ ] Run `rcsdiff` to ensure that overwriting `.bashrc` did not wipe out any needed updates to the file:
-    - [ ] `rcsdiff .bashrc`       # only CusTOMizations should show up
-    - [ ] This is a good time to clean up any CusTOMizations that are no longer relevant and hence obsolete
-  - [ ] Move (or copy) the rest of the files from `/home/tomh` on the thumb drive to `/home/tomh`
+  - [N/A] Move (or copy) the `.bashrc` and `.bash_aliases*` files from `/home/tomh` on the thumb drive to `/home/tomh`
+  - [N/A] Run `rcsdiff` to ensure that overwriting `.bashrc` did not wipe out any needed updates to the file:
+    - [N/A] `rcsdiff .bashrc`       # only CusTOMizations should show up
+    - [N/A] This is a good time to clean up any CusTOMizations that are no longer relevant and hence obsolete
+  - [N/A] Move (or copy) the rest of the files from `/home/tomh` on the thumb drive to `/home/tomh`
     - `.vimrc .gitconfig`
     - `d.e r*`
     - `.ssh/` - Use `mv` or `cp -r`
-  - [ ] Set background to one of the files in `~/Pictures`
+  - [N/A] Set background to one of the files in `~/Pictures`
     - Settings -> Appearance -> Background -> + Add Picture
-- [ ] Files in `/root`
-  - [ ] Open a konsole window and run `sudo su -` so we can **run these commands as root**
-  - [ ] Check in the installed version of `.bashrc`:
-    - [ ] Run the following commands:
+- [N/A] Files in `/root`
+  - [N/A] Open a konsole window and run `sudo su -` so we can **run these commands as root**
+  - [N/A] Check in the installed version of `.bashrc`:
+    - [N/A] Run the following commands:
       - `cd`
       - `mkdir RCS`
       - `ci -l .bashrc`     # add the *not-a-log* message *"Installed version."*
-    - [ ] Move (or copy) the `.bashrc` file from `/root` on the thumb drive to add the CusTOMizations
-  - [ ] Link the following files from `~tomh` to `/root`:
-    - [ ] `ln -s ~tomh/.bash_aliases .`
-    - [ ] `ln -s ~tomh/.bash_aliases-* .`
-    - [ ] `ln -s ~tomh/.vimrc .`
-    - [ ] `ln -s ~tomh/bin .`        # NOTE: these must be copied over before we can link to them
-- [ ] Files in `/etc`
-  - [ ] Open a konsole window and run `sudo su -` so we can run commands as root
-  - [ ] Check the installed versions of `/etc/fstab` and `/etc/hosts` into RCS
-    - [ ] Run the following commands:
+    - [N/A] Move (or copy) the `.bashrc` file from `/root` on the thumb drive to add the CusTOMizations
+  - [N/A] Link the following files from `~tomh` to `/root`:
+    - [N/A] `ln -s ~tomh/.bash_aliases .`
+    - [N/A] `ln -s ~tomh/.bash_aliases-* .`
+    - [N/A] `ln -s ~tomh/.vimrc .`
+    - [N/A] `ln -s ~tomh/bin .`        # NOTE: these must be copied over before we can link to them
+- [N/A] Files in `/etc`
+  - [N/A] Open a konsole window and run `sudo su -` so we can run commands as root
+  - [N/A] Check the installed versions of `/etc/fstab` and `/etc/hosts` into RCS
+    - [N/A] Run the following commands:
       - `cd /etc`
       - `mkdir RCS`
       - `ci -l fstab hosts`  # "Installed version."
-  - [ ] Add **only the CusTOMizations** from the version of `fstab` on the thumb drive to the installed version of `fstab`
-  - [ ] Add **only the CusTOMizations** from the version of `hosts` on the thumb drive to the installed version of `hosts`
-  - [ ] **Be sure to plug in any external disks referenced in the CusTOMizations added to `fstab`** 
-- [ ] *Definitely* reboot the system at this time
+  - [N/A] Add **only the CusTOMizations** from the version of `fstab` on the thumb drive to the installed version of `fstab`
+  - [N/A] Add **only the CusTOMizations** from the version of `hosts` on the thumb drive to the installed version of `hosts`
+  - [N/A] **Be sure to plug in any external disks referenced in the CusTOMizations added to `fstab`**
+- [N/A] *Definitely* reboot the system at this time
   - If the PC doesn't boot, it's probably because the disks referenced in the CusTOMizations added to `/etc/fstab` are not plugged in
 
 ## Set Essential Keyboard Shortcuts
@@ -190,38 +210,38 @@ Find old files on the `2023-32A` thumb drive in the `for_...` directory and use 
 
 In reality I use these all the time and quickly go crazy without them.
 
-- [ ] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
+- [N/A] Settings -> Keyboard -> [Scroll to bottom] Keyboard Shortcuts -> View and Customize Shorcuts
   - Navigation
-    - [X] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
-    - [X] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
-    - [ ] Alt+F1 - Switch to Workspace 1
-    - [ ] Alt+F2 - Switch to Workspace 2
-    - [ ] Alt+F3 - Switch to Workspace 3
-    - [ ] Alt+F4 - Switch to Workspace 4
-    - [ ] Alt+[Left Arrow] - Switch to workspace on the left
-    - [ ] Alt+[Right Arrow] - Switch to workspace on the right
+    - [N/A] Ctl+Alt+[Left Arrow] - Move window one workspace to the left
+    - [N/A] Ctl+Alt+[Right Arrow] - Move window one workspace to the right
+    - [N/A] Alt+F1 - Switch to Workspace 1
+    - [N/A] Alt+F2 - Switch to Workspace 2
+    - [N/A] Alt+F3 - Switch to Workspace 3
+    - [N/A] Alt+F4 - Switch to Workspace 4
+    - [N/A] Alt+[Left Arrow] - Switch to workspace on the left
+    - [N/A] Alt+[Right Arrow] - Switch to workspace on the right
 
 ## Essential Networking - `ssh`
 
 - [X] **All of this looks good after the upgrade!**
 
-- [ ] Get ssh working
-  - [ ] Copy old `~/.ssh` directory into the new `/home/tomh` directory
+- [X] Get ssh working
+  - [N/A] Copy old `~/.ssh` directory into the new `/home/tomh` directory
     - In particular, we need the old `authorized_keys` file
     - Having the `pubs` subdirectory can help, if we have a problem someday
-  - [ ] Run `ssh-keygen` to generate new keys
+  - [X] Run `ssh-keygen` to generate new keys
     - When prompted for a file name or passphrase, just press Enter to accept the default values
-  - [ ] Ensure the permissions on the private key `~/.ssh/id_ed25519` are 0600
+  - [X] Ensure the permissions on the private key `~/.ssh/id_ed25519` are 0600
     - `ls -l ~/.ssh/id_ed25519`       # should be -rw------- NOT -rw-r--r--
     - `chmod 600 ~/.ssh/id_ed25519`
     - `ls -l ~/.ssh/id_ed25519`
     - These somehow got changed to 644 on `martha`, which caused an ugly error, until I actually read the message and fixed the perms; weird!
-  - [ ] Copy `~/.ssh/id_ed25519.pub` to `~/.ssh/id_ed25519.pub-[hostname]`
-  - [ ] Copy the file `~/.ssh/id_ed25519.pub-[hostname]` to a thumb drive so we can copy it to all other linux hosts
-  - [ ] Move (`mv ...`) the file `~/.ssh/id_ed25519.pub-[hostname]` to the `pubs/` subdirectory for possible future reference
-  - [ ] Update `~/.ssh/authorized_keys` on all linux hosts, replacing old public key for [hostname] with the new one
+  - [X] Copy `~/.ssh/id_ed25519.pub` to `~/.ssh/id_ed25519.pub-[hostname]`
+  - [X] Copy the file `~/.ssh/id_ed25519.pub-[hostname]` to a thumb drive so we can copy it to all other linux hosts
+  - [X] Move (`mv ...`) the file `~/.ssh/id_ed25519.pub-[hostname]` to the `pubs/` subdirectory for possible future reference
+  - [X] Update `~/.ssh/authorized_keys` on all linux hosts, replacing old public key for [hostname] with the new one
     - *Else you will be asked for a password*
-  - [ ] Remove `.ssh/known_hosts` file from all other hosts
+  - [X] Remove `.ssh/known_hosts` file from all other hosts
     - *Else you will get a nasty error message*
-  - [ ] Log in to each host from each host, to make a new `known_hosts` file on each one and ensure they all work
+  - [X] Log in to each host from each host, to make a new `known_hosts` file on each one and ensure they all work
 

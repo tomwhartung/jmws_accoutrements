@@ -220,6 +220,8 @@ In reality I use these all the time and quickly go crazy without them.
     - [N/A] Alt+F4 - Switch to Workspace 4
     - [N/A] Alt+[Left Arrow] - Switch to workspace on the left
     - [N/A] Alt+[Right Arrow] - Switch to workspace on the right
+- [X] Settings -> System -> Users
+  - [X] Automatic Login - Unlock and turn this on
 
 ## Essential Networking - `ssh`
 

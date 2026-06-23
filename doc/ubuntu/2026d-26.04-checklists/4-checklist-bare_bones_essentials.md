@@ -153,6 +153,8 @@ In reality I use these all the time and quickly go crazy without them.
     - [ ] Alt+F4 - Switch to Workspace 4
     - [ ] Alt+[Left Arrow] - Switch to workspace on the left
     - [ ] Alt+[Right Arrow] - Switch to workspace on the right
+- [ ] Settings -> System -> Users
+  - [ ] Automatic Login - Unlock and turn this on
 
 ## Essential Networking - `ssh`
 
